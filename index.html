@@ -58,8 +58,8 @@
     line-height: 1.55; font-size: 16px;
   }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px 80px; }
-  header.site { padding: 48px 0 8px; }
-  header.site h1 { font-size: 34px; margin: 0 0 6px; letter-spacing: -0.5px; }
+  header.site { padding: 52px 0 8px; }
+  header.site h1 { font-size: 40px; margin: 0 0 14px; letter-spacing: -0.8px; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: var(--hl-border); text-decoration-thickness: 2.5px; text-underline-offset: 12px; }
   .sub { color: var(--ink-2); max-width: 760px; margin: 0; }
   .meta-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin: 18px 0 8px; color: var(--ink-muted); font-size: 13px; }
   .meta-row .dot::before { content: "·"; margin-right: 16px; }
@@ -201,7 +201,8 @@
 
 <header class="site">
   <h1>HumanSounding</h1>
-  <p class="sub">The AI Vernacular Index: a live reference for the words, phrases, and habits that mark text as model-written. Check your own draft, see what each model does and how often, what's measurably rising or falling, and download an instruction file that steers any model away from the worst of it.</p>
+  <p class="sub" style="font-size:18px;color:var(--ink-1);margin-bottom:8px">Write like you. We'll spot the robot bits.</p>
+  <p class="sub">AI has a recognizable accent — certain words, sentence shapes, and punctuation habits that readers have learned to spot. Paste a draft below to see them highlighted with easy fixes, play a round of Spot the AI, or grab a file that teaches your AI to knock it off. Free, no signup, and your drafts never leave your browser.</p>
   <div class="meta-row">
     <span>Data current as of <b id="updated">August 10, 2026</b></span>
     <span class="dot">Every figure cited to its source below</span>
@@ -244,7 +245,67 @@
   </div>
 </section>
 
+<section id="quiz">
+  <h2>Spot the AI</h2>
+  <p class="h2sub">Two passages, same job. One was written in the machine vernacular. Click the one you think is AI-written — eight rounds, then brag (or don't).</p>
+  <div class="card" style="padding:20px 22px">
+    <div id="quizStage">
+      <div class="duo" style="margin-top:0">
+        <div class="card pane qopt" id="qA" tabindex="0"><div class="tag" style="color:var(--ink-muted)">Passage A</div><p id="qAtext"></p></div>
+        <div class="card pane qopt" id="qB" tabindex="0"><div class="tag" style="color:var(--ink-muted)">Passage B</div><p id="qBtext"></p></div>
+      </div>
+      <div class="qmeta">
+        <span class="qfeed" id="qFeed">Round <b id="qRound">1</b> of 8 · Score <b id="qScore">0</b></span>
+        <button class="btn" id="qNext" style="display:none">Next round</button>
+      </div>
+    </div>
+    <div id="quizDone" style="display:none">
+      <p style="font-size:22px;font-weight:650;margin:0 0 6px" id="qFinal"></p>
+      <p class="qfeed" id="qVerdict"></p>
+      <div class="actrow">
+        <button class="btn" id="qShare">Share your score</button>
+        <button class="btn2" id="qAgain">Play again</button>
+        <span id="qShareNote" style="color:var(--ink-muted);font-size:13px;align-self:center"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <h2>Read the difference</h2>
+  <p class="h2sub">The same content written twice. Hover the highlights to see which tell each one is.</p>
+
+  <div class="duo">
+    <div class="card pane ai">
+      <div class="tag">In the vernacular</div>
+      <p><mark class="tell" data-tell="Grand-context opener — 'today's fast-paced world' appears 107× more often in AI text (GPTZero)">In today's fast-paced digital landscape</mark>, WidgetFlow <mark class="tell" data-tell="Negative parallelism ('isn't just X — it's Y'), the most-cited current tell; ~6% of sampled ChatGPT messages">isn't just another project tool — it's a paradigm shift</mark>. Our platform <mark class="tell" data-tell="Slop-verb stack: seamlessly / leverage / cutting-edge / streamline are all on every editor blacklist">seamlessly leverages cutting-edge AI to streamline</mark> your workflow, <mark class="tell" data-tell="Trailing '-ing' clause that fakes analysis (Wikipedia AISIGNS: 'superficial analyses')">empowering teams to unlock their full potential</mark>. <mark class="tell" data-tell="False range ('from X to Y') — sounds specific, says nothing">From scrappy startups to global enterprises</mark>, WidgetFlow <mark class="tell" data-tell="'Boasts' — on the 21-word ChatGPT focal list (Juzek & Ward)">boasts</mark> a robust suite of features designed to <mark class="tell" data-tell="Rule of three — triplet padding is a codified AI sign (Wikipedia AISIGNS)">foster collaboration, enhance productivity, and elevate performance</mark>. <mark class="tell" data-tell="Editorializing aside — 'it's important to note' (Wikipedia AISIGNS)">It's important to note</mark> that every feature was <mark class="tell" data-tell="'Meticulous' rose 34.7× in AI-assisted peer reviews (Liang et al.)">meticulously</mark> crafted with the user in mind. The result? A truly <mark class="tell" data-tell="Hype vocabulary: transformative / testament — 'stands as a testament' is a canonical AI phrase">transformative experience that stands as a testament</mark> to what's possible. <mark class="tell" data-tell="Compulsive summary ending — restates instead of adding (Wikipedia AISIGNS)">In conclusion, WidgetFlow represents more than a tool — it's a comprehensive ecosystem for the modern workplace.</mark></p>
+    </div>
+    <div class="card pane human">
+      <div class="tag">Without it</div>
+      <p>WidgetFlow is a project tracker for teams that have outgrown spreadsheets. It schedules work, flags conflicts before they block anyone, and writes the weekly status report for you. Setup takes about ten minutes.</p>
+      <p>The scheduling engine is the part we're proudest of. It plans from your team's actual pace over the last six sprints, not from estimates, so the plan stops being fiction by Wednesday.</p>
+      <p>Free for 30 days. If it doesn't save you an hour in the first week, cancel from the billing page in two clicks.</p>
+    </div>
+  </div>
+
+  <div class="duo">
+    <div class="card pane ai">
+      <div class="tag">In the vernacular</div>
+      <p>The Q2 results <mark class="tell" data-tell="'Underscore' — 10× excess in 2024 abstracts (Kobak et al.); still rising through 2025">underscore</mark> the <mark class="tell" data-tell="Inflated-importance vocabulary: pivotal / multifaceted (Wikipedia AISIGNS 'undue emphasis on significance')">pivotal role of our multifaceted growth strategy</mark>. Revenue saw <mark class="tell" data-tell="Abstraction where a number belongs — no checkable fact">significant improvements</mark>, <mark class="tell" data-tell="Trailing '-ing' analysis clause (Wikipedia AISIGNS)">highlighting the team's meticulous execution and unwavering commitment to excellence</mark>. <mark class="tell" data-tell="Hedged both-sides framing — balance as a reflex, not a judgment">While challenges remain, the overall trajectory serves as a testament to our resilience.</mark> Moving forward, we will continue to <mark class="tell" data-tell="'Leverage synergies' — corporate slop-verb pairing on every blacklist">leverage synergies</mark> across the organization — <mark class="tell" data-tell="Trailing '-ing' clause + em dash, closing on abstraction">ensuring sustainable, long-term value creation for all stakeholders</mark>.</p>
+    </div>
+    <div class="card pane human">
+      <div class="tag">Without it</div>
+      <p>Q2 revenue came in at $4.2M, up 18% on Q1. Most of the gain came from the enterprise tier, which closed 11 accounts against a target of 8.</p>
+      <p>Churn is the sore spot. We lost two mid-market customers over pricing and don't yet have a fix; Dana's team owes a proposal by August 22.</p>
+      <p>The Q3 plan bets on the enterprise pipeline holding. If it slips, the events budget gets cut first.</p>
+    </div>
+  </div>
+  <p class="duo-note">What changed in each rewrite: specific numbers replace abstractions, sentence lengths vary, no triplets, one em dash total across both, and each ends on new information instead of a summary.</p>
+</section>
+
 <section id="kpis">
+  <h2>The receipts</h2>
+  <p class="h2sub">Everything above runs on measured research, not vibes. This is the AI Vernacular Index: the numbers behind the tells, every figure cited to its source.</p>
   <div class="kpis">
     <div class="tile">
       <div class="v">~6%</div>
@@ -324,63 +385,7 @@
   </div>
 </section>
 
-<section id="compare">
-  <h2>Read the difference</h2>
-  <p class="h2sub">The same content written twice. Hover the highlights to see which tell each one is.</p>
 
-  <div class="duo">
-    <div class="card pane ai">
-      <div class="tag">In the vernacular</div>
-      <p><mark class="tell" data-tell="Grand-context opener — 'today's fast-paced world' appears 107× more often in AI text (GPTZero)">In today's fast-paced digital landscape</mark>, WidgetFlow <mark class="tell" data-tell="Negative parallelism ('isn't just X — it's Y'), the most-cited current tell; ~6% of sampled ChatGPT messages">isn't just another project tool — it's a paradigm shift</mark>. Our platform <mark class="tell" data-tell="Slop-verb stack: seamlessly / leverage / cutting-edge / streamline are all on every editor blacklist">seamlessly leverages cutting-edge AI to streamline</mark> your workflow, <mark class="tell" data-tell="Trailing '-ing' clause that fakes analysis (Wikipedia AISIGNS: 'superficial analyses')">empowering teams to unlock their full potential</mark>. <mark class="tell" data-tell="False range ('from X to Y') — sounds specific, says nothing">From scrappy startups to global enterprises</mark>, WidgetFlow <mark class="tell" data-tell="'Boasts' — on the 21-word ChatGPT focal list (Juzek & Ward)">boasts</mark> a robust suite of features designed to <mark class="tell" data-tell="Rule of three — triplet padding is a codified AI sign (Wikipedia AISIGNS)">foster collaboration, enhance productivity, and elevate performance</mark>. <mark class="tell" data-tell="Editorializing aside — 'it's important to note' (Wikipedia AISIGNS)">It's important to note</mark> that every feature was <mark class="tell" data-tell="'Meticulous' rose 34.7× in AI-assisted peer reviews (Liang et al.)">meticulously</mark> crafted with the user in mind. The result? A truly <mark class="tell" data-tell="Hype vocabulary: transformative / testament — 'stands as a testament' is a canonical AI phrase">transformative experience that stands as a testament</mark> to what's possible. <mark class="tell" data-tell="Compulsive summary ending — restates instead of adding (Wikipedia AISIGNS)">In conclusion, WidgetFlow represents more than a tool — it's a comprehensive ecosystem for the modern workplace.</mark></p>
-    </div>
-    <div class="card pane human">
-      <div class="tag">Without it</div>
-      <p>WidgetFlow is a project tracker for teams that have outgrown spreadsheets. It schedules work, flags conflicts before they block anyone, and writes the weekly status report for you. Setup takes about ten minutes.</p>
-      <p>The scheduling engine is the part we're proudest of. It plans from your team's actual pace over the last six sprints, not from estimates, so the plan stops being fiction by Wednesday.</p>
-      <p>Free for 30 days. If it doesn't save you an hour in the first week, cancel from the billing page in two clicks.</p>
-    </div>
-  </div>
-
-  <div class="duo">
-    <div class="card pane ai">
-      <div class="tag">In the vernacular</div>
-      <p>The Q2 results <mark class="tell" data-tell="'Underscore' — 10× excess in 2024 abstracts (Kobak et al.); still rising through 2025">underscore</mark> the <mark class="tell" data-tell="Inflated-importance vocabulary: pivotal / multifaceted (Wikipedia AISIGNS 'undue emphasis on significance')">pivotal role of our multifaceted growth strategy</mark>. Revenue saw <mark class="tell" data-tell="Abstraction where a number belongs — no checkable fact">significant improvements</mark>, <mark class="tell" data-tell="Trailing '-ing' analysis clause (Wikipedia AISIGNS)">highlighting the team's meticulous execution and unwavering commitment to excellence</mark>. <mark class="tell" data-tell="Hedged both-sides framing — balance as a reflex, not a judgment">While challenges remain, the overall trajectory serves as a testament to our resilience.</mark> Moving forward, we will continue to <mark class="tell" data-tell="'Leverage synergies' — corporate slop-verb pairing on every blacklist">leverage synergies</mark> across the organization — <mark class="tell" data-tell="Trailing '-ing' clause + em dash, closing on abstraction">ensuring sustainable, long-term value creation for all stakeholders</mark>.</p>
-    </div>
-    <div class="card pane human">
-      <div class="tag">Without it</div>
-      <p>Q2 revenue came in at $4.2M, up 18% on Q1. Most of the gain came from the enterprise tier, which closed 11 accounts against a target of 8.</p>
-      <p>Churn is the sore spot. We lost two mid-market customers over pricing and don't yet have a fix; Dana's team owes a proposal by August 22.</p>
-      <p>The Q3 plan bets on the enterprise pipeline holding. If it slips, the events budget gets cut first.</p>
-    </div>
-  </div>
-  <p class="duo-note">What changed in each rewrite: specific numbers replace abstractions, sentence lengths vary, no triplets, one em dash total across both, and each ends on new information instead of a summary.</p>
-</section>
-
-<section id="quiz">
-  <h2>Spot the AI</h2>
-  <p class="h2sub">Two passages, same job. One was written in the machine vernacular. Click the one you think is AI-written — eight rounds, then brag (or don't).</p>
-  <div class="card" style="padding:20px 22px">
-    <div id="quizStage">
-      <div class="duo" style="margin-top:0">
-        <div class="card pane qopt" id="qA" tabindex="0"><div class="tag" style="color:var(--ink-muted)">Passage A</div><p id="qAtext"></p></div>
-        <div class="card pane qopt" id="qB" tabindex="0"><div class="tag" style="color:var(--ink-muted)">Passage B</div><p id="qBtext"></p></div>
-      </div>
-      <div class="qmeta">
-        <span class="qfeed" id="qFeed">Round <b id="qRound">1</b> of 8 · Score <b id="qScore">0</b></span>
-        <button class="btn" id="qNext" style="display:none">Next round</button>
-      </div>
-    </div>
-    <div id="quizDone" style="display:none">
-      <p style="font-size:22px;font-weight:650;margin:0 0 6px" id="qFinal"></p>
-      <p class="qfeed" id="qVerdict"></p>
-      <div class="actrow">
-        <button class="btn" id="qShare">Share your score</button>
-        <button class="btn2" id="qAgain">Play again</button>
-        <span id="qShareNote" style="color:var(--ink-muted);font-size:13px;align-self:center"></span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="trends">
   <h2>Trend board</h2>
@@ -711,8 +716,8 @@ document.getElementById("checkBtn").addEventListener("click", () => {
     : "";
   const loud = kept.filter(h => h.rule.sev === 3).length;
   document.getElementById("checkSummary").textContent = kept.length
-    ? `${kept.length} tell${kept.length === 1 ? "" : "s"} found (${loud} loud) in ${words} words. Hover a highlight for the fix.`
-    : `Clean — none of the ${RULES.length + 1} tells fired in ${words} words. Nice.`;
+    ? `${kept.length} robot bit${kept.length === 1 ? "" : "s"} found in ${words} words (${loud} loud). All fixable — hover each highlight to see how.`
+    : `Clean: none of the ${RULES.length + 1} tells fired in ${words} words. Suspiciously human, even.`;
   document.getElementById("checkOut").style.display = "block";
 
   // aggregate ping: counts only, never text
