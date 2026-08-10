@@ -116,10 +116,23 @@
   .howto dt { font-weight: 600; color: var(--ink-1); margin-top: 10px; }
   .howto dd { margin: 2px 0 0; }
 
-  /* sticky CTA */
-  #stickyCta { position: fixed; right: 20px; bottom: 20px; z-index: 50; background: var(--series-1); color: #fff; padding: 12px 18px; border-radius: 99px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 16px rgba(0,0,0,0.25); text-decoration: none; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .25s, transform .25s; }
-  #stickyCta.show { opacity: 1; pointer-events: auto; transform: none; }
-  #stickyCta:hover { text-decoration: none; filter: brightness(1.08); }
+  /* sticky nav */
+  html { scroll-behavior: smooth; }
+  section { scroll-margin-top: 64px; }
+  #topnav { position: sticky; top: 0; z-index: 50; background: color-mix(in oklab, var(--page) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--grid); }
+  #topnav .in { max-width: 1080px; margin: 0 auto; padding: 10px 24px; display: flex; gap: 6px; align-items: center; overflow-x: auto; white-space: nowrap; }
+  #topnav .brand { font-weight: 700; font-size: 14.5px; color: var(--ink-1); margin-right: 10px; }
+  #topnav a { color: var(--ink-2); font-size: 13.5px; padding: 6px 11px; border-radius: 8px; }
+  #topnav a:hover { background: color-mix(in oklab, var(--series-1) 9%, transparent); text-decoration: none; }
+  #topnav a.cta { background: var(--series-1); color: #fff; font-weight: 600; margin-left: auto; }
+  #topnav a.cta:hover { filter: brightness(1.08); }
+
+  /* sample chips */
+  .samples { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; align-items: center; }
+  .samples span { color: var(--ink-muted); font-size: 12.5px; }
+  .chipbtn { background: var(--page); border: 1px solid var(--border); color: var(--ink-2); border-radius: 99px; padding: 5px 12px; font-size: 12.5px; cursor: pointer; }
+  .chipbtn:hover { border-color: var(--series-1); color: var(--series-1); }
+  .dlcallout { margin-top: 12px; font-size: 13.5px; color: var(--ink-2); }
 
   /* checker actions & fixed output */
   .actrow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
@@ -145,6 +158,16 @@
 </style>
 </head>
 <body>
+<nav id="topnav" aria-label="Sections">
+  <div class="in">
+    <span class="brand">HumanSounding</span>
+    <a href="#models">Model accents</a>
+    <a href="#trends">Trend board</a>
+    <a href="#quiz">Spot the AI</a>
+    <a href="#downloads">Downloads</a>
+    <a href="#checker" class="cta">✍ Check your draft</a>
+  </div>
+</nav>
 <div class="wrap">
 
 <header class="site">
@@ -162,6 +185,12 @@
   <h2>Check your draft</h2>
   <p class="h2sub">Paste anything you're about to send. The highlights show every recognizable AI tell, with a plainer fix for each. Your text never leaves this page — the check runs entirely in your browser, and only anonymous counts of <i>which</i> tells fired are recorded, never the text.</p>
   <div class="card" style="padding:20px 22px">
+    <div class="samples">
+      <span>No draft handy? Try a sample:</span>
+      <button class="chipbtn" data-sample="corp">Corporate memo</button>
+      <button class="chipbtn" data-sample="li">LinkedIn post</button>
+      <button class="chipbtn" data-sample="mkt">Marketing email</button>
+    </div>
     <textarea id="draft" rows="7" style="width:100%;resize:vertical;border:1px solid var(--border);border-radius:8px;background:var(--page);color:var(--ink-1);padding:12px;font:inherit;font-size:14.5px" placeholder="Paste your draft here…"></textarea>
     <div style="display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap">
       <button class="btn" id="checkBtn">Check for tells</button>
@@ -182,6 +211,7 @@
       </div>
     </div>
     <p class="duo-note" id="liveStat" hidden></p>
+    <p class="dlcallout">Want the fix at the source? <a href="#downloads">Grab the Claude skill or the any-model instructions</a> and your AI stops writing like this in the first place.</p>
   </div>
 </section>
 
@@ -407,8 +437,6 @@
 </section>
 
 </div>
-
-<a id="stickyCta" href="#checker">✍ Check your draft</a>
 
 <script type="text/plain" id="portablesrc">HUMANSOUNDING — portable instructions (v1.1)
 Paste this into: ChatGPT (Settings > Personalization > Custom Instructions, "How would you like ChatGPT to respond?"), Gemini (Settings > Saved Info, or a Gem's instructions), Claude (Project instructions or Styles), or at the top of any prompt. Latest version and a live trend dashboard: https://humansounding.com
@@ -644,11 +672,16 @@ document.getElementById("checkBtn").addEventListener("click", () => {
   document.getElementById("actNote").textContent = "";
 });
 
-// ---- sticky CTA: visible whenever the checker is off-screen ----
-const ctaEl = document.getElementById("stickyCta");
-new IntersectionObserver((es) => {
-  ctaEl.classList.toggle("show", !es[0].isIntersecting && window.scrollY > 200);
-}, { threshold: 0.05 }).observe(document.getElementById("checker"));
+// ---- sample texts for the checker ----
+const SAMPLES = {
+  corp: "In today's fast-paced business landscape, our team continues to leverage synergies across multiple workstreams. It's important to note that while challenges remain, our holistic, forward-looking approach underscores our unwavering commitment to excellence — ensuring we remain well-positioned for sustainable growth moving forward.",
+  li: "I'm beyond thrilled to announce that I've embarked on an incredible new journey! This isn't just a career move — it's a testament to what's possible when passion meets purpose. Huge thanks to everyone who believed in me along the way. Let's dive into this exciting new chapter together!",
+  mkt: "We're excited to unveil our groundbreaking new platform — a true game-changer designed to seamlessly streamline your workflow. From scrappy startups to global enterprises, our cutting-edge solution empowers teams to unlock unprecedented productivity. Don't miss out on this transformative opportunity!",
+};
+document.querySelectorAll(".chipbtn").forEach(b => b.addEventListener("click", () => {
+  document.getElementById("draft").value = SAMPLES[b.dataset.sample];
+  document.getElementById("checkBtn").click();
+}));
 
 // ---- live stat ----
 (async () => {
