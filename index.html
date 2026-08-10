@@ -116,6 +116,25 @@
   .howto dt { font-weight: 600; color: var(--ink-1); margin-top: 10px; }
   .howto dd { margin: 2px 0 0; }
 
+  /* sticky CTA */
+  #stickyCta { position: fixed; right: 20px; bottom: 20px; z-index: 50; background: var(--series-1); color: #fff; padding: 12px 18px; border-radius: 99px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 16px rgba(0,0,0,0.25); text-decoration: none; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .25s, transform .25s; }
+  #stickyCta.show { opacity: 1; pointer-events: auto; transform: none; }
+  #stickyCta:hover { text-decoration: none; filter: brightness(1.08); }
+
+  /* checker actions & fixed output */
+  .actrow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  .btn2 { background: var(--surface-1); color: var(--series-1); border: 1.5px solid var(--series-1); border-radius: 8px; padding: 9px 15px; font-size: 14px; font-weight: 600; cursor: pointer; }
+  ins.fix { background: color-mix(in oklab, var(--delta-up) 14%, transparent); text-decoration: none; border-radius: 2px; padding: 0 1px; }
+
+  /* quiz */
+  .qopt { cursor: pointer; transition: border-color .15s; }
+  .qopt:hover { border-color: var(--series-1); }
+  .qopt.correct { border-color: var(--delta-up); border-width: 2px; }
+  .qopt.wrong { border-color: var(--delta-down); border-width: 2px; }
+  .qopt.revealed { cursor: default; }
+  .qmeta { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; gap: 12px; flex-wrap: wrap; }
+  .qfeed { font-size: 14.5px; color: var(--ink-2); min-height: 22px; }
+
   /* sources */
   .sources { font-size: 13.5px; color: var(--ink-2); columns: 2; column-gap: 32px; margin-top: 18px; }
   @media (max-width: 860px) { .sources { columns: 1; } }
@@ -151,7 +170,18 @@
     <div id="checkOut" style="margin-top:16px;display:none">
       <div class="pane" style="padding:16px;border:1px solid var(--grid);border-radius:8px;font-size:14.5px;line-height:1.7" id="checkMarked"></div>
       <div id="checkList" style="margin-top:14px"></div>
+      <div class="actrow">
+        <button class="btn2" id="fixBtn">Apply mechanical fixes</button>
+        <button class="btn2" id="shareBtn">Share this result</button>
+        <span id="actNote" style="color:var(--ink-muted);font-size:13px;align-self:center"></span>
+      </div>
+      <div id="fixedOut" style="margin-top:14px;display:none">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--delta-up);margin-bottom:8px">With mechanical fixes <span style="color:var(--ink-muted);font-weight:400;text-transform:none;letter-spacing:0">— word swaps, phrase cuts, and em dashes only; structural tells (rhythm, triplets, hedging) still need you</span></div>
+        <div class="pane" style="padding:16px;border:1px solid var(--grid);border-radius:8px;font-size:14.5px;line-height:1.7" id="fixedText"></div>
+        <div class="actrow"><button class="btn2" id="copyFixedBtn">Copy fixed text</button></div>
+      </div>
     </div>
+    <p class="duo-note" id="liveStat" hidden></p>
   </div>
 </section>
 
@@ -267,6 +297,32 @@
   <p class="duo-note">What changed in each rewrite: specific numbers replace abstractions, sentence lengths vary, no triplets, one em dash total across both, and each ends on new information instead of a summary.</p>
 </section>
 
+<section id="quiz">
+  <h2>Spot the AI</h2>
+  <p class="h2sub">Two passages, same job. One was written in the machine vernacular. Click the one you think is AI-written — eight rounds, then brag (or don't).</p>
+  <div class="card" style="padding:20px 22px">
+    <div id="quizStage">
+      <div class="duo" style="margin-top:0">
+        <div class="card pane qopt" id="qA" tabindex="0"><div class="tag" style="color:var(--ink-muted)">Passage A</div><p id="qAtext"></p></div>
+        <div class="card pane qopt" id="qB" tabindex="0"><div class="tag" style="color:var(--ink-muted)">Passage B</div><p id="qBtext"></p></div>
+      </div>
+      <div class="qmeta">
+        <span class="qfeed" id="qFeed">Round <b id="qRound">1</b> of 8 · Score <b id="qScore">0</b></span>
+        <button class="btn" id="qNext" style="display:none">Next round</button>
+      </div>
+    </div>
+    <div id="quizDone" style="display:none">
+      <p style="font-size:22px;font-weight:650;margin:0 0 6px" id="qFinal"></p>
+      <p class="qfeed" id="qVerdict"></p>
+      <div class="actrow">
+        <button class="btn" id="qShare">Share your score</button>
+        <button class="btn2" id="qAgain">Play again</button>
+        <span id="qShareNote" style="color:var(--ink-muted);font-size:13px;align-self:center"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="trends">
   <h2>Trend board</h2>
   <p class="h2sub">Direction reflects the newest available data: several tells are now <i>falling at the source</i> (labs tune them out once they become memes) while <i>still rising in human speech and the published record</i>.</p>
@@ -351,6 +407,8 @@
 </section>
 
 </div>
+
+<a id="stickyCta" href="#checker">✍ Check your draft</a>
 
 <script type="text/plain" id="portablesrc">HUMANSOUNDING — portable instructions (v1.1)
 Paste this into: ChatGPT (Settings > Personalization > Custom Instructions, "How would you like ChatGPT to respond?"), Gemini (Settings > Saved Info, or a Gem's instructions), Claude (Project instructions or Styles), or at the top of any prompt. Latest version and a live trend dashboard: https://humansounding.com
@@ -581,7 +639,210 @@ document.getElementById("checkBtn").addEventListener("click", () => {
   const tells = {};
   kept.forEach(h => tells[h.rule.id] = (tells[h.rule.id] || 0) + 1);
   ping({ event: "checker_used", tells });
+  lastCheck = { words, count: kept.length };
+  document.getElementById("fixedOut").style.display = "none";
+  document.getElementById("actNote").textContent = "";
 });
+
+// ---- sticky CTA: visible whenever the checker is off-screen ----
+const ctaEl = document.getElementById("stickyCta");
+new IntersectionObserver((es) => {
+  ctaEl.classList.toggle("show", !es[0].isIntersecting && window.scrollY > 200);
+}, { threshold: 0.05 }).observe(document.getElementById("checker"));
+
+// ---- live stat ----
+(async () => {
+  try {
+    const r = await fetch(TRACK_URL + "?what=stats", { headers: { "authorization": "Bearer " + TRACK_KEY } });
+    const s = await r.json();
+    if (s && s.top_tell) {
+      const rule = RULES.find(x => x.id === s.top_tell);
+      const label = rule ? rule.label : (s.top_tell === "em_dash" ? "Em-dash density" : null);
+      if (label) {
+        document.getElementById("liveStat").textContent =
+          `Most-caught tell in drafts this week: ${label}` + (s.checks_7d >= 50 ? ` · ${s.checks_7d} drafts checked` : "");
+        document.getElementById("liveStat").hidden = false;
+      }
+    }
+  } catch { /* stat stays hidden */ }
+})();
+
+// ---- mechanical fixes ----
+// verb-form-aware replacer: picks the right conjugation from the matched suffix
+const vf = (f) => (m) => {
+  const w = m.toLowerCase();
+  if (w.endsWith("ing")) return f.ing;
+  if (w.endsWith("ed")) return f.ed || f.base;
+  if (w.endsWith("s")) return f.s;
+  return f.base;
+};
+const WORD_FIXES = [
+  [/\bdelv(?:e|es|ing) into\b/gi, vf({ base: "dig into", s: "digs into", ing: "digging into" })],
+  [/\bdelve\b/gi, "dig"],
+  [/\btapestry\b/gi, "mix"], [/\bmeticulously\b/gi, "carefully"], [/\bmeticulous\b/gi, "careful"],
+  [/\bpivotal\b/gi, "key"], [/\bcrucial\b/gi, "key"], [/\bseamlessly\b/gi, "smoothly"], [/\bseamless\b/gi, "smooth"],
+  [/\bleverag(?:e|es|ing|ed)\b/gi, vf({ base: "use", s: "uses", ing: "using", ed: "used" })],
+  [/\bharness(?:es|ing|ed)?\b/gi, vf({ base: "use", s: "uses", ing: "using", ed: "used" })],
+  [/\bfoster(?:s|ing|ed)?\b/gi, vf({ base: "support", s: "supports", ing: "supporting", ed: "supported" })],
+  [/\bfacilitat(?:e|es|ing|ed)\b/gi, vf({ base: "help", s: "helps", ing: "helping", ed: "helped" })],
+  [/\bstreamlin(?:e|es|ing|ed)\b/gi, vf({ base: "simplify", s: "simplifies", ing: "simplifying", ed: "simplified" })],
+  [/\bbolster(?:s|ing|ed)?\b/gi, vf({ base: "support", s: "supports", ing: "supporting", ed: "supported" })],
+  [/\belevat(?:e|es|ing|ed)\b/gi, vf({ base: "raise", s: "raises", ing: "raising", ed: "raised" })],
+  [/\bempower(?:s|ing|ed)?\b/gi, vf({ base: "help", s: "helps", ing: "helping", ed: "helped" })],
+  [/\bunlock(?:s|ing|ed)?\b/gi, vf({ base: "open up", s: "opens up", ing: "opening up", ed: "opened up" })],
+  [/\btransformative\b/gi, "major"], [/\bgroundbreaking\b/gi, "new"], [/\bcutting-edge\b/gi, "new"],
+  [/\bunprecedented\b/gi, "new"], [/\bever-evolving\b/gi, "changing"], [/\bmultifaceted\b/gi, "varied"],
+  [/\bnuanced\b/gi, "subtle"], [/\bholistic\b/gi, "complete"], [/\bmyriad of\b/gi, "many"], [/\bmyriad\b/gi, "many"],
+  [/\ba plethora of\b/gi, "plenty of"], [/\brobust\b/gi, "solid"],
+  [/\bshowcas(?:e|es|ed|ing)\b/gi, vf({ base: "show", s: "shows", ing: "showing", ed: "showed" })],
+  [/\bunderscor(?:e|es|ed|ing)\b/gi, vf({ base: "show", s: "shows", ing: "showing", ed: "showed" })],
+  [/\bboasts\b/gi, "has"],
+  [/\bgarner(?:ed|s|ing)?\b/gi, vf({ base: "get", s: "gets", ing: "getting", ed: "got" })],
+  [/\bvibrant\b/gi, "lively"], [/\bbreathtaking\b/gi, "striking"],
+  [/\bstunning\b/gi, "striking"], [/\bintricate\b/gi, "detailed"], [/\bgame-chang(?:er|ing)\b/gi, "big deal"],
+  [/\bparadigm shift\b/gi, "big change"], [/\b(?:a|the) testament to\b/gi, "a sign of"], [/\bsynerg(?:y|ies)\b/gi, "teamwork"],
+];
+const PHRASE_CUTS = [
+  /\bIt(?:'|’)s (?:important|worth) (?:to note|noting)(?: that)?[,:]?\s*/gi,
+  /\bIn (?:conclusion|summary),?\s*/gi,
+  /\bLet(?:'|’)s dive in[.!]?\s*/gi,
+  /\bIn today(?:'|’)s (?:fast-paced|ever-changing|digital|modern)[^,.]{0,30},?\s*/gi,
+  /\bNeedless to say,?\s*/gi,
+];
+function applyFixes(text) {
+  let out = text, changes = 0;
+  const count = (re, s) => (s.match(re) || []).length;
+  for (const re of PHRASE_CUTS) { changes += count(re, out); out = out.replace(re, ""); }
+  for (const [re, rep] of WORD_FIXES) {
+    out = out.replace(re, (m, ...a) => {
+      changes++;
+      let r = typeof rep === "function" ? rep(m) : rep;
+      if (/^[A-Z]/.test(m)) r = r[0].toUpperCase() + r.slice(1);
+      return r;
+    });
+  }
+  const dashes = count(/—|--/g, out);
+  if (dashes) { changes += dashes; out = out.replace(/\s*(?:—|--)\s*/g, ", "); }
+  out = out.replace(/,\s*,/g, ",").replace(/([.!?])\s*,\s*/g, "$1 ").replace(/\s{2,}/g, " ")
+           .replace(/(^|[.!?]\s+)([a-z])/g, (m, p, c) => p + c.toUpperCase());
+  return { out, changes };
+}
+let lastCheck = null; // {words, count}
+document.getElementById("fixBtn").addEventListener("click", () => {
+  const text = document.getElementById("draft").value;
+  if (!text.trim()) return;
+  const { out, changes } = applyFixes(text);
+  document.getElementById("fixedText").textContent = out;
+  document.getElementById("fixedOut").style.display = "block";
+  document.getElementById("actNote").textContent = changes
+    ? `${changes} mechanical fix${changes === 1 ? "" : "es"} applied. Re-check the result — structural tells remain yours to fix.`
+    : "No mechanical fixes applied — the tells found are structural (rhythm, triplets, hedging), which need a human rewrite.";
+  ping({ event: "fixes_applied" });
+});
+document.getElementById("copyFixedBtn").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(document.getElementById("fixedText").textContent); } catch { return; }
+  document.getElementById("copyFixedBtn").textContent = "Copied ✓";
+  setTimeout(() => document.getElementById("copyFixedBtn").textContent = "Copy fixed text", 1600);
+});
+async function shareText(text, noteEl, evt) {
+  ping({ event: evt });
+  if (navigator.share) { try { await navigator.share({ text }); return; } catch { /* fall through */ } }
+  try {
+    await navigator.clipboard.writeText(text);
+    noteEl.textContent = "Copied to clipboard ✓";
+  } catch { noteEl.textContent = text; }
+  setTimeout(() => noteEl.textContent = "", 4000);
+}
+document.getElementById("shareBtn").addEventListener("click", () => {
+  if (!lastCheck) return;
+  const t = lastCheck.count === 0
+    ? `0 AI tells found in my ${lastCheck.words}-word draft. Checked at humansounding.com`
+    : `My draft had ${lastCheck.count} AI tell${lastCheck.count === 1 ? "" : "s"} in ${lastCheck.words} words — found and fixed at humansounding.com`;
+  shareText(t, document.getElementById("actNote"), "share_badge");
+});
+
+// ---- Spot the AI quiz ----
+const QUIZ = [
+  { ai: "We're thrilled to unveil our latest update — a game-changer designed to seamlessly streamline your workflow. From solo freelancers to global teams, this release empowers everyone to unlock new levels of productivity. We can't wait for you to dive in!",
+    human: "The new update ships today. Biggest change: projects now load in under a second, even the big ones. We also fixed the export bug several of you reported in March. Update from the settings page whenever you're ready.",
+    why: "game-changer, seamlessly streamline, false range (from solo freelancers to global teams), empower/unlock" },
+  { ai: "I'm beyond excited to announce that I've joined Acme as Head of Growth! This isn't just a new role — it's the next chapter in an incredible journey. Huge thanks to everyone who supported me along the way. Let's build something amazing together!",
+    human: "News: I started at Acme this week, running growth. First job is figuring out why trial users quit in week two. If you've solved that problem somewhere, I'd like twenty minutes of your time. Coffee's on me.",
+    why: "negative parallelism (isn't just a role — it's...), em dash, incredible journey" },
+  { ai: "Nestled in the heart of downtown, this vibrant eatery boasts a diverse menu that showcases the rich tapestry of Italian cuisine. From handmade pastas to decadent desserts, every dish is a testament to the chef's meticulous craftsmanship.",
+    human: "Order the pici cacio e pepe. The room is loud and the tables are small, but the pasta comes out in eight minutes and costs fourteen dollars. Skip dessert; get the second glass of wine instead. I've been back three times in two weeks.",
+    why: "vibrant, boasts, showcases, tapestry, testament, meticulous, false range" },
+  { ai: "I am writing to express my keen interest in this pivotal role. With my multifaceted background and proven track record of driving transformative results, I am confident I would be a seamless fit for your dynamic, fast-paced team.",
+    human: "I ran support at a company about your size, and I cut ticket backlog from 900 to 40 in one quarter. I'd like to do that for you. The posting mentions Zendesk; I've administered it for four years, including two messy migrations.",
+    why: "pivotal, multifaceted, transformative, seamless, fast-paced, zero checkable facts" },
+  { ai: "In today's ever-changing world, your support plays a pivotal role in fostering hope. Together, we're not just building shelters — we're building futures. Every donation, from the smallest gift to the largest grant, underscores our shared commitment to lasting change.",
+    human: "Your donations built four shelters this year; 61 people slept indoors last night because of them. Next is a fifth site on Harper Road, which needs $18,000 by October. If 200 of you give $90, it opens before the first frost.",
+    why: "In today's ever-changing world, pivotal, fostering, negative parallelism, false range, underscores" },
+  { ai: "Discover a revolutionary app that transforms the way you manage your day. With its sleek, intuitive interface and powerful cutting-edge features, staying organized has never been more effortless. Download now and elevate your productivity to new heights!",
+    human: "A to-do app with one screen. Type a task, drag it into today or later, done. No accounts, no sync, no subscription; your list stays on your phone. Free, 4 MB, works offline.",
+    why: "revolutionary, transforms, cutting-edge, elevate to new heights, rule-of-three adjectives" },
+  { ai: "This week, the team made significant strides across multiple workstreams, highlighting our unwavering commitment to excellence. While challenges remain, our holistic approach continues to ensure we're well-positioned for success moving forward.",
+    human: "Shipped the invoice fix Tuesday; refunds are back under ten minutes. The Munich launch slipped a week because legal is still reviewing terms. Hiring: two backend offers out, one accepted. Blocked on nothing right now.",
+    why: "significant strides, trailing -ing clause, hedged balance (while challenges remain), holistic, no facts" },
+  { ai: "Founded on a passion for innovation, our company stands as a testament to what's possible when visionary thinking meets meticulous execution. We leverage cutting-edge technology to deliver seamless solutions that empower businesses to thrive in an ever-evolving landscape.",
+    human: "We started in 2019 because hospital billing software was miserable and we'd used a lot of it. Today 214 clinics run our product. We're twelve people, profitable since 2023, and we still answer our own support tickets.",
+    why: "stands as a testament, leverage, cutting-edge, seamless, empower, ever-evolving landscape" },
+];
+let qi = 0, qScore = 0, qOrder = [];
+function qShuffle() { qOrder = QUIZ.map((_, i) => i).sort(() => Math.random() - 0.5); }
+function qRender() {
+  const q = QUIZ[qOrder[qi]];
+  const aiFirst = Math.random() < 0.5;
+  document.getElementById("qA").dataset.ai = aiFirst ? "1" : "0";
+  document.getElementById("qB").dataset.ai = aiFirst ? "0" : "1";
+  document.getElementById("qAtext").textContent = aiFirst ? q.ai : q.human;
+  document.getElementById("qBtext").textContent = aiFirst ? q.human : q.ai;
+  ["qA", "qB"].forEach(id => { const el = document.getElementById(id); el.classList.remove("correct", "wrong", "revealed"); });
+  document.getElementById("qFeed").innerHTML = `Round <b>${qi + 1}</b> of 8 · Score <b>${qScore}</b>`;
+  document.getElementById("qNext").style.display = "none";
+}
+function qPick(id) {
+  const el = document.getElementById(id);
+  if (el.classList.contains("revealed")) return;
+  const q = QUIZ[qOrder[qi]];
+  const pickedAI = el.dataset.ai === "1";
+  ["qA", "qB"].forEach(x => document.getElementById(x).classList.add("revealed"));
+  if (pickedAI) { qScore++; el.classList.add("correct"); }
+  else {
+    el.classList.add("wrong");
+    document.querySelector('.qopt[data-ai="1"]').classList.add("correct");
+  }
+  document.getElementById("qFeed").innerHTML =
+    (pickedAI ? "✔ Right." : "✘ That one was the human.") + ` <span style="color:var(--ink-muted)">Tells: ${q.why}.</span>`;
+  document.getElementById("qNext").style.display = "inline-block";
+  document.getElementById("qNext").textContent = qi === 7 ? "See your score" : "Next round";
+}
+document.getElementById("qA").addEventListener("click", () => qPick("qA"));
+document.getElementById("qB").addEventListener("click", () => qPick("qB"));
+document.getElementById("qNext").addEventListener("click", () => {
+  qi++;
+  if (qi >= 8) {
+    document.getElementById("quizStage").style.display = "none";
+    document.getElementById("quizDone").style.display = "block";
+    document.getElementById("qFinal").textContent = `${qScore}/8`;
+    document.getElementById("qVerdict").textContent =
+      qScore === 8 ? "Perfect. You can't be fooled — yet." :
+      qScore >= 6 ? "Sharp eye. The vernacular doesn't get past you often." :
+      qScore >= 4 ? "Coin-flip territory — which is exactly why this site exists." :
+      "The machines got you. Scroll up and study the tells.";
+    ping({ event: "quiz_done" });
+  } else { qRender(); }
+});
+document.getElementById("qAgain").addEventListener("click", () => {
+  qi = 0; qScore = 0; qShuffle();
+  document.getElementById("quizDone").style.display = "none";
+  document.getElementById("quizStage").style.display = "block";
+  qRender();
+});
+document.getElementById("qShare").addEventListener("click", () => {
+  shareText(`I spotted the AI-written passage in ${qScore}/8 rounds. Can you beat that? humansounding.com`, document.getElementById("qShareNote"), "share_quiz");
+});
+qShuffle(); qRender();
 
 // theme toggle
 const btn = document.getElementById("themeBtn");
