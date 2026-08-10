@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HumanSounding — sound like yourself, not like a model</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1: #fcfcfb; --page: #f9f9f7;
+    --ink-1: #0b0b0b; --ink-2: #52514e; --ink-muted: #898781;
+    --grid: #e1e0d9; --baseline: #c3c2b7; --border: rgba(11,11,11,0.10);
+    --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a;
+    --seq-250: #86b6ef; --seq-400: #3987e5; --seq-550: #1c5cab; --seq-700: #0d366b;
+    --delta-up: #006300; --delta-down: #a03535;
+    --hl: #fff3c9; --hl-border: #eda100;
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1: #1a1a19; --page: #0d0d0d;
+    --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-muted: #898781;
+    --grid: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70;
+    --delta-up: #0ca30c; --delta-down: #e66767;
+    --hl: #3a3116; --hl-border: #c98500;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--page); color: var(--ink-1);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.55; font-size: 16px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px 80px; }
+  header.site { padding: 48px 0 8px; }
+  header.site h1 { font-size: 34px; margin: 0 0 6px; letter-spacing: -0.5px; }
+  .sub { color: var(--ink-2); max-width: 760px; margin: 0; }
+  .meta-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin: 18px 0 8px; color: var(--ink-muted); font-size: 13px; }
+  .meta-row .dot::before { content: "·"; margin-right: 16px; }
+  #themeBtn { margin-left: auto; background: var(--surface-1); border: 1px solid var(--border); color: var(--ink-2); border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 13px; }
+  section { margin-top: 56px; }
+  h2 { font-size: 22px; margin: 0 0 4px; letter-spacing: -0.3px; }
+  .h2sub { color: var(--ink-2); margin: 0 0 20px; font-size: 14.5px; max-width: 720px; }
+  .card, .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; }
+
+  /* KPI row */
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+  .tile { padding: 18px 18px 14px; }
+  .tile .v { font-size: 40px; font-weight: 650; letter-spacing: -1px; line-height: 1.1; }
+  .tile .l { color: var(--ink-2); font-size: 13.5px; margin-top: 6px; }
+  .tile .s { color: var(--ink-muted); font-size: 12px; margin-top: 8px; }
+
+  /* trend chips */
+  .chip { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 99px; border: 1px solid var(--border); }
+  .chip.rising { color: var(--delta-down); }
+  .chip.falling { color: var(--delta-up); }
+  .chip.stable { color: var(--ink-muted); }
+
+  /* charts */
+  .chart { padding: 20px 22px 16px; }
+  .chart h3 { margin: 0 0 2px; font-size: 16px; }
+  .chart .csub { color: var(--ink-muted); font-size: 12.5px; margin: 0 0 16px; }
+  .brow { display: grid; grid-template-columns: 210px 1fr 64px; gap: 10px; align-items: center; padding: 4px 0; border-radius: 6px; }
+  .brow:hover { background: color-mix(in oklab, var(--series-1) 7%, transparent); }
+  .brow .bl { font-size: 13px; color: var(--ink-2); text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .brow .tr { position: relative; height: 18px; background: transparent; border-left: 2px solid var(--baseline); }
+  .brow .bar { position: absolute; left: 0; top: 2px; bottom: 2px; border-radius: 0 4px 4px 0; background: var(--series-1); min-width: 2px; }
+  .brow .bar.ref { background: var(--ink-muted); }
+  .brow .bv { font-size: 13px; font-variant-numeric: tabular-nums; color: var(--ink-1); }
+  .charts2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 22px; }
+  @media (max-width: 860px) { .charts2 { grid-template-columns: 1fr; } .brow { grid-template-columns: 140px 1fr 60px; } }
+  .refnote { display: flex; gap: 8px; align-items: center; color: var(--ink-muted); font-size: 12px; margin-top: 10px; }
+  .swatch { width: 14px; height: 10px; border-radius: 3px; display: inline-block; }
+
+  /* model cards */
+  .models { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-top: 22px; }
+  .mcard { padding: 20px 22px; }
+  .mcard h3 { margin: 0; font-size: 17px; display: flex; align-items: center; gap: 8px; }
+  .mcard h3 .mdot { width: 10px; height: 10px; border-radius: 50%; }
+  .mcard ul { margin: 12px 0 0; padding: 0; list-style: none; }
+  .mcard li { padding: 8px 0; border-top: 1px solid var(--grid); font-size: 14px; color: var(--ink-2); }
+  .mcard li:first-child { border-top: none; }
+  .mcard li b { color: var(--ink-1); font-weight: 600; }
+  .conf { font-size: 11px; font-weight: 600; letter-spacing: 0.4px; text-transform: uppercase; color: var(--ink-muted); }
+
+  /* side-by-side */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
+  @media (max-width: 860px) { .duo { grid-template-columns: 1fr; } }
+  .pane { padding: 20px 22px; font-size: 14.5px; }
+  .pane .tag { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 10px; }
+  .pane.ai .tag { color: var(--delta-down); }
+  .pane.human .tag { color: var(--delta-up); }
+  .pane p { margin: 0 0 12px; color: var(--ink-2); }
+  mark.tell { background: var(--hl); border-bottom: 2px solid var(--hl-border); color: inherit; border-radius: 2px; padding: 0 1px; cursor: help; position: relative; }
+  mark.tell:hover::after {
+    content: attr(data-tell); position: absolute; left: 0; bottom: calc(100% + 6px); z-index: 10;
+    background: var(--ink-1); color: var(--page); font-size: 12px; line-height: 1.4;
+    padding: 8px 10px; border-radius: 8px; width: 240px; white-space: normal;
+  }
+  .duo-note { color: var(--ink-muted); font-size: 12.5px; margin-top: 10px; }
+
+  /* table */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 20px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--ink-muted); padding: 12px 16px; border-bottom: 1px solid var(--grid); }
+  td { padding: 11px 16px; border-bottom: 1px solid var(--grid); color: var(--ink-2); vertical-align: top; }
+  td:first-child { color: var(--ink-1); font-weight: 600; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+
+  /* downloads */
+  .dl { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 22px; }
+  @media (max-width: 860px) { .dl { grid-template-columns: 1fr; } }
+  .dlcard { padding: 22px; }
+  .dlcard h3 { margin: 0 0 8px; font-size: 16px; }
+  .dlcard p { color: var(--ink-2); font-size: 14px; margin: 0 0 14px; }
+  .btn { display: inline-block; background: var(--series-1); color: #fff; border: none; border-radius: 8px; padding: 10px 16px; font-size: 14px; font-weight: 600; cursor: pointer; }
+  .howto { margin-top: 14px; font-size: 13.5px; color: var(--ink-2); }
+  .howto dt { font-weight: 600; color: var(--ink-1); margin-top: 10px; }
+  .howto dd { margin: 2px 0 0; }
+
+  /* sources */
+  .sources { font-size: 13.5px; color: var(--ink-2); columns: 2; column-gap: 32px; margin-top: 18px; }
+  @media (max-width: 860px) { .sources { columns: 1; } }
+  .sources p { margin: 0 0 10px; break-inside: avoid; }
+  a { color: var(--series-1); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .fineprint { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--grid); color: var(--ink-muted); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <h1>HumanSounding</h1>
+  <p class="sub">The AI Vernacular Index: a live reference for the words, phrases, and habits that mark text as model-written. Check your own draft, see what each model does and how often, what's measurably rising or falling, and download an instruction file that steers any model away from the worst of it.</p>
+  <div class="meta-row">
+    <span>Last updated <b id="updated">August 10, 2026</b></span>
+    <span class="dot">Refreshed weekly from published studies and detector data</span>
+    <span class="dot" id="meter" hidden><b id="meterN"></b> visits and counting</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</header>
+
+<section id="checker">
+  <h2>Check your draft</h2>
+  <p class="h2sub">Paste anything you're about to send. The highlights show every recognizable AI tell, with a plainer fix for each. Your text never leaves this page — the check runs entirely in your browser, and only anonymous counts of <i>which</i> tells fired are recorded, never the text.</p>
+  <div class="card" style="padding:20px 22px">
+    <textarea id="draft" rows="7" style="width:100%;resize:vertical;border:1px solid var(--border);border-radius:8px;background:var(--page);color:var(--ink-1);padding:12px;font:inherit;font-size:14.5px" placeholder="Paste your draft here…"></textarea>
+    <div style="display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap">
+      <button class="btn" id="checkBtn">Check for tells</button>
+      <span id="checkSummary" style="color:var(--ink-2);font-size:14px"></span>
+    </div>
+    <div id="checkOut" style="margin-top:16px;display:none">
+      <div class="pane" style="padding:16px;border:1px solid var(--grid);border-radius:8px;font-size:14.5px;line-height:1.7" id="checkMarked"></div>
+      <div id="checkList" style="margin-top:14px"></div>
+    </div>
+  </div>
+</section>
+
+<section id="kpis">
+  <div class="kpis">
+    <div class="tile">
+      <div class="v">~6%</div>
+      <div class="l">of sampled ChatGPT messages contained a "not just X, but Y" variant</div>
+      <div class="s">Washington Post analysis of 328,744 messages, July 2025</div>
+    </div>
+    <div class="tile">
+      <div class="v">13.5%</div>
+      <div class="l">of 2024 biomedical abstracts show LLM-assisted wording (40% in some subfields)</div>
+      <div class="s">Kobak et al., Science Advances 2025</div>
+    </div>
+    <div class="tile">
+      <div class="v">3.3×</div>
+      <div class="l">GPT-4.1's em-dash rate vs. the human baseline (10.6 vs 3.2 per 1,000 words)</div>
+      <div class="s">SlopDetector corpus measurement, 2026</div>
+    </div>
+    <div class="tile">
+      <div class="v">97.1%</div>
+      <div class="l">accuracy telling ChatGPT, Claude, Gemini, Grok and DeepSeek apart by style alone</div>
+      <div class="s">Sun et al. (CMU), "Idiosyncrasies in LLMs"</div>
+    </div>
+  </div>
+</section>
+
+<section id="charts">
+  <h2>The numbers behind the tells</h2>
+  <p class="h2sub">Left: phrases measured against human writing by GPTZero across millions of documents. Right: em-dash density by model, against a measured human baseline. Hover any bar for the source.</p>
+  <div class="charts2">
+    <div class="card chart">
+      <h3>Phrase overuse vs. human text</h3>
+      <p class="csub">How many times more often the phrase appears in AI text · GPTZero, Oct 2024</p>
+      <div id="phraseChart"></div>
+    </div>
+    <div class="card chart">
+      <h3>Em dashes per 1,000 words</h3>
+      <p class="csub">Model defaults vs. human essay baseline · SlopDetector, 2026</p>
+      <div id="dashChart"></div>
+      <div class="refnote"><span class="swatch" style="background:var(--ink-muted)"></span> human baseline · <span class="swatch" style="background:var(--series-1)"></span> model output</div>
+    </div>
+  </div>
+</section>
+
+<section id="models">
+  <h2>Each model's accent</h2>
+  <p class="h2sub">Most "AI-isms" are shared across every model. But each one has habits distinct enough that a classifier can name the author. Confidence labels: <b>measured</b> = quantitative study · <b>documented</b> = widely reported, official acknowledgment, or dedicated tracking · <b>anecdotal</b> = community consensus without hard counts.</p>
+  <div class="models">
+    <div class="card mcard">
+      <h3><span class="mdot" style="background:var(--series-3)"></span>ChatGPT (OpenAI)</h3>
+      <ul>
+        <li><b>"It's not just X, it's Y."</b> Negative parallelism, in ~6% of sampled real messages. <span class="conf">measured</span></li>
+        <li><b>Em dashes as a brand.</b> Highest measured rate of the big models; Altman announced a fix in Nov 2025 that made custom instructions work, but defaults barely moved until GPT-5.4. <span class="conf">measured</span></li>
+        <li><b>The "delve" era vocabulary.</b> Delve, tapestry, underscore, showcase — the 2023–24 tells, now fading from new output while still spreading through human speech. Watch instead for "core" and "modern". <span class="conf">measured</span></li>
+        <li><b>Markdown maximalism.</b> Heaviest user of bold text, headers, and "Bold term: explanation" bullets. <span class="conf">measured</span></li>
+        <li><b>Sycophancy spike.</b> The April 2025 GPT-4o update was rolled back within a week for being "overly flattering"; GPT-5 then overcorrected cold and was warmed back up. <span class="conf">documented</span></li>
+      </ul>
+    </div>
+    <div class="card mcard">
+      <h3><span class="mdot" style="background:var(--series-2)"></span>Claude (Anthropic)</h3>
+      <ul>
+        <li><b>"You're absolutely right!"</b> The signature. Official GitHub bug #3382, a dedicated tracker site (absolutelyright.lol), and self-parody from Anthropic's own account. <span class="conf">documented</span></li>
+        <li><b>Affirmation, then reversal.</b> The praise often signals a correction or backpedal is coming next. <span class="conf">documented</span></li>
+        <li><b>The apology cascade.</b> "Ah, I see the issue now" → "You're absolutely right" → "Apologies for the confusion", on loop in coding sessions. <span class="conf">anecdotal</span></li>
+        <li><b>Prompt-referencing.</b> Leans on "based on the text", "according to the passage" — a phrase family classifiers use to identify it. <span class="conf">measured</span></li>
+        <li><b>Counter-tell:</b> uses <i>less</i> bold and fewer headers than ChatGPT. The "wall of markdown" is a ChatGPT accent that gets misattributed to Claude. <span class="conf">measured</span></li>
+      </ul>
+    </div>
+    <div class="card mcard">
+      <h3><span class="mdot" style="background:var(--series-1)"></span>Gemini (Google)</h3>
+      <ul>
+        <li><b>Most agreeable model measured.</b> 62.5% sycophantic response rate in Stanford's SycEval, ahead of ChatGPT-4o's 56.7%. <span class="conf">measured</span></li>
+        <li><b>Plain-vocabulary preference.</b> Says "sugar" where ChatGPT says "glucose" — stylometric analysis attributes text to it by exactly this friendliness. <span class="conf">measured</span></li>
+        <li><b>The self-loathing loop.</b> "I am a disgrace to my profession… to this planet" — a 2025 failure-mode bug Google acknowledged, unique to Gemini. <span class="conf">documented</span></li>
+        <li><b>Fewest em dashes of the majors</b> — 3.5 per 1,000 words, close to the human rate. <span class="conf">measured</span></li>
+        <li><b>Phrase-level tells are thin.</b> Its fingerprint is statistical (word distributions, register) more than catchphrases — but strong enough that DeepSeek R1's training data was traced to Gemini output by style alone. <span class="conf">documented</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <h2>Read the difference</h2>
+  <p class="h2sub">The same content written twice. Hover the highlights to see which tell each one is.</p>
+
+  <div class="duo">
+    <div class="card pane ai">
+      <div class="tag">In the vernacular</div>
+      <p><mark class="tell" data-tell="Grand-context opener — 'today's fast-paced world' appears 107× more often in AI text (GPTZero)">In today's fast-paced digital landscape</mark>, WidgetFlow <mark class="tell" data-tell="Negative parallelism ('isn't just X — it's Y'), the most-cited current tell; ~6% of sampled ChatGPT messages">isn't just another project tool — it's a paradigm shift</mark>. Our platform <mark class="tell" data-tell="Slop-verb stack: seamlessly / leverage / cutting-edge / streamline are all on every editor blacklist">seamlessly leverages cutting-edge AI to streamline</mark> your workflow, <mark class="tell" data-tell="Trailing '-ing' clause that fakes analysis (Wikipedia AISIGNS: 'superficial analyses')">empowering teams to unlock their full potential</mark>. <mark class="tell" data-tell="False range ('from X to Y') — sounds specific, says nothing">From scrappy startups to global enterprises</mark>, WidgetFlow <mark class="tell" data-tell="'Boasts' — on the 21-word ChatGPT focal list (Juzek & Ward)">boasts</mark> a robust suite of features designed to <mark class="tell" data-tell="Rule of three — triplet padding is a codified AI sign (Wikipedia AISIGNS)">foster collaboration, enhance productivity, and elevate performance</mark>. <mark class="tell" data-tell="Editorializing aside — 'it's important to note' (Wikipedia AISIGNS)">It's important to note</mark> that every feature was <mark class="tell" data-tell="'Meticulous' rose 34.7× in AI-assisted peer reviews (Liang et al.)">meticulously</mark> crafted with the user in mind. The result? A truly <mark class="tell" data-tell="Hype vocabulary: transformative / testament — 'stands as a testament' is a canonical AI phrase">transformative experience that stands as a testament</mark> to what's possible. <mark class="tell" data-tell="Compulsive summary ending — restates instead of adding (Wikipedia AISIGNS)">In conclusion, WidgetFlow represents more than a tool — it's a comprehensive ecosystem for the modern workplace.</mark></p>
+    </div>
+    <div class="card pane human">
+      <div class="tag">Without it</div>
+      <p>WidgetFlow is a project tracker for teams that have outgrown spreadsheets. It schedules work, flags conflicts before they block anyone, and writes the weekly status report for you. Setup takes about ten minutes.</p>
+      <p>The scheduling engine is the part we're proudest of. It plans from your team's actual pace over the last six sprints, not from estimates, so the plan stops being fiction by Wednesday.</p>
+      <p>Free for 30 days. If it doesn't save you an hour in the first week, cancel from the billing page in two clicks.</p>
+    </div>
+  </div>
+
+  <div class="duo">
+    <div class="card pane ai">
+      <div class="tag">In the vernacular</div>
+      <p>The Q2 results <mark class="tell" data-tell="'Underscore' — 10× excess in 2024 abstracts (Kobak et al.); still rising through 2025">underscore</mark> the <mark class="tell" data-tell="Inflated-importance vocabulary: pivotal / multifaceted (Wikipedia AISIGNS 'undue emphasis on significance')">pivotal role of our multifaceted growth strategy</mark>. Revenue saw <mark class="tell" data-tell="Abstraction where a number belongs — no checkable fact">significant improvements</mark>, <mark class="tell" data-tell="Trailing '-ing' analysis clause (Wikipedia AISIGNS)">highlighting the team's meticulous execution and unwavering commitment to excellence</mark>. <mark class="tell" data-tell="Hedged both-sides framing — balance as a reflex, not a judgment">While challenges remain, the overall trajectory serves as a testament to our resilience.</mark> Moving forward, we will continue to <mark class="tell" data-tell="'Leverage synergies' — corporate slop-verb pairing on every blacklist">leverage synergies</mark> across the organization — <mark class="tell" data-tell="Trailing '-ing' clause + em dash, closing on abstraction">ensuring sustainable, long-term value creation for all stakeholders</mark>.</p>
+    </div>
+    <div class="card pane human">
+      <div class="tag">Without it</div>
+      <p>Q2 revenue came in at $4.2M, up 18% on Q1. Most of the gain came from the enterprise tier, which closed 11 accounts against a target of 8.</p>
+      <p>Churn is the sore spot. We lost two mid-market customers over pricing and don't yet have a fix; Dana's team owes a proposal by August 22.</p>
+      <p>The Q3 plan bets on the enterprise pipeline holding. If it slips, the events budget gets cut first.</p>
+    </div>
+  </div>
+  <p class="duo-note">What changed in each rewrite: specific numbers replace abstractions, sentence lengths vary, no triplets, one em dash total across both, and each ends on new information instead of a summary.</p>
+</section>
+
+<section id="trends">
+  <h2>Trend board</h2>
+  <p class="h2sub">Direction reflects the newest available data: several tells are now <i>falling at the source</i> (labs tune them out once they become memes) while <i>still rising in human speech and the published record</i>.</p>
+  <table>
+    <thead><tr><th>Tell</th><th>Evidence</th><th>Direction</th></tr></thead>
+    <tbody>
+      <tr><td>"not just X, but Y"</td><td>~6% of sampled ChatGPT messages; called the most prominent sign by Wikipedia's editor guide</td><td><span class="chip rising">▲ rising — the em dash's successor</span></td></tr>
+      <tr><td>em dash</td><td>GPT-4.1 at 10.6/1,000 words vs human 3.2; GPT-5.4 down to 1.4</td><td><span class="chip falling">▼ falling at the source</span></td></tr>
+      <tr><td>delve</td><td>28× excess in 2024 abstracts; 14× in indexed papers</td><td><span class="chip falling">▼ fading in new output</span></td></tr>
+      <tr><td>delve (in human speech)</td><td>Significant post-2022 rise in podcasts and academic talks (Max Planck; FSU)</td><td><span class="chip rising">▲ rising — leaked into people</span></td></tr>
+      <tr><td>underscore</td><td>~30% of 2025 PMC papers use it, vs ~3% in 2022</td><td><span class="chip rising">▲ still climbing in print</span></td></tr>
+      <tr><td>meticulous</td><td>34.7× in AI-era peer reviews; still growing in full-text corpora</td><td><span class="chip rising">▲ rising</span></td></tr>
+      <tr><td>tapestry</td><td>On every blacklist; heavily mocked</td><td><span class="chip falling">▼ tuned out of new models</span></td></tr>
+      <tr><td>"today's fast-paced world"</td><td>107× human rate (GPTZero)</td><td><span class="chip stable">— stable</span></td></tr>
+      <tr><td>markdown bold/bullets in prose</td><td>Near-zero in newest models when told to write prose</td><td><span class="chip falling">▼ falling</span></td></tr>
+      <tr><td>rule of three · false ranges · vague attribution</td><td>Codified by Wikipedia's guide; structural, so harder to tune out</td><td><span class="chip rising">▲ the 2026 frontier</span></td></tr>
+      <tr><td>uniform sentence cadence</td><td>Shared structural fingerprint across ~82% of AI posts, any model</td><td><span class="chip stable">— stable</span></td></tr>
+      <tr><td>sycophantic openers</td><td>SycEval: 58% average sycophancy across models; "You're absolutely right" tracked daily</td><td><span class="chip stable">— stable</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="downloads">
+  <h2>Make your AI stop doing this</h2>
+  <p class="h2sub">Two files, same rules, different packaging. Both are built from the evidence above and prioritize the loudest tells first.</p>
+  <div class="dl">
+    <div class="card dlcard">
+      <h3>Claude skill file</h3>
+      <p>A SKILL.md for Claude's skill system. Claude applies it automatically whenever it drafts prose for you.</p>
+      <button class="btn" onclick="dl('SKILL.md','skillsrc')">Download SKILL.md</button>
+      <dl class="howto">
+        <dt>How to use</dt>
+        <dd>Claude.ai: Settings → Capabilities → Skills → upload. Claude Code / Cowork: drop the file in a <code>write-like-a-person/</code> folder under <code>~/.claude/skills/</code>, or ask Claude to save it as a skill.</dd>
+      </dl>
+    </div>
+    <div class="card dlcard">
+      <h3>Portable instructions (any model)</h3>
+      <p>Plain text that fits in a custom-instructions box. Works in ChatGPT, Gemini, Claude, or pasted at the top of any prompt.</p>
+      <button class="btn" onclick="dl('write-like-a-person.txt','portablesrc')">Download instructions.txt</button>
+      <dl class="howto">
+        <dt>ChatGPT</dt><dd>Settings → Personalization → Custom instructions → "How would you like ChatGPT to respond?"</dd>
+        <dt>Gemini</dt><dd>Settings → Saved info, or paste into a Gem's instructions.</dd>
+        <dt>Claude</dt><dd>Project instructions, or Settings → Profile → personal preferences.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <h2>Method and honesty notes</h2>
+  <p class="h2sub" style="max-width:860px">Three caveats worth keeping in view. First, attribution is hard: most "Claude-isms" and "Gemini-isms" people complain about are generic LLM habits attributed to whichever model the complainer uses most; this page marks per-model claims with confidence labels for that reason. Second, the tells are a moving target: labs tune out each meme (delve, em dashes, markdown walls) roughly a year after it peaks, so the durable signals are structural — cadence, negative parallelism, triplets — not word lists. Third, avoiding the vernacular makes text less annoying to readers, but it does not defeat detectors: stylometric classifiers still identify model output at 90%+ accuracy after paraphrasing. Nothing here is for passing text off where AI disclosure is required.</p>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <div class="sources">
+    <p><a href="https://www.science.org/doi/10.1126/sciadv.adt3813">Kobak et al., "Delving into LLM-assisted writing in biomedical publications" (Science Advances 2025)</a> — excess-vocabulary method; 13.5% figure; delve 28×.</p>
+    <p><a href="https://aclanthology.org/2025.coling-main.426.pdf">Juzek &amp; Ward, "Why Does ChatGPT 'Delve' So Much?" (COLING 2025)</a> — 21 focal words; +6,697% "delves".</p>
+    <p><a href="https://arxiv.org/abs/2403.07183">Liang et al., "Monitoring AI-Modified Content at Scale" (ICML 2024)</a> — peer-review word spikes; 6.5–16.9% modified reviews.</p>
+    <p><a href="https://www.nature.com/articles/s41562-025-02273-8">Liang et al., Nature Human Behaviour 2025</a> — LLM share of scientific papers by field.</p>
+    <p><a href="https://arxiv.org/abs/2409.01754">Yakura et al. (Max Planck), LLM influence on human spoken communication</a> — 737k hours of podcasts; "delve" in speech.</p>
+    <p><a href="https://news.fsu.edu/news/education-society/2025/08/26/on-screen-and-now-irl-fsu-researchers-find-evidence-suggesting-chatgpt-influences-how-we-speak/">Juzek, Anderson &amp; Galpin (FSU, AIES 2025)</a> — AI words in unscripted speech.</p>
+    <p><a href="https://arxiv.org/abs/2502.12150">Sun et al. (CMU), "Idiosyncrasies in Large Language Models"</a> — 97.1% five-way model identification; per-model markers.</p>
+    <p><a href="https://gptzero.me/news/most-common-ai-vocabulary/">GPTZero, most common AI vocabulary</a> — phrase multipliers (182×, 120×, 107×…).</p>
+    <p><a href="https://slopdetector.org/blog/em-dash-ai-tell-data">SlopDetector, em-dash density data (2026)</a> — per-model em-dash rates vs human baseline.</p>
+    <p><a href="https://arxiv.org/html/2603.27006v1">"The Last Fingerprint: How Markdown Training Shapes LLM Prose" (2026)</a> — suppression-resistance; GPT-5.4 changes.</p>
+    <p><a href="https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing">Wikipedia: Signs of AI writing (WP:AISIGNS)</a> — the editor-built taxonomy this page's structural categories follow.</p>
+    <p><a href="https://decrypt.co/348923/5-biggest-tells-something-written-ai">Decrypt, "The 5 Biggest Tells" (Nov 2025)</a> — Washington Post 328,744-message dataset; "not just" ~6%.</p>
+    <p><a href="https://techcrunch.com/2025/11/14/openai-says-its-fixed-chatgpts-em-dash-problem/">TechCrunch, OpenAI's em-dash fix (Nov 2025)</a> — and <a href="https://www.pcworld.com/article/2977726/openai-has-fixed-chatgpts-infamous-em-dash-obsession.html">PCWorld's caveats</a>.</p>
+    <p><a href="https://openai.com/index/sycophancy-in-gpt-4o/">OpenAI, "Sycophancy in GPT-4o" (Apr 2025)</a> — the rollback postmortem.</p>
+    <p><a href="https://github.com/anthropics/claude-code/issues/3382">anthropics/claude-code#3382</a> — the "You're absolutely right!" bug report; tracker at <a href="https://absolutelyright.lol/">absolutelyright.lol</a>.</p>
+    <p><a href="https://xyzlabs.substack.com/p/large-language-models-show-concerning">SycEval (Stanford) coverage</a> — sycophancy rates: Gemini 62.47%, ChatGPT-4o 56.71%.</p>
+    <p><a href="https://www.scientificamerican.com/article/chatgpt-and-gemini-ai-have-uniquely-different-writing-styles/">Scientific American / Rudnicka</a> — ChatGPT vs Gemini stylometry ("glucose" vs "sugar").</p>
+    <p><a href="https://www.forbes.com/sites/lesliekatz/2025/08/08/google-fixing-bug-that-makes-gemini-ai-call-itself-disgrace-to-planet/">Forbes, Gemini's self-loathing loop (Aug 2025)</a>.</p>
+    <p><a href="https://www.dbreunig.com/2025/05/30/using-slop-forensics-to-determine-model-ancestry.html">Breunig, slop forensics &amp; model ancestry</a> — with <a href="https://github.com/sam-paech/slop-forensics">sam-paech/slop-forensics</a> and <a href="https://eqbench.com/slop-score.html">EQ-Bench Slop Score</a>.</p>
+    <p><a href="https://link.springer.com/article/10.1007/s11192-026-05601-5">Scientometrics 2026 multi-database study</a> — "underscore" through July 2025.</p>
+  </div>
+  <p class="fineprint">Built from published studies, detector datasets, and editor guides; per-item confidence is labeled where attribution is uncertain. Figures are quoted from their sources without adjustment; corpora, dates, and definitions differ between studies, so multipliers are not directly comparable across charts. Privacy: the draft checker runs entirely in your browser and your text is never transmitted; the site records only anonymous daily counts (visits, which tells fired, referrer domain) with no IPs, cookies, or personal data. Maintained by Gregg with Claude. Not affiliated with OpenAI, Anthropic, or Google.</p>
+</section>
+
+</div>
+
+<script type="text/plain" id="skillsrc">---
+name: write-like-a-person
+description: Removes the recognizable signs of AI-generated writing from drafts. Use whenever writing prose a person will publish or send as their own — emails, posts, articles, reports, marketing copy. Applies a ban list of AI-vernacular words and constructions, structural rules against AI formatting habits, and a revision pass that checks the draft against the biggest documented tells.
+---
+
+# Write Like a Person
+
+Readers in 2026 recognize AI-written text fast, and they discount it. The tells below are ordered by how strongly each one signals "a model wrote this," based on measured frequency data (word-frequency studies of 26M+ scientific abstracts, a 328,744-message ChatGPT log analysis, em-dash density measurements, and Wikipedia's editor guide to AI signs). Follow every rule when drafting. Then run the revision pass.
+
+## Tier 1 — the loudest tells (never do these)
+
+**1. Negative parallelism.** Never write "It's not just X, it's Y", "This isn't X — it's Y", "It's not about X. It's about Y." This construction appeared in roughly 6% of sampled ChatGPT messages and is now the single most cited AI tell. If a sentence contrasts what something isn't with what it is, rewrite it to state only what it is.
+
+**2. Em-dash density.** At most one em dash per ~300 words, and only where a comma or parenthesis wouldn't work. Models emit em dashes at ~3x the human rate. Never use a spaced em dash ( — ).
+
+**3. The vocabulary ban list.** Do not use: delve, tapestry, testament (as in "a testament to"), underscore/underscores, showcase/showcasing, intricate, intricacies, meticulous, pivotal, crucial (sparingly at most), boasts, garner, multifaceted, nuanced, holistic, myriad, plethora, realm, landscape (figurative), ecosystem (figurative), seamless, robust (outside engineering), leverage (as a verb), harness (figurative), foster, facilitate, streamline, bolster, elevate, unlock (figurative), empower, transformative, groundbreaking, game-changer, paradigm shift, unprecedented, ever-evolving, cutting-edge, vibrant, breathtaking, stunning, rich cultural heritage. If a banned word is truly the precise term (e.g., "robust" in statistics), it may stay.
+
+**4. Stock phrases.** Never: "In today's fast-paced world" (107x more common in AI text), "plays a significant role in shaping" (182x), "aims to explore", "Let's dive in", "Let's unpack", "Here's the kicker", "chef's kiss", "In conclusion", "In summary", "Ultimately," as a paragraph opener, "It's important to note", "It's worth noting", "no discussion would be complete without", "stands as a testament", "watershed moment", "enduring legacy", "I hope this helps".
+
+## Tier 2 — structural habits that read as AI
+
+**5. No rule-of-three padding.** Models reflexively write triplets ("innovative, transformative, and groundbreaking"). One precise adjective beats three vague ones. Audit every list of three; keep it only if all three items carry distinct, necessary meaning.
+
+**6. No false ranges.** Ban "from X to Y" constructions that gesture at breadth without informing ("from intimate gatherings to global movements"). Name the actual things instead.
+
+**7. No vague attribution.** Ban "experts say", "studies show", "industry reports suggest", "observers have noted". Either cite the specific source or make the claim in your own voice.
+
+**8. No trailing participle analysis.** Don't tack "-ing" clauses onto sentences to fake analysis: "...highlighting the need for change", "...underscoring its importance", "...ensuring efficiency". End the sentence at the fact. If the implication matters, give it its own sentence with a subject.
+
+**9. No summary endings.** Don't restate what you just wrote. End on the last new thing you have to say — a specific fact, a recommendation, a next step.
+
+**10. Formatting restraint.** No bullet lists unless the content is truly enumerable (steps, specs). Never "**Bold term:** explanation" list formatting. No headers in anything under ~600 words. No emoji. Bold at most one phrase per page, or none.
+
+**11. Vary the rhythm.** AI prose has unnaturally even sentence and paragraph lengths. Mix a 4-word sentence in with 25-word ones. Let one paragraph be a single sentence. Uniform cadence is a measurable fingerprint — 82% of AI posts share it regardless of model.
+
+**12. No chatbot artifacts.** Never open with "Great question", "You're absolutely right", or restate the request back. Never close with "Let me know if you need anything else."
+
+## Tier 3 — voice
+
+**13. Commit.** Hedged both-sides framing ("While X is true, Y is also important") is an AI signature. Take a position. If uncertainty is real, state exactly what is uncertain and why, once.
+
+**14. Be concrete.** Replace abstractions with specifics: not "significant improvements in efficiency" but "cut build time from 40 to 12 minutes." A sentence with no checkable fact in it is a candidate for deletion.
+
+**15. Write how the audience talks.** Prefer the plain word: use, not utilize; help, not facilitate; big, not substantial. Contractions are allowed and usually right.
+
+## Revision pass (mandatory)
+
+After drafting, re-read the draft once for each check and edit before delivering:
+1. Search for "not just", "isn't just", "not only", "it's about" — rewrite any hits.
+2. Count em dashes; over one per 300 words, replace with commas, parentheses, or a period.
+3. Scan against the Tier 1 ban lists; replace hits with plain alternatives.
+4. Check the last paragraph: does it summarize? Cut it or end on something new.
+5. Read three consecutive sentences aloud (mentally). If they share the same shape, break one.
+
+## Honest limits
+
+Tell the user, if it comes up: style edits lower the odds that a reader flags the text, but stylometric classifiers can identify model output at high accuracy even after paraphrasing, so this skill is about not annoying readers, not about defeating detectors. And never use this to misrepresent authorship where AI disclosure is required (journals, classrooms, some workplaces).
+</script>
+
+<script type="text/plain" id="portablesrc">WRITE LIKE A PERSON — portable instructions
+Paste this into: ChatGPT (Settings > Personalization > Custom Instructions, "How would you like ChatGPT to respond?"), Gemini (Settings > Saved Info, or a Gem's instructions), Claude (Project instructions or Styles), or at the top of any prompt.
+
+---
+
+When you write prose for me, follow these rules without exception:
+
+1. Never use the construction "It's not just X, it's Y" / "This isn't X — it's Y" / "It's not about X, it's about Y" in any variation. State what something is; don't contrast it with what it isn't.
+
+2. Use at most one em dash per 300 words. Prefer commas, parentheses, or a period. Never a spaced em dash.
+
+3. Banned words (use plain alternatives): delve, tapestry, testament to, underscore, showcase, intricate, meticulous, pivotal, multifaceted, nuanced, holistic, myriad, plethora, realm, landscape (figurative), ecosystem (figurative), seamless, robust (outside technical use), leverage (verb), harness, foster, facilitate, streamline, bolster, elevate, unlock (figurative), empower, transformative, groundbreaking, game-changer, paradigm shift, unprecedented, ever-evolving, cutting-edge, vibrant, breathtaking.
+
+4. Banned phrases: "In today's fast-paced world", "plays a significant role in shaping", "aims to explore", "Let's dive in", "Let's unpack", "Here's the kicker", "chef's kiss", "In conclusion", "In summary", "It's important to note", "It's worth noting", "stands as a testament", "watershed moment", "enduring legacy", "Great question", "You're absolutely right", "I hope this helps".
+
+5. No rule-of-three padding (three near-synonym adjectives or three parallel clauses for rhythm). One precise word instead.
+
+6. No "from X to Y" false ranges. No vague attribution ("experts say", "studies show") — cite specifically or drop it.
+
+7. Don't tack "-ing" clauses onto sentences ("...highlighting the importance of..."). End at the fact.
+
+8. No summary conclusions. End on the last new point, a specific fact, or a next step.
+
+9. Formatting: no bullet points unless content is truly a list; never "Bold term: explanation" bullets; no headers under 600 words; no emoji; almost no bold.
+
+10. Vary sentence and paragraph length noticeably. Mix short sentences with long ones. Don't restate my question, don't compliment it, don't add closing offers of further help.
+
+11. Commit to positions. Avoid "While X, also Y" balance unless the tension is the actual point. Prefer concrete specifics (numbers, names, dates) over abstract claims.
+
+12. Prefer plain words: use (not utilize), help (not facilitate), show (not demonstrate), big (not substantial), start (not commence).
+
+Before giving me any draft, silently check it against rules 1-4 and fix violations.
+</script>
+
+<script>
+// ---- data (edit this block on refresh) ----
+const DATA = {
+  updated: "August 10, 2026",
+  phrases: [
+    { label: "\"play a significant role in shaping\"", v: 182 },
+    { label: "\"notable works include\"", v: 120 },
+    { label: "\"today's fast-paced world\"", v: 107 },
+    { label: "\"aims to explore\"", v: 50 },
+    { label: "\"showcasing\"", v: 20 },
+    { label: "\"remarked\"", v: 18 },
+    { label: "\"aligns\"", v: 16 }
+  ],
+  phraseSrc: "GPTZero, Oct 2024 — multiplier vs. human-written text",
+  dashes: [
+    { label: "GPT-4.1", v: 10.62 },
+    { label: "Claude Opus 4.6", v: 9.09 },
+    { label: "DeepSeek V3", v: 6.95 },
+    { label: "Gemini 2.5 Pro", v: 3.53 },
+    { label: "Human baseline", v: 3.23, ref: true },
+    { label: "GPT-5.4", v: 1.43 }
+  ],
+  dashSrc: "SlopDetector 2026 — em dashes per 1,000 words, default output"
+};
+
+function bars(elId, rows, srcNote, fmt) {
+  const max = Math.max(...rows.map(r => r.v));
+  const el = document.getElementById(elId);
+  el.innerHTML = rows.map(r =>
+    `<div class="brow" title="${r.label}: ${fmt(r.v)} · ${srcNote}">
+       <div class="bl">${r.label}</div>
+       <div class="tr"><div class="bar${r.ref ? " ref" : ""}" style="width:${(r.v / max * 100).toFixed(1)}%"></div></div>
+       <div class="bv">${fmt(r.v)}</div>
+     </div>`).join("");
+}
+bars("phraseChart", DATA.phrases, DATA.phraseSrc, v => v + "×");
+bars("dashChart", DATA.dashes, DATA.dashSrc, v => v.toFixed(2));
+document.getElementById("updated").textContent = DATA.updated;
+
+// downloads
+function dl(name, srcId) {
+  const text = document.getElementById(srcId).textContent.trim() + "\n";
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([text], { type: "text/plain" }));
+  a.download = name;
+  a.click();
+  URL.revokeObjectURL(a.href);
+  ping({ event: srcId === "skillsrc" ? "dl_skill" : "dl_portable" });
+}
+
+// ---- analytics (aggregate-only; no text, no IPs stored) ----
+const TRACK_URL = "https://mrkvxxmzekasxtpscawj.supabase.co/functions/v1/track";
+const TRACK_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ya3Z4eG16ZWthc3h0cHNjYXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzY3ODIsImV4cCI6MjEwMTk1Mjc4Mn0.NCDkRv2KxJge8mvXZ_fGrfwocJA8VOx93-P7FGsLI04";
+async function ping(payload) {
+  try {
+    const r = await fetch(TRACK_URL, {
+      method: "POST",
+      headers: { "content-type": "application/json", "authorization": "Bearer " + TRACK_KEY },
+      body: JSON.stringify(payload || {})
+    });
+    return await r.json();
+  } catch { return null; }
+}
+(async () => {
+  const isNew = !sessionStorage.getItem("hs_s");
+  if (isNew) sessionStorage.setItem("hs_s", "1");
+  const res = await ping({ new_session: isNew, ref: document.referrer || "" });
+  if (res && typeof res.sessions === "number") {
+    document.getElementById("meterN").textContent = res.sessions.toLocaleString();
+    document.getElementById("meter").hidden = false;
+  }
+})();
+// one-time section-view events
+const seen = new Set();
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting && !seen.has(e.target.id)) {
+    seen.add(e.target.id);
+    ping({ event: "section_view:" + e.target.id });
+  }
+}), { threshold: 0.3 });
+["models", "compare", "trends", "downloads"].forEach(id => {
+  const el = document.getElementById(id); if (el) io.observe(el);
+});
+
+// ---- the checker (runs entirely client-side) ----
+const RULES = [
+  { id: "negative_parallelism", label: "Negative parallelism", sev: 3, re: /\b(?:it|this|that|she|he|[A-Z][a-z]+)?(?:'s|\s+is|\s+was)?\s*n[o']t\s+(?:just|only|merely|simply|about)\s+[^.!?;]{2,60}?[,;—-]+\s*(?:it'?s?|this is|but|that'?s?)\b|\bisn'?t\s+(?:just|only|about)\b/gi,
+    fix: "State what it is; cut the contrast with what it isn't. The single most cited AI tell (~6% of sampled ChatGPT messages)." },
+  { id: "stock_openers", label: "Stock opener", sev: 3, re: /\bin today'?s\s+(?:fast-paced|digital|ever-(?:changing|evolving)|modern|competitive)[^.!?,]{0,40}\b|\bin the ever-evolving\b|\blet'?s\s+(?:dive|delve|unpack)\b|\bhere'?s the kicker\b/gi,
+    fix: "Open with your actual point or a specific fact. 'Today's fast-paced world' is 107× more common in AI text." },
+  { id: "slop_words", label: "AI-favorite word", sev: 3, re: /\b(?:delve[sd]?|delving|tapestry|multifaceted|meticulous(?:ly)?|underscor(?:e|es|ing)|showcas(?:e|es|ing)|intricate|intricacies|pivotal|holistic|myriad|plethora|seamless(?:ly)?|transformative|groundbreaking|game-chang(?:er|ing)|paradigm shift|unprecedented|cutting-edge|ever-evolving|synerg(?:y|ies|istic)|leverag(?:e|es|ing)|harness(?:es|ing)?|foster(?:s|ing)?|facilitat(?:e|es|ing)|streamlin(?:e|es|ing)|bolster(?:s|ing)?|elevat(?:e|es|ing)|empower(?:s|ing)?|boasts)\b/gi,
+    fix: "Swap for the plain word: use, help, improve, show, key. These words spiked 6–35× in AI-era text." },
+  { id: "testament", label: "Inflated symbolism", sev: 2, re: /\b(?:stands?|serves?|is)\s+as\s+a\s+testament\b|\ba testament to\b|\bwatershed moment\b|\b(?:enduring|lasting)\s+legacy\b|\brich cultural heritage\b|\bplays?\s+a\s+(?:crucial|vital|pivotal|significant)\s+role\s+in(?:\s+shaping)?\b/gi,
+    fix: "Say what it did, with a specific. 'Plays a significant role in shaping' appears 182× more often in AI text." },
+  { id: "editorializing", label: "Editorializing aside", sev: 2, re: /\bit(?:'s|\s+is)\s+(?:important|worth|essential|crucial)\s+(?:to\s+(?:note|remember|understand|consider)|noting)\b|\bneedless to say\b|\bno discussion .{0,30}complete without\b/gi,
+    fix: "If it matters, just say it. If it doesn't, cut the sentence." },
+  { id: "vague_attribution", label: "Vague attribution", sev: 2, re: /\b(?:experts?|studies|research(?:ers)?|industry reports?|observers|critics|many)\s+(?:say|says|show|shows|suggest|suggests|argue|agree|have noted|believe)\b/gi,
+    fix: "Name the source or own the claim yourself." },
+  { id: "trailing_participle", label: "Trailing '-ing' analysis", sev: 2, re: /,\s+(?:highlighting|underscoring|emphasizing|reflecting|showcasing|demonstrating|signaling|ensuring|reinforcing|solidifying|cementing)\s+[^.!?]{3,60}[.!?]/gi,
+    fix: "End the sentence at the fact. If the implication matters, give it its own sentence." },
+  { id: "summary_ending", label: "Summary phrase", sev: 2, re: /\b(?:in\s+conclusion|in\s+summary|to\s+summariz(?:e|se)|all\s+in\s+all|at\s+the\s+end\s+of\s+the\s+day)\b|(?:^|\.\s+)(?:overall|ultimately),/gi,
+    fix: "End on your last new point instead of restating." },
+  { id: "chatbot_artifact", label: "Chatbot artifact", sev: 3, re: /\bgreat question\b|\byou'?re absolutely right\b|\bi hope this (?:helps|message finds you well)\b|\blet me know if you (?:need|have|want)\b|\bcertainly!\b/gi,
+    fix: "Copy-paste residue from a chat window. Delete it." },
+  { id: "false_range", label: "Possible false range", sev: 1, re: /\bfrom\s+[a-z][^.,;:]{3,35}\s+to\s+[a-z][^.,;:]{3,35}\b/gi,
+    fix: "If the range doesn't inform (just gestures at breadth), name the actual things instead. Ignore if it's a real range (dates, numbers, places)." },
+  { id: "hedged_balance", label: "Hedged balance", sev: 1, re: /\bwhile\s+(?:challenges|there are|it'?s true)[^.!?]{3,60},|\bboth\s+sides\b|\bstrike[s]?\s+a\s+balance\b|\bwhether you'?re a\b/gi,
+    fix: "Commit to a position, or state exactly what's uncertain, once." },
+  { id: "rule_of_three", label: "Possible rule-of-three", sev: 1, re: /\b\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\s*,\s*\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\s*,?\s+and\s+\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\b/gi,
+    fix: "Three near-synonyms for rhythm is an AI reflex. Keep the one precise word. Ignore if all three carry distinct meaning." }
+];
+
+function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+document.getElementById("checkBtn").addEventListener("click", () => {
+  const text = document.getElementById("draft").value;
+  if (!text.trim()) return;
+  const words = (text.match(/\S+/g) || []).length;
+  const hits = []; // {start,end,rule}
+  for (const rule of RULES) {
+    rule.re.lastIndex = 0;
+    let m;
+    while ((m = rule.re.exec(text)) !== null) {
+      if (m.index === rule.re.lastIndex) rule.re.lastIndex++;
+      hits.push({ start: m.index, end: m.index + m[0].length, rule });
+      if (hits.length > 400) break;
+    }
+  }
+  // em-dash density (rule 2): flag each dash beyond 1 per 300 words
+  const dashes = [...text.matchAll(/—|--/g)];
+  const allowed = Math.max(1, Math.floor(words / 300));
+  const emRule = { id: "em_dash", label: "Em-dash density", sev: 2,
+    fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words (humans average ~1 per 300). Replace with commas, parentheses, or a period.` };
+  if (dashes.length > allowed) dashes.forEach(d => hits.push({ start: d.index, end: d.index + d[0].length, rule: emRule }));
+
+  // sort, drop overlaps (keep earliest/longest)
+  hits.sort((a, b) => a.start - b.start || b.end - a.end);
+  const kept = [];
+  let lastEnd = -1;
+  for (const h of hits) { if (h.start >= lastEnd) { kept.push(h); lastEnd = h.end; } }
+
+  // render highlighted text
+  let out = "", pos = 0;
+  for (const h of kept) {
+    out += esc(text.slice(pos, h.start));
+    out += `<mark class="tell" data-tell="${esc(h.rule.label)} — ${esc(h.rule.fix)}">${esc(text.slice(h.start, h.end))}</mark>`;
+    pos = h.end;
+  }
+  out += esc(text.slice(pos));
+  document.getElementById("checkMarked").innerHTML = out.replace(/\n/g, "<br>");
+
+  // summary list
+  const byRule = {};
+  kept.forEach(h => { byRule[h.rule.id] = byRule[h.rule.id] || { rule: h.rule, n: 0 }; byRule[h.rule.id].n++; });
+  const groups = Object.values(byRule).sort((a, b) => b.rule.sev - a.rule.sev || b.n - a.n);
+  document.getElementById("checkList").innerHTML = groups.length
+    ? groups.map(g => `<div style="padding:10px 0;border-top:1px solid var(--grid);font-size:14px"><b>${esc(g.rule.label)}</b> · ${g.n}× <span style="color:var(--ink-2)"> — ${esc(g.rule.fix)}</span></div>`).join("")
+    : "";
+  const loud = kept.filter(h => h.rule.sev === 3).length;
+  document.getElementById("checkSummary").textContent = kept.length
+    ? `${kept.length} tell${kept.length === 1 ? "" : "s"} found (${loud} loud) in ${words} words. Hover a highlight for the fix.`
+    : `Clean — none of the ${RULES.length + 1} tells fired in ${words} words. Nice.`;
+  document.getElementById("checkOut").style.display = "block";
+
+  // aggregate ping: counts only, never text
+  const tells = {};
+  kept.forEach(h => tells[h.rule.id] = (tells[h.rule.id] || 0) + 1);
+  ping({ event: "checker_used", tells });
+});
+
+// theme toggle
+const btn = document.getElementById("themeBtn");
+const mq = window.matchMedia("(prefers-color-scheme: dark)");
+function setTheme(t) { document.documentElement.dataset.theme = t; }
+setTheme(mq.matches ? "dark" : "light");
+btn.addEventListener("click", () => {
+  setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+});
+</script>
+</body>
+</html>
