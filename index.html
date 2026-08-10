@@ -525,8 +525,15 @@ async function ping(payload) {
   } catch { return null; }
 }
 (async () => {
-  const isNew = !sessionStorage.getItem("hs_s");
-  if (isNew) sessionStorage.setItem("hs_s", "1");
+  // A "visit" = first pageload in a rolling 30-minute window for this browser,
+  // shared across tabs and surviving refreshes (localStorage timestamp only).
+  let isNew = true;
+  try {
+    const now = Date.now();
+    const last = Number(localStorage.getItem("hs_last")) || 0;
+    isNew = now - last > 30 * 60 * 1000;
+    localStorage.setItem("hs_last", String(now));
+  } catch { /* storage blocked: count conservatively as a repeat, not a new visit */ isNew = false; }
   const res = await ping({ new_session: isNew, ref: document.referrer || "" });
   if (res && typeof res.sessions === "number") {
     document.getElementById("meterN").textContent = res.sessions.toLocaleString();
