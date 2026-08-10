@@ -195,6 +195,7 @@
     <a href="#quiz">Spot the AI</a>
     <a href="#downloads">Downloads</a>
     <a href="#guides">Guides</a>
+    <a href="changelog.html">This week</a>
     <a href="#checker" class="cta">✍ Check your draft</a>
   </div>
 </nav>
@@ -302,6 +303,14 @@
     </div>
   </div>
   <p class="duo-note">What changed in each rewrite: specific numbers replace abstractions, sentence lengths vary, no triplets, one em dash total across both, and each ends on new information instead of a summary.</p>
+</section>
+
+<section id="thisweek" hidden>
+  <h2>This week in AI tells</h2>
+  <p class="h2sub">The newest edition of the weekly changelog, written each Monday by the research pipeline. <a href="changelog.html">All editions</a> · <a href="feed.xml">RSS</a></p>
+  <div class="card" style="padding:18px 22px">
+    <ul id="weekItems" style="margin:0;padding-left:20px;color:var(--ink-2);font-size:14.5px"></ul>
+  </div>
 </section>
 
 <section id="kpis">
@@ -579,6 +588,11 @@ function render(d) {
   }
   const noteEl = document.getElementById("weeklyNote");
   if (d.note) { noteEl.textContent = "This week: " + d.note; noteEl.hidden = false; } else { noteEl.hidden = true; }
+  if (Array.isArray(d.log) && d.log.length && d.log[0].items) {
+    document.getElementById("weekItems").innerHTML =
+      d.log[0].items.map(it => `<li style="margin-bottom:8px">${escHtml(it)}</li>`).join("");
+    document.getElementById("thisweek").hidden = false;
+  }
 }
 render(DATA);
 window.addEventListener("DOMContentLoaded", async () => {

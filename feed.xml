@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>HumanSounding — this week in AI tells</title>
+  <link>https://humansounding.com/changelog.html</link>
+  <description>Weekly changes in the AI writing vernacular: new tells, moving stats, model style news.</description>
+  <language>en-us</language>
+  <item>
+    <title>This week in AI tells — August 10, 2026</title>
+    <link>https://humansounding.com/changelog.html#w2026-08-10</link>
+    <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-08-10</guid>
+    <pubDate>Mon, 10 Aug 2026 12:00:00 GMT</pubDate>
+    <description>HumanSounding launched: the live trend board, the in-browser draft checker, the Spot the AI quiz, and downloadable instruction files for Claude, ChatGPT, and Gemini. • The first autonomous research run added a new rising tell: lighter punctuation with longer, comma-sparse sentences in newer models. • Wikipedia's editor guide now flags Grok-specific vocabulary (causal, empirical, correlate); added to the trend board. • A July 2026 analysis found that among major chatbots only Claude still uses em dashes above the professional human rate; GPT-5.4 now sits below it. • EQ-Bench weights the &quot;not just X, but Y&quot; pattern at 25% of its slop score, with models running far above the human rate (EQ-Bench, Jul 2026).</description>
+  </item>
+</channel></rss>
