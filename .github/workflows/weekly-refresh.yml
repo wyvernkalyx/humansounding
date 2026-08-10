@@ -25,11 +25,15 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
-      - name: Heartbeat commit (keeps this schedule enabled)
+      - name: Repackage skill and commit weekly updates
         run: |
+          rm -f humansounding.skill
+          mkdir -p /tmp/pack/humansounding
+          cp skill/SKILL.md /tmp/pack/humansounding/SKILL.md
+          (cd /tmp/pack && zip -qr "$GITHUB_WORKSPACE/humansounding.skill" humansounding)
           date -u +"%Y-%m-%dT%H:%M:%SZ" > .last-refresh
           git config user.name "humansounding-refresh-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add .last-refresh
-          git commit -m "Weekly refresh heartbeat" || echo "nothing to commit"
+          git add -A
+          git commit -m "Weekly refresh: trend data, trending.txt, skill package" || echo "nothing to commit"
           git push || echo "nothing to push"
