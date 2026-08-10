@@ -46,10 +46,78 @@ function writeTrendingFiles(d) {
   const re = /<!-- TRENDING:START -->[\s\S]*?<!-- TRENDING:END -->/;
   if (!re.test(skill)) {
     console.error("WARNING: trending markers not found in skill/SKILL.md; skill not updated.");
-    return;
+  } else {
+    writeFileSync(skillPath, skill.replace(re, skillTrendingSection(d)));
   }
-  writeFileSync(skillPath, skill.replace(re, skillTrendingSection(d)));
-  console.log("Wrote trending.txt and refreshed skill trending section.");
+  writeChangelog(d);
+  console.log("Wrote trending.txt, skill trending section, changelog.html, feed.xml.");
+}
+
+// ---------- weekly changelog page + RSS feed ----------
+const escXml = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+function writeChangelog(d) {
+  const log = Array.isArray(d.log) ? d.log : [];
+  if (!log.length) return;
+  const weeks = log.map((w, i) => `
+<section id="w${w.iso}">
+<h2>Week of ${escXml(w.week)}${i === 0 ? " <span class=\"latest\">latest</span>" : ""}</h2>
+<ul>${w.items.map((it) => `\n<li>${escXml(it)}</li>`).join("")}\n</ul>
+</section>`).join("\n");
+  const page = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Week in AI Tells — HumanSounding Changelog</title>
+<meta name="description" content="What changed in the AI writing vernacular this week: new tells, moving stats, and model style news. Updated every Monday by HumanSounding's research pipeline.">
+<link rel="canonical" href="https://humansounding.com/changelog.html">
+<link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+:root { color-scheme: light; --page:#f9f9f7; --ink-1:#0b0b0b; --ink-2:#52514e; --ink-muted:#898781; --grid:#e1e0d9; --series-1:#2a78d6; --hl-border:#eda100; }
+@media (prefers-color-scheme: dark) { :root { color-scheme: dark; --page:#151310; --ink-1:#fff; --ink-2:#c3c2b7; --grid:#2c2c2a; --series-1:#3987e5; --hl-border:#c98500; } }
+body { margin:0; background:var(--page); color:var(--ink-1); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.65; font-size:16.5px; }
+main { max-width:720px; margin:0 auto; padding:40px 24px 80px; }
+h1 { font-size:30px; letter-spacing:-0.5px; margin:0 0 6px; }
+.sub { color:var(--ink-2); margin:0 0 8px; }
+.rss { font-size:13.5px; margin:0 0 34px; }
+h2 { font-size:19px; margin:38px 0 10px; }
+.latest { font-size:11px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:var(--hl-border); border:1px solid var(--hl-border); border-radius:99px; padding:2px 8px; vertical-align:middle; }
+ul { margin:0; padding-left:22px; }
+li { color:var(--ink-2); margin-bottom:10px; }
+a { color:var(--series-1); text-decoration:none; } a:hover { text-decoration:underline; }
+.back { font-size:13.5px; }
+section { border-bottom:1px solid var(--grid); padding-bottom:22px; }
+</style>
+</head>
+<body>
+<main>
+<p class="back"><a href="/">← humansounding.com</a></p>
+<h1>This week in AI tells</h1>
+<p class="sub">What changed in the machine vernacular, one edition per Monday, written by the same research pipeline that updates the <a href="/#trends">trend board</a>.</p>
+<p class="rss"><a href="/feed.xml">Subscribe via RSS</a> — no email, no tracking, arrives when the robot finishes.</p>
+${weeks}
+</main>
+</body>
+</html>
+`;
+  writeFileSync("changelog.html", page);
+  const items = log.map((w) => `
+  <item>
+    <title>This week in AI tells — ${escXml(w.week)}</title>
+    <link>https://humansounding.com/changelog.html#w${w.iso}</link>
+    <guid isPermaLink="true">https://humansounding.com/changelog.html#w${w.iso}</guid>
+    <pubDate>${new Date(w.iso + "T12:00:00Z").toUTCString()}</pubDate>
+    <description>${escXml(w.items.join(" • "))}</description>
+  </item>`).join("");
+  writeFileSync("feed.xml", `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>HumanSounding — this week in AI tells</title>
+  <link>https://humansounding.com/changelog.html</link>
+  <description>Weekly changes in the AI writing vernacular: new tells, moving stats, model style news.</description>
+  <language>en-us</language>${items}
+</channel></rss>
+`);
 }
 
 // ---------- local test mode: regenerate files from a JSON snapshot, no API ----------
@@ -114,6 +182,7 @@ Rules — these are hard constraints:
 - Only change a figure, evidence string, dir, or dirLabel if you found a sourced basis this run; otherwise leave it as is. NEVER invent statistics.
 - Name the source inside any evidence string you change (e.g. "(GPTZero, Aug 2026)").
 - "note": one plain sentence if something genuinely newsworthy happened for a general reader, else "". No hype. Avoid AI-vernacular words and constructions (the site's own subject).
+- "changes": an array of 2 to 5 short plain-language strings describing what genuinely changed or was found THIS run (data updates you made, new sourced findings, notable model-style news). Each under 200 characters, naming its source where one applies. If nothing material changed, return exactly ["No material changes this week; figures re-verified against their sources."]. Same style rule: no AI-vernacular.
 - trends: keep 8-16 rows; dir must be "rising", "falling", or "stable". You may add a row for a genuinely new, sourced tell or remove an obsolete one.
 - Keep every string concise: tell < 120 chars, evidence < 300, dirLabel < 80, note < 200.
 
@@ -159,7 +228,13 @@ for (const t of updated.trends) {
   if (!isStr(t.tell, 120) || !isStr(t.evidence, 300) || !isStr(t.dirLabel ?? "", 80)) fail("trend row strings");
   if (!["rising", "falling", "stable"].includes(t.dir)) fail("trend dir");
 }
-// strip any unexpected keys
+// validate the changelog entries
+let changes = Array.isArray(updated.changes) ? updated.changes.filter((c) => isStr(c, 220) && c.length > 10).slice(0, 5) : [];
+if (!changes.length) changes = ["No material changes this week; figures re-verified against their sources."];
+
+// strip any unexpected keys; prepend this week's changelog entry, keep 12 weeks
+const isoWeek = new Date().toISOString().slice(0, 10);
+const prevLog = (Array.isArray(current.log) ? current.log : []).filter((w) => w.iso !== isoWeek);
 const clean = {
   updated: updated.updated,
   note: updated.note ?? "",
@@ -168,6 +243,7 @@ const clean = {
   dashes: updated.dashes.map((d) => ({ label: d.label, v: d.v, ...(d.ref ? { ref: true } : {}) })),
   dashSrc: updated.dashSrc,
   trends: updated.trends.map((t) => ({ tell: t.tell, evidence: t.evidence, dir: t.dir, dirLabel: t.dirLabel || t.dir })),
+  log: [{ week: updated.updated, iso: isoWeek, items: changes }, ...prevLog].slice(0, 12),
 };
 
 // ---------- 5. write database ----------
