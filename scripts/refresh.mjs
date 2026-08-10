@@ -95,7 +95,6 @@ section { border-bottom:1px solid var(--grid); padding-bottom:22px; }
 <p class="back"><a href="/">← humansounding.com</a></p>
 <h1>This week in AI tells</h1>
 <p class="sub">What changed in the machine vernacular, one edition per Monday, written by the same research pipeline that updates the <a href="/#trends">trend board</a>.</p>
-<p class="rss"><a href="/feed.xml">Subscribe via RSS</a> — no email, no tracking, arrives when the robot finishes.</p>
 ${weeks}
 </main>
 </body>
