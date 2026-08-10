@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Does AI Use So Many Em Dashes? The Data</title>
+<meta name="description" content="Em-dash rates measured across GPT-4.1, Claude, Gemini and humans, why models overuse them, the fix OpenAI shipped — and the one chatbot still doing it in 2026.">
+<link rel="canonical" href="https://humansounding.com/why-does-ai-use-em-dashes.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="Why Does AI Use So Many Em Dashes? The Data">
+<meta property="og:description" content="Em-dash rates measured across GPT-4.1, Claude, Gemini and humans, why models overuse them, the fix OpenAI shipped — and the one chatbot still doing it in 2026.">
+<meta property="og:url" content="https://humansounding.com/why-does-ai-use-em-dashes.html">
+<meta property="og:image" content="https://humansounding.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Why Does AI Use So Many Em Dashes? The Data","description":"Em-dash rates measured across GPT-4.1, Claude, Gemini and humans, why models overuse them, the fix OpenAI shipped \u2014 and the one chatbot still doing it in 2026.","datePublished":"2026-08-10","dateModified":"2026-08-10","author":{"@type":"Organization","name":"HumanSounding","url":"https://humansounding.com/"},"mainEntityOfPage":"https://humansounding.com/why-does-ai-use-em-dashes.html"}
+</script>
+<style>
+  :root { color-scheme: light; --surface-1:#fcfcfb; --page:#f9f9f7; --ink-1:#0b0b0b; --ink-2:#52514e; --ink-muted:#898781; --grid:#e1e0d9; --border:rgba(11,11,11,0.10); --series-1:#2a78d6; --delta-up:#006300; --delta-down:#a03535; --hl:#fff3c9; --hl-border:#eda100; }
+  @media (prefers-color-scheme: dark) { :root { color-scheme: dark; --surface-1:#1a1a19; --page:#0d0d0d; --ink-1:#fff; --ink-2:#c3c2b7; --grid:#2c2c2a; --border:rgba(255,255,255,0.10); --series-1:#3987e5; --delta-up:#0ca30c; --delta-down:#e66767; --hl:#3a3116; --hl-border:#c98500; } }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--page); color:var(--ink-1); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.6; font-size:16.5px; }
+  #topnav { position:sticky; top:0; z-index:50; background:color-mix(in oklab, var(--page) 88%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--grid); }
+  #topnav .in { max-width:760px; margin:0 auto; padding:10px 24px; display:flex; gap:6px; align-items:center; overflow-x:auto; white-space:nowrap; }
+  #topnav a { color:var(--ink-2); font-size:13.5px; padding:6px 11px; border-radius:8px; text-decoration:none; }
+  #topnav a:hover { background:color-mix(in oklab, var(--series-1) 9%, transparent); }
+  #topnav .brand { font-weight:700; color:var(--ink-1); margin-right:10px; }
+  #topnav .cta { background:var(--series-1); color:#fff; font-weight:600; margin-left:auto; }
+  main { max-width:760px; margin:0 auto; padding:0 24px 80px; }
+  h1 { font-size:32px; letter-spacing:-0.5px; line-height:1.2; margin:40px 0 8px; }
+  .byline { color:var(--ink-muted); font-size:13.5px; margin:0 0 28px; }
+  h2 { font-size:21px; letter-spacing:-0.3px; margin:36px 0 10px; }
+  p { color:var(--ink-2); margin:0 0 16px; }
+  p b, li b { color:var(--ink-1); }
+  a { color:var(--series-1); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  table { width:100%; border-collapse:collapse; font-size:14.5px; margin:8px 0 20px; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  th { text-align:left; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--ink-muted); padding:10px 14px; border-bottom:1px solid var(--grid); }
+  td { padding:9px 14px; border-bottom:1px solid var(--grid); color:var(--ink-2); vertical-align:top; }
+  td:first-child { color:var(--ink-1); font-weight:600; }
+  tr:last-child td { border-bottom:none; }
+  .ex { background:var(--hl); border-left:3px solid var(--hl-border); padding:12px 16px; border-radius:0 8px 8px 0; margin:0 0 16px; color:var(--ink-2); font-size:15px; }
+  .cta-box { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:20px 22px; margin:28px 0; }
+  .cta-box p { margin:0 0 12px; }
+  .btn { display:inline-block; background:var(--series-1); color:#fff; border-radius:8px; padding:10px 16px; font-size:14px; font-weight:600; text-decoration:none; }
+  .btn:hover { text-decoration:none; filter:brightness(1.08); }
+  .srcs { font-size:13.5px; color:var(--ink-2); border-top:1px solid var(--grid); margin-top:40px; padding-top:18px; }
+  .foot { color:var(--ink-muted); font-size:12.5px; margin-top:36px; }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a href="/#models">Model accents</a>
+    <a href="/#trends">Trend board</a>
+    <a href="/#quiz">Spot the AI</a>
+    <a href="/#downloads">Downloads</a>
+    <a href="/#checker" class="cta">✍ Check your draft</a>
+  </div>
+</nav>
+<main>
+<h1>Why does AI use so many em dashes?</h1>
+<p class="byline">Every rate below is a measured figure. Updated August 2026.</p>
+
+<p>The em dash became the internet's favorite AI tell for a simple reason: the gap was real and it was big. Here are the measured rates, per 1,000 words of default output, against a human baseline from essay corpora.</p>
+
+<table>
+<thead><tr><th>Writer</th><th>Em dashes / 1,000 words</th></tr></thead>
+<tbody>
+<tr><td>GPT-4.1</td><td>10.62</td></tr>
+<tr><td>Claude Opus 4.6</td><td>9.09</td></tr>
+<tr><td>DeepSeek V3</td><td>6.95</td></tr>
+<tr><td>Gemini 2.5 Pro</td><td>3.53</td></tr>
+<tr><td><b>Human baseline</b></td><td><b>3.23</b></td></tr>
+<tr><td>GPT-5.4</td><td>1.43</td></tr>
+</tbody>
+</table>
+
+<p>At its peak, ChatGPT's flagship produced em dashes at more than three times the human rate. That's not a subtle statistical signal; that's a punctuation mark waving a flag.</p>
+
+<h2>Why models do it</h2>
+<p>Nobody at a lab decided models should love dashes. The best evidence points at training style. A 2026 study, "The Last Fingerprint," traced the habit to the fine-tuning stage that teaches models to be helpful assistants: the same base model produced almost no em dashes before that stage and inherited the habit after it. The assistants were trained on heavily edited, markdown-flavored prose, and they learned its punctuation as a house style. The dash also genuinely suits how models write: it glues together the balanced, clause-stacking sentences they favor, one more symptom of the cadence problem rather than its cause.</p>
+
+<h2>The fix, and who shipped it</h2>
+<p>For years, telling ChatGPT "no em dashes" barely worked, which became its own running joke. In November 2025, Sam Altman announced the unglamorous breakthrough: custom instructions banning em dashes finally stick. The deeper fix arrived with newer models; GPT-5.4's default rate of 1.43 per 1,000 words sits comfortably <i>below</i> the human baseline. The same study found suppression still isn't equal everywhere: told explicitly to avoid dashes, GPT-4.1 kept producing 3.86 per 1,000 words, while Claude dropped to nearly zero on command.</p>
+
+<h2>The 2026 twist: one holdout</h2>
+<p>A July 2026 analysis delivered the punchline: among the major chatbots, only Claude still uses em dashes more often than professional human writers by default. The tell that once pointed at ChatGPT now points the other way. This is the general lesson of AI tells: they're generational. Each one gets measured, memed, and tuned away, and the detection value moves elsewhere, mostly into <a href="/how-to-tell-if-ai-wrote-it.html">structural patterns</a> that survive retuning.</p>
+
+<h2>Does an em dash mean AI wrote it?</h2>
+<p>No, and the accusation has collateral damage: plenty of humans, especially editors and fiction writers, dash liberally by choice, and the human literary corpus runs up to 10 per 1,000 words for some authors. The honest reading is about density and company. One dash in a paragraph is punctuation. Six dashes in a page that also contains "it's not just X" sentences, triplet adjectives, and a summary ending is a pattern.</p>
+
+<h2>If your own drafts over-dash</h2>
+<p>The working rule from our style research: at most one em dash per 300 words, and only where a comma or parenthesis can't do the job. Our <a href="/#checker">free draft checker</a> counts them for you and rewrites the excess with one click, in your browser, without your text going anywhere.</p>
+
+<div class="cta-box">
+<p><b>Count your dashes.</b> Paste a draft; get every em dash, slop word, and structural tell highlighted with a fix.</p>
+<a class="btn" href="/#checker">Check your draft free</a>
+</div>
+
+<p class="srcs"><b>Sources:</b> <a href="https://slopdetector.org/blog/em-dash-ai-tell-data">SlopDetector em-dash measurements</a> · <a href="https://arxiv.org/html/2603.27006v1">"The Last Fingerprint" (2026)</a> · <a href="https://techcrunch.com/2025/11/14/openai-says-its-fixed-chatgpts-em-dash-problem/">TechCrunch, the em-dash fix</a> · <a href="https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing">Wikipedia: Signs of AI writing</a></p>
+
+<p class="foot">Part of <a href="/">HumanSounding</a>, the live index of AI writing tells. Figures quoted from their sources without adjustment; the trend data behind this site updates weekly.</p>
+</main>
+<script>
+const TRACK_URL = "https://mrkvxxmzekasxtpscawj.supabase.co/functions/v1/track";
+const TRACK_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ya3Z4eG16ZWthc3h0cHNjYXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzY3ODIsImV4cCI6MjEwMTk1Mjc4Mn0.NCDkRv2KxJge8mvXZ_fGrfwocJA8VOx93-P7FGsLI04";
+(async () => {
+  let isNew = false;
+  try {
+    const now = Date.now(), last = Number(localStorage.getItem("hs_last")) || 0;
+    isNew = now - last > 30 * 60 * 1000;
+    localStorage.setItem("hs_last", String(now));
+  } catch {}
+  try {
+    await fetch(TRACK_URL, { method: "POST",
+      headers: { "content-type": "application/json", "authorization": "Bearer " + TRACK_KEY },
+      body: JSON.stringify({ new_session: isNew, ref: document.referrer || "" }) });
+  } catch { }
+})();
+</script>
+</body>
+</html>
