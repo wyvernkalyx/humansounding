@@ -44,7 +44,7 @@
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
-    --surface-1: #1a1a19; --page: #0d0d0d;
+    --surface-1: #201e1b; --page: #151310;
     --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-muted: #898781;
     --grid: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
     --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70;
@@ -55,7 +55,7 @@
   body {
     margin: 0; background: var(--page); color: var(--ink-1);
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    line-height: 1.55; font-size: 16px;
+    line-height: 1.62; font-size: 16px;
   }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px 80px; }
   header.site { padding: 52px 0 8px; }
@@ -64,9 +64,9 @@
   .meta-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin: 18px 0 8px; color: var(--ink-muted); font-size: 13px; }
   .meta-row .dot::before { content: "·"; margin-right: 16px; }
   #themeBtn { margin-left: auto; background: var(--surface-1); border: 1px solid var(--border); color: var(--ink-2); border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 13px; }
-  section { margin-top: 56px; }
-  h2 { font-size: 22px; margin: 0 0 4px; letter-spacing: -0.3px; }
-  .h2sub { color: var(--ink-2); margin: 0 0 20px; font-size: 14.5px; max-width: 720px; }
+  section { margin-top: 76px; }
+  h2 { font-size: 22px; margin: 0 0 8px; letter-spacing: -0.3px; }
+  .h2sub { color: var(--ink-2); margin: 0 0 24px; font-size: 14.5px; max-width: 720px; line-height: 1.65; }
   .card, .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; }
 
   /* KPI row */
@@ -159,7 +159,8 @@
   .samples { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; align-items: center; }
   .samples span { color: var(--ink-muted); font-size: 12.5px; }
   .chipbtn { background: var(--page); border: 1px solid var(--border); color: var(--ink-2); border-radius: 99px; padding: 5px 12px; font-size: 12.5px; cursor: pointer; }
-  .chipbtn:hover { border-color: var(--series-1); color: var(--series-1); }
+  .chipbtn:hover { border-color: var(--hl-border); color: var(--ink-1); background: var(--hl); }
+  .qopt:hover { border-color: var(--hl-border); }
   .dlcallout { margin-top: 12px; font-size: 13.5px; color: var(--ink-2); }
 
   /* checker actions & fixed output */
