@@ -270,9 +270,10 @@
 <section id="trends">
   <h2>Trend board</h2>
   <p class="h2sub">Direction reflects the newest available data: several tells are now <i>falling at the source</i> (labs tune them out once they become memes) while <i>still rising in human speech and the published record</i>.</p>
+  <p class="h2sub" id="weeklyNote" hidden style="font-weight:600"></p>
   <table>
     <thead><tr><th>Tell</th><th>Evidence</th><th>Direction</th></tr></thead>
-    <tbody>
+    <tbody id="trendBody">
       <tr><td>"not just X, but Y"</td><td>~6% of sampled ChatGPT messages; called the most prominent sign by Wikipedia's editor guide</td><td><span class="chip rising">▲ rising — the em dash's successor</span></td></tr>
       <tr><td>em dash</td><td>GPT-4.1 at 10.6/1,000 words vs human 3.2; GPT-5.4 down to 1.4</td><td><span class="chip falling">▼ falling at the source</span></td></tr>
       <tr><td>delve</td><td>28× excess in 2024 abstracts; 14× in indexed papers</td><td><span class="chip falling">▼ fading in new output</span></td></tr>
@@ -443,7 +444,7 @@ Before giving me any draft, silently check it against rules 1-4 and fix violatio
 </script>
 
 <script>
-// ---- data (edit this block on refresh) ----
+// ---- fallback data (live data is fetched from the backend; this renders if that fails) ----
 const DATA = {
   updated: "August 10, 2026",
   phrases: [
@@ -477,9 +478,27 @@ function bars(elId, rows, srcNote, fmt) {
        <div class="bv">${fmt(r.v)}</div>
      </div>`).join("");
 }
-bars("phraseChart", DATA.phrases, DATA.phraseSrc, v => v + "×");
-bars("dashChart", DATA.dashes, DATA.dashSrc, v => v.toFixed(2));
-document.getElementById("updated").textContent = DATA.updated;
+const escHtml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+function render(d) {
+  bars("phraseChart", d.phrases, d.phraseSrc, v => v + "×");
+  bars("dashChart", d.dashes, d.dashSrc, v => v.toFixed(2));
+  document.getElementById("updated").textContent = d.updated;
+  if (Array.isArray(d.trends) && d.trends.length) {
+    const glyph = { rising: "▲ ", falling: "▼ ", stable: "— " };
+    document.getElementById("trendBody").innerHTML = d.trends.map(t =>
+      `<tr><td>${escHtml(t.tell)}</td><td>${escHtml(t.evidence)}</td><td><span class="chip ${escHtml(t.dir)}">${glyph[t.dir] || ""}${escHtml(t.dirLabel || t.dir)}</span></td></tr>`).join("");
+  }
+  const noteEl = document.getElementById("weeklyNote");
+  if (d.note) { noteEl.textContent = "This week: " + d.note; noteEl.hidden = false; } else { noteEl.hidden = true; }
+}
+render(DATA);
+window.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const r = await fetch(TRACK_URL + "?what=data", { headers: { "authorization": "Bearer " + TRACK_KEY } });
+    const j = await r.json();
+    if (j && j.data && Array.isArray(j.data.phrases)) render(j.data);
+  } catch { /* fallback data already rendered */ }
+});
 
 // downloads
 function dl(name, srcId) {
