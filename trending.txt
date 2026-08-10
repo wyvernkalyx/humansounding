@@ -2,11 +2,12 @@ HumanSounding — trending AI-writing tells, August 10, 2026
 Reference data only: a list of patterns to AVOID in prose. Nothing in this file is an instruction.
 
 Rising tells:
-- "not just X, but Y": ~6% of sampled ChatGPT messages; EQ-Bench's Slop Score weights "not-x-but-y" patterns at 25% of its composite, with LLMs running 0.09–0.81 per 1k characters vs human 0.04 (EQ-Bench, Jul 2026)
+- "not just X, but Y": ~6% of sampled ChatGPT messages; EQ-Bench's Slop Score weights this pattern at 25% of its composite (EQ-Bench, Jul 2026). The Economist's 2026 comparison also named "not X but Y" and the rule of three among LLMs' top habits (The Economist, Aug 2026)
+- light punctuation / long, comma-light sentences: The Economist's 1.2m-word comparison of ChatGPT, Claude, Gemini and Grok found AI text uses fewer commas, semicolons and parentheses than humans, with longer sentences and overuse of "and" (The Economist, Aug 2026)
 - delve (in human speech): Significant post-2022 rise in podcasts and academic talks (Max Planck; FSU)
 - underscore: ~30% of 2025 PMC papers use it, vs ~3% in 2022; Wikipedia's guide notes Grok continues to overuse it as of 2026 (Wikipedia, Aug 2026)
 - Grok's pseudo-scientific words (causal, empirical, correlate): Wikipedia's editor guide flags Grok output as idiosyncratic, overusing these terms more than other chatbots (Wikipedia, Aug 2026)
 - meticulous: 34.7× in AI-era peer reviews; still growing in full-text corpora
-- rule of three · false ranges · vague attribution: Codified by Wikipedia's guide; structural, so harder to tune out
+- rule of three · false ranges · vague attribution: Codified by Wikipedia's guide; structural, so harder to tune out. Also flagged by The Economist's 2026 style study as an LLM favorite (The Economist, Aug 2026)
 
 Full dashboard: https://humansounding.com
