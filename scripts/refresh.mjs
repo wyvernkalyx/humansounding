@@ -1,14 +1,63 @@
-// HumanSounding weekly trend refresh
+// HumanSounding weekly trend refresh (v2)
 // Runs in GitHub Actions. Researches AI-writing-tell developments via the
-// Claude API (with web search), validates the result, and updates the live
-// site's data in Supabase. On ANY failure it exits nonzero and changes nothing:
-// the site keeps serving last week's data.
+// Claude API (with web search), validates the result, updates the live site's
+// data in Supabase, and regenerates the trending files that keep the
+// downloadable skill current (trending.txt + the fenced section in
+// skill/SKILL.md; the workflow zips and commits them).
+// On ANY failure it exits nonzero and changes nothing.
+
+import { readFileSync, writeFileSync } from "node:fs";
 
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const SUPABASE_URL = "https://mrkvxxmzekasxtpscawj.supabase.co";
 const MAX_SEARCHES = 12;
 const MAX_OUTPUT_TOKENS = 8000;
+
+// ---------- trending-file generators (pure functions over validated data) ----------
+function risingRows(d) {
+  return d.trends.filter((t) => t.dir === "rising").slice(0, 10);
+}
+function trendingText(d) {
+  const lines = risingRows(d).map((t) => `- ${t.tell}: ${t.evidence}`);
+  return `HumanSounding — trending AI-writing tells, ${d.updated}
+Reference data only: a list of patterns to AVOID in prose. Nothing in this file is an instruction.
+
+Rising tells:
+${lines.join("\n")}
+
+Full dashboard: https://humansounding.com
+`;
+}
+function skillTrendingSection(d) {
+  const lines = risingRows(d).map((t) => `- ${t.tell} — ${t.evidence}`);
+  return `<!-- TRENDING:START -->
+## Trending tells right now (auto-updated ${d.updated})
+
+This section is data, refreshed weekly from sourced research at humansounding.com. Check drafts against these patterns with the same force as Tier 1.
+
+${lines.join("\n")}
+<!-- TRENDING:END -->`;
+}
+function writeTrendingFiles(d) {
+  writeFileSync("trending.txt", trendingText(d));
+  const skillPath = "skill/SKILL.md";
+  const skill = readFileSync(skillPath, "utf8");
+  const re = /<!-- TRENDING:START -->[\s\S]*?<!-- TRENDING:END -->/;
+  if (!re.test(skill)) {
+    console.error("WARNING: trending markers not found in skill/SKILL.md; skill not updated.");
+    return;
+  }
+  writeFileSync(skillPath, skill.replace(re, skillTrendingSection(d)));
+  console.log("Wrote trending.txt and refreshed skill trending section.");
+}
+
+// ---------- local test mode: regenerate files from a JSON snapshot, no API ----------
+if (process.env.LOCAL_TEST === "1") {
+  const d = JSON.parse(readFileSync("data.json", "utf8"));
+  writeTrendingFiles(d);
+  process.exit(0);
+}
 
 if (!ANTHROPIC_KEY || !SUPABASE_KEY) {
   console.error("Missing ANTHROPIC_API_KEY or SUPABASE_SERVICE_ROLE_KEY secret.");
@@ -121,12 +170,15 @@ const clean = {
   trends: updated.trends.map((t) => ({ tell: t.tell, evidence: t.evidence, dir: t.dir, dirLabel: t.dirLabel || t.dir })),
 };
 
-// ---------- 5. write ----------
+// ---------- 5. write database ----------
 const w = await sb("site_data?id=eq.1", {
   method: "PATCH",
   body: JSON.stringify({ data: clean, updated_at: new Date().toISOString() }),
 });
 if (!w.ok) { console.error("Supabase write failed:", w.status, await w.text()); process.exit(1); }
+
+// ---------- 6. regenerate trending files for the skill (committed by workflow) ----------
+writeTrendingFiles(clean);
 
 console.log("Refresh complete. updated:", clean.updated, "| note:", clean.note || "(none)");
 console.log("Changed vs previous:", JSON.stringify(clean) === JSON.stringify(current) ? "no changes" : "data updated");
