@@ -121,7 +121,8 @@
   section { scroll-margin-top: 64px; }
   #topnav { position: sticky; top: 0; z-index: 50; background: color-mix(in oklab, var(--page) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--grid); }
   #topnav .in { max-width: 1080px; margin: 0 auto; padding: 10px 24px; display: flex; gap: 6px; align-items: center; overflow-x: auto; white-space: nowrap; }
-  #topnav .brand { font-weight: 700; font-size: 14.5px; color: var(--ink-1); margin-right: 10px; }
+  #topnav .brand { font-weight: 700; font-size: 14.5px; color: var(--ink-1); margin-right: 10px; cursor: pointer; }
+  #topnav .brand:hover { text-decoration: none; color: var(--series-1); }
   #topnav a { color: var(--ink-2); font-size: 13.5px; padding: 6px 11px; border-radius: 8px; }
   #topnav a:hover { background: color-mix(in oklab, var(--series-1) 9%, transparent); text-decoration: none; }
   #topnav a.cta { background: var(--series-1); color: #fff; font-weight: 600; margin-left: auto; }
@@ -160,7 +161,7 @@
 <body>
 <nav id="topnav" aria-label="Sections">
   <div class="in">
-    <span class="brand">HumanSounding</span>
+    <a class="brand" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" title="Back to top">HumanSounding</a>
     <a href="#models">Model accents</a>
     <a href="#trends">Trend board</a>
     <a href="#quiz">Spot the AI</a>
