@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I had an AI build a website that catches AI writing — HumanSounding</title>
+<meta name="description" content="The build log behind HumanSounding: the weekly robot, the honesty rules, the embarrassing parts, and why this article had to pass its own checker.">
+<link rel="canonical" href="https://humansounding.com/blog/how-this-site-was-built.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="I had an AI build a website that catches AI writing">
+<meta property="og:description" content="The build log, the embarrassing parts, and why this article had to pass its own checker.">
+<meta property="og:url" content="https://humansounding.com/blog/how-this-site-was-built.html">
+<meta property="og:image" content="https://humansounding.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"I had an AI build a website that catches AI writing","description":"The build log behind HumanSounding: the weekly robot, the honesty rules, the embarrassing parts, and why this article had to pass its own checker.","datePublished":"2026-08-11","dateModified":"2026-08-11","author":{"@type":"Organization","name":"HumanSounding","url":"https://humansounding.com/"},"mainEntityOfPage":"https://humansounding.com/blog/how-this-site-was-built.html"}
+</script>
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  article { padding-top: 40px; }
+  .kicker { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
+  article h1 { font-size: 30px; margin: 0 0 18px; letter-spacing: -0.5px; line-height: 1.25; }
+  article h2 { font-size: 20px; margin: 30px 0 10px; letter-spacing: -0.3px; }
+  article p.body { color: var(--ink-1); font-size: 16.5px; line-height: 1.75; margin: 0 0 16px; }
+  :root[data-theme="dark"] article p.body { color: #e8e6e0; }
+  .srcs { font-size: 13.5px; color: var(--ink-2); border-top: 1px solid var(--border); margin-top: 32px; padding-top: 18px; }
+  .pn { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap; }
+  .pn a { font-size: 13.5px; }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html" aria-current="page">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+
+<main class="wrap-post">
+  <article>
+    <div class="kicker">Guide · August 11, 2026</div>
+    <h1>I had an AI build a website that catches AI writing</h1>
+
+    <p class="body"><em>The build log, the embarrassing parts, and why this article had to pass its own checker.</em></p>
+
+    <p class="body">Somewhere in the last year I hit my limit on a single sentence shape. You've seen it. "This isn't just a newsletter. It's a movement." "Leadership isn't about titles; it's about impact." Once you notice the pattern, you can't stop noticing it. LinkedIn is wall-to-wall with it. A Washington Post analysis of 328,744 ChatGPT messages found that construction in roughly 6% of them, which sounds small until you realize how many sentences 6% is.</p>
+
+    <p class="body">The internet decided the em dash was the tell, and started calling it the "ChatGPT hyphen." That always struck me as unfair to a perfectly good punctuation mark, and also as the wrong lesson. The dash is a fad. The sentence shapes underneath are the fingerprint.</p>
+
+    <p class="body">So in August I sat down with Claude and asked a question I'd been chewing on: could you track AI vernacular the way you track weather? Which words are rising, which are falling, per model, with sources? And could the whole thing run itself, because I know my own follow-through and I wasn't going to hand-update a hobby site every week.</p>
+
+    <p class="body">Two days later we had <a href="/">this site</a>. I want to be honest about what it is, what building it was actually like, and what it isn't.</p>
+
+    <h2>What we built</h2>
+
+    <p class="body">The site does three things.</p>
+
+    <p class="body">There's a trend board: a live index of AI writing tells, updated weekly, each with a direction (rising or falling) and a named source. Every Monday a GitHub Action wakes up, hands Claude a research budget of about twelve web searches, and asks what changed in the last two weeks. The results get validated against a strict schema (if the research comes back malformed, the site simply doesn't update), written to a database, and committed. The commit message doubles as a heartbeat so GitHub never disables the schedule. The run costs about seventy cents. The whole operation costs me $3 to $4 a month in API credits, plus the domain. My only recurring job is having autopay on.</p>
+
+    <p class="body">There's a <a href="/checker.html">draft checker</a>. Paste your text, and twelve regex rules plus an em-dash density check flag the usual suspects: the negation pattern above, the slop vocabulary ("delve," "meticulous," "underscore"), vague attribution, the reflexive rule of three, dashes past one per 300 words. It runs entirely in your browser. Your text never leaves your machine, we set no cookies, and the analytics are so paranoid about privacy that the visit counter deliberately undercounts.</p>
+
+    <p class="body">And there's a <a href="/fix-your-ai.html">skill</a>: an instruction file you can install into Claude (or adapt for ChatGPT or Gemini) that stops the model from producing the tells in the first place. The core rules are fixed by humans; a fenced "trending" section inside the file updates itself from the same Monday pipeline. It's a living document with a locked spine.</p>
+
+    <h2>The rules we set for ourselves</h2>
+
+    <p class="body">The site critiques a genre of writing that is, at bottom, dishonest about effort. So we adopted some rules early and they shaped everything.</p>
+
+    <p class="body">Every number traces to a named source, with a confidence label. The weekly robot is explicitly allowed to report "no material changes" rather than manufacture news. The share button on the checker will tell you "3 AI tells in 412 words"; it will never tell you your text is "100% human," because no style edit can promise that. Stylometric classifiers can identify model output at high accuracy even after paraphrasing, and the site says so out loud. The goal is smaller and more useful: stop annoying your readers.</p>
+
+    <p class="body">We also refused to build the obvious feature. Every "humanizer" site has a magic rewrite button, and ours doesn't, on purpose. A one-click LLM rewrite would ship your draft to a server (breaking the privacy promise) and would turn the site into the exact product category it exists to tease. The checker teaches you the patterns and does mechanical fixes; the actual rewriting stays your job.</p>
+
+    <h2>The embarrassing parts</h2>
+
+    <p class="body">Building a glass house invites stones, and we earned a few.</p>
+
+    <p class="body">An automated design audit of our own site found 70 issues. Among them: 42 em dashes. On the website that lectures people about em dashes. There's now a standing ban on that character in our own prose, enforced weekly by the same pipeline, and this article contains zero of them, which for a Claude-drafted piece is against type.</p>
+
+    <p class="body">We built a "spot the AI" quiz because it seemed like a fun idea. I played it and delivered the verdict that killed it: it felt like a compliance quiz a corporation would make you take. Nobody was going to play that. We cut it entirely in the redesign.</p>
+
+    <p class="body">The first version of the site was one long scrolling page, and I watched someone use it over their shoulder. They couldn't say what section they were in, and they left without ever discovering that the site offers a downloadable fix, which is the whole point. We rebuilt it as six small pages, each with one job. Watching one real person for five minutes taught me more than the analytics ever have.</p>
+
+    <h2>Why "live" is the whole idea</h2>
+
+    <p class="body">Here's the finding that convinced me the project was worth doing at all. The tells are generational.</p>
+
+    <p class="body">"Delve" ran at 28 times its expected rate in 2024 academic abstracts. Then it became a meme, the labs noticed, and newer models were tuned away from it. Em dashes tell the same story: GPT-4.1 emitted 10.62 per thousand words against a human baseline of 3.23, and by mid-2026 OpenAI's newest model was down to 1.43, below the human rate. (Claude, as of this writing, is the last major model still over-dashing. I've told it this. It took it well.)</p>
+
+    <p class="body">Every static list of "AI words" was true the day it was published and decays from there. What survives the tuning cycles is structure: the negation pivot, the triplet, the evenly paced paragraph. That's why a word list can't be a product but a weekly index can. The thing I actually built is a cadence, and the cadence is the moat.</p>
+
+    <h2>The part where I tell you who wrote this</h2>
+
+    <p class="body">Claude drafted this article. I directed it, fed it the project's real numbers, made the calls about what to include, and edited the result, but the sentences came out of the machine, and it would be a strange thing to hide on this particular topic. Medium's own blog <a href="https://medium.com/blog/write-for-humans-not-algorithms-f66ab282a00d">argued recently</a> that "is this AI?" is a proxy for "can I trust this?", and that's the bet I'm making here: that disclosure plus checkable claims beats stylistic camouflage. (As of this week, <a href="/blog/claude-watermarking.html">Claude's text carries an invisible watermark</a> anyway, so the camouflage era is ending with or without my cooperation.)</p>
+
+    <p class="body">Before delivery, the draft ran the site's own gauntlet: the checker's twelve rules, the skill's ban lists, and the live trending file. If you spot a tell I missed, I'd like to know. And fair warning: the checker flags plenty of text no machine ever touched. That's the uncomfortable joke at the center of this project: the training data was us. Every tic on the list was a human tic first; the models just turned the frequency up past the point of parody.</p>
+
+    <p class="body">What's next, concretely: guide pages picked from what people actually search for once the Search Console data thickens, per-model trend filters when there's enough data to be honest about, and maybe a browser extension if the numbers ever show repeat use. No roadmap theater beyond that.</p>
+
+    <p class="body">If you write anything at all, try the <a href="/checker.html">checker</a> on your last few paragraphs. And if you use AI to draft, the <a href="/fix-your-ai.html">Fix your AI page</a> has copy-paste instructions for ChatGPT, Claude, and Gemini; give your model the same prompt with and without them, and compare what comes back. The difference is the whole argument of this site, made in your own words.</p>
+
+    <p class="srcs"><b>Sources:</b> the figures in this post (the 6% negation rate, "delve" at 28×, per-model em-dash rates, and the rest) are the same sourced numbers the site runs on; full citations live on the <a href="/about.html">About page</a> and the <a href="/trends.html">trend board</a>.</p>
+
+    <div class="pn">
+      <a href="/blog.html">‹ All posts</a>
+      <a href="/blog/claude-watermarking.html">Claude now watermarks its text ›</a>
+    </div>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>
+
