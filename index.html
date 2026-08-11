@@ -192,7 +192,12 @@
   a:hover { text-decoration: underline; }
   .fineprint { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--grid); color: var(--ink-muted); font-size: 12.5px; }
   @media (max-width: 700px) {
-    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table, tbody, tr, td { display: block; width: 100%; }
+    thead { display: none; }
+    tr { border-bottom: 1px solid var(--grid); padding: 12px 16px; }
+    td { border: none; padding: 3px 0; white-space: normal !important; }
+    td:first-child { font-size: 15.5px; white-space: normal; }
+    tr:last-child { border-bottom: none; }
     .btn { padding: 13px 18px; }
     .btn2 { padding: 12px 16px; }
     .chipbtn { padding: 10px 14px; }
