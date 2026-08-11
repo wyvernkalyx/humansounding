@@ -18,8 +18,8 @@
 {"@context":"https://schema.org","@type":"Article","headline":"How to Make ChatGPT Not Sound Like AI (Settings + Rules That Work)","description":"The custom-instructions setup that stops ChatGPT's biggest tells \u2014 negative parallelism, em dashes, slop words \u2014 plus a free paste-in rule file and a checker for the result.","datePublished":"2026-08-10","dateModified":"2026-08-10","author":{"@type":"Organization","name":"HumanSounding","url":"https://humansounding.com/"},"mainEntityOfPage":"https://humansounding.com/make-chatgpt-not-sound-like-ai.html"}
 </script>
 <style>
-  :root { color-scheme: light; --surface-1:#fcfcfb; --page:#f9f9f7; --ink-1:#0b0b0b; --ink-2:#52514e; --ink-muted:#898781; --grid:#e1e0d9; --border:rgba(11,11,11,0.10); --series-1:#2a78d6; --delta-up:#006300; --delta-down:#a03535; --hl:#fff3c9; --hl-border:#eda100; }
-  @media (prefers-color-scheme: dark) { :root { color-scheme: dark; --surface-1:#1a1a19; --page:#0d0d0d; --ink-1:#fff; --ink-2:#c3c2b7; --grid:#2c2c2a; --border:rgba(255,255,255,0.10); --series-1:#3987e5; --delta-up:#0ca30c; --delta-down:#e66767; --hl:#3a3116; --hl-border:#c98500; } }
+  :root { color-scheme: light; --surface-1:#fcfcfb; --page:#f9f9f7; --ink-1:#0b0b0b; --ink-2:#52514e; --ink-muted:#6e6c66; --grid:#e1e0d9; --border:rgba(11,11,11,0.10); --series-1:#1e63b8; --btnbg:#1f66bd; --delta-up:#006300; --delta-down:#a03535; --hl:#fff3c9; --hl-border:#eda100; }
+  @media (prefers-color-scheme: dark) { :root { color-scheme: dark; --surface-1:#201e1b; --page:#151310; --ink-1:#fff; --ink-2:#c3c2b7; --grid:#2c2c2a; --border:rgba(255,255,255,0.10); --series-1:#3987e5; --accent:#3987e5; --btnbg:#1c5cab; --ink-muted:#9a988f; --delta-up:#0ca30c; --delta-down:#e66767; --hl:#3a3116; --hl-border:#c98500; } }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin:0; background:var(--page); color:var(--ink-1); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.6; font-size:16.5px; }
@@ -28,7 +28,7 @@
   #topnav a { color:var(--ink-2); font-size:13.5px; padding:6px 11px; border-radius:8px; text-decoration:none; }
   #topnav a:hover { background:color-mix(in oklab, var(--series-1) 9%, transparent); }
   #topnav .brand { font-weight:700; color:var(--ink-1); margin-right:10px; }
-  #topnav .cta { background:var(--series-1); color:#fff; font-weight:600; margin-left:auto; }
+  #topnav .cta { background:var(--btnbg, var(--series-1)); color:#fff; font-weight:600; margin-left:auto; }
   main { max-width:760px; margin:0 auto; padding:0 24px 80px; }
   h1 { font-size:32px; letter-spacing:-0.5px; line-height:1.2; margin:40px 0 8px; }
   .byline { color:var(--ink-muted); font-size:13.5px; margin:0 0 28px; }
@@ -45,7 +45,7 @@
   .ex { background:var(--hl); border-left:3px solid var(--hl-border); padding:12px 16px; border-radius:0 8px 8px 0; margin:0 0 16px; color:var(--ink-2); font-size:15px; }
   .cta-box { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:20px 22px; margin:28px 0; }
   .cta-box p { margin:0 0 12px; }
-  .btn { display:inline-block; background:var(--series-1); color:#fff; border-radius:8px; padding:10px 16px; font-size:14px; font-weight:600; text-decoration:none; }
+  .btn { display:inline-block; background:var(--btnbg, var(--series-1)); color:#fff; border-radius:8px; padding:10px 16px; font-size:14px; font-weight:600; text-decoration:none; }
   .btn:hover { text-decoration:none; filter:brightness(1.08); }
   .srcs { font-size:13.5px; color:var(--ink-2); border-top:1px solid var(--grid); margin-top:40px; padding-top:18px; }
   .foot { color:var(--ink-muted); font-size:12.5px; margin-top:36px; }
