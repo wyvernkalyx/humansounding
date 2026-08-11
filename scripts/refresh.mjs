@@ -30,7 +30,7 @@ Full dashboard: https://humansounding.com
 `;
 }
 function skillTrendingSection(d) {
-  const lines = risingRows(d).map((t) => `- ${t.tell} — ${t.evidence}`);
+  const lines = risingRows(d).map((t) => `- ${t.tell}: ${t.evidence}`);
   return `<!-- TRENDING:START -->
 ## Trending tells right now (auto-updated ${d.updated})
 
@@ -184,6 +184,7 @@ Rules — these are hard constraints:
 - "changes": an array of 2 to 5 short plain-language strings describing what genuinely changed or was found THIS run (data updates you made, new sourced findings, notable model-style news). Each under 200 characters, naming its source where one applies. If nothing material changed, return exactly ["No material changes this week; figures re-verified against their sources."]. Same style rule: no AI-vernacular.
 - trends: keep 8-16 rows; dir must be "rising", "falling", or "stable". You may add a row for a genuinely new, sourced tell or remove an obsolete one.
 - Keep every string concise: tell < 120 chars, evidence < 300, dirLabel < 80, note < 200.
+- Never use em dashes in any string you write (evidence, dirLabel, note, changes); use commas, colons, or semicolons. The site tracks em-dash overuse as an AI tell and must not commit it.
 
 Current JSON:
 ${JSON.stringify(current)}`;
