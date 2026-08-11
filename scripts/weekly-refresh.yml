@@ -1,0 +1,44 @@
+name: Weekly trend refresh
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"   # Mondays 12:00 UTC (~8am ET)
+  workflow_dispatch: {}     # allows manual "Run workflow" button for testing
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Research and update trend data
+        run: node scripts/refresh.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      - name: Design-tell regression check (Impeccable detector, report-only)
+        run: |
+          npx --yes impeccable detect index.html changelog.html *.html --no-advisory 2>&1 | tail -20 || true
+          echo "Design check complete (findings above are report-only; known-intended: bait samples, quote styling, small-caps labels)."
+
+      - name: Repackage skill and commit weekly updates
+        run: |
+          rm -f humansounding.skill
+          mkdir -p /tmp/pack/humansounding
+          cp skill/SKILL.md /tmp/pack/humansounding/SKILL.md
+          (cd /tmp/pack && zip -qr "$GITHUB_WORKSPACE/humansounding.skill" humansounding)
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > .last-refresh
+          git config user.name "humansounding-refresh-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Weekly refresh: trend data, trending.txt, skill package" || echo "nothing to commit"
+          git push || echo "nothing to push"
