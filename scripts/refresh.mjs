@@ -1,9 +1,13 @@
-// HumanSounding weekly trend refresh (v2)
+// HumanSounding weekly trend refresh (v3, multi-page site)
 // Runs in GitHub Actions. Researches AI-writing-tell developments via the
 // Claude API (with web search), validates the result, updates the live site's
-// data in Supabase, and regenerates the trending files that keep the
-// downloadable skill current (trending.txt + the fenced section in
-// skill/SKILL.md; the workflow zips and commits them).
+// data in Supabase, and regenerates the files the weekly robot owns:
+//   - trending.txt + the fenced section in skill/SKILL.md (skill stays current)
+//   - blog/<iso>.html          the narrative weekly column (new post per week)
+//   - blog.html                featured card + archive cards (marker sections)
+//   - changelog.html           the all-editions list (marker section)
+//   - feed.xml                 RSS, items pointing at the column posts
+// The workflow zips the skill and commits everything.
 // On ANY failure it exits nonzero and changes nothing.
 
 import { readFileSync, writeFileSync } from "node:fs";
@@ -39,7 +43,185 @@ This section is data, refreshed weekly from sourced research at humansounding.co
 ${lines.join("\n")}
 <!-- TRENDING:END -->`;
 }
-function writeTrendingFiles(d) {
+
+// ---------- html helpers ----------
+const escXml = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const escHtml = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+function replaceMarked(file, startMark, endMark, inner) {
+  const src = readFileSync(file, "utf8");
+  const re = new RegExp(`(${startMark.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})[\\s\\S]*?(${endMark.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`);
+  if (!re.test(src)) { console.error(`WARNING: markers not found in ${file}; not updated.`); return false; }
+  writeFileSync(file, src.replace(re, `$1\n${inner}\n  $2`));
+  return true;
+}
+const NAV_BLOG_ACTIVE = `<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html" aria-current="page">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>`;
+const FOOTER = `<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+
+<script src="/assets/site.js"><\/script>`;
+
+// ---------- weekly column post page (blog/<iso>.html) ----------
+function specimenHtml(spec) {
+  if (!spec || !Array.isArray(spec.segments) || !spec.segments.length) return "";
+  const quote = spec.segments.map((s) => s.m ? `<mark>${escHtml(s.m)}</mark>` : escHtml(s.t || "")).join("");
+  const cap = spec.caption ? `\n  <p class="cap">${escHtml(spec.caption)}</p>` : "";
+  return `<div class="band specimen">
+  <p class="specimen">"${quote}…"</p>${cap}
+</div>`;
+}
+function postDateHuman(entry) { return entry.week; } // e.g. "August 17, 2026"
+function writeBlogPost(entry, prevEntry, spec) {
+  const url = `https://humansounding.com/blog/${entry.slug}.html`;
+  const paragraphs = entry.paragraphs.map((p) => `    <p class="body">${p}</p>`).join("\n");
+  const prev = prevEntry && prevEntry.slug
+    ? `<a href="/blog/${prevEntry.slug}.html">‹ ${escHtml(prevEntry.title || postDateHuman(prevEntry))}</a>`
+    : "<span></span>";
+  const page = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escHtml(entry.title)} — This week in AI writing — HumanSounding</title>
+<meta name="description" content="${escXml(entry.deck)}">
+<link rel="canonical" href="${url}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="${escXml(entry.title)} — This week in AI writing">
+<meta property="og:description" content="${escXml(entry.deck)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="https://humansounding.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
+<script type="application/ld+json">
+${JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: entry.title, description: entry.deck, datePublished: entry.iso, dateModified: entry.iso, author: { "@type": "Organization", name: "HumanSounding", url: "https://humansounding.com/" }, mainEntityOfPage: url })}
+</script>
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .band { background: var(--band); border-bottom: 1px solid var(--border); padding: 44px 24px 36px; text-align: center; }
+  .band .specimen { font-size: 26px; line-height: 1.6; font-weight: 600; max-width: 860px; margin: 0 auto; color: var(--ink-1); }
+  .band .cap { color: var(--ink-muted); font-size: 12px; margin: 14px 0 0; }
+  article { padding-top: 40px; }
+  .kicker { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--hl-border); margin-bottom: 10px; }
+  article h1 { font-size: 30px; margin: 0 0 18px; letter-spacing: -0.5px; line-height: 1.25; }
+  article p.body { color: var(--ink-1); font-size: 16.5px; line-height: 1.75; margin: 0 0 16px; }
+  :root[data-theme="dark"] article p.body { color: #e8e6e0; }
+  .alsostrip { display: flex; gap: 14px; align-items: center; padding: 12px 18px; margin-top: 26px; flex-wrap: wrap; }
+  .alsostrip .n { font-size: 13px; color: var(--ink-2); }
+  .pn { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap; }
+  .pn a { font-size: 13.5px; }
+</style>
+</head>
+<body>
+${NAV_BLOG_ACTIVE}
+
+${specimenHtml(spec)}
+
+<main class="wrap-post">
+  <article>
+    <div class="kicker">This week in AI writing · ${escHtml(postDateHuman(entry))}</div>
+    <h1>${escHtml(entry.title)}</h1>
+${paragraphs}
+
+    <div class="card alsostrip">
+      <span class="label-caps">Also on the site</span>
+      <span class="n">${escHtml(entry.site_note)}</span>
+    </div>
+
+    <div class="pn">
+      ${prev}
+      <a href="/blog.html#week">All editions ›</a>
+    </div>
+  </article>
+</main>
+
+${FOOTER}
+</body>
+</html>
+`;
+  writeFileSync(`blog/${entry.slug}.html`, page);
+}
+
+// ---------- blog index + changelog + feed (from the full log) ----------
+function shortDate(entry) {
+  const d = new Date(entry.iso + "T12:00:00Z");
+  return d.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+}
+function updateBlogIndex(log) {
+  const newest = log[0];
+  const featured = `  <a class="featured" data-kind="week" href="/blog/${newest.slug}.html">
+    <span class="kicker">This week · ${escHtml(shortDate(newest))}</span>
+    <h3>${escHtml(newest.title)}</h3>
+    <p>${escHtml(newest.deck)}</p>
+  </a>`;
+  replaceMarked("blog.html", "<!-- FEATURED:START (regenerated weekly by the research pipeline) -->", "<!-- FEATURED:END -->", featured);
+  const archive = log.slice(1).filter((w) => w.slug && w.title).map((w) => `    <a class="card post old" data-kind="week" href="/blog/${w.slug}.html">
+      <span class="kicker">This week · ${escHtml(shortDate(w))}</span>
+      <h3>${escHtml(w.title)}</h3>
+      <p>${escHtml(w.deck || "")}</p>
+    </a>`).join("\n");
+  replaceMarked("blog.html", "<!-- ARCHIVE:START (older weekly editions accumulate here, newest first) -->", "<!-- ARCHIVE:END -->", archive);
+}
+function updateChangelog(log) {
+  const cards = log.map((w, i) => {
+    const href = w.slug ? `/blog/${w.slug}.html` : `#w${w.iso}`;
+    const title = w.title ? `\n    <h3>${escHtml(w.title)}</h3>` : "";
+    const deck = w.deck ? `\n    <p>${escHtml(w.deck)}</p>` : (Array.isArray(w.items) && w.items.length ? `\n    <p>${escHtml(w.items[0])}</p>` : "");
+    return `  <a class="card edition" id="w${w.iso}" href="${href}">
+    <span class="d">Week of ${escHtml(w.week)}</span>${i === 0 ? ' <span class="latest">latest</span>' : ""}${title}${deck}
+  </a>`;
+  }).join("\n");
+  replaceMarked("changelog.html", "<!-- EDITIONS:START (regenerated weekly by the research pipeline, newest first) -->", "<!-- EDITIONS:END -->", cards);
+}
+function writeFeed(log) {
+  const items = log.map((w) => `
+  <item>
+    <title>${escXml(w.title || "This week in AI writing — " + w.week)}</title>
+    <link>https://humansounding.com/${w.slug ? `blog/${w.slug}.html` : `changelog.html#w${w.iso}`}</link>
+    <guid isPermaLink="true">https://humansounding.com/changelog.html#w${w.iso}</guid>
+    <pubDate>${new Date(w.iso + "T12:00:00Z").toUTCString()}</pubDate>
+    <description>${escXml(w.deck || (Array.isArray(w.items) ? w.items.join(" • ") : ""))}</description>
+  </item>`).join("");
+  writeFileSync("feed.xml", `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>HumanSounding — this week in AI writing</title>
+  <link>https://humansounding.com/blog.html</link>
+  <description>The weekly column on AI's accent: what's rising, what's fading, and what changed in the machine vernacular.</description>
+  <language>en-us</language>${items}
+</channel></rss>
+`);
+}
+
+function writeAllFiles(d) {
   writeFileSync("trending.txt", trendingText(d));
   const skillPath = "skill/SKILL.md";
   const skill = readFileSync(skillPath, "utf8");
@@ -49,80 +231,22 @@ function writeTrendingFiles(d) {
   } else {
     writeFileSync(skillPath, skill.replace(re, skillTrendingSection(d)));
   }
-  writeChangelog(d);
-  console.log("Wrote trending.txt, skill trending section, changelog.html, feed.xml.");
-}
-
-// ---------- weekly changelog page + RSS feed ----------
-const escXml = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-function writeChangelog(d) {
   const log = Array.isArray(d.log) ? d.log : [];
-  if (!log.length) return;
-  const weeks = log.map((w, i) => `
-<section id="w${w.iso}">
-<h2>Week of ${escXml(w.week)}${i === 0 ? " <span class=\"latest\">latest</span>" : ""}</h2>
-<ul>${w.items.map((it) => `\n<li>${escXml(it)}</li>`).join("")}\n</ul>
-</section>`).join("\n");
-  const page = `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>This Week in AI Tells — HumanSounding Changelog</title>
-<meta name="description" content="What changed in the AI writing vernacular this week: new tells, moving stats, and model style news. Updated every Monday by HumanSounding's research pipeline.">
-<link rel="canonical" href="https://humansounding.com/changelog.html">
-<link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
-<style>
-:root { color-scheme: light; --page:#f9f9f7; --ink-1:#0b0b0b; --ink-2:#52514e; --ink-muted:#898781; --grid:#e1e0d9; --series-1:#2a78d6; --hl-border:#eda100; }
-@media (prefers-color-scheme: dark) { :root { color-scheme: dark; --page:#151310; --ink-1:#fff; --ink-2:#c3c2b7; --grid:#2c2c2a; --series-1:#3987e5; --hl-border:#c98500; } }
-body { margin:0; background:var(--page); color:var(--ink-1); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.65; font-size:16.5px; }
-main { max-width:720px; margin:0 auto; padding:40px 24px 80px; }
-h1 { font-size:30px; letter-spacing:-0.5px; margin:0 0 6px; }
-.sub { color:var(--ink-2); margin:0 0 8px; }
-.rss { font-size:13.5px; margin:0 0 34px; }
-h2 { font-size:19px; margin:38px 0 10px; }
-.latest { font-size:11px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:var(--hl-border); border:1px solid var(--hl-border); border-radius:99px; padding:2px 8px; vertical-align:middle; }
-ul { margin:0; padding-left:22px; }
-li { color:var(--ink-2); margin-bottom:10px; }
-a { color:var(--series-1); text-decoration:none; } a:hover { text-decoration:underline; }
-.back { font-size:13.5px; }
-section { border-bottom:1px solid var(--grid); padding-bottom:22px; }
-</style>
-</head>
-<body>
-<main>
-<p class="back"><a href="/">← humansounding.com</a></p>
-<h1>This week in AI tells</h1>
-<p class="sub">What changed in the machine vernacular, one edition per Monday, written by the same research pipeline that updates the <a href="/#trends">trend board</a>.</p>
-${weeks}
-</main>
-</body>
-</html>
-`;
-  writeFileSync("changelog.html", page);
-  const items = log.map((w) => `
-  <item>
-    <title>This week in AI tells — ${escXml(w.week)}</title>
-    <link>https://humansounding.com/changelog.html#w${w.iso}</link>
-    <guid isPermaLink="true">https://humansounding.com/changelog.html#w${w.iso}</guid>
-    <pubDate>${new Date(w.iso + "T12:00:00Z").toUTCString()}</pubDate>
-    <description>${escXml(w.items.join(" • "))}</description>
-  </item>`).join("");
-  writeFileSync("feed.xml", `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel>
-  <title>HumanSounding — this week in AI tells</title>
-  <link>https://humansounding.com/changelog.html</link>
-  <description>Weekly changes in the AI writing vernacular: new tells, moving stats, model style news.</description>
-  <language>en-us</language>${items}
-</channel></rss>
-`);
+  if (log.length && log[0].slug && log[0].title && Array.isArray(log[0].paragraphs)) {
+    writeBlogPost(log[0], log[1], d.specimen);
+    updateBlogIndex(log);
+    updateChangelog(log);
+    writeFeed(log);
+    console.log("Wrote trending.txt, skill trending section, blog post, blog index, changelog.html, feed.xml.");
+  } else {
+    console.error("WARNING: newest log entry lacks column fields; blog files not regenerated.");
+  }
 }
 
 // ---------- local test mode: regenerate files from a JSON snapshot, no API ----------
 if (process.env.LOCAL_TEST === "1") {
   const d = JSON.parse(readFileSync("data.json", "utf8"));
-  writeTrendingFiles(d);
+  writeAllFiles(d);
   process.exit(0);
 }
 
@@ -170,21 +294,32 @@ console.log("Using model:", model);
 
 // ---------- 3. research ----------
 const today = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
-const prompt = `You maintain the data behind HumanSounding (humansounding.com), a public dashboard of AI-writing tells. Below is the current data JSON. Research developments from roughly the last two weeks and return the updated JSON.
+const prompt = `You maintain the data behind HumanSounding (humansounding.com), a public dashboard of AI-writing tells with a weekly column for non-technical writers. Below is the current data JSON. Research developments from roughly the last two weeks and return the updated JSON.
 
 Research (use web search, be efficient): GPTZero's AI vocabulary page, new arXiv papers on LLM stylometry/excess vocabulary, Wikipedia:Signs of AI writing changes, EQ-Bench slop score, and tech press on model writing-style changes (new model releases, em-dash/markdown tuning, newly memed tell phrases).
 
 Rules — these are hard constraints:
 - Return ONLY the complete updated JSON object, no commentary, no code fences.
-- Preserve the exact structure and keys: updated, note, phrases, phraseSrc, dashes, dashSrc, trends.
+- Preserve the exact structure and keys: updated, note, phrases, phraseSrc, dashes, dashSrc, trends, column, specimen. (Do not return "log" or "history"; the pipeline maintains those.)
 - Set "updated" to "${today}".
 - Only change a figure, evidence string, dir, or dirLabel if you found a sourced basis this run; otherwise leave it as is. NEVER invent statistics.
 - Name the source inside any evidence string you change (e.g. "(GPTZero, Aug 2026)").
-- "note": one plain sentence if something genuinely newsworthy happened for a general reader, else "". No hype. Avoid AI-vernacular words and constructions (the site's own subject).
-- "changes": an array of 2 to 5 short plain-language strings describing what genuinely changed or was found THIS run (data updates you made, new sourced findings, notable model-style news). Each under 200 characters, naming its source where one applies. If nothing material changed, return exactly ["No material changes this week; figures re-verified against their sources."]. Same style rule: no AI-vernacular.
+- "note": one plain sentence if something genuinely newsworthy happened for a general reader, else "". No hype.
 - trends: keep 8-16 rows; dir must be "rising", "falling", or "stable". You may add a row for a genuinely new, sourced tell or remove an obsolete one.
+- "column": the weekly column, written as a short narrative for casual readers, NOT a changelog. An object:
+  - "title": a short, specific headline under 80 characters. Never clickbait.
+  - "deck": one sentence under 180 characters summarizing the week.
+  - "paragraphs": 3 or 4 paragraphs of plain narrative prose, each 40-120 words. Explain what changed and why a normal writer should care. Cite sources inline as HTML links (<a href="URL">source name</a>) using only URLs you actually found this run. You may link site pages: /checker.html, /trends.html, /fix-your-ai.html. Plain text otherwise; no other HTML tags, no markdown.
+  - "site_note": one sentence under 180 characters on what changed on the site itself this week (data updates count). If nothing did: "No site changes this week."
+  - Quiet-week fallback, used honestly and without padding: if nothing material changed, title the column plainly (e.g. "Quiet week; nothing material changed"), say so in one short paragraph, and spend the remaining 2-3 paragraphs on one existing sourced figure worth understanding. Never manufacture news.
+- "specimen": a short display example for the home page and column header, showing this week's most notable tell in action. An object:
+  - "segments": 2-6 pieces of one invented example sentence (an obviously corporate/marketing register is fine; it is bait and is supposed to be guilty). Each piece is {"t": "plain text"} or {"m": "marked text"} where marked pieces are the tell. Total under 140 characters.
+  - "count": e.g. "2 tells in 14 words". Count the words in your own sentence accurately and undercount tells rather than inflating.
+  - "reader": a short reader-truth line under 50 characters, e.g. "your reader noticed both".
+  - "caption": one line under 80 characters naming the week's tell, e.g. "zero commas in 18 words: this week's tell".
+- "changes": an array of 2 to 5 short plain-language strings describing what genuinely changed or was found THIS run. Each under 200 characters, naming its source where one applies. If nothing material changed, return exactly ["No material changes this week; figures re-verified against their sources."].
 - Keep every string concise: tell < 120 chars, evidence < 300, dirLabel < 80, note < 200.
-- Never use em dashes in any string you write (evidence, dirLabel, note, changes); use commas, colons, or semicolons. The site tracks em-dash overuse as an AI tell and must not commit it.
+- Style, enforced sitewide because the site tracks these habits: never use em dashes in ANY string you write (use commas, colons, or semicolons); no "not just X, but Y" constructions; no rule-of-three padding; none of the vocabulary on the site's own banned list (seamless, robust, leverage, delve, and so on). Quoted evidence and the specimen keep their tells deliberately; your own prose does not.
 
 Current JSON:
 ${JSON.stringify(current)}`;
@@ -232,9 +367,57 @@ for (const t of updated.trends) {
 let changes = Array.isArray(updated.changes) ? updated.changes.filter((c) => isStr(c, 220) && c.length > 10).slice(0, 5) : [];
 if (!changes.length) changes = ["No material changes this week; figures re-verified against their sources."];
 
-// strip any unexpected keys; prepend this week's changelog entry, keep 12 weeks
+// validate the narrative column; fall back to an honest quiet-week column, never a broken page
+const stripDanger = (s) => String(s).replace(/<(?!\/?a(\s|>))[^>]*>/g, ""); // paragraphs may carry <a> links only
+let column = updated.column;
+const columnOk = column && isStr(column.title, 90) && column.title.length > 4
+  && isStr(column.deck, 200) && column.deck.length > 10
+  && Array.isArray(column.paragraphs) && column.paragraphs.length >= 2 && column.paragraphs.length <= 5
+  && column.paragraphs.every((p) => isStr(p, 1200) && p.length > 30)
+  && isStr(column.site_note ?? "", 200);
+if (!columnOk) {
+  console.error("WARNING: column invalid; using quiet-week fallback built from 'changes'.");
+  column = {
+    title: "Quiet week; nothing material changed",
+    deck: changes[0].slice(0, 190),
+    paragraphs: changes.map((c) => escHtml(c)),
+    site_note: "No site changes this week.",
+  };
+} else {
+  column = {
+    title: column.title,
+    deck: column.deck,
+    paragraphs: column.paragraphs.map(stripDanger),
+    site_note: column.site_note || "No site changes this week.",
+  };
+}
+// validate the specimen; on failure keep last week's (embedded page fallbacks cover the rest)
+let specimen = updated.specimen;
+const segOk = (s) => (s && typeof s === "object") && ((isStr(s.t ?? "", 140) && !("m" in s)) || (isStr(s.m ?? "", 140) && !("t" in s)));
+const specimenOk = specimen && Array.isArray(specimen.segments) && specimen.segments.length >= 2 && specimen.segments.length <= 6
+  && specimen.segments.every(segOk)
+  && isStr(specimen.count ?? "", 60) && isStr(specimen.reader ?? "", 60) && isStr(specimen.caption ?? "", 90);
+if (!specimenOk) {
+  console.error("WARNING: specimen invalid; keeping the previous one.");
+  specimen = current.specimen || null;
+}
+
+// ---------- 5. assemble: log (with column), history (direction trail), clean shape ----------
 const isoWeek = new Date().toISOString().slice(0, 10);
+const slug = isoWeek;
 const prevLog = (Array.isArray(current.log) ? current.log : []).filter((w) => w.iso !== isoWeek);
+const newEntry = {
+  week: updated.updated, iso: isoWeek, slug,
+  title: column.title, deck: column.deck, paragraphs: column.paragraphs, site_note: column.site_note,
+  items: changes,
+};
+// history: append this week's direction call per tell, keep 12, drop tells no longer tracked
+const history = {};
+const prevHist = (current.history && typeof current.history === "object") ? current.history : {};
+for (const t of updated.trends) {
+  const prev = Array.isArray(prevHist[t.tell]) ? prevHist[t.tell] : [];
+  history[t.tell] = [...prev.filter((x) => ["rising", "falling", "stable"].includes(x)), t.dir].slice(-12);
+}
 const clean = {
   updated: updated.updated,
   note: updated.note ?? "",
@@ -243,18 +426,20 @@ const clean = {
   dashes: updated.dashes.map((d) => ({ label: d.label, v: d.v, ...(d.ref ? { ref: true } : {}) })),
   dashSrc: updated.dashSrc,
   trends: updated.trends.map((t) => ({ tell: t.tell, evidence: t.evidence, dir: t.dir, dirLabel: t.dirLabel || t.dir })),
-  log: [{ week: updated.updated, iso: isoWeek, items: changes }, ...prevLog].slice(0, 12),
+  ...(specimen ? { specimen } : {}),
+  history,
+  log: [newEntry, ...prevLog].slice(0, 12),
 };
 
-// ---------- 5. write database ----------
+// ---------- 6. write database ----------
 const w = await sb("site_data?id=eq.1", {
   method: "PATCH",
   body: JSON.stringify({ data: clean, updated_at: new Date().toISOString() }),
 });
 if (!w.ok) { console.error("Supabase write failed:", w.status, await w.text()); process.exit(1); }
 
-// ---------- 6. regenerate trending files for the skill (committed by workflow) ----------
-writeTrendingFiles(clean);
+// ---------- 7. regenerate committed files (skill, column post, indexes, feed) ----------
+writeAllFiles(clean);
 
-console.log("Refresh complete. updated:", clean.updated, "| note:", clean.note || "(none)");
+console.log("Refresh complete. updated:", clean.updated, "| column:", column.title);
 console.log("Changed vs previous:", JSON.stringify(clean) === JSON.stringify(current) ? "no changes" : "data updated");

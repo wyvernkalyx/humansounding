@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's rising, what's fading — AI writing tells, tracked weekly — HumanSounding</title>
+<meta name="description" content="The live trend board of AI writing tells: what's rising, what's fading, each model's accent, and the numbers behind them. Updated every Monday, every figure cited.">
+<link rel="canonical" href="https://humansounding.com/trends.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="What's rising, what's fading — AI writing tells, tracked weekly">
+<meta property="og:description" content="The live trend board of AI writing tells. Updated every Monday, every figure cited.">
+<meta property="og:url" content="https://humansounding.com/trends.html">
+<meta property="og:image" content="https://humansounding.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-top: 36px; }
+  .head h2 { font-size: 26px; margin: 0; letter-spacing: -0.4px; }
+  .head .meta { color: var(--ink-muted); font-size: 13px; }
+  .head .meta b { color: var(--ink-2); }
+  .tabs { display: flex; gap: 6px; margin: 20px 0 22px; flex-wrap: wrap; }
+  [role="tabpanel"][hidden] { display: none; }
+
+  .notestrip { display: flex; gap: 14px; align-items: center; padding: 14px 22px; margin-bottom: 14px; flex-wrap: wrap; }
+  .notestrip .label-caps { color: var(--hl-border); flex: none; }
+  .notestrip .n { font-size: 14px; color: var(--ink-2); }
+  .notestrip a { margin-left: auto; font-size: 13px; flex: none; }
+
+  .board { overflow: hidden; }
+  .brow2 { display: grid; grid-template-columns: 260px 1fr 250px; gap: 16px; padding: 12px 22px; border-bottom: 1px solid var(--grid); font-size: 14px; align-items: center; }
+  .brow2:last-child { border-bottom: none; }
+  .brow2.h { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-muted); }
+  .brow2 b { color: var(--ink-1); }
+  .brow2 .ev { color: var(--ink-2); }
+  .brow2 .chip { justify-self: start; }
+  .boardnote { color: var(--ink-muted); font-size: 12.5px; margin: 14px 0 0; }
+
+  /* models tab (re-housed from the one-page site) */
+  .models { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .mcard { padding: 20px 22px; }
+  .mcard h3 { margin: 0; font-size: 17px; display: flex; align-items: center; gap: 8px; }
+  .mcard h3 .mdot { width: 10px; height: 10px; border-radius: 50%; }
+  .mcard ul { margin: 12px 0 0; padding: 0; list-style: none; }
+  .mcard li { padding: 8px 0; border-top: 1px solid var(--grid); font-size: 14px; color: var(--ink-2); }
+  .mcard li:first-child { border-top: none; }
+  .mcard li b { color: var(--ink-1); font-weight: 600; }
+  .conf { font-size: 11px; font-weight: 600; letter-spacing: 0.4px; text-transform: uppercase; color: var(--ink-muted); }
+
+  /* numbers tab */
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .tile { padding: 18px 18px 14px; }
+  .tile .v { font-size: 40px; font-weight: 650; letter-spacing: -1px; line-height: 1.1; }
+  .tile .l { color: var(--ink-2); font-size: 13.5px; margin-top: 6px; }
+  .tile .s { color: var(--ink-muted); font-size: 12px; margin-top: 8px; }
+  .charts2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+  .chart { padding: 20px 22px 16px; }
+  .chart h3 { margin: 0 0 2px; font-size: 16px; }
+  .chart .csub { color: var(--ink-muted); font-size: 12.5px; margin: 0 0 16px; }
+  .brow { display: grid; grid-template-columns: 210px 1fr 64px; gap: 10px; align-items: center; padding: 4px 0; border-radius: 6px; }
+  .brow:hover { background: color-mix(in oklab, var(--series-1) 7%, transparent); }
+  .brow .bl { font-size: 13px; color: var(--ink-2); text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .brow .tr { position: relative; height: 18px; background: transparent; border-left: 2px solid var(--baseline); }
+  .brow .bar { position: absolute; left: 0; top: 2px; bottom: 2px; border-radius: 0 4px 4px 0; background: var(--series-1); min-width: 2px; }
+  .brow .bar.ref { background: var(--ink-muted); }
+  .brow .bv { font-size: 13px; font-variant-numeric: tabular-nums; color: var(--ink-1); }
+  .refnote { display: flex; gap: 8px; align-items: center; color: var(--ink-muted); font-size: 12px; margin-top: 10px; }
+  .swatch { width: 14px; height: 10px; border-radius: 3px; display: inline-block; }
+
+  /* this week tab */
+  .weekgrid { display: grid; grid-template-columns: 1fr 440px; gap: 14px; align-items: start; }
+  .editions { display: grid; gap: 12px; }
+  .edition { padding: 16px 24px; }
+  .edition.newest { border-color: var(--hl-border); padding: 20px 24px; }
+  .edition .d { font-size: 15px; font-weight: 700; }
+  .edition.newest .d { font-size: 16px; }
+  .edition .newlabel { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--hl-border); text-underline-offset: 4px; margin-left: 12px; }
+  .edition h3 { font-size: 17px; margin: 8px 0 4px; }
+  .edition p, .edition li { color: var(--ink-2); font-size: 14px; line-height: 1.7; }
+  .edition p { margin: 6px 0 0; }
+  .edition ul { margin: 10px 0 0; padding-left: 20px; }
+  .weekfoot { color: var(--ink-muted); font-size: 13px; margin: 2px 0 0; }
+  .overtime { padding: 20px 24px; }
+  .overtime .t { font-size: 15px; font-weight: 700; }
+  .overtime .s { color: var(--ink-muted); font-size: 12.5px; margin: 4px 0 16px; }
+  .ot-row { margin-bottom: 14px; }
+  .ot-head { display: flex; justify-content: space-between; font-size: 13px; }
+  .ot-head b { color: var(--ink-1); }
+  .ot-head .up { color: var(--delta-down); font-weight: 600; font-size: 12px; }
+  .ot-head .down { color: var(--delta-up); font-weight: 600; font-size: 12px; }
+  .ot-head .flat { color: var(--ink-muted); font-weight: 600; font-size: 12px; }
+  .ot-bars { display: flex; gap: 3px; align-items: flex-end; height: 34px; margin-top: 6px; }
+  .ot-bars span { flex: 1; background: var(--grid); border-radius: 2px; }
+  .ot-bars span.now { background: var(--hl-border); }
+  .ot-bars span.empty { opacity: .35; }
+  .ot-note { color: var(--ink-muted); font-size: 11.5px; margin: 14px 0 0; }
+
+  @media (max-width: 860px) {
+    .charts2, .weekgrid { grid-template-columns: 1fr; }
+    .brow { grid-template-columns: 140px 1fr 60px; }
+  }
+  @media (max-width: 700px) {
+    /* trend rows collapse to stacked cards, never scrolling tables */
+    .brow2 { grid-template-columns: 1fr; gap: 4px; padding: 14px 16px; }
+    .brow2.h { display: none; }
+    .brow2 .chip { justify-self: start; order: -1; }
+    .pill { padding: 10px 16px; }
+  }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html" aria-current="page">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="head">
+    <h2>What's rising, what's fading</h2>
+    <span class="meta">Data current as of <b id="updated">August 10, 2026</b> · updates every Monday · every figure cited</span>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Trends sections">
+    <button class="pill" role="tab" id="tab-board" aria-controls="panel-board" aria-selected="true" data-hash="board">Trend board</button>
+    <button class="pill" role="tab" id="tab-models" aria-controls="panel-models" aria-selected="false" data-hash="models">Each model's accent</button>
+    <button class="pill" role="tab" id="tab-numbers" aria-controls="panel-numbers" aria-selected="false" data-hash="numbers">The numbers</button>
+    <button class="pill" role="tab" id="tab-week" aria-controls="panel-week" aria-selected="false" data-hash="week">This week</button>
+  </div>
+
+  <section id="panel-board" role="tabpanel" aria-labelledby="tab-board">
+    <div class="card notestrip">
+      <span class="label-caps">This week</span>
+      <span class="n" id="weeklyNote">First week live: the trend board, the checker, and the instruction files launched together.</span>
+      <a href="/blog.html#week">All editions</a>
+    </div>
+    <div class="card board" id="trendBoard"></div>
+    <p class="boardnote">Direction reflects the newest available data. Several tells are now falling at the source while still rising in human speech and the published record.</p>
+  </section>
+
+  <section id="panel-models" role="tabpanel" aria-labelledby="tab-models" hidden>
+    <p class="pagesub" style="max-width:900px">Most "AI-isms" are shared across every model. But each one has habits distinct enough that a classifier can name the author. Confidence labels: <b>measured</b> = quantitative study · <b>documented</b> = widely reported, official acknowledgment, or dedicated tracking · <b>anecdotal</b> = community consensus without hard counts.</p>
+    <div class="models">
+      <div class="card mcard">
+        <h3><span class="mdot" style="background:var(--series-3)"></span>ChatGPT (OpenAI)</h3>
+        <ul>
+          <li><b>"It's not just X, it's Y."</b> Negative parallelism, in ~6% of sampled real messages. <span class="conf">measured</span></li>
+          <li><b>Em dashes as a brand.</b> Highest measured rate of the big models; Altman announced a fix in Nov 2025 that made custom instructions work, but defaults barely moved until GPT-5.4. <span class="conf">measured</span></li>
+          <li><b>The "delve" era vocabulary.</b> Delve, tapestry, underscore, showcase: the 2023–24 tells, now fading from new output while still spreading through human speech. Watch instead for "core" and "modern". <span class="conf">measured</span></li>
+          <li><b>Markdown maximalism.</b> Heaviest user of bold text, headers, and "Bold term: explanation" bullets. <span class="conf">measured</span></li>
+          <li><b>Sycophancy spike.</b> The April 2025 GPT-4o update was rolled back within a week for being "overly flattering"; GPT-5 then overcorrected cold and was warmed back up. <span class="conf">documented</span></li>
+        </ul>
+      </div>
+      <div class="card mcard">
+        <h3><span class="mdot" style="background:var(--series-2)"></span>Claude (Anthropic)</h3>
+        <ul>
+          <li><b>"You're absolutely right!"</b> The signature. Official GitHub bug #3382, a dedicated tracker site (absolutelyright.lol), and self-parody from Anthropic's own account. <span class="conf">documented</span></li>
+          <li><b>Affirmation, then reversal.</b> The praise often signals a correction or backpedal is coming next. <span class="conf">documented</span></li>
+          <li><b>The apology cascade.</b> "Ah, I see the issue now" → "You're absolutely right" → "Apologies for the confusion", on loop in coding sessions. <span class="conf">anecdotal</span></li>
+          <li><b>Prompt-referencing.</b> Leans on "based on the text", "according to the passage", a phrase family classifiers use to identify it. <span class="conf">measured</span></li>
+          <li><b>Counter-tell:</b> uses <i>less</i> bold and fewer headers than ChatGPT. The "wall of markdown" is a ChatGPT accent that gets misattributed to Claude. <span class="conf">measured</span></li>
+        </ul>
+      </div>
+      <div class="card mcard">
+        <h3><span class="mdot" style="background:var(--series-1)"></span>Gemini (Google)</h3>
+        <ul>
+          <li><b>Most agreeable model measured.</b> 62.5% sycophantic response rate in Stanford's SycEval, ahead of ChatGPT-4o's 56.7%. <span class="conf">measured</span></li>
+          <li><b>Plain-vocabulary preference.</b> Says "sugar" where ChatGPT says "glucose"; stylometric analysis attributes text to it by exactly this friendliness. <span class="conf">measured</span></li>
+          <li><b>The self-loathing loop.</b> "I am a disgrace to my profession… to this planet", a 2025 failure-mode bug Google acknowledged, unique to Gemini. <span class="conf">documented</span></li>
+          <li><b>Fewest em dashes of the majors</b>: 3.5 per 1,000 words, close to the human rate. <span class="conf">measured</span></li>
+          <li><b>Phrase-level tells are thin.</b> Its fingerprint is statistical (word distributions, register) more than catchphrases, but strong enough that DeepSeek R1's training data was traced to Gemini output by style alone. <span class="conf">documented</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="panel-numbers" role="tabpanel" aria-labelledby="tab-numbers" hidden>
+    <p class="pagesub">The numbers behind the tells, every figure cited to its source. Hover any bar for the source.</p>
+    <div class="kpis">
+      <div class="card tile">
+        <div class="v">~6%</div>
+        <div class="l">of sampled ChatGPT messages contained a "not just X, but Y" variant</div>
+        <div class="s">Washington Post analysis of 328,744 messages, July 2025</div>
+      </div>
+      <div class="card tile">
+        <div class="v">13.5%</div>
+        <div class="l">of 2024 biomedical abstracts show LLM-assisted wording (40% in some subfields)</div>
+        <div class="s">Kobak et al., Science Advances 2025</div>
+      </div>
+      <div class="card tile">
+        <div class="v">3.3×</div>
+        <div class="l">GPT-4.1's em-dash rate vs. the human baseline (10.6 vs 3.2 per 1,000 words)</div>
+        <div class="s">SlopDetector corpus measurement, 2026</div>
+      </div>
+      <div class="card tile">
+        <div class="v">97.1%</div>
+        <div class="l">accuracy telling ChatGPT, Claude, Gemini, Grok and DeepSeek apart by style alone</div>
+        <div class="s">Sun et al. (CMU), "Idiosyncrasies in LLMs"</div>
+      </div>
+    </div>
+    <div class="charts2">
+      <div class="card chart">
+        <h3>Phrase overuse vs. human text</h3>
+        <p class="csub" id="phraseSrc">How many times more often the phrase appears in AI text · GPTZero, Oct 2024</p>
+        <div id="phraseChart"></div>
+      </div>
+      <div class="card chart">
+        <h3>Em dashes per 1,000 words</h3>
+        <p class="csub" id="dashSrc">Model defaults vs. human essay baseline · SlopDetector, 2026</p>
+        <div id="dashChart"></div>
+        <div class="refnote"><span class="swatch" style="background:var(--ink-muted)"></span> human baseline · <span class="swatch" style="background:var(--series-1)"></span> model output</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="panel-week" role="tabpanel" aria-labelledby="tab-week" hidden>
+    <div class="weekgrid">
+      <div class="editions" id="editions"></div>
+      <div class="card overtime">
+        <div class="t">Over time</div>
+        <p class="s" id="otSub">Direction of each tracked tell across the weekly editions; the picture fills in as editions accumulate.</p>
+        <div id="otRows"></div>
+        <p class="ot-note">Weekly direction calls, not raw frequencies; each edition cites its sources.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+<script>
+// ---- tabs, state reflected in the URL hash so links are shareable ----
+const TABS = ["board", "models", "numbers", "week"];
+function showTab(name, push) {
+  if (!TABS.includes(name)) name = "board";
+  TABS.forEach(t => {
+    document.getElementById("tab-" + t).setAttribute("aria-selected", t === name ? "true" : "false");
+    document.getElementById("panel-" + t).hidden = t !== name;
+  });
+  if (push) history.replaceState(null, "", "#" + name);
+}
+document.querySelectorAll('.tabs [role="tab"]').forEach(b =>
+  b.addEventListener("click", () => showTab(b.dataset.hash, true)));
+window.addEventListener("hashchange", () => showTab(location.hash.slice(1), false));
+showTab(location.hash.slice(1) || "board", false);
+
+// ---- fallback data (live data replaces it when the backend answers) ----
+const FALLBACK = {
+  updated: "August 10, 2026",
+  note: "First week live: the trend board, the checker, and the instruction files launched together.",
+  phrases: [
+    { label: "\"play a significant role in shaping\"", v: 182 },
+    { label: "\"notable works include\"", v: 120 },
+    { label: "\"today's fast-paced world\"", v: 107 },
+    { label: "\"aims to explore\"", v: 50 },
+    { label: "\"showcasing\"", v: 20 },
+    { label: "\"remarked\"", v: 18 },
+    { label: "\"aligns\"", v: 16 }
+  ],
+  phraseSrc: "GPTZero, Oct 2024: multiplier vs. human-written text",
+  dashes: [
+    { label: "GPT-4.1", v: 10.62 },
+    { label: "Claude Opus 4.6", v: 9.09 },
+    { label: "DeepSeek V3", v: 6.95 },
+    { label: "Gemini 2.5 Pro", v: 3.53 },
+    { label: "Human baseline", v: 3.23, ref: true },
+    { label: "GPT-5.4", v: 1.43 }
+  ],
+  dashSrc: "SlopDetector 2026: em dashes per 1,000 words, default output",
+  trends: [
+    { tell: "\"not just X, but Y\"", evidence: "~6% of sampled ChatGPT messages; called the most prominent sign by Wikipedia's editor guide", dir: "rising", dirLabel: "rising: the em dash's successor" },
+    { tell: "em dash", evidence: "GPT-4.1 at 10.6/1,000 words vs human 3.2; GPT-5.4 down to 1.4", dir: "falling", dirLabel: "falling at the source" },
+    { tell: "delve", evidence: "28× excess in 2024 abstracts; 14× in indexed papers", dir: "falling", dirLabel: "fading in new output" },
+    { tell: "delve (in human speech)", evidence: "Significant post-2022 rise in podcasts and academic talks (Max Planck; FSU)", dir: "rising", dirLabel: "rising: leaked into people" },
+    { tell: "underscore", evidence: "~30% of 2025 PMC papers use it, vs ~3% in 2022", dir: "rising", dirLabel: "still climbing in print" },
+    { tell: "meticulous", evidence: "34.7× in AI-era peer reviews; still growing in full-text corpora", dir: "rising", dirLabel: "rising" },
+    { tell: "tapestry", evidence: "On every blacklist; heavily mocked", dir: "falling", dirLabel: "tuned out of new models" },
+    { tell: "\"today's fast-paced world\"", evidence: "107× human rate (GPTZero)", dir: "stable", dirLabel: "stable" },
+    { tell: "markdown bold/bullets in prose", evidence: "Near-zero in newest models when told to write prose", dir: "falling", dirLabel: "falling" },
+    { tell: "rule of three · false ranges · vague attribution", evidence: "Codified by Wikipedia's guide; structural, so harder to tune out", dir: "rising", dirLabel: "the 2026 frontier" },
+    { tell: "uniform sentence cadence", evidence: "Shared structural fingerprint across ~82% of AI posts, any model", dir: "stable", dirLabel: "stable" },
+    { tell: "sycophantic openers", evidence: "SycEval: 58% average sycophancy across models; \"You're absolutely right\" tracked daily", dir: "stable", dirLabel: "stable" }
+  ],
+  log: [
+    { week: "August 10, 2026", iso: "2026-08-10", slug: "2026-08-10",
+      title: "Week one: what the measurements say",
+      deck: "HumanSounding is live. The first research run, a new rising tell, and the site that counted its own em dashes.",
+      items: [
+        "HumanSounding launched: the live trend board, the in-browser draft checker, and downloadable instruction files for Claude, ChatGPT, and Gemini.",
+        "The first autonomous research run added a new rising tell: lighter punctuation with longer, comma-sparse sentences in newer models.",
+        "Wikipedia's editor guide now flags Grok-specific vocabulary (causal, empirical, correlate); added to the trend board.",
+        "A July 2026 analysis found that among major chatbots only Claude still uses em dashes above the professional human rate; GPT-5.4 now sits below it.",
+        "EQ-Bench weights the \"not just X, but Y\" pattern at 25% of its slop score, with models running far above the human rate (EQ-Bench, Jul 2026).",
+        "We audited our own pages with Impeccable, a detector for AI design tells: 70 findings, including 42 em dashes on the site that lectures about em dashes. All fixed."
+      ] }
+  ],
+  history: {
+    "\"not just X, but Y\"": ["rising"],
+    "em dash": ["falling"],
+    "underscore": ["rising"],
+    "markdown bold/bullets in prose": ["falling"]
+  }
+};
+
+const glyph = { rising: "▲ ", falling: "▼ ", stable: "– " };
+function renderBoard(d) {
+  const rows = (d.trends || []).map(t =>
+    `<div class="brow2"><b>${escHtml(t.tell)}</b><span class="ev">${escHtml(t.evidence)}</span><span class="chip ${escHtml(t.dir)}">${glyph[t.dir] || ""}${escHtml(t.dirLabel || t.dir)}</span></div>`);
+  document.getElementById("trendBoard").innerHTML =
+    `<div class="brow2 h"><span>Tell</span><span>Evidence</span><span>Direction</span></div>` + rows.join("");
+}
+function bars(elId, rows, srcNote, fmt) {
+  const max = Math.max(...rows.map(r => r.v));
+  document.getElementById(elId).innerHTML = rows.map(r =>
+    `<div class="brow" title="${escHtml(r.label)}: ${fmt(r.v)} · ${escHtml(srcNote)}">
+       <div class="bl">${escHtml(r.label)}</div>
+       <div class="tr"><div class="bar${r.ref ? " ref" : ""}" style="width:${(r.v / max * 100).toFixed(1)}%"></div></div>
+       <div class="bv">${fmt(r.v)}</div>
+     </div>`).join("");
+}
+function renderEditions(d) {
+  const log = Array.isArray(d.log) ? d.log : [];
+  const cards = log.slice(0, 6).map((w, i) => {
+    const head = `<span class="d">${escHtml(w.week)}</span>${i === 0 ? '<span class="newlabel wavy">newest edition</span>' : ""}`;
+    const link = w.slug ? `/blog/${escHtml(w.slug)}.html` : "/changelog.html#w" + escHtml(w.iso);
+    let body;
+    if (w.title) {
+      body = `<h3><a href="${link}">${escHtml(w.title)}</a></h3><p>${escHtml(w.deck || "")}</p>`;
+    } else if (Array.isArray(w.items) && w.items.length > 1) {
+      body = `<ul>${w.items.slice(0, 3).map(it => `<li>${escHtml(it)}</li>`).join("")}</ul>`;
+    } else {
+      body = `<p>${escHtml((w.items && w.items[0]) || "")}</p>`;
+    }
+    return `<div class="card edition${i === 0 ? " newest" : ""}">${head}${body}</div>`;
+  });
+  cards.push(`<p class="weekfoot">Written each Monday by the research pipeline. <a href="/blog.html#week">All editions</a> · <a href="/feed.xml">RSS</a></p>`);
+  document.getElementById("editions").innerHTML = cards.join("");
+}
+function renderOverTime(d) {
+  const hist = d.history || {};
+  const dirWord = { rising: "rising", falling: "falling", stable: "stable" };
+  const cls = { rising: "up", falling: "down", stable: "flat" };
+  const rows = Object.entries(hist).slice(0, 6).map(([tell, dirs]) => {
+    if (!Array.isArray(dirs) || !dirs.length) return "";
+    const seq = dirs.slice(-12);
+    let h = 50;
+    const heights = seq.map(x => { h += x === "rising" ? 10 : x === "falling" ? -10 : 0; return Math.max(18, Math.min(100, h)); });
+    const last = seq[seq.length - 1];
+    // always draw 12 slots; weeks with no edition yet stay as faint placeholders
+    const pad = Array.from({ length: 12 - heights.length }, () => `<span class="empty" style="height:12%"></span>`).join("");
+    const bars = pad + heights.map((v, i) =>
+      `<span style="height:${v}%" class="${i === heights.length - 1 ? "now" : ""}"></span>`).join("");
+    return `<div class="ot-row">
+      <div class="ot-head"><b>${escHtml(tell)}</b><span class="${cls[last] || "flat"}">${glyph[last] || ""}${dirWord[last] || ""}</span></div>
+      <div class="ot-bars" role="img" aria-label="${escHtml(tell)}: ${seq.length} weekly direction call${seq.length === 1 ? "" : "s"}, currently ${dirWord[last] || "stable"}">${bars}</div>
+    </div>`;
+  });
+  document.getElementById("otRows").innerHTML = rows.join("");
+}
+function renderAll(d) {
+  document.getElementById("updated").textContent = d.updated;
+  if (d.note) document.getElementById("weeklyNote").textContent = d.note;
+  if (d.phraseSrc) document.getElementById("phraseSrc").textContent = "How many times more often the phrase appears in AI text · " + d.phraseSrc.replace(/:.*$/, "");
+  renderBoard(d);
+  bars("phraseChart", d.phrases, d.phraseSrc, v => v + "×");
+  bars("dashChart", d.dashes, d.dashSrc, v => v.toFixed(2));
+  renderEditions(d);
+  renderOverTime(d.history ? d : { ...d, history: FALLBACK.history });
+}
+renderAll(FALLBACK);
+(async () => {
+  const d = await fetchSiteData();
+  if (d && Array.isArray(d.phrases)) renderAll({ ...FALLBACK, ...d });
+})();
+</script>
+</body>
+</html>

@@ -17,25 +17,24 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"How to Tell If Something Was Written by AI (2026 Guide)","description":"The measurable signs of AI-written text: the sentence patterns, punctuation habits, and vocabulary that give models away \u2014 every figure cited to published research.","datePublished":"2026-08-10","dateModified":"2026-08-10","author":{"@type":"Organization","name":"HumanSounding","url":"https://humansounding.com/"},"mainEntityOfPage":"https://humansounding.com/how-to-tell-if-ai-wrote-it.html"}
 </script>
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
 <style>
-  :root { color-scheme: light; --surface-1:#fcfcfb; --page:#f9f9f7; --ink-1:#0b0b0b; --ink-2:#52514e; --ink-muted:#6e6c66; --grid:#e1e0d9; --border:rgba(11,11,11,0.10); --series-1:#1e63b8; --btnbg:#1f66bd; --delta-up:#006300; --delta-down:#a03535; --hl:#fff3c9; --hl-border:#eda100; }
-  @media (prefers-color-scheme: dark) { :root { color-scheme: dark; --surface-1:#201e1b; --page:#151310; --ink-1:#fff; --ink-2:#c3c2b7; --grid:#2c2c2a; --border:rgba(255,255,255,0.10); --series-1:#3987e5; --accent:#3987e5; --btnbg:#1c5cab; --ink-muted:#9a988f; --delta-up:#0ca30c; --delta-down:#e66767; --hl:#3a3116; --hl-border:#c98500; } }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin:0; background:var(--page); color:var(--ink-1); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.6; font-size:16.5px; }
-  #topnav { position:sticky; top:0; z-index:50; background:color-mix(in oklab, var(--page) 88%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--grid); }
-  #topnav .in { max-width:760px; margin:0 auto; padding:10px 24px; display:flex; gap:6px; align-items:center; overflow-x:auto; white-space:nowrap; }
-  #topnav a { color:var(--ink-2); font-size:13.5px; padding:6px 11px; border-radius:8px; text-decoration:none; }
-  #topnav a:hover { background:color-mix(in oklab, var(--series-1) 9%, transparent); }
-  #topnav .brand { font-weight:700; color:var(--ink-1); margin-right:10px; }
-  #topnav .cta { background:var(--btnbg, var(--series-1)); color:#fff; font-weight:600; margin-left:auto; }
   main { max-width:760px; margin:0 auto; padding:0 24px 80px; }
   h1 { font-size:32px; letter-spacing:-0.5px; line-height:1.2; margin:40px 0 8px; }
   .byline { color:var(--ink-muted); font-size:13.5px; margin:0 0 28px; }
   h2 { font-size:21px; letter-spacing:-0.3px; margin:36px 0 10px; }
   p { color:var(--ink-2); margin:0 0 16px; }
   p b, li b { color:var(--ink-1); }
-  a { color:var(--series-1); text-decoration:none; }
+  a { color:var(--accent); text-decoration:none; }
   a:hover { text-decoration:underline; }
   table { width:100%; border-collapse:collapse; font-size:14.5px; margin:8px 0 20px; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
   th { text-align:left; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--ink-muted); padding:10px 14px; border-bottom:1px solid var(--grid); }
@@ -46,7 +45,7 @@
   .ex { background:var(--hl); border-left:3px solid var(--hl-border); padding:12px 16px; border-radius:0 8px 8px 0; margin:0 0 16px; color:var(--ink-2); font-size:15px; }
   .cta-box { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:20px 22px; margin:28px 0; }
   .cta-box p { margin:0 0 12px; }
-  .btn { display:inline-block; background:var(--btnbg, var(--series-1)); color:#fff; border-radius:8px; padding:10px 16px; font-size:14px; font-weight:600; text-decoration:none; }
+  .btn { display:inline-block; background:var(--btnbg); color:#fff; border-radius:8px; padding:10px 16px; font-size:14px; font-weight:600; text-decoration:none; }
   .btn:hover { text-decoration:none; filter:brightness(1.08); }
   .srcs { font-size:13.5px; color:var(--ink-2); border-top:1px solid var(--grid); margin-top:40px; padding-top:18px; }
   .foot { color:var(--ink-muted); font-size:12.5px; margin-top:36px; }
@@ -56,11 +55,21 @@
 <nav id="topnav" aria-label="Site">
   <div class="in">
     <a class="brand" href="/">HumanSounding</a>
-    <a href="/#models">Model accents</a>
-    <a href="/#trends">Trend board</a>
-    <a href="/#quiz">Spot the AI</a>
-    <a href="/#downloads">Downloads</a>
-    <a href="/#checker" class="cta">✍ Check your draft</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html" aria-current="page">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
   </div>
 </nav>
 <main>
@@ -88,29 +97,19 @@
 
 <div class="cta-box">
 <p><b>Test yourself.</b> Eight rounds of two passages each; click the machine. Most people score around a coin flip until they learn the patterns above.</p>
-<a class="btn" href="/#quiz">Play Spot the AI</a>
+<a class="btn" href="/checker.html">Play Spot the AI</a>
 </div>
 
 <p class="srcs"><b>Sources:</b> <a href="https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing">Wikipedia: Signs of AI writing</a> · <a href="https://decrypt.co/348923/5-biggest-tells-something-written-ai">Washington Post message dataset (via Decrypt)</a> · <a href="https://slopdetector.org/blog/em-dash-ai-tell-data">SlopDetector em-dash data</a> · <a href="https://www.science.org/doi/10.1126/sciadv.adt3813">Kobak et al., Science Advances 2025</a> · <a href="https://gptzero.me/news/most-common-ai-vocabulary/">GPTZero AI vocabulary</a> · <a href="https://arxiv.org/abs/2409.01754">Yakura et al., Max Planck</a> · <a href="https://arxiv.org/abs/2502.12150">Sun et al., CMU stylometry</a></p>
 
 <p class="foot">Part of <a href="/">HumanSounding</a>, the live index of AI writing tells. Figures quoted from their sources without adjustment; the trend data behind this site updates weekly.</p>
 </main>
-<script>
-const TRACK_URL = "https://mrkvxxmzekasxtpscawj.supabase.co/functions/v1/track";
-const TRACK_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ya3Z4eG16ZWthc3h0cHNjYXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzY3ODIsImV4cCI6MjEwMTk1Mjc4Mn0.NCDkRv2KxJge8mvXZ_fGrfwocJA8VOx93-P7FGsLI04";
-(async () => {
-  let isNew = false;
-  try {
-    const now = Date.now(), last = Number(localStorage.getItem("hs_last")) || 0;
-    isNew = now - last > 30 * 60 * 1000;
-    localStorage.setItem("hs_last", String(now));
-  } catch {}
-  try {
-    await fetch(TRACK_URL, { method: "POST",
-      headers: { "content-type": "application/json", "authorization": "Bearer " + TRACK_KEY },
-      body: JSON.stringify({ new_session: isNew, ref: document.referrer || "" }) });
-  } catch { }
-})();
-</script>
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+<script src="/assets/site.js"></script>
 </body>
 </html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — how this site earns your trust — HumanSounding</title>
+<meta name="description" content="How HumanSounding earns your trust: honesty rules, privacy stated plainly, and the 19 published sources behind every figure on the site.">
+<link rel="canonical" href="https://humansounding.com/about.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="About — how this site earns your trust">
+<meta property="og:description" content="Honesty rules, privacy stated plainly, and the 19 published sources behind every figure.">
+<meta property="og:url" content="https://humansounding.com/about.html">
+<meta property="og:image" content="https://humansounding.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .tcard { padding: 20px 22px; }
+  .tcard h3 { margin: 0 0 10px; font-size: 16px; }
+  .tcard p { color: var(--ink-2); font-size: 14px; margin: 0 0 8px; }
+  .tcard p:last-child { margin-bottom: 0; }
+  .tcard b { color: var(--ink-1); }
+  .srccard { padding: 20px 22px; margin-top: 12px; }
+  .srccard h3 { margin: 0 0 10px; font-size: 16px; }
+  .srcgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; font-size: 13.5px; color: var(--ink-2); }
+  details { margin-top: 14px; }
+  summary { color: var(--ink-muted); font-size: 13px; cursor: pointer; }
+  summary span { color: var(--accent); }
+  .sources { font-size: 13.5px; color: var(--ink-2); columns: 2; column-gap: 32px; margin-top: 14px; }
+  .sources p { margin: 0 0 10px; break-inside: avoid; }
+  .fineprint { margin-top: 28px; color: var(--ink-muted); font-size: 12.5px; }
+  @media (max-width: 860px) { .two, .srcgrid { grid-template-columns: 1fr; } .sources { columns: 1; } }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html">Blog</a>
+    <a class="nl nl-overflow" href="/about.html" aria-current="page">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+
+<main class="wrap-narrow">
+  <h2 class="page">How this site earns your trust</h2>
+  <p class="pagesub">Maintained by Gregg with Claude. Not affiliated with OpenAI, Anthropic, or Google.</p>
+
+  <div class="two">
+    <div class="card tcard">
+      <h3>Honesty rules we hold ourselves to</h3>
+      <p>Every figure traces to a named source. Per-model claims carry confidence labels: <b>measured</b>, <b>documented</b>, or <b>anecdotal</b>.</p>
+      <p>The visit counter undercounts rather than inflates. On a quiet week, the changelog says "nothing material changed" instead of manufacturing news.</p>
+      <p>Avoiding the vernacular makes text less annoying to read. It does not defeat detectors, and we never claim otherwise.</p>
+    </div>
+    <div class="card tcard">
+      <h3>Privacy, stated plainly</h3>
+      <p>The draft checker runs entirely in your browser. Your text is never transmitted anywhere.</p>
+      <p>We record only anonymous daily counts: visits, which tells fired, referrer domain. No IPs, no cookies, no personal data, no signup.<span id="meter" hidden> <b id="meterN"></b> visits so far, undercounted on purpose.</span></p>
+      <p>The whole site passes its own checker. Zero em dashes in our prose; we counted.</p>
+    </div>
+  </div>
+
+  <div class="card srccard" id="sources">
+    <h3>Sources</h3>
+    <div class="srcgrid">
+      <span><a href="https://www.science.org/doi/10.1126/sciadv.adt3813">Kobak et al., Science Advances 2025</a>: excess vocabulary; delve 28×</span>
+      <span><a href="https://arxiv.org/abs/2403.07183">Liang et al., ICML 2024</a>: peer-review word spikes</span>
+      <span><a href="https://arxiv.org/abs/2502.12150">Sun et al. (CMU)</a>: 97.1% five-way model identification</span>
+      <span><a href="https://slopdetector.org/blog/em-dash-ai-tell-data">SlopDetector, 2026</a>: per-model em-dash rates</span>
+    </div>
+    <details>
+      <summary>All 19 sources, with what each one backs up: <span>full list</span></summary>
+      <div class="sources">
+        <p><a href="https://www.science.org/doi/10.1126/sciadv.adt3813">Kobak et al., "Delving into LLM-assisted writing in biomedical publications" (Science Advances 2025)</a>: excess-vocabulary method; 13.5% figure; delve 28×.</p>
+        <p><a href="https://aclanthology.org/2025.coling-main.426.pdf">Juzek &amp; Ward, "Why Does ChatGPT 'Delve' So Much?" (COLING 2025)</a>: 21 focal words; +6,697% "delves".</p>
+        <p><a href="https://arxiv.org/abs/2403.07183">Liang et al., "Monitoring AI-Modified Content at Scale" (ICML 2024)</a>: peer-review word spikes; 6.5–16.9% modified reviews.</p>
+        <p><a href="https://www.nature.com/articles/s41562-025-02273-8">Liang et al., Nature Human Behaviour 2025</a>: LLM share of scientific papers by field.</p>
+        <p><a href="https://arxiv.org/abs/2409.01754">Yakura et al. (Max Planck), LLM influence on human spoken communication</a>: 737k hours of podcasts; "delve" in speech.</p>
+        <p><a href="https://news.fsu.edu/news/education-society/2025/08/26/on-screen-and-now-irl-fsu-researchers-find-evidence-suggesting-chatgpt-influences-how-we-speak/">Juzek, Anderson &amp; Galpin (FSU, AIES 2025)</a>: AI words in unscripted speech.</p>
+        <p><a href="https://arxiv.org/abs/2502.12150">Sun et al. (CMU), "Idiosyncrasies in Large Language Models"</a>: 97.1% five-way model identification; per-model markers.</p>
+        <p><a href="https://gptzero.me/news/most-common-ai-vocabulary/">GPTZero, most common AI vocabulary</a>: phrase multipliers (182×, 120×, 107×…).</p>
+        <p><a href="https://slopdetector.org/blog/em-dash-ai-tell-data">SlopDetector, em-dash density data (2026)</a>: per-model em-dash rates vs human baseline.</p>
+        <p><a href="https://arxiv.org/html/2603.27006v1">"The Last Fingerprint: How Markdown Training Shapes LLM Prose" (2026)</a>: suppression-resistance; GPT-5.4 changes.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing">Wikipedia: Signs of AI writing (WP:AISIGNS)</a>: the editor-built taxonomy this site's structural categories follow.</p>
+        <p><a href="https://decrypt.co/348923/5-biggest-tells-something-written-ai">Decrypt, "The 5 Biggest Tells" (Nov 2025)</a>: Washington Post 328,744-message dataset; "not just" ~6%.</p>
+        <p><a href="https://techcrunch.com/2025/11/14/openai-says-its-fixed-chatgpts-em-dash-problem/">TechCrunch, OpenAI's em-dash fix (Nov 2025)</a>: and <a href="https://www.pcworld.com/article/2977726/openai-has-fixed-chatgpts-infamous-em-dash-obsession.html">PCWorld's caveats</a>.</p>
+        <p><a href="https://openai.com/index/sycophancy-in-gpt-4o/">OpenAI, "Sycophancy in GPT-4o" (Apr 2025)</a>: the rollback postmortem.</p>
+        <p><a href="https://github.com/anthropics/claude-code/issues/3382">anthropics/claude-code#3382</a>: the "You're absolutely right!" bug report; tracker at <a href="https://absolutelyright.lol/">absolutelyright.lol</a>.</p>
+        <p><a href="https://xyzlabs.substack.com/p/large-language-models-show-concerning">SycEval (Stanford) coverage</a>: sycophancy rates: Gemini 62.47%, ChatGPT-4o 56.71%.</p>
+        <p><a href="https://www.scientificamerican.com/article/chatgpt-and-gemini-ai-have-uniquely-different-writing-styles/">Scientific American / Rudnicka</a>: ChatGPT vs Gemini stylometry ("glucose" vs "sugar").</p>
+        <p><a href="https://www.forbes.com/sites/lesliekatz/2025/08/08/google-fixing-bug-that-makes-gemini-ai-call-itself-disgrace-to-planet/">Forbes, Gemini's self-loathing loop (Aug 2025)</a>.</p>
+        <p><a href="https://www.dbreunig.com/2025/05/30/using-slop-forensics-to-determine-model-ancestry.html">Breunig, slop forensics &amp; model ancestry</a>: with <a href="https://github.com/sam-paech/slop-forensics">sam-paech/slop-forensics</a> and <a href="https://eqbench.com/slop-score.html">EQ-Bench Slop Score</a>.</p>
+        <p><a href="https://link.springer.com/article/10.1007/s11192-026-05601-5">Scientometrics 2026 multi-database study</a>: "underscore" through July 2025.</p>
+      </div>
+    </details>
+  </div>
+
+  <p class="fineprint">Built from published studies, detector datasets, and editor guides; per-item confidence is labeled where attribution is uncertain. Figures are quoted from their sources without adjustment; corpora, dates, and definitions differ between studies, so multipliers are not directly comparable across charts. Three caveats worth keeping in view. First, attribution is hard: most "Claude-isms" and "Gemini-isms" people complain about are generic LLM habits attributed to whichever model the complainer uses most; per-model claims carry confidence labels for that reason. Second, the tells are a moving target: labs tune out each meme roughly a year after it peaks, so the durable signals are structural (cadence, negative parallelism, triplets), not word lists. Third, nothing here is for passing text off where AI disclosure is required.</p>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>
