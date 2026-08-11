@@ -54,6 +54,7 @@
     --hl: #3a3116; --hl-border: #c98500;
   }
   * { box-sizing: border-box; }
+  html, body { overflow-x: clip; }
   body {
     margin: 0; background: var(--page); color: var(--ink-1);
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -176,6 +177,10 @@
   .qopt.correct { border-color: var(--delta-up); border-width: 2px; }
   .qopt.wrong { border-color: var(--delta-down); border-width: 2px; }
   .qopt.revealed { cursor: default; }
+  @keyframes scorePop { 0% { transform: scale(0.7); opacity: 0; } 70% { transform: scale(1.06); } 100% { transform: scale(1); opacity: 1; } }
+  #qFinal.pop { animation: scorePop .45s cubic-bezier(.2,.8,.3,1.1) both; display: inline-block; }
+  #qFinal.perfect { text-decoration: underline; text-decoration-style: wavy; text-decoration-color: var(--hl-border); text-decoration-thickness: 2.5px; text-underline-offset: 8px; }
+  @media (prefers-reduced-motion: reduce) { #qFinal.pop { animation: none; } }
   .qmeta { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; gap: 12px; flex-wrap: wrap; }
   .qfeed { font-size: 14.5px; color: var(--ink-2); min-height: 22px; }
 
@@ -186,6 +191,14 @@
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .fineprint { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--grid); color: var(--ink-muted); font-size: 12.5px; }
+  @media (max-width: 700px) {
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .btn { padding: 13px 18px; }
+    .btn2 { padding: 12px 16px; }
+    .chipbtn { padding: 10px 14px; }
+    #topnav a { padding: 10px 12px; }
+    .qopt { min-height: 44px; }
+  }
 </style>
 </head>
 <body>
@@ -687,9 +700,16 @@ const RULES = [
 
 function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 
+const MAX_CHECK_CHARS = 60000;
 document.getElementById("checkBtn").addEventListener("click", () => {
-  const text = document.getElementById("draft").value;
+  let text = document.getElementById("draft").value;
   if (!text.trim()) return;
+  let capped = false;
+  if (text.length > MAX_CHECK_CHARS) {
+    const cut = text.lastIndexOf(" ", MAX_CHECK_CHARS);
+    text = text.slice(0, cut > 0 ? cut : MAX_CHECK_CHARS);
+    capped = true;
+  }
   const words = (text.match(/\S+/g) || []).length;
   const hits = []; // {start,end,rule}
   for (const rule of RULES) {
@@ -732,9 +752,10 @@ document.getElementById("checkBtn").addEventListener("click", () => {
     ? groups.map(g => `<div style="padding:10px 0;border-top:1px solid var(--grid);font-size:14px"><b>${esc(g.rule.label)}</b> · ${g.n}× <span style="color:var(--ink-2)"> · ${esc(g.rule.fix)}</span></div>`).join("")
     : "";
   const loud = kept.filter(h => h.rule.sev === 3).length;
-  document.getElementById("checkSummary").textContent = kept.length
+  document.getElementById("checkSummary").textContent = (kept.length
     ? `${kept.length} robot bit${kept.length === 1 ? "" : "s"} found in ${words} words (${loud} loud). All fixable; hover each highlight to see how.`
-    : `Clean: none of the ${RULES.length + 1} tells fired in ${words} words. Suspiciously human, even.`;
+    : `Clean: none of the ${RULES.length + 1} tells fired in ${words} words. Suspiciously human, even.`)
+    + (capped ? ` (Long draft: checked the first ${words.toLocaleString()} words.)` : "");
   document.getElementById("checkOut").style.display = "block";
 
   // aggregate ping: counts only, never text
@@ -836,8 +857,9 @@ function applyFixes(text) {
 }
 let lastCheck = null; // {words, count}
 document.getElementById("fixBtn").addEventListener("click", () => {
-  const text = document.getElementById("draft").value;
+  let text = document.getElementById("draft").value;
   if (!text.trim()) return;
+  if (text.length > MAX_CHECK_CHARS) text = text.slice(0, MAX_CHECK_CHARS);
   const { out, changes } = applyFixes(text);
   document.getElementById("fixedText").textContent = out;
   document.getElementById("fixedOut").style.display = "block";
@@ -931,7 +953,12 @@ document.getElementById("qNext").addEventListener("click", () => {
   if (qi >= 8) {
     document.getElementById("quizStage").style.display = "none";
     document.getElementById("quizDone").style.display = "block";
-    document.getElementById("qFinal").textContent = `${qScore}/8`;
+    const fin = document.getElementById("qFinal");
+    fin.textContent = `${qScore}/8`;
+    fin.classList.remove("pop", "perfect");
+    void fin.offsetWidth; // restart animation on replays
+    fin.classList.add("pop");
+    if (qScore === 8) fin.classList.add("perfect");
     document.getElementById("qVerdict").textContent =
       qScore === 8 ? "Perfect. You can't be fooled. Yet." :
       qScore >= 6 ? "Sharp eye. The vernacular doesn't get past you often." :
