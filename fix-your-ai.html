@@ -38,7 +38,18 @@
   .step b { font-size: 14.5px; }
   .step p { color: var(--ink-2); font-size: 13.5px; margin: 6px 0 10px; }
   .step .path { font-size: 13px; color: var(--ink-1); background: var(--codebg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
-  .step .btn { font-size: 13.5px; padding: 9px 14px; margin-top: 4px; }
+  .step .btn { font-size: 13.5px; padding: 11px 16px; margin-top: 4px; min-height: 44px; display: inline-flex; align-items: center; }
+  .step .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 4px; }
+  .step .alt { background: none; border: none; padding: 0; font: inherit; font-size: 12.5px; color: var(--ink-muted); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .step .alt:hover { color: var(--ink-1); }
+  .readfirst { margin-top: 20px; }
+  .readfirst summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2); display: flex; align-items: center; gap: 8px; min-height: 44px; list-style: none; }
+  .readfirst summary::-webkit-details-marker { display: none; }
+  .readfirst summary::before { content: "\25B8"; font-size: 11px; color: var(--ink-muted); transition: transform .15s ease; }
+  .readfirst[open] summary::before { transform: rotate(90deg); }
+  .readfirst summary:hover { color: var(--ink-1); text-decoration: underline; text-underline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { .readfirst summary::before { transition: none; } }
+  .readfirst pre { white-space: pre-wrap; font-size: 12.5px; line-height: 1.65; color: var(--ink-2); background: var(--codebg); border: 1px solid var(--border); border-radius: 10px; padding: 16px; max-height: 320px; overflow: auto; margin: 0; }
   .confidence { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; padding: 18px 22px; margin-top: 22px; font-size: 13.5px; }
   .confidence span { color: var(--ink-2); }
   .confidence b { color: var(--ink-1); }
@@ -82,6 +93,11 @@
   </div>
 
   <div class="steps" id="steps" role="tabpanel" aria-live="polite"></div>
+
+  <details class="readfirst" id="readFirst">
+    <summary>Read the instructions before you use them</summary>
+    <pre id="instrPreview"></pre>
+  </details>
 
   <div class="card confidence">
     <span><b>What it costs:</b> nothing.</span>
@@ -140,7 +156,7 @@ Before giving me any draft, silently check it against rules 1-4 and fix violatio
 <script>
 const STEPS = {
   chatgpt: [
-    { t: "Download the instructions", p: "One plain-text file. It's free, and you can read every line of it.", dl: "txt" },
+    { t: "Copy the instructions", p: "One click puts them on your clipboard. Free, and you can read every line first.", dl: "txt" },
     { t: "Open ChatGPT's settings", p: "Click your name, then:", path: "Settings → Personalization → Custom instructions" },
     { t: "Paste and save", p: "Into the box that says:", path: "“How would you like ChatGPT to respond?”" }
   ],
@@ -150,12 +166,12 @@ const STEPS = {
     { t: "Choose the file, done", p: "Using Claude Code or Cowork instead? Unzip it into:", path: "~/.claude/skills/" }
   ],
   gemini: [
-    { t: "Download the instructions", p: "One plain-text file. It's free, and you can read every line of it.", dl: "txt" },
+    { t: "Copy the instructions", p: "One click puts them on your clipboard. Free, and you can read every line first.", dl: "txt" },
     { t: "Open Gemini's settings", p: "From the menu, then:", path: "Settings → Saved info" },
     { t: "Paste and save", p: "Or paste the same text into a Gem's instructions; either way Gemini reads it before every reply.", path: "Saved info → paste → Save" }
   ],
   other: [
-    { t: "Download the instructions", p: "One plain-text file. It's free, and you can read every line of it.", dl: "txt" },
+    { t: "Copy the instructions", p: "One click puts them on your clipboard. Free, and you can read every line first.", dl: "txt" },
     { t: "Find the instructions box", p: "Most AI tools have one; look for something like:", path: "Settings → Custom instructions (or System prompt)" },
     { t: "No settings? Paste it on top", p: "The same text works pasted at the top of any prompt, before what you ask for.", path: "Paste the file's text, then your request" }
   ]
@@ -167,11 +183,38 @@ function renderSteps(ai) {
       <div class="num" aria-hidden="true">${i + 1}</div>
       <b>${s.t}</b>
       <p>${s.p}</p>
-      ${s.dl === "txt" ? `<button class="btn" onclick="dl('humansounding-instructions.txt','portablesrc')">Download instructions.txt</button>` : ""}
+      ${s.dl === "txt" ? `<div class="actions">
+        <button class="btn" id="copyBtn" onclick="copyInstr(this)">Copy instructions</button>
+        <button class="alt" onclick="dl('humansounding-instructions.txt','portablesrc')">or download the .txt</button>
+      </div>` : ""}
       ${s.dl === "skill" ? `<a class="btn" href="/humansounding.skill" download="humansounding.skill" onclick="ping({event:'dl_skill'})">Download humansounding.skill</a>` : ""}
       ${s.path ? `<div class="path">${s.path}</div>` : ""}
     </div>`).join("");
   document.getElementById("claudeLine").hidden = ai === "claude";
+}
+function instrText() {
+  return document.getElementById("portablesrc").textContent.trim() + "\n";
+}
+async function copyInstr(btn) {
+  const text = instrText();
+  let ok = false;
+  try {
+    await navigator.clipboard.writeText(text);
+    ok = true;
+  } catch {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;top:0;left:-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try { ok = document.execCommand("copy"); } catch { ok = false; }
+    document.body.removeChild(ta);
+  }
+  btn.textContent = ok ? "Copied" : "Press Ctrl+C to copy";
+  if (!ok) document.getElementById("readFirst").open = true;
+  setTimeout(() => { btn.textContent = "Copy instructions"; }, 2500);
+  ping({ event: ok ? "copy_portable" : "copy_portable_failed" });
 }
 const AIS = ["chatgpt", "claude", "gemini", "other"];
 function pickAI(ai, push) {
@@ -183,6 +226,7 @@ function pickAI(ai, push) {
 document.querySelectorAll(".router button").forEach(b =>
   b.addEventListener("click", () => pickAI(b.dataset.ai, true)));
 window.addEventListener("hashchange", () => pickAI(location.hash.slice(1), false));
+document.getElementById("instrPreview").textContent = instrText();
 pickAI(location.hash.slice(1) || "chatgpt", false);
 </script>
 </body>
