@@ -27,7 +27,7 @@ jobs:
 
       - name: Design-tell regression check (Impeccable detector, report-only)
         run: |
-          npx --yes impeccable detect index.html changelog.html *.html --no-advisory 2>&1 | tail -20 || true
+          npx --yes impeccable@3.5 detect index.html changelog.html *.html --no-advisory 2>&1 | tail -20 || true
           echo "Design check complete (findings above are report-only; known-intended: bait samples, quote styling, small-caps labels)."
 
       - name: Repackage skill and commit weekly updates

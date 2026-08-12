@@ -51,7 +51,8 @@ function replaceMarked(file, startMark, endMark, inner) {
   const src = readFileSync(file, "utf8");
   const re = new RegExp(`(${startMark.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})[\\s\\S]*?(${endMark.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`);
   if (!re.test(src)) { console.error(`WARNING: markers not found in ${file}; not updated.`); return false; }
-  writeFileSync(file, src.replace(re, `$1\n${inner}\n  $2`));
+  // Replacer function: model-derived `inner` must not be $-interpolated.
+  writeFileSync(file, src.replace(re, (_, start, end) => `${start}\n${inner}\n  ${end}`));
   return true;
 }
 const NAV_BLOG_ACTIVE = `<nav id="topnav" aria-label="Site">
@@ -229,7 +230,8 @@ function writeAllFiles(d) {
   if (!re.test(skill)) {
     console.error("WARNING: trending markers not found in skill/SKILL.md; skill not updated.");
   } else {
-    writeFileSync(skillPath, skill.replace(re, skillTrendingSection(d)));
+    // Replacer function: model-derived content must not be $-interpolated.
+    writeFileSync(skillPath, skill.replace(re, () => skillTrendingSection(d)));
   }
   const log = Array.isArray(d.log) ? d.log : [];
   if (log.length && log[0].slug && log[0].title && Array.isArray(log[0].paragraphs)) {
@@ -368,7 +370,22 @@ let changes = Array.isArray(updated.changes) ? updated.changes.filter((c) => isS
 if (!changes.length) changes = ["No material changes this week; figures re-verified against their sources."];
 
 // validate the narrative column; fall back to an honest quiet-week column, never a broken page
-const stripDanger = (s) => String(s).replace(/<(?!\/?a(\s|>))[^>]*>/g, ""); // paragraphs may carry <a> links only
+// Paragraphs may carry <a> links only — and the <a> tags that survive are
+// rebuilt from scratch: the only attribute allowed through is a scheme-
+// allowlisted, attribute-escaped href (plus a hardcoded rel="noopener").
+// Everything else (on* handlers, style, javascript:/data: hrefs, entity-
+// encoded scheme tricks) is discarded; a bad href degrades to a bare <a>.
+const SAFE_HREF = /^(https?:\/\/|mailto:|\/|#)/i;
+const escAttr = (s) =>
+  String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const stripDanger = (s) =>
+  String(s)
+    .replace(/<(?!\/?a(\s|>))[^>]*>/g, "") // drop every non-<a> tag
+    .replace(/<a(\s[^>]*)?>/gi, (tag) => { // rebuild surviving <a> tags
+      const m = /href\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i.exec(tag);
+      const href = ((m && (m[1] ?? m[2] ?? m[3])) || "").trim();
+      return SAFE_HREF.test(href) ? `<a href="${escAttr(href)}" rel="noopener">` : "<a>";
+    });
 let column = updated.column;
 const columnOk = column && isStr(column.title, 90) && column.title.length > 4
   && isStr(column.deck, 200) && column.deck.length > 10
