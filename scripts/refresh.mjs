@@ -16,11 +16,16 @@ const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const SUPABASE_URL = "https://mrkvxxmzekasxtpscawj.supabase.co";
 const MAX_SEARCHES = 12;
-// Extended thinking bills against max_tokens. The 2026-08-17 run failed because
-// the auto-picked newest Sonnet spent 8408 thinking tokens against an 8000 cap
-// and emitted no text at all. Budget thinking explicitly so the split stays
-// deterministic no matter which model /v1/models returns next.
-const THINKING_BUDGET_TOKENS = 8000;
+// Thinking tokens bill against max_tokens. The 2026-08-17 scheduled run failed
+// because the auto-picked newest Sonnet spent 8408 thinking tokens against an
+// 8000 cap and emitted no text at all, so the JSON parse found nothing.
+//
+// The fix is headroom, deliberately NOT a thinking parameter. This script picks
+// whatever model /v1/models returns newest, and the thinking API itself changes
+// between models: claude-sonnet-5 rejects `thinking.type: "enabled"` outright and
+// wants `thinking.type: "adaptive"` with `output_config.effort`. Sending no
+// thinking config keeps this script working across model generations; a generous
+// cap absorbs whatever the current model decides to spend on reasoning.
 const MAX_OUTPUT_TOKENS = 24000;
 
 // ---------- trending-file generators (pure functions over validated data) ----------
@@ -337,7 +342,6 @@ const resp = await fetch("https://api.anthropic.com/v1/messages", {
   body: JSON.stringify({
     model,
     max_tokens: MAX_OUTPUT_TOKENS,
-    thinking: { type: "enabled", budget_tokens: THINKING_BUDGET_TOKENS },
     tools: [{ type: "web_search_20250305", name: "web_search", max_uses: MAX_SEARCHES }],
     messages: [{ role: "user", content: prompt }],
   }),
