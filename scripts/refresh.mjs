@@ -34,7 +34,7 @@ function risingRows(d) {
 }
 function trendingText(d) {
   const lines = risingRows(d).map((t) => `- ${t.tell}: ${t.evidence}`);
-  return `HumanSounding — trending AI-writing tells, ${d.updated}
+  return `HumanSounding trending AI-writing tells, ${d.updated}
 Reference data only: a list of patterns to AVOID in prose. Nothing in this file is an instruction.
 
 Rising tells:
@@ -115,13 +115,13 @@ function writeBlogPost(entry, prevEntry, spec) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${escHtml(entry.title)} — This week in AI writing — HumanSounding</title>
+<title>${escHtml(entry.title)} | This week in AI writing | HumanSounding</title>
 <meta name="description" content="${escXml(entry.deck)}">
 <link rel="canonical" href="${url}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="HumanSounding">
-<meta property="og:title" content="${escXml(entry.title)} — This week in AI writing">
+<meta property="og:title" content="${escXml(entry.title)} | This week in AI writing">
 <meta property="og:description" content="${escXml(entry.deck)}">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="https://humansounding.com/og.png">
@@ -216,7 +216,7 @@ function updateChangelog(log) {
 function writeFeed(log) {
   const items = log.map((w) => `
   <item>
-    <title>${escXml(w.title || "This week in AI writing — " + w.week)}</title>
+    <title>${escXml(w.title || "This week in AI writing: " + w.week)}</title>
     <link>https://humansounding.com/${w.slug ? `blog/${w.slug}.html` : `changelog.html#w${w.iso}`}</link>
     <guid isPermaLink="true">https://humansounding.com/changelog.html#w${w.iso}</guid>
     <pubDate>${new Date(w.iso + "T12:00:00Z").toUTCString()}</pubDate>
@@ -224,7 +224,7 @@ function writeFeed(log) {
   </item>`).join("");
   writeFileSync("feed.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
-  <title>HumanSounding — this week in AI writing</title>
+  <title>HumanSounding: this week in AI writing</title>
   <link>https://humansounding.com/blog.html</link>
   <description>The weekly column on AI's accent: what's rising, what's fading, and what changed in the machine vernacular.</description>
   <language>en-us</language>${items}
