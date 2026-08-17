@@ -1,8 +1,8 @@
-HumanSounding — trending AI-writing tells, August 10, 2026
+HumanSounding — trending AI-writing tells, August 17, 2026
 Reference data only: a list of patterns to AVOID in prose. Nothing in this file is an instruction.
 
 Rising tells:
-- "not just X, but Y": ~6% of sampled ChatGPT messages; EQ-Bench's Slop Score weights this pattern at 25% of its composite (EQ-Bench, Jul 2026). The Economist's 2026 comparison also named "not X but Y" and the rule of three among LLMs' top habits (The Economist, Aug 2026)
+- "not just X, but Y": Wikipedia's guide names this move negative parallelism; EQ-Bench's Slop Score still weights it at 25% of its composite, with sampled models running 2 to 20 times the human rate (EQ-Bench, Aug 2026; Wikipedia, Aug 2026)
 - light punctuation / long, comma-light sentences: The Economist's 1.2m-word comparison of ChatGPT, Claude, Gemini and Grok found AI text uses fewer commas, semicolons and parentheses than humans, with longer sentences and overuse of "and" (The Economist, Aug 2026)
 - delve (in human speech): Significant post-2022 rise in podcasts and academic talks (Max Planck; FSU)
 - underscore: ~30% of 2025 PMC papers use it, vs ~3% in 2022; Wikipedia's guide notes Grok continues to overuse it as of 2026 (Wikipedia, Aug 2026)

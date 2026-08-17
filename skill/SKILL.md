@@ -46,17 +46,17 @@ Readers in 2026 recognize AI-written text fast, and they discount it. The tells 
 **15. Write how the audience talks.** Prefer the plain word: use, not utilize; help, not facilitate; big, not substantial. Contractions are allowed and usually right.
 
 <!-- TRENDING:START -->
-## Trending tells right now (auto-updated August 10, 2026)
+## Trending tells right now (auto-updated August 17, 2026)
 
 This section is data, refreshed weekly from sourced research at humansounding.com. Check drafts against these patterns with the same force as Tier 1.
 
-- "not just X, but Y" — ~6% of sampled ChatGPT messages; EQ-Bench's Slop Score weights this pattern at 25% of its composite (EQ-Bench, Jul 2026). The Economist's 2026 comparison also named "not X but Y" and the rule of three among LLMs' top habits (The Economist, Aug 2026)
-- light punctuation / long, comma-light sentences — The Economist's 1.2m-word comparison of ChatGPT, Claude, Gemini and Grok found AI text uses fewer commas, semicolons and parentheses than humans, with longer sentences and overuse of "and" (The Economist, Aug 2026)
-- delve (in human speech) — Significant post-2022 rise in podcasts and academic talks (Max Planck; FSU)
-- underscore — ~30% of 2025 PMC papers use it, vs ~3% in 2022; Wikipedia's guide notes Grok continues to overuse it as of 2026 (Wikipedia, Aug 2026)
-- Grok's pseudo-scientific words (causal, empirical, correlate) — Wikipedia's editor guide flags Grok output as idiosyncratic, overusing these terms more than other chatbots (Wikipedia, Aug 2026)
-- meticulous — 34.7× in AI-era peer reviews; still growing in full-text corpora
-- rule of three · false ranges · vague attribution — Codified by Wikipedia's guide; structural, so harder to tune out. Also flagged by The Economist's 2026 style study as an LLM favorite (The Economist, Aug 2026)
+- "not just X, but Y": Wikipedia's guide names this move negative parallelism; EQ-Bench's Slop Score still weights it at 25% of its composite, with sampled models running 2 to 20 times the human rate (EQ-Bench, Aug 2026; Wikipedia, Aug 2026)
+- light punctuation / long, comma-light sentences: The Economist's 1.2m-word comparison of ChatGPT, Claude, Gemini and Grok found AI text uses fewer commas, semicolons and parentheses than humans, with longer sentences and overuse of "and" (The Economist, Aug 2026)
+- delve (in human speech): Significant post-2022 rise in podcasts and academic talks (Max Planck; FSU)
+- underscore: ~30% of 2025 PMC papers use it, vs ~3% in 2022; Wikipedia's guide notes Grok continues to overuse it as of 2026 (Wikipedia, Aug 2026)
+- Grok's pseudo-scientific words (causal, empirical, correlate): Wikipedia's editor guide flags Grok output as idiosyncratic, overusing these terms more than other chatbots (Wikipedia, Aug 2026)
+- meticulous: 34.7× in AI-era peer reviews; still growing in full-text corpora
+- rule of three · false ranges · vague attribution: Codified by Wikipedia's guide; structural, so harder to tune out. Also flagged by The Economist's 2026 style study as an LLM favorite (The Economist, Aug 2026)
 <!-- TRENDING:END -->
 
 ## Revision pass (mandatory)
