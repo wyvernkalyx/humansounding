@@ -16,7 +16,12 @@ const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const SUPABASE_URL = "https://mrkvxxmzekasxtpscawj.supabase.co";
 const MAX_SEARCHES = 12;
-const MAX_OUTPUT_TOKENS = 8000;
+// Extended thinking bills against max_tokens. The 2026-08-17 run failed because
+// the auto-picked newest Sonnet spent 8408 thinking tokens against an 8000 cap
+// and emitted no text at all. Budget thinking explicitly so the split stays
+// deterministic no matter which model /v1/models returns next.
+const THINKING_BUDGET_TOKENS = 8000;
+const MAX_OUTPUT_TOKENS = 24000;
 
 // ---------- trending-file generators (pure functions over validated data) ----------
 function risingRows(d) {
@@ -332,6 +337,7 @@ const resp = await fetch("https://api.anthropic.com/v1/messages", {
   body: JSON.stringify({
     model,
     max_tokens: MAX_OUTPUT_TOKENS,
+    thinking: { type: "enabled", budget_tokens: THINKING_BUDGET_TOKENS },
     tools: [{ type: "web_search_20250305", name: "web_search", max_uses: MAX_SEARCHES }],
     messages: [{ role: "user", content: prompt }],
   }),
@@ -339,10 +345,20 @@ const resp = await fetch("https://api.anthropic.com/v1/messages", {
 if (!resp.ok) { console.error("Anthropic API error:", resp.status, await resp.text()); process.exit(1); }
 const result = await resp.json();
 console.log("Usage:", JSON.stringify(result.usage || {}));
+console.log("Stop reason:", result.stop_reason, "| block types:", (result.content || []).map((b) => b.type).join(","));
 
 const text = (result.content || []).filter((b) => b.type === "text").map((b) => b.text).join("\n");
 const jsonMatch = text.match(/\{[\s\S]*\}/);
-if (!jsonMatch) { console.error("No JSON found in model output. Output began:", text.slice(0, 300)); process.exit(1); }
+if (!jsonMatch) {
+  // Print enough to diagnose without another run: an empty text block plus
+  // stop_reason "max_tokens" means the budget was exhausted, not that the
+  // model refused. That distinction cost a week the first time it happened.
+  console.error("No JSON found in model output.");
+  console.error("  stop_reason:", result.stop_reason);
+  console.error("  text length:", text.length);
+  console.error("  output began:", JSON.stringify(text.slice(0, 300)));
+  process.exit(1);
+}
 
 let updated;
 try { updated = JSON.parse(jsonMatch[0]); }
