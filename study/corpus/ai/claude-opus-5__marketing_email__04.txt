@@ -1,0 +1,53 @@
+# Re-Engagement Email
+
+**Subject line options:**
+1. Your [Product] account is still here, [First Name]
+2. It's been a minute — here's what you've missed
+3. We saved your spot (and added a few things)
+
+**Preheader:** Everything's exactly where you left it, plus a few upgrades.
+
+---
+
+Hi [First Name],
+
+It's been about three months since you last logged in to [Product] — and we noticed, mostly because we'd rather you were getting something out of this than paying it no attention.
+
+No guilt trip here. People get busy, priorities shift, and sometimes a tool just doesn't fit the way you thought it would. But before you write us off entirely, there are a few things worth knowing.
+
+**Your account is exactly as you left it.** All [X] of your [projects/reports/contacts] are intact, your settings are saved, and your team's permissions haven't changed. Logging back in takes about eight seconds — no setup, no re-onboarding.
+
+**We've shipped a lot since [Month].** A few highlights:
+
+- **[Feature One]** — [One-line benefit, e.g., "cuts your weekly reporting from an hour to about five minutes."]
+- **[Feature Two]** — [One-line benefit.]
+- **[Feature Three]** — [One-line benefit.]
+
+If any of those solve the thing that made you drift away, it might be worth another look.
+
+**And if something specifically wasn't working — tell us.** Genuinely. Reply to this email and it lands with a real person on our team. We've changed our roadmap more than once based on a single honest reply from someone who'd stopped logging in. Confusing setup, missing integration, too expensive for what you needed — all useful to hear.
+
+[**Log back in →**]
+
+*[Optional incentive: To make it easy, here's [30 days of Pro / 20% off your next renewal / a free 1:1 setup session] — just use code **[CODE]** at checkout or [book a time here].]*
+
+If you'd rather not hear from us, no hard feelings. You can [update your email preferences] to get fewer messages, or [unsubscribe] entirely with one click. We'd rather leave a good impression than clutter your inbox.
+
+Thanks for giving us a shot in the first place.
+
+[Sender Name]
+[Title], [Company]
+
+---
+
+## Notes for customization
+
+**Personalization tokens that lift performance:** the specific count of saved items ([X] projects), the month they last logged in, and the feature they used most. Concrete details prove you're not blasting a generic list.
+
+**On the incentive:** test it. Discounts can work, but they can also train customers to lapse deliberately. A free setup call or feature unlock often re-engages better without eroding price integrity.
+
+**Send timing:** Tuesday–Thursday, 9–11 a.m. in the recipient's time zone tends to perform best for B2B.
+
+**Sequence structure:** This works as email one of three. Follow with a use-case or customer-story email five to seven days later, then a final "we're cleaning up our list — stay or go?" message. That last one usually earns the highest reply rate of the three.
+
+**Deliverability:** Suppress anyone who hasn't opened anything in 180+ days. Emailing a truly dead list will hurt your sender reputation more than the re-engagement gains are worth.

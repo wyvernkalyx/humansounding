@@ -1,0 +1,33 @@
+# How to Choose a Password Manager (Without Overthinking It)
+
+If you're reusing the same password across a dozen sites, you already know you shouldn't be. The reason isn't that someone will guess it — it's that one of those sites will eventually get breached, and attackers will take that leaked email-and-password pair and try it everywhere else. That's called credential stuffing, and it's the most common way ordinary accounts get taken over.
+
+A password manager fixes this by generating a unique, random password for every account and remembering them for you. The good news: almost any reputable option is a massive improvement over what you're doing now. Don't let the comparison shopping become an excuse to keep procrastinating.
+
+## What Actually Matters
+
+**Zero-knowledge encryption.** Your vault should be encrypted on your device with a key derived from your master password, so the company storing it can't read it even if they wanted to. This is table stakes — every serious provider offers it, but it's worth confirming.
+
+**Independent security audits.** Look for a provider that publishes third-party audit results and has a clear track record of responding to vulnerabilities. Open-source code is a plus, though audits matter more than source availability alone.
+
+**It works everywhere you do.** A manager that autofills beautifully on your laptop but fights you on your phone will not survive contact with real life. Check that it supports every browser and device you actually use.
+
+**You can get your data out.** Make sure there's an export function. Vendors change pricing, get acquired, or fall out of favor; you want the option to leave.
+
+## The Three Flavors
+
+**Built into your browser or OS.** Apple Passwords, Google Password Manager, and similar tools are free, well-integrated, and genuinely secure. If you live entirely inside one ecosystem, this is a perfectly reasonable choice. The friction shows up when you switch platforms or need to share credentials.
+
+**Subscription services.** Tools like 1Password and Bitwarden (which has a solid free tier) offer the best cross-platform experience, family sharing, secure notes, and emergency access. Expect to pay roughly $3–5 a month, or a bit more for a family plan.
+
+**Local or self-hosted.** KeePassXC and self-hosted Vaultwarden give you complete control — nothing sits on someone else's server. The tradeoff is that syncing and backups become your problem. Great if you enjoy that; frustrating if you don't.
+
+## Where People Go Wrong
+
+Choose a master password that's a long passphrase — four or five random words — rather than a short, complicated string. It's the one password you'll actually memorize, so make it strong and don't reuse it anywhere.
+
+Turn on two-factor authentication for the vault itself. Then print or write down whatever recovery kit your provider offers and put it somewhere physically safe. Losing access to your own vault is the failure mode nobody plans for.
+
+Finally, don't try to migrate all 200 accounts in one sitting. Import what you can, then let the manager prompt you to save and upgrade passwords as you log in over the next few weeks. Prioritize your email account first — it's the master key to everything else.
+
+Pick one this week. The specific choice matters far less than starting.

@@ -15,10 +15,13 @@
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, basename } from "node:path";
 import { createHash } from "node:crypto";
+import { fileURLToPath } from "node:url";
 
 // Resolved against this file, not the shell's cwd, so the study can be run
-// from anywhere and still measure the checker it ships beside.
-const CHECKER = new URL("../checker.html", import.meta.url).pathname;
+// from anywhere and still measure the checker it ships beside. fileURLToPath
+// rather than URL.pathname, which on Windows returns "/D:/..." and produces
+// paths like D:\D:\repo\checker.html.
+const CHECKER = fileURLToPath(new URL("../checker.html", import.meta.url));
 const BOOTSTRAP = 2000;
 // Below this many documents per arm the script will still print rates, but it
 // will not print a separation verdict. A bootstrap over four documents produces

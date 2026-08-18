@@ -1,0 +1,32 @@
+**[Your Name]**
+[City, State] | [Phone] | [Email] | [LinkedIn]
+
+[Date]
+
+[Hiring Manager Name]
+[Title]
+[Company Name]
+[Address]
+
+Dear [Mr./Ms./Mx. Last Name],
+
+I'm writing to apply for the [Staff/Senior Accountant] position at [Company Name], which I found on [job board/company careers page]. With [X] years of accounting experience in manufacturing environments — including standard costing, inventory valuation, and month-end close for a plant producing [product type] — I'm confident I can contribute to your finance team from day one.
+
+In my current role as [Title] at [Current Employer], a [$XX million] manufacturer of [products], I own the full cost accounting cycle. I maintain standard costs across approximately [XXX] SKUs, analyze purchase price, material usage, and labor and overhead variances monthly, and partner with operations to explain the drivers behind them. Last year, my analysis of routing inefficiencies on our [product line] helped production leadership identify a setup process that was consuming [X]% more labor hours than standard; the resulting change reduced annual conversion costs by roughly [$XXX,000]. I've found that the most valuable thing an accountant can do in a manufacturing setting is translate the general ledger into language the plant floor can act on.
+
+Beyond costing, I handle inventory reserves and obsolescence analysis, coordinate quarterly physical counts and daily cycle counting, reconcile [10–15] balance sheet accounts, and prepare the fixed asset and depreciation schedules for our [three] facilities. I also serve as a primary contact for our external auditors during year-end fieldwork, preparing PBC schedules and resolving inquiries — a role that has taught me to document my work so it holds up under scrutiny the first time.
+
+On the systems side, I'm proficient in [ERP system — e.g., Epicor, SAP, NetSuite, Infor] and advanced Excel (pivot tables, XLOOKUP, Power Query), and I have working familiarity with [Power BI/Tableau]. When [Current Employer] migrated from [legacy system] to [new ERP] in [year], I led the cost module conversion, validating over [X,000] item records and building the reconciliation process that closed our first post-go-live month only [two] days behind schedule. That project sharpened both my technical skills and my patience for the messy realities of data cleanup.
+
+What draws me to [Company Name] specifically is [one genuine, specific reason — e.g., your recent expansion into the [X] market, your reputation for investing in continuous improvement, the fact that this role sits close to operations rather than in a corporate silo]. A mid-sized manufacturer offers exactly the environment I want: enough complexity to stay challenged, and enough visibility to see how my work affects decisions. I'd rather be the accountant who walks the floor than the one who only sees the numbers after the fact.
+
+I hold a [B.S. in Accounting from University Name] and [am a licensed CPA / am pursuing CPA licensure, with [X] of four sections passed / hold a CMA]. I'd welcome the opportunity to discuss how my background fits your team's needs and am happy to make myself available at your convenience.
+
+Thank you for your time and consideration.
+
+Sincerely,
+[Your Name]
+
+---
+
+**A few notes:** Replace every bracketed item — hiring managers spot generic letters immediately. The paragraph on why you want *this* company matters most; spend ten minutes on their website or recent news and make it specific. If you're early-career, swap the variance-analysis example for coursework, an internship, or AP/AR work and lean harder on your systems skills and willingness to learn the cost side.

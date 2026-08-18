@@ -1,0 +1,61 @@
+# The Habit Loop
+
+### Issue #14: Why willpower is the wrong tool
+
+---
+
+Every January, gyms fill up. Every February, they empty. We tend to read this as a story about weak character. It isn't. It's a story about bad design.
+
+Here's what the research actually says about how habits change — and why the standard advice keeps failing us.
+
+---
+
+**1. Habits aren't decisions. They're associations.**
+
+A habit is a learned link between a *context* and a *response*. Your brain notices that a certain situation reliably preceded a certain reward, and it starts automating: same cue, same behavior, less deliberation each time.
+
+This is why habits feel effortless once established — and why they're so stubborn. You're not arguing with your goals. You're arguing with a pattern-matching system that runs faster than conscious thought.
+
+The practical upshot: to change a habit, change the cue, not just the intention.
+
+**2. The "21 days" number is a myth.**
+
+It comes from a 1960 plastic surgeon's observation about patients adjusting to their new faces. It was never a study of habit formation.
+
+The actual research — Phillippa Lally's team at UCL — followed people forming new habits and found a median of **66 days**, with a range from 18 to 254. Simple behaviors (drinking a glass of water after breakfast) automated quickly. Complex ones (a 50-minute workout) took far longer.
+
+The lesson isn't "it takes longer than you think." It's that automaticity builds on a curve, and the early weeks are the steepest part. Expect it to feel hard for longer than feels fair.
+
+**3. People with great self-control don't use much self-control.**
+
+This is my favorite finding in the field. Studies tracking people's temptations in daily life found that those who score highest on trait self-control report *experiencing fewer temptations* — not resisting them more successfully.
+
+They've arranged their lives so the conflict rarely arises. No snacks in the house. Phone charging in another room. Running clothes laid out the night before.
+
+Willpower is a fine emergency brake. It's a terrible steering system.
+
+**4. Specificity beats motivation.**
+
+Peter Gollwitzer's work on "implementation intentions" is remarkably consistent: forming an if-then plan ("If it's Tuesday at 7am, then I walk to the park") roughly doubles follow-through compared to a general goal ("I want to exercise more").
+
+The plan does the remembering for you. It pre-loads the decision so you don't have to make it while tired.
+
+**5. Missing once is not the problem.**
+
+Lally's data found that a single lapse had no measurable effect on the long-term formation curve. What derails people isn't the missed day — it's the story they tell themselves about the missed day.
+
+Never miss twice. That's the whole rule.
+
+---
+
+### This week's experiment
+
+Pick one habit you want. Write a single if-then sentence naming the exact time, place, and action. Then spend ten minutes removing friction from it — move the object, set out the gear, delete the app.
+
+Not more discipline. Less resistance.
+
+---
+
+*Reply and tell me what you're trying to change. I read everything.*
+
+*— See you next Thursday.*

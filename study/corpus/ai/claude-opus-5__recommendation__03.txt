@@ -1,0 +1,47 @@
+# Annual Performance Review
+
+**Employee:** [Name]
+**Position:** Account Executive, Mid-Market
+**Review Period:** January – December [Year]
+**Reviewer:** [Manager Name]
+**Overall Rating:** Exceeds Expectations
+
+---
+
+## Summary
+
+[Name] delivered an outstanding year of revenue performance, closing $1.42M against a $1.1M annual quota (129% attainment) and ranking third among fourteen reps on the mid-market team. This achievement is particularly notable given a territory realignment in Q2 that required rebuilding roughly a third of the pipeline from scratch. At the same time, persistent gaps in CRM hygiene, expense reporting, and contract documentation created downstream friction for Finance, Legal, and Sales Operations. Addressing these administrative issues is the single highest-leverage change [Name] can make in the coming year.
+
+## Key Strengths
+
+**Revenue results.** Beyond raw attainment, [Name] closed four of the team's ten largest new-logo deals and maintained an average deal size 18% above team baseline. Win rate on qualified opportunities was 34%, compared to a team average of 27%.
+
+**Discovery and consultative selling.** Multiple customers cited [Name] by name in post-sale surveys, with recurring themes around thorough needs assessment and honest guidance on fit. [Name] walked away from two poorly matched deals in Q3 rather than force a bad-fit sale — a judgment call that reflects good long-term thinking.
+
+**Coachability and peer support.** [Name] volunteered to mentor two new hires during onboarding and shared a discovery-call framework that has since been adopted by the broader team.
+
+## Areas for Development
+
+**CRM data quality.** Opportunity records were frequently updated in bulk near quarter-end rather than in real time. Forecast accuracy suffered as a result: Q1 and Q3 forecasts each missed submitted commit by more than 20% in either direction, which limited leadership's ability to plan resourcing.
+
+**Contract and approval documentation.** Three deals this year required retroactive approvals because discount terms were communicated to customers before internal sign-off. In one case, this delayed booking by eleven days and created avoidable tension with Legal.
+
+**Expense reporting.** Sixty-day-plus delays on expense submissions occurred in five of twelve months, requiring repeated follow-up from Finance.
+
+It is worth naming directly: these are not capability issues. They are prioritization issues. [Name] consistently chooses the next customer conversation over the administrative task in front of them. That instinct produces strong revenue, but it transfers cost onto colleagues and, at scale, becomes a barrier to promotion into roles where operational discipline is non-negotiable.
+
+## Goals for [Next Year]
+
+1. **Real-time CRM updates.** All opportunity stages, close dates, and amounts updated within 48 hours of a customer interaction. Target: 90%+ compliance measured monthly.
+2. **Forecast accuracy within 10%** of submitted commit for at least three of four quarters.
+3. **Zero retroactive approvals.** All non-standard terms routed through Deal Desk before customer communication.
+4. **Expenses submitted within 30 days**, every month.
+5. **Quota attainment of 105%+** on a [Year] quota of $1.25M.
+
+## Development Support
+
+We will block 30 minutes on Friday afternoons for administrative work and review CRM hygiene together in our first four 1:1s of Q1. Sales Ops will also provide a mobile-workflow walkthrough to reduce friction on same-day updates.
+
+## Manager's Closing Comment
+
+[Name] is one of the strongest sellers on this team and a genuine asset to the organization. Closing the operational gap would make the case for a senior AE promotion straightforward within twelve to eighteen months.

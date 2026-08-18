@@ -1,0 +1,35 @@
+# Your Remote Team Doesn't Need More Zoom Happy Hours
+
+When companies worry that remote work is "killing culture," they usually mean something specific and slightly embarrassing: they miss the ambient buzz of an office. The overheard jokes. The sense that things were happening.
+
+But ambient buzz isn't culture. Culture is the set of unwritten rules about how decisions get made, who gets heard, what gets rewarded, and what happens when someone screws up. An office can make a weak culture feel warm. Remote work strips away that insulation and shows you what you actually built.
+
+That's uncomfortable, but it's also an opportunity.
+
+## Distributed work punishes ambiguity
+
+In an office, vague processes survive because proximity papers over them. Nobody knows who owns the pricing decision, but you can corner three people by the coffee machine and sort it out in five minutes. Remove the coffee machine and that ambiguity becomes a week of Slack threads and a meeting that shouldn't exist.
+
+The fix isn't more communication. It's clearer defaults. Who decides? What's the deadline? What happens if nobody responds by Thursday? Teams that write this down don't become bureaucratic — they become fast, because people stop waiting for permission that was never required.
+
+## Write things down, and mean it
+
+Documentation gets treated like flossing: universally endorsed, sporadically practiced. But in a distributed company, the written record *is* the shared reality. A decision that lives only in someone's head or in a call that half the team missed effectively didn't happen.
+
+The bar is lower than people think. A three-sentence summary posted in a public channel beats an immaculate wiki page nobody writes. What matters is that the information is findable by someone who wasn't in the room — including the person who joins in six months.
+
+## Trust is a design choice, not a vibe
+
+Surveillance software, mandatory camera-on policies, and green-dot monitoring all send the same message: we assume you're slacking unless proven otherwise. People notice. They respond by performing visibility rather than doing work — staying online late, replying instantly to messages, padding status updates.
+
+The alternative is to manage against outcomes. Did the thing ship? Is the quality good? Are teammates unblocked? These are harder to measure than login times, which is exactly why so many managers avoid them.
+
+## Connection needs structure, not spontaneity
+
+Here's where the happy hour instinct isn't entirely wrong. Remote teams do lose the incidental relationship-building that offices provide. But the answer isn't to simulate an office badly. It's to be deliberate: rotating one-on-ones across teams, a genuine onboarding buddy system, occasional in-person gatherings with real substance rather than trust falls.
+
+A team that meets face-to-face twice a year with intention will usually outperform one that logs into a virtual escape room every month.
+
+## The real test
+
+Ask yourself: if your best engineer moved to a different time zone tomorrow, would anything break? If the answer is yes, the problem was never remote work. It was a culture that depended on proximity to function — and proximity was always the least reliable thing you had.

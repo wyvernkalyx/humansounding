@@ -1,0 +1,45 @@
+**THE MARGIN** — Issue #47
+
+## Your Productivity System Didn't Fail. It Was Never Built for a Bad Week.
+
+Sometime in the next month, a good number of you will rebuild your task system from scratch. New app, new tags, new weekly review template. It will feel fantastic for about eleven days.
+
+I've done this maybe fifteen times. Here's what I've come to believe about why it keeps happening.
+
+### 1. Setup feels like progress
+
+Building a system is the most satisfying kind of work: visible, bounded, and completable. Actual work is none of those things. So when the real project gets hard, migrating your notes to a new app becomes irresistible — it's procrastination wearing a productivity costume.
+
+A useful gut check: if you're reorganizing, ask what you're avoiding. There's usually a specific answer, and it's usually one task.
+
+### 2. Most systems solve capture, but capture isn't the bottleneck
+
+Nearly every popular method is excellent at getting things *into* a trusted place. Very few help you decide what deserves to exist at all.
+
+But almost nobody's real problem is "I forgot about a task." The real problem is having agreed to forty things when there was room for twelve. No inbox architecture fixes that. You can't organize your way out of overcommitment — you can only make the overcommitment more legible, which mostly just makes it more stressful.
+
+### 3. They're built for the calm version of you
+
+You design your system on a quiet Sunday with coffee and good intentions. Then you deploy it into a Wednesday with a sick kid, a broken deploy, and four meetings that should've been emails.
+
+The system that requires a 45-minute weekly review works great in weeks you don't need it. The weeks you *do* need it are exactly the weeks you'll skip it. This is the core design flaw: systems get tested under conditions they were never prototyped in.
+
+### 4. Trust dies faster than it builds
+
+Miss two reviews and your list fills with stale items. Now opening it produces guilt instead of clarity. So you start keeping the "real" list in your head, or on a sticky note, and the system becomes a graveyard you avoid.
+
+The failure isn't the missed week. It's that the system had no path back. It assumed continuous maintenance and offered nothing for the person returning after a lapse.
+
+### What actually seems to work
+
+**Design for recovery, not perfection.** The question isn't "does this work when I'm on top of things?" It's "how fast can I get back after abandoning it for two weeks?" Systems you can resume in five minutes survive. Systems requiring an archaeological dig do not.
+
+**Shrink it to what survives your worst week.** If the honest floor is a single list of three things per day, build that and stop. Ambition in system design is a liability.
+
+**Practice deletion.** Add a step where you delete things you're never going to do. Not defer — delete. If this feels bad, that's the signal: you've been using your task list as a place to store guilt.
+
+The best system isn't the one that makes you feel organized. It's the one that's still there in March.
+
+— Dana
+
+*Reply and tell me what you abandoned. I read everything.*

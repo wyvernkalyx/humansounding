@@ -1,0 +1,43 @@
+# Single Sign-On Is Now Available
+
+**March 2025 · Product Update**
+
+Starting today, teams on Business and Enterprise plans can sign in to Arbor using their existing identity provider. SSO has been our most-requested security feature, and it's now live for every workspace on a qualifying plan — no waitlist, no sales call required.
+
+## What's new
+
+**SAML 2.0 support.** Arbor now works as a service provider with any SAML 2.0–compliant identity provider. We've tested and documented setup flows for Okta, Microsoft Entra ID (formerly Azure AD), Google Workspace, OneLogin, JumpCloud, and Auth0. If your IdP speaks SAML, it will work — even if it isn't on that list.
+
+**Just-in-time provisioning.** When someone from your organization signs in for the first time, Arbor creates their account automatically and assigns them to the workspace and role you've configured. No more manual invitations for every new hire.
+
+**Enforced SSO.** Workspace owners can require all members to authenticate through your IdP, disabling password and magic-link sign-in for your verified domains. Service accounts and guest collaborators can be exempted individually so contractors and external reviewers aren't locked out.
+
+**Domain verification.** Claim your email domains with a DNS TXT record to prevent anyone outside your organization from creating an unmanaged account on your domain.
+
+**Session control.** Set session lifetimes between 1 hour and 30 days, and revoke active sessions across every device from the admin console.
+
+## SCIM provisioning is in beta
+
+Alongside SAML, we're opening a beta for SCIM 2.0 directory sync. Once connected, changes in your directory propagate to Arbor within minutes: new users get access, group membership maps to Arbor roles, and deprovisioned users lose access immediately rather than at their next session expiry. Okta and Entra ID connectors are available now; Google Workspace is next.
+
+If you'd like access, request it from **Settings → Security → Directory Sync**. We're onboarding roughly 25 workspaces per week.
+
+## Setting it up
+
+1. Go to **Settings → Security → Single Sign-On**.
+2. Verify your email domain with the DNS record we provide.
+3. Copy Arbor's ACS URL and entity ID into your IdP, then paste your IdP's metadata URL or certificate back into Arbor.
+4. Test the connection with the built-in validator — it will flag attribute mapping issues before you turn anything on.
+5. Enable enforcement when you're ready.
+
+Most admins finish in under 20 minutes. Our [setup guides](#) include screenshots for each supported provider, and the validator catches the two mistakes we see most often: mismatched entity IDs and missing email attribute mappings.
+
+## Availability
+
+SSO is included at no additional cost on Business and Enterprise plans. We considered gating it behind an enterprise upgrade and decided against it — security controls shouldn't be an upsell. Teams on Starter can upgrade from the billing page.
+
+## What's coming
+
+We're working on SCIM general availability, SSO for our mobile apps, and support for multiple IdPs in a single workspace for organizations managing subsidiaries or post-acquisition environments. Expect those over the next two quarters.
+
+Questions or a provider you'd like us to document? Reply to this post or email **support@arbor.com**. We read everything.

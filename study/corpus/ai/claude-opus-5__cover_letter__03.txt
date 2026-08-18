@@ -1,0 +1,33 @@
+# Cover Letter — Junior Software Developer
+
+**[Your Name]**
+[City, State] | [Phone] | [Email] | [LinkedIn] | [GitHub/Portfolio]
+
+[Date]
+
+**[Hiring Manager Name]**
+[Company Name]
+[Company Address]
+
+Dear [Hiring Manager Name],
+
+I'm writing to apply for the Junior Software Developer position at [Company Name], which I found on [job board/company careers page]. As someone who taught myself to code by building tools I actually wanted to use, I was drawn to [Company Name]'s work on [specific product, project, or mission]. The opportunity to contribute to [specific detail — e.g., "a platform serving 200,000 small businesses"] while learning from an experienced engineering team is exactly the next step I'm looking for.
+
+I recently completed [my Computer Science degree at University X / a full-stack development program at Y], where I built a strong foundation in [JavaScript, Python, and SQL] alongside core concepts like data structures, version control, and testing. Coursework gave me the theory, but my personal projects taught me what it feels like to ship something and maintain it.
+
+The project I'm proudest of is [Project Name], a [brief description — e.g., "web app that helps community gardens coordinate volunteer schedules"]. I built the front end in [React], the API in [Node.js/Express], and deployed it on [AWS/Heroku] with a [PostgreSQL] database. Along the way I hit real problems: the initial data model didn't handle recurring events well, so I refactored the schema and wrote a migration script rather than patching around it. The app now has [X active users / is used by two local organizations], and the experience taught me more about debugging, reading documentation, and asking good questions than any tutorial could.
+
+I also spent [six months] working [as an intern at Z / on an open-source project], where I contributed to a shared codebase, participated in code reviews, and learned to write commits and pull requests that respected my teammates' time. I found I genuinely enjoy the review process — receiving feedback that makes my code better, and slowly getting good enough to offer useful feedback in return.
+
+What I bring to a junior role is a realistic view of what junior means. I don't expect to arrive knowing your stack or your domain. I do expect to work carefully, document what I learn, ask questions early instead of stalling silently, and take ownership of the pieces I'm given. Before this career shift, I spent [three years in customer support / retail management / teaching], which sharpened my ability to communicate clearly with non-technical colleagues and stay calm when something breaks at an inconvenient time.
+
+I'm particularly interested in [Company Name] because [specific, honest reason — a technical blog post you read, the company's approach to mentorship, the problem space]. Your posting mentions [specific requirement], and while my experience there is limited to [personal projects/coursework], I'm actively working through [specific resource] to close the gap.
+
+Thank you for considering my application. My portfolio and GitHub are linked above, and I'd welcome the chance to talk about how I could contribute to your team. I'm available for a conversation at your convenience.
+
+Sincerely,
+**[Your Name]**
+
+---
+
+**Quick tips:** Replace every bracket with something specific — generic letters read as generic. Cut the paragraph about prior non-technical work if you're coming straight from school. And if you can name the person hiring, do it; "Dear Hiring Manager" is a fallback, not a default.

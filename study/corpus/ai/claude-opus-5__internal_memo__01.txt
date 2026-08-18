@@ -1,0 +1,46 @@
+**MEMORANDUM**
+
+**TO:** All Staff
+**FROM:** Dana Whitfield, Chief Financial Officer
+**DATE:** [Date]
+**SUBJECT:** New Expense Policy — Effective [Month 1]
+
+---
+
+Beginning **[Month 1]**, we are introducing an updated Employee Expense Policy. The revised policy simplifies submission, shortens reimbursement times, and brings our practices in line with current audit requirements. Please read this memo carefully and review the full policy document on the intranet under **Finance → Policies**.
+
+**Why we're making this change**
+
+Our current process was built when the company had fewer than 100 employees. Today, we process more than 900 expense claims each month across four offices, and the manual steps are causing delays — the average reimbursement now takes 21 days. The new policy, paired with our move to the Expensify platform, should reduce that to 7–10 days.
+
+**What's changing**
+
+*Submission deadline.* All expenses must be submitted within **30 days** of the transaction date. Claims older than 60 days will require written approval from your department head and may be declined.
+
+*Receipts.* Itemized receipts are required for **all expenses of $25 or more** (previously $50). Photograph receipts and upload them directly in Expensify; paper copies are no longer needed once uploaded. Credit card statements are not accepted as substitutes for itemized receipts.
+
+*Pre-approval thresholds.* Any single expense over **$500** — and all international travel, regardless of cost — now requires manager pre-approval through the platform. This replaces the old email-based approval chain.
+
+*Meals and per diem.* Domestic travel meals move to a **per diem of $70 per day** ($15 breakfast / $20 lunch / $35 dinner), with no receipts required. Client entertainment continues to be reimbursed at actual cost with itemized receipts and a record of attendees and business purpose.
+
+*Travel booking.* All flights, hotels, and rail must be booked through **Corporate Travel Desk**. Bookings made outside the system will be reimbursed only up to the fare that would have been available through the Travel Desk at time of booking.
+
+*Mileage.* Personal vehicle use is reimbursed at the current IRS standard rate, updated automatically in the platform each January.
+
+**What isn't changing**
+
+Approval authority levels, the corporate card program, and the treatment of professional development and home-office stipends remain the same. Non-reimbursable items — including personal entertainment, traffic fines, airline upgrades, and spousal travel — are unchanged and listed in Section 6 of the policy.
+
+**What you need to do**
+
+1. **Complete the 20-minute training module** in the Learning Portal by **[Month 1, day 15]**. Completion is mandatory for all employees who submit or approve expenses.
+2. **Submit any outstanding claims under the old process by [Month 1, day 1].** Claims received after that date must follow the new requirements.
+3. **Download the Expensify mobile app** and confirm your profile details are correct.
+
+**Support**
+
+Drop-in sessions will be held on **[dates]** at 11:00 a.m. in the Bradbury Room and via Teams. Questions can be directed to expenses@[company].com or to your department's finance business partner.
+
+We recognize that any process change takes adjustment, and we appreciate your patience during the transition. Our goal is simple: fewer steps for you, faster money back in your pocket, and cleaner records for the business.
+
+Thank you.

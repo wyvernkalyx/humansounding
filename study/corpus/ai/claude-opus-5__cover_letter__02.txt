@@ -1,0 +1,34 @@
+[Your Name]
+[City, State] | [Phone] | [Email] | [LinkedIn/Portfolio]
+
+[Date]
+
+[Hiring Manager Name]
+[Organization Name]
+[Address]
+
+Dear [Hiring Manager Name],
+
+I'm writing to apply for the Marketing Coordinator position at [Organization Name]. When I read that your team is working to [specific mission element—e.g., "expand access to early literacy programs across the county"], it resonated with something I've seen firsthand: good programs often go unnoticed simply because no one has told their story clearly. I've spent [X years] making sure that doesn't happen, and I'd like to bring that work to your team.
+
+In my current role as [Your Title] at [Current Organization], I manage day-to-day marketing execution across email, social media, and print. A few results I'm proud of:
+
+- **Grew email engagement by [X]%** over [timeframe] by segmenting our list by donor history and program interest, and rewriting our appeal templates around beneficiary stories rather than organizational updates.
+- **Coordinated [X] campaigns annually**, including our year-end giving push, which raised $[X] in [year]—a [X]% increase over the prior year—by aligning social, email, and direct mail on a single narrative and calendar.
+- **Built a content pipeline from scratch**, interviewing program participants and staff to produce [X] blog posts, testimonials, and short videos per quarter, which reduced our reliance on outside contractors and cut content costs by roughly $[X].
+- **Managed vendor and volunteer relationships** for event marketing, keeping [X] events on schedule and under budget.
+
+Practically, I'm fluent in the tools nonprofits actually use: Mailchimp and Constant Contact, Salesforce NPSP [or Raiser's Edge/Bloomerang], Canva and the Adobe suite, WordPress, Hootsuite, and Google Analytics and Ads (including Google Ad Grants management). I'm comfortable writing copy, pulling a report, resizing a graphic at 4 p.m. before a deadline, and explaining to a board member why we're not going to buy Instagram followers.
+
+What draws me to [Organization Name] specifically is [specific reason—e.g., "your community-led approach to program design; I've read your 2024 impact report and appreciated that participant voices shaped the recommendations, not just the pull quotes"]. I also noticed [specific observation about their marketing—e.g., "your Instagram storytelling is strong, while your email cadence looks lighter"], and I'd welcome the chance to talk about where I think there's room to grow.
+
+I understand the realities of nonprofit marketing: lean budgets, small teams, competing priorities from program and development staff, and the need to be both scrappy and disciplined about measurement. I work well in that environment. I like owning projects end to end, I'm organized enough to keep a content calendar honest, and I take seriously the responsibility of representing people's stories with dignity.
+
+Thank you for considering my application. I've attached my resume and [portfolio/writing samples], and I'd be glad to walk through my work in more detail. I'm available at [phone] or [email] and can be flexible around your schedule.
+
+Sincerely,
+[Your Name]
+
+---
+
+**A few notes as you customize:** Replace every bracket, and cut any bullet you can't back up with a real number—an honest "supported" beats an inflated "led." Trim the bullet list to three if the letter runs long, and name a real person if the posting or LinkedIn gives you one.

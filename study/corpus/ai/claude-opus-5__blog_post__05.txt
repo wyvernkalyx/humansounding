@@ -1,0 +1,43 @@
+# Home Network Security: The Basics Everyone Should Know
+
+Your home router is the front door to your digital life. Everything you do online — banking, work email, private messages, smart doorbell footage — passes through it. Yet most people set it up once, tuck it behind the TV, and never think about it again.
+
+The good news is that meaningful home network security doesn't require a computer science degree. A handful of changes, most of which take under an hour, will put you ahead of the vast majority of households.
+
+## Start with the router's admin password
+
+Routers ship with default administrator credentials — often something like "admin/admin" — and these defaults are published online in searchable lists. Anyone who gains access to your router's settings can redirect your traffic, spy on your devices, or lock you out entirely.
+
+Log into your router's admin panel (typically at 192.168.1.1 or 192.168.0.1, printed on a sticker on the device) and change both the username, if possible, and the password. Use something long and unique, and store it in a password manager.
+
+Note that this is *different* from your Wi-Fi password. Many people confuse the two.
+
+## Update the firmware
+
+Router manufacturers regularly patch security flaws, but many routers don't install updates automatically. Check the admin panel for a firmware update option and enable automatic updates if available. If your router is more than five or six years old, or the manufacturer has stopped issuing updates, it's time to replace it. An unpatched router is a permanent open window.
+
+## Use strong Wi-Fi encryption
+
+In your wireless settings, choose WPA3 if your router and devices support it, or WPA2 (specifically WPA2-AES) if not. Avoid WEP and WPA entirely — both are broken and can be cracked in minutes.
+
+Pair this with a strong Wi-Fi passphrase. A short random string is harder to type and easier to crack than a long passphrase of unrelated words. Something like "copper-lantern-drifting-92" is both memorable and genuinely difficult to brute-force.
+
+## Turn off features you don't use
+
+Several convenience features create unnecessary risk:
+
+- **WPS** (the push-button pairing feature) has known vulnerabilities. Disable it.
+- **Remote administration** lets you manage the router from outside your home. Unless you specifically need it, turn it off.
+- **UPnP** allows devices to open ports automatically. It's convenient for gaming consoles but has been abused by malware. Disable it if you can live without it.
+
+## Segment your smart devices
+
+Smart bulbs, cameras, thermostats, and TVs are notoriously poorly secured, and manufacturers often abandon them quickly. Most modern routers support a guest network — put your smart home gadgets there, isolated from the laptop where you do your banking. Guests get the same treatment, and you never have to share your main password.
+
+## Know what's connected
+
+Periodically review the list of connected devices in your router's admin panel. Unfamiliar entries deserve investigation — though be aware that device names are often cryptic, so don't panic at the first "ESP-3A9F2C" you see.
+
+## The bottom line
+
+Security is about layers, not perfection. Changing default credentials, keeping firmware current, using modern encryption, and separating untrusted devices will neutralize the overwhelming majority of realistic threats to a home network. Set aside an afternoon, work through the list once, and revisit it annually.

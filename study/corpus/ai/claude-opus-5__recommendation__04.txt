@@ -1,0 +1,38 @@
+# Annual Performance Review
+
+**Employee:** Jordan Reyes
+**Role:** Senior Software Engineer, Platform Team
+**Review Period:** January–December 2024
+**Reviewer:** [Manager Name]
+
+## Overall Summary
+
+Jordan is one of the most technically capable engineers on the Platform team and has delivered work this year that materially improved our system reliability. Jordan is also, based on consistent feedback from multiple teammates and partner teams, difficult to collaborate with. Both statements are true, and the second is now limiting the impact of the first. This review reflects a rating of **Meets Expectations**, held back from a higher rating by collaboration issues rather than output.
+
+## Technical Contributions
+
+Jordan led the migration of our event ingestion pipeline off the legacy queue, a project that had stalled twice before. The rollout completed two weeks ahead of schedule with no customer-facing incidents, and p99 ingestion latency dropped 43%. Jordan independently identified the connection-pool exhaustion bug behind the March outage after two other engineers had spent a day chasing the wrong subsystem. Code review feedback from Jordan is consistently sharp; several teammates noted that a Jordan review will catch problems no one else would have.
+
+Jordan's technical judgment is trusted, and it should be. This is genuine, high-value expertise.
+
+## Areas for Development
+
+The concerns are consistent enough across sources that they should be treated as fact rather than perception:
+
+**Tone in code review and technical discussion.** Feedback is often correct and delivered in a way that lands as dismissive. Comments such as "this is obviously wrong" or "did you read the RFC?" appear regularly in review threads. Two engineers have told me they route PRs around Jordan when possible, which means the team loses the benefit of Jordan's best skill.
+
+**Disagreement escalation.** In the Q3 schema design debate, Jordan continued relitigating the decision in Slack and in standup for three weeks after the team committed to a direction. Jordan may well have been right on the merits. The cost was three weeks of team friction and a delayed start.
+
+**Cross-team interactions.** The Data team's lead raised two separate concerns about meetings where Jordan interrupted their engineers and characterized their proposal as "a waste of everyone's time."
+
+The pattern is not malice; it appears to be impatience with work Jordan considers below standard. The impact is the same regardless of intent: colleagues avoid Jordan, information stops flowing, and Jordan's technical influence is smaller than the technical skill warrants.
+
+## Goals for Next Period
+
+1. **Code review tone.** Frame feedback as questions or observations rather than verdicts. Target: zero escalated complaints about review tone by end of Q2. I will spot-check review threads monthly and share what I see.
+2. **Disagree and commit.** Once a decision is made, raise remaining concerns to me directly rather than in team channels. Revisit only with new information.
+3. **Mentorship.** Take on one junior engineer as a formal mentee. This is both a development opportunity and a chance to apply technical depth in a way that builds rather than blocks.
+
+## Closing
+
+Jordan is close to being one of the highest-impact engineers here. The gap is not skill. Progress on the goals above is the primary factor in promotion consideration next cycle, and I want to be direct that continued issues would put the current role at risk. I'm committed to supporting this and will check in biweekly.

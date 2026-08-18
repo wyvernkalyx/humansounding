@@ -1,0 +1,47 @@
+Here's a draft. I've used brackets for the details only you can fill in — swap in your real numbers and specifics, since those are what make a post like this land.
+
+---
+
+**Six months ago we moved our team to a four-day week. Here's the honest version of why.**
+
+It wasn't a perk. It wasn't a recruiting play. It started with a spreadsheet that made me uncomfortable.
+
+I'd been tracking where our [team of 14] actually spent time. The pattern was hard to ignore: roughly [a third] of our calendar hours went to meetings that existed to update people who could have read a document. Another chunk went to work that got done twice because nobody had a quiet enough stretch to do it properly the first time.
+
+We weren't short on hours. We were short on attention.
+
+So in [January], we tried something. Monday through Thursday, same salaries, same output expectations. Fridays off — not "flexible Fridays," not "no-meeting Fridays." Off.
+
+**What we had to change to make it work**
+
+The four-day week didn't create focus. It forced us to go find it.
+
+We killed the weekly all-hands and replaced it with a written update people read on their own time. We capped recurring meetings at 30 minutes and required an agenda or the invite got declined automatically. We moved status reporting into [our project tool] so nobody had to narrate their work out loud.
+
+The hardest change was cultural: we had to stop treating responsiveness as a virtue. If a Slack message sits for four hours, that's fine now. That took months to actually believe.
+
+**What happened**
+
+[Output held steady — we shipped X in the first half versus Y in the same period last year.]
+
+[Voluntary turnover dropped from X% to Y%.]
+
+[Time-to-hire fell noticeably. Our last two senior roles closed in weeks, not months.]
+
+But the number I think about most is this: [X] of our team said they now have energy left for things outside work. That's not a KPI. It's most of the point.
+
+**What I'd tell you before you try it**
+
+It's not free. Client-facing and support roles needed a rotation, which means some people work Fridays and take a different day. That's less elegant than a company-wide shutdown and we're still refining it.
+
+Some weeks it doesn't hold. During [a launch or crunch period], Friday quietly disappeared. We're honest about that rather than pretending the policy is absolute.
+
+And it exposes weak management fast. When there's less time, vague priorities stop being survivable. If your team doesn't know what matters most, four days will make that painfully visible before it makes anything better.
+
+I'd still do it again. Not because it made us happier — though it did — but because it forced us to answer a question most teams never sit with: how much of our week is actually work, and how much is theatre about work?
+
+If you've made this change, I'd genuinely like to hear what broke for you. And if you're considering it, happy to share our internal rollout doc — just say so in the comments.
+
+---
+
+That's ~500 words. Two things worth considering: if you have one strong metric, lead with it in the first line instead of the spreadsheet anecdote — LinkedIn rewards specificity early. And if the rollout doc doesn't exist yet, cut that last offer rather than promise something you'd have to scramble to produce.

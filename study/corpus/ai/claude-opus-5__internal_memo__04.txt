@@ -1,0 +1,50 @@
+**MEMORANDUM**
+
+**TO:** All Employees and Contractors
+**FROM:** [Name], Chief Information Security Officer
+**DATE:** [Date]
+**SUBJECT:** Mandatory Security Awareness Training — Completion Required by [Deadline]
+
+---
+
+**Overview**
+
+Beginning [Start Date], all employees, contractors, and interns must complete a new Security Awareness Training program. The deadline for completion is **[Deadline]**. This training replaces our previous annual module and will be required of all personnel going forward.
+
+**Why We Are Doing This**
+
+Over the past year, attempted phishing attacks against our organization have increased significantly, and several attempts have been sophisticated enough to bypass automated filtering. Industry-wide, the overwhelming majority of successful breaches begin with a person — not a system — being deceived. Our technical defenses are strong, but they cannot be effective without informed people behind them.
+
+This training is also a requirement of our updated cyber insurance policy and supports our obligations under [applicable framework or regulation, e.g., SOC 2, HIPAA, GDPR].
+
+**What the Training Covers**
+
+The program consists of five modules totaling approximately 45 minutes:
+
+- **Recognizing phishing and social engineering** — identifying suspicious email, text, and voice-based attacks, including AI-generated impersonation
+- **Password hygiene and multi-factor authentication** — proper use of the company password manager and MFA requirements
+- **Handling sensitive data** — classification levels, approved storage locations, and safe sharing practices
+- **Device and remote work security** — securing laptops, mobile devices, and home networks
+- **Incident reporting** — how and when to escalate a suspected security issue
+
+Each module ends with a short knowledge check. A score of 80% or higher is required to pass; the assessment may be retaken as many times as needed.
+
+**How to Access the Training**
+
+You will receive an email from [Platform Name] at your work address on [Start Date] containing your personalized login link. The training is accessible from any company device and does not require VPN. You may complete the modules in one sitting or return to them individually — your progress will be saved automatically.
+
+Please complete the training during normal working hours. Managers have been asked to ensure team members have adequate time to participate; this is considered core work, not an addition to your existing workload.
+
+**Follow-Up Phishing Simulations**
+
+Starting [Date], we will begin periodic simulated phishing exercises. These are not designed to catch people out or to be used punitively. If you click on a simulated message, you will simply receive a brief coaching page explaining what to look for. Results are reviewed in aggregate to identify where we need to improve our guidance.
+
+**Compliance**
+
+Completion is mandatory and will be tracked. Automated reminders will go out at [X] and [Y] days before the deadline. Personnel who have not completed the training by [Deadline] will be escalated to their department head, and access to certain systems may be temporarily restricted until the requirement is met.
+
+**Questions and Support**
+
+If you have technical difficulty accessing the platform, contact the Service Desk at [email/extension]. For questions about the content or accommodations, including extended time or alternative formats, please contact [Name] at [email].
+
+Thank you for taking this seriously. Security is a shared responsibility, and your attention here genuinely protects our colleagues, our customers, and our work.

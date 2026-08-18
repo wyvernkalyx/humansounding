@@ -1,0 +1,45 @@
+**MEMORANDUM**
+
+**To:** All Customer Service Employees
+**From:** Dana Whitfield, VP of Customer Experience
+**Date:** March 4, 2025
+**Subject:** Reorganization of the Customer Service Team, Effective April 1
+
+---
+
+I'm writing to share news about a reorganization of our Customer Service team that will take effect on **Monday, April 1**. Please read this memo in full, and plan to join the all-team meeting on **Thursday, March 6, at 10:00 a.m. PT** (calendar invite to follow) where I'll walk through the details and answer your questions.
+
+**Why we're making this change**
+
+Over the past eighteen months, our support volume has grown by 62%, and the nature of that volume has shifted significantly. Chat and in-app messaging now account for more than half of all contacts, while phone volume has declined. At the same time, our enterprise account base has tripled, and those customers have needs that differ substantially from our self-serve users.
+
+Our current structure — three general-purpose queues organized by shift — was built for a smaller, phone-first operation. It has served us well, but it's now producing uneven results: first-response times have improved, while escalation resolution times have nearly doubled. Reorganizing around customer segment rather than shift will let us build deeper expertise and give each of you clearer ownership of outcomes.
+
+**What's changing**
+
+Effective April 1, Customer Service will be organized into three groups:
+
+- **Self-Serve Support**, led by Marcus Hale, will handle all inbound contacts from individual and small-team accounts across chat, email, and social channels.
+- **Enterprise Support**, led by Priya Raghavan, will provide dedicated support to accounts over 100 seats, including named-contact coverage for our top 40 accounts.
+- **Technical Escalations**, led by Joaquín Vera, will own all Tier 2 and Tier 3 cases, partner directly with Engineering on bug triage, and maintain our internal knowledge base.
+
+Marcus, Priya, and Joaquín will report to me. All three roles were filled through internal promotion, and I'm delighted that we were able to recognize this depth of talent on our own team.
+
+**What this means for you**
+
+**No positions are being eliminated.** This is a structural change, not a headcount reduction. Every current team member will be placed in one of the three new groups.
+
+Placements were determined based on your stated preferences from January's career conversations, current account relationships, and skill assessments. Your manager will meet with you individually between **March 10 and March 14** to confirm your placement, discuss your new reporting line, and review any changes to your schedule or metrics.
+
+A few practical notes:
+
+- Compensation and job titles are unchanged for individual contributors.
+- Shift schedules will largely remain as they are, though Enterprise Support will shift toward business-hours coverage across three time zones.
+- Two weeks of role-specific training will run March 17–28, with production coverage reduced accordingly. Ally Chen is coordinating the schedule.
+- Updated goals and quality standards will be published by March 21.
+
+**Questions**
+
+An FAQ document is now live on the intranet under *Customer Experience → 2025 Reorg*, and I'll update it as questions come in. Bring anything and everything to Thursday's meeting, or reach out to me or your manager directly.
+
+Change like this asks a lot of a team, and I don't take that lightly. Thank you for the care you bring to our customers every day — it's the reason this next chapter is possible.

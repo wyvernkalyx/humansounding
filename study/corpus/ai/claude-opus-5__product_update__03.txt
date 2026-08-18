@@ -1,0 +1,39 @@
+# Mobile Performance Update: The App Is Now Up to 3× Faster
+
+*Released in version 4.2 — rolling out this week on iOS and Android*
+
+If you've ever watched a spinner while trying to check a task on a spotty connection, this release is for you. Over the past two release cycles, our mobile team focused almost exclusively on speed. Version 4.2 is the result: faster launches, smoother scrolling, and a much better experience when your signal isn't cooperating.
+
+## What you'll notice
+
+**Cold starts are 62% faster.** Opening the app from scratch used to take a median of 3.1 seconds on a mid-range Android device. It now takes 1.2 seconds. On iOS, cold start dropped from 2.4s to 0.9s.
+
+**Lists scroll without stutter.** We rebuilt our list rendering to recycle views instead of re-creating them, and moved image decoding off the main thread. Long project lists and activity feeds now hold a steady 60fps (120fps on devices that support it), even with thousands of items loaded.
+
+**Screens load 40% faster on average.** We audited every screen transition and eliminated redundant network calls — in some cases, we were fetching the same user profile data four times on a single navigation.
+
+**Offline actually works now.** Creating, editing, and completing items works without a connection. Changes queue locally and sync automatically when you're back online, with clear indicators showing what's pending.
+
+## Under the hood
+
+A few of the bigger changes, for the technically curious:
+
+- **Smaller download, smaller footprint.** We removed three legacy dependencies and enabled tree-shaking across our JavaScript bundle, cutting it from 8.4MB to 3.1MB. The installed app is 34% smaller.
+- **Smarter caching.** We replaced our naive cache-on-fetch approach with a stale-while-revalidate strategy. You see cached content instantly while fresh data loads in the background.
+- **Adaptive image delivery.** Images are now served at the resolution your device actually needs, in modern formats (WebP/AVIF) where supported. This alone cut median data usage per session by 47%.
+- **Deferred initialization.** Analytics, crash reporting, and feature-flag SDKs no longer block the first paint. They initialize after the UI is interactive.
+- **Better memory behavior.** We fixed several retain cycles that caused memory to climb during long sessions. Background terminations from memory pressure are down 71%.
+
+## Availability
+
+Version 4.2 is rolling out gradually over the next five days. If you'd rather not wait, you can update manually from the App Store or Google Play. No action is required from admins, and there are no changes to permissions or data handling.
+
+Minimum OS requirements are unchanged: iOS 15+ and Android 9+.
+
+## What's next
+
+Performance work is never really finished. Next up, we're tackling search — currently the slowest interaction in the app — and adding background sync so your data is fresh before you even open the app.
+
+If something still feels slow, we want to hear about it. Shake your device to open the feedback panel, or write to us at support@example.com. Reports that include your device model and a rough timestamp are especially helpful; they let us pull the matching performance trace.
+
+Thanks for your patience while we did the unglamorous work.

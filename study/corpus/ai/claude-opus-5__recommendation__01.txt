@@ -1,0 +1,33 @@
+**[Department Letterhead]**
+
+Dr. Elena Marquez
+Associate Professor of Environmental Science
+Northfield University
+elena.marquez@northfield.edu | (555) 213-8890
+
+October 14, 2025
+
+**Graduate Admissions Committee**
+Department of Ecology and Evolutionary Biology
+[University Name]
+
+Dear Members of the Admissions Committee:
+
+It is my great pleasure to recommend Maya Ellison for admission to your doctoral program in Ecology and Evolutionary Biology. I have known Maya for three years, first as a student in my Conservation Biology course, later as a research assistant in my lab, and most recently as the lead author on a manuscript now under review. Among the roughly 400 undergraduates I have taught at Northfield, Maya ranks in the top two or three. I recommend her without reservation.
+
+Maya first distinguished herself in a class of 78 students, earning the highest grade on every assessment. What set her apart was not raw performance but the quality of her questions. During a unit on habitat fragmentation, she challenged a widely cited model's assumption about dispersal symmetry, then spent the following week reading the primary literature on her own initiative and returning with a two-page critique that was, frankly, more rigorous than some graduate work I have reviewed. I invited her to join my lab that spring.
+
+In the lab, Maya took on a project examining how urban stream restoration affects macroinvertebrate community recovery. The work required eighteen months of monthly field sampling across eleven sites, often in poor weather and at inconvenient hours. She never missed a sampling date. More impressively, when our initial analytical approach proved inadequate for the nested structure of the data, Maya taught herself hierarchical Bayesian modeling in R over a summer, working through Gelman and Hill largely unassisted. She then explained the framework to the rest of the lab in a seminar that my graduate students still reference. The resulting manuscript—for which she designed the analysis, wrote the first draft, and handled the bulk of revisions—is currently under review at *Freshwater Biology*.
+
+I want to emphasize Maya's intellectual independence, because it is the trait that most distinguishes future researchers from excellent students. Maya does not wait to be assigned problems. She identifies gaps, proposes approaches, and, critically, recognizes when her own ideas are not working. When a preliminary hypothesis about substrate composition failed to hold up, she abandoned it quickly and without ego, reframing the project around a more interesting question about colonization timing. That capacity for productive self-correction is rarer than technical skill and much harder to teach.
+
+Maya is also an exceptional colleague. She mentored two sophomore students in the lab, both of whom have since committed to research careers, and one of whom credits Maya directly for her decision. Maya is generous with credit, direct in disagreement, and entirely without pretension. She improves the environment around her.
+
+Her research interests—the mechanisms governing community assembly in disturbed freshwater systems—align closely with Dr. [Faculty Name]'s work, and I believe she would thrive under that mentorship. She is ready for doctoral work now.
+
+I give Maya Ellison my strongest possible endorsement. Please do not hesitate to contact me if I can provide further information.
+
+Sincerely,
+
+**Elena Marquez, Ph.D.**
+Associate Professor of Environmental Science

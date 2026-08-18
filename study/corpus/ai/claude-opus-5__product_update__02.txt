@@ -1,0 +1,49 @@
+Below is a template you can adapt — I've used a legacy Slack integration as the example, so swap in your specifics (names, dates, links).
+
+---
+
+# Sunsetting the legacy Slack integration (v1)
+
+**TL;DR:** Our original Slack integration will stop working on **March 31, 2025**. All workspaces should migrate to the new Slack app before then. Migration takes about five minutes and preserves your existing channel routing.
+
+## Why we're making this change
+
+We shipped the v1 Slack integration in 2019 using Slack's incoming webhooks. It did one thing well: post notifications to a channel. Since then, Slack has released a much richer platform, and our customers have asked for things v1 simply can't support — threaded replies, interactive buttons, granular per-channel permissions, and the ability to acknowledge or snooze an alert without leaving Slack.
+
+Rather than bolt those onto an aging foundation, we rebuilt the integration from scratch last year. The new Slack app has been generally available since September and now covers every v1 use case, plus:
+
+- **Two-way actions.** Acknowledge, assign, or resolve directly from a Slack message.
+- **Threaded updates.** Follow-up events land in the thread instead of flooding the channel.
+- **Scoped permissions.** Grant access per channel rather than per workspace.
+- **Faster delivery.** Median notification latency dropped from 4.2s to under 800ms.
+
+Maintaining both versions splits our engineering time and means v1 users keep missing out on improvements. Retiring it lets us move faster on the parts of the product you actually use.
+
+## Timeline
+
+| Date | What happens |
+|---|---|
+| **January 15, 2025** | v1 enters maintenance mode. No new installs; existing connections keep working. |
+| **February 24, 2025** | 24-hour test blackout. v1 notifications pause so you can confirm your migration is complete. |
+| **March 31, 2025** | v1 shuts down permanently. Notifications stop sending. |
+
+## What you need to do
+
+1. Go to **Settings → Integrations → Slack**.
+2. Click **Migrate to new app** and authorize it in Slack.
+3. Review the imported channel mappings — we copy them over automatically, but it's worth a glance.
+4. Send a test notification to confirm everything's flowing.
+
+Admin access to both your workspace and your Slack workspace is required. If your Slack instance restricts app installs, you may need to request approval from your Slack admin first — worth starting early if your organization has a review process.
+
+**If you use our API to manage Slack connections programmatically**, note that the `/v1/integrations/slack` endpoints are deprecated in favor of `/v2/integrations/slack`. The request shape has changed; see the [migration guide](#) for a field-by-field mapping.
+
+## What happens if you don't migrate
+
+Nothing breaks in your account, but Slack notifications will silently stop on March 31. Alerts will still appear in-app and via email, and no data is lost. You can migrate at any point afterward — there's no hard cutoff for setting up the new app.
+
+## Questions
+
+We'll email every affected workspace admin at the 60-, 30-, and 7-day marks, and you'll see an in-app banner starting January 15.
+
+If you're blocked on migrating, or the new app doesn't cover a workflow you depend on, reply to this post or reach us at **support@example.com**. We'd rather hear about a gap now than after the shutdown.

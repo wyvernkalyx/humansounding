@@ -8,11 +8,17 @@
 // is all this repository needs and one less dependency to audit.
 
 import { readFileSync, existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
+// fileURLToPath, not URL.pathname. On Windows .pathname yields "/D:/repo/.env",
+// which is not a path any Windows API accepts and which join() then glues onto
+// the cwd. This bit us on 2026-08-18 and it will bit us again if anyone
+// "simplifies" it back.
+export const ENV_PATH = fileURLToPath(new URL("../.env", import.meta.url));
 
 export function loadEnv() {
-  const path = new URL("../.env", import.meta.url).pathname;
-  if (!existsSync(path)) return false;
-  for (const line of readFileSync(path, "utf8").split(/\r?\n/)) {
+  if (!existsSync(ENV_PATH)) return false;
+  for (const line of readFileSync(ENV_PATH, "utf8").split(/\r?\n/)) {
     const m = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/);
     if (!m) continue;
     let v = m[2].trim();

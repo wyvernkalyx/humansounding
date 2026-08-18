@@ -1,0 +1,38 @@
+# Introducing Custom Report Builder
+
+**Available today on Growth and Enterprise plans**
+
+For the past two years, the most common request in our feedback queue has been some version of the same thing: "I need a report that doesn't exist yet." Today we're shipping the answer — Custom Report Builder, a drag-and-drop workspace for creating, saving, and sharing reports built on your own data, with no SQL required.
+
+## What's new
+
+Until now, reporting meant choosing from fifteen prebuilt templates and hoping one of them matched your question. That worked well for standard weekly reviews and poorly for everything else. Teams were exporting CSVs, rebuilding charts in spreadsheets, and manually refreshing numbers before every stakeholder meeting.
+
+Custom Report Builder replaces that workflow. You start with a blank canvas, choose the metrics and dimensions you care about, and build the view you actually need.
+
+**Key capabilities:**
+
+- **Flexible metrics and dimensions.** Combine any of 40+ metrics with dimensions like team, project, owner, status, tag, or custom field. Group and nest up to three levels deep.
+- **Visualization options.** Switch between tables, line charts, bar charts, stacked areas, and heat maps without rebuilding your report. Pick the format that makes the point.
+- **Saved filters and segments.** Define a segment once — "enterprise accounts in EMEA," "tickets escalated more than twice" — and reuse it across every report in your workspace.
+- **Scheduled delivery.** Send any report to email or Slack on a daily, weekly, or monthly cadence. Recipients don't need a paid seat to view a delivered snapshot.
+- **Sharing and permissions.** Publish reports to your whole workspace, share with specific teams, or keep them private. Report permissions inherit from your existing data access rules, so nobody sees data they shouldn't.
+- **Export anywhere.** Download as CSV, XLSX, or PDF, or pull data programmatically through the new `/v2/reports` API endpoint.
+
+## Why we built it this way
+
+Early prototypes gave users a full query interface. It was powerful and almost nobody could use it. So we spent three months on a guided builder instead: you pick a question type first ("How has this changed over time?" "How do these compare?"), and the builder narrows the options to what makes sense. Beta testers went from an average of 22 minutes to build their first report down to under 4.
+
+We also made a deliberate call on data freshness. Reports run against a near-real-time replica, typically 60 to 90 seconds behind live data. That tradeoff keeps large reports fast without meaningfully affecting decision-making.
+
+## Getting started
+
+Head to **Analytics → Reports → New Report** to open the builder. We've included six starter templates covering the most common requests from beta — team throughput, cycle time by stage, workload distribution, and more. Clone one and modify it, or start from scratch.
+
+Full documentation is in the help center, and we're running a live walkthrough next Thursday at 11am ET.
+
+## What's next
+
+Coming this quarter: calculated fields, cohort analysis, and embeddable report widgets for external dashboards. Cross-workspace reporting is on the roadmap for Q3.
+
+As always, tell us what's missing. This release exists because you kept asking.

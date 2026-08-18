@@ -1,0 +1,40 @@
+# Cover Letter: Operations Manager
+
+**[Your Name]**
+[City, State] | [Phone] | [Email] | [LinkedIn]
+
+[Date]
+
+**[Hiring Manager Name]**
+[Title]
+[Company Name]
+[City, State]
+
+Dear [Mr./Ms./Mx. Last Name],
+
+I am writing to apply for the Operations Manager position at [Company Name]. With [X] years of experience managing high-volume distribution and transportation operations—including a recent role overseeing a [size] sq. ft. facility processing [volume] shipments per week—I am confident I can help [Company Name] continue scaling its network while protecting margins and service levels.
+
+In my current role as [Your Title] at [Current Company], I lead a team of [number] associates across [number] shifts, with accountability for a [$X] operating budget. Over the past [timeframe], I have:
+
+- **Improved on-time delivery from [X]% to [Y]%** by redesigning dock scheduling, implementing appointment windows for inbound carriers, and creating a daily exception review that cut dwell time by [X] hours per load.
+- **Reduced cost per unit shipped by [X]%** through labor planning tied to forecasted volume, renegotiated LTL lane rates, and consolidation of [X]% of parcel volume into multi-stop routes.
+- **Cut recordable safety incidents by [X]%** in [timeframe] by launching a peer-led safety observation program and standardizing powered industrial truck training.
+- **Led the implementation of [WMS/TMS system]** across [number] sites, completing the rollout [on time/ahead of schedule] and driving inventory accuracy to [X]%.
+
+What I bring beyond the metrics is a practical, floor-level approach to leadership. I spend time on the dock and in the yard because the best process improvements almost always come from the people running the process. I have hired and developed [number] supervisors, [number] of whom have since been promoted, and I have built the kind of shift-to-shift communication routines that keep problems from being handed off rather than solved.
+
+I am drawn to [Company Name] specifically because of [specific reason—e.g., your recent expansion into the Southeast market / your reputation for cold-chain reliability / your investment in automation at the [Location] facility]. [One sentence connecting that to your experience—e.g., "Having managed the ramp-up of a new 200,000 sq. ft. cross-dock from empty building to full volume in eleven weeks, I understand what fast growth demands operationally and how easily service can slip if planning lags behind."]
+
+I would welcome the chance to discuss how my background in [2–3 key areas: e.g., network optimization, carrier management, continuous improvement, P&L ownership] can support your goals for [specific objective, if known]. Thank you for your time and consideration—I look forward to speaking with you.
+
+Sincerely,
+**[Your Name]**
+
+---
+
+**Tips for customizing:**
+
+1. **Replace every bracket** with real numbers. Vague claims ("improved efficiency") are forgettable; "reduced cost per unit by 14%" is not.
+2. **Mirror the job posting's language.** If they say "network optimization" or "3PL management," use those exact phrases.
+3. **Make the "why this company" paragraph specific.** Reference a recent expansion, acquisition, sustainability initiative, or facility opening—one line of genuine research outperforms three paragraphs of flattery.
+4. **Keep it to one page.** Hiring managers in logistics skim; bullets help them find your numbers fast.

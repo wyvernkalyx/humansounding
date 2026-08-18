@@ -1,0 +1,37 @@
+# A New Dashboard, Built Around What You Actually Do
+
+**Product Update · Available today**
+
+Your dashboard was the first screen we ever shipped, and for a long time it did its job: show a few numbers, link to a few reports. But as teams grew and workflows got more complicated, the dashboard didn't keep up. It became a place you passed through on the way to somewhere else.
+
+Starting today, that changes. We've rebuilt the dashboard from scratch — new layout, new data model underneath, and a set of features you've been asking for since roughly the day we launched.
+
+## What's new
+
+**Widgets you control.** The old fixed grid is gone. You can now add, remove, resize, and rearrange widgets by dragging them. Choose from 24 widget types covering activity, performance, pipeline health, team workload, and custom metrics. Build one view for your Monday morning review and another for the numbers you check five times a day.
+
+**Multiple dashboards, per person.** Everyone on your team can create their own dashboards — up to ten on paid plans. Admins can also publish shared dashboards to the whole workspace or to specific teams, so a new hire sees the right view on day one instead of a blank canvas.
+
+**Real-time data.** Metrics now stream in rather than refreshing on a 15-minute cycle. Charts update in place, and there's a timestamp on every widget so you always know how fresh a number is.
+
+**Faster, everywhere.** We moved to a new query layer and pre-computed aggregates for the most common metrics. Median load time dropped from 4.1 seconds to 680 milliseconds, and heavy workspaces — the ones with millions of records — saw the biggest gains.
+
+**Filters that stick.** Set a date range, team, or segment once and it applies across every widget on the dashboard. Your filters persist between sessions, so you don't have to reset them every morning.
+
+**Genuinely usable on a phone.** The new dashboard is responsive down to small screens, with a stacked single-column layout and touch-friendly controls. No pinching, no horizontal scrolling.
+
+## What's staying the same
+
+Every metric definition is unchanged. If a number said 1,482 yesterday, it says 1,482 today. Your existing dashboard configuration has been migrated automatically into the new format — we mapped old modules to their closest new widget equivalents, so you should land somewhere familiar. Saved reports, exports, and API endpoints are untouched.
+
+## Rolling out
+
+The new dashboard is live for all workspaces today. You'll see a short walkthrough the first time you log in, and a **What's new** link in the top-right if you want to revisit it.
+
+If you need more time, you can switch back to the classic dashboard from **Settings → Appearance**. The classic view will remain available for 90 days, until March 31, after which it will be retired.
+
+## Tell us what's missing
+
+We built this from hundreds of support tickets, interviews, and a beta program with 340 workspaces — thank you to everyone who took part. There's more coming: dashboard sharing via public link, PDF scheduling, and a formula builder for custom metrics are all in progress.
+
+Found a bug or a gap? Use the feedback button in the dashboard header, or reply to this email. We read all of it.

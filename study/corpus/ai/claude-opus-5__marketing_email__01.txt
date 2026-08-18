@@ -1,0 +1,65 @@
+**Subject line:** Stop guessing who's overloaded (new: Workload View)
+**Alt subject:** Your team's capacity, finally visible
+**Preview text:** See every teammate's workload at a glance — and rebalance in one drag.
+
+---
+
+Hi [First Name],
+
+You've probably had this conversation before:
+
+"Can you take one more thing this week?"
+"Sure!"
+*Narrator: they could not, in fact, take one more thing.*
+
+Capacity is the hardest thing to see in a project plan. Tasks are visible. Deadlines are visible. But how much is actually sitting on each person's plate? That usually lives in a spreadsheet, a gut feeling, or a Friday afternoon surprise.
+
+Today we're fixing that. **Workload View is now live in [Product Name].**
+
+**See your whole team in one screen**
+
+Workload View shows every teammate as a row and every day, week, or month as a column. Assigned hours stack up visually, so overallocation isn't something you discover — it's something you spot in two seconds.
+
+- **Color-coded capacity.** Green means healthy, amber means near capacity, red means someone's booked for 52 hours next week and nobody noticed.
+- **Drag to rebalance.** Move a task from an overloaded teammate to someone with room. Dates, dependencies, and notifications update automatically.
+- **Real availability, not theoretical.** Workload View accounts for part-time schedules, approved time off, and holidays — so a 3-day week is treated like a 3-day week.
+- **Filter by project, team, or skill.** Planning a launch? Look at just those people. Staffing a new client? Find who's actually free.
+
+**Plan forward, not backward**
+
+Toggle on **Forecast Mode** to see the next 90 days, including work that's scheduled but not yet started. It's the difference between reacting to a crunch and preventing one — and it makes resourcing conversations with leadership a lot shorter.
+
+During beta, [X] teams used Workload View to reallocate more than [X] hours of work before deadlines slipped. One customer put it well:
+
+> "We stopped finding out about burnout in retros. Now we catch it in Monday planning." — [Name], [Title] at [Company]
+
+**How to get started**
+
+Workload View is available now on [Plan Name] and above, at no extra cost. Here's the 5-minute setup:
+
+1. Open any workspace and click **Workload** in the left sidebar.
+2. Set weekly capacity for each teammate (or accept the 40-hour default).
+3. Add time estimates to tasks — or let [Product Name] estimate from similar past work.
+
+That's it. Your first view populates immediately.
+
+[**Open Workload View →**]
+
+Not on [Plan Name]? You can try it free for 14 days — no card, no downgrade headache if it's not for you. [See plans →]
+
+**Want a walkthrough?**
+
+We're running a 20-minute live demo on [Date] at [Time], including a Q&A with the product team. [Save your seat →] — or watch the 3-minute overview video anytime. [Watch →]
+
+As always, hit reply and tell us what you think. Workload View exists because enough of you told us capacity planning was the gap in your workflow. Keep those notes coming.
+
+Happy planning,
+
+[Sender Name]
+[Title], [Product Name]
+
+*P.S. Workload View works with your existing time estimates and integrations — including [Integration 1] and [Integration 2]. Nothing to migrate.*
+
+---
+
+**Notes for your team:** Swap bracketed placeholders for real numbers before sending — the beta stat and customer quote carry most of the persuasive weight, so use real ones or cut them entirely. If your audience skews toward individual contributors rather than managers, reframe the opening around "protecting your own focus time" instead of team oversight.

@@ -1,0 +1,37 @@
+# How to Run a Meeting People Don't Resent
+
+Most bad meetings aren't bad because the people in them are boring. They're bad because nobody decided what the meeting was *for* before sending the invite. Here's how to fix that — and a few other things — without becoming the person who circulates a 12-page meeting charter.
+
+## Start with the question you're trying to answer
+
+Before you book anything, finish this sentence: "By the end of this meeting, we will have decided ______." If you can't finish it, you probably don't need a meeting — you need a document, a Slack thread, or a five-minute conversation with one person.
+
+This single habit filters out a surprising share of the calendar clutter. Status updates, in particular, almost never justify pulling eight people out of focused work. Write them down. Let people read them when they're ready.
+
+## Make the agenda a list of questions, not topics
+
+"Q3 roadmap" is not an agenda. It's a subject line. Compare it to: "Do we ship the mobile redesign in Q3 or push to Q4?" The second version tells everyone what's actually at stake, lets them prepare, and makes it obvious when you're done.
+
+Questions also expose scope creep in real time. If someone drifts into adjacent territory, you have a natural, non-confrontational way back: "Good point — let's park it. We still need to answer the shipping question."
+
+## Invite fewer people, and tell them why they're there
+
+Every additional attendee adds coordination cost and dilutes accountability. A useful test: can you name each person's role in the meeting? Decision-maker, subject expert, person who has to execute the outcome. If someone doesn't have a role, they don't need to be there — send them the notes instead.
+
+Being disinvited from a meeting is a gift. Frame it that way.
+
+## Try silent reading time
+
+If your meeting depends on a document, don't assume people read it. They didn't. Spend the first eight minutes of the meeting reading it together in silence. It feels strange for about two sessions, then it feels obviously correct. You get a room full of people with the same context, and you skip the ritual where the author recaps everything for the three people who skimmed it in the elevator.
+
+## Manage the airtime
+
+The loudest person in the room is rarely the most informed. Watch for people who haven't spoken and invite them in directly — "Priya, you've dealt with this system more than anyone. What are we missing?" That's not politeness; it's information retrieval.
+
+Equally, don't let a disagreement between two people consume twenty minutes while everyone else watches. Name it and move it: "You two should hash this out offline and bring us a recommendation Thursday."
+
+## End with owners and dates
+
+The last three minutes matter more than the middle thirty. Say the decisions out loud. Name who's doing what by when. Write it down where people will see it.
+
+And if you finish in eighteen minutes instead of thirty, end the meeting. Giving people back twelve minutes will earn you more goodwill than anything else in this post.

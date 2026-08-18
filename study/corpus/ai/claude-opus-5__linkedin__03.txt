@@ -1,0 +1,37 @@
+## Post
+
+**We spent eight months building something nobody used. Here's the part I got wrong.**
+
+Last year my team shipped an internal tool designed to cut reporting time for our client services group. We'd scoped it carefully. We'd interviewed a dozen people. Everyone we talked to said the current process was painful.
+
+Six weeks after launch, we had eleven active users out of ninety. Four months later, we quietly retired it.
+
+I've read a lot of "lessons from failure" posts, and most of them land on something tidy — fail fast, embrace the learning. I want to be more specific, because the actual lessons were less comfortable than that.
+
+**1. We validated the problem but never validated the priority.**
+
+Everyone agreed reporting was painful. Nobody said it was one of their three biggest problems — because we never asked. A pain point people will complain about is not the same as a pain point people will change their behavior to solve. Those are different bars, and only the second one predicts adoption.
+
+**2. Enthusiasm in meetings is a terrible signal.**
+
+We had stakeholders nodding along in every review. What we didn't have: anyone emailing us unprompted to ask when it would be ready. In hindsight, that silence between meetings was the real data, and I read it as patience rather than indifference.
+
+**3. The moment I knew was three months before I said anything.**
+
+There was a Tuesday in March when a beta user told me she'd gone back to her spreadsheet. I logged it as a training issue. It wasn't a training issue. By then we'd invested enough that killing the project would have felt like an admission — about the roadmap, about my judgment, about the six people working on it. So I found a reason to keep going.
+
+That's the one that still bothers me. The failure wasn't building the wrong thing; teams do that constantly. The failure was needing an extra quarter of evidence to say out loud what I already suspected.
+
+**4. The postmortem was worth more than the launch would have been.**
+
+We ran a real one — no blame, everyone in the room, written pre-reads so people committed to their views before hearing mine. Two things surfaced that I hadn't seen: our engineers had flagged the adoption risk in a design doc in month two, and our least senior team member had the clearest read on why the workflow wouldn't stick. Both had said something. Neither had been heard, because neither had been asked directly.
+
+We've changed how we work as a result. Every project now has a written "what would make us stop" list before we start, with numbers attached. It's much easier to agree on a kill condition in month one than to invent one in month seven.
+
+I'm not going to pretend this was a gift in disguise. It cost real money and eight months of good people's time, and I'd rather have shipped something useful. But I'm a more honest project lead than I was, and the team is more willing to tell me when something smells wrong.
+
+Curious whether others build kill criteria in upfront — and whether they actually hold when the moment comes.
+
+---
+
+**Swap points if you want to make this yours:** the project type and timeline, the "Tuesday in March" moment (a concrete detail like that does a lot of work — use a real one if you have it), the metric that showed failure, and the process change you made afterward. If you tell me the actual project, industry, and what you want to be known for, I'll rewrite it around your specifics and adjust the tone — this version is fairly candid, and some fields reward more restraint.

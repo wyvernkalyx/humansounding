@@ -20,11 +20,13 @@
 
 import { writeFileSync, existsSync, mkdirSync, appendFileSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { loadEnv } from "../scripts/load-env.mjs";
+import { fileURLToPath } from "node:url";
+import { loadEnv, ENV_PATH } from "../scripts/load-env.mjs";
 
 loadEnv();
 
-const OUT = new URL("./corpus/ai/", import.meta.url).pathname;
+// fileURLToPath, not URL.pathname. See the note in scripts/load-env.mjs.
+const OUT = fileURLToPath(new URL("./corpus/ai/", import.meta.url));
 const MANIFEST = join(OUT, "MANIFEST.tsv");
 const KEY = process.env.ANTHROPIC_API_KEY;
 const VERSION = "2023-06-01";
@@ -189,6 +191,10 @@ async function generate(model, prompt) {
 
 if (!KEY) {
   console.error("ANTHROPIC_API_KEY is not set. This script calls the API; it cannot run without one.");
+  console.error(`Looked for a .env file at: ${ENV_PATH}`);
+  console.error(existsSync(ENV_PATH)
+    ? "That file exists, so the line in it is missing, blank, or misspelled. It must read ANTHROPIC_API_KEY=sk-ant-..."
+    : "That file does not exist. Copy .env.example to .env and put the key in it.");
   process.exit(1);
 }
 
