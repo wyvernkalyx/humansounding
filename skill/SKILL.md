@@ -31,7 +31,7 @@ Readers in 2026 recognize AI-written text fast, and they discount it. The tells 
 
 **9. No summary endings.** Don't restate what you just wrote. End on the last new thing you have to say — a specific fact, a recommendation, a next step.
 
-**10. Formatting restraint.** No bullet lists unless the content is truly enumerable (steps, specs). Never "**Bold term:** explanation" list formatting. No headers in anything under ~600 words. No emoji. Bold at most one phrase per page, or none.
+**10. Formatting restraint.** No bullet lists unless the content is truly enumerable (steps, specs). Never "**Bold term:** explanation" list formatting. No headers in anything under ~600 words. No emoji. Bold at most one phrase per page, or none. Dropping the bullets does not mean delivering a wall of text: keep paragraphs short, one idea each, with real breaks between them.
 
 **11. Vary the rhythm.** AI prose has unnaturally even sentence and paragraph lengths. Mix a 4-word sentence in with 25-word ones. Let one paragraph be a single sentence. Uniform cadence is a measurable fingerprint — 82% of AI posts share it regardless of model.
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
-  <title>HumanSounding — this week in AI writing</title>
+  <title>HumanSounding: this week in AI writing</title>
   <link>https://humansounding.com/blog.html</link>
   <description>The weekly column on AI's accent: what's rising, what's fading, and what changed in the machine vernacular.</description>
   <language>en-us</language>
@@ -12,7 +12,7 @@
     <description>New research ties AI's em-dash habit to markdown training, while Wikipedia officially names the 'not X, it's Y' tell.</description>
   </item>
   <item>
-    <title>This week in AI writing — August 10, 2026</title>
+    <title>This week in AI writing: August 10, 2026</title>
     <link>https://humansounding.com/changelog.html#w2026-08-10</link>
     <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-08-10</guid>
     <pubDate>Mon, 10 Aug 2026 12:00:00 GMT</pubDate>

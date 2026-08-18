@@ -107,6 +107,7 @@
   </div>
 
   <p class="claudeline" id="claudeLine">Use Claude? The same rules come packaged as a skill (Claude calls these files skills). <a href="/humansounding.skill" download="humansounding.skill" onclick="ping({event:'dl_skill'})">Download humansounding.skill</a></p>
+  <p class="claudeline" id="devLine" hidden>Using Claude Code or Cowork instead? Unzip the file into your skills folder at ~/.claude/skills/ and skip the settings screen.</p>
 </main>
 
 <footer class="site">
@@ -139,7 +140,7 @@ When you write prose for me, follow these rules without exception:
 
 8. No summary conclusions. End on the last new point, a specific fact, or a next step.
 
-9. Formatting: no bullet points unless content is truly a list; never "Bold term: explanation" bullets; no headers under 600 words; no emoji; almost no bold.
+9. Formatting: no bullet points unless content is truly a list; never "Bold term: explanation" bullets; no headers under 600 words; no emoji; almost no bold. Removing bullets does not mean one unbroken block: break prose into short paragraphs, one idea each.
 
 10. Vary sentence and paragraph length noticeably. Mix short sentences with long ones. Don't restate my question, don't compliment it, don't add closing offers of further help.
 
@@ -163,7 +164,7 @@ const STEPS = {
   claude: [
     { t: "Download the skill", p: "One packaged file. Once installed, Claude applies the rules automatically whenever it drafts prose.", dl: "skill" },
     { t: "Open Claude's settings", p: "On claude.ai:", path: "Settings → Capabilities → Skills → Upload skill" },
-    { t: "Choose the file, done", p: "Using Claude Code or Cowork instead? Unzip it into:", path: "~/.claude/skills/" }
+    { t: "Choose the file, done", p: "Claude reads the rules whenever it drafts prose for you. Nothing else to set up." }
   ],
   gemini: [
     { t: "Copy the instructions", p: "One click puts them on your clipboard. Free, and you can read every line first.", dl: "txt" },
@@ -191,6 +192,7 @@ function renderSteps(ai) {
       ${s.path ? `<div class="path">${s.path}</div>` : ""}
     </div>`).join("");
   document.getElementById("claudeLine").hidden = ai === "claude";
+  document.getElementById("devLine").hidden = ai !== "claude";
 }
 function instrText() {
   return document.getElementById("portablesrc").textContent.trim() + "\n";
