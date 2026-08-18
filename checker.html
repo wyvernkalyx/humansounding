@@ -154,6 +154,8 @@ const RULES = [
     fix: "Three near-synonyms for rhythm is an AI reflex. Keep the one precise word. Ignore if all three carry distinct meaning." },
   { id: "bot_scaffolding", label: "Fake-drama scaffolding", sev: 3, re: /\bhere'?s (?:the part|the thing|what) (?:nobody|no one)\b|\bthe uncomfortable truth\b|\blet that sink in\b|\bplot twist\b|\bwhat (?:nobody|no one) tells you\b|\bhere'?s where it gets\b/gi,
     fix: "Canned suspense wrapped around an ordinary point. Delete the wrapper and state the point." },
+  { id: "contrastive_negation", label: "Contrastive negation", sev: 2, re: /(?:^|[.!?]\s+)Not\s+[a-z][^.!?]{2,55}[.]|(?:^|[.!?]\s+)Not\s+[a-z][^.!?]{2,80}?,?\s+but\s+[^.!?]{2,110}[.]|,\s+not\s+[a-z][a-z'-]{1,18}(?:\s+[a-z][a-z'-]{1,18}){0,2}\s*[.!?]|\b(?:it|that|this|the\s+\w+|[A-Z][a-z]+)\b[^.!?]{0,40}?\b(?:isn'?t|is not|doesn'?t|does not|wasn'?t|aren'?t)\b[^.!?]{0,55}[.]\s+(?:It|That|This|They)'?s?\b[^.!?]{0,65}[.]/g,
+    fix: "Defining a thing by what it isn't. This is the 'not just X, it's Y' move with the intensifier removed, which is why it survives tuning. One is fine English; a run of them is a fingerprint. State what the thing is." },
   { id: "fragment_triplet", label: "Possible fragment triplet", sev: 1, re: /(?:^|[.!?]\s+)[A-Z][A-Za-z'-]*(?:\s+[a-z][A-Za-z'-]*)?\.\s+[A-Z][A-Za-z'-]*(?:\s+[a-z][A-Za-z'-]*)?\.\s+[A-Z][A-Za-z'-]*(?:\s+[a-z][A-Za-z'-]*)?\./g,
     fix: "Three clipped fragments in a row borrow rhythm without adding meaning. Ignore if each one carries a distinct point." }
 ];
