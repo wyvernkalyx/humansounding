@@ -127,6 +127,13 @@
 <script src="/assets/site.js"></script>
 <script>
 // ---- the checker (runs entirely client-side; logic unchanged from the original one-page site) ----
+// An em dash, or a double hyphen standing in for one. Deliberately does NOT
+// match a run of three or more hyphens, because that is a markdown horizontal
+// rule and not punctuation. Counting "---" dividers as em dashes inflated the
+// rate by 20% on the corpus study, and "apply fixes" was rewriting dividers
+// into commas.
+const EM_DASH = /—|(?<!-)--(?!-)/g;
+
 const RULES = [
   { id: "negative_parallelism", label: "Negative parallelism", sev: 3, re: /\b(?:it|this|that|she|he|[A-Z][a-z]+)?(?:'s|\s+is|\s+was)?\s*n[o']t\s+(?:just|only|merely|simply|about)\s+[^.!?;]{2,60}?[,;—-]+\s*(?:it'?s?|this is|but|that'?s?)\b|\bisn'?t\s+(?:just|only|about)\b/gi,
     fix: "State what it is; cut the contrast with what it isn't. The single most cited AI tell (~6% of sampled ChatGPT messages)." },
@@ -213,7 +220,7 @@ document.getElementById("checkBtn").addEventListener("click", () => {
     }
   }
   // em-dash density (rule 2): flag each dash beyond 1 per 300 words
-  const dashes = [...text.matchAll(/—|--/g)];
+  const dashes = [...text.matchAll(EM_DASH)];
   const allowed = Math.max(1, Math.floor(words / 300));
   const emRule = { id: "em_dash", label: "Em-dash density", sev: 2,
     fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words (humans average ~1 per 300). Replace with commas, parentheses, or a period.` };
@@ -348,8 +355,8 @@ function applyFixes(text) {
       return r;
     });
   }
-  const dashes = count(/—|--/g, out);
-  if (dashes) { changes += dashes; out = out.replace(/\s*(?:—|--)\s*/g, ", "); }
+  const dashes = count(EM_DASH, out);
+  if (dashes) { changes += dashes; out = out.replace(/\s*(?:—|(?<!-)--(?!-))\s*/g, ", "); }
   out = out.replace(/,\s*,/g, ",").replace(/([.!?])\s*,\s*/g, "$1 ").replace(/\s{2,}/g, " ")
            .replace(/(^|[.!?]\s+)([a-z])/g, (m, p, c) => p + c.toUpperCase());
   return { out, changes };

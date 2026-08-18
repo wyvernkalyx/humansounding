@@ -54,6 +54,11 @@ function docsIn(dir) {
   return out;
 }
 
+// Em dashes are counted the way the checker counts them: the character itself,
+// or a double hyphen standing in for one. A run of three or more hyphens is a
+// markdown horizontal rule, not punctuation, and must not count.
+const EM_DASH = /—|(?<!-)--(?!-)/g;
+
 // Per document: hits per rule, plus words. Em-dash density is counted the way
 // the checker counts it (raw dashes), not the way it flags it.
 function measureDoc(text, rules) {
@@ -63,7 +68,7 @@ function measureDoc(text, rules) {
     r.re.lastIndex = 0;
     counts[r.id] = (text.match(r.re) || []).length;
   }
-  counts.em_dash = (text.match(/—|--/g) || []).length;
+  counts.em_dash = (text.match(EM_DASH) || []).length;
   const lens = text.split(/[.!?]+[\s"')\]]*/).map((s) => (s.match(/\S+/g) || []).length).filter((n) => n > 0);
   const mean = lens.reduce((a, b) => a + b, 0) / (lens.length || 1);
   const sd = Math.sqrt(lens.reduce((a, b) => a + (b - mean) * (b - mean), 0) / (lens.length || 1));
