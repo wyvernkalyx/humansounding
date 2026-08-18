@@ -1,0 +1,13 @@
+# Secrets. Never commit these.
+.env
+.env.local
+.env.*.local
+
+# Human corpus documents are ignored by default. Most of them will be somebody
+# else's copyrighted text, and this repository is public. Publish the rates,
+# not the corpus. For documents you own outright, override deliberately:
+#   git add -f study/corpus/human/your-own-post.txt
+study/corpus/human/*.txt
+
+node_modules/
+.DS_Store

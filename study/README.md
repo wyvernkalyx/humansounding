@@ -49,9 +49,17 @@ would require a design this is not.
 `generate.mjs` calls the API and writes one file per prompt, with a
 `MANIFEST.tsv` recording model, genre, word count and the exact prompt.
 
+Put the key in `.env` at the repository root once, and every script here picks
+it up. `.env` is gitignored; `.env.example` shows the shape.
+
 ```
-ANTHROPIC_API_KEY=... node study/generate.mjs --n 5
+cp .env.example .env        # PowerShell: Copy-Item .env.example .env
+# edit .env, paste the key after ANTHROPIC_API_KEY=
+node study/generate.mjs --n 5
 ```
+
+A key already in the environment always beats the file, so GitHub Actions
+secrets are unaffected.
 
 Eight genres chosen to match what visitors actually paste: LinkedIn posts,
 cover letters, newsletters, marketing emails, blog posts, internal memos,
@@ -113,7 +121,9 @@ number without provenance is a number and not evidence.
 
 **Copyright.** Commit the AI arm, since it is our own generated output. Do not
 commit third-party human text into this repository. Keep it locally, record the
-source in the manifest, and publish the rates rather than the corpus.
+source in the manifest, and publish the rates rather than the corpus. The
+`.gitignore` enforces this by ignoring `study/corpus/human/*.txt` outright; for
+a document you own, override it deliberately with `git add -f`.
 
 ## Running it
 

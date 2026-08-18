@@ -20,6 +20,9 @@
 
 import { writeFileSync, existsSync, mkdirSync, appendFileSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { loadEnv } from "../scripts/load-env.mjs";
+
+loadEnv();
 
 const OUT = new URL("./corpus/ai/", import.meta.url).pathname;
 const MANIFEST = join(OUT, "MANIFEST.tsv");

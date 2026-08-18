@@ -11,7 +11,12 @@
 // On ANY failure it exits nonzero and changes nothing.
 
 import { readFileSync, writeFileSync } from "node:fs";
+import { loadEnv } from "./load-env.mjs";
 
+// No-op in GitHub Actions, where there is no .env and the secrets are already
+// in the environment. Only affects local runs.
+
+loadEnv();
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const SUPABASE_URL = "https://mrkvxxmzekasxtpscawj.supabase.co";
