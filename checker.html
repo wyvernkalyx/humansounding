@@ -144,17 +144,36 @@ const RULES = [
     fix: "End the sentence at the fact. If the implication matters, give it its own sentence." },
   { id: "summary_ending", label: "Summary phrase", sev: 2, re: /\b(?:in\s+conclusion|in\s+summary|to\s+summariz(?:e|se)|all\s+in\s+all|at\s+the\s+end\s+of\s+the\s+day)\b|(?:^|\.\s+)(?:overall|ultimately),/gi,
     fix: "End on your last new point instead of restating." },
-  { id: "chatbot_artifact", label: "Chatbot artifact", sev: 3, re: /\bgreat question\b|\byou'?re absolutely right\b|\bi hope this (?:helps|message finds you well)\b|\blet me know if you (?:need|have|want)\b|\bcertainly!\b/gi,
+  { id: "chatbot_artifact", label: "Chatbot artifact", sev: 3, re: /\bgreat question\b|\byou'?re absolutely right\b|\bi hope this (?:helps|message finds you well)\b|\blet me know if you (?:need|have|want)\b|\bcertainly!\b|\b(?:would you like me to|want me to|shall i)\b[^.!?]{0,70}\?/gi,
     fix: "Copy-paste residue from a chat window. Delete it." },
   { id: "false_range", label: "Possible false range", sev: 1, re: /\bfrom\s+[a-z][^.,;:]{3,35}\s+to\s+[a-z][^.,;:]{3,35}\b/gi,
     fix: "If the range doesn't inform (just gestures at breadth), name the actual things instead. Ignore if it's a real range (dates, numbers, places)." },
   { id: "hedged_balance", label: "Hedged balance", sev: 1, re: /\bwhile\s+(?:challenges|there are|it'?s true)[^.!?]{3,60},|\bboth\s+sides\b|\bstrike[s]?\s+a\s+balance\b|\bwhether you'?re a\b/gi,
     fix: "Commit to a position, or state exactly what's uncertain, once." },
   { id: "rule_of_three", label: "Possible rule-of-three", sev: 1, re: /\b\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\s*,\s*\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\s*,?\s+and\s+\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\b/gi,
-    fix: "Three near-synonyms for rhythm is an AI reflex. Keep the one precise word. Ignore if all three carry distinct meaning." }
+    fix: "Three near-synonyms for rhythm is an AI reflex. Keep the one precise word. Ignore if all three carry distinct meaning." },
+  { id: "bot_scaffolding", label: "Fake-drama scaffolding", sev: 3, re: /\bhere'?s (?:the part|the thing|what) (?:nobody|no one)\b|\bthe uncomfortable truth\b|\blet that sink in\b|\bplot twist\b|\bwhat (?:nobody|no one) tells you\b|\bhere'?s where it gets\b/gi,
+    fix: "Canned suspense wrapped around an ordinary point. Delete the wrapper and state the point." },
+  { id: "fragment_triplet", label: "Possible fragment triplet", sev: 1, re: /(?:^|[.!?]\s+)[A-Z][A-Za-z'-]*(?:\s+[a-z][A-Za-z'-]*)?\.\s+[A-Z][A-Za-z'-]*(?:\s+[a-z][A-Za-z'-]*)?\.\s+[A-Z][A-Za-z'-]*(?:\s+[a-z][A-Za-z'-]*)?\./g,
+    fix: "Three clipped fragments in a row borrow rhythm without adding meaning. Ignore if each one carries a distinct point." }
 ];
 
 function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+// Document-level: sentence-length evenness. Unlike the other tells this has no
+// span to highlight, so it is reported alongside the list rather than inside it.
+// Coefficient of variation (spread relative to length) keeps it fair to writers
+// who are naturally terse or naturally long-winded.
+function cadenceFinding(text, words) {
+  const lens = text.split(/[.!?]+[\s"\')\]]*/).map(s => (s.match(/\S+/g) || []).length).filter(n => n > 0);
+  if (lens.length < 5 || words < 80) return null;
+  const mean = lens.reduce((a, b) => a + b, 0) / lens.length;
+  if (mean < 5) return null;
+  const sd = Math.sqrt(lens.reduce((a, b) => a + (b - mean) * (b - mean), 0) / lens.length);
+  if (sd / mean >= 0.35) return null;
+  return { id: "even_cadence", label: "Even cadence", sev: 2,
+    fix: `${lens.length} sentences running ${Math.min(...lens)} to ${Math.max(...lens)} words, averaging ${Math.round(mean)}. Little variation in length reads as machine-written. Break one sentence short, or run two together.` };
+}
 
 const draftEl = document.getElementById("draft");
 const markedEl = document.getElementById("checkMarked");
@@ -220,18 +239,24 @@ document.getElementById("checkBtn").addEventListener("click", () => {
   const byRule = {};
   kept.forEach(h => { byRule[h.rule.id] = byRule[h.rule.id] || { rule: h.rule, n: 0 }; byRule[h.rule.id].n++; });
   const groups = Object.values(byRule).sort((a, b) => b.rule.sev - a.rule.sev || b.n - a.n);
+  const cadence = cadenceFinding(text, words);
+  if (cadence) groups.push({ rule: cadence, n: 1 });
   document.getElementById("checkList").innerHTML = groups.length
     ? groups.map(g => `<b>${esc(g.rule.label)}${g.n > 1 ? ` · ${g.n}×` : ""}</b><span>${esc(g.rule.fix)}</span>`).join("")
-    : `<b>Nothing fired</b><span>None of the ${RULES.length + 1} tells matched. Suspiciously human, even.</span>`;
+    : `<b>Nothing fired</b><span>None of the ${RULES.length + 2} tells matched. Suspiciously human, even.</span>`;
+  const cadenceNote = cadence ? " Sentence lengths are unusually even, see below." : "";
   document.getElementById("checkSummary").innerHTML = (kept.length
-    ? `<b>${kept.length} tell${kept.length === 1 ? "" : "s"}</b> in ${words} words. Hover each highlight to see the fix.`
-    : `<b>Clean:</b> none of the ${RULES.length + 1} tells fired in ${words} words.`)
+    ? `<b>${kept.length} tell${kept.length === 1 ? "" : "s"}</b> in ${words} words. Hover each highlight to see the fix.${cadenceNote}`
+    : cadence
+      ? `<b>No phrase-level tells</b> in ${words} words, but the cadence stands out. See below.`
+      : `<b>Clean:</b> none of the ${RULES.length + 2} tells fired in ${words} words.`)
     + (capped ? ` (Long draft: checked the first ${words.toLocaleString()} words.)` : "");
   document.getElementById("checkOut").hidden = false;
 
   // aggregate ping: counts only, never text
   const tells = {};
   kept.forEach(h => tells[h.rule.id] = (tells[h.rule.id] || 0) + 1);
+  if (cadence) tells.even_cadence = 1;
   ping({ event: "checker_used", tells });
   lastCheck = { words, count: kept.length };
   document.getElementById("fixedOut").hidden = true;
