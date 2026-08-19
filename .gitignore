@@ -3,11 +3,17 @@
 .env.local
 .env.*.local
 
-# Human corpus documents are ignored by default. Most of them will be somebody
-# else's copyrighted text, and this repository is public. Publish the rates,
-# not the corpus. For documents you own outright, override deliberately:
+# Corpus documents from anyone else stay off this public repository, whatever
+# the source directory is called. Publish the rates and the manifests, not the
+# text. The manifests are .tsv and stay tracked, which is what makes a result
+# reproducible without republishing somebody's article.
+study/corpus/*/*.txt
+
+# Except the AI set, which is our own generated output and belongs in the repo.
+!study/corpus/ai/*.txt
+
+# For a document you own outright, override deliberately:
 #   git add -f study/corpus/human/your-own-post.txt
-study/corpus/human/*.txt
 
 node_modules/
 .DS_Store

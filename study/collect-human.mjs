@@ -12,24 +12,37 @@
 //   text     one document per file (.txt/.md), used as-is
 //   blogger  Blog Authorship Corpus XML, one file per blogger, <post> blocks
 //   maildir  Enron-style mail files, headers and quoted replies stripped
-//   csv      one document per row, from a "text" or "body" column
+//   csv      one document per row, from a "text" or "body" column (streamed,
+//            so a 1 GB file is fine)
 //   jsonl    one document per line, from a "text" or "body" field
+//
+// --before <YYYY-MM-DD> drops any document dated on or after that day, using a
+// date column in the corpus. Rows with no parseable date are dropped too. That
+// is deliberate: a corpus that runs past November 2022 needs a hard cutoff, and
+// a document whose date cannot be read has no provenance, which is the one
+// thing this arm exists to guarantee.
 //
 // Everything it writes lands in study/corpus/human/ and gets a MANIFEST.tsv
 // row. Nothing enters the study without a recorded source, date and reason it
 // is known to be human.
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync, appendFileSync, readdirSync, statSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, appendFileSync, readdirSync, statSync, createReadStream } from "node:fs";
 import { join, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const OUT = fileURLToPath(new URL("./corpus/human/", import.meta.url));
-const MANIFEST = join(OUT, "MANIFEST.tsv");
 const MIN_WORDS = 100;
 const MAX_WORDS = 2500;
 
 const argv = process.argv.slice(2);
 const arg = (n, d) => { const i = argv.indexOf("--" + n); return i === -1 ? d : argv[i + 1]; };
+
+// --out lets a second source live in its own directory, so it can be compared
+// against the AI set on its own rather than averaged in with the first source.
+// Two human sets that disagree is a finding; one blended set hides it.
+const OUT = arg("out")
+  ? (arg("out").endsWith("/") || arg("out").endsWith("\\") ? arg("out") : arg("out") + "/")
+  : fileURLToPath(new URL("./corpus/human/", import.meta.url));
+const MANIFEST = join(OUT, "MANIFEST.tsv");
 
 const IN = arg("in");
 const FORMAT = arg("format", "text");
@@ -37,6 +50,8 @@ const LABEL = arg("label");
 const DATE = arg("date");
 const WHY = arg("why");
 const N = Number(arg("n", 40));
+const BEFORE = arg("before") ? Date.parse(arg("before") + "T00:00:00Z") : null;
+if (arg("before") && Number.isNaN(BEFORE)) { console.error("--before must be YYYY-MM-DD"); process.exit(1); }
 
 if (!IN || !LABEL || !DATE || !WHY) {
   console.error("usage: node study/collect-human.mjs --in <dir> --format text|blogger|maildir|csv|jsonl \\");
@@ -119,6 +134,7 @@ function parseCSV(src) {
 }
 
 const TEXT_COLUMNS = ["text", "body", "content", "post", "article"];
+const DATE_COLUMNS = ["timestamp", "date", "published", "published_at", "created_at", "pubdate"];
 
 function fromCSV(path) {
   if (extname(path).toLowerCase() !== ".csv") return [];
@@ -141,7 +157,8 @@ function fromJSONL(path) {
     try {
       const o = JSON.parse(line);
       const k = TEXT_COLUMNS.find((k) => typeof o[k] === "string");
-      if (k) out.push(o[k]);
+      const dk = DATE_COLUMNS.find((k) => typeof o[k] === "string");
+      if (k) out.push({ text: o[k], date: dk ? o[dk] : "" });
     } catch { /* a malformed line is one lost document, not a lost run */ }
   }
   return out;
@@ -180,6 +197,68 @@ function clean(raw) {
 
 const words = (t) => (t.match(/\S+/g) || []).length;
 
+// --- sampling ---------------------------------------------------------------
+
+// Reservoir sampling. Keeps exactly N documents in memory no matter how large
+// the corpus is, and every candidate has an equal chance of being one of them.
+// The previous approach held every candidate and shuffled at the end, which is
+// fine for 36,000 blog posts and fatal for a 1 GB CSV. Stopping early instead
+// would bias the sample toward whatever the file happens to be sorted by.
+const reservoir = [];
+const seen = new Set();
+let considered = 0, skippedDate = 0, skippedLength = 0, skippedDupe = 0;
+
+function consider(raw, date, file) {
+  const t = clean(raw);
+  const w = words(t);
+  if (w < MIN_WORDS || w > MAX_WORDS) { skippedLength++; return; }
+  if (BEFORE !== null) {
+    const d = date ? Date.parse(date) : NaN;
+    // No readable date means no provenance, so it does not enter the study.
+    if (Number.isNaN(d) || d >= BEFORE) { skippedDate++; return; }
+  }
+  const key = t.slice(0, 300).toLowerCase().replace(/\s+/g, " ");
+  if (seen.has(key)) { skippedDupe++; return; }
+  seen.add(key);
+  considered++;
+  const doc = { file, text: t, words: w, date };
+  if (reservoir.length < N) { reservoir.push(doc); return; }
+  const j = (Math.random() * considered) | 0;
+  if (j < N) reservoir[j] = doc;
+}
+
+// --- streaming CSV ----------------------------------------------------------
+
+// Same grammar as parseCSV, fed a chunk at a time so a 1 GB file never becomes
+// a 1 GB string. Emits each completed row to a callback.
+function streamCSV(path, onRow) {
+  return new Promise((resolve, reject) => {
+    let row = [], field = "", q = false, carry = "";
+    const push = () => { row.push(field); field = ""; };
+    const stream = createReadStream(path, { encoding: "utf8" });
+    stream.on("data", (chunk) => {
+      const src = carry + chunk;
+      carry = "";
+      for (let i = 0; i < src.length; i++) {
+        const c = src[i];
+        // A quote at the very end of a chunk is ambiguous until we see the next
+        // character, so hold it over rather than guess.
+        if (q && c === '"' && i === src.length - 1) { carry = c; break; }
+        if (q) {
+          if (c === '"' && src[i + 1] === '"') { field += '"'; i++; }
+          else if (c === '"') q = false;
+          else field += c;
+        } else if (c === '"') q = true;
+        else if (c === ",") push();
+        else if (c === "\n") { push(); onRow(row); row = []; }
+        else if (c !== "\r") field += c;
+      }
+    });
+    stream.on("end", () => { if (field || row.length) { push(); onRow(row); } resolve(); });
+    stream.on("error", reject);
+  });
+}
+
 // --- collect ----------------------------------------------------------------
 
 if (!existsSync(IN)) { console.error(IN + " does not exist"); process.exit(1); }
@@ -188,40 +267,50 @@ if (!existsSync(MANIFEST)) writeFileSync(MANIFEST, "file\tsource\tdate\twhy_know
 
 const files = walk(IN);
 console.log(`${files.length} files under ${IN}, format ${FORMAT}`);
+if (BEFORE !== null) console.log(`cutoff: documents must be dated before ${arg("before")}`);
 
-const pool = [];
-const seen = new Set();
-for (const f of files) {
-  let docs = [];
-  try { docs = EXTRACT(f); } catch { continue; }
-  for (const raw of docs) {
-    const t = clean(raw);
-    const w = words(t);
-    if (w < MIN_WORDS || w > MAX_WORDS) continue;
-    // One author should not dominate. At most two documents per source file,
-    // except for csv/jsonl, where a single file legitimately holds the whole
-    // corpus and a per-file cap would yield two documents in total.
-    if (!MANY_PER_FILE) {
-      const from = pool.filter((p) => p.file === f).length;
-      if (from >= 2) break;
+if (FORMAT === "csv") {
+  for (const f of files.filter((f) => extname(f).toLowerCase() === ".csv")) {
+    let textCol = -1, dateCol = -1, header = null, perFile = 0;
+    await streamCSV(f, (row) => {
+      if (!header) {
+        header = row.map((h) => h.trim().toLowerCase());
+        textCol = header.findIndex((h) => TEXT_COLUMNS.includes(h));
+        dateCol = header.findIndex((h) => DATE_COLUMNS.includes(h));
+        if (textCol === -1) console.error(`  ${f}: no text column. Saw: ${header.join(", ")}`);
+        if (BEFORE !== null && dateCol === -1) console.error(`  ${f}: --before was given but no date column. Saw: ${header.join(", ")}`);
+        return;
+      }
+      if (textCol === -1) return;
+      perFile++;
+      consider(row[textCol] || "", dateCol === -1 ? "" : row[dateCol], f);
+    });
+    console.log(`  ${f}: ${perFile.toLocaleString()} rows`);
+  }
+} else {
+  for (const f of files) {
+    let docs = [];
+    try { docs = EXTRACT(f); } catch { continue; }
+    let perFile = 0;
+    for (const d of docs) {
+      const raw = typeof d === "string" ? d : d.text;
+      const date = typeof d === "string" ? "" : d.date;
+      // One author should not dominate. At most two documents per source file,
+      // except for csv/jsonl, where one file legitimately holds a whole corpus.
+      if (!MANY_PER_FILE && perFile >= 2) break;
+      const before = reservoir.length + considered;
+      consider(raw, date, f);
+      if (reservoir.length + considered > before) perFile++;
     }
-    const key = t.slice(0, 300).toLowerCase().replace(/\s+/g, " ");
-    if (seen.has(key)) continue;
-    seen.add(key);
-    pool.push({ file: f, text: t, words: w });
   }
 }
 
-console.log(`${pool.length} documents between ${MIN_WORDS} and ${MAX_WORDS} words`);
-if (!pool.length) { console.error("Nothing usable. Check --format against what is actually in that folder."); process.exit(1); }
+console.log(`${considered.toLocaleString()} documents between ${MIN_WORDS} and ${MAX_WORDS} words`);
+if (skippedDate) console.log(`  ${skippedDate.toLocaleString()} dropped: dated on or after the cutoff, or undated`);
+if (skippedDupe) console.log(`  ${skippedDupe.toLocaleString()} dropped: duplicate of a document already taken`);
+if (!reservoir.length) { console.error("Nothing usable. Check --format, and --before, against what is actually in that folder."); process.exit(1); }
 
-// Sample without replacement so the corpus is not just the alphabetical head
-// of the archive, which in most corpora means one or two authors.
-for (let i = pool.length - 1; i > 0; i--) {
-  const j = (Math.random() * (i + 1)) | 0;
-  [pool[i], pool[j]] = [pool[j], pool[i]];
-}
-const take = pool.slice(0, N);
+const take = reservoir;
 
 let written = 0;
 for (let i = 0; i < take.length; i++) {
@@ -229,7 +318,8 @@ for (let i = 0; i < take.length; i++) {
   const path = join(OUT, name);
   if (existsSync(path)) continue;
   writeFileSync(path, take[i].text.replace(/\r\n/g, "\n") + "\n");
-  appendFileSync(MANIFEST, `${name}\t${LABEL}\t${DATE}\t${WHY}\n`);
+  const rowDate = take[i].date ? String(take[i].date).slice(0, 10) : DATE;
+  appendFileSync(MANIFEST, `${name}\t${LABEL}\t${rowDate}\t${WHY}\n`);
   written++;
 }
 
