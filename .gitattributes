@@ -1,0 +1,19 @@
+# Line endings are normalized to LF in the repository and checked out however
+# the local git is configured. Without this the repo depends on every clone
+# having the right core.autocrlf, which is how a one-line edit turns into a
+# diff touching every line of the file.
+* text=auto eol=lf
+
+# Binary. These must never be touched by line-ending conversion: a woff2 with
+# CRLF injected into it is a corrupt font that fails silently, and the page
+# quietly falls back to a system typeface with nothing in the console.
+*.woff2 binary
+*.woff  binary
+*.ttf   binary
+*.otf   binary
+*.png   binary
+*.jpg   binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.skill binary
