@@ -115,6 +115,24 @@ Do not build this arm by finding text you suspect is AI and sorting it. That
 turns the study into a measurement of your own intuition, which is the thing
 the study is supposed to test.
 
+`collect-human.mjs` turns a downloaded research corpus into study documents. It
+fetches nothing: you download the corpus, it extracts, filters, samples and
+records provenance.
+
+```
+node study/collect-human.mjs --in <folder> --format text|blogger|maildir \
+  --label blogauthorship --date 2004 --why "why this is known human" --n 40
+```
+
+`--why` is required. It is the column that makes this a study rather than a
+pile of text. The collector caps each source file at two documents so one
+prolific author cannot dominate, drops near-duplicates, shuffles before
+sampling so the corpus is not the alphabetical head of the archive, and strips
+quoted replies from mail so a thread does not count as one author's prose.
+
+Spot-check the output by eye. Extraction is the step where corpora quietly go
+wrong, and no confidence interval will tell you it happened.
+
 `corpus/human/MANIFEST.tsv` records where each document came from and why it is
 known to be human. `measure.mjs` warns when an arm has no manifest, because a
 number without provenance is a number and not evidence.

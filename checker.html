@@ -134,6 +134,17 @@
 // into commas.
 const EM_DASH = /—|(?<!-)--(?!-)/g;
 
+// Word, Google Docs, Medium and most CMSs emit curly quotes. Every rule here is
+// written with straight ones, so before this existed a single curly apostrophe
+// silently defeated the biggest tell on the list: "It isn't just a tool, it's a
+// mindset" flagged, and the identical sentence with a curly apostrophe flagged
+// nothing at all. Substitutions are strictly one character for one, so match
+// offsets still line up against the original text and the highlighting shows
+// the reader exactly what they typed.
+function straighten(t) {
+  return t.replace(/[\u2018\u2019\u201B]/g, "'").replace(/[\u201C\u201D\u201F]/g, '"');
+}
+
 const RULES = [
   { id: "negative_parallelism", label: "Negative parallelism", sev: 3, re: /\b(?:it|this|that|she|he|[A-Z][a-z]+)?(?:'s|\s+is|\s+was)?\s*n[o']t\s+(?:just|only|merely|simply|about)\s+[^.!?;]{2,60}?[,;—-]+\s*(?:it'?s?|this is|but|that'?s?)\b|\bisn'?t\s+(?:just|only|about)\b/gi,
     fix: "State what it is; cut the contrast with what it isn't. The single most cited AI tell (~6% of sampled ChatGPT messages)." },
@@ -209,18 +220,21 @@ document.getElementById("checkBtn").addEventListener("click", () => {
     capped = true;
   }
   const words = (text.match(/\S+/g) || []).length;
+  // Rules run against the straightened copy; every offset below indexes the
+  // original `text`, which is what the reader sees highlighted.
+  const probe = straighten(text);
   const hits = []; // {start,end,rule}
   for (const rule of RULES) {
     rule.re.lastIndex = 0;
     let m;
-    while ((m = rule.re.exec(text)) !== null) {
+    while ((m = rule.re.exec(probe)) !== null) {
       if (m.index === rule.re.lastIndex) rule.re.lastIndex++;
       hits.push({ start: m.index, end: m.index + m[0].length, rule });
       if (hits.length > 400) break;
     }
   }
   // em-dash density (rule 2): flag each dash beyond 1 per 300 words
-  const dashes = [...text.matchAll(EM_DASH)];
+  const dashes = [...probe.matchAll(EM_DASH)];
   const allowed = Math.max(1, Math.floor(words / 300));
   const emRule = { id: "em_dash", label: "Em-dash density", sev: 2,
     fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words (humans average ~1 per 300). Replace with commas, parentheses, or a period.` };

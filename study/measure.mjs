@@ -59,9 +59,16 @@ function docsIn(dir) {
 // markdown horizontal rule, not punctuation, and must not count.
 const EM_DASH = /—|(?<!-)--(?!-)/g;
 
+// Mirrors straighten() in checker.html. Every rule is written with straight
+// quotes, so a corpus full of curly ones would measure near zero on the rules
+// that hinge on a contraction, and the study would report as a finding what is
+// actually a typography mismatch.
+const straighten = (t) => t.replace(/[\u2018\u2019\u201B]/g, "'").replace(/[\u201C\u201D\u201F]/g, '"');
+
 // Per document: hits per rule, plus words. Em-dash density is counted the way
 // the checker counts it (raw dashes), not the way it flags it.
-function measureDoc(text, rules) {
+function measureDoc(raw, rules) {
+  const text = straighten(raw);
   const words = (text.match(/\S+/g) || []).length;
   const counts = {};
   for (const r of rules) {
