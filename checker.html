@@ -146,12 +146,12 @@ function straighten(t) {
 }
 
 const RULES = [
-  { id: "negative_parallelism", label: "Negative parallelism", sev: 3, re: /\b(?:it|this|that|she|he|[A-Z][a-z]+)?(?:'s|\s+is|\s+was)?\s*n[o']t\s+(?:just|only|merely|simply|about)\s+[^.!?;]{2,60}?[,;—-]+\s*(?:it'?s?|this is|but|that'?s?)\b|\bisn'?t\s+(?:just|only|about)\b/gi,
-    fix: "State what it is; cut the contrast with what it isn't. The single most cited AI tell (~6% of sampled ChatGPT messages)." },
+  { id: "negative_parallelism", label: "Negative parallelism", sev: 1, re: /\b(?:it|this|that|she|he|[A-Z][a-z]+)?(?:'s|\s+is|\s+was)?\s*n[o']t\s+(?:just|only|merely|simply|about)\s+[^.!?;]{2,60}?[,;—-]+\s*(?:it'?s?|this is|but|that'?s?)\b|\bisn'?t\s+(?:just|only|about)\b/gi,
+    fix: "State what it is; cut the contrast with what it isn't. Widely cited from 2023-24 ChatGPT transcripts (~6% of sampled messages). Our own August 2026 corpus found it more often in human long-form than in current model drafts, so treat it as a style note rather than evidence of anything." },
   { id: "stock_openers", label: "Stock opener", sev: 3, re: /\bin today'?s\s+(?:fast-paced|digital|ever-(?:changing|evolving)|modern|competitive)[^.!?,]{0,40}\b|\bin the ever-evolving\b|\blet'?s\s+(?:dive|delve|unpack)\b|\bhere'?s the kicker\b/gi,
     fix: "Open with your actual point or a specific fact. 'Today's fast-paced world' is 107× more common in AI text." },
-  { id: "slop_words", label: "AI-favorite word", sev: 3, re: /\b(?:delve[sd]?|delving|tapestry|multifaceted|meticulous(?:ly)?|underscor(?:e|es|ing)|showcas(?:e|es|ing)|intricate|intricacies|pivotal|holistic|myriad|plethora|seamless(?:ly)?|transformative|groundbreaking|game-chang(?:er|ing)|paradigm shift|unprecedented|cutting-edge|ever-evolving|synerg(?:y|ies|istic)|leverag(?:e|es|ing)|harness(?:es|ing)?|foster(?:s|ing)?|facilitat(?:e|es|ing)|streamlin(?:e|es|ing)|bolster(?:s|ing)?|elevat(?:e|es|ing)|empower(?:s|ing)?|boasts)\b/gi,
-    fix: "Swap for the plain word: use, help, improve, show, key. These words spiked 6–35× in AI-era text." },
+  { id: "slop_words", label: "AI-favorite word", sev: 1, re: /\b(?:delve[sd]?|delving|tapestry|multifaceted|meticulous(?:ly)?|underscor(?:e|es|ing)|showcas(?:e|es|ing)|intricate|intricacies|pivotal|holistic|myriad|plethora|seamless(?:ly)?|transformative|groundbreaking|game-chang(?:er|ing)|paradigm shift|unprecedented|cutting-edge|ever-evolving|synerg(?:y|ies|istic)|leverag(?:e|es|ing)|harness(?:es|ing)?|foster(?:s|ing)?|facilitat(?:e|es|ing)|streamlin(?:e|es|ing)|bolster(?:s|ing)?|elevat(?:e|es|ing)|empower(?:s|ing)?|boasts)\b/gi,
+    fix: "Swap for the plain word: use, help, improve, show, key. These words spiked 6-35x in 2023-24 AI text, and the labs have since tuned them out: in our August 2026 corpus they appear more often in human Medium articles than in current model drafts. Still worth cutting, but no longer a sign of anything." },
   { id: "testament", label: "Inflated symbolism", sev: 2, re: /\b(?:stands?|serves?|is)\s+as\s+a\s+testament\b|\ba testament to\b|\bwatershed moment\b|\b(?:enduring|lasting)\s+legacy\b|\brich cultural heritage\b|\bplays?\s+a\s+(?:crucial|vital|pivotal|significant)\s+role\s+in(?:\s+shaping)?\b/gi,
     fix: "Say what it did, with a specific. 'Plays a significant role in shaping' appears 182× more often in AI text." },
   { id: "editorializing", label: "Editorializing aside", sev: 2, re: /\bit(?:'s|\s+is)\s+(?:important|worth|essential|crucial)\s+(?:to\s+(?:note|remember|understand|consider)|noting)\b|\bneedless to say\b|\bno discussion .{0,30}complete without\b/gi,
@@ -164,16 +164,20 @@ const RULES = [
     fix: "End on your last new point instead of restating." },
   { id: "chatbot_artifact", label: "Chatbot artifact", sev: 3, re: /\bgreat question\b|\byou'?re absolutely right\b|\bi hope this (?:helps|message finds you well)\b|\blet me know if you (?:need|have|want)\b|\bcertainly!\b|\b(?:would you like me to|want me to|shall i)\b[^.!?]{0,70}\?/gi,
     fix: "Copy-paste residue from a chat window. Delete it." },
-  { id: "false_range", label: "Possible false range", sev: 1, re: /\bfrom\s+[a-z][^.,;:]{3,35}\s+to\s+[a-z][^.,;:]{3,35}\b/gi,
-    fix: "If the range doesn't inform (just gestures at breadth), name the actual things instead. Ignore if it's a real range (dates, numbers, places)." },
+  // Retired 2026-08-19. Measured at 0.89 hits per 1,000 words in human Medium
+  // articles against 0.41 in current model drafts: it fires twice as often on
+  // human writing, and its hits are ordinary prose like "from fourteen
+  // questions to five". A rule that points the wrong way is not a tell.
+  // { id: "false_range", label: "Possible false range", sev: 1, re: /\bfrom\s+[a-z][^.,;:]{3,35}\s+to\s+[a-z][^.,;:]{3,35}\b/gi,
+  //   fix: "If the range doesn't inform (just gestures at breadth), name the actual things instead. Ignore if it's a real range (dates, numbers, places)." },
   { id: "hedged_balance", label: "Hedged balance", sev: 1, re: /\bwhile\s+(?:challenges|there are|it'?s true)[^.!?]{3,60},|\bboth\s+sides\b|\bstrike[s]?\s+a\s+balance\b|\bwhether you'?re a\b/gi,
     fix: "Commit to a position, or state exactly what's uncertain, once." },
   { id: "rule_of_three", label: "Possible rule-of-three", sev: 1, re: /\b\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\s*,\s*\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\s*,?\s+and\s+\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\b/gi,
     fix: "Three near-synonyms for rhythm is an AI reflex. Keep the one precise word. Ignore if all three carry distinct meaning." },
   { id: "bot_scaffolding", label: "Fake-drama scaffolding", sev: 3, re: /\bhere'?s (?:the part|the thing|what) (?:nobody|no one)\b|\bthe uncomfortable truth\b|\blet that sink in\b|\bplot twist\b|\bwhat (?:nobody|no one) tells you\b|\bhere'?s where it gets\b/gi,
     fix: "Canned suspense wrapped around an ordinary point. Delete the wrapper and state the point." },
-  { id: "contrastive_negation", label: "Contrastive negation", sev: 2, re: /(?:^|[.!?]\s+)Not\s+[a-z][^.!?]{2,55}[.]|(?:^|[.!?]\s+)Not\s+[a-z][^.!?]{2,80}?,?\s+but\s+[^.!?]{2,110}[.]|,\s+not\s+[a-z][a-z'-]{1,18}(?:\s+[a-z][a-z'-]{1,18}){0,2}\s*[.!?]|\b(?:it|that|this|the\s+\w+|[A-Z][a-z]+)\b[^.!?]{0,40}?\b(?:isn'?t|is not|doesn'?t|does not|wasn'?t|aren'?t)\b[^.!?]{0,55}[.]\s+(?:It|That|This|They)'?s?\b[^.!?]{0,65}[.]/g,
-    fix: "Defining a thing by what it isn't. This is the 'not just X, it's Y' move with the intensifier removed, which is why it survives tuning. One is fine English; a run of them is a fingerprint. State what the thing is." },
+  { id: "contrastive_negation", label: "Contrastive negation", sev: 3, re: /(?:^|[.!?]\s+)Not\s+[a-z][^.!?]{2,55}[.]|(?:^|[.!?]\s+)Not\s+[a-z][^.!?]{2,80}?,?\s+but\s+[^.!?]{2,110}[.]|,\s+not\s+[a-z][a-z'-]{1,18}(?:\s+[a-z][a-z'-]{1,18}){0,2}\s*[.!?]|\b(?:it|that|this|the\s+\w+|[A-Z][a-z]+)\b[^.!?]{0,40}?\b(?:isn'?t|is not|doesn'?t|does not|wasn'?t|aren'?t)\b[^.!?]{0,55}[.]\s+(?:It|That|This|They)'?s?\b[^.!?]{0,65}[.]/g,
+    fix: "Defining a thing by what it isn't. This is the 'not just X, it's Y' move with the intensifier removed, which is why it survives tuning. One is fine English; a run of them is a fingerprint. State what the thing is. Measured on our August 2026 corpus at 0.92 hits per 1,000 words in model drafts against 0.15 in published human articles, the widest proportional gap of any rule here." },
   { id: "fragment_triplet", label: "Possible fragment triplet", sev: 1, re: /(?:^|[.!?]\s+)[A-Z][A-Za-z'-]*(?:\s+[a-z][A-Za-z'-]*)?\.\s+[A-Z][A-Za-z'-]*(?:\s+[a-z][A-Za-z'-]*)?\.\s+[A-Z][A-Za-z'-]*(?:\s+[a-z][A-Za-z'-]*)?\./g,
     fix: "Three clipped fragments in a row borrow rhythm without adding meaning. Ignore if each one carries a distinct point." }
 ];
@@ -233,11 +237,18 @@ document.getElementById("checkBtn").addEventListener("click", () => {
       if (hits.length > 400) break;
     }
   }
-  // em-dash density (rule 2): flag each dash beyond 1 per 300 words
+  // em-dash density: flag each dash beyond the threshold below
   const dashes = [...probe.matchAll(EM_DASH)];
-  const allowed = Math.max(1, Math.floor(words / 300));
+  // Threshold measured, not assumed. On our August 2026 corpus of 40 documents
+  // per set: Claude Opus 5 runs a median 11.2 em dashes per 1,000 words,
+  // human Medium articles from 2016-2022 run 3.4, and casual 2004 blogging runs
+  // 0.0. The old 1-per-300 line flagged 18 of 40 human Medium articles. At
+  // 1-per-200 it flags 13 while still catching 38 of 40 AI documents, which is
+  // the same AI recall for fewer false alarms. The distributions genuinely
+  // overlap, so no threshold separates them cleanly.
+  const allowed = Math.max(1, Math.floor(words / 200));
   const emRule = { id: "em_dash", label: "Em-dash density", sev: 2,
-    fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words (humans average ~1 per 300). Replace with commas, parentheses, or a period.` };
+    fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words. Measured on our own corpus: published human articles average about 3.4 per 1,000 words, current model drafts about 11. Replace some with commas, parentheses, or a period.` };
   if (dashes.length > allowed) dashes.forEach(d => hits.push({ start: d.index, end: d.index + d[0].length, rule: emRule }));
 
   // sort, drop overlaps (keep earliest/longest)
