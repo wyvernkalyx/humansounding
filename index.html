@@ -45,25 +45,48 @@
 </script>
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-  .hero { padding: 60px 24px 44px; text-align: center; }
-  .hero .specimen { font-size: 38px; line-height: 1.5; letter-spacing: -0.5px; font-weight: 650; max-width: 920px; margin: 0 auto; color: var(--ink-1); }
-  :root[data-theme="dark"] .hero .specimen { color: #e8e6e0; }
-  .hero .badge { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; background: var(--surface-1); border: 1px solid var(--hl-border); border-radius: 99px; padding: 8px 18px; }
-  .hero .badge .n { font-size: 13px; font-weight: 700; color: var(--hl-border); }
-  .hero .badge .s { font-size: 13px; color: var(--ink-muted); }
-  .hero h1 { font-size: 24px; margin: 34px 0 8px; letter-spacing: -0.4px; }
-  .hero .sub { color: var(--ink-2); font-size: 15px; margin: 0 auto; max-width: 560px; }
-  .hero .ctas { display: flex; gap: 12px; justify-content: center; margin-top: 24px; flex-wrap: wrap; }
-  .hero .ctas .btn { font-size: 15px; padding: 12px 22px; border-radius: 9px; }
-  .hero .ctas .btn2 { font-size: 15px; padding: 11px 21px; border-radius: 9px; }
-  .rising { display: flex; align-items: center; gap: 14px; margin: 12px auto 0; max-width: 1032px; padding: 14px 22px; flex-wrap: wrap; }
-  .rising .tell { font-size: 14.5px; font-weight: 600; }
-  .rising .dir { color: var(--delta-down); font-size: 12px; font-weight: 600; }
-  .rising .link { margin-left: auto; font-size: 13px; }
-  @media (max-width: 700px) {
-    .hero { padding: 40px 16px 32px; }
-    .hero .specimen { font-size: 26px; }
-    .rising .link { margin-left: 0; }
+  .hero { padding: 54px 24px 20px; text-align: center; }
+  .hero .privacy { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-soft); color: var(--accent-deep); font-size: 13px; font-weight: 600; padding: 7px 16px; border-radius: 99px; }
+  .hero .privacy::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .hero h1 { font-size: 44px; line-height: 1.15; letter-spacing: -1px; font-weight: 800; margin: 22px auto 12px; max-width: 640px; }
+  .hero .sub { color: var(--ink-2); font-size: 17px; line-height: 1.6; margin: 0 auto; max-width: 560px; text-wrap: pretty; }
+  .demo { max-width: 720px; margin: 30px auto 0; background: var(--surface-1); border: 1px solid var(--border); border-radius: 14px; padding: 26px 32px 24px; text-align: left; box-shadow: 0 3px 14px rgba(34, 48, 42, .07); }
+  .demo .specimen { font-size: 21px; line-height: 1.7; font-weight: 600; color: var(--ink-1); margin: 0; }
+  .demo .verdict { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 13.5px; flex-wrap: wrap; }
+  .demo .verdict .n { font-weight: 700; color: var(--delta-down); }
+  .demo .verdict .s { color: var(--ink-muted); }
+  .demo form { display: flex; gap: 10px; align-items: stretch; margin-top: 18px; border-top: 1px solid var(--band); padding-top: 18px; }
+  .demo textarea { flex: 1; background: var(--codebg); border: 1.5px dashed var(--menu-border); border-radius: 10px; padding: 12px 16px; font: inherit; font-size: 14.5px; color: var(--ink-1); resize: none; min-height: 48px; }
+  .demo textarea::placeholder { color: var(--ink-muted); }
+  .demo .btn { flex: none; align-self: stretch; }
+  .howlink { display: inline-block; margin-top: 16px; font-size: 13.5px; font-weight: 600; }
+  .how { background: var(--surface-1); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 44px 24px; margin-top: 36px; }
+  .how h2 { text-align: center; font-size: 26px; letter-spacing: -.5px; margin: 0 0 6px; }
+  .how .hsub { text-align: center; font-size: 15px; color: var(--ink-muted); margin: 0 0 30px; }
+  .how .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; max-width: 960px; margin: 0 auto; }
+  .how .step { background: var(--page); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; }
+  /* --btnbg, not --accent: --accent lightens to #57a583 in dark mode, which puts
+     white text at 2.95:1 and fails WCAG even for large text. --btnbg holds
+     #2f7d5d in both themes, giving 4.99:1. Matches fix-your-ai.html. */
+  .how .num { width: 30px; height: 30px; border-radius: 50%; background: var(--btnbg); color: #fff; font-weight: 700; font-size: 15px; display: grid; place-items: center; }
+  .how .step b { display: block; font-size: 16.5px; margin: 14px 0 6px; }
+  .how .step p { font-size: 14px; line-height: 1.6; color: var(--ink-2); margin: 0; }
+  .below { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; align-items: start; margin-top: 36px; }
+  .explain, .rising { padding: 24px 28px; }
+  .explain .label-caps { color: var(--accent); display: block; margin-bottom: 8px; }
+  .explain p { font-size: 15px; line-height: 1.65; color: var(--ink-2); margin: 0; }
+  .explain .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .explain .chips span { background: var(--page); border: 1px solid var(--border); border-radius: 99px; padding: 5px 14px; font-size: 13px; color: var(--ink-1); }
+  .rising .label-caps { color: var(--delta-down); display: block; margin-bottom: 8px; }
+  .rising .tell { font-size: 18px; font-weight: 700; }
+  .rising .dir { display: block; font-size: 13.5px; line-height: 1.6; color: var(--ink-2); margin: 6px 0 12px; }
+  .rising .link { font-size: 13.5px; font-weight: 600; }
+  @media (max-width: 860px) {
+    .hero h1 { font-size: 30px; letter-spacing: -.6px; }
+    .how .steps, .below { grid-template-columns: 1fr; }
+    .demo { padding: 20px; }
+    .demo .specimen { font-size: 17px; }
+    .demo form { flex-direction: column; }
   }
 </style>
 </head>
@@ -91,39 +114,90 @@
 
 <main>
   <div class="hero">
-    <p class="specimen" id="heroSpecimen">"In <mark>today's fast-paced digital landscape</mark>, our team is <mark>thrilled to leverage</mark> cutting-edge solutions…"</p>
-    <div class="badge" id="heroBadge">
-      <span class="n" id="heroCount">2 tells in 13 words</span>
-      <span class="s" id="heroReader">your reader noticed both</span>
-    </div>
+    <span class="privacy">Private by design — your text never leaves your browser</span>
     <h1>Write like you. We'll spot the robot bits.</h1>
     <p class="sub">Paste a draft to see its tells highlighted, or grab a file that teaches your AI to knock it off. Free, no signup, and your text never leaves your browser.</p>
-    <div class="ctas">
-      <a class="btn" href="/checker.html">Check your draft</a>
-      <a class="btn2" href="/fix-your-ai.html">Fix your AI</a>
+    <div class="demo">
+      <span class="label-caps">A reader sees this</span>
+      <p class="specimen" id="heroSpecimen" style="margin-top:12px">"In <mark>today's fast-paced digital landscape</mark>, our team is <mark>thrilled to leverage</mark> cutting-edge solutions…"</p>
+      <div class="verdict">
+        <span class="n" id="heroCount">2 tells in 13 words</span>
+        <span class="s" id="heroReader">your reader noticed both — the highlights are the giveaways</span>
+      </div>
+      <form id="heroCheck">
+        <textarea id="heroDraft" rows="1" placeholder="Paste your own draft here — checked on this page, never uploaded" aria-label="Paste your draft"></textarea>
+        <button class="btn" type="submit">Check it</button>
+      </form>
+    </div>
+    <a class="howlink" href="#how">See how it works ↓</a>
+  </div>
+
+  <div class="how" id="how">
+    <h2>Here's what happens when you paste</h2>
+    <p class="hsub">No account, no upload, nothing to install. Three steps, all on your own computer.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num" aria-hidden="true">1</div>
+        <b>Paste anything you're about to send</b>
+        <p>An email, a post, a memo. It stays on your screen — the check runs in your browser, not on a server.</p>
+      </div>
+      <div class="step">
+        <div class="num" aria-hidden="true">2</div>
+        <b>The robot bits light up</b>
+        <p>Each <mark class="tell" data-tell="A tell is a word or habit readers recognize as AI-written.">highlight</mark> is a tell — a word or habit readers recognize as AI. Hover one to see why, with the research behind it.</p>
+      </div>
+      <div class="step">
+        <div class="num" aria-hidden="true">3</div>
+        <b>Swap in plainer words</b>
+        <p>One click per fix. Word swaps only — the structure, meaning, and voice stay yours.</p>
+      </div>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:0">
-    <div class="card rising">
-      <span class="label-caps">Rising this week</span>
-      <span class="tell" id="risingTell">"not just X, but Y"</span>
-      <span class="dir" id="risingDir">▲ in ~6% of sampled ChatGPT messages</span>
-      <a class="link" id="risingLink" href="/blog.html#week">This week in AI writing ›</a>
+    <div class="below">
+      <div class="card explain">
+        <span class="label-caps">New here? What's a "tell"?</span>
+        <p>A tell is a word or writing habit that AI uses far more often than people do — so often that readers have learned to spot it. You don't need to know how AI works to fix them; you just need to know which ones you're sending.</p>
+        <div class="chips">
+          <span>"delve"</span>
+          <span>"not just X, but Y"</span>
+          <span>em dashes everywhere</span>
+          <span>"in today's fast-paced world"</span>
+        </div>
+      </div>
+      <div class="card rising">
+        <span class="label-caps">Rising this week</span>
+        <span class="tell" id="risingTell">"not just X, but Y"</span>
+        <span class="dir" id="risingDir">▲ in ~6% of sampled ChatGPT messages</span>
+        <a class="link" id="risingLink" href="/blog.html#week">This week in AI writing ›</a>
+      </div>
     </div>
   </div>
 </main>
 
 <footer class="site">
   <div class="in">
-    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <span class="privacy-badge">No cookies · No signup</span>
+    <span>Your text is checked on your own computer and never sent anywhere. Data updated every Monday, every figure cited.</span>
     <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
   </div>
 </footer>
 
 <script src="/assets/site.js"></script>
 <script>
-// Live slots: hero specimen and the rising-this-week strip come from the weekly
+// Hero paste box: hand the draft to the checker via sessionStorage (never the network).
+document.getElementById("heroCheck").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const d = document.getElementById("heroDraft").value;
+  // sessionStorage, not localStorage: this survives the navigation to the
+  // checker and dies with the tab. A draft left on disk because someone hit
+  // back, or went offline mid-jump, is exactly what this site promises not to do.
+  if (d.trim()) { try { sessionStorage.setItem("hs_draft", d); } catch { /* storage blocked */ } }
+  location.href = "/checker.html";
+});
+
+// Live slots: hero specimen and the rising-this-week card come from the weekly
 // data when available; the embedded content above is the fallback and the page
 // looks finished without it.
 (async () => {

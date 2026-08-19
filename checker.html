@@ -119,7 +119,8 @@
 
 <footer class="site">
   <div class="in">
-    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <span class="privacy-badge">No cookies · No signup</span>
+    <span>Your text is checked on your own computer and never sent anywhere. Data updated every Monday, every figure cited.</span>
     <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
   </div>
 </footer>
@@ -419,6 +420,17 @@ document.getElementById("shareBtn").addEventListener("click", () => {
     : `My draft had ${lastCheck.count} AI tell${lastCheck.count === 1 ? "" : "s"} in ${lastCheck.words} words, found and fixed at humansounding.com`;
   shareText(t, document.getElementById("actNote"), "share_badge");
 });
+
+// Draft handed over from the home page's paste box (sessionStorage only, never
+// the network, and gone when the tab closes).
+try {
+  const handoff = sessionStorage.getItem("hs_draft");
+  if (handoff) {
+    sessionStorage.removeItem("hs_draft");
+    draftEl.value = handoff;
+    document.getElementById("checkBtn").click();
+  }
+} catch { /* storage blocked */ }
 </script>
 </body>
 </html>

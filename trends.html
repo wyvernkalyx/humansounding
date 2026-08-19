@@ -44,6 +44,21 @@
   .brow2 .chip { justify-self: start; }
   .boardnote { color: var(--ink-muted); font-size: 12.5px; margin: 14px 0 0; }
 
+  /* plain-language legend + board filters */
+  .legend { display: flex; gap: 16px; align-items: center; background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; font-size: 13px; color: var(--ink-2); margin-bottom: 12px; flex-wrap: wrap; }
+  .legend b.up { color: var(--delta-down); }
+  .legend b.down { color: var(--delta-up); }
+  .legend b.flat { color: var(--ink-muted); }
+  .boardbar { display: flex; gap: 8px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+  .boardbar .lbl { font-size: 12.5px; color: var(--ink-muted); font-weight: 600; margin-right: 2px; }
+  .fchip { background: var(--surface-1); border: 1px solid var(--menu-border); color: var(--ink-2); font: inherit; font-weight: 600; font-size: 12.5px; padding: 5px 14px; border-radius: 99px; cursor: pointer; }
+  .fchip:hover { color: var(--ink-1); }
+  .fchip.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-deep); font-weight: 700; }
+  #boardSearch { margin-left: auto; background: var(--surface-1); border: 1px solid var(--menu-border); border-radius: 99px; padding: 7px 16px; font: inherit; font-size: 13px; color: var(--ink-1); min-width: 210px; }
+  #boardSearch::placeholder { color: var(--ink-muted); }
+  .boardempty { padding: 18px 22px; font-size: 14px; color: var(--ink-muted); }
+  @media (max-width: 700px) { #boardSearch { margin-left: 0; width: 100%; } }
+
   /* models tab (re-housed from the one-page site) */
   .models { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
   .mcard { padding: 20px 22px; }
@@ -157,6 +172,20 @@
       <span class="n" id="weeklyNote">First week live: the trend board, the checker, and the instruction files launched together.</span>
       <a href="/blog.html#week">All editions</a>
     </div>
+    <div class="legend">
+      <b style="color:var(--ink-1)">How to read this:</b>
+      <span><b class="up">▲ Rising</b> = readers are noticing it more — worth avoiding</span>
+      <span><b class="down">▼ Fading</b> = newer AI models are dropping it</span>
+      <span><b class="flat">– Stable</b> = still common, still noticed</span>
+    </div>
+    <div class="boardbar">
+      <span class="lbl">Show:</span>
+      <button class="fchip on" data-cat="all">All</button>
+      <button class="fchip" data-cat="words">Words &amp; phrases</button>
+      <button class="fchip" data-cat="punct">Punctuation</button>
+      <button class="fchip" data-cat="structure">Structure &amp; rhythm</button>
+      <input id="boardSearch" type="search" placeholder="Search the board…" aria-label="Search the trend board">
+    </div>
     <div class="card board" id="trendBoard"></div>
     <p class="boardnote">Direction reflects the newest available data. Several tells are now falling at the source while still rising in human speech and the published record.</p>
   </section>
@@ -251,7 +280,8 @@
 
 <footer class="site">
   <div class="in">
-    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <span class="privacy-badge">No cookies · No signup</span>
+    <span>Your text is checked on your own computer and never sent anywhere. Data updated every Monday, every figure cited.</span>
     <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
   </div>
 </footer>
@@ -332,12 +362,36 @@ const FALLBACK = {
 };
 
 const glyph = { rising: "▲ ", falling: "▼ ", stable: "– " };
-function renderBoard(d) {
-  const rows = (d.trends || []).map(t =>
-    `<div class="brow2"><b>${escHtml(t.tell)}</b><span class="ev">${escHtml(t.evidence)}</span><span class="chip ${escHtml(t.dir)}">${glyph[t.dir] || ""}${escHtml(t.dirLabel || t.dir)}</span></div>`);
-  document.getElementById("trendBoard").innerHTML =
-    `<div class="brow2 h"><span>Tell</span><span>Evidence</span><span>Direction</span></div>` + rows.join("");
+// board filters: category is inferred from the tell's wording; search matches tell + evidence
+let boardFilter = { cat: "all", q: "" };
+let boardData = null;
+function tellCat(t) {
+  const s = (t.tell + " " + (t.evidence || "")).toLowerCase();
+  if (/dash|comma|semicolon|punctuat|parenthes/.test(s)) return "punct";
+  if (/cadence|rhythm|rule of three|range|attribution|markdown|bold|bullet|opener|parallelism|sentence/.test(s)) return "structure";
+  return "words";
 }
+function renderBoard(d) {
+  boardData = d;
+  const q = boardFilter.q.trim().toLowerCase();
+  const list = (d.trends || []).filter(t =>
+    (boardFilter.cat === "all" || tellCat(t) === boardFilter.cat) &&
+    (!q || (t.tell + " " + (t.evidence || "") + " " + (t.dirLabel || "")).toLowerCase().includes(q)));
+  const rows = list.map(t =>
+    `<div class="brow2"><b>${escHtml(t.tell)}</b><span class="ev">${escHtml(t.evidence)}</span><span class="chip ${escHtml(t.dir)}">${glyph[t.dir] || ""}${escHtml(t.dirLabel || t.dir)}</span></div>`);
+  document.getElementById("trendBoard").innerHTML = list.length
+    ? `<div class="brow2 h"><span>Tell</span><span>Evidence</span><span>Direction</span></div>` + rows.join("")
+    : `<div class="boardempty">Nothing on the board matches — try another word or switch back to All.</div>`;
+}
+document.querySelectorAll(".fchip").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".fchip").forEach(x => x.classList.toggle("on", x === b));
+  boardFilter.cat = b.dataset.cat;
+  if (boardData) renderBoard(boardData);
+}));
+document.getElementById("boardSearch").addEventListener("input", (e) => {
+  boardFilter.q = e.target.value;
+  if (boardData) renderBoard(boardData);
+});
 function bars(elId, rows, srcNote, fmt) {
   const max = Math.max(...rows.map(r => r.v));
   document.getElementById(elId).innerHTML = rows.map(r =>

@@ -31,7 +31,7 @@
     color: var(--ink-2); cursor: pointer; min-height: 44px;
   }
   .router button:hover { color: var(--ink-1); }
-  .router button[aria-selected="true"] { background: var(--hl); border: 1.5px solid var(--hl-border); color: var(--ink-1); padding: 15.5px; }
+  .router button[aria-selected="true"] { background: var(--surface-1); border: 2px solid var(--accent); color: var(--ink-1); padding: 15px; box-shadow: 0 2px 8px rgba(34,48,42,.06); }
   .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
   .step { padding: 20px; }
   .step .num { width: 28px; height: 28px; border-radius: 50%; background: var(--btnbg); color: #fff; font-weight: 700; font-size: 14px; display: grid; place-items: center; margin-bottom: 12px; }
@@ -85,6 +85,7 @@
   <p class="lede">The fix is a small file of standing instructions your AI reads every time it writes. Ours is built from the measured evidence on the <a href="/trends.html">Trends page</a> and updates itself weekly.</p>
 
   <div class="label-caps" id="routerLabel">Which do you use?</div>
+  <p class="pagesub" style="margin:4px 0 0">Pick one — setup takes about two minutes, and you can read every line of the file first.</p>
   <div class="router" role="tablist" aria-labelledby="routerLabel">
     <button role="tab" id="r-chatgpt" aria-selected="true" data-ai="chatgpt">ChatGPT</button>
     <button role="tab" id="r-claude" aria-selected="false" data-ai="claude">Claude</button>
@@ -112,7 +113,8 @@
 
 <footer class="site">
   <div class="in">
-    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <span class="privacy-badge">No cookies · No signup</span>
+    <span>Your text is checked on your own computer and never sent anywhere. Data updated every Monday, every figure cited.</span>
     <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
   </div>
 </footer>
