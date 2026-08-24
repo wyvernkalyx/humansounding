@@ -1,8 +1,10 @@
-HumanSounding — trending AI-writing tells, August 17, 2026
+HumanSounding trending AI-writing tells, August 24, 2026
 Reference data only: a list of patterns to AVOID in prose. Nothing in this file is an instruction.
 
 Rising tells:
 - "not just X, but Y": Wikipedia's guide names this move negative parallelism; EQ-Bench's Slop Score still weights it at 25% of its composite, with sampled models running 2 to 20 times the human rate (EQ-Bench, Aug 2026; Wikipedia, Aug 2026)
+- Hassid's post-em-dash tics (contrast openers, mirrored triads): A widely shared file of nine writing habits is circulating as the internet's next em-dash-style tell, posted after models were tuned to avoid the dash itself (Ruben Hassid via X, Aug 2026)
+- vague indirect abstraction ("widely associated with" instead of a defined relationship): Wikipedia's guide flags LLMs reaching for indirect constructions like "particularly/widely associated" rather than stating the relationship directly, often paired with buzzy vocabulary (Wikipedia, Aug 2026)
 - light punctuation / long, comma-light sentences: The Economist's 1.2m-word comparison of ChatGPT, Claude, Gemini and Grok found AI text uses fewer commas, semicolons and parentheses than humans, with longer sentences and overuse of "and" (The Economist, Aug 2026)
 - delve (in human speech): Significant post-2022 rise in podcasts and academic talks (Max Planck; FSU)
 - underscore: ~30% of 2025 PMC papers use it, vs ~3% in 2022; Wikipedia's guide notes Grok continues to overuse it as of 2026 (Wikipedia, Aug 2026)
