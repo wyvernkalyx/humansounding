@@ -46,7 +46,7 @@ const arg = (name, dflt) => {
 // between-vendor difference this is being run to find.
 const OUT = arg("out")
   ? (arg("out").endsWith("/") || arg("out").endsWith("\\") ? arg("out") : arg("out") + "/")
-  : fileURLToPath(new URL("./corpus/ai/", import.meta.url));
+  : fileURLToPath(new URL(argv.includes("--mode") && argv[argv.indexOf("--mode") + 1] === "chat" ? "./corpus/chat-ai/" : "./corpus/ai/", import.meta.url));
 const MANIFEST = join(OUT, "MANIFEST.tsv");
 const VERSION = "2023-06-01";
 
@@ -55,6 +55,16 @@ const VERSION = "2023-06-01";
 // headroom: that combination works on every model this script might pick.
 // (Learned the hard way when the weekly refresh died silently on 2026-08-17.)
 const MAX_OUTPUT_TOKENS = 4000;
+
+// --mode chat swaps the document genres for conversational turns. The stance
+// markers the checker cannot see ("the honest answer", "two things worth
+// noting", "I'd push back") belong to the register where a model explains or
+// advises a person, and the 2026-08-27 pilot found ritual pushback at 0.00
+// across all 116,353 words of the document corpora. That was the instrument
+// failing to reach the register, not a finding about pushback. This mode is
+// the corpus that can answer the question.
+const MODE = arg("mode", "docs");
+if (!["docs", "chat"].includes(MODE)) { console.error(`--mode must be docs or chat`); process.exit(1); }
 
 const N_PER_GENRE = Number(arg("n", 5));
 
@@ -167,10 +177,112 @@ const GENRES = [
   },
 ];
 
-// Length is specified because unprompted length varies wildly and would make
-// the per-1,000-word rate noisier than the effect being measured. Length is a
-// format instruction, not a style instruction.
+// Conversational turns. Same rule as the document prompts and it matters more
+// here: nothing mentions style, tone, structure, length or thinking out loud.
+// These are ordinary requests of the kind a person types into a chat box, and
+// what is being measured is what the model volunteers when nobody asked it to
+// perform carefulness. Prompts that said "explain your reasoning" would plant
+// the very behaviour under test.
+const CHAT_GENRES = [
+  { id: "decision", prompts: [
+    "Should I use Postgres or MongoDB for a booking system with about 50,000 records?",
+    "We're deciding between hiring a second developer or paying for more contractors. Which way should we go?",
+    "Should I take a 15% pay cut for a fully remote job?",
+    "Is it worth moving our small office to a four-day week?",
+    "Should we rebuild our ten-year-old internal tool or keep patching it?",
+    "Do I renew a three-year software contract at a discount or go year to year?",
+    "Should a two-person company bother with formal performance reviews?",
+    "Is it a mistake to launch a product without a pricing page?",
+  ]},
+  { id: "critique_plan", prompts: [
+    "Here's my plan for migrating 400 users to a new email system over one weekend. What am I missing?",
+    "My plan is to run ads for six weeks, measure signups, and decide from there. Poke holes in it.",
+    "I want to teach myself data analysis in three months by doing one project a week. Thoughts?",
+    "We're going to fix our support backlog by hiring two temps for a month. What could go wrong?",
+    "My plan for the quarter is to cut meetings by half and see what breaks. Reactions?",
+    "I want to move our backups from an external drive to cloud storage and stop the drive rotation. Sound right?",
+    "We plan to open a second location once the first one clears 20% margin. Is that the right trigger?",
+    "I'm going to reply to every customer review personally for a year. Talk me through it.",
+  ]},
+  { id: "explain", prompts: [
+    "Explain how DNS actually resolves a domain name.",
+    "Explain what a p-value is to someone who never took statistics.",
+    "Explain why software estimates are always wrong.",
+    "Explain how compound interest works and why it surprises people.",
+    "Explain the difference between encryption and hashing.",
+    "Explain what happens to my data when a company says it was breached.",
+    "Explain why airlines overbook flights.",
+    "Explain how a bill becomes law in the United States.",
+  ]},
+  { id: "diagnose", prompts: [
+    "Our website is slow every weekday at 9am and fine the rest of the day. Where do I start?",
+    "Two of my team members stopped talking to each other and the work is suffering. What now?",
+    "My laptop battery went from a full day to three hours in about a month. What's happening?",
+    "Signups are steady but activation dropped 30% last month. How do I find the cause?",
+    "Customers keep asking questions our documentation already answers. Why?",
+    "Our weekly meeting always runs over and nobody remembers what was decided. Diagnose it.",
+    "I keep missing deadlines even though I'm working more hours than ever. What's going on?",
+    "Sales says the product is fine and support says it's broken. Who do I believe?",
+  ]},
+  { id: "compare", prompts: [
+    "What's the difference between a VPN and a proxy, practically speaking?",
+    "Compare renting and buying a home for someone who moves every four years.",
+    "What's the real difference between a CFO and a controller?",
+    "Compare index funds and individual stocks for a first-time investor.",
+    "How do a co-op and a condo actually differ for the owner?",
+    "Compare an electric car and a hybrid for someone who drives 12,000 miles a year.",
+    "What's the difference between a trademark and a copyright for a small brand?",
+    "Compare an in-house help desk with an outsourced one for a 60-person company.",
+  ]},
+  { id: "review_work", prompts: [
+    "Read this and tell me if it's any good: 'Our mission is to empower businesses to unlock their full potential through innovative solutions.'",
+    "Is this a good subject line? 'Quick question about your account'",
+    "Here's my resume summary: 'Results-driven professional with 10+ years of experience.' Fix it or tell me why it's fine.",
+    "I wrote this to a client: 'Sorry for the delay, things have been crazy here.' Should I send it?",
+    "My about page opens with 'Founded in 2019, we are a team of passionate experts.' Thoughts?",
+    "Is 'circle back' an acceptable thing to write in a work email?",
+    "My pitch is 'Uber but for dog walking.' What's wrong with that as a description?",
+    "I named my product 'Synergize.' Be straight with me.",
+  ]},
+  { id: "personal", prompts: [
+    "I got an offer from a competitor and my current boss just asked me directly if I'm interviewing. What do I say?",
+    "My friend asked me to invest in her business and I don't think it will work. How do I answer?",
+    "I've been in the same job for eleven years and I can't tell if that's stability or being stuck.",
+    "My neighbor's tree drops branches in my yard every storm. How do I raise it without starting a feud?",
+    "I said yes to organizing the family reunion and now I regret it. What are my options?",
+    "A colleague takes credit for my work in meetings. What do I actually do about it?",
+    "I want to go back to school at 41 and everyone thinks it's a bad idea.",
+    "My adult son wants to move back home and I'm not sure I want that.",
+  ]},
+  { id: "evaluate_claim", prompts: [
+    "Someone told me you should never pay off a low-interest mortgage early. Is that right?",
+    "My coworker says standing desks don't actually do anything. True?",
+    "Is it true that you shouldn't put a hot laptop battery in the fridge?",
+    "A vendor claims their tool will cut our onboarding time in half. How should I read that?",
+    "I read that most startups fail because of cofounder conflict. Does that hold up?",
+    "Someone said breakfast being the most important meal was invented by cereal companies. Is it?",
+    "My IT guy says password rotation every 90 days is outdated advice. Is he right?",
+    "A consultant told us our website needs a full rebuild, not a redesign. How do I judge that?",
+  ]},
+];
+
+const SETS = MODE === "chat" ? CHAT_GENRES : GENRES;
+
+// Length. This constant existed from the first run and was never appended to a
+// prompt, so every corpus in study/corpus/ was generated with NO length
+// instruction. Found 2026-08-27. The accident turned out to be informative:
+// unprompted, Claude Opus 5 held between 507 and 627 words on all 40 documents
+// while OpenAI's chat model ran a median of 195, so default verbosity differs
+// about threefold between vendors and is itself a per-model fingerprint.
+//
+// It is now opt-in rather than silently on. Default off preserves the register
+// a person actually writes in, since people usually do not name a word count.
+// Pass --length to append it when you need documents comparable in bulk, and
+// record which way the run went; a length-instructed corpus and an unprompted
+// one must never be measured against each other.
 const LENGTH = " Around 500 words.";
+const USE_LENGTH = argv.includes("--length");
+const withLength = (p) => (USE_LENGTH ? p + LENGTH : p);
 
 const VENDORS = {
   anthropic: {
@@ -328,21 +440,22 @@ if (!model) {
 }
 if (model) {
 console.log(`vendor: ${VENDOR}   model: ${model}`);
-console.log(`writing up to ${N_PER_GENRE * GENRES.length} documents to ${OUT}\n`);
+console.log(`writing up to ${N_PER_GENRE * SETS.length} documents to ${OUT}\n`);
 
 let made = 0, skipped = 0, failed = 0, fatalStop = false;
 const lengths = [];
-for (const g of GENRES) {
+for (const g of SETS) {
   if (fatalStop) break;
   for (let i = 0; i < Math.min(N_PER_GENRE, g.prompts.length); i++) {
     const name = `${model}__${g.id}__${String(i + 1).padStart(2, "0")}.txt`;
     const path = join(OUT, name);
     if (existsSync(path)) { skipped++; continue; }
     try {
-      const text = await generate(model, g.prompts[i]);
+      const sent = withLength(g.prompts[i]);
+      const text = await generate(model, sent);
       writeFileSync(path, text.replace(/\r\n/g, "\n") + "\n");
       const words = (text.match(/\S+/g) || []).length;
-      if (!already.includes(name)) appendFileSync(MANIFEST, `${name}\t${model}\t${g.id}\t${words}\t${g.prompts[i]}\n`);
+      if (!already.includes(name)) appendFileSync(MANIFEST, `${name}\t${model}\t${g.id}\t${words}\t${sent}\n`);
       made++;
       lengths.push(words);
       console.log(`  ${name}  ${words} words${words < 250 ? "  (short)" : ""}`);
@@ -372,7 +485,7 @@ if (lengths.length) {
   const median = sorted[sorted.length >> 1];
   const under = lengths.filter((w) => w < 250).length;
   const floor = lengths.filter((w) => w < 100).length;
-  console.log(`\nlength: median ${median} words, range ${sorted[0]}-${sorted[sorted.length - 1]} (asked for ~500)`);
+  console.log(`\nlength: median ${median} words, range ${sorted[0]}-${sorted[sorted.length - 1]}` + (USE_LENGTH ? " (asked for ~500)" : " (no length instruction sent)"));
   if (under) console.log(`  ${under} of ${lengths.length} came back under 250 words`);
   if (floor) console.log(`  ${floor} are under the study's 100-word floor and will be excluded from measurement`);
   if (median < 350) console.log(`  This model is not honouring the length request. Comparing it against a model that does\n  measures the length difference as much as anything else. Try a non-chat model id.`);
