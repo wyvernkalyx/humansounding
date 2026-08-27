@@ -75,12 +75,27 @@ because the default register is what lands in somebody's inbox.
 Length is the one format instruction, because unprompted length varies enough
 to add more noise to a per-1,000-word rate than the effect being measured.
 
-**The honest limit on this arm: it is one vendor.** As written it generates
-Claude output only, so on its own it supports a claim about Claude and not a
-claim about AI writing. Output from other models can be dropped into
-`corpus/ai/` as `.txt` files with a line added to the manifest, and that is the
-cheapest way to widen the claim. Until that happens, say "Claude" in anything
-published from these numbers.
+**Run more than one vendor.** A set drawn from a single model answers "does
+this model still write like that", not "does AI writing still look like that".
+The August 2026 Claude-only run found the delve/meticulous vocabulary almost
+extinct at 0.09 hits per 1,000 words, while the live site's own tell counts had
+that same rule firing on real visitor pastes more often than anything except em
+dashes. Both are true. Visitors do not paste one vendor.
+
+```
+node study/generate.mjs --n 5 --out study/corpus/ai-claude
+node study/generate.mjs --n 5 --vendor openai --model <id> --out study/corpus/ai-openai
+node study/generate.mjs --n 5 --vendor gemini --model <id> --out study/corpus/ai-gemini
+```
+
+Anthropic picks its own newest model. OpenAI and Gemini require `--model`, and
+running without it prints the ids available on your key. That is deliberate:
+model names change faster than this file does, and silently guessing wrong
+would put a mislabelled corpus into the study.
+
+Keep each vendor in its own directory. One blended AI set averages away exactly
+the between-vendor difference you are running this to find. Anything published
+from a single-vendor run should name that vendor in the sentence.
 
 ## The human arm
 

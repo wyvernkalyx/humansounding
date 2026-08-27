@@ -247,6 +247,14 @@ document.getElementById("checkBtn").addEventListener("click", () => {
   // 1-per-200 it flags 13 while still catching 38 of 40 AI documents, which is
   // the same AI recall for fewer false alarms. The distributions genuinely
   // overlap, so no threshold separates them cleanly.
+  // A short paste cannot produce a meaningful "nothing fired" result. Most rules
+  // span two or more sentences, cadence refuses to run under 80 words, and the
+  // dash rule cannot flag a single em dash below 400 words because `allowed`
+  // floors at 1. Reporting "clean" on a text message is a claim this site has
+  // always promised not to make. 150 is a judgement call, not a measurement,
+  // unlike the 1-per-200 dash line below it.
+  const MIN_VERDICT_WORDS = 150;
+  const tooShort = words < MIN_VERDICT_WORDS;
   const allowed = Math.max(1, Math.floor(words / 200));
   const emRule = { id: "em_dash", label: "Em-dash density", sev: 2,
     fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words. Measured on our own corpus: published human articles average about 3.4 per 1,000 words, current model drafts about 11. Replace some with commas, parentheses, or a period.` };
@@ -278,13 +286,17 @@ document.getElementById("checkBtn").addEventListener("click", () => {
   if (cadence) groups.push({ rule: cadence, n: 1 });
   document.getElementById("checkList").innerHTML = groups.length
     ? groups.map(g => `<b>${esc(g.rule.label)}${g.n > 1 ? ` · ${g.n}×` : ""}</b><span>${esc(g.rule.fix)}</span>`).join("")
-    : `<b>Nothing fired</b><span>None of the ${RULES.length + 2} tells matched. Suspiciously human, even.</span>`;
+    : tooShort
+      ? `<b>Too short to measure</b><span>Nothing fired, but at ${words} words that is expected rather than reassuring. Most of these tells need several sentences to show up, and a single em dash is never flagged below 400 words. Paste 150 words or more for a result worth anything.</span>`
+      : `<b>Nothing fired</b><span>None of the ${RULES.length + 2} tells matched. Suspiciously human, even.</span>`;
   const cadenceNote = cadence ? " Sentence lengths are unusually even, see below." : "";
   document.getElementById("checkSummary").innerHTML = (kept.length
     ? `<b>${kept.length} tell${kept.length === 1 ? "" : "s"}</b> in ${words} words. Hover each highlight to see the fix.${cadenceNote}`
     : cadence
       ? `<b>No phrase-level tells</b> in ${words} words, but the cadence stands out. See below.`
-      : `<b>Clean:</b> none of the ${RULES.length + 2} tells fired in ${words} words.`)
+      : tooShort
+        ? `<b>Too short to measure:</b> ${words} words is below what these rules can judge. Nothing fired, which at this length tells you very little.`
+        : `<b>Clean:</b> none of the ${RULES.length + 2} tells fired in ${words} words.`)
     + (capped ? ` (Long draft: checked the first ${words.toLocaleString()} words.)` : "");
   document.getElementById("checkOut").hidden = false;
 

@@ -6,8 +6,18 @@
 // file. Nothing about a document is inferred later; if it is not in the
 // manifest it is not in the study.
 //
-//   ANTHROPIC_API_KEY=... node study/generate.mjs --n 6
-//   ANTHROPIC_API_KEY=... node study/generate.mjs --n 6 --model claude-sonnet-5
+//   node study/generate.mjs --n 5                          (Anthropic, newest Claude)
+//   node study/generate.mjs --n 5 --vendor openai --model <id>
+//   node study/generate.mjs --n 5 --vendor gemini --model <id>
+//
+// Keys come from .env: ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY.
+//
+// Why more than one vendor: a corpus drawn from a single model answers "does
+// THIS model still write like that", not "does AI writing still look like
+// that". The August 2026 Claude-only run found the delve/meticulous vocabulary
+// almost extinct, while the live site's own tell counts showed it firing on
+// real visitor pastes more than any rule except em dashes. People do not paste
+// one vendor. Run each vendor into its own --out directory and compare them.
 //
 // The one methodological rule this file exists to enforce: the prompts ask for
 // writing the way a person actually asks for writing. They never say "sound
@@ -26,9 +36,18 @@ import { loadEnv, ENV_PATH } from "../scripts/load-env.mjs";
 loadEnv();
 
 // fileURLToPath, not URL.pathname. See the note in scripts/load-env.mjs.
-const OUT = fileURLToPath(new URL("./corpus/ai/", import.meta.url));
+const argv = process.argv.slice(2);
+const arg = (name, dflt) => {
+  const i = argv.indexOf("--" + name);
+  return i === -1 ? dflt : argv[i + 1];
+};
+// --out keeps each vendor in its own directory so they can be measured against
+// the human sets separately. One blended AI set would average away exactly the
+// between-vendor difference this is being run to find.
+const OUT = arg("out")
+  ? (arg("out").endsWith("/") || arg("out").endsWith("\\") ? arg("out") : arg("out") + "/")
+  : fileURLToPath(new URL("./corpus/ai/", import.meta.url));
 const MANIFEST = join(OUT, "MANIFEST.tsv");
-const KEY = process.env.ANTHROPIC_API_KEY;
 const VERSION = "2023-06-01";
 
 // Thinking tokens bill against max_tokens, and the thinking API itself differs
@@ -37,11 +56,6 @@ const VERSION = "2023-06-01";
 // (Learned the hard way when the weekly refresh died silently on 2026-08-17.)
 const MAX_OUTPUT_TOKENS = 4000;
 
-const argv = process.argv.slice(2);
-const arg = (name, dflt) => {
-  const i = argv.indexOf("--" + name);
-  return i === -1 ? dflt : argv[i + 1];
-};
 const N_PER_GENRE = Number(arg("n", 5));
 
 // Genres chosen to match what humansounding.com's visitors actually paste:
@@ -158,39 +172,123 @@ const GENRES = [
 // format instruction, not a style instruction.
 const LENGTH = " Around 500 words.";
 
-async function api(path, opts = {}) {
-  const r = await fetch("https://api.anthropic.com" + path, {
-    ...opts,
-    headers: { "x-api-key": KEY, "anthropic-version": VERSION, "content-type": "application/json", ...(opts.headers || {}) },
-  });
+const VENDORS = {
+  anthropic: {
+    env: "ANTHROPIC_API_KEY",
+    listUrl: () => "https://api.anthropic.com/v1/models?limit=40",
+    listHeaders: (k) => ({ "x-api-key": k, "anthropic-version": VERSION }),
+    listIds: (d) => (d.data || []).map((x) => x.id),
+    // Anthropic ids sort newest-first from the API, and the family is
+    // unambiguous, so this one can pick for itself.
+    autoPick: (ids) => ids.filter((id) => /^claude/.test(id))[0],
+    url: () => "https://api.anthropic.com/v1/messages",
+    headers: (k) => ({ "x-api-key": k, "anthropic-version": VERSION, "content-type": "application/json" }),
+    // max_tokens is required here. Elsewhere no cap is sent at all: the field
+    // name for it has diverged between vendors and between model generations,
+    // and a request field that only some models accept is exactly what broke
+    // the weekly refresh on 2026-08-17. The length instruction is in the prompt.
+    body: (model, prompt) => ({ model, max_tokens: MAX_OUTPUT_TOKENS, messages: [{ role: "user", content: prompt }] }),
+    text: (d) => (d.content || []).filter((b) => b.type === "text").map((b) => b.text).join("\n"),
+    served: (d) => d.model,
+    why: (d) => `stop_reason=${d.stop_reason}`,
+  },
+  openai: {
+    env: "OPENAI_API_KEY",
+    listUrl: () => "https://api.openai.com/v1/models",
+    listHeaders: (k) => ({ authorization: `Bearer ${k}` }),
+    listIds: (d) => (d.data || []).map((x) => x.id).sort(),
+    autoPick: () => null,
+    url: () => "https://api.openai.com/v1/chat/completions",
+    headers: (k) => ({ authorization: `Bearer ${k}`, "content-type": "application/json" }),
+    body: (model, prompt) => ({ model, messages: [{ role: "user", content: prompt }] }),
+    text: (d) => (d.choices || []).map((c) => c.message?.content || "").join("\n"),
+    served: (d) => d.model,
+    why: (d) => `finish_reason=${d.choices?.[0]?.finish_reason}`,
+  },
+  gemini: {
+    env: "GEMINI_API_KEY",
+    listUrl: (k) => `https://generativelanguage.googleapis.com/v1beta/models?key=${k}`,
+    listHeaders: () => ({}),
+    listIds: (d) => (d.models || []).map((m) => m.name.replace(/^models\//, "")).sort(),
+    autoPick: () => null,
+    url: (k, model) => `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${k}`,
+    headers: () => ({ "content-type": "application/json" }),
+    body: (model, prompt) => ({ contents: [{ parts: [{ text: prompt }] }] }),
+    text: (d) => (d.candidates || []).flatMap((c) => (c.content?.parts || []).map((p) => p.text || "")).join("\n"),
+    served: (d) => d.modelVersion,
+    why: (d) => `finishReason=${d.candidates?.[0]?.finishReason}`,
+  },
+};
+
+const VENDOR = arg("vendor", "anthropic");
+const V = VENDORS[VENDOR];
+if (!V) { console.error(`unknown --vendor ${VENDOR}. Use one of: ${Object.keys(VENDORS).join(", ")}`); process.exit(1); }
+const KEY = process.env[V.env];
+
+// Some failures will never fix themselves by trying again: a missing key, a
+// revoked key, an account with no credit on it. Those abort the whole run.
+// Others are transient: a per-minute rate limit, a 5xx. Those get a few backed
+// off retries. The first version of this did neither and fired 39 more doomed
+// requests after the first one came back saying the balance was zero.
+class Fatal extends Error {}
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function req(url, opts = {}, attempt = 0) {
+  const r = await fetch(url, opts);
   const body = await r.text();
-  if (!r.ok) throw new Error(`${path} ${r.status}: ${body.slice(0, 400)}`);
-  return JSON.parse(body);
+  if (r.ok) return JSON.parse(body);
+
+  const fatal =
+    r.status === 401 || r.status === 403 ||
+    /insufficient_quota|billing_not_active|invalid_api_key|account_deactivated|API_KEY_INVALID|PERMISSION_DENIED/i.test(body);
+  if (fatal) {
+    let hint = "";
+    if (/insufficient_quota|billing/i.test(body)) {
+      hint = VENDOR === "openai"
+        ? "\n  Add credit at https://platform.openai.com/settings/organization/billing — API billing is separate from ChatGPT."
+        : "\n  This account has no usable balance for the API.";
+    } else if (r.status === 401 || /invalid_api_key|API_KEY_INVALID/i.test(body)) {
+      hint = `\n  Check ${V.env} in .env. The key is shown once at creation and cannot be read back.`;
+    }
+    throw new Fatal(`${r.status} from ${VENDOR}: ${(JSON.parse(body)?.error?.message || body).toString().slice(0, 200)}${hint}`);
+  }
+
+  // Transient. Honour Retry-After when the vendor sends one.
+  if ((r.status === 429 || r.status >= 500) && attempt < 3) {
+    const wait = Number(r.headers.get("retry-after")) * 1000 || 2000 * Math.pow(2, attempt);
+    console.log(`  ${r.status}, retrying in ${Math.round(wait / 1000)}s`);
+    await sleep(wait);
+    return req(url, opts, attempt + 1);
+  }
+  throw new Error(`${r.status}: ${body.slice(0, 300)}`);
 }
 
-async function newestModel() {
-  const d = await api("/v1/models?limit=20");
-  const m = (d.data || []).filter((x) => /claude/.test(x.id))[0];
-  if (!m) throw new Error("no models returned");
-  return m.id;
+async function listModels() {
+  return V.listIds(await req(V.listUrl(KEY), { headers: V.listHeaders(KEY) }));
 }
+
+// An alias like "chat-latest" is the most representative thing to sample,
+// because it is what ordinary users are served, and the least reproducible
+// thing to publish, because it moves. Vendors report the id they actually ran,
+// so capture it and say so rather than recording the alias as if it were a
+// model.
+let servedModel = null;
 
 async function generate(model, prompt) {
-  const d = await api("/v1/messages", {
+  const d = await req(V.url(KEY, model), {
     method: "POST",
-    body: JSON.stringify({
-      model,
-      max_tokens: MAX_OUTPUT_TOKENS,
-      messages: [{ role: "user", content: prompt + LENGTH }],
-    }),
+    headers: V.headers(KEY),
+    body: JSON.stringify(V.body(model, prompt)),
   });
-  const text = (d.content || []).filter((b) => b.type === "text").map((b) => b.text).join("\n").trim();
-  if (!text) throw new Error(`empty response (stop_reason=${d.stop_reason})`);
+  if (!servedModel && V.served) servedModel = V.served(d) || null;
+  const text = (V.text(d) || "").trim();
+  if (!text) throw new Error(`empty response (${V.why(d)})`);
   return text;
 }
 
 if (!KEY) {
-  console.error("ANTHROPIC_API_KEY is not set. This script calls the API; it cannot run without one.");
+  console.error(`${V.env} is not set. This script calls the ${VENDOR} API; it cannot run without a key.`);
   console.error(`Looked for a .env file at: ${ENV_PATH}`);
   console.error(existsSync(ENV_PATH)
     ? "That file exists, so the line in it is missing, blank, or misspelled. It must read ANTHROPIC_API_KEY=sk-ant-..."
@@ -202,12 +300,40 @@ mkdirSync(OUT, { recursive: true });
 if (!existsSync(MANIFEST)) writeFileSync(MANIFEST, "file\tmodel\tgenre\twords\tprompt\n");
 const already = readFileSync(MANIFEST, "utf8");
 
-const model = arg("model") || (await newestModel());
-console.log(`model: ${model}`);
+// Everything that is not a general text model. A vendor's model list is mostly
+// speech, images, embeddings and coding variants, and burying the four ids that
+// matter in a list of a hundred is not help.
+const NOT_PROSE = /audio|image|realtime|transcribe|tts|whisper|embedding|moderation|sora|codex|search|dall|babbage|davinci|gpt-3\.5|^o[0-9]|-mini|-nano/i;
+
+let model = arg("model");
+if (!model) {
+  const ids = await listModels();
+  model = V.autoPick(ids);
+  if (!model) {
+    // Deliberately not guessing. Model names change faster than this file does,
+    // and silently picking the wrong one would put a mislabelled corpus into
+    // the study, which is worse than stopping.
+    const prose = ids.filter((i) => !NOT_PROSE.test(i));
+    console.error(`--model is required for ${VENDOR}.\n`);
+    console.error(`General text models on your key${argv.includes("--all") ? "" : "  (add --all for every id)"}:\n`);
+    console.error((argv.includes("--all") ? ids : prose).map((i) => "  " + i).join("\n"));
+    console.error(`\nFor this study, prefer the model that ordinary people actually get:`);
+    console.error(`a "-chat-latest" variant is the one behind the consumer chat app, while a`);
+    console.error(`plain dated id is pinned and reproducible. Pick one and record it.`);
+    // process.exitCode, not process.exit(). Exiting while a long write is still
+    // draining trips a libuv assertion on Windows (UV_HANDLE_CLOSING) and can
+    // truncate the very list you are trying to read.
+    process.exitCode = 1;
+  }
+}
+if (model) {
+console.log(`vendor: ${VENDOR}   model: ${model}`);
 console.log(`writing up to ${N_PER_GENRE * GENRES.length} documents to ${OUT}\n`);
 
-let made = 0, skipped = 0, failed = 0;
+let made = 0, skipped = 0, failed = 0, fatalStop = false;
+const lengths = [];
 for (const g of GENRES) {
+  if (fatalStop) break;
   for (let i = 0; i < Math.min(N_PER_GENRE, g.prompts.length); i++) {
     const name = `${model}__${g.id}__${String(i + 1).padStart(2, "0")}.txt`;
     const path = join(OUT, name);
@@ -218,13 +344,39 @@ for (const g of GENRES) {
       const words = (text.match(/\S+/g) || []).length;
       if (!already.includes(name)) appendFileSync(MANIFEST, `${name}\t${model}\t${g.id}\t${words}\t${g.prompts[i]}\n`);
       made++;
-      console.log(`  ${name}  ${words} words`);
+      lengths.push(words);
+      console.log(`  ${name}  ${words} words${words < 250 ? "  (short)" : ""}`);
     } catch (e) {
+      if (e instanceof Fatal) {
+        console.error(`\nStopping: ${e.message}`);
+        console.error(`Nothing further will succeed until that is fixed. ${made} document${made === 1 ? "" : "s"} written before the stop.`);
+        process.exitCode = 1;
+        fatalStop = true;
+        break;
+      }
       failed++;
       console.error(`  FAILED ${name}: ${e.message}`);
     }
   }
 }
 
+if (servedModel && servedModel !== model) {
+  console.log(`\nNote: "${model}" resolved to "${servedModel}".`);
+  console.log(`Publish the resolved id, not the alias, and re-run with --model ${servedModel} to pin it.`);
+}
+// A model that ignores the length request produces a set that cannot be
+// compared with one that honours it, and the per-1,000-word rate hides that.
+// Say it here rather than leaving it to be noticed in the measurement.
+if (lengths.length) {
+  const sorted = [...lengths].sort((a, b) => a - b);
+  const median = sorted[sorted.length >> 1];
+  const under = lengths.filter((w) => w < 250).length;
+  const floor = lengths.filter((w) => w < 100).length;
+  console.log(`\nlength: median ${median} words, range ${sorted[0]}-${sorted[sorted.length - 1]} (asked for ~500)`);
+  if (under) console.log(`  ${under} of ${lengths.length} came back under 250 words`);
+  if (floor) console.log(`  ${floor} are under the study's 100-word floor and will be excluded from measurement`);
+  if (median < 350) console.log(`  This model is not honouring the length request. Comparing it against a model that does\n  measures the length difference as much as anything else. Try a non-chat model id.`);
+}
 console.log(`\n${made} written, ${skipped} already present, ${failed} failed.`);
-if (made || skipped) console.log(`Next: node study/measure.mjs study/corpus/ai study/corpus/human`);
+if (made || skipped) console.log(`Next: node study/measure.mjs ${OUT} study/corpus/medium`);
+} // end: a model was resolved

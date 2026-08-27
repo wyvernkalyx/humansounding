@@ -41,9 +41,13 @@ function loadRules() {
 function docsIn(dir) {
   const seen = new Set();
   const out = [];
+  let short = 0;
   for (const f of readdirSync(dir).filter((f) => f.endsWith(".txt")).sort()) {
     const text = readFileSync(join(dir, f), "utf8");
-    if ((text.match(/\S+/g) || []).length < 100) continue;
+    // Counted and reported, never silently dropped. The OpenAI run on
+    // 2026-08-19 lost 5 of 40 documents to this floor and the only visible
+    // trace was a document count that did not match the generator's.
+    if ((text.match(/\S+/g) || []).length < 100) { short++; continue; }
     // Near-duplicates are the easiest way to accidentally manufacture a
     // confidence interval. One document, one observation.
     const key = createHash("sha1").update(text.replace(/\s+/g, " ").trim().toLowerCase()).digest("hex");
@@ -51,6 +55,7 @@ function docsIn(dir) {
     seen.add(key);
     out.push({ name: basename(f, ".txt"), text });
   }
+  if (short) console.log(`  ! ${short} file${short === 1 ? "" : "s"} under 100 words, excluded`);
   return out;
 }
 

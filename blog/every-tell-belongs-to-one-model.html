@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Every tell I tested turned out to belong to one model | HumanSounding</title>
+<meta name="description" content="I measured four models against a pre-ChatGPT human baseline using this site's own rules. Em dashes are a Claude habit, the delve vocabulary is a Gemini habit, and no rule describes AI writing in general.">
+<link rel="canonical" href="https://humansounding.com/blog/every-tell-belongs-to-one-model.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="Every tell I tested turned out to belong to one model">
+<meta property="og:description" content="160 documents, four models, one pre-ChatGPT human baseline, and the site's own fifteen rules run over all of it.">
+<meta property="og:url" content="https://humansounding.com/blog/how-this-site-was-built.html">
+<meta property="og:image" content="https://humansounding.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"I had an AI build a website that catches AI writing","description":"The build log behind HumanSounding: the weekly robot, the honesty rules, the embarrassing parts, and why this article had to pass its own checker.","datePublished":"2026-08-11","dateModified":"2026-08-11","author":{"@type":"Organization","name":"HumanSounding","url":"https://humansounding.com/"},"mainEntityOfPage":"https://humansounding.com/blog/how-this-site-was-built.html"}
+</script>
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  article { padding-top: 40px; }
+  .kicker { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
+  article h1 { font-size: 30px; margin: 0 0 18px; letter-spacing: -0.5px; line-height: 1.25; }
+  article h2 { font-size: 20px; margin: 30px 0 10px; letter-spacing: -0.3px; }
+  article p.body { color: var(--ink-1); font-size: 16.5px; line-height: 1.75; margin: 0 0 16px; }
+  :root[data-theme="dark"] article p.body { color: #e8e6e0; }
+  .srcs { font-size: 13.5px; color: var(--ink-2); border-top: 1px solid var(--border); margin-top: 32px; padding-top: 18px; }
+  .pn { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap; }
+  .pn a { font-size: 13.5px; }
+  .rates { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px; }
+  .rates th, .rates td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+  .rates th { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); }
+  .rates td { color: var(--ink-1); }
+  :root[data-theme="dark"] .rates td { color: #e8e6e0; }
+  .rates th:not(:first-child), .rates td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+  @media (max-width: 640px) {
+    .rates, .rates tbody, .rates tr, .rates td { display: block; width: 100%; }
+    .rates thead { position: absolute; left: -9999px; }
+    .rates tr { border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; margin: 0 0 12px; }
+    .rates td { border: 0; display: flex; justify-content: space-between; gap: 16px; padding: 4px 0; text-align: right; }
+    .rates td::before { content: attr(data-l); color: var(--ink-muted); text-align: left; font-size: 13px; }
+    .rates td:first-child { font-weight: 700; border-bottom: 1px solid var(--border); margin-bottom: 4px; }
+  }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html" aria-current="page">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+
+<main class="wrap-post">
+  <article>
+    <div class="kicker">Study · August 27, 2026</div>
+    <h1>Every tell I tested turned out to belong to one model</h1>
+
+    <p class="body"><em>How this was written: the study is mine and so are the calls about what to measure and what to throw out. The prose was drafted by Claude from my working notes and revised on my direction. This note sits at the top rather than the bottom because a piece about spotting machine writing should not make you read to the end to find out.</em></p>
+
+    <p class="body">For me the purpose of this site is to keep track of the writing tells in the most popular LLM models. The rules in the checker and in the instruction file are living documents. They will keep changing as new research comes out and as the model makers change how their models write. They will also change when I go and measure something myself. Last week I tested the first generation of those rules with a more rigorous approach.</p>
+
+    <p class="body">The fifteen rules I launched with came out of other people's research, most of it describing how chatbots wrote in 2023 and 2024. Seventeen days later that research says exactly what it said on launch day. What changed is that I stopped borrowing numbers and started making my own. I generated 160 documents across four models, built a human baseline out of pre-ChatGPT writing, and ran the site's own rules over all of it.</p>
+
+    <p class="body">The short version: no single rule in the checker describes AI writing in general. Em dashes are a Claude habit. The delve-and-meticulous vocabulary is a Gemini habit. Each model has its own fingerprint, and the fingerprints differ from each other more than several of them differ from human writing.</p>
+
+    <h2>How the measurement works</h2>
+
+    <p class="body">I generated 40 documents from each model, five each in eight genres: LinkedIn posts, cover letters, newsletters, marketing emails, blog posts, internal memos, product updates and recommendation letters. The prompts never mention style. They do not say "sound natural" and they do not say "write like a robot," because a prompt that shapes the prose means I would be measuring my own prompt instead of the model.</p>
+
+    <p class="body">Then I ran the site's own rules across all of it. The rules get read out of the checker page at runtime rather than copied into the study, so the measurement cannot drift away from what visitors actually use. Rates are per thousand words, with a bootstrap confidence interval that resamples whole documents, so one long strange article cannot manufacture a tight number.</p>
+
+    <p class="body">The human comparison set is 40 Medium articles published between 2016 and November 2022, which is to say before ChatGPT existed. Self-published long-form prose by adults writing for an audience, which is roughly the register I asked the machines for.</p>
+
+    <h2>Nine rules out of fifteen caught nothing</h2>
+
+    <p class="body">First run, Claude only, 21,814 words. Stock openers fired zero times. So did chatbot artifacts, inflated symbolism, vague attribution, summary phrases and fragment triplets. The whole delve-and-meticulous vocabulary family fired twice in the entire corpus.</p>
+
+    <p class="body">Those rules were built from how models behaved in 2023 and 2024. The labs tuned that behavior out, which is the thing this site has been saying since the day it launched. Watching it happen to my own rules was a different experience from writing it on a homepage.</p>
+
+    <p class="body">I found a bug while counting, too. The em dash pattern also matched a double hyphen, which meant every markdown horizontal rule counted as three em dashes. Fifty of 291 hits in that first corpus were section dividers. Worse, the "apply mechanical fixes" button had been quietly rewriting people's horizontal rules into commas. Both are fixed now.</p>
+
+    <h2>The em dash result got smaller every time I looked at it</h2>
+
+    <p class="body">Claude Opus 5 runs 11.05 em dashes per thousand words, one every ninety words or so. Against a set of casual blog posts from 2004, the human rate was 0.18. A 61x gap, and the most exciting number I have ever produced.</p>
+
+    <p class="body">It did not survive a better comparison. Those 2004 bloggers were mostly teenagers typing into a browser box in an era when an em dash meant knowing an alt code. Against the Medium articles, the human rate is 3.83, not 0.18. Same punctuation mark, two sets of human beings, twenty-one times apart.</p>
+
+    <p class="body">So the gap went from 61x to 2.9x. It is still real and the intervals still do not overlap. But anyone quoting a human em dash rate without saying which humans is quoting noise, and for two days that person was me.</p>
+
+    <h2>The threshold was flagging half of human writing</h2>
+
+    <p class="body">The checker flagged em dash density above roughly one per 300 words. The median article in my human set runs about one per 294.</p>
+
+    <p class="body">Eighteen of those 40 human articles tripped the rule. Forty-five percent of ordinary published human prose, called out as suspicious by a site that promises to find the robot bits. The threshold came from a "humans average one per 300" claim that my own corpus does not support for modern long-form writing.</p>
+
+    <p class="body">It is one per 200 now, which flags 13 of those 40 human articles while still catching 38 of the 40 AI ones. Same recall, fewer false alarms. The distributions genuinely overlap, so there is no line that separates them cleanly and I have stopped looking for one.</p>
+
+    <h2>Then I added the other models and it came apart</h2>
+
+    <p class="body">I ran the same eight genres through Gemini and two OpenAI models.</p>
+
+    <p class="body">No rule separated any vendor from the human set at 95 percent confidence. Not one, in either comparison.</p>
+
+    <p class="body">Em dashes, the rule I had just verified twice, describe Claude and nobody else. OpenAI's chat model runs 3.30 per thousand words and Gemini runs 2.70, both at or below the human 3.83. My best rule is useless against ChatGPT output and points slightly the wrong way.</p>
+
+    <p class="body">The 2023 vocabulary is not dead either. It moved. Gemini fires delve, meticulous and pivotal at 1.01 per thousand words, three times the human rate and eleven times what the other two models manage. That cleared up something that had been bothering me in the site's live analytics, where the slop-word rule was the second most-fired rule on real visitor pastes while my Claude corpus insisted the vocabulary was extinct. Both things were true. People were pasting Gemini.</p>
+
+    <h2>The finding I had to kill</h2>
+
+    <p class="body">One more pass, and it is the one I am most glad I ran.</p>
+
+    <p class="body">GPT-5.5 showed contrastive negation at 1.90 per thousand words against the human 0.15, the widest separation in the whole study. I started writing it up.</p>
+
+    <p class="body">Then I checked it per genre. All 35 hits were in blog posts and newsletters. Zero in the other five genres. Those five are also the short ones, between 725 and 1,467 words each, against roughly 6,000 for blogs and newsletters. Models write long when you ask for a newsletter and short when you ask for a memo, whatever word count you put in the prompt, and a rule that spans two sentences cannot fire inside a 130-word marketing email.</p>
+
+    <p class="body">The effect was tangled up with genre and with length at the same time. My human set is all long-form, so the only fair comparison restricts every model to long-form too. That table, per thousand words:</p>
+
+    <table class="rates">
+      <thead>
+        <tr><th>Set</th><th>Words</th><th>Contrastive negation</th><th>Em dashes</th><th>AI-favorite word</th><th>Negative parallelism</th></tr>
+      </thead>
+      <tbody>
+        <tr><td data-l="Set">Claude Opus 5</td><td data-l="Words">5,441</td><td data-l="Contrastive negation">2.39</td><td data-l="Em dashes">12.87</td><td data-l="AI-favorite word">0.00</td><td data-l="Negative parallelism">0.18</td></tr>
+        <tr><td data-l="Set">GPT-5.5</td><td data-l="Words">11,906</td><td data-l="Contrastive negation">2.86</td><td data-l="Em dashes">1.18</td><td data-l="AI-favorite word">0.08</td><td data-l="Negative parallelism">0.17</td></tr>
+        <tr><td data-l="Set">ChatGPT (chat model)</td><td data-l="Words">6,696</td><td data-l="Contrastive negation">0.30</td><td data-l="Em dashes">3.88</td><td data-l="AI-favorite word">0.15</td><td data-l="Negative parallelism">0.60</td></tr>
+        <tr><td data-l="Set">Gemini 3.7 Flash</td><td data-l="Words">7,800</td><td data-l="Contrastive negation">0.26</td><td data-l="Em dashes">3.33</td><td data-l="AI-favorite word">0.77</td><td data-l="Negative parallelism">0.64</td></tr>
+        <tr><td data-l="Set">Human (Medium)</td><td data-l="Words">26,883</td><td data-l="Contrastive negation">0.15</td><td data-l="Em dashes">3.83</td><td data-l="AI-favorite word">0.33</td><td data-l="Negative parallelism">0.22</td></tr>
+      </tbody>
+    </table>
+
+    <p class="body">Ten documents per model cell is thin, and that table carries no confidence intervals. The directions are the finding. The decimal places are not.</p>
+
+    <h2>Then a friend sent me a text</h2>
+
+    <p class="body">While I was writing this up, a friend sent me a message he told me afterwards was written entirely by AI. It had an em dash in it. I pasted it into my own checker and got back the word "Clean."</p>
+
+    <p class="body">The reason is arithmetic. The dash rule allows one em dash per two hundred words, with a floor of one. Below four hundred words that floor is the only thing that matters, so a single em dash can never be flagged no matter how short the message is. One dash in ninety words is a rate of eleven per thousand, right at the Claude average, and the checker waves it through.</p>
+
+    <p class="body">The rest of the rules had nothing to work with either. Contrastive negation spans two sentences. Rule-of-three needs three clauses. The cadence check refuses to run under eighty words on purpose. A text message is simply below the resolution of the instrument.</p>
+
+    <p class="body">None of that is the part that bothers me. The part that bothers me is the word "Clean." This site promises never to tell anyone their writing is human, and on a ninety-word sample it just did. A short paste should say that it is too short to measure, and soon it will.</p>
+
+    <h2>What is actually true</h2>
+
+    <p class="body">Em dashes are a Claude fingerprint. One model in four.</p>
+
+    <p class="body">The old vocabulary is a Gemini fingerprint. One model in four. Claude wrote 5,441 words of long-form without reaching for any of it.</p>
+
+    <p class="body">Contrastive negation comes closest to a general tell and still only covers half the field. Claude runs about sixteen times the human rate and GPT-5.5 about nineteen. The other two sit down next to the humans.</p>
+
+    <p class="body">Negative parallelism, the one everybody cites, runs above the human rate in two models and below it in the other two.</p>
+
+    <p class="body">Not one rule in my checker describes AI writing in general. Each of them describes particular models, and the models disagree with each other more than several of them disagree with people.</p>
+
+    <h2>What changes here</h2>
+
+    <p class="body">The trends page cannot keep making flat claims about tells, so it gets a model column. The em dash threshold was calibrated on Claude alone and has to be reconsidered now that I know it barely fires on two of the four models while catching a third of human articles. Two severity changes I made on Monday came from Claude evidence and need the same treatment. Short pastes stop returning a verdict they cannot support.</p>
+
+    <p class="body">The checker stays what it has always been, which is an editing prompt rather than a verdict. It flags the spot and leaves you to decide whether you meant it. That was a design caution when I wrote it. Two weeks of measurement have turned it into the accurate description.</p>
+
+    <p class="body">If you want to check my work, the method and the code are in the repository. I publish rates rather than text, so the corpora are not in there, but the sourcing is documented and you can rebuild both halves.</p>
+
+    <p class="srcs"><b>Method:</b> the generator, the measurement script and the stated limits live in <a href="https://github.com/wyvernkalyx/humansounding/tree/main/study">study/</a>. Rates are published, text is not; the <a href="https://github.com/wyvernkalyx/humansounding/blob/main/study/README.md">README</a> documents provenance for both arms so the comparison can be rebuilt.</p>
+
+    <div class="pn">
+      <a href="/blog.html">‹ All posts</a>
+      <a href="/blog/how-this-site-was-built.html">I had an AI build a website that catches AI writing ›</a>
+    </div>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>
+
