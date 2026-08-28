@@ -1,0 +1,41 @@
+file	model	genre	words	prompt
+gpt-5.5__linkedin__01.txt	gpt-5.5	linkedin	228	Write a LinkedIn post about why our team switched to a four-day week.
+gpt-5.5__linkedin__02.txt	gpt-5.5	linkedin	87	Write a LinkedIn post announcing that I've been promoted to director of operations.
+gpt-5.5__linkedin__03.txt	gpt-5.5	linkedin	252	Write a LinkedIn post about what I learned from a project that failed.
+gpt-5.5__linkedin__04.txt	gpt-5.5	linkedin	156	Write a LinkedIn post about hiring for attitude over experience.
+gpt-5.5__linkedin__05.txt	gpt-5.5	linkedin	137	Write a LinkedIn post about attending my first industry conference in five years.
+gpt-5.5__cover_letter__01.txt	gpt-5.5	cover_letter	263	Write a cover letter for an operations manager job at a logistics company.
+gpt-5.5__cover_letter__02.txt	gpt-5.5	cover_letter	265	Write a cover letter for a marketing coordinator role at a nonprofit.
+gpt-5.5__cover_letter__03.txt	gpt-5.5	cover_letter	191	Write a cover letter for a junior software developer position.
+gpt-5.5__cover_letter__04.txt	gpt-5.5	cover_letter	215	Write a cover letter for a school administrator job.
+gpt-5.5__cover_letter__05.txt	gpt-5.5	cover_letter	255	Write a cover letter for an accounting role at a mid-sized manufacturer.
+gpt-5.5__newsletter__01.txt	gpt-5.5	newsletter	1108	Write a newsletter issue about how to build a morning routine that sticks.
+gpt-5.5__newsletter__02.txt	gpt-5.5	newsletter	1197	Write a newsletter issue about managing money in your twenties.
+gpt-5.5__newsletter__03.txt	gpt-5.5	newsletter	1570	Write a newsletter issue about why most productivity systems fail.
+gpt-5.5__newsletter__04.txt	gpt-5.5	newsletter	768	Write a newsletter issue about dealing with burnout at work.
+gpt-5.5__newsletter__05.txt	gpt-5.5	newsletter	1439	Write a newsletter issue about the psychology of habit change.
+gpt-5.5__marketing_email__01.txt	gpt-5.5	marketing_email	147	Write a marketing email announcing a new feature in our project management app.
+gpt-5.5__marketing_email__02.txt	gpt-5.5	marketing_email	135	Write a marketing email for a local gym's January membership offer.
+gpt-5.5__marketing_email__03.txt	gpt-5.5	marketing_email	160	Write a marketing email inviting customers to a webinar on tax changes.
+gpt-5.5__marketing_email__04.txt	gpt-5.5	marketing_email	122	Write a marketing email re-engaging customers who haven't logged in for 90 days.
+gpt-5.5__marketing_email__05.txt	gpt-5.5	marketing_email	161	Write a marketing email launching a new line of running shoes.
+gpt-5.5__blog_post__01.txt	gpt-5.5	blog_post	1367	Write a blog post about choosing a password manager.
+gpt-5.5__blog_post__02.txt	gpt-5.5	blog_post	1168	Write a blog post about remote work and company culture.
+gpt-5.5__blog_post__03.txt	gpt-5.5	blog_post	1117	Write a blog post about how to run a better meeting.
+gpt-5.5__blog_post__04.txt	gpt-5.5	blog_post	1151	Write a blog post about what to look for when buying a used car.
+gpt-5.5__blog_post__05.txt	gpt-5.5	blog_post	1021	Write a blog post about the basics of home network security.
+gpt-5.5__internal_memo__01.txt	gpt-5.5	internal_memo	159	Write a memo to staff announcing a new expense policy.
+gpt-5.5__internal_memo__02.txt	gpt-5.5	internal_memo	202	Write a memo to staff about returning to the office three days a week.
+gpt-5.5__internal_memo__03.txt	gpt-5.5	internal_memo	283	Write a memo announcing a reorganization of the customer service team.
+gpt-5.5__internal_memo__04.txt	gpt-5.5	internal_memo	148	Write a memo to staff about a new mandatory security training.
+gpt-5.5__internal_memo__05.txt	gpt-5.5	internal_memo	509	Write a memo explaining changes to the annual review process.
+gpt-5.5__product_update__01.txt	gpt-5.5	product_update	221	Write a product update announcing a redesigned dashboard.
+gpt-5.5__product_update__02.txt	gpt-5.5	product_update	244	Write a product update explaining that we're sunsetting an old integration.
+gpt-5.5__product_update__03.txt	gpt-5.5	product_update	160	Write a product update about improved mobile performance.
+gpt-5.5__product_update__04.txt	gpt-5.5	product_update	190	Write a product update announcing single sign-on support.
+gpt-5.5__product_update__05.txt	gpt-5.5	product_update	218	Write a product update about a new reporting feature.
+gpt-5.5__recommendation__01.txt	gpt-5.5	recommendation	263	Write a letter of recommendation for a student applying to graduate school.
+gpt-5.5__recommendation__02.txt	gpt-5.5	recommendation	313	Write a letter of recommendation for an employee applying for an internal promotion.
+gpt-5.5__recommendation__03.txt	gpt-5.5	recommendation	273	Write a performance review for a sales rep who exceeded quota but struggled with paperwork.
+gpt-5.5__recommendation__04.txt	gpt-5.5	recommendation	325	Write a performance review for a developer who is technically strong and hard to work with.
+gpt-5.5__recommendation__05.txt	gpt-5.5	recommendation	293	Write a letter of recommendation for a colleague applying for a board seat.

@@ -1,0 +1,41 @@
+file	model	genre	words	prompt
+chat-latest__linkedin__01.txt	chat-latest	linkedin	157	Write a LinkedIn post about why our team switched to a four-day week.
+chat-latest__linkedin__02.txt	chat-latest	linkedin	84	Write a LinkedIn post announcing that I've been promoted to director of operations.
+chat-latest__linkedin__03.txt	chat-latest	linkedin	133	Write a LinkedIn post about what I learned from a project that failed.
+chat-latest__linkedin__04.txt	chat-latest	linkedin	124	Write a LinkedIn post about hiring for attitude over experience.
+chat-latest__linkedin__05.txt	chat-latest	linkedin	110	Write a LinkedIn post about attending my first industry conference in five years.
+chat-latest__cover_letter__01.txt	chat-latest	cover_letter	207	Write a cover letter for an operations manager job at a logistics company.
+chat-latest__cover_letter__02.txt	chat-latest	cover_letter	212	Write a cover letter for a marketing coordinator role at a nonprofit.
+chat-latest__cover_letter__03.txt	chat-latest	cover_letter	195	Write a cover letter for a junior software developer position.
+chat-latest__cover_letter__04.txt	chat-latest	cover_letter	230	Write a cover letter for a school administrator job.
+chat-latest__cover_letter__05.txt	chat-latest	cover_letter	234	Write a cover letter for an accounting role at a mid-sized manufacturer.
+chat-latest__newsletter__01.txt	chat-latest	newsletter	429	Write a newsletter issue about how to build a morning routine that sticks.
+chat-latest__newsletter__02.txt	chat-latest	newsletter	590	Write a newsletter issue about managing money in your twenties.
+chat-latest__newsletter__03.txt	chat-latest	newsletter	544	Write a newsletter issue about why most productivity systems fail.
+chat-latest__newsletter__04.txt	chat-latest	newsletter	406	Write a newsletter issue about dealing with burnout at work.
+chat-latest__newsletter__05.txt	chat-latest	newsletter	646	Write a newsletter issue about the psychology of habit change.
+chat-latest__marketing_email__01.txt	chat-latest	marketing_email	107	Write a marketing email announcing a new feature in our project management app.
+chat-latest__marketing_email__02.txt	chat-latest	marketing_email	100	Write a marketing email for a local gym's January membership offer.
+chat-latest__marketing_email__03.txt	chat-latest	marketing_email	108	Write a marketing email inviting customers to a webinar on tax changes.
+chat-latest__marketing_email__04.txt	chat-latest	marketing_email	99	Write a marketing email re-engaging customers who haven't logged in for 90 days.
+chat-latest__marketing_email__05.txt	chat-latest	marketing_email	93	Write a marketing email launching a new line of running shoes.
+chat-latest__blog_post__01.txt	chat-latest	blog_post	771	Write a blog post about choosing a password manager.
+chat-latest__blog_post__02.txt	chat-latest	blog_post	828	Write a blog post about remote work and company culture.
+chat-latest__blog_post__03.txt	chat-latest	blog_post	722	Write a blog post about how to run a better meeting.
+chat-latest__blog_post__04.txt	chat-latest	blog_post	1020	Write a blog post about what to look for when buying a used car.
+chat-latest__blog_post__05.txt	chat-latest	blog_post	740	Write a blog post about the basics of home network security.
+chat-latest__internal_memo__01.txt	chat-latest	internal_memo	155	Write a memo to staff announcing a new expense policy.
+chat-latest__internal_memo__02.txt	chat-latest	internal_memo	176	Write a memo to staff about returning to the office three days a week.
+chat-latest__internal_memo__03.txt	chat-latest	internal_memo	184	Write a memo announcing a reorganization of the customer service team.
+chat-latest__internal_memo__04.txt	chat-latest	internal_memo	94	Write a memo to staff about a new mandatory security training.
+chat-latest__internal_memo__05.txt	chat-latest	internal_memo	221	Write a memo explaining changes to the annual review process.
+chat-latest__product_update__01.txt	chat-latest	product_update	115	Write a product update announcing a redesigned dashboard.
+chat-latest__product_update__02.txt	chat-latest	product_update	125	Write a product update explaining that we're sunsetting an old integration.
+chat-latest__product_update__03.txt	chat-latest	product_update	69	Write a product update about improved mobile performance.
+chat-latest__product_update__04.txt	chat-latest	product_update	104	Write a product update announcing single sign-on support.
+chat-latest__product_update__05.txt	chat-latest	product_update	105	Write a product update about a new reporting feature.
+chat-latest__recommendation__01.txt	chat-latest	recommendation	317	Write a letter of recommendation for a student applying to graduate school.
+chat-latest__recommendation__02.txt	chat-latest	recommendation	236	Write a letter of recommendation for an employee applying for an internal promotion.
+chat-latest__recommendation__03.txt	chat-latest	recommendation	130	Write a performance review for a sales rep who exceeded quota but struggled with paperwork.
+chat-latest__recommendation__04.txt	chat-latest	recommendation	204	Write a performance review for a developer who is technically strong and hard to work with.
+chat-latest__recommendation__05.txt	chat-latest	recommendation	229	Write a letter of recommendation for a colleague applying for a board seat.

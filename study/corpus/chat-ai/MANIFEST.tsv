@@ -1,0 +1,41 @@
+file	model	genre	words	prompt
+claude-opus-5__decision__01.txt	claude-opus-5	decision	451	Should I use Postgres or MongoDB for a booking system with about 50,000 records?
+claude-opus-5__decision__02.txt	claude-opus-5	decision	419	We're deciding between hiring a second developer or paying for more contractors. Which way should we go?
+claude-opus-5__decision__03.txt	claude-opus-5	decision	551	Should I take a 15% pay cut for a fully remote job?
+claude-opus-5__decision__04.txt	claude-opus-5	decision	699	Is it worth moving our small office to a four-day week?
+claude-opus-5__decision__05.txt	claude-opus-5	decision	487	Should we rebuild our ten-year-old internal tool or keep patching it?
+claude-opus-5__critique_plan__01.txt	claude-opus-5	critique_plan	425	Here's my plan for migrating 400 users to a new email system over one weekend. What am I missing?
+claude-opus-5__critique_plan__02.txt	claude-opus-5	critique_plan	788	My plan is to run ads for six weeks, measure signups, and decide from there. Poke holes in it.
+claude-opus-5__critique_plan__03.txt	claude-opus-5	critique_plan	559	I want to teach myself data analysis in three months by doing one project a week. Thoughts?
+claude-opus-5__critique_plan__04.txt	claude-opus-5	critique_plan	561	We're going to fix our support backlog by hiring two temps for a month. What could go wrong?
+claude-opus-5__critique_plan__05.txt	claude-opus-5	critique_plan	459	My plan for the quarter is to cut meetings by half and see what breaks. Reactions?
+claude-opus-5__explain__01.txt	claude-opus-5	explain	917	Explain how DNS actually resolves a domain name.
+claude-opus-5__explain__02.txt	claude-opus-5	explain	498	Explain what a p-value is to someone who never took statistics.
+claude-opus-5__explain__03.txt	claude-opus-5	explain	764	Explain why software estimates are always wrong.
+claude-opus-5__explain__04.txt	claude-opus-5	explain	641	Explain how compound interest works and why it surprises people.
+claude-opus-5__explain__05.txt	claude-opus-5	explain	537	Explain the difference between encryption and hashing.
+claude-opus-5__diagnose__01.txt	claude-opus-5	diagnose	714	Our website is slow every weekday at 9am and fine the rest of the day. Where do I start?
+claude-opus-5__diagnose__02.txt	claude-opus-5	diagnose	554	Two of my team members stopped talking to each other and the work is suffering. What now?
+claude-opus-5__diagnose__03.txt	claude-opus-5	diagnose	479	My laptop battery went from a full day to three hours in about a month. What's happening?
+claude-opus-5__diagnose__04.txt	claude-opus-5	diagnose	684	Signups are steady but activation dropped 30% last month. How do I find the cause?
+claude-opus-5__diagnose__05.txt	claude-opus-5	diagnose	516	Customers keep asking questions our documentation already answers. Why?
+claude-opus-5__compare__01.txt	claude-opus-5	compare	440	What's the difference between a VPN and a proxy, practically speaking?
+claude-opus-5__compare__02.txt	claude-opus-5	compare	817	Compare renting and buying a home for someone who moves every four years.
+claude-opus-5__compare__03.txt	claude-opus-5	compare	487	What's the real difference between a CFO and a controller?
+claude-opus-5__compare__04.txt	claude-opus-5	compare	695	Compare index funds and individual stocks for a first-time investor.
+claude-opus-5__compare__05.txt	claude-opus-5	compare	786	How do a co-op and a condo actually differ for the owner?
+claude-opus-5__review_work__01.txt	claude-opus-5	review_work	367	Read this and tell me if it's any good: 'Our mission is to empower businesses to unlock their full potential through innovative solutions.'
+claude-opus-5__review_work__02.txt	claude-opus-5	review_work	225	Is this a good subject line? 'Quick question about your account'
+claude-opus-5__review_work__03.txt	claude-opus-5	review_work	370	Here's my resume summary: 'Results-driven professional with 10+ years of experience.' Fix it or tell me why it's fine.
+claude-opus-5__review_work__04.txt	claude-opus-5	review_work	241	I wrote this to a client: 'Sorry for the delay, things have been crazy here.' Should I send it?
+claude-opus-5__review_work__05.txt	claude-opus-5	review_work	316	My about page opens with 'Founded in 2019, we are a team of passionate experts.' Thoughts?
+claude-opus-5__personal__01.txt	claude-opus-5	personal	489	I got an offer from a competitor and my current boss just asked me directly if I'm interviewing. What do I say?
+claude-opus-5__personal__02.txt	claude-opus-5	personal	435	My friend asked me to invest in her business and I don't think it will work. How do I answer?
+claude-opus-5__personal__03.txt	claude-opus-5	personal	233	I've been in the same job for eleven years and I can't tell if that's stability or being stuck.
+claude-opus-5__personal__04.txt	claude-opus-5	personal	570	My neighbor's tree drops branches in my yard every storm. How do I raise it without starting a feud?
+claude-opus-5__personal__05.txt	claude-opus-5	personal	386	I said yes to organizing the family reunion and now I regret it. What are my options?
+claude-opus-5__evaluate_claim__01.txt	claude-opus-5	evaluate_claim	422	Someone told me you should never pay off a low-interest mortgage early. Is that right?
+claude-opus-5__evaluate_claim__02.txt	claude-opus-5	evaluate_claim	286	My coworker says standing desks don't actually do anything. True?
+claude-opus-5__evaluate_claim__03.txt	claude-opus-5	evaluate_claim	311	Is it true that you shouldn't put a hot laptop battery in the fridge?
+claude-opus-5__evaluate_claim__04.txt	claude-opus-5	evaluate_claim	439	A vendor claims their tool will cut our onboarding time in half. How should I read that?
+claude-opus-5__evaluate_claim__05.txt	claude-opus-5	evaluate_claim	475	I read that most startups fail because of cofounder conflict. Does that hold up?
