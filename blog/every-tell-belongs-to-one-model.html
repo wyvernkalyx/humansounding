@@ -86,11 +86,21 @@
 
     <p class="body">The short version: no single rule in the checker describes AI writing in general. Em dashes are a Claude habit. The delve-and-meticulous vocabulary is a Gemini habit. Each model has its own fingerprint, and the fingerprints differ from each other more than several of them differ from human writing.</p>
 
+    <h2>A friend sent me a text</h2>
+
+    <p class="body">While I was writing this up, a friend sent me a message he told me afterwards was written entirely by AI. It had an em dash in it. I pasted it into my own checker and got back the word "Clean."</p>
+
+    <p class="body">The reason is arithmetic. The dash rule allows one em dash per two hundred words, with a floor of one. Below four hundred words that floor is the only thing that matters, so a single em dash can never be flagged, no matter how short the message is or how dense the dashes are in it. One dash in ninety words works out to eleven per thousand, which is about three times the rate in published human writing and, as it turns out, almost exactly what Claude averages. The checker waved it through anyway.</p>
+
+    <p class="body">The rest of the rules had nothing to work with either. Contrastive negation spans two sentences. Rule-of-three needs three clauses. The cadence check refuses to run under eighty words on purpose. A text message is simply below the resolution of the instrument.</p>
+
+    <p class="body">None of that is the part that bothers me. The part that bothers me is the word "Clean." This site promises never to tell anyone their writing is human, and on a ninety-word sample it just did. A short paste should say that it is too short to measure. It does now; that was the first thing I changed.</p>
+
     <h2>How the measurement works</h2>
 
     <p class="body">I generated 40 documents from each model, five each in eight genres: LinkedIn posts, cover letters, newsletters, marketing emails, blog posts, internal memos, product updates and recommendation letters. The prompts never mention style. They do not say "sound natural" and they do not say "write like a robot," because a prompt that shapes the prose means I would be measuring my own prompt instead of the model.</p>
 
-    <p class="body">Then I ran the site's own rules across all of it. The rules get read out of the checker page at runtime rather than copied into the study, so the measurement cannot drift away from what visitors actually use. Rates are per thousand words, with a bootstrap confidence interval that resamples whole documents, so one long strange article cannot manufacture a tight number.</p>
+    <p class="body">Then I ran the site's own rules across all of it. The rules get read out of the checker page at runtime rather than copied into the study, so the measurement cannot drift away from what visitors actually use. Rates are per thousand words, and each one carries a range: the band the true figure would plausibly fall in if I ran the whole thing again with different documents. That range is built by resampling whole documents rather than sentences, so one long strange article cannot manufacture a narrow band. When I say two sets separate, I mean their two ranges do not touch, which is the difference between a real gap and a lucky sample.</p>
 
     <p class="body">The human comparison set is 40 Medium articles published between 2016 and November 2022, which is to say before ChatGPT existed. Self-published long-form prose by adults writing for an audience, which is roughly the register I asked the machines for.</p>
 
@@ -104,9 +114,9 @@
 
     <h2>The em dash result got smaller every time I looked at it</h2>
 
-    <p class="body">Claude Opus 5 runs 11.05 em dashes per thousand words, one every ninety words or so. Against a set of casual blog posts from 2004, the human rate was 0.18. A 61x gap, and the most exciting number I have ever produced.</p>
+    <p class="body">Claude Opus 5 runs 11.05 em dashes per thousand words, one every ninety words or so. Against a set of casual blog posts from 2004, the human rate was 0.18, which is one dash every five thousand words or so. A 61x gap, and the most exciting number I have ever produced.</p>
 
-    <p class="body">It did not survive a better comparison. Those 2004 bloggers were mostly teenagers typing into a browser box in an era when an em dash meant knowing an alt code. Against the Medium articles, the human rate is 3.83, not 0.18. Same punctuation mark, two sets of human beings, twenty-one times apart.</p>
+    <p class="body">It did not survive a better comparison. Those 2004 bloggers were mostly teenagers typing into a browser box in an era when an em dash meant knowing an alt code. Against the Medium articles, the human rate is 3.83, one every 260 words, not 0.18. Same punctuation mark, two sets of human beings, twenty-one times apart.</p>
 
     <p class="body">So the gap went from 61x to 2.9x. It is still real and the intervals still do not overlap. But anyone quoting a human em dash rate without saying which humans is quoting noise, and for two days that person was me.</p>
 
@@ -124,9 +134,9 @@
 
     <p class="body">No rule separated any vendor from the human set at 95 percent confidence. Zero, in either comparison.</p>
 
-    <p class="body">Em dashes, the rule I had just verified twice, describe Claude and nobody else. OpenAI's chat model runs 3.30 per thousand words and Gemini runs 2.70, both at or below the human 3.83. My best rule is useless against ChatGPT output and points slightly the wrong way.</p>
+    <p class="body">Em dashes, the rule I had just verified twice, describe Claude and nobody else. OpenAI's chat model runs 3.30 per thousand words and Gemini runs 2.70, one dash every 300 and every 370 words, both at or below the human 3.83. My best rule is useless against ChatGPT output and points slightly the wrong way.</p>
 
-    <p class="body">The 2023 vocabulary survived too. It moved. Gemini fires delve, meticulous and pivotal at 1.01 per thousand words, three times the human rate and eleven times what the other two models manage. That cleared up something that had been bothering me in the site's live analytics, where the slop-word rule was the second most-fired rule on real visitor pastes while my Claude corpus insisted the vocabulary was extinct. Both things were true. People were pasting Gemini.</p>
+    <p class="body">The 2023 vocabulary survived too. It moved. Gemini fires delve, meticulous and pivotal about once every thousand words, three times the human rate and eleven times what the other two models manage. That cleared up something that had been bothering me in the site's live analytics, where the slop-word rule was the second most-fired rule on real visitor pastes while my Claude corpus insisted the vocabulary was extinct. Both things were true. People were pasting Gemini.</p>
 
     <h2>The finding I had to kill</h2>
 
@@ -153,16 +163,6 @@
 
     <p class="body">Ten documents per model cell is thin, and that table carries no confidence intervals. The directions are the finding. The decimal places are not.</p>
 
-    <h2>Then a friend sent me a text</h2>
-
-    <p class="body">While I was writing this up, a friend sent me a message he told me afterwards was written entirely by AI. It had an em dash in it. I pasted it into my own checker and got back the word "Clean."</p>
-
-    <p class="body">The reason is arithmetic. The dash rule allows one em dash per two hundred words, with a floor of one. Below four hundred words that floor is the only thing that matters, so a single em dash can never be flagged no matter how short the message is. One dash in ninety words is a rate of eleven per thousand, right at the Claude average, and the checker waves it through.</p>
-
-    <p class="body">The rest of the rules had nothing to work with either. Contrastive negation spans two sentences. Rule-of-three needs three clauses. The cadence check refuses to run under eighty words on purpose. A text message is simply below the resolution of the instrument.</p>
-
-    <p class="body">None of that is the part that bothers me. The part that bothers me is the word "Clean." This site promises never to tell anyone their writing is human, and on a ninety-word sample it just did. A short paste should say that it is too short to measure, and soon it will.</p>
-
     <h2>What is actually true</h2>
 
     <p class="body">Em dashes are a Claude fingerprint. One model in four.</p>
@@ -177,7 +177,7 @@
 
     <h2>What changes here</h2>
 
-    <p class="body">The trends page cannot keep making flat claims about tells, so it gets a model column. The em dash threshold was calibrated on Claude alone and has to be reconsidered now that I know it barely fires on two of the four models while catching a third of human articles. Two severity changes I made on Monday came from Claude evidence and need the same treatment. Short pastes stop returning a verdict they cannot support.</p>
+    <p class="body">Short pastes no longer return a verdict they cannot support; that one is already live. Three changes are not. The trends page still makes flat claims about tells and needs a column saying which model each one belongs to. The em dash threshold I retuned to one per 200 was calibrated on Claude alone. It barely fires on two of the four models and still catches a third of human articles, so it needs looking at again across vendors rather than against one. Two severity changes I made the same week came from the same single-vendor evidence and need the same treatment.</p>
 
     <p class="body">The checker stays what it has always been, which is an editing prompt rather than a verdict. It flags the spot and leaves you to decide whether you meant it. That was a design caution when I wrote it. Two weeks of measurement have turned it into the accurate description.</p>
 
