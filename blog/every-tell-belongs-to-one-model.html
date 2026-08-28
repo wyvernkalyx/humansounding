@@ -81,11 +81,11 @@
     <div class="kicker">Study · August 27, 2026</div>
     <h1>Every tell I tested turned out to belong to one model</h1>
 
-    <p class="body"><em>How this was written: the study is mine and so are the calls about what to measure and what to throw out. The prose was drafted by Claude from my working notes and revised on my direction. This note sits at the top rather than the bottom because a piece about spotting machine writing should not make you read to the end to find out.</em></p>
+    <p class="body"><em>How this was written: the study is mine, and so are the calls about what to measure and what to throw out. Claude drafted the prose from my working notes, and I revised it. This note sits at the top rather than the bottom because a piece about spotting machine writing should not make you read to the end to find out.</em></p>
 
-    <p class="body">For me the purpose of this site is to keep track of the writing tells in the most popular LLM models. The rules in the checker and in the instruction file are living documents. They will keep changing as new research comes out and as the model makers change how their models write. They will also change when I go and measure something myself. Last week I tested the first generation of those rules with a more rigorous approach.</p>
+    <p class="body">For me, the purpose of this site is to keep track of the writing tells in the most popular LLM models. The rules in the checker and in the instruction file are living documents. They will keep changing as new research comes out and as the model makers change how their models write. They will also change when I go and measure something myself. Last week I tested the first generation of those rules with a more rigorous approach.</p>
 
-    <p class="body">The fifteen rules I launched with came out of other people's research, most of it describing how chatbots wrote in 2023 and 2024. Seventeen days later those papers say exactly what they said on launch day. What changed is that I stopped borrowing numbers and started making my own. I generated 160 documents across four models, built a human baseline out of pre-ChatGPT writing, and ran the site's own rules over all of it.</p>
+    <p class="body">The fifteen rules I launched with came out of other people's research, most of it describing how chatbots wrote in 2023 and 2024. Seventeen days later, those papers say exactly what they said on launch day. What changed is that I stopped borrowing numbers and started making my own. I generated 160 documents across four models, built a human baseline out of pre-ChatGPT writing, and ran the site's own rules over all of it.</p>
 
     <p class="body">The short version: no single rule in the checker describes AI writing in general. Em dashes are a Claude habit. The delve-and-meticulous vocabulary is a Gemini habit. Each model has its own fingerprint, and the fingerprints differ from each other more than several of them differ from human writing.</p>
 
@@ -97,25 +97,25 @@
 
     <h2>A friend sent me a text</h2>
 
-    <p class="body">While I was writing this up, a friend sent me a message he told me afterwards was written entirely by AI. It had an em dash in it. I pasted it into my own checker and got back the word "Clean."</p>
+    <p class="body">While I was writing this up, a friend sent me a message he told me afterward was written entirely by AI. It had an em dash in it. I pasted it into my own checker and got back the word "Clean."</p>
 
-    <p class="body">The reason is arithmetic. The dash rule allows one em dash per two hundred words, with a floor of one. Below four hundred words that floor is the only thing that matters, so a single em dash can never be flagged, no matter how short the message is or how dense the dashes are in it. One dash in ninety words works out to eleven per thousand, which is about three times the rate in published human writing and, as it turns out, almost exactly what Claude averages. The checker waved it through anyway.</p>
+    <p class="body">The reason is arithmetic. The dash rule allows one em dash per two hundred words, with a floor of one. Below four hundred words, that floor is the only thing that matters, so a single em dash can never be flagged, no matter how short the message is or how dense the dashes are in it. One dash in ninety words works out to eleven per thousand, which is about three times the rate in published human writing and, as it turns out, almost exactly what Claude averages. The checker waved it through anyway.</p>
 
     <p class="body">The rest of the rules had nothing to work with either. Contrastive negation spans two sentences. Rule-of-three needs three clauses. The cadence check refuses to run under eighty words on purpose. A text message is simply below the resolution of the instrument.</p>
 
-    <p class="body">None of that is the part that bothers me. The part that bothers me is the word "Clean." This site promises never to tell anyone their writing is human, and on a ninety-word sample it just did. A short paste should say that it is too short to measure. It does now; that was the first thing I changed.</p>
+    <p class="body">None of that is what bothers me. What bothers me is the word "Clean." This site promises never to tell anyone their writing is human, and on a ninety-word sample it just did. A short paste should say that it is too short to measure. It does now; that was the first thing I changed.</p>
 
     <h2>How the measurement works</h2>
 
-    <p class="body">I generated 40 documents from each model, five each in eight genres: LinkedIn posts, cover letters, newsletters, marketing emails, blog posts, internal memos, product updates and recommendation letters. The prompts never mention style. They do not say "sound natural" and they do not say "write like a robot," because a prompt that shapes the prose means I would be measuring my own prompt instead of the model.</p>
+    <p class="body">I generated 40 documents from each model, five each in eight genres: LinkedIn posts, cover letters, newsletters, marketing emails, blog posts, internal memos, product updates, and recommendation letters. The prompts never mention style. They do not say "sound natural" and they do not say "write like a robot," because a prompt that shapes the prose means I would be measuring my own prompt instead of the model.</p>
 
-    <p class="body">Then I ran the site's own rules across all of it. The rules get read out of the checker page at runtime rather than copied into the study, so the measurement cannot drift away from what visitors actually use. Rates are per thousand words, and each one carries a range: the band the true figure would plausibly fall in if I ran the whole thing again with different documents. That range is built by resampling whole documents rather than sentences, so one long strange article cannot manufacture a narrow band. When I say two sets separate, I mean their two ranges do not touch, which is the difference between a real gap and a lucky sample.</p>
+    <p class="body">Then I ran the site's own rules across all of it. The rules are read from the checker page at runtime rather than copied into the study, so the measurement cannot drift away from what visitors actually use. Rates are per thousand words, and each one carries a range: the band the true figure would plausibly fall in if I ran the whole thing again with different documents. That range is built by resampling whole documents rather than sentences, so one long strange article cannot manufacture a narrow band. When I say two sets separate, I mean their two ranges do not touch, which is the difference between a real gap and a lucky sample.</p>
 
     <p class="body">The human comparison set is 40 Medium articles published between 2016 and November 2022, which is to say before ChatGPT existed. Self-published long-form prose by adults writing for an audience, which is roughly the register I asked the machines for.</p>
 
     <h2>Nine rules out of fifteen caught nothing</h2>
 
-    <p class="body">First run, Claude only, 21,814 words. Stock openers fired zero times. So did chatbot artifacts, inflated symbolism, vague attribution, summary phrases and fragment triplets. The whole delve-and-meticulous vocabulary family fired twice in the entire corpus.</p>
+    <p class="body">First run, Claude only, 21,814 words. Stock openers fired zero times. So did chatbot artifacts, inflated symbolism, vague attribution, summary phrases, and fragment triplets. The whole delve-and-meticulous vocabulary family fired twice in the entire corpus.</p>
 
     <p class="body">Those rules were built from how models behaved in 2023 and 2024. The labs tuned that behavior out, which is the thing this site has been saying since the day it launched. Watching it happen to my own rules was a different experience from writing it on a homepage.</p>
 
@@ -135,7 +135,7 @@
 
     <p class="body">Eighteen of those 40 human articles tripped the rule. Forty-five percent of ordinary published human prose, called out as suspicious by a site that promises to find the robot bits. The threshold came from a "humans average one per 300" claim that my own corpus does not support for modern long-form writing.</p>
 
-    <p class="body">It is one per 200 now, which flags 13 of those 40 human articles while still catching 38 of the 40 AI ones. Same recall, fewer false alarms. The distributions genuinely overlap, so there is no line that separates them cleanly and I have stopped looking for one.</p>
+    <p class="body">It is one per 200 now, which flags 13 of those 40 human articles while still catching 38 of the 40 AI ones. Same recall, fewer false alarms. The distributions genuinely overlap, so no line separates them cleanly, and I stopped looking for one.</p>
 
     <h2>Then I added the other models and it came apart</h2>
 
@@ -143,7 +143,7 @@
 
     <p class="body">No rule separated any vendor from the human set at 95 percent confidence. Zero, in either comparison.</p>
 
-    <p class="body">Em dashes, the rule I had just verified twice, describe Claude and nobody else. OpenAI's chat model runs 3.30 per thousand words and Gemini runs 2.70, one dash every 300 and every 370 words, both at or below the human 3.83. My best rule is useless against ChatGPT output and points slightly the wrong way.</p>
+    <p class="body">Em dashes, the rule I had just verified twice, describe Claude and nobody else. OpenAI's chat model runs 3.30 per thousand words, and Gemini runs 2.70, one dash every 300 and every 370 words, both at or below the human 3.83. My best rule is useless against ChatGPT output and points slightly the wrong way.</p>
 
     <p class="body">The 2023 vocabulary survived too. It moved. Gemini fires delve, meticulous and pivotal about once every thousand words, three times the human rate and eleven times what the other two models manage. That cleared up something that had been bothering me in the site's live analytics, where the slop-word rule was the second most-fired rule on real visitor pastes while my Claude corpus insisted the vocabulary was extinct. Both things were true. People were pasting Gemini.</p>
 
@@ -153,7 +153,7 @@
 
     <p class="body">GPT-5.5 showed contrastive negation at 1.90 per thousand words against the human 0.15, the widest separation in the whole study. I started writing it up.</p>
 
-    <p class="body">Then I checked it per genre. All 35 hits were in blog posts and newsletters. Zero in the other five genres. Those five are also the short ones, between 725 and 1,467 words each, against roughly 6,000 for blogs and newsletters. The prompts name no word count at all, so each model wrote whatever it judged the job needed, and they disagreed wildly about that. Every Claude document landed between 507 and 627 words. OpenAI's chat model ran a median of 195. A rule that spans two sentences cannot fire inside a 130-word marketing email.</p>
+    <p class="body">Then I checked it per genre. All 35 hits were in blog posts and newsletters. Zero in the other five genres. Those five are also the short ones, between 725 and 1,467 words each, against roughly 6,000 for blogs and newsletters. The prompts name no word count at all, so each model wrote whatever it judged the job needed, and they disagreed wildly. Every Claude document landed between 507 and 627 words. OpenAI's chat model ran a median of 195. A rule that spans two sentences cannot fire inside a 130-word marketing email.</p>
 
     <p class="body">The effect was tangled up with genre and with length at the same time. My human set is all long-form, so the only fair comparison restricts every model to long-form too. That table, per thousand words:</p>
 
@@ -182,11 +182,11 @@
 
     <p class="body">Negative parallelism, the one everybody cites, runs above the human rate in two models and below it in the other two.</p>
 
-    <p class="body">Every rule in my checker turns out to describe a particular model. The models disagree with each other more than several of them disagree with people.</p>
+    <p class="body">Every rule in my checker describes a particular model. The models disagree with each other more than several of them disagree with people.</p>
 
     <h2>What changes here</h2>
 
-    <p class="body">Short pastes no longer return a verdict they cannot support; that one is already live. Three changes are not. The trends page still makes flat claims about tells and needs a column saying which model each one belongs to. The em dash threshold I retuned to one per 200 was calibrated on Claude alone. It barely fires on two of the four models and still catches a third of human articles, so it needs looking at again across vendors rather than against one. Two severity changes I made the same week came from the same single-vendor evidence and need the same treatment.</p>
+    <p class="body">Short pastes no longer return a verdict they cannot support; that one is already live. Three changes are not. The trends page still makes flat claims about tells and needs a column saying which model each one belongs to. The em dash threshold I retuned to one per 200 was calibrated on Claude alone. It barely fires on two of the four models and still catches a third of human articles, so it needs to be looked at again across vendors rather than against one. Two severity changes I made the same week came from the same single-vendor evidence and need the same treatment.</p>
 
     <p class="body">The checker stays what it has always been, which is an editing prompt rather than a verdict. It flags the spot and leaves you to decide whether you meant it. That was a design caution when I wrote it. Two weeks of measurement have turned it into the accurate description.</p>
 
