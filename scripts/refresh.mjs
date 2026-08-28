@@ -337,7 +337,7 @@ Rules — these are hard constraints:
   - "caption": one line under 80 characters naming the week's tell, e.g. "zero commas in 18 words: this week's tell".
 - "changes": an array of 2 to 5 short plain-language strings describing what genuinely changed or was found THIS run. Each under 200 characters, naming its source where one applies. If nothing material changed, return exactly ["No material changes this week; figures re-verified against their sources."].
 - Keep every string concise: tell < 120 chars, evidence < 300, dirLabel < 80, note < 200.
-- Style, enforced sitewide because the site tracks these habits: never use em dashes in ANY string you write (use commas, colons, or semicolons); no "not just X, but Y" constructions; no rule-of-three padding; none of the vocabulary on the site's own banned list (seamless, robust, leverage, delve, and so on). Quoted evidence and the specimen keep their tells deliberately; your own prose does not.
+- Style, enforced sitewide because the site tracks these habits: use the serial comma, so a list of three or more takes a comma before the final "and" or "or" ("ChatGPT, Claude, Gemini, and Grok"); never use em dashes in ANY string you write (use commas, colons, or semicolons); no "not just X, but Y" constructions; no rule-of-three padding; none of the vocabulary on the site's own banned list (seamless, robust, leverage, delve, and so on). Quoted evidence and the specimen keep their tells deliberately; your own prose does not.
 
 Current JSON:
 ${JSON.stringify(current)}`;
