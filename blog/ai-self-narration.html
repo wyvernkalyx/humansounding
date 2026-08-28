@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete every sentence that's about the writing | HumanSounding</title>
+<meta name="description" content="AI prose addresses an evaluator; human prose addresses a reader. Six shapes that habit takes, a one-second delete test for catching it, and what happened when I measured it across 536 documents.">
+<link rel="canonical" href="https://humansounding.com/blog/ai-self-narration.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="Delete every sentence that's about the writing">
+<meta property="og:description" content="Rating your own confidence, announcing your integrity, apologising for the last draft. A one-second test for catching all of it.">
+<meta property="og:url" content="https://humansounding.com/blog/how-this-site-was-built.html">
+<meta property="og:image" content="https://humansounding.com/og-self-narration.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"I had an AI build a website that catches AI writing","description":"The build log behind HumanSounding: the weekly robot, the honesty rules, the embarrassing parts, and why this article had to pass its own checker.","datePublished":"2026-08-11","dateModified":"2026-08-11","author":{"@type":"Organization","name":"HumanSounding","url":"https://humansounding.com/"},"mainEntityOfPage":"https://humansounding.com/blog/how-this-site-was-built.html"}
+</script>
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  article { padding-top: 40px; }
+  .kicker { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
+  article h1 { font-size: 30px; margin: 0 0 18px; letter-spacing: -0.5px; line-height: 1.25; }
+  article h2 { font-size: 20px; margin: 30px 0 10px; letter-spacing: -0.3px; }
+  article p.body { color: var(--ink-1); font-size: 16.5px; line-height: 1.75; margin: 0 0 16px; }
+  :root[data-theme="dark"] article p.body { color: #e8e6e0; }
+  .srcs { font-size: 13.5px; color: var(--ink-2); border-top: 1px solid var(--border); margin-top: 32px; padding-top: 18px; }
+  .pn { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap; }
+  .pn a { font-size: 13.5px; }
+  .chartfig { margin: 26px 0 30px; }
+  .chartfig img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 8px; }
+  .chartfig figcaption { font-size: 13.5px; color: var(--ink-2); margin-top: 10px; }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html" aria-current="page">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+
+<main class="wrap-post">
+  <article>
+    <div class="kicker">Guide &middot; August 28, 2026</div>
+    <h1>Delete every sentence that's about the writing</h1>
+
+    <p class="body"><em>How this was written: the observation is mine, from a session I was in. The prose was drafted by Claude and revised on my direction. The note is at the top because a piece about machine writing shouldn't make you read to the end to find out.</em></p>
+
+    <p class="body">I asked a simple question last week. Gmail lets you hand your mailbox to somebody else, and I wanted the ceiling. How many delegates can one account have.</p>
+
+    <p class="body">The answer opened by rating its own confidence. Then it assured me it would rather admit ignorance than guess in a way that cost me money. A few messages later it announced that the number it had given me was wrong, wondered aloud where the wrong number had come from, and took responsibility.</p>
+
+    <p class="body">The figure was in there somewhere. Gmail supports 1,000 delegates per account, with a recommended ceiling of 40 concurrent users.</p>
+
+    <p class="body">I have been staring at AI writing tells for three weeks and had walked straight past this one. It reads as conscientiousness.</p>
+
+    <figure class="chartfig">
+      <img src="/og-self-narration.png" alt="A single line of text with most of it struck through, leaving one short factual clause standing. The deleted words are the writer talking about the writing.">
+      <figcaption>The delete test. Cut the sentence, and if no fact about the subject went with it, it was self-narration.</figcaption>
+    </figure>
+
+    <h2>The test takes a second</h2>
+
+    <p class="body">Cut the sentence. If the reader loses no fact about the subject, it was self-narration.</p>
+
+    <p class="body">That's the whole rule, and it's faster than any of the fifteen regexes on this site. You don't need to know what construction you're looking at. You delete it and see whether anything real went with it.</p>
+
+    <h2>Six shapes it takes</h2>
+
+    <p class="body">The first is rating your own claim. "My read, and I'll say the confidence out loud: medium-high that it consumes a seat." People don't grade their own sentences. Confidence already lives in the grammar: a declarative is confident, "probably" isn't. A confidence label is metadata, and metadata belongs in a system that gets evaluated. Say "budget for a seat" and stop.</p>
+
+    <p class="body">Then announcing your integrity. "I'd rather tell you I don't know than guess." Also "let me be transparent," "here's the honest answer," "to be fair." Claiming a virtue is thinner evidence of it than having it. Just say the thing you don't know.</p>
+
+    <p class="body">Apologising for the last draft is the third. "The delegate limit I gave you was wrong. I said 25. That's on me." Nobody arriving from a search result read the earlier version. The apology is addressed to a reader who doesn't exist. State the current fact and keep going.</p>
+
+    <p class="body">Fourth, the text describing its own body. "I spent three paragraphs back then explaining the workaround." Also word counts, section counts, "as noted above," "this article will cover." Writers don't inventory their own paragraphs. In a long reference doc that's navigation, and even then it's usually a heading's job.</p>
+
+    <p class="body">Fifth is telling the reader how much it matters. "Four things, and each one moves the decision." Also "which is the whole point" and "that changes everything." If it matters, the content carries it. Appending the significance is the writer checking that you noticed.</p>
+
+    <p class="body">The last one is reviewing your own source. "Those two are stated plainly." Also "the documentation is unusually direct about this," "to their credit, Microsoft says." I want what the source said. I did not ask for your notes on its prose style.</p>
+
+    <h2>Why I think it happens</h2>
+
+    <p class="body">A model is trained in a loop where somebody is judging the answer. So it learns to make its own reliability visible: rate the confidence, flag the uncertainty, own the error, signpost the structure, show the work.</p>
+
+    <p class="body">Those are good assistant behaviours. In published prose they're a fingerprint, because a writer addressing a reader has no reason to submit evidence of their own trustworthiness. The reader isn't grading the writer. The reader came for the fact.</p>
+
+    <p class="body">One line, if you only keep one: AI writing addresses an evaluator. Human writing addresses a reader.</p>
+
+    <p class="body">That's a hypothesis about training, not a measurement. Every rate on my <a href="/trends.html">trends page</a> comes with a source. This one comes with an argument, and I'd rather label it than dress it up.</p>
+
+    <h2>Then I went looking for it and found nothing</h2>
+
+    <p class="body">I have 456 machine-written documents sitting in a <a href="https://github.com/wyvernkalyx/humansounding/tree/main/study">public repo</a>, from four models, plus 80 human documents from before ChatGPT existed. I wrote regexes for all six shapes and ran them across the lot.</p>
+
+    <p class="body">Zero, in every model, for five of the six. No occurrences at all across 536 documents.</p>
+
+    <p class="body">The sixth was worse. "Announcing your integrity" fired at 0.04 per thousand words in human Medium articles and 0.06 in blog posts from 2004, against 0.00 in three of the four models. Humans do it more. If I had shipped that as a checker rule, it would have flagged people for sounding sincere.</p>
+
+    <p class="body">The corpus is the reason. Every document in it is one fresh answer to a prompt nobody argued with. All six examples above came from a conversation, after I had pushed back and the model was revising.</p>
+
+    <p class="body">Which is the part that convinced me the argument holds. If the behaviour comes from being judged, it should show up where there's a judge in the room and vanish where nobody is watching. That's exactly what the numbers did.</p>
+
+    <h2>What this doesn't cover</h2>
+
+    <p class="body">The rule governs published prose. Working conversation, analysis, and anything where the epistemic status is itself the deliverable all sit outside it.</p>
+
+    <p class="body">If you ask a model how confident it is, you want the confidence. If somebody hands you research resting on an inference rather than a source, you want that labelled. Strip that out of a working exchange and you get output that's less useful and less honest, which is the opposite of the point.</p>
+
+    <p class="body">The tell is confidence scoring nobody asked for, inside prose whose job is to inform.</p>
+
+    <h2>What changed</h2>
+
+    <p class="body">The <a href="/fix-your-ai.html">skill</a> has a new rule, Tier 2 number 13, carrying the delete test and the six shapes. Rule 1 picked up the softer negation variants I'd been missing: "not so much X as Y," "less a X than a Y," "rather than X, this is Y." One of those got through a full pass on my own writing last week.</p>
+
+    <p class="body">The <a href="/checker.html">checker</a> got nothing. No rule, no regex. I have no evidence about how this behaves on the text people actually paste in, and one of the six already points the wrong way against humans. This site spent a week correcting a threshold I set from one vendor's output. I'm not starting a second one.</p>
+
+    <p class="body">Run the delete test on the next thing you draft with a model. Take any sentence about the writing or about how reliable the writer is, cut it, and see whether you lost a fact. My drafts lost nothing about eight times.</p>
+
+    <p class="srcs"><b>Method:</b> the corpora, the generator and the measurement scripts are in <a href="https://github.com/wyvernkalyx/humansounding/tree/main/study">study/</a>. The self-narration regexes were written from the six examples above and run across all nine corpora; rates are per 1,000 words with a bootstrap interval over documents.</p>
+
+    <div class="pn">
+      <a href="/blog.html">‹ All posts</a>
+      <a href="/blog/every-tell-belongs-to-one-model.html">Every tell I tested turned out to belong to one model &rsaquo;</a>
+    </div>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>
+
