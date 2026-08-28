@@ -1,0 +1,124 @@
+Here are the main holes in the plan:
+
+1. **“Signups” may be the wrong success metric**
+   - Signups are often a weak proxy for business value.
+   - You may get cheap signups that never activate, buy, retain, or refer.
+   - Better: measure signup → activation → paid conversion → retention, depending on your business model.
+
+2. **Six weeks may not be enough**
+   - If your sales cycle or activation cycle is longer than six weeks, you may stop before seeing the real outcome.
+   - Example: if users typically take 30–60 days to convert, signup volume alone will mislead you.
+
+3. **No clear success threshold**
+   - “Measure signups and decide from there” is vague.
+   - Decide what would count as success before you start:
+     - Target CAC
+     - Signup conversion rate
+     - Cost per activated user
+     - Cost per paying customer
+     - Payback period
+     - Minimum volume needed
+
+4. **You may not spend enough to learn anything**
+   - If your budget is small relative to ad costs, the results may be statistically noisy.
+   - Example: 40 signups over six weeks may not tell you much.
+
+5. **Ad platforms need time and data to optimize**
+   - Meta, Google, TikTok, etc. need conversion volume to learn.
+   - If you optimize for signups but have low conversion volume, the algorithm may underperform or chase low-quality users.
+
+6. **Attribution may be messy**
+   - People may see an ad, search for you later, sign up through another channel, or use a different device.
+   - If tracking is weak, you may undercount or misattribute results.
+   - Make sure pixels, UTMs, conversion events, and analytics are set up before launch.
+
+7. **You need to separate channel performance from offer/product performance**
+   - If ads fail, it may not mean ads are a bad channel.
+   - It could be:
+     - Poor landing page
+     - Weak headline
+     - Bad audience
+     - Wrong platform
+     - Unclear offer
+     - Too much friction
+     - Pricing mismatch
+
+8. **No mention of testing**
+   - Running “ads” generically is not a real test.
+   - You should test multiple:
+     - Audiences
+     - Messages
+     - Creatives
+     - Offers
+     - Landing pages
+   - Otherwise, you may draw conclusions from one bad execution.
+
+9. **You may optimize for quantity instead of quality**
+   - Some campaigns can generate lots of low-intent leads.
+   - You need to track signup quality:
+     - Email verification
+     - Onboarding completion
+     - Feature usage
+     - Demo booked
+     - Trial started
+     - Payment method added
+     - Purchase
+
+10. **No baseline or control**
+   - If organic signups are already happening, how will you know ads caused the lift?
+   - Compare against baseline signups before the campaign.
+   - Ideally measure incremental signups, not just total signups.
+
+11. **Seasonality and timing can distort results**
+   - Six weeks may coincide with holidays, school cycles, industry events, budget resets, or unusual demand.
+   - Don’t overgeneralize from one narrow period.
+
+12. **You may kill a promising channel too early**
+   - Paid acquisition often improves through iteration.
+   - First campaigns are often inefficient because you’re learning:
+     - Which message works
+     - Which user segment converts
+     - Which landing page performs
+   - A failed first pass does not necessarily mean the channel is bad.
+
+13. **Or you may scale a bad channel too early**
+   - If signups look good but later retention is poor, scaling will burn money.
+   - You need a lagging-quality check before increasing spend aggressively.
+
+14. **No economics**
+   - You need to connect ad performance to unit economics.
+   - Basic question: “Can we acquire users profitably?”
+   - That requires some view of:
+     - CAC
+     - Gross margin
+     - LTV
+     - Conversion to revenue
+     - Retention/churn
+     - Payback period
+
+15. **No decision framework**
+   - Before launch, define what happens after six weeks:
+     - Scale if CAC < X and activation rate > Y
+     - Iterate if CAC is close but funnel has obvious leaks
+     - Pause if CAC is > X with no quality signal
+     - Change offer/channel if CTR or landing conversion is terrible
+
+A stronger version of your plan would be:
+
+> “Run a six-week paid acquisition test with predefined budget, channels, audiences, creatives, and landing pages. Track not just signups, but activated signups and downstream conversion. Compare against baseline organic signups. Define success thresholds in advance, such as max cost per activated user or paid customer. Review weekly for obvious tracking or creative issues, but make the final decision based on cohort quality and unit economics, not signup volume alone.”
+
+Minimum metrics I’d track:
+
+- Impressions
+- CTR
+- CPC
+- Landing page conversion rate
+- Cost per signup
+- Signup-to-activation rate
+- Cost per activated user
+- Signup-to-paid conversion, if applicable
+- Cost per paying customer
+- Early retention/engagement
+- Revenue or expected LTV by cohort
+
+The biggest hole: **signups alone are not enough to decide whether paid ads are working.** You need to know whether those signups are valuable, incremental, and economically viable.

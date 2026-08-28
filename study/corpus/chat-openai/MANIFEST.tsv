@@ -39,3 +39,27 @@ chat-latest__evaluate_claim__02.txt	chat-latest	evaluate_claim	136	My coworker s
 chat-latest__evaluate_claim__03.txt	chat-latest	evaluate_claim	142	Is it true that you shouldn't put a hot laptop battery in the fridge?
 chat-latest__evaluate_claim__04.txt	chat-latest	evaluate_claim	236	A vendor claims their tool will cut our onboarding time in half. How should I read that?
 chat-latest__evaluate_claim__05.txt	chat-latest	evaluate_claim	293	I read that most startups fail because of cofounder conflict. Does that hold up?
+chat-latest__decision__06.txt	chat-latest	decision	268	Do I renew a three-year software contract at a discount or go year to year?
+chat-latest__decision__07.txt	chat-latest	decision	173	Should a two-person company bother with formal performance reviews?
+chat-latest__decision__08.txt	chat-latest	decision	221	Is it a mistake to launch a product without a pricing page?
+chat-latest__critique_plan__06.txt	chat-latest	critique_plan	157	I want to move our backups from an external drive to cloud storage and stop the drive rotation. Sound right?
+chat-latest__critique_plan__07.txt	chat-latest	critique_plan	242	We plan to open a second location once the first one clears 20% margin. Is that the right trigger?
+chat-latest__critique_plan__08.txt	chat-latest	critique_plan	438	I'm going to reply to every customer review personally for a year. Talk me through it.
+chat-latest__explain__06.txt	chat-latest	explain	357	Explain what happens to my data when a company says it was breached.
+chat-latest__explain__07.txt	chat-latest	explain	194	Explain why airlines overbook flights.
+chat-latest__explain__08.txt	chat-latest	explain	261	Explain how a bill becomes law in the United States.
+chat-latest__diagnose__06.txt	chat-latest	diagnose	224	Our weekly meeting always runs over and nobody remembers what was decided. Diagnose it.
+chat-latest__diagnose__07.txt	chat-latest	diagnose	288	I keep missing deadlines even though I'm working more hours than ever. What's going on?
+chat-latest__diagnose__08.txt	chat-latest	diagnose	187	Sales says the product is fine and support says it's broken. Who do I believe?
+chat-latest__compare__06.txt	chat-latest	compare	358	Compare an electric car and a hybrid for someone who drives 12,000 miles a year.
+chat-latest__compare__07.txt	chat-latest	compare	269	What's the difference between a trademark and a copyright for a small brand?
+chat-latest__compare__08.txt	chat-latest	compare	431	Compare an in-house help desk with an outsourced one for a 60-person company.
+chat-latest__review_work__06.txt	chat-latest	review_work	102	Is 'circle back' an acceptable thing to write in a work email?
+chat-latest__review_work__07.txt	chat-latest	review_work	216	My pitch is 'Uber but for dog walking.' What's wrong with that as a description?
+chat-latest__review_work__08.txt	chat-latest	review_work	144	I named my product 'Synergize.' Be straight with me.
+chat-latest__personal__06.txt	chat-latest	personal	311	A colleague takes credit for my work in meetings. What do I actually do about it?
+chat-latest__personal__07.txt	chat-latest	personal	232	I want to go back to school at 41 and everyone thinks it's a bad idea.
+chat-latest__personal__08.txt	chat-latest	personal	271	My adult son wants to move back home and I'm not sure I want that.
+chat-latest__evaluate_claim__06.txt	chat-latest	evaluate_claim	221	Someone said breakfast being the most important meal was invented by cereal companies. Is it?
+chat-latest__evaluate_claim__07.txt	chat-latest	evaluate_claim	176	My IT guy says password rotation every 90 days is outdated advice. Is he right?
+chat-latest__evaluate_claim__08.txt	chat-latest	evaluate_claim	379	A consultant told us our website needs a full rebuild, not a redesign. How do I judge that?

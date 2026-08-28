@@ -1,0 +1,50 @@
+Because you currently have only **one** developer, this is one of the most critical inflection points for your technical capacity. Moving from one to two full-time engineers is fundamentally different from scaling an existing team.
+
+Here is a framework to help you decide, based on your current constraints.
+
+---
+
+### Choose the **Second Full-Time Developer** if:
+
+1. **You want to eliminate the "Bus Factor":** 
+   If your only developer gets sick, burns out, or quits, your company’s technical operations halt. A contractor does not solve this; they build and leave. A second full-time hire creates redundancy, institutional knowledge, and code-base shared ownership.
+2. **You have a clear, ongoing product roadmap (6+ months):** 
+   If you have a backlog of core features that will take months/years and define your business, full-time is significantly cheaper per hour and yields higher product quality.
+3. **You want your first developer to code, not just manage:** 
+   Contractors require tight specifications, frequent QA, and code reviews. If you hire multiple contractors, your solo developer will spend 50–80% of their time acting as a Project Manager/QA rather than writing code. A strong second FTE can work autonomously after onboarding.
+4. **You have at least 12–18 months of financial runway:** 
+   Full-time hires require benefits, onboarding time, and severance risk if things go south.
+
+---
+
+### Choose **Contractors** if:
+
+1. **The work is isolated, well-defined, and non-core:** 
+   Contractors excel at discrete projects with clear boundaries (e.g., migrating a database, building a standalone integration/API, revamping a marketing site, or building a mobile wrapper).
+2. **You need a very specific, temporary skill set:** 
+   If you need specialized expertise for 6 weeks (e.g., DevOps/AWS architecture, deep security auditing, WebRTC), contract it out. Don't hire a full-time generalist to do niche work.
+3. **Cash flow is uncertain (Runway < 6 months):** 
+   If your revenue is volatile or you are between funding rounds, contractors are variable costs. You can pause or terminate contracts tomorrow without the legal and morale fallout of layoffs.
+4. **Speed to start is the #1 priority:** 
+   Hiring an FTE takes 4–12 weeks, plus a 2–4 week onboarding ramp. A vetted agency or freelancer can start next Monday.
+
+---
+
+### Comparison Summary
+
+| Factor | 2nd Full-Time Dev | Contractors |
+| :--- | :--- | :--- |
+| **Commitment** | High (Equity/Salary/Retention) | Low (Pay as you go) |
+| **Context Retention** | High (Knows the "why" behind the code) | Low (Context leaves when the contract ends) |
+| **Management Burden** | High upfront, very low long-term | Continuous (requires constant specs & reviews) |
+| **Hourly Cost** | Lower ($) | Higher ($$$) |
+| **System Redundancy** | **Yes** (Solves the solo-dev risk) | **No** |
+
+---
+
+### The Recommended Path for Most Teams
+
+If your budget allows, **hire the second full-time developer**. Having a single developer is a massive operational risk. A second full-time engineer allows your tech team to do peer code reviews, share on-call duties, and challenge architectural decisions.
+
+**A Smart Hybrid Strategy:**
+If you have an immediate crunch *right now*, hire **one contractor for a tightly scoped 6-to-8 week sprint** to relieve immediate pressure while you run the hiring pipeline to find your second full-time developer.

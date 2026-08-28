@@ -1,0 +1,86 @@
+A drop from “all day” to ~3 hours in a month usually means one of two things:
+
+1. **Something is consuming much more power than before** — most common if the change was sudden.
+2. **The battery has degraded or developed a fault** — more likely if the laptop is older, runs hot, or the battery health is poor.
+
+### Common causes
+
+#### 1. A background app or update is draining power
+Recent OS updates, browser tabs, cloud sync, antivirus scans, game launchers, AI/photo indexing, or stuck processes can massively reduce battery life.
+
+**Check:**
+- **Windows:** Settings → System → Power & battery → Battery usage  
+- **macOS:** System Settings → Battery, and Activity Monitor → Energy
+
+Look for apps with unusually high battery/energy usage.
+
+#### 2. Power settings changed
+Your laptop may have switched to a higher performance mode.
+
+Check whether it’s using:
+- “Best performance” instead of “Balanced” or “Battery saver”
+- High screen brightness
+- Keyboard backlight on
+- Discrete GPU enabled
+- High refresh rate display mode, e.g. 120Hz/144Hz
+
+#### 3. Battery health has dropped
+Batteries wear out over charge cycles and heat exposure. If the battery’s maximum capacity has fallen significantly, runtime will drop.
+
+**Check battery health:**
+
+**Windows:**
+1. Open Command Prompt
+2. Run:
+   ```cmd
+   powercfg /batteryreport
+   ```
+3. Open the generated report and compare:
+   - **Design Capacity**
+   - **Full Charge Capacity**
+
+If Full Charge Capacity is much lower than Design Capacity, the battery is worn.
+
+**macOS:**
+- System Settings → Battery → Battery Health  
+or hold Option and click the battery icon on older macOS versions.
+
+If it says **Service Recommended**, the battery likely needs replacement.
+
+#### 4. Heat is accelerating drain
+If fans are running more than usual or the laptop feels hot, the CPU/GPU may be working hard or the battery may be stressed.
+
+Common causes:
+- Dust buildup
+- Blocked vents
+- Malware or runaway processes
+- Using laptop on a bed/blanket
+- Recent driver or firmware issue
+
+#### 5. Battery calibration/reporting issue
+Sometimes the battery estimate becomes inaccurate. A calibration cycle can help the percentage reading, though it won’t restore actual lost capacity.
+
+You can try:
+1. Charge to 100%
+2. Use normally until it drops low, around 5–10%
+3. Charge uninterrupted back to 100%
+
+Don’t do this frequently; it’s just for recalibration.
+
+### Warning signs
+Stop using the laptop and get it serviced if you notice:
+- Swelling or bulging
+- Trackpad/keyboard lifting
+- Battery smell, hissing, or heat while off
+- Sudden shutdowns at high percentage
+- Charger or battery getting abnormally hot
+
+### What I’d do first
+1. Check battery health/capacity.
+2. Check battery usage by app.
+3. Restart and install pending OS/driver updates.
+4. Set power mode to Balanced/Battery Saver.
+5. Reduce brightness and disable high refresh rate if available.
+6. If battery health is poor, plan for a battery replacement.
+
+If the battery health still shows good capacity, this is probably a software or power-management issue rather than the battery itself.

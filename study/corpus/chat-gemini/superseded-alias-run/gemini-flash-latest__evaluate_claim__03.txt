@@ -1,0 +1,32 @@
+**Yes, it is entirely true.** You should **never** put a hot laptop or laptop battery in the fridge (or freezer). 
+
+While it might seem logical to cool down an overheating device as quickly as possible, putting electronics in the fridge creates severe risks:
+
+---
+
+### 1. Condensation (The Biggest Danger)
+Refrigerators are cold and humid environments. When you place a hot object into a cold, moist environment, **condensation immediately forms**—not just on the outside of the laptop, but deep inside the components. 
+* Liquid water will condense directly onto the motherboard, battery terminals, and delicate circuitry.
+* Once the laptop is turned back on (or even while the battery holds a charge), this moisture will cause **short circuits, corrosion, and permanent hardware failure**.
+
+### 2. Thermal Shock
+Materials expand when heated and contract when cooled. If a hot battery or laptop is rapidly exposed to near-freezing temperatures, the materials contract unevenly and too fast. This "thermal shock" can:
+* Crack delicate internal micro-soldering.
+* Warp the battery casing.
+* Damage the internal chemical layers of the lithium-ion battery.
+
+### 3. Lithium-Ion Battery Chemistry
+Lithium-ion batteries hate extreme heat, but they also perform poorly in extreme cold:
+* Rapid chilling alters the internal resistance of the battery.
+* Sub-freezing or near-freezing temperatures can cause internal stress, permanently reducing the battery’s capacity and overall lifespan.
+
+---
+
+### What You Should Do Instead
+If your laptop or battery is dangerously hot, follow these safe steps:
+
+1. **Turn it off immediately:** Shut down the laptop to stop the processor and battery from generating more heat.
+2. **Unplug the charger:** Charging a battery generates a significant amount of heat.
+3. **Elevate it:** Place the laptop on a hard, flat surface (not a bed or blanket) and prop up the back feet with a book or bottle cap to increase airflow underneath.
+4. **Use a standard room fan:** Point an ordinary desk fan at the laptop. Room-temperature air moving quickly is the fastest and safest way to cool it down without risking condensation.
+5. **Clean the vents:** Once cool, use a can of compressed air to blow accumulated dust out of the cooling vents and fans.

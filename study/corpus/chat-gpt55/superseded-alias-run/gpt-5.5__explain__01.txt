@@ -1,0 +1,393 @@
+When you type a domain like `www.example.com` into a browser, DNS resolution is the process of turning that name into an IP address such as `93.184.216.34` or an IPv6 address.
+
+At a high level:
+
+```text
+www.example.com  →  DNS lookup  →  IP address  →  connect to server
+```
+
+But the full process has several layers.
+
+---
+
+## 1. The application asks for an IP address
+
+Your browser needs to connect to `www.example.com`, but network connections use IP addresses, not domain names.
+
+So the browser asks the operating system:
+
+> “What is the IP address for `www.example.com`?”
+
+Before going out to the internet, several local checks may happen.
+
+---
+
+## 2. Local caches are checked first
+
+DNS results are cached to avoid repeated lookups.
+
+The system may check:
+
+1. **Browser DNS cache**
+2. **Operating system DNS cache**
+3. **`hosts` file**
+   - For example, on Linux/macOS: `/etc/hosts`
+   - On Windows: `C:\Windows\System32\drivers\etc\hosts`
+
+If the answer is already cached and still valid, the process stops there.
+
+DNS cache entries have a **TTL**, or “time to live”, which tells clients how long the answer may be reused.
+
+Example:
+
+```text
+www.example.com.  300  IN  A  93.184.216.34
+```
+
+That means the result may be cached for 300 seconds.
+
+---
+
+## 3. The OS asks a recursive DNS resolver
+
+If there is no cached answer, your computer asks a **recursive resolver**.
+
+This is usually provided by:
+
+- Your ISP
+- Your company or school network
+- A public DNS provider, such as:
+  - Google DNS: `8.8.8.8`
+  - Cloudflare DNS: `1.1.1.1`
+  - Quad9: `9.9.9.9`
+
+The recursive resolver’s job is to find the answer for you.
+
+Your computer asks:
+
+```text
+What is the A or AAAA record for www.example.com?
+```
+
+Where:
+
+- `A` record = IPv4 address
+- `AAAA` record = IPv6 address
+
+---
+
+## 4. The recursive resolver checks its own cache
+
+The recursive resolver also has a cache.
+
+If someone else recently asked it for `www.example.com`, it may already know the answer.
+
+If it has a valid cached response, it returns it immediately.
+
+If not, it begins walking the DNS hierarchy.
+
+---
+
+## 5. The resolver asks a root DNS server
+
+DNS is hierarchical.
+
+For `www.example.com`, the hierarchy is:
+
+```text
+.                 root
+com               top-level domain
+example.com       domain
+www.example.com   host/subdomain
+```
+
+The recursive resolver starts by asking a **root server**:
+
+> “Where can I find information about `.com` domains?”
+
+The root server does not usually know the final IP address. Instead, it replies with a referral:
+
+> “Ask these `.com` TLD name servers.”
+
+There are 13 logical root server names, such as:
+
+```text
+a.root-servers.net
+b.root-servers.net
+...
+m.root-servers.net
+```
+
+Physically, they are distributed around the world using anycast.
+
+---
+
+## 6. The resolver asks the TLD DNS servers
+
+Next, the recursive resolver asks one of the `.com` TLD name servers:
+
+> “Where can I find DNS information for `example.com`?”
+
+Again, the `.com` server usually does not know the final IP address for `www.example.com`.
+
+Instead, it returns the authoritative name servers for `example.com`.
+
+For example:
+
+```text
+example.com.  NS  ns1.example-dns.com.
+example.com.  NS  ns2.example-dns.com.
+```
+
+These are the servers responsible for the domain.
+
+---
+
+## 7. The resolver asks the authoritative DNS server
+
+Now the recursive resolver asks the authoritative name server for `example.com`:
+
+> “What is the IP address of `www.example.com`?”
+
+The authoritative server responds with the actual DNS record.
+
+For example:
+
+```text
+www.example.com.  300  IN  A     93.184.216.34
+www.example.com.  300  IN  AAAA  2606:2800:220:1:248:1893:25c8:1946
+```
+
+The resolver now has the answer.
+
+---
+
+## 8. The resolver returns the answer to your computer
+
+The recursive resolver sends the result back to your machine.
+
+Your operating system gives it to the browser.
+
+The browser can now connect to the IP address.
+
+For HTTPS, the browser then starts a TCP connection or QUIC connection and performs TLS negotiation.
+
+---
+
+# Example DNS resolution flow
+
+For:
+
+```text
+www.example.com
+```
+
+The process looks like:
+
+```text
+Browser/OS
+   ↓
+Recursive resolver
+   ↓
+Root server: "Ask the .com servers"
+   ↓
+.com TLD server: "Ask the example.com authoritative servers"
+   ↓
+example.com authoritative server: "www.example.com is 93.184.216.34"
+   ↓
+Recursive resolver
+   ↓
+Browser/OS
+```
+
+---
+
+## What if the answer is a CNAME?
+
+Sometimes the authoritative DNS server does not return an IP address directly. It may return a **CNAME**, which is an alias.
+
+Example:
+
+```text
+www.example.com.  CNAME  example-cdn.net.
+example-cdn.net.  A      203.0.113.20
+```
+
+That means:
+
+```text
+www.example.com is an alias for example-cdn.net
+```
+
+The resolver then has to resolve `example-cdn.net` too, following the same process until it gets an `A` or `AAAA` record.
+
+CNAMEs are common with CDNs, cloud hosting, and managed services.
+
+---
+
+## What are glue records?
+
+There is a tricky case.
+
+Suppose `example.com` uses this name server:
+
+```text
+ns1.example.com
+```
+
+To find `example.com`, you need to ask `ns1.example.com`.
+
+But to find `ns1.example.com`, you need to resolve `example.com`.
+
+That is circular.
+
+To solve this, the parent zone, such as `.com`, can provide a **glue record**:
+
+```text
+example.com.      NS  ns1.example.com.
+ns1.example.com.  A   192.0.2.10
+```
+
+Glue records give the resolver enough information to reach the authoritative server.
+
+---
+
+## UDP, TCP, and ports
+
+Traditional DNS usually uses:
+
+```text
+UDP port 53
+```
+
+UDP is fast and lightweight.
+
+DNS can also use:
+
+```text
+TCP port 53
+```
+
+TCP is used when:
+
+- The response is too large for UDP
+- Zone transfers are performed
+- The server requests retry over TCP
+- DNSSEC data makes responses larger
+
+Modern encrypted DNS options also exist:
+
+- **DoT**: DNS over TLS, usually port `853`
+- **DoH**: DNS over HTTPS, usually port `443`
+- **DoQ**: DNS over QUIC
+
+---
+
+## DNS record types
+
+Common DNS record types include:
+
+| Record | Purpose |
+|---|---|
+| `A` | IPv4 address |
+| `AAAA` | IPv6 address |
+| `CNAME` | Alias to another name |
+| `MX` | Mail server for a domain |
+| `NS` | Authoritative name servers |
+| `TXT` | Text data, often SPF/DKIM/verification |
+| `SOA` | Zone authority and metadata |
+| `PTR` | Reverse DNS lookup |
+| `SRV` | Service discovery |
+
+For web browsing, the most common records are `A`, `AAAA`, and sometimes `CNAME`.
+
+---
+
+## DNSSEC, briefly
+
+DNSSEC is a security extension for DNS.
+
+Normal DNS tells you:
+
+> “Here is the IP address.”
+
+DNSSEC helps prove:
+
+> “This answer really came from the legitimate owner of the DNS zone and was not tampered with.”
+
+It uses digital signatures.
+
+DNSSEC does not encrypt DNS queries. It authenticates DNS data.
+
+Encryption is handled by technologies like DoH, DoT, or DoQ.
+
+---
+
+## Negative responses
+
+DNS can also return that something does not exist.
+
+For example:
+
+```text
+NXDOMAIN
+```
+
+Meaning:
+
+```text
+That domain name does not exist.
+```
+
+Negative responses can also be cached, usually based on values in the zone’s SOA record.
+
+---
+
+## Important distinction: recursive vs authoritative
+
+There are two major roles:
+
+### Recursive resolver
+
+This is the server your device asks.
+
+It does the work of finding the answer.
+
+Examples:
+
+```text
+1.1.1.1
+8.8.8.8
+ISP resolver
+```
+
+### Authoritative server
+
+This is the server that owns the DNS records for a domain.
+
+It gives the final answer for names in its zone.
+
+For example, the authoritative server for `example.com` knows records like:
+
+```text
+www.example.com
+mail.example.com
+api.example.com
+```
+
+---
+
+## Short version
+
+DNS resolution usually works like this:
+
+1. Browser asks OS for IP address.
+2. OS checks local cache and hosts file.
+3. OS asks a recursive DNS resolver.
+4. Resolver checks its cache.
+5. If needed, resolver asks root servers.
+6. Root servers point it to TLD servers like `.com`.
+7. TLD servers point it to the domain’s authoritative name servers.
+8. Authoritative server returns the final record.
+9. Resolver caches the answer and returns it.
+10. Browser connects to the returned IP address.

@@ -1,0 +1,86 @@
+A lot *can* go right — extra capacity can help — but the common failure modes are:
+
+### 1. Onboarding takes longer than expected
+If your support workflows, product knowledge, macros, escalation paths, and tooling are complex, the temps may spend a meaningful chunk of the month ramping instead of clearing tickets.
+
+**Risk:** permanent team loses time training them, worsening the backlog short-term.
+
+---
+
+### 2. They handle only the easiest tickets
+Temps may be able to close simple, repetitive cases, but the backlog may be dominated by messy, technical, angry, or account-specific issues.
+
+**Risk:** ticket count drops superficially while the hardest, oldest, highest-risk cases remain.
+
+---
+
+### 3. Quality and consistency may suffer
+If they rush or lack context, they may give incorrect answers, miss edge cases, over-refund, under-escalate, or create inconsistent customer experiences.
+
+**Risk:** reopened tickets, escalations, churn, or brand damage.
+
+---
+
+### 4. Security and permissions issues
+Support staff often need access to customer data, admin tools, billing systems, internal docs, or production-adjacent systems.
+
+**Risk:** overbroad access, data mishandling, compliance problems, or cleanup issues when they leave.
+
+---
+
+### 5. The backlog may be a symptom, not the problem
+If the backlog exists because of product bugs, unclear docs, poor routing, bad automation, understaffing, or a recent launch issue, temps only treat the pile — not the inflow.
+
+**Risk:** backlog returns as soon as the temps leave.
+
+---
+
+### 6. Permanent staff may get distracted
+Your experienced team may need to review temp responses, answer questions, triage what they can handle, and fix mistakes.
+
+**Risk:** your best people become supervisors instead of solving the hardest problems.
+
+---
+
+### 7. No clear definition of success
+“Fix the backlog” can mean many things: reduce ticket count, reduce first-response time, close tickets older than 14 days, handle specific categories, improve CSAT, etc.
+
+**Risk:** after a month, everyone disagrees on whether it worked.
+
+---
+
+### 8. Customer context gets lost
+Temps may not understand which customers are strategic, at risk, high-value, regulated, or already frustrated.
+
+**Risk:** mishandling sensitive accounts or missing retention opportunities.
+
+---
+
+### 9. Temporary workers may lack accountability after exit
+If they make poor notes, apply one-off fixes, or leave tickets half-resolved, your team inherits the mess.
+
+**Risk:** hidden cleanup cost after the month ends.
+
+---
+
+### 10. Morale impact
+Existing support staff may feel the company is applying a band-aid instead of addressing workload, tooling, compensation, or staffing issues.
+
+**Risk:** burnout continues, and attrition risk increases.
+
+---
+
+## How to make it work better
+
+If you do hire them, constrain the scope:
+
+- Give temps a narrow queue: password resets, billing questions, documentation links, simple refunds, known issue responses, etc.
+- Create clear macros and decision trees.
+- Require escalation rules for anything risky, angry, technical, legal, or high-value.
+- Limit permissions.
+- Assign one internal owner for QA and coaching.
+- Track reopened tickets, CSAT, handle time, and escalations — not just closures.
+- Use the month to identify root causes of ticket volume.
+- Have a cleanup/offboarding plan before they start.
+
+The biggest danger is assuming “two people for one month” equals “two months of productive support capacity.” In practice, it may be much less unless the work is well-scoped and the system around them is ready.

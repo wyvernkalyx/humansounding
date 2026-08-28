@@ -1,0 +1,74 @@
+Practically speaking, both can make your traffic appear to come from another IP address, but they work at different levels and protect different amounts of traffic.
+
+## VPN
+
+A VPN creates an encrypted tunnel between your device and the VPN provider.
+
+### Practical effects
+- **Covers most or all apps on your device**: browser, games, email apps, messaging apps, etc.
+- **Encrypts traffic between you and the VPN server**: useful on public Wi‑Fi or untrusted networks.
+- **Hides your IP address from websites and services**: they see the VPN server’s IP.
+- **Can hide browsing activity from your ISP/local network**: they can see you are using a VPN, but not the specific sites as easily.
+- **Usually handles DNS through the VPN** if configured properly.
+
+### Common uses
+- Safer browsing on public Wi‑Fi.
+- Privacy from ISP or local network monitoring.
+- Accessing region-restricted content.
+- Routing all device traffic through another country or network.
+
+### Downsides
+- Can reduce speed.
+- Some sites block VPNs.
+- You must trust the VPN provider, because they can potentially see a lot of your traffic metadata and sometimes destination info.
+
+---
+
+## Proxy
+
+A proxy is an intermediate server that your traffic goes through, usually for a specific app or protocol.
+
+### Practical effects
+- **Often only affects one app**, like your browser, unless configured system-wide.
+- **May or may not encrypt traffic**:
+  - An HTTP proxy does not inherently encrypt everything.
+  - A SOCKS proxy just forwards traffic and usually does not encrypt by itself.
+  - HTTPS traffic remains encrypted between your browser and the website, but the proxy still sees where you connect.
+- **Hides your IP from the destination site** for traffic using the proxy.
+- **Does not necessarily protect other apps** on your device.
+- **DNS may leak** depending on the app/proxy setup.
+
+### Common uses
+- Changing IP for a specific browser or app.
+- Scraping, automation, testing, or routing only certain traffic.
+- Bypassing simple network restrictions.
+- Using a company or school web proxy.
+
+### Downsides
+- Less comprehensive protection.
+- Often weaker privacy/security than a VPN.
+- Easy to misconfigure so some traffic bypasses it.
+
+---
+
+## Simple comparison
+
+| Feature | VPN | Proxy |
+|---|---|---|
+| Covers whole device | Usually yes | Usually no |
+| Encrypts tunnel | Yes | Usually no, unless combined with encryption |
+| Hides IP | Yes | Yes, for proxied traffic |
+| Protects on public Wi‑Fi | Better | Limited |
+| App-specific routing | Less convenient, though possible | Good |
+| Speed | Can be slower | Often faster |
+| Setup | Usually simple app | Depends on app/system |
+
+---
+
+## Short version
+
+Use a **VPN** when you want broad privacy/security for your whole device or network.
+
+Use a **proxy** when you only need to route a specific app or browser through another IP and do not need full-device encryption.
+
+Neither makes you completely anonymous. You still have to trust the VPN/proxy provider, and websites can still track you through logins, cookies, browser fingerprints, and other identifiers.

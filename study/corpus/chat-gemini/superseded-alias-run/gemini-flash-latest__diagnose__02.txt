@@ -1,0 +1,55 @@
+When interpersonal conflict reaches the point of the "silent treatment" and impacts deliverables, it has crossed the line from a personal disagreement to a **performance issue**. As their manager, you must intervene immediately.
+
+Here is a step-by-step playbook for how to handle this right now:
+
+---
+
+### Step 1: Meet with Each Person Individually (Today/Tomorrow)
+Do not bring them into a room together yet. Talk to them separately to diagnose the root cause, understand their perspectives, and lower their emotional defenses.
+
+*   **Focus on observable facts and business impact:**
+    *   *Say:* "I’ve noticed that communication between you and [Name] has broken down. For example, [mention specific delay/missed handoff]. This is affecting the project, and we need to fix it. Can you help me understand what’s happening from your perspective?"
+*   **Listen actively, but remain neutral:**
+    *   Let them vent, but don't validate gossip or blame. Validate their *feelings* without agreeing with their *assessment* ("I can see why that was frustrating").
+*   **Establish the standard:**
+    *   Remind them: *"You don’t have to be friends, but you do have to be functional, respectful, and effective colleagues."*
+*   **Gauge willingness to resolve:**
+    *   Ask: *"What would it take for you two to get back to a workable baseline?"*
+
+---
+
+### Step 2: Conduct a Facilitated 3-Way Meeting
+Once you know both sides, bring them together in a private room (or 1-on-1 video call). Your role here is **mediator and standard-setter**, not a judge.
+
+*   **Set the ground rules up front:**
+    1. Focus on the work, not personality traits.
+    2. Speak to each other, not through me.
+    3. No interrupting; focus on future solutions rather than relitigating the past.
+*   **Frame the meeting:**
+    *   *"We’re here because the current silence is negatively impacting the team and the work. My goal isn't to assign blame, but to walk out of this room with a clear agreement on how you two will communicate moving forward."*
+*   **Facilitate the dialogue:**
+    *   Ask each person to describe what they need from the other to get their job done effectively.
+    *   If they start attacking each other personally, redirect: *"Let’s bring it back to the process. How should handoffs work on Project X?"*
+
+---
+
+### Step 3: Establish a "Working Agreement"
+Before the meeting ends, document concrete rules of engagement that both agree to. Keep it practical and unambiguous:
+
+*   **Communication channels:** e.g., *"All project handoffs will happen via [Jira/Slack/Email], not assumed."*
+*   **Response times:** e.g., *"Direct work requests must be acknowledged within 4 business hours."*
+*   **Escalation path:** e.g., *"If you disagree on a technical decision, you discuss it for 15 minutes. If no consensus, bring it to me to break the tie, rather than stopping work."*
+
+---
+
+### Step 4: Make the Consequences Clear
+Be explicit about expectations:
+
+*   *"This communication standard is now a core requirement of your roles. Continued refusal to collaborate directly will be treated as a performance issue."*
+
+---
+
+### Step 5: Follow Up and Hold Accountability
+*   **Schedule a check-in:** Put a 15-minute sync with each of them in 2 weeks to see if the agreement is holding.
+*   **Watch the work:** Monitor whether project handoffs are actually improving.
+*   **Involve HR if necessary:** If one or both parties refuse to comply or continue passive-aggressive behavior after this mediation, involve HR to begin formal performance management.

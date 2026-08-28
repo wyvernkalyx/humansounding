@@ -1,0 +1,47 @@
+Short answer: **not as a blanket claim.** Cofounder conflict is a serious and common startup killer, but the claim that “most startups fail because of cofounder conflict” is probably overstated.
+
+A more accurate version is:
+
+> **Cofounder conflict is one of the major causes of startup failure, especially among venture-backed teams, but it is not clearly the dominant cause across startups overall.**
+
+Why the claim is shaky:
+
+1. **Many startups fail for market reasons**
+   The most common postmortem reasons tend to be things like:
+   - no real customer need,
+   - running out of money,
+   - inability to acquire customers profitably,
+   - competition,
+   - poor timing,
+   - weak business model.
+
+   CB Insights startup postmortems, for example, have historically put “no market need” and “ran out of cash” near the top. “Team” and “founder disharmony” appear, but not usually as the majority cause.
+
+2. **The famous founder-conflict stat is narrower**
+   There is a widely repeated claim, often associated with Noam Wasserman’s work on founder dilemmas, that a large share of high-potential startup failures involve people problems or founder conflict. But that does not necessarily mean “most startups fail primarily because of cofounder conflict.” It depends on sample, definition of “startup,” and whether conflict was the root cause or a contributing factor.
+
+3. **Conflict is often an amplifier, not the original cause**
+   A startup with weak traction, money stress, product uncertainty, and investor pressure is much more likely to develop cofounder conflict. So when a company fails, the team may say “the cofounders fell out,” but the deeper cause may have been lack of market pull or a broken strategy.
+
+4. **Some startups don’t even have cofounders**
+   If you include solo-founder companies, small businesses, bootstrapped startups, and non-VC firms, then cofounder conflict cannot explain “most” failures.
+
+That said, cofounder conflict is still extremely important. It can kill an otherwise promising company because it affects decision-making, speed, morale, investor confidence, hiring, and ownership stability.
+
+The biggest cofounder risks are usually:
+
+- misaligned ambition: “I want a billion-dollar company” vs. “I want a profitable lifestyle business”;
+- unclear roles;
+- unequal commitment;
+- resentment over equity splits;
+- avoidance of hard conversations;
+- different risk tolerance;
+- poor communication under stress;
+- no process for resolving deadlocks;
+- one founder scaling faster than another.
+
+So the practical takeaway is:
+
+> **No, it probably does not “hold up” that most startups fail because of cofounder conflict. But yes, cofounder conflict is one of the most preventable catastrophic risks in a startup.**
+
+If you are choosing or working with a cofounder, it is worth treating the relationship almost like a business marriage: align on values, equity, roles, commitment, vesting, decision rights, and what happens if someone leaves.

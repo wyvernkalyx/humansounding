@@ -1,0 +1,56 @@
+Because the issue is strictly isolated to **weekdays at 9:00 AM**, this is almost certainly caused by **human behavior (a rush of users)** or **a scheduled machine process (cron job/backup)**.
+
+Here is a step-by-step checklist of where to start your investigation:
+
+---
+
+### Step 1: Check Traffic vs. Server Load (The Fork in the Road)
+Look at your analytics (Google Analytics, Cloudflare, access logs) and APM (Datadog, New Relic, AWS CloudWatch) right at 9:00 AM.
+
+* **Scenario A: Web traffic spikes sharply.** 
+  * Proceed to **Step 2** (Traffic & Marketing).
+* **Scenario B: Web traffic is normal, but CPU/Memory/Disk I/O spikes.** 
+  * Proceed to **Step 3** (Scheduled Tasks & Infrastructure).
+
+---
+
+### Step 2: If Traffic Spikes
+If incoming requests jump at 9:00 AM, investigate the source:
+
+1. **Scheduled Marketing/Outreach:**
+   * Does your marketing team have an automated email newsletter, SMS blast, or push notification set to go out at 9:00 AM on weekdays? 
+2. **Internal/Staff Usage:**
+   * Is your website integrated with internal tools (CRM, ERP, inventory systems)? Do all your employees clock in and open an internal dashboard or heavy reporting tool at 9:00 AM?
+3. **Third-Party Scrapers or Integrations:**
+   * Check your web server access logs. Is an external partner, pricing scraper, or search engine aggressively crawling your site at that exact time?
+4. **Auto-scaling Delays:**
+   * If real users just naturally arrive at 9:00 AM, your cloud infrastructure (AWS/GCP/Azure) might be taking 5–10 minutes to spin up new instances (cold starts). You may need to **pre-warm** instances at 8:45 AM.
+
+---
+
+### Step 3: If Traffic is Normal (Look for Background Tasks)
+If traffic looks flat, your server or database is doing heavy work behind the scenes.
+
+1. **Cron Jobs & Scheduled Tasks:**
+   * Check system crontabs, application-level schedulers (e.g., Celery, Sidekiq, Laravel Scheduler), and database maintenance jobs. 
+   * Look for jobs scheduled for `0 9 * * 1-5` (9 AM Mon–Fri) or equivalent UTC times.
+2. **Database Maintenance / Backups:**
+   * Is a database snapshot, table optimization, re-indexing, or external ETL (data sync) running at 9:00 AM?
+   * These jobs often cause **table locks** or max out disk I/O, causing normal web requests to wait in a queue.
+3. **Cache Invalidation:**
+   * Does a daily cache (Redis, Memcached, CDN) clear or expire at 9:00 AM? If the cache is wiped, the sudden influx of uncached database queries ("cache stampede") will bring the site to a crawl.
+
+---
+
+### Step 4: What to Do Tomorrow at 8:55 AM
+Set an alarm for 8:55 AM tomorrow to monitor the incident live:
+
+1. **Open your Database Console:** Run `SHOW FULL PROCESSLIST;` (MySQL) or check `pg_stat_activity` (Postgres) right as it slows down. Look for long-running queries or locked tables.
+2. **Watch Server Metrics:** Run `htop` or `iotop` on your servers to see whether it's CPU-bound, Memory-bound, or Disk I/O-bound.
+3. **Tail the Logs:** Watch your error and access logs in real-time (`tail -f access.log error.log`) to spot sudden bursts of unique errors (e.g., 504 Gateway Timeouts, connection pool limits).
+
+---
+
+### Most Likely Culprits (Quick Guess)
+1. **A scheduled email blast** driving a sudden surge of human traffic that overwhelms the cache.
+2. **A heavy daily reporting query/ETL script** kicking off at the start of the business day and locking database tables.

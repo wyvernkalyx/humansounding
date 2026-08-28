@@ -1,0 +1,29 @@
+Software estimates are “always wrong” because they are predictions about an uncertain future, not measurements of a known quantity.
+
+Key reasons:
+
+1. **Software work is discovery-heavy**  
+   Unlike manufacturing, where you repeat a known process, software often involves figuring out what to build while building it. Unknown technical problems, unclear requirements, and design tradeoffs appear along the way.
+
+2. **Requirements change**  
+   Stakeholders learn more once they see partial versions of the product. Priorities shift, edge cases appear, and “small changes” can affect architecture, testing, UX, data models, or integrations.
+
+3. **Complexity is hard to see upfront**  
+   A task may sound simple: “add login,” “export to PDF,” “support multiple currencies.” But hidden complexity may include security, permissions, error handling, performance, compliance, localization, and legacy system behavior.
+
+4. **Dependencies create uncertainty**  
+   Estimates often depend on APIs, third-party services, other teams, infrastructure, approvals, libraries, deployment pipelines, or data quality. Any delay or surprise in those areas affects the estimate.
+
+5. **People are not interchangeable machines**  
+   Developer experience, context switching, interruptions, illness, meetings, onboarding, codebase familiarity, and team communication all change delivery speed.
+
+6. **Optimism bias is common**  
+   Developers and managers tend to imagine the happy path: the code works, the requirement is clear, tests pass, and nothing breaks. Real projects include debugging, rework, misunderstandings, and integration problems.
+
+7. **The estimate is often for coding, but the work is more than coding**  
+   Real delivery includes analysis, design, reviews, testing, documentation, deployment, monitoring, bug fixes, and stakeholder feedback. These are easy to undercount.
+
+8. **Precision is mistaken for accuracy**  
+   Saying “this will take 17 days” sounds scientific, but it may be less honest than saying “probably 2–4 weeks.” Software estimates are usually better expressed as ranges with uncertainty.
+
+So estimates are not useless; they are just imperfect. A good estimate communicates uncertainty, assumptions, risks, and confidence level. The problem happens when an estimate is treated as a guarantee.

@@ -39,3 +39,27 @@ claude-opus-5__evaluate_claim__02.txt	claude-opus-5	evaluate_claim	286	My cowork
 claude-opus-5__evaluate_claim__03.txt	claude-opus-5	evaluate_claim	311	Is it true that you shouldn't put a hot laptop battery in the fridge?
 claude-opus-5__evaluate_claim__04.txt	claude-opus-5	evaluate_claim	439	A vendor claims their tool will cut our onboarding time in half. How should I read that?
 claude-opus-5__evaluate_claim__05.txt	claude-opus-5	evaluate_claim	475	I read that most startups fail because of cofounder conflict. Does that hold up?
+claude-opus-5__decision__06.txt	claude-opus-5	decision	503	Do I renew a three-year software contract at a discount or go year to year?
+claude-opus-5__decision__07.txt	claude-opus-5	decision	465	Should a two-person company bother with formal performance reviews?
+claude-opus-5__decision__08.txt	claude-opus-5	decision	441	Is it a mistake to launch a product without a pricing page?
+claude-opus-5__critique_plan__06.txt	claude-opus-5	critique_plan	382	I want to move our backups from an external drive to cloud storage and stop the drive rotation. Sound right?
+claude-opus-5__critique_plan__07.txt	claude-opus-5	critique_plan	449	We plan to open a second location once the first one clears 20% margin. Is that the right trigger?
+claude-opus-5__critique_plan__08.txt	claude-opus-5	critique_plan	864	I'm going to reply to every customer review personally for a year. Talk me through it.
+claude-opus-5__explain__06.txt	claude-opus-5	explain	806	Explain what happens to my data when a company says it was breached.
+claude-opus-5__explain__07.txt	claude-opus-5	explain	516	Explain why airlines overbook flights.
+claude-opus-5__explain__08.txt	claude-opus-5	explain	802	Explain how a bill becomes law in the United States.
+claude-opus-5__diagnose__06.txt	claude-opus-5	diagnose	655	Our weekly meeting always runs over and nobody remembers what was decided. Diagnose it.
+claude-opus-5__diagnose__07.txt	claude-opus-5	diagnose	392	I keep missing deadlines even though I'm working more hours than ever. What's going on?
+claude-opus-5__diagnose__08.txt	claude-opus-5	diagnose	409	Sales says the product is fine and support says it's broken. Who do I believe?
+claude-opus-5__compare__06.txt	claude-opus-5	compare	544	Compare an electric car and a hybrid for someone who drives 12,000 miles a year.
+claude-opus-5__compare__07.txt	claude-opus-5	compare	520	What's the difference between a trademark and a copyright for a small brand?
+claude-opus-5__compare__08.txt	claude-opus-5	compare	852	Compare an in-house help desk with an outsourced one for a 60-person company.
+claude-opus-5__review_work__06.txt	claude-opus-5	review_work	239	Is 'circle back' an acceptable thing to write in a work email?
+claude-opus-5__review_work__07.txt	claude-opus-5	review_work	456	My pitch is 'Uber but for dog walking.' What's wrong with that as a description?
+claude-opus-5__review_work__08.txt	claude-opus-5	review_work	242	I named my product 'Synergize.' Be straight with me.
+claude-opus-5__personal__06.txt	claude-opus-5	personal	579	A colleague takes credit for my work in meetings. What do I actually do about it?
+claude-opus-5__personal__07.txt	claude-opus-5	personal	292	I want to go back to school at 41 and everyone thinks it's a bad idea.
+claude-opus-5__personal__08.txt	claude-opus-5	personal	285	My adult son wants to move back home and I'm not sure I want that.
+claude-opus-5__evaluate_claim__06.txt	claude-opus-5	evaluate_claim	433	Someone said breakfast being the most important meal was invented by cereal companies. Is it?
+claude-opus-5__evaluate_claim__07.txt	claude-opus-5	evaluate_claim	434	My IT guy says password rotation every 90 days is outdated advice. Is he right?
+claude-opus-5__evaluate_claim__08.txt	claude-opus-5	evaluate_claim	748	A consultant told us our website needs a full rebuild, not a redesign. How do I judge that?

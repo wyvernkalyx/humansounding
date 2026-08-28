@@ -1,0 +1,26 @@
+It’s **okay, but not ideal**.
+
+**“Quick question about your account”** is short and curiosity-driven, but it can also feel **vague, generic, or even phishing-like**, especially because “your account” is commonly used in spam/scam emails.
+
+Better options depend on the context:
+
+- **If it’s customer support:**  
+  “Question about your [Company] account”  
+  “Can you confirm one detail on your account?”
+
+- **If it’s sales/outreach:**  
+  “Quick question about [Company Name]”  
+  “Question about your current [tool/process]”
+
+- **If it’s account-related and important:**  
+  “Action needed: Update your [Company] account details”  
+  “Please review your [Company] account information”
+
+- **If you want it to feel more personal:**  
+  “Quick question, [Name]”  
+  “Question about your [specific topic]”
+
+Best general improvement:  
+**“Quick question about your [Company/Product] account”**
+
+It’s still concise, but more specific and trustworthy.

@@ -1,0 +1,109 @@
+Probably neither “full rebuild” nor “keep patching forever” should be the default. For a ten-year-old internal tool, the best answer is usually:
+
+> **Keep it running, but start replacing the riskiest/highest-value parts incrementally.**
+
+A full rebuild is tempting, but often more expensive and risky than expected. Continued patching is cheaper short-term, but can become a slow tax on productivity, reliability, and security.
+
+## When you should keep patching
+
+Keep patching if most of these are true:
+
+- The tool is stable and rarely causes incidents.
+- Users are mostly satisfied.
+- The business process it supports is not changing much.
+- The codebase is understandable enough for current developers.
+- Security/compliance risk is low.
+- Hosting/runtime dependencies are still supported.
+- Enhancement requests are occasional and not painful.
+- The cost of rebuilding would outweigh the benefit.
+
+In that case, you may only need targeted maintenance: dependency upgrades, documentation, test coverage, UI cleanup, and small architectural fixes.
+
+## When you should rebuild or replace
+
+A larger rebuild becomes more justified if several of these are true:
+
+- Every change takes too long or breaks something unrelated.
+- Only one or two people understand the system.
+- The technology stack is obsolete or unsupported.
+- Security, compliance, or auditability is a growing concern.
+- The tool blocks process improvements or automation.
+- Data quality is poor and getting worse.
+- Users have built spreadsheets or workarounds because the tool no longer fits.
+- Operating costs are high compared with the value delivered.
+- You are planning significant business process changes anyway.
+
+If the tool is slowing the organization down or creating material risk, patching may be false economy.
+
+## Avoid the “big bang rewrite” if possible
+
+A complete rebuild from scratch is risky because:
+
+- It takes longer than expected.
+- Legacy behavior is often undocumented.
+- Users may depend on quirks nobody remembers.
+- New systems frequently miss edge cases.
+- The old system must still be maintained during the rebuild.
+
+A safer approach is usually the **strangler pattern**:
+
+1. Stabilize the current tool.
+2. Identify the most painful modules or workflows.
+3. Build replacements one piece at a time.
+4. Migrate users and data gradually.
+5. Retire old parts as new ones prove themselves.
+
+This gives you value earlier and reduces the chance of a failed rewrite.
+
+## A practical decision framework
+
+Score the current tool from 1–5 in these areas:
+
+| Area | Question |
+|---|---|
+| Business fit | Does it still support how the business works? |
+| Maintainability | Can developers safely change it? |
+| Reliability | Does it cause downtime or operational issues? |
+| Security/compliance | Is it safe and auditable enough? |
+| User experience | Are users productive and satisfied? |
+| Integration | Does it connect cleanly with other systems? |
+| Cost | Is the cost of maintenance acceptable? |
+| Strategic importance | Is this tool important to future operations? |
+
+If most scores are healthy, patch and modernize selectively.
+
+If maintainability, security, or business fit are poor, plan replacement.
+
+If the system is important but fragile, do incremental modernization rather than a full rewrite.
+
+## My default recommendation
+
+For a ten-year-old internal tool, I would usually recommend:
+
+1. **Do not start with a full rebuild.**
+2. **Run a short discovery phase** — 2 to 4 weeks.
+3. **Map current workflows, pain points, risks, and hidden dependencies.**
+4. **Estimate the cost of three options:**
+   - Maintain and patch
+   - Incremental modernization
+   - Full rebuild or replacement
+5. **Pick the lowest-risk path that removes the biggest constraints.**
+
+In many cases, the winning option is:
+
+> **Stabilize the legacy tool now, then incrementally replace the parts that are costly, risky, or strategically limiting.**
+
+## Key questions to answer before deciding
+
+- How many users depend on it?
+- How often does it break?
+- How long does a typical change take?
+- Is the technology stack still supported?
+- Are there security or compliance concerns?
+- How much institutional knowledge is trapped in the tool?
+- Are users asking for major workflow changes?
+- Could an off-the-shelf tool replace it?
+- What is the cost of doing nothing for another two years?
+- What would the organization gain from a modern version?
+
+If you can answer those clearly, the decision will likely become obvious.

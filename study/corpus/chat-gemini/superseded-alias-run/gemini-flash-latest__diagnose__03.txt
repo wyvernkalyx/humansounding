@@ -1,0 +1,60 @@
+A drop in battery life that sudden (over just 3–4 weeks) is almost never standard aging. Batteries usually degrade slowly over 2–3 years. 
+
+When battery life plummets from 8+ hours down to 3 hours in a month, it is almost always caused by **one of three things**: a rogue software process, a dedicated graphics card staying awake, or a dead battery cell.
+
+Here is how to figure out exactly what happened and how to fix it:
+
+---
+
+### 1. Check for Hardware Failure (Battery Health Report)
+First, determine if the battery physically degraded or if the software is just draining it faster.
+
+* **On Windows:**
+  1. Right-click the Start menu and choose **Terminal / PowerShell (Admin)** or **Command Prompt (Admin)**.
+  2. Type: `powercfg /batteryreport` and press **Enter**.
+  3. Open the file path it gives you (usually `C:\Users\YourName\battery-report.html`) in a browser.
+  4. Compare **"Design Capacity"** vs. **"Full Charge Capacity"**.
+     * *If Full Charge Capacity is less than 60–70% of Design Capacity:* One or more cells in the battery likely died or degraded prematurely. You need a replacement.
+
+* **On Mac:**
+  1. Go to **Apple menu  > System Settings > Battery**.
+  2. Click the **(i)** icon next to **Battery Health**.
+  3. If it says **"Service Recommended"** or capacity is below 80%, the physical battery has failed.
+
+---
+
+### 2. The Most Likely Culprit: Dedicated GPU Won't Sleep
+If your laptop has a dedicated graphics card (like an Nvidia GeForce or AMD Radeon) alongside an integrated one:
+* **What happens:** The laptop is supposed to use the low-power Intel/AMD integrated graphics for browsing and desktop tasks, and only turn on the powerful GPU for gaming or video editing.
+* **The bug:** A recent driver update, app install, or external monitor connection can cause the dedicated GPU to **stay permanently on**, which cuts battery life by 50–70% instantly.
+* **Fix:** 
+  * Open the **Nvidia Control Panel** / **AMD Software** and set the global preferred graphics processor to **"Auto-select"** or **"Integrated graphics."**
+  * Check the system tray icon for *Nvidia GPU Activity* to see if an app (like Discord, Epic Games Launcher, or a browser) is holding the GPU awake.
+
+---
+
+### 3. A Rogue Background Process or Update
+A background program could be running your CPU at high usage constantly.
+
+* **Check Task Manager (Windows) / Activity Monitor (Mac):**
+  * Sort by **CPU usage** and **Energy Impact**.
+  * Look for processes using 15–30%+ CPU while the laptop is doing nothing.
+  * Common culprits: Cloud backup syncs (OneDrive, Google Drive, Dropbox), anti-malware scans running continuously, Windows Search Indexer stuck in a loop, or hidden crypto-miners (malware).
+
+---
+
+### 4. Broken Battery Calibration
+Sometimes the battery is fine, but the software controller that reads the battery percentage gets confused and shuts the laptop down early.
+
+* **The Fix (Recalibration):**
+  1. Charge your laptop to **100%** and leave it plugged in for at least 2 hours.
+  2. Unplug it and use it normally (or let it run) until it **dies completely and shuts off**.
+  3. Leave it off and unplugged for 3–5 hours.
+  4. Plug it in and charge it back to **100% uninterrupted**.
+
+---
+
+### What to do next:
+1. **Run the Battery Health Report** (Step 1). 
+2. If the health report says the physical battery is fine, **check your GPU activity and Task Manager** (Steps 2 & 3).
+3. If this started immediately after a Windows/macOS update, check for optional driver updates or rollback the recent update.
