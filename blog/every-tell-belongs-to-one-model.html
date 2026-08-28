@@ -12,7 +12,7 @@
 <meta property="og:title" content="Every tell I tested turned out to belong to one model">
 <meta property="og:description" content="160 documents, four models, one pre-ChatGPT human baseline, and the site's own fifteen rules run over all of it.">
 <meta property="og:url" content="https://humansounding.com/blog/how-this-site-was-built.html">
-<meta property="og:image" content="https://humansounding.com/og.png">
+<meta property="og:image" content="https://humansounding.com/og-every-tell.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
 <script type="application/ld+json">
@@ -49,6 +49,9 @@
     .rates td::before { content: attr(data-l); color: var(--ink-muted); text-align: left; font-size: 13px; }
     .rates td:first-child { font-weight: 700; border-bottom: 1px solid var(--border); margin-bottom: 4px; }
   }
+  .chartfig { margin: 26px 0 30px; }
+  .chartfig img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 8px; }
+  .chartfig figcaption { font-size: 13.5px; color: var(--ink-2); margin-top: 10px; }
 </style>
 </head>
 <body>
@@ -85,6 +88,12 @@
     <p class="body">The fifteen rules I launched with came out of other people's research, most of it describing how chatbots wrote in 2023 and 2024. Seventeen days later those papers say exactly what they said on launch day. What changed is that I stopped borrowing numbers and started making my own. I generated 160 documents across four models, built a human baseline out of pre-ChatGPT writing, and ran the site's own rules over all of it.</p>
 
     <p class="body">The short version: no single rule in the checker describes AI writing in general. Em dashes are a Claude habit. The delve-and-meticulous vocabulary is a Gemini habit. Each model has its own fingerprint, and the fingerprints differ from each other more than several of them differ from human writing.</p>
+
+    <figure class="chartfig">
+      <img src="/og-every-tell.png" width="1200" height="630"
+           alt="Four small bar charts, one per checker rule, comparing Claude Opus 5, GPT-5.5, ChatGPT and Gemini 3.7. Em dashes: Claude 12.87 per thousand words against 1.18, 3.88 and 3.33, human 3.83. Delve vocabulary: Gemini 0.77 against 0.00, 0.08 and 0.15, human 0.33. Contrastive negation: Claude 2.39 and GPT-5.5 2.86 against 0.30 and 0.26, human 0.15. Negative parallelism: ChatGPT 0.60 and Gemini 0.64 against 0.18 and 0.17, human 0.22.">
+      <figcaption>Every rule I tested belongs to a particular model. The dashed line in each panel is the same rule measured in human writing.</figcaption>
+    </figure>
 
     <h2>A friend sent me a text</h2>
 
