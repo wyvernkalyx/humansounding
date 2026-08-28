@@ -1,0 +1,36 @@
+The cleanest distinction: **a controller tells you what happened; a CFO tells you what to do about it.**
+
+**Controller** is essentially the chief accounting officer. The job is accuracy and control over the historical record:
+
+- Owning the monthly/quarterly close and producing financial statements
+- GAAP/IFRS compliance and technical accounting calls (revenue recognition, leases, stock comp)
+- Internal controls and managing the external audit
+- Running AP, AR, payroll, general ledger, fixed assets
+- Tax compliance coordination
+
+It's a deeply technical role. Most controllers are CPAs, and the typical path is Big 4 audit → industry accounting manager → assistant controller → controller.
+
+**CFO** is an executive officer with a seat at the strategy table and a direct line to the board:
+
+- Capital structure and fundraising — debt, equity, banking and investor relationships
+- FP&A: budgeting, forecasting, and pressure-testing business unit plans
+- Capital allocation: which bets get funded, which get killed
+- M&A and corporate development
+- Investor relations in public companies
+- Often owns adjacent functions — IT, HR, legal, sometimes ops — especially at smaller companies
+
+CFO backgrounds are more varied: accounting, yes, but also investment banking, consulting, or a career in FP&A.
+
+**Structurally,** the controller almost always reports to the CFO. In public companies this is formalized — the CFO is designated "principal financial officer" and the controller often "principal accounting officer," and both sign off on filings under SOX.
+
+**A few things people miss:**
+
+*The roles collapse at small scale.* A 40-person company usually has a controller doing light CFO work, or a full-time controller plus a fractional CFO a few days a month. Hiring a full CFO before you have real capital markets activity or complex allocation decisions is usually premature.
+
+*Promoting your controller to CFO is a genuine risk.* The skills only partially overlap. Someone excellent at closing the books in five days and surviving an audit clean may have no experience negotiating a credit facility, modeling an acquisition, or pushing back on a CEO's growth assumptions in a board meeting. Some make the leap beautifully; many stall out. The tell is whether they've been operating as a business partner or purely as a scorekeeper.
+
+*The reverse failure is just as common.* A CFO hired out of banking with no accounting depth can miss a control breakdown or a bad technical accounting position until it becomes a restatement. Those CFOs need a strong controller more than anyone.
+
+*At larger companies a CAO sits between them* — Chief Accounting Officer — which lets the CFO push further toward strategy while someone senior still owns the accounting stack.
+
+If you're trying to figure out which one you need: if your books are late, wrong, or you just failed an audit, you need a controller. If your books are fine but you can't answer "should we raise money, and how much runway does this plan actually give us," you need a CFO.

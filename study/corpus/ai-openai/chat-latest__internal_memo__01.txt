@@ -1,0 +1,22 @@
+Subject: Updated Employee Expense Policy
+
+Dear Team,
+
+We’re introducing an updated expense policy effective [date]. The goal is to make reimbursement requirements clearer, ensure consistent handling of business expenses, and simplify the approval process.
+
+Key changes include:
+- Receipts are required for expenses over [amount].
+- Expense reports must be submitted within [number] days of the purchase or business trip.
+- Manager approval is required for expenses above [amount].
+- Travel, meals, lodging, and transportation must remain within the limits outlined in the updated policy.
+- Personal, non-business, or otherwise ineligible expenses will not be reimbursed.
+
+Please review the full policy at [link/location] before making or submitting any new business expenses. Expenses incurred before the effective date will continue to be handled under the previous policy.
+
+If you have questions about whether an expense is eligible or need help with the reimbursement process, please contact [Finance/HR/contact information].
+
+Thank you for your cooperation.
+
+Best,
+[Name]
+[Title]

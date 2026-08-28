@@ -1,0 +1,16 @@
+Working more hours while missing more deadlines often means the problem isn’t effort; it’s that your effective capacity and your workload have gotten out of sync.
+
+A few patterns commonly cause this:
+
+- Too many concurrent priorities: frequent switching makes every task take longer than expected.
+- Unrealistic planning: schedules account for the work itself but not revisions, meetings, interruptions, dependencies, or recovery time.
+- Priority churn: urgent requests keep displacing important work, so deadlines slip despite constant activity.
+- Bottlenecks: you may be waiting on decisions, approvals, information, or other people rather than lacking work hours.
+- Diminishing returns: sustained long hours can reduce concentration and increase mistakes and rework.
+- Changed capacity: stress, poor sleep, burnout, health issues, or new responsibilities can make a workload that was once manageable no longer manageable.
+
+A useful diagnostic is to track one workweek in broad categories: planned project work, meetings/messages, unexpected requests, rework, and time spent blocked. Also note what you intended to finish each day versus what actually happened. You don't need minute-by-minute tracking; you're looking for where the gap comes from.
+
+Then adjust the system rather than simply adding hours: reduce the number of things in progress, explicitly budget for interruptions, renegotiate deadlines or scope when the numbers don't fit, and protect blocks of uninterrupted work. If other people are assigning the work, it can help to frame the issue as a tradeoff: “I can finish A by Friday or handle B as well and move A to Tuesday—which should take priority?”
+
+If this is a recent change and you're also noticing significant exhaustion, trouble concentrating, sleep changes, or difficulty functioning outside work, it's worth treating that as a health issue rather than just a productivity problem.

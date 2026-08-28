@@ -1,0 +1,62 @@
+When interpersonal conflict escalates to the point of silence and affects work, **you must intervene immediately**. Passive-aggressive silence is toxic to team morale and project velocity. 
+
+Your goal as a manager is not to make them like each other or become friends; **your goal is to establish functional, professional collaboration.**
+
+Here is a 4-step framework to handle this:
+
+---
+
+### Step 1: Hold Separate 1-on-1s (Fact-Finding & Framing)
+Meet with each person individually first. Do not put them in a room together until you understand both sides.
+
+* **Acknowledge the observable behavior and business impact:**
+  > *"I’ve noticed that communication between you and [Name] has completely stopped, and it’s starting to impact [Project/Deliverable/Team]. What’s going on from your perspective?"*
+* **Listen actively, but keep them focused on facts:**
+  * Let them vent briefly, but redirect personal attacks to specific incidents: *"What specific action or event triggered this?"*
+* **Set the baseline expectation:**
+  * Make it clear that silence is not an acceptable workplace behavior: 
+  > *"You do not have to be friends or spend time together outside of work. However, effective, respectful communication on work matters is a non-negotiable requirement of your role."*
+* **Prepare them for a joint meeting:**
+  * Ask: *"What is one thing you need from [Name] to get the work back on track?"* and *"What are you willing to do to fix this?"*
+
+---
+
+### Step 2: The Facilitated 3-Way Meeting
+Once you know both perspectives, bring them together. You are the mediator and the boundary-setter.
+
+* **Set Ground Rules upfront:**
+  * No interrupting or talking over each other.
+  * Focus on the work and specific behaviors, not personality traits.
+  * Focus on future solutions, not relitigating past grievances.
+* **State the shared objective:**
+  > *"We are here today because the lack of communication is hurting the project and the team. We need to walk out of this room with a clear agreement on how you two will collaborate moving forward."*
+* **Have each person state their work-related needs:**
+  * Ask Person A: *"What do you need from Person B to do your job effectively?"*
+  * Ask Person B: *"What do you need from Person A to do your job effectively?"*
+* **Address the friction point:**
+  * If it’s a process issue (e.g., missed handoffs, unclear ownership), clarify roles on the spot.
+  * If it’s a communication style clash, help them agree on standard protocols.
+
+---
+
+### Step 3: Establish Concrete Working Protocols
+Do not leave the meeting with vague promises like "we'll try to get along." Define explicit, objective operational rules:
+
+1. **Channels:** Where will communication happen? (e.g., *"All project handoffs must happen in the shared Slack channel or via Jira, not DMs."*)
+2. **Response Times:** How quickly must they reply to work requests? (e.g., *"Acknowledge work requests within 4 hours during business hours."*)
+3. **Escalation Path:** What happens when they disagree on a technical or strategic decision? (e.g., *"If you can't reach consensus within 2 hours, bring the two options to me for a final call—do not let the task stall."*)
+
+---
+
+### Step 4: Document, Monitor, and Enforce
+* **Send a recap email:** Document the agreed-upon protocols to both of them so there is no ambiguity.
+* **Set a check-in date:** Schedule a 15-minute follow-up with each person in 1–2 weeks to see how the agreement is holding up.
+* **Treat communication as a performance metric:** 
+  * If one or both continue the silent treatment or sabotage work, treat it as a **conduct/performance issue**, not a personal dispute. 
+  * Involve HR if necessary, and make the consequences clear: ongoing refusal to collaborate will lead to formal performance management.
+
+---
+
+### Summary Rule of Thumb
+* **Don't ask them:** *"Why can't you two just get along?"* (Invites emotional venting)
+* **Do ask them:** *"What specific processes do we need to put in place so the work gets done smoothly?"* (Focuses on professional accountability)

@@ -1,0 +1,54 @@
+Plenty—temps can help, but a “two temps for a month” plan can fail if the backlog problem is not mostly simple, repeatable work.
+
+Here’s what could go wrong:
+
+1. **Training takes longer than expected**
+   - Your existing team may spend so much time onboarding, reviewing, and answering questions that net output barely improves for the first 1–2 weeks.
+
+2. **They handle the wrong tickets**
+   - If the backlog is mostly complex, technical, policy-sensitive, or emotionally charged, temps may not be able to resolve much without escalation.
+
+3. **Quality drops**
+   - Fast backlog-clearing can lead to incorrect answers, missed context, bad tone, policy violations, or promises your company cannot keep.
+
+4. **Your permanent team gets interrupted more**
+   - Instead of working the queue, senior support staff become trainers, reviewers, and escalation handlers.
+
+5. **Customers get inconsistent answers**
+   - Temps may interpret policies differently, especially around refunds, account issues, SLAs, or product limitations.
+
+6. **Security and privacy risks**
+   - Temporary staff may need access to customer data, internal tools, billing systems, or admin consoles. That creates risk if permissions are too broad or offboarding is sloppy.
+
+7. **They reduce the visible backlog but not the actual problem**
+   - Tickets may be closed quickly without truly resolving customer issues, leading to reopenings, follow-ups, escalations, or churn.
+
+8. **Morale issues**
+   - Existing staff may feel blamed, replaced, or burdened by having to train short-term people while still carrying the hard cases.
+
+9. **No lasting capacity improvement**
+   - After a month, the temps leave, and the queue starts growing again because the underlying drivers—bugs, confusing UX, poor docs, insufficient staffing, bad routing—remain.
+
+10. **Backlog composition is misunderstood**
+   - The backlog may include duplicates, stale tickets, spam, low-priority items, already-resolved issues, or tickets blocked on engineering. Hiring people won’t fix those.
+
+11. **Metrics get distorted**
+   - You may improve “tickets closed” while worsening customer satisfaction, first-contact resolution, escalation rate, or repeat contact rate.
+
+12. **Knowledge disappears when they leave**
+   - If temps learn useful patterns but don’t document them, the organization gains little after the month ends.
+
+13. **They need tool/process changes you haven’t made**
+   - Without macros, clear policies, tagging, routing rules, escalation paths, and decision trees, adding people just adds chaos.
+
+A safer version of the plan:
+
+- **Triage the backlog first**: separate simple, stale, complex, escalated, and engineering-blocked tickets.
+- **Give temps narrow work**: password/account questions, known issue updates, duplicate cleanup, refund pre-checks, documentation links, simple follow-ups.
+- **Create clear playbooks**: macros, decision trees, “when to escalate,” and examples of good responses.
+- **Limit permissions**: minimum necessary access, with audit logs and strict offboarding.
+- **Assign a reviewer/escalation lead**: one person responsible for QA and unblockers.
+- **Track the right metrics**: reopen rate, CSAT, escalation rate, response accuracy, and backlog age—not just closure count.
+- **Use the month to learn**: identify top contact drivers and fix the root causes.
+
+The biggest risk is treating this as a staffing problem when it may actually be a process, product, documentation, or prioritization problem.

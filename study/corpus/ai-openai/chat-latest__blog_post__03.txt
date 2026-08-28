@@ -1,0 +1,84 @@
+# How to Run a Better Meeting
+
+Meetings are supposed to help people make decisions, solve problems, and coordinate work. Too often, they become recurring calendar events with unclear goals, too many attendees, and no obvious outcome.
+
+A better meeting doesn’t require elaborate rules or new software. It requires clarity about why people are gathering and discipline about how their time is used.
+
+## Start With a Purpose
+
+Before scheduling a meeting, answer one question: What should be different when this meeting is over?
+
+A useful purpose is specific: “Choose a launch date,” “Identify the three biggest risks,” or “Assign owners for the migration.” “Discuss the project” is not a useful purpose because nobody knows what the discussion is supposed to produce.
+
+If you only need to share information, consider sending an email, document, or recorded update instead. A meeting is most valuable when people need to interact in real time.
+
+## Invite Fewer People
+
+Every additional attendee increases the cost of a meeting and can make discussion harder. Invite the people who are needed to make the decision, contribute essential expertise, or take action afterward.
+
+Other stakeholders can receive notes or a summary. Being informed does not always require being in the room.
+
+## Send an Agenda in Advance
+
+A good agenda tells participants what will happen and how they should prepare. Keep it short and organize it around outcomes rather than vague topics.
+
+For example:
+
+- 5 minutes: Review the customer problem
+- 15 minutes: Compare three proposed solutions
+- 10 minutes: Decide which solution to pursue
+- 5 minutes: Confirm owners and next steps
+
+If participants need to read something beforehand, send it early enough that “pre-read” actually means before the meeting.
+
+## Start on Time
+
+Waiting for late arrivals teaches everyone that arriving on time doesn’t matter. Start when you said you would, briefly state the purpose, and remind the group of the desired outcome.
+
+This also helps prevent a common meeting problem: spending half the allotted time on background before reaching the issue that actually requires discussion.
+
+## Facilitate the Conversation
+
+Running a meeting is different from merely attending it. Someone should be responsible for keeping the group focused.
+
+When discussion drifts, bring it back to the agenda. When one person dominates, invite others in. When a new but unrelated issue emerges, record it for later rather than allowing it to consume the meeting.
+
+Good facilitation also makes room for disagreement. The goal isn’t to eliminate conflict; it’s to make disagreement useful by focusing it on evidence, tradeoffs, and the decision at hand.
+
+## Make Decisions Explicit
+
+People often leave the same meeting with different interpretations of what was decided. Don’t assume consensus is obvious.
+
+Before moving on, state the decision clearly: “We’re going with option B and launching on October 15.” If no decision was reached, say that too, along with what needs to happen before one can be made.
+
+## End With Owners and Deadlines
+
+“Someone should look into that” is not an action item.
+
+Every next step should have an owner and, when appropriate, a deadline. Spend the final few minutes confirming:
+
+- What was decided
+- What needs to happen next
+- Who owns each action
+- When it will be completed
+- What remains unresolved
+
+Send a short written record afterward so participants don’t have to rely on memory.
+
+## Finish Early When You Can
+
+A 60-minute calendar slot does not create an obligation to talk for 60 minutes. If the objective is accomplished after 38 minutes, end the meeting.
+
+In fact, defaulting to 25- or 50-minute meetings can create useful breathing room between calls and encourage people to be more deliberate with the time they have.
+
+## Audit Recurring Meetings
+
+Recurring meetings are especially prone to outliving their usefulness. Periodically ask whether each one still needs to exist, whether it needs the same attendees, and whether its frequency or length should change.
+
+Deleting an unnecessary meeting can be more valuable than improving it.
+
+## The Simple Test
+
+A successful meeting should leave participants able to answer three questions: What did we decide? What happens next? Who is responsible?
+
+If those answers are clear, the meeting probably earned its place on the calendar. If they aren’t, adding another meeting usually isn’t the solution. A clearer purpose, tighter attendance, and stronger follow-through are.

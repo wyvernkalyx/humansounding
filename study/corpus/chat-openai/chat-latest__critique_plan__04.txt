@@ -1,0 +1,14 @@
+It can work as a short-term backlog burn-down, but a one-month temp engagement has several common failure modes:
+
+- Ramp-up eats the month. If your support domain, tools, or policies are complicated, temps may become productive only near the end.
+- Permanent staff become trainers. Your strongest agents can lose ticket-solving time to onboarding, supervision, and reviewing temp responses, so net capacity is lower than “two extra people.”
+- Quality drops under backlog pressure. New hires may close tickets quickly but incorrectly, creating reopenings, escalations, refunds, or unhappy customers.
+- You clear symptoms rather than inflow. If tickets are accumulating because of a product defect, bad self-service, routing problems, or insufficient ongoing staffing, the backlog returns after the temps leave.
+- The oldest tickets may be unusually difficult. A backlog isn't necessarily interchangeable work; easy cases often get handled first, leaving a concentrated pool of complicated cases that newcomers are least equipped to solve.
+- Access and security create overhead. Provisioning customer-data access for short-term workers, then reliably removing it, can involve privacy, compliance, and audit requirements.
+- Knowledge disappears after four weeks. Anything the temps learn about recurring customer problems is lost unless you deliberately capture it.
+- Metrics can fool you. “Tickets closed” may improve while response quality, reopen rate, customer satisfaction, or the number of new tickets waiting gets worse.
+
+Before hiring, I'd estimate the economics as: backlog ÷ expected net resolutions per temp after training, while accounting for the permanent-team hours required to support them. Give temps well-defined, lower-complexity ticket categories, canned-but-reviewed guidance, clear escalation rules, and limited permissions.
+
+Most importantly, pair the temporary capacity with a diagnosis of why the backlog exists. If it was caused by a one-off spike, two temps may be exactly the right tool. If incoming volume consistently exceeds your team's capacity, you're buying a one-month delay rather than fixing the backlog.

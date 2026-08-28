@@ -1,0 +1,54 @@
+A sudden drop like this over just one month usually points to one of two things: **a software issue keeping your laptop's hardware constantly working**, or **a physical hardware failure in the battery (such as a dead cell)**. 
+
+Normal chemical aging of a battery takes years, not weeks. Here is how to diagnose and fix the problem.
+
+---
+
+### Step 1: Check the physical health of the battery
+First, check whether the battery itself is physically degraded or if your software is just draining it quickly.
+
+* **On Windows:**
+  1. Right-click the Start Menu and select **Terminal (Admin)** or **PowerShell (Admin)**.
+  2. Type: `powercfg /batteryreport` and press Enter.
+  3. Open the file path it provides (usually `C:\Users\YourName\battery-report.html`) in a web browser.
+  4. Compare **"Design Capacity"** to **"Full Charge Capacity"**. 
+     * *If Full Charge Capacity has dropped by 50% or more, your battery likely has a dead internal cell and needs to be replaced.*
+
+* **On a Mac:**
+  1. Click the Apple logo $\rightarrow$ **System Settings** $\rightarrow$ **Battery**.
+  2. Look at **Battery Health**. If it says "Service Recommended," the battery hardware is failing.
+  3. For more detail, hold the **Option** key, click the Apple menu $\rightarrow$ **System Information** $\rightarrow$ **Power**, and check the **Cycle Count** and **Condition**.
+
+---
+
+### Step 2: Look for "Rogue" software and background tasks
+If your battery health looks normal, a program is draining your power in the background.
+
+* **Check Task Manager / Activity Monitor:**
+  * Open **Task Manager** (Ctrl + Shift + Esc on Windows) or **Activity Monitor** (Mac).
+  * Sort by **CPU** and **Power Usage / Energy**.
+  * Look for apps utilizing more than 10–20% of your CPU while you are doing nothing. 
+* **Common offenders:**
+  * Background cloud syncing (OneDrive, Google Drive, Dropbox getting stuck in an infinite loop).
+  * Web browsers with runaway background extensions or video tabs.
+  * Hidden crypto-miners (malware) disguised as system tasks.
+
+---
+
+### Step 3: Dedicated GPU staying awake (Laptops with NVIDIA/AMD graphics)
+If your laptop has two graphics chips (an integrated Intel/AMD chip for battery saving, and a powerful NVIDIA/AMD chip for gaming/editing):
+* A recent app or game update might be forcing the **dedicated graphics card to stay turned on constantly**.
+* The dedicated GPU consumes massive power even at idle.
+* **Fix:** Open the *NVIDIA Control Panel* $\rightarrow$ *Manage 3D Settings* $\rightarrow$ ensure "Preferred graphics processor" is set to **Auto-select** or **Integrated graphics**, not "High-performance NVIDIA processor."
+
+---
+
+### Step 4: Check for recent updates or power profile changes
+* **Windows/macOS Updates:** Sometimes an OS update changes your power plan from "Balanced/Efficiency" to "Best Performance," which prevents the CPU from clocking down to save power.
+* **Sleep Mode bugs (Modern Standby):** If your battery is draining while the lid is closed, your laptop might not actually be going to sleep. In Windows, check *Settings $\rightarrow$ Power & battery* to see if screen-off and sleep timers are working properly.
+
+---
+
+### Summary Checklist
+1. **Battery Capacity is significantly lower than Design Capacity?** $\rightarrow$ The battery is physically damaged/worn out; **needs replacement**.
+2. **Battery Capacity is normal?** $\rightarrow$ A background process, stuck GPU, or corrupt OS update is eating power; **check Task Manager, update drivers, or run a malware scan (e.g., Malwarebytes).**

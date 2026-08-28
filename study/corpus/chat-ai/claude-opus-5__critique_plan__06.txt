@@ -1,0 +1,27 @@
+Half of it sounds right. Adding cloud is usually a clear win; dropping the local copy entirely is where I'd push back.
+
+**What cloud genuinely fixes**
+
+Drive rotation depends on a person remembering to do it, and that person's diligence is the weakest link in most backup schemes. It also tends to hide failures — rotated drives often go untested for months, and a surprising number are found dead or half-encrypted only during a real restore. Cloud gets you automated offsite separation, verifiable job logs, and immunity to a drive being dropped, stolen, or left in a hot car.
+
+**What you lose**
+
+- **Restore speed.** Recovering a few files is fine. Recovering a full server or a multi-terabyte dataset over your uplink can take days. Test the math: total size ÷ actual upstream/downstream throughput.
+- **Egress cost.** Depending on provider, a large restore can carry a real bill. Worth knowing before you need it.
+- **Single-credential exposure.** If everything lives behind one account, then compromised credentials, a billing lapse, or an accidental deletion that propagates leaves you with nothing. Immutable/object-lock retention and separate admin credentials matter a lot more once cloud is your only copy.
+- **Media diversity.** The 3-2-1 principle exists because correlated failures are the ones that kill you.
+
+**A middle path worth considering**
+
+Keep one local copy, but stop *rotating* it. A single always-connected local target (NAS or dedicated backup server) with snapshot retention gives you fast restores without the manual chore that's presumably the actual annoyance. Cloud becomes the offsite leg. You've eliminated the human step and the drive-shuffling while keeping two media types.
+
+If cost or space rules that out, cloud-only can be defensible — but then I'd insist on immutability enabled, a documented restore test at least quarterly, and a written estimate of how long a worst-case full restore actually takes.
+
+**Things that would change my answer**
+
+- How much data, and what's your upstream bandwidth?
+- What's your tolerance for downtime in a total-loss scenario — hours, or days?
+- Any compliance or retention requirements that specify media or location?
+- Are you backing up servers/VMs, endpoints, or SaaS data like Microsoft 365? SaaS backup has its own gotchas.
+
+What's driving the change — the rotation labor, the cost of drives, or a specific incident?

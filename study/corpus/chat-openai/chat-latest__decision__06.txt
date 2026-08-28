@@ -1,0 +1,15 @@
+It comes down to whether the discount compensates you for committing before you know your future needs.
+
+A three-year renewal usually makes sense when the software is mission-critical, switching costs are high, usage is stable or growing, and the vendor is offering a meaningful discount with price protection. Year-to-year is usually better when your headcount or needs may change, you're considering alternatives, the vendor/product is evolving rapidly, or the discount is modest.
+
+A useful way to decide:
+
+- Calculate the actual three-year savings versus three annual renewals, including expected annual price increases.
+- Put a value on flexibility. Ask what it could cost if you need 20–30% fewer licenses, migrate after year one, or the product stops meeting your needs.
+- Check the contract mechanics: termination rights, minimum seats/spend, auto-renewal, price increases, implementation/support fees, and whether unused licenses can be reduced or reassigned.
+- Consider vendor risk: financial stability, roadmap, acquisition risk, service quality, security/compliance, and your dependency on the product.
+- Negotiate before choosing. A three-year commitment should buy more than a small headline discount: seek annual payment rather than prepayment, capped renewals, seat-flexibility, termination rights, and service-level protections.
+
+As a rough rule, I wouldn't take three years merely for a 5–10% discount if there's meaningful uncertainty. A 15–25%+ economic advantage can become compelling for software you're highly confident you'll still need in three years—especially if you retain annual payment and some ability to adjust licenses.
+
+If you give me the annual price, three-year discount, expected price increases, number of licenses, and how likely your needs are to change, I can calculate which option is economically better.

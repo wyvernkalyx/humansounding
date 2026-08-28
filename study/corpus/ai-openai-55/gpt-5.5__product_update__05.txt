@@ -1,0 +1,23 @@
+## Product Update: New Reporting Feature
+
+We’re excited to introduce our new reporting feature, designed to help you better understand performance, track key metrics, and make faster, data-driven decisions.
+
+With the new reporting experience, you can now generate clear, customizable reports directly from your dashboard. Whether you’re reviewing team activity, monitoring trends, or sharing results with stakeholders, reporting is now simpler and more flexible.
+
+### What’s new
+
+- **Custom report creation**: Choose the data, time range, and filters that matter most to your team.
+- **Improved visualizations**: View key insights through easy-to-read charts and tables.
+- **Export options**: Download reports for offline analysis or sharing.
+- **Saved reports**: Save frequently used report configurations for quick access.
+- **Better performance tracking**: Monitor progress over time and identify trends more easily.
+
+### Why it matters
+
+This feature gives teams a clearer view of their work and outcomes. Instead of manually pulling data from multiple places, you can now access the information you need in one centralized reporting view.
+
+### Availability
+
+The new reporting feature is now available to all users from the main dashboard. To get started, navigate to **Reports** and create your first custom report.
+
+We’ll continue improving reporting based on your feedback, so please let us know what additional metrics, templates, or export formats would be most helpful.

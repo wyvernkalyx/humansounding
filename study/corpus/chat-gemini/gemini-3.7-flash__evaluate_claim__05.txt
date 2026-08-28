@@ -1,0 +1,54 @@
+The short answer is **no, but it’s much closer to the truth than most people think.**
+
+While cofounder conflict is rarely the *number one* reason cited in post-mortems, it consistently ranks as one of the top three to five startup killers—and it is often the **hidden root cause** behind other stated reasons for failure.
+
+Here is a breakdown of what the data actually says and why this claim is so widespread.
+
+---
+
+### 1. Where does that claim come from?
+The idea that "most startups fail because of cofounder conflict" comes primarily from **Noam Wasserman**, a former Harvard Business School professor and author of *The Founder’s Dilemmas*. 
+
+Wasserman studied thousands of startups and found that **up to 65% of high-potential startups fail due to interpersonal tensions** (cofounder disputes, misalignment with early hires, and investor conflict). 
+
+Because his research is widely cited in business schools and accelerator programs (like Y Combinator), it became common shorthand to say "most startups fail because of cofounder drama."
+
+---
+
+### 2. What broader data shows (The True Top Reasons)
+When you look at broader datasets of startup post-mortems (such as research from **CB Insights** or the **Startup Genome Project**), the explicit top reasons for failure are usually:
+
+1. **No Market Need / Lack of Product-Market Fit** (usually ~35–42%) — Building something nobody actually wants.
+2. **Ran Out of Cash / Failed to Raise Capital** (usually ~30–38%) — Burning through runway before finding a sustainable model.
+3. **Got Outcompeted / Flawed Business Model** (~15–20%).
+4. **Team & Cofounder Issues** (~14–23%).
+
+By raw survey numbers, **lack of market demand** and **cash depletion** are the most common official reasons startups fail.
+
+---
+
+### 3. Why cofounder conflict is often the *real* culprit
+Even though "Team Issues" sits around #3 or #4 in official post-mortems, startup veterans and investors (like Paul Graham) argue it is significantly underreported. 
+
+Cofounder conflict is often the **disease**, while cash depletion or lack of growth is just the **symptom**:
+
+* **Paralysis leads to cash burn:** If two cofounders disagree on product direction, go-to-market strategy, or fundraising terms, the company stalls. While they fight, the company burns through cash without shipping product. In the post-mortem, they write *"We ran out of money,"* but the real reason was paralysis.
+* **Bad splits kill fundraising:** Investors routinely pass on promising startups if they sense tension or poor structural alignment (e.g., a 50/50 equity split without a vesting schedule or clear tie-breaker).
+* **Early-stage vs. Late-stage failure:** In the **pre-seed and seed stages**, cofounder blowups are easily the #1 killer. If a company hasn't launched yet, it can't fail from "lack of market fit"—it usually dies because the founders couldn't agree on what to build or how hard to work.
+
+---
+
+### 4. What causes cofounder conflict?
+When cofounders split, it usually comes down to four predictable issues:
+
+1. **Unequal Commitment / Work Ethic:** One founder is working 80 hours a week; the other is treating it like a side project.
+2. **Equity Misalignment:** Splitting equity evenly on day one without **vesting schedules** (meaning a founder can quit after 3 months and keep half the company).
+3. **Role Confusion & Ego:** Both founders wanting to be the "decision-maker" or CEO, with no clear system for resolving deadlocks.
+4. **Values/Vision Drift:** One founder wants to build a sustainable $5M/year lifestyle business, while the other wants to raise venture capital and shoot for a $1B exit.
+
+---
+
+### The Verdict
+The claim that **"most"** startups fail due to cofounder conflict is **technically exaggerated** based on broad economic data, which points to **lack of market fit** as the primary killer. 
+
+However, in the **earliest stages** of a startup (before product-market fit even has a chance to matter), cofounder conflict is arguably the single most lethal threat.

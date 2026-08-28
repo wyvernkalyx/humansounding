@@ -1,0 +1,27 @@
+## Product Update: Introducing the Redesigned Dashboard
+
+We’re excited to introduce our redesigned dashboard — built to help you find key insights faster, navigate more easily, and stay focused on what matters most.
+
+### What’s new
+
+**A cleaner, more intuitive layout**  
+We’ve reorganized the dashboard to make important information easier to scan at a glance. Key metrics, recent activity, and priority items are now more clearly grouped and accessible.
+
+**Improved navigation**  
+The updated structure makes it simpler to move between sections, reducing clicks and helping you get to the right information faster.
+
+**Enhanced data visibility**  
+Charts, summaries, and performance indicators have been refreshed for better readability, so you can quickly understand trends and take action with confidence.
+
+**More responsive experience**  
+The new dashboard is optimized across devices, giving you a smoother experience whether you’re working from a desktop, tablet, or mobile device.
+
+### Why we made this change
+
+As our product has grown, so has the amount of information available in the dashboard. This redesign is focused on reducing complexity, improving clarity, and making everyday workflows more efficient.
+
+### When it’s available
+
+The redesigned dashboard is rolling out starting today. You’ll see the updated experience the next time you log in.
+
+We’re excited for you to try it and would love to hear your feedback as we continue improving the experience.

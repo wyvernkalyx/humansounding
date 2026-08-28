@@ -1,0 +1,70 @@
+Read it as: **“Under some conditions, for some teams, using their tool may reduce some measured part of onboarding by up to 50%.”** Not as a guaranteed business outcome.
+
+Key things to clarify:
+
+1. **What does “onboarding time” mean?**
+   - Time until paperwork is complete?
+   - Time until accounts/devices/access are provisioned?
+   - Time until the employee is productive?
+   - Time until manager says they are fully ramped?
+
+   Vendors often measure the narrowest version.
+
+2. **What is the baseline?**
+   - Cut in half compared to what?
+   - Your current process?
+   - A manual spreadsheet/email process?
+   - An industry average?
+   - A best-case customer example?
+
+3. **Is it “up to 50%” or average 50%?**
+   - “Up to” usually means best observed case.
+   - Ask for median or average customer impact.
+
+4. **Which parts does the tool actually affect?**
+   It may speed up:
+   - Form collection
+   - Task assignment
+   - Account provisioning
+   - Compliance tracking
+   - Reminders and workflows
+
+   But it may not affect:
+   - Manager availability
+   - Training quality
+   - Team-specific ramp-up
+   - Role complexity
+   - IT/security approval delays
+   - Cultural integration
+
+5. **What effort is required to get the benefit?**
+   The claim may assume:
+   - Clean HRIS data
+   - Prebuilt workflows
+   - Integrations with your systems
+   - Strong process ownership
+   - Manager compliance
+   - Good implementation support
+
+6. **Ask for evidence similar to your environment**
+   Useful questions:
+   - “Can you show a customer case similar to our size, industry, and tooling?”
+   - “What was their onboarding process before?”
+   - “How exactly was the 50% calculated?”
+   - “What metric moved?”
+   - “How long did implementation take?”
+   - “What internal resources were required?”
+   - “What percentage of customers achieve this result?”
+
+7. **Run a pilot with your own metric**
+   Define success upfront, for example:
+   - Reduce average time to provision access from 5 days to 2 days
+   - Reduce HR manual follow-ups by 40%
+   - Increase day-one readiness from 60% to 90%
+   - Reduce new-hire admin completion time by 30%
+
+   Then test the claim against your real process.
+
+A good way to interpret the vendor claim is:
+
+> “This tool may materially reduce administrative onboarding delays if our current process is manual or fragmented, but the ‘half’ figure needs validation against our definition of onboarding, our baseline, and our operational constraints.”

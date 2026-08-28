@@ -1,0 +1,102 @@
+Here’s a practical playbook you can use—starting low-drama, but with a clear escalation path.
+
+## 1. Start creating a paper trail
+Before changing anything, make your contributions visible in writing.
+
+- Send brief status updates: “This week I completed X, drafted Y, solved Z.”
+- Recap decisions after meetings: “Following today’s discussion, I’ll continue refining the model I built for…”
+- Keep drafts, timestamps, Slack/email messages, Jira tickets, commits, docs, etc.
+
+This is not about being petty—it protects you and makes attribution easier.
+
+## 2. Pre-empt credit theft before meetings
+If you know your work may be discussed, put your name on it early.
+
+Examples:
+- “I’ll walk everyone through the analysis I completed on customer churn.”
+- “I added the latest recommendations to the deck—happy to present that section.”
+- “I’ve been leading the research on this, so I can give the background.”
+
+If slides/docs are involved, include “Prepared by…” or clear owner names on sections.
+
+## 3. Correct the record in the meeting—calmly and immediately
+You don’t need to accuse them. Just re-anchor the work to yourself.
+
+If they say, “I came up with this approach…,” you can say:
+
+- “Yes, that builds on the framework I put together last week. I can add context on how I developed it.”
+- “Thanks for highlighting that. When I ran the analysis, the key finding was…”
+- “Just to clarify, I created the initial proposal, and I’d be happy to explain the reasoning.”
+- “I’m glad this is useful. I led that piece, so I can answer questions.”
+
+The tone matters: factual, calm, non-defensive.
+
+## 4. Follow up after the meeting in writing
+Send a recap that names ownership naturally.
+
+Example:
+
+> Thanks everyone. As discussed, I’ll continue developing the pricing analysis I presented, and Sam will handle the customer feedback section. Next steps are…
+
+This helps correct attribution without creating a confrontation.
+
+## 5. Talk to the colleague privately
+If it happens more than once, address it directly.
+
+Try:
+
+> “I wanted to talk about something I’ve noticed. In the last couple of meetings, work I led was presented in a way that made it sound like it was yours. I’m sure that may not have been intentional, but I need my contributions to be accurately represented. Going forward, please refer to me as the owner of that work, or invite me to present it.”
+
+Keep it specific. Mention examples. Avoid “you always” or “you’re stealing credit,” even if that’s how it feels.
+
+## 6. If it continues, involve your manager
+Don’t frame it as a personality conflict. Frame it as visibility, ownership, and career impact.
+
+Say:
+
+> “I’d like your guidance on something. I’ve noticed several instances where work I led was attributed to someone else in meetings. For example, X and Y. I’ve addressed it directly, but it’s continuing. I want to make sure ownership is clear because it affects performance evaluation and project accountability. How would you recommend we handle this?”
+
+Bring documentation. Ask for a specific solution, like:
+- You present your own work.
+- Ownership is clarified in project plans.
+- Your manager reinforces credit in meetings.
+- Written updates include named contributors.
+
+## 7. Build allies
+If trusted teammates know you did the work, ask them to help reinforce attribution.
+
+For example:
+
+> “If this comes up in the meeting, could you help clarify that I led the analysis? I’m trying to make ownership more visible.”
+
+Good colleagues will often say things like:
+
+> “As [Your Name] found in their analysis…”
+
+That can be powerful.
+
+## 8. Be more visible generally
+Sometimes credit theft works because the real contributor is too quiet. Increase your presence without bragging.
+
+- Present your own sections.
+- Speak early in meetings.
+- Share concise updates with stakeholders.
+- Ask to be included in meetings where your work is discussed.
+- Put your name next to deliverables.
+
+## 9. Know when to escalate harder
+If the colleague is repeatedly misrepresenting your work after you’ve corrected them, that’s not a misunderstanding—it’s a pattern.
+
+Escalate to:
+- Your manager
+- Their manager, if appropriate
+- HR, if it affects reviews, promotion, compensation, or creates a hostile environment
+
+Use facts, dates, and impact.
+
+## The key principle
+Don’t just complain after the fact. **Create visibility before, correct calmly during, document after, and escalate if repeated.**
+
+A simple line you can use next time:
+
+> “I’m glad this work is getting attention. Just to clarify, I led the analysis and developed the recommendation, so I can speak to the details.”

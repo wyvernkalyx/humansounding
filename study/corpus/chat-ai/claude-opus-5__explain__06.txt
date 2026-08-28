@@ -1,0 +1,65 @@
+## First, "breach" covers a lot of different events
+
+The word gets applied to very different situations, and the difference matters a lot for you:
+
+- **Database compromise** — an attacker got into a system holding user records and copied them out in bulk.
+- **Third-party/vendor compromise** — the company itself wasn't hacked; a payroll processor, analytics vendor, or cloud provider they used was. Very common, and it's why you sometimes get notices from companies you've never heard of.
+- **Misconfiguration** — a cloud storage bucket or database left open to the internet with no password. No "hacking" required.
+- **Credential stuffing** — no company system was breached at all; attackers used passwords leaked elsewhere to log into individual accounts.
+- **Ransomware with exfiltration** — data is both encrypted in place *and* copied out, so the attacker can extort the company twice.
+- **Insider or accidental disclosure** — an employee misuses access, or an email goes to the wrong list.
+
+## What typically leaves
+
+Rarely "everything." Usually specific tables or file shares the attacker reached:
+
+- **Identifiers** — name, email, phone, address, date of birth
+- **Credentials** — password hashes, security questions, session tokens, API keys
+- **Government IDs** — SSN, passport, driver's license numbers
+- **Financial** — often truncated or tokenized card numbers, but sometimes full bank details
+- **Behavioral data** — order history, location logs, IP addresses, device fingerprints
+- **Content** — messages, documents, photos, medical records
+
+## Where it goes afterward
+
+This is the part most notification letters skip.
+
+Data is typically staged and exfiltrated over days or weeks, then it enters a fairly predictable economy. Fresh, high-value sets get sold privately on criminal forums first. Ransomware groups publish samples publicly to pressure the victim company, then dump the full set if unpaid. Older or lower-value data eventually circulates free.
+
+From there, the important thing is **aggregation**. Your record from one breach gets joined against records from a dozen others. Individually, an email address and a birthdate aren't much. Combined across sources, someone assembles a profile with your address history, phone number, employer, partial SSN, and answers to common security questions.
+
+That profile fuels:
+
+- **Credential stuffing** — your reused password gets tried against banks, email, everything
+- **Targeted phishing** — the most underrated risk. A scammer who knows you shop somewhere, your recent order number, and your real name is dramatically more convincing
+- **SIM swapping** — using your personal details to social-engineer your carrier into porting your number, which then defeats SMS-based 2FA
+- **Identity theft** — new credit lines, tax refund fraud, medical claims
+
+## Decoding the notification language
+
+**"Passwords were encrypted"** — usually means hashed, and the algorithm matters enormously. Bcrypt or Argon2 with a good work factor means most passwords stay safe. Unsalted MD5 or SHA-1 means they're already cracked. Companies rarely specify.
+
+**"No financial information was accessed"** — technically reassuring, practically less so. Names, emails, and purchase histories are plenty for effective phishing.
+
+**"We have no evidence of misuse"** — this is an absence-of-evidence statement, not an assurance. Detection of downstream misuse is genuinely hard.
+
+**"The incident has been contained"** — refers to the attacker's access, not the data. The copies already made are gone for good.
+
+**Complimentary credit monitoring** — purely reactive. It tells you after someone opens an account in your name. A credit freeze actually prevents it, and it's free.
+
+## The part that doesn't get said clearly
+
+You can't un-breach data. Passwords are rotatable; your date of birth and Social Security number are not. This is why SSN exposure is qualitatively worse than password exposure — it's a permanent identifier used as a shared secret by institutions that have no better alternative.
+
+Also worth knowing: the gap between compromise and disclosure is often months. Attackers frequently sit in systems undetected for a long time, and then there's investigation, legal review, and sometimes a law enforcement hold on notification. By the time you get the letter, the data may have been circulating for a year.
+
+## What actually helps
+
+In rough order of impact:
+
+1. **Freeze your credit** at Equifax, Experian, and TransUnion. Free, reversible, and the single most effective step against new-account fraud.
+2. **Unique passwords via a password manager.** This makes any single breach a contained event rather than a cascading one.
+3. **MFA using an authenticator app or hardware key**, not SMS, especially on email and financial accounts. Your email is the recovery path for everything else.
+4. **Get suspicious of unsolicited contact** for a while afterward — especially anything referencing the breach itself. "We're calling about the incident to help secure your account" is a standard follow-on scam.
+5. **Check haveibeenpwned.com** to see which breaches include your email.
+6. **If your SSN was exposed** and you're in the US, request an IRS Identity Protection PIN to block tax refund fraud.

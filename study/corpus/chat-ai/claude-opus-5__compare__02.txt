@@ -1,0 +1,52 @@
+## The short answer
+
+Four years is right at the edge of the break-even horizon, which usually falls between 5 and 7 years. For a serial four-year mover, renting is the safer default — but the answer flips in certain markets and situations.
+
+## Why four years is hard on buyers
+
+**Transaction costs dominate.** You'll typically pay 2–4% of the purchase price to buy and 6–9% to sell (agent commissions, transfer taxes, title, prep work). Combined, that's roughly 8–12% of the home's value — a cost you amortize over only four years, or about 2–3% per year. Note that agent commissions have become more negotiable since the 2024 NAR settlement, which shaves this somewhat but doesn't eliminate it.
+
+**Amortization is back-loaded.** On a $320,000 mortgage at 6.5%, your monthly principal and interest is about $2,023. Over 48 months you'll pay roughly $97,000 — of which only about $16,000 goes to principal. The other $81,000 is interest, which is economically similar to rent: money spent for shelter that you don't get back.
+
+**Appreciation is a coin flip over short windows.** Long-run averages of 3–4% annually mask enormous variance. Four-year windows that included 2007–2011 or 2022–2023 in overheated Sun Belt markets produced real losses. With 8–12% in transaction costs, you need roughly 2.5–3% annual appreciation just to break even on the round trip.
+
+## A rough worked example
+
+| | Buy ($400k home, 20% down, 6.5%) | Rent ($2,400/mo) |
+|---|---|---|
+| Upfront | $80,000 down + ~$10,000 closing | ~$5,000 deposit |
+| Monthly carrying cost | ~$2,870 (P&I, tax, insurance, maintenance) | ~$2,420 |
+| After 4 years @ 3% appreciation | ~$114,500 in net proceeds after selling costs | ~$113,600 from $90,000 invested at 6% |
+
+That's roughly a wash — which is the real lesson. At four years, small changes in assumptions swing the result by tens of thousands in either direction. The comparison is not robust enough to bet heavily on.
+
+## When buying still wins at four years
+
+- **Low price-to-rent ratios.** Divide the purchase price by annual rent for a comparable home. Under about 15, buying is attractive even short-term; over 21, renting is usually better. This ratio varies enormously — Cleveland and Pittsburgh look very different from San Jose or Seattle.
+- **Rapidly rising rents.** A mortgage payment is fixed; rent isn't. In a market with 6–8% annual rent growth, locking in your housing cost has real value.
+- **You'd buy something meaningfully better than you'd rent.** In many markets, quality single-family homes in good school districts simply aren't available as rentals.
+- **You can keep it as a rental.** This is the most underrated option for a repeat mover.
+
+## The landlord option
+
+If your moves are predictable and you have the cash reserves, converting each home into a rental sidesteps the sell-side transaction cost entirely. Over three or four moves you accumulate a small portfolio. Caveats:
+
+- **The capital gains exclusion has a clock.** You can exclude $250,000 of gain ($500,000 married) if you lived in the home 2 of the last 5 years. Rent it out for more than three years after moving and you lose that.
+- **Remote landlording is real work,** and property management runs 8–10% of rent.
+- **It concentrates risk.** Multiple leveraged properties across different metros is a genuine business, not passive income.
+
+## Tax considerations
+
+Since the 2017 tax law raised the standard deduction and capped SALT deductions at $10,000, most homeowners with moderate mortgages no longer itemize, so the mortgage interest deduction provides no benefit. It matters mainly for high earners with large loans in high-tax states. Don't assume tax benefits without checking whether your itemized deductions would actually exceed the standard deduction.
+
+## Non-financial factors that often decide it
+
+**Favoring renting:** No exposure to a soft market when you need to move on a schedule. No $12,000 HVAC surprise. Ability to move quickly if a job goes badly. Far less time spent on maintenance and transactions — four moves means four purchases and four sales, each consuming weeks.
+
+**Favoring buying:** Control over the space. Stability for kids in a specific school. Protection from landlords selling out from under you or refusing lease renewals. Psychological benefits of ownership that don't show up in a spreadsheet.
+
+## Bottom line
+
+For most four-year movers, renting and investing the difference is the lower-variance choice, and the transaction cost drag is the single biggest reason. Buying makes sense if the local price-to-rent ratio is low, if you're confident you'd hold and rent out rather than sell, or if the housing stock available to renters is genuinely inferior to what you'd own.
+
+The one thing to avoid is buying with the *assumption* of appreciation. Run the numbers at 0% appreciation. If it still works, you have a decent case. If it only works at 4%, you're speculating on the housing market on a four-year timeline, with leverage.

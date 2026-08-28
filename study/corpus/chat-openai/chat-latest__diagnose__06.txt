@@ -1,0 +1,13 @@
+You likely have two related meeting-design failures: weak time control and weak decision capture. Common causes are:
+
+- No outcome-driven agenda: topics like “discuss X” expand indefinitely because nobody knows what must be decided.
+- No timeboxes or active facilitation: one issue consumes the meeting while later items get squeezed.
+- Too much status reporting: information that could be async takes time away from decisions and problem-solving.
+- Unclear decision rights: discussion continues because it’s unclear who recommends, who provides input, and who ultimately decides.
+- Decisions aren’t explicitly closed: the group moves on without someone stating, “The decision is X.”
+- No live record: relying on everyone’s memory produces different versions of what happened afterward.
+- Actions lack owners and dates: “we should do X” gets mistaken for a commitment.
+
+A simple fix is to make every agenda item specify an owner, desired outcome (“decide,” “get input,” or “inform”), and timebox. Assign a facilitator and a note-taker; capture decisions and actions visibly during the meeting. When a timebox ends, either decide, delegate, or explicitly schedule follow-up rather than silently running over.
+
+Finish five minutes early by reading back only: decisions made, action items with owner/deadline, and unresolved issues. Send that same record afterward. After 2–3 weeks, you’ll be able to tell whether the underlying problem was meeting structure, facilitation, or genuinely difficult decision-making.

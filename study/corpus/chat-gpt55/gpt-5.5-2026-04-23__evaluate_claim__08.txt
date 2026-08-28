@@ -1,0 +1,142 @@
+A “redesign” usually changes the site’s look, layout, messaging, and user experience while keeping much of the underlying platform and code. A “rebuild” means replacing or substantially reworking the foundation: CMS, templates, data structure, integrations, front-end code, performance architecture, or hosting setup.
+
+To judge whether you really need a rebuild, ask for evidence in these areas.
+
+## 1. Start with business goals
+
+A rebuild is justified if the current site prevents you from achieving important business goals, such as:
+
+- You cannot launch pages, campaigns, or products quickly.
+- Conversion rates are poor and the issues are structural, not just visual.
+- The site does not support new business requirements.
+- Marketing depends too heavily on developers for basic updates.
+- The CMS workflow is slow, fragile, or painful.
+- The site cannot support personalization, ecommerce, multilingual content, gated content, or integrations you need.
+
+If the main issue is “it looks dated,” that usually points to a redesign, not necessarily a rebuild.
+
+## 2. Audit the current technical foundation
+
+You may need a rebuild if several of these are true:
+
+- The site is built on an outdated CMS, framework, theme, or custom codebase.
+- Plugins or dependencies are no longer maintained.
+- Security updates are difficult or risky.
+- The code is brittle: small changes break unrelated areas.
+- The site has accumulated years of patches, workarounds, and duplicate templates.
+- Page speed is poor because of architectural issues, not just large images or scripts.
+- Mobile responsiveness is flawed at a structural level.
+- Accessibility problems are widespread across templates.
+- SEO issues are baked into the platform or templates.
+- Integrations with CRM, analytics, ecommerce, forms, or marketing automation are unreliable.
+
+If problems are limited and fixable — image compression, better templates, some CSS cleanup, content edits — a rebuild may be excessive.
+
+## 3. Review content management
+
+Ask your team:
+
+- Can non-technical staff easily create and edit pages?
+- Are content types structured properly?
+- Is there a reusable component library?
+- Are page layouts consistent?
+- Is the CMS full of old fields, plugins, duplicated pages, or confusing workflows?
+- Can editors preview, schedule, localize, and reuse content easily?
+
+If the editorial experience is fundamentally broken, a rebuild may be sensible. If editors mostly need better templates and training, a redesign or CMS cleanup may be enough.
+
+## 4. Look at performance, SEO, and accessibility
+
+Request a proper audit, not just opinions.
+
+Useful evidence includes:
+
+- Core Web Vitals results
+- Page load speed by template type
+- Crawl errors and indexation issues
+- Duplicate metadata or poor heading structure
+- JavaScript rendering problems
+- Accessibility scan plus manual accessibility review
+- Broken internal links
+- Poor mobile usability
+- Analytics showing drop-offs, low conversion, or high bounce rates
+
+A rebuild is more justified if these issues are systemic across the site’s architecture.
+
+## 5. Ask what would happen if you only redesigned
+
+A good consultant should be able to explain the tradeoff:
+
+- What can be fixed with a redesign?
+- What cannot be fixed without a rebuild?
+- What risks remain if you keep the current platform?
+- How long would a redesign-only solution last?
+- Would redesigning now make a later rebuild more expensive?
+
+If they cannot clearly separate visual/UX problems from technical/platform problems, be cautious.
+
+## 6. Ask for a written diagnosis
+
+Request a simple document with:
+
+1. Current-state findings  
+2. Business impact of each problem  
+3. Severity: low, medium, high  
+4. Recommended fix: content, design, code cleanup, platform upgrade, or rebuild  
+5. Estimated cost and timeline for each path  
+6. Risks of doing nothing  
+7. Risks of rebuilding  
+
+This turns “you need a rebuild” into a testable recommendation.
+
+## 7. Compare three options
+
+Ask them to price and explain:
+
+### Option A: Redesign only
+Useful if the site is technically sound but looks dated or converts poorly.
+
+### Option B: Partial rebuild / refactor
+Useful if some templates, components, or CMS structures are broken, but the whole platform does not need replacing.
+
+### Option C: Full rebuild
+Useful if the CMS, codebase, integrations, performance, security, or scalability are fundamentally limiting.
+
+A reputable consultant should be comfortable comparing all three, not just selling the most expensive path.
+
+## 8. Watch for red flags
+
+Be skeptical if the consultant says you need a full rebuild but:
+
+- Does not inspect your CMS, codebase, analytics, or hosting.
+- Focuses only on visual appearance.
+- Cannot identify specific technical limitations.
+- Says “best practice” without tying it to your business needs.
+- Recommends a favorite platform before understanding requirements.
+- Does not discuss SEO migration risk.
+- Does not mention content migration, redirects, analytics, accessibility, or testing.
+- Cannot explain why a phased approach would not work.
+
+## 9. Signs a full rebuild is probably justified
+
+A rebuild is more likely warranted if:
+
+- Your platform is unsupported or insecure.
+- The site is very slow despite optimization attempts.
+- Editors cannot manage content effectively.
+- The design system and templates are inconsistent or unmaintainable.
+- Core business features require hacks or manual work.
+- Integrations are unreliable or impossible to improve.
+- SEO or accessibility problems are deeply embedded.
+- Multiple agencies or developers have struggled to work with the existing code.
+- The cost of fixing the old site approaches the cost of rebuilding it properly.
+
+## 10. The key question
+
+Ask:
+
+> “What specific outcomes can we achieve only through a rebuild, and not through a redesign or targeted refactor?”
+
+If they answer clearly, with evidence, you may have a real case for a rebuild. If the answer is vague, get a second opinion.
+
+A practical next step is to commission a short discovery/audit phase before committing to the rebuild. That should produce a recommendation, scope, budget range, timeline, risks, and migration plan.

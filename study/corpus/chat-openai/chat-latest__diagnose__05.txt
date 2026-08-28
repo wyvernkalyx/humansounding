@@ -1,0 +1,16 @@
+Usually because “the answer exists” and “the customer can get the answer” are different things.
+
+Common causes include:
+
+- Discoverability: Customers don’t know which terms to search, navigation reflects your product structure rather than their mental model, or search ranking is poor.
+- Comprehension: The documentation may be accurate but assumes terminology, context, or technical knowledge customers lack.
+- Task mismatch: Docs often explain what a feature does rather than answering “How do I accomplish X?” or “Why did X fail?”
+- Trust: Customers may find the documentation but want confirmation that it applies to their version, plan, configuration, or unusual situation.
+- Freshness: If customers have encountered outdated docs before, they learn not to trust them.
+- Convenience: Asking support can simply be faster than searching—especially if support reliably replies with a personalized answer.
+- Timing: The right information may exist, but not where customers encounter the problem. In-product guidance, error messages, and links can outperform a knowledge base.
+- Hidden ambiguity: Repeated questions sometimes reveal that the product itself is confusing. Documentation then treats the symptom rather than the source.
+
+A useful diagnostic is to take your 20 most common “already documented” questions and watch a few customers try to answer them without help. Track whether they fail to find the page, find it but misunderstand it, or understand it but still need confirmation. Those three failures require very different fixes.
+
+Also look closely at the exact words customers use in their questions. Those phrases should often appear in article titles, search synonyms, error-message links, and headings. Repeated support questions are effectively user research for both your documentation and your product.

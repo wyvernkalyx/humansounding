@@ -1,0 +1,52 @@
+It’s probably not that you’re “not working hard enough.” Missing deadlines while working more hours usually means the system you’re working in is overloaded or miscalibrated.
+
+Common things that may be happening:
+
+1. **You have more commitments than capacity**
+   - If your workload exceeds your available focused time, more hours just delays the crash.
+   - You may be accepting deadlines based on optimism rather than actual capacity.
+
+2. **Your work is fragmented**
+   - Meetings, messages, urgent requests, context switching, and “quick things” can consume the day.
+   - You may be busy constantly but not getting enough uninterrupted time for the work that actually moves deadlines.
+
+3. **Tasks are larger or fuzzier than they look**
+   - Some work has hidden steps: coordination, approvals, revisions, dependencies, testing, emotional labor, cleanup.
+   - If deadlines are based only on the “main task,” they’ll be too tight.
+
+4. **Priorities are unclear or shifting**
+   - If everything is important, you may be spreading effort across too many things.
+   - You can work hard all day and still miss the thing that mattered most.
+
+5. **You may be approaching burnout**
+   - Working more hours can reduce judgment, speed, creativity, and accuracy.
+   - Past a certain point, extra hours often produce less usable output, not more.
+
+A quick way to diagnose it:
+
+For the next 3–5 days, track where your time actually goes in rough categories:
+
+- Deep work
+- Meetings/calls
+- Messages/email/admin
+- Rework/revisions
+- Waiting on others
+- Unplanned urgent tasks
+- Breaks/recovery
+
+Then compare that to your deadlines. You may find that an “8-hour workday” only contains 2–4 hours of real deadline-moving work.
+
+What to do immediately:
+
+- **List every active commitment** and its deadline.
+- **Estimate remaining work honestly**, then add a buffer of 30–50%.
+- **Identify the top 1–3 deadlines that truly matter.**
+- **Renegotiate early** on anything that won’t fit: “Given X and Y, I can deliver A by Friday or B by Friday, but not both.”
+- **Block focused work time** before meetings/messages if possible.
+- **Stop silently absorbing new work.** Ask: “What should this replace?”
+
+The key question is not “How do I work more?” It’s:
+
+**“What am I committed to that my current capacity cannot actually support?”**
+
+If this pattern has been going on for a while and you feel constantly exhausted, foggy, or unable to recover, burnout may be part of it too. In that case, the fix isn’t just better scheduling—it may require reducing load and protecting recovery time.

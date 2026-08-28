@@ -1,0 +1,57 @@
+Deciding whether to rebuild or continue patching a 10-year-old internal tool is one of the most classic (and expensive) dilemmas in software engineering. A full rewrite often takes twice as long as estimated, but nursing legacy code can quietly bleed engineering hours and employee productivity.
+
+To make the right choice, run your tool through this **4-part decision framework**.
+
+---
+
+### 1. The Diagnostic: When to Rebuild vs. When to Patch
+
+#### **You should REBUILD if:**
+* **Development velocity has flatlined:** Adding a minor feature takes weeks instead of hours because the codebase is brittle (“spaghetti code”) and changes cause unpredictable side effects.
+* **The tech stack is an active liability:** The framework, runtime, or operating system is end-of-life (EOL), posing critical **security vulnerabilities** or making it impossible to hire developers willing to work on it.
+* **It blocks core business growth:** The tool cannot scale to handle current data volumes, lacks APIs required to integrate with modern software, or forces manual workarounds that slow down the business.
+* **The UX actively hurts operations:** Employees spend hours doing tasks that should take minutes, or onboarding new staff requires weeks of training just to navigate the tool.
+
+#### **You should KEEP PATCHING if:**
+* **The business logic is extremely complex and undocumented:** Decades of edge cases are baked into the code, and nobody fully understands the business rules anymore. A rewrite risks breaking critical, forgotten workflows.
+* **The tool is "stable enough":** It does its job, requires minimal maintenance (e.g., less than a few days a quarter), and isn't blocking strategic initiatives.
+* **You don’t have dedicated resources:** If you can only afford to dedicate half a developer part-time to the rebuild, it will never ship. A rebuild requires focused, dedicated capacity.
+
+---
+
+### 2. The Hidden Alternatives (Don't just think "Patch vs. Rewrite")
+
+Before committing to a multi-month custom rebuild, consider these two alternatives:
+
+#### Alternative A: Buy or Use Low-Code
+Ten years ago, you *had* to build custom tools from scratch. Today, that is rarely true.
+* Can modern SaaS replace 80% of this tool's functionality?
+* Can modern internal-tool platforms (like **Retool, Appsmith, Superblocks**) let you rebuild the UI in weeks on top of your existing databases and APIs, bypassing standard front-end development?
+
+#### Alternative B: The "Strangler Fig" Approach (Incremental Migration)
+Instead of a "Big Bang" rewrite (which has a high failure rate), replace the old tool piece by piece:
+1. Build a modern API layer in front of the legacy database.
+2. Build new features in a modern system.
+3. Migrate the most painful legacy workflows one at a time.
+4. Decommission the old tool only when the last module is moved.
+
+---
+
+### 3. Quick ROI Calculation
+
+To justify the decision to leadership, calculate the **Cost of the Status Quo** vs. the **Cost of Rebuilding**:
+
+$$\text{Annual Cost of Patching} = (\text{Dev Maintenance Hours} \times \text{Rate}) + (\text{User Lost Productivity Hours} \times \text{Rate}) + \text{Cost of Errors/Downtime}$$
+
+If the annual cost of patching (plus lost productivity) is greater than **30–50% of the estimated cost of a rebuild**, a replacement usually pays for itself within 2 to 3 years.
+
+---
+
+### Recommended Next Step
+
+Run a **1-week discovery spike**:
+1. **Audit the Users:** Spend 30 minutes shadowing the primary users of the tool. Note their biggest daily frustrations.
+2. **Audit the Code:** Have a senior engineer identify the 3 worst architectural bottlenecks and any security/EOL dependencies.
+3. **Prototype a Low-Code Alternative:** Spend two days building a proof-of-concept for *one* workflow using a low-code tool or standard modern framework. 
+
+This will give you the actual data needed to commit to a direction with confidence.

@@ -1,0 +1,7 @@
+[Name] is a technically strong developer who consistently demonstrates deep knowledge of the codebase and strong problem-solving ability. They are particularly effective at diagnosing complex issues, identifying technical risks, and producing high-quality solutions. Their expertise has made a meaningful contribution to the team’s delivery and the reliability of our systems.
+
+An important area for growth is collaboration. At times, [Name] communicates feedback in ways that can come across as dismissive or overly confrontational, particularly during technical disagreements or code reviews. This can make it harder for teammates to contribute ideas, ask questions, or reach decisions efficiently. Strengthening their ability to disagree constructively, explain concerns with context, and remain open to alternative approaches would increase their overall impact.
+
+Going forward, I’d like [Name] to pair their technical expertise with more consistent collaborative behaviors: giving specific and respectful feedback, seeking to understand others’ reasoning before challenging it, and focusing disagreements on technical tradeoffs rather than individuals. Success would look like maintaining the same high technical standards while helping teammates participate effectively and making technical discussions more productive.
+
+[Name] has the technical capability to be a highly influential member of the team. Developing a more constructive and inclusive collaboration style would make that influence significantly more effective.

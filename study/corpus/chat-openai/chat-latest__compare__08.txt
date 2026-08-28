@@ -1,0 +1,22 @@
+For a 60-person company, the choice usually comes down to whether you value tighter control and company knowledge enough to justify the higher fixed cost of an internal IT function.
+
+| Factor | In-house help desk | Outsourced help desk / MSP |
+|---|---|---|
+| Cost | Higher fixed payroll and benefits | Usually predictable monthly fee |
+| Coverage | Limited unless you hire multiple people | Often extended-hours or 24/7 options |
+| Response | Can be very fast when staff are available | Depends heavily on SLA and provider quality |
+| Company knowledge | Strong; learns employees and workflows | Usually weaker initially, improves over time |
+| Expertise | Limited to skills of a small team | Access to specialists across networking, security, Microsoft 365, etc. |
+| Control | High | Less direct control over staff and priorities |
+| Continuity | Vacation, illness, or resignation can create gaps | Provider handles staffing and coverage |
+| Scaling | Requires hiring | Usually easy to add/remove users |
+| Security | Greater direct control, but reliant on internal expertise | Can provide stronger expertise, but introduces third-party access |
+| User experience | More personal and embedded | Can feel like a ticket queue if poorly managed |
+
+For only 60 employees, a fully in-house help desk can be difficult to justify. One IT generalist might cost roughly $70,000–$110,000+ annually in salary in the U.S., with benefits, recruiting, software, training, and backup coverage increasing the actual cost. One person also creates a single point of failure. Hiring two people fixes much of the coverage problem but makes the economics considerably harder at this size.
+
+An outsourced provider generally converts that into a per-user or fixed monthly expense and gives you a larger pool of expertise. The tradeoff is that provider quality varies enormously: slow escalation, technician turnover, poor documentation, or restrictive contracts can wipe out much of the advantage. Pay particular attention to response/resolution SLAs, after-hours charges, cybersecurity responsibilities, onsite support, contract termination terms, and whether projects are included or separately billed.
+
+For many 60-person businesses, a hybrid model is the sweet spot: designate an internal employee or IT manager as the technology owner while outsourcing day-to-day help desk, infrastructure, security monitoring, and after-hours support. That preserves institutional knowledge and accountability without requiring enough internal hires to provide reliable coverage.
+
+As a rule of thumb, I'd lean outsourced or hybrid at 60 employees unless your technology is unusually specialized, downtime is exceptionally expensive, regulatory requirements favor direct control, or employees need substantial hands-on onsite support.

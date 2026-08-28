@@ -1,0 +1,319 @@
+DNS resolution is the process of turning a human-readable name like:
+
+```text
+www.example.com
+```
+
+into an IP address like:
+
+```text
+93.184.216.34
+```
+
+That IP address is what your computer actually uses to connect to the server.
+
+Here is the typical process.
+
+---
+
+## 1. You enter a domain name
+
+Suppose you type:
+
+```text
+www.example.com
+```
+
+into your browser.
+
+The browser needs to know the IP address for `www.example.com`.
+
+---
+
+## 2. The browser and OS check local caches
+
+Before asking the internet, your device checks whether it already knows the answer.
+
+It may check:
+
+1. The browser DNS cache
+2. The operating system DNS cache
+3. The local `hosts` file
+4. Possibly a router or local network cache
+
+If the IP address is found locally and has not expired, DNS lookup stops there.
+
+If not, your computer asks a DNS resolver.
+
+---
+
+## 3. Your computer asks a recursive resolver
+
+Your device sends a DNS query to a recursive resolver.
+
+This is usually provided by:
+
+- Your ISP
+- A public DNS provider like Google DNS `8.8.8.8`
+- Cloudflare DNS `1.1.1.1`
+- Quad9 `9.9.9.9`
+- A corporate or university DNS server
+
+The query is basically:
+
+```text
+What is the IP address for www.example.com?
+```
+
+This resolver is called “recursive” because it does the work of finding the answer on your behalf.
+
+---
+
+## 4. The recursive resolver checks its cache
+
+The resolver first checks whether it already has the answer cached.
+
+DNS answers usually come with a TTL, or “Time To Live,” which says how long the result may be cached.
+
+For example:
+
+```text
+www.example.com -> 93.184.216.34
+TTL: 3600 seconds
+```
+
+If the resolver has a still-valid cached answer, it returns it immediately.
+
+If not, it starts asking other DNS servers.
+
+---
+
+## 5. The resolver asks a root DNS server
+
+If the resolver does not know the answer, it starts at the top of the DNS hierarchy: the root DNS servers.
+
+The root servers do not usually know the IP address of `www.example.com`.
+
+But they do know where to find information about top-level domains such as:
+
+```text
+.com
+.org
+.net
+.uk
+.jp
+```
+
+So the resolver asks a root server:
+
+```text
+Where can I find information about .com?
+```
+
+The root server replies with the nameservers for the `.com` top-level domain.
+
+---
+
+## 6. The resolver asks the TLD nameserver
+
+Next, the resolver asks a `.com` TLD nameserver:
+
+```text
+Where can I find information about example.com?
+```
+
+The `.com` nameserver does not usually know the IP for `www.example.com` either.
+
+But it knows which authoritative nameservers are responsible for `example.com`.
+
+So it replies with something like:
+
+```text
+example.com is handled by ns1.example-dns.com
+example.com is handled by ns2.example-dns.com
+```
+
+These are the authoritative nameservers for the domain.
+
+---
+
+## 7. The resolver asks the authoritative nameserver
+
+Now the resolver asks one of the authoritative nameservers:
+
+```text
+What is the IP address for www.example.com?
+```
+
+The authoritative nameserver is the server that actually holds the DNS records for `example.com`.
+
+It may return an `A` record for IPv4:
+
+```text
+www.example.com -> 93.184.216.34
+```
+
+Or an `AAAA` record for IPv6:
+
+```text
+www.example.com -> 2606:2800:220:1:248:1893:25c8:1946
+```
+
+It could also return a `CNAME`, which means the name is an alias.
+
+For example:
+
+```text
+www.example.com -> example.net
+```
+
+If there is a CNAME, the resolver then has to resolve the target name too.
+
+---
+
+## 8. The resolver returns the answer to your computer
+
+Once the recursive resolver has the final answer, it sends it back to your computer:
+
+```text
+www.example.com = 93.184.216.34
+```
+
+Your OS gives that address to the browser.
+
+The browser can now connect to the web server using the IP address.
+
+---
+
+## 9. The answer is cached
+
+The result is cached in several places:
+
+- The recursive resolver
+- Your operating system
+- Possibly your browser
+- Possibly your router or local DNS forwarder
+
+The cache lasts according to the DNS record’s TTL.
+
+This makes future lookups much faster.
+
+---
+
+# The full chain looks like this
+
+For:
+
+```text
+www.example.com
+```
+
+The lookup usually goes:
+
+```text
+Your computer
+   ↓
+Recursive resolver
+   ↓
+Root DNS server
+   ↓
+.com TLD DNS server
+   ↓
+Authoritative DNS server for example.com
+   ↓
+Recursive resolver
+   ↓
+Your computer
+```
+
+---
+
+# Important DNS record types
+
+DNS can return more than just IP addresses. Common record types include:
+
+| Record | Purpose |
+|---|---|
+| `A` | IPv4 address |
+| `AAAA` | IPv6 address |
+| `CNAME` | Alias to another hostname |
+| `MX` | Mail server for a domain |
+| `TXT` | Text data, often used for verification or SPF/DKIM |
+| `NS` | Nameservers for a domain |
+| `SOA` | Administrative information about a DNS zone |
+| `PTR` | Reverse DNS lookup, IP to name |
+
+---
+
+# UDP, TCP, and ports
+
+Most DNS queries use UDP port 53 because it is fast and lightweight.
+
+DNS can also use TCP port 53 when:
+
+- The response is too large for UDP
+- A zone transfer is being performed
+- Reliability is needed
+- Some DNSSEC responses are large
+
+Modern encrypted DNS variants also exist:
+
+- DNS over HTTPS, DoH
+- DNS over TLS, DoT
+- DNS over QUIC, DoQ
+
+These encrypt DNS queries between the client and resolver.
+
+---
+
+# What “authoritative” means
+
+An authoritative DNS server is the source of truth for a domain’s DNS zone.
+
+For example, the authoritative nameserver for `example.com` contains records like:
+
+```text
+example.com       A      93.184.216.34
+www.example.com   CNAME  example.com
+example.com       MX     mail.example.com
+```
+
+Recursive resolvers ask authoritative servers for official answers.
+
+---
+
+# What TTL does
+
+TTL stands for “Time To Live.”
+
+It controls how long a DNS answer can be cached.
+
+Example:
+
+```text
+www.example.com A 93.184.216.34 TTL 300
+```
+
+This means DNS resolvers can cache that answer for 300 seconds.
+
+Lower TTLs allow faster changes but cause more DNS traffic.
+
+Higher TTLs reduce DNS traffic but make changes take longer to spread.
+
+---
+
+# One subtle point: DNS does not “propagate” exactly
+
+People often say DNS changes “propagate,” but technically DNS is not pushed out everywhere.
+
+Instead:
+
+1. You update the authoritative DNS records.
+2. Recursive resolvers keep using old cached answers until their TTL expires.
+3. After the TTL expires, they query again and get the new answer.
+
+So delays usually come from caching, not from DNS records being slowly copied everywhere.
+
+---
+
+In short, DNS resolution is a hierarchical lookup system. Your computer asks a recursive resolver, which follows the chain from the root servers to the TLD servers to the authoritative nameserver, gets the correct record, caches it, and returns the IP address to your device.

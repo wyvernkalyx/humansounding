@@ -1,0 +1,34 @@
+Both route your traffic through an intermediary server so the destination sees that server's IP instead of yours. The differences are in scope, encryption, and how they fail.
+
+**Scope of coverage**
+
+A VPN operates at the OS network level — it creates a virtual network interface and (usually) everything on the machine goes through it: browser, email client, background updaters, DNS lookups, everything.
+
+A proxy is typically configured per-application. You point Firefox at a SOCKS5 proxy and Firefox uses it, while your torrent client, system updater, and everything else go out over your normal connection. Some people consider this a feature — you can have one app tunneled and the rest direct.
+
+**Encryption**
+
+A VPN encrypts the tunnel between you and the VPN server by design. That's the point of the "P" in VPN.
+
+Proxies generally don't. An HTTP proxy just relays requests; a SOCKS5 proxy just forwards TCP/UDP. If you're visiting an HTTPS site the content is still encrypted end-to-end, but the proxy connection itself adds no protection. On a hostile network (sketchy café Wi-Fi), a plain proxy doesn't stop the local network from seeing which hosts you're connecting to.
+
+**DNS**
+
+This trips people up constantly. VPNs usually push their own DNS servers, so lookups go through the tunnel. With a proxy, DNS often still resolves through your ISP unless the app explicitly proxies it (Firefox has a `network.proxy.socks_remote_dns` setting for exactly this reason). So your ISP still sees every domain you visit even though the traffic itself goes elsewhere.
+
+**Failure modes**
+
+If a proxy dies, the configured app usually just fails to connect. Loud and obvious.
+
+If a VPN drops, your traffic silently reverts to your normal connection unless you've got a kill switch enabled. Quieter and worse.
+
+**Practical picks**
+
+- *Public Wi-Fi, or hiding all traffic from your ISP:* VPN.
+- *Accessing a corporate/home network's internal resources:* VPN (this is the original use case, distinct from commercial "privacy VPN" services).
+- *Geo-shifting one browser, web scraping with rotating IPs, or when you want raw speed and don't need encryption:* proxy.
+- *Both on the same machine, chained:* possible and sometimes useful, but adds latency and complexity.
+
+**Worth keeping in mind**
+
+Neither makes you anonymous. You're substituting your ISP for the VPN/proxy operator as the party who can see your activity — that's a trust transfer, not a trust elimination. And if you log into your accounts, or your browser fingerprint is distinctive, the IP change doesn't buy you much against the sites themselves. Free proxies in particular have a bad track record; running one costs money, so it's fair to ask how the operator is recouping that.

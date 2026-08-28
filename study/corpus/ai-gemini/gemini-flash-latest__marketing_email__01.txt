@@ -1,0 +1,42 @@
+Subject options:
+* **Option 1 (Direct):** Meet [Feature Name]: A faster way to manage your team’s workload 🚀
+* **Option 2 (Benefit-focused):** Say goodbye to [pain point, e.g., missed deadlines] with [Feature Name]
+* **Option 3 (Short & punchy):** New in [App Name]: Introducing [Feature Name]
+
+***
+
+**Hi [First Name],**
+
+Keeping a project on track shouldn’t require hours of manual updates, endless status check-ins, or digging through messy spreadsheets. 
+
+That’s why we’re thrilled to introduce **[Feature Name]**—designed to help you [insert primary benefit, e.g., automate routine tasks / visualize team capacity / hit your deadlines with zero guesswork].
+
+### **Here is what you can do with [Feature Name]:**
+
+* **[Benefit 1 / Key Action]:** [Brief 1-sentence explanation, e.g., *Automate repetitive tasks in seconds without writing a single line of code.*]
+* **[Benefit 2 / Key Action]:** [Brief 1-sentence explanation, e.g., *Get real-time visibility into who is working on what to prevent team burnout.*]
+* **[Benefit 3 / Key Action]:** [Brief 1-sentence explanation, e.g., *Instantly sync updates across all your boards with custom triggers.*]
+
+---
+
+*(Optional: Insert a GIF or high-res screenshot showing the feature in action)*
+
+---
+
+### **Ready to take it for a spin?**
+
+[Feature Name] is available right now in your workspace. 
+
+👉 **[Try [Feature Name] Now]** *(Link to app/feature)*
+
+Need a quick walkthrough? Check out our **[2-minute video guide]** or explore the **[Help Center article]** to learn how to get the most out of it.
+
+We built this based on feedback from users like you, so we’d love to hear what you think! Just reply directly to this email to share your thoughts.
+
+Happy planning,
+
+**[Your Name / The [App Name] Team]**  
+[Company Website]
+
+---
+*You received this email because you are a registered user of [App Name]. If you’d prefer not to receive product updates, you can [manage preferences] or [unsubscribe].*

@@ -1,0 +1,21 @@
+It's doing very little work for you, and it's occupying the single most-read line on the page.
+
+Three specific problems:
+
+**"Passionate experts" is unfalsifiable.** No company describes itself as a team of indifferent amateurs. Because the opposite claim is unthinkable, the claim itself carries no information — a reader's eye slides right off it. Same class of phrase as "quality service" and "innovative solutions."
+
+**The founding date is doing the wrong job.** 2019 is useful evidence (you've survived six years, you're not a weekend project), but as an *opener* it answers a question nobody asked yet. Dates work better as supporting proof further down, or in a timeline.
+
+**It's about you, not the reader.** Worth remembering why people visit an About page: it's almost always a trust check. They're mid-consideration and want to know whether you're real, competent, and likely to still exist next year. Adjectives don't settle that. Specifics do.
+
+Also, minor: "Founded in 2019, we are…" technically says *you* were founded in 2019. Defensible for a team, but plenty of editors would flag it.
+
+Some patterns that work better:
+
+- **Lead with a number that implies expertise instead of claiming it.** "We've moved 4,000 households across the Pennines. About 30 of them in snow."
+- **Lead with the origin problem.** "Our founder spent three years trying to buy a decent replacement part for a 1994 tractor. That turned out to be a business."
+- **Lead with a position.** "Most project management tools are built for the person running the project. We build for everyone else on it."
+
+All three demonstrate passion and expertise rather than asserting them, which is the move you want. The reader concludes it themselves, so it sticks.
+
+If you tell me what you do, who you sell to, and one genuinely unusual thing about how you started or operate, I can draft you two or three openers to react to.

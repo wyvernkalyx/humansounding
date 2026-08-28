@@ -1,0 +1,102 @@
+A 20% margin can be a **useful signal**, but it’s usually **not sufficient as the sole trigger** to open a second location.
+
+The better trigger is: **the first location is sustainably profitable, operationally repeatable, and not dependent on the founder being there every day.**
+
+I’d look at these conditions before expanding:
+
+### 1. Margin is sustained, not temporary
+A single month at 20% margin may not mean much. I’d want to see it for at least **3–6 consecutive months**, ideally through normal seasonality.
+
+Clarify which margin you mean:
+
+- **Gross margin**: not enough by itself.
+- **Store-level EBITDA / operating margin**: much better.
+- **Net profit after owner salary, rent, labor, marketing, and overhead allocation**: best.
+
+If you mean **20% store-level operating margin**, that’s a strong sign. If you mean **20% gross margin**, that may be too weak.
+
+### 2. The first location has proven unit economics
+Before expanding, know:
+
+- Average revenue per customer
+- Customer acquisition cost
+- Repeat purchase rate
+- Labor as % of revenue
+- Rent occupancy cost as % of revenue
+- Break-even revenue
+- Payback period on buildout/startup costs
+
+A good expansion candidate usually has a clear answer to:  
+**“If we spend $X opening location two, how long until we get that cash back?”**
+
+Many operators target a **12–24 month payback**, depending on industry.
+
+### 3. Location one can run without you
+This is often the biggest issue.
+
+If location one’s performance depends heavily on the founder, opening location two can damage both. Before expanding, you should have:
+
+- A reliable manager in place
+- Documented SOPs
+- Hiring and training systems
+- Inventory/vendor processes
+- Reporting dashboards
+- Quality control checks
+
+A good test:  
+**Can you step away from location one for 2–4 weeks and the business still hits targets?**
+
+### 4. Demand exceeds current capacity or the market opportunity is proven
+Open a second location because there is proven demand, not just because the first one is profitable.
+
+Strong signs include:
+
+- You’re turning customers away
+- Wait times are too long
+- Customers are traveling from the area where you’d open location two
+- Marketing is profitable and scalable
+- The brand has strong word-of-mouth/repeat behavior
+
+### 5. You have enough cash cushion
+Expansion often strains cash even when the second location is “successful.”
+
+Before opening, ideally have:
+
+- Full startup/buildout budget
+- Working capital for ramp-up
+- Reserve for delays/overruns
+- Cash cushion so location one isn’t starved
+
+A common mistake is funding the second location too aggressively from the first and weakening the original business.
+
+### 6. You know why location one is working
+This matters a lot. Is it the location? The manager? Your personal selling? Low rent? A unique local customer base?
+
+Before replicating, isolate the drivers of success. Otherwise you may copy the wrong things.
+
+---
+
+## My recommendation
+
+Use **20% margin as one gate**, not the trigger.
+
+A better trigger would be:
+
+> “We will open a second location when the first location has achieved at least 20% store-level operating margin for 3–6 months, has a manager who can run daily operations without founder involvement, has documented processes, produces positive cash flow after a fair owner salary, and the second location model shows a realistic payback within 12–24 months.”
+
+That gives you a much safer expansion decision.
+
+If you want a simple checklist, I’d use this:
+
+| Expansion Criteria | Target |
+|---|---:|
+| Store-level operating margin | 20%+ for 3–6 months |
+| Founder dependency | Low |
+| Manager in place | Yes |
+| SOPs documented | Yes |
+| Cash reserves | 3–6 months operating cushion |
+| Payback period on second location | 12–24 months preferred |
+| Break-even revenue known | Yes |
+| Demand in new market validated | Yes |
+
+So: **20% margin is a good milestone, but not the right standalone trigger.** It should be paired with operational readiness, cash strength, and proof that the model can be repeated.

@@ -1,0 +1,21 @@
+A few things would change my answer, but the biggest one is hiding in how you phrased it: a *second* developer means you currently have one. If software is core to what you sell, that's a single point of failure. One person quits, gets sick, or burns out and you're stuck — and contractors don't really solve that, because the context leaves when they do.
+
+So the questions I'd want answered:
+
+**Is the work permanent or a spike?** If you can see 12+ months of steady work, an employee is almost always cheaper per hour and compounds in value. If it's a six-month push or an unpredictable queue, contractors let you turn the spend off.
+
+**Is it core or peripheral?** The stuff that differentiates your product — the domain logic, the architecture decisions — you want that knowledge accumulating in-house. A one-off integration, a mobile app you'll rarely touch, a design system: fine to contract.
+
+**Who's managing them?** Contractors need more specification, not less. If your existing developer becomes a full-time requirements-writer and code reviewer, you've bought yourself less capacity than you think. This is the most common way the contractor math quietly fails.
+
+**How fast do you need someone?** Contractors start in a week or two. A good hire takes two to four months end-to-end, plus a ramp-up period where they're net-negative on output.
+
+**What's your cash situation?** Contractors are opex you can stop. An employee is a commitment with severance implications. If runway is tight or revenue is lumpy, that flexibility is worth real money.
+
+My default lean: **if you have a year of visible work and software is your product, hire.** The all-in cost of an employee usually lands 30–50% below a comparable contractor rate, and you're buying institutional knowledge and redundancy, not just hours.
+
+The pattern I'd actually suggest, though: use a contractor *now* to clear the immediate backlog while you run a hiring process. That buys you time to hire well instead of hiring fast, and you'll learn a lot about what you actually need from watching what the contractor spends their time on.
+
+Two failure modes to watch for. Hiring someone junior because it's what the budget allows, when your one developer has no capacity to mentor — that makes things worse for six months. And the contractor treadmill, where you keep extending three-month engagements for two years and end up paying employee-plus-premium rates for someone with no stake in the codebase.
+
+What's the work look like, and how long is your runway?

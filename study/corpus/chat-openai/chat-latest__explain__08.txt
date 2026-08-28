@@ -1,0 +1,17 @@
+At the federal level, a bill generally becomes U.S. law through these steps:
+
+1. Introduction: A member of Congress introduces a bill in either the House of Representatives or the Senate. Revenue bills must originate in the House.
+
+2. Committee review: The bill is referred to one or more committees, which may hold hearings, amend it, approve it, or decline to advance it.
+
+3. Floor action: If advanced, the bill is debated and voted on by the chamber where it was introduced. If it passes, it goes to the other chamber, where it undergoes a similar committee and voting process.
+
+4. Resolving differences: The House and Senate must ultimately pass the same text. If they pass different versions, they can negotiate a compromise—sometimes through a conference committee—and both chambers must approve the final version.
+
+5. Presidential action: The enrolled bill is sent to the president. The president can sign it, making it law, or veto it and return it to Congress.
+
+6. Possible veto override: Congress can override a presidential veto with a two-thirds vote in both the House and Senate, making the bill law despite the veto.
+
+There are also timing rules. If the president takes no action for 10 days (excluding Sundays) while Congress remains in session, the bill becomes law without a signature. If Congress adjourns in a way that prevents the bill's return during that period, the bill does not become law; this is known as a pocket veto.
+
+This is the standard federal process, though congressional procedures can make the path considerably more complicated in practice.

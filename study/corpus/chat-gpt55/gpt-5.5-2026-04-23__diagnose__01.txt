@@ -1,0 +1,184 @@
+Start by treating “9am on weekdays” as a correlation clue. Something scheduled or behavior-driven is likely happening then: users logging in, reports running, emails going out, cron jobs, backups, cache expiration, autoscaling, or database contention.
+
+Here’s a practical order of investigation.
+
+## 1. Confirm what “slow” means
+
+Find out whether the slowdown is:
+
+- Whole site slow?
+- Only login/dashboard/search/checkout?
+- Slow for all users or a region/company?
+- Slow at exactly 9:00 or around 8:55–9:15?
+- High time-to-first-byte, slow frontend assets, or API/database delay?
+
+If possible, check real user monitoring, synthetic monitoring, or browser DevTools waterfall.
+
+## 2. Check traffic patterns
+
+Look at request volume around 9am.
+
+Key questions:
+
+- Does traffic spike when employees/customers start work?
+- Do many users log in at once?
+- Are there specific endpoints getting hammered?
+- Are bots/crawlers active then?
+
+Check:
+
+- Web server logs
+- CDN logs
+- Load balancer metrics
+- Application request metrics
+
+Look for top URLs by count and latency between 8:45–9:15.
+
+## 3. Check scheduled jobs
+
+This is one of the most common causes.
+
+Look for jobs scheduled at or near 9am:
+
+- Cron jobs
+- Backups
+- Database maintenance
+- Report generation
+- Data imports/exports
+- Email campaigns/newsletters
+- Cache warmers or cache flushes
+- Sync jobs with CRM/ERP/accounting systems
+- Deployment pipelines
+- Security scans
+- Analytics processing
+
+If you find anything scheduled at 9am, move it temporarily to another time and see if the issue moves with it.
+
+## 4. Check server resource metrics
+
+Around 9am, look at:
+
+- CPU usage
+- Memory usage
+- Swap usage
+- Disk I/O
+- Network throughput
+- Thread/worker pool saturation
+- Queue length
+- Container restarts
+- Garbage collection pauses, if applicable
+
+If CPU or memory maxes out at 9am, you may have a capacity issue or an inefficient workload.
+
+If disk I/O spikes, suspect backups, logging, database writes, or reporting jobs.
+
+## 5. Check database health
+
+A weekday 9am slowdown is often database-related.
+
+Look for:
+
+- Slow queries
+- Lock waits/deadlocks
+- Connection pool exhaustion
+- Long-running reports
+- Missing indexes
+- Increased write volume
+- Backup or replication lag
+- CPU or I/O saturation on the database server
+
+Useful things to inspect:
+
+- Slow query log
+- Query performance dashboard
+- Active connections at 9am
+- Lock/wait events
+- Database CPU and disk I/O
+
+## 6. Check application logs and APM
+
+If you have tools like New Relic, Datadog, AppDynamics, Sentry, OpenTelemetry, etc., look specifically at 8:45–9:15.
+
+Find:
+
+- Slowest endpoints
+- Error rate spikes
+- External API calls slowing down
+- Database query time
+- Queue wait time
+- Cache hit rate
+- Background jobs running
+- Connection pool saturation
+
+If you do not have APM, start by adding basic timing logs around database calls, external API calls, and key endpoints.
+
+## 7. Check cache behavior
+
+A common pattern: cache expires overnight or at a fixed time, then everyone arrives at 9am and triggers expensive regeneration.
+
+Check:
+
+- Cache hit rate around 9am
+- Whether cache keys expire at the same time
+- Whether an app deploy or cron flushes cache before 9am
+- Whether dashboards/homepages rebuild expensive data
+
+If so, use staggered TTLs, cache warming, or precompute the expensive data before users arrive.
+
+## 8. Check external dependencies
+
+Maybe your site waits on another service that gets busy at 9am.
+
+Check latency to:
+
+- Payment provider
+- Authentication provider / SSO
+- CRM
+- ERP
+- Search service
+- Email provider
+- Analytics API
+- Internal microservices
+
+If login is slow specifically, check your identity provider/SSO.
+
+## 9. Compare weekdays vs weekends
+
+Since it happens only weekdays, compare:
+
+- User traffic patterns
+- Scheduled job schedules
+- Business integrations
+- Corporate network/proxy/VPN behavior
+- Office staff actions
+- Third-party vendor schedules
+
+Weekday-only usually points to either human activity or business automation.
+
+## 10. Quick likely suspects
+
+I would check these first:
+
+1. A 9am cron/report/import/export job.
+2. A surge of users logging in and loading dashboard pages.
+3. Database slow queries or connection pool exhaustion.
+4. Cache expiration/flush just before 9am.
+5. Backups or heavy disk I/O.
+6. External authentication/SSO latency.
+7. Email campaign or notification batch triggering traffic.
+
+## A good first diagnostic plan
+
+For tomorrow morning:
+
+1. Watch server CPU, memory, disk I/O, database CPU, and request rate from 8:45–9:15.
+2. Capture the top 10 slowest URLs during that window.
+3. Check what background jobs ran during that window.
+4. Check database slow queries and lock waits.
+5. Compare with the same metrics at 10am when things are fine.
+
+The goal is to answer:
+
+> Is the site slow because there are more requests, because each request is slower, or because a background/system task is competing for resources?
+
+Once you know that, the fix becomes much clearer.

@@ -1,0 +1,35 @@
+The strong version — **“most startups fail because of cofounder conflict”** — is probably overstated.
+
+The weaker version — **“cofounder conflict is one of the most important and underappreciated startup-killers”** — does hold up.
+
+A few useful distinctions:
+
+1. **The famous statistic is narrower than people imply.**  
+   A commonly cited claim from Harvard professor Noam Wasserman is that a large share of “high-potential” startups fail due to founder conflict. This is often repeated as “65% of startups fail because of cofounder conflict.” But that does **not** necessarily mean 65% of all startups, across all categories, die mainly because the founders fought.
+
+2. **Postmortem datasets usually rank other causes higher.**  
+   In analyses like CB Insights startup postmortems, the top reasons tend to be things like:
+   - no market need / weak product-market fit
+   - running out of cash
+   - being outcompeted
+   - bad business model
+   - wrong team
+
+   Team conflict shows up, but usually not as the single dominant reason.
+
+3. **Cofounder conflict is often a multiplier, not the root cause.**  
+   A startup may officially fail because it ran out of money or never found customers. But underneath that, the founders may have disagreed on strategy, equity, roles, fundraising, hiring, or whether to pivot. So conflict can be a hidden contributor even when it is not listed as the headline cause.
+
+4. **“Conflict” is not the same as disagreement.**  
+   Healthy disagreement is normal and often valuable. The damaging version is unresolved conflict over:
+   - who has final decision rights
+   - unequal effort or commitment
+   - equity splits that feel unfair later
+   - one founder wanting out
+   - different risk tolerance
+   - resentment over title, control, or fundraising strategy
+   - lack of trust
+
+So the best answer is: **No, it is probably not true that most startups fail primarily because of cofounder conflict. But yes, cofounder conflict is one of the biggest preventable causes of startup failure, especially among venture-style startups.**
+
+If you’re evaluating or starting a company, the practical takeaway is: treat cofounder fit like a major business risk. Have explicit conversations early about equity, vesting, roles, decision-making, firing rights, expected hours, salaries, fundraising, exit goals, and what happens if someone leaves.

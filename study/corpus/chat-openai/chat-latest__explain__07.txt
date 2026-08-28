@@ -1,0 +1,9 @@
+Airlines overbook flights because they expect some passengers not to show up.
+
+They use historical data and forecasting models to estimate how many booked passengers will cancel, miss connections, change plans, or simply not arrive. Selling slightly more tickets than there are seats helps the airline avoid flying with empty seats, which would otherwise mean lost revenue on a seat that can't be sold after departure.
+
+For example, if a plane has 180 seats and an airline predicts that about five passengers won't show up, it might accept 185 reservations. Usually, enough people don't travel that everyone who arrives still gets a seat.
+
+The downside is that predictions aren't perfect. If more passengers show up than the aircraft can accommodate, the flight is "oversold." The airline will generally seek volunteers to take a later flight in exchange for compensation or other benefits. If there aren't enough volunteers, some passengers may be involuntarily denied boarding; applicable compensation and passenger rights depend on the country and circumstances.
+
+In short, overbooking is a form of inventory management: airlines trade a relatively small risk of having too many passengers for a higher probability of filling every available seat.

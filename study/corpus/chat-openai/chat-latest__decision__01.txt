@@ -1,0 +1,16 @@
+For a booking system with ~50,000 records, I’d recommend PostgreSQL.
+
+The record count is small for either database, so the important factor is the nature of booking data. Bookings usually involve relationships and consistency requirements: users, resources/rooms, availability, payments, cancellations, and preventing double bookings. PostgreSQL is particularly well suited to those.
+
+Key advantages:
+- Transactions and constraints make it easier to prevent conflicting or invalid bookings.
+- Foreign keys naturally model relationships between customers, bookings, resources, etc.
+- SQL is excellent for queries such as availability, date ranges, utilization, revenue, and reporting.
+- PostgreSQL has strong indexing and date/time support.
+- 50,000 records is trivial for Postgres; millions of records would generally still be routine with sensible schema/indexes.
+
+MongoDB can make sense if your records are highly variable documents with few relational constraints, but that usually isn't the core shape of a booking system. MongoDB supports transactions too, but you’d generally be giving up some of the natural benefits of a relational schema without gaining much here.
+
+A typical Postgres design might have `users`, `resources`, `bookings`, and `payments` tables, with constraints/indexes around booking times. Depending on what you're booking, PostgreSQL exclusion constraints can even enforce that two bookings for the same resource don't overlap at the database level.
+
+So unless you have a specific MongoDB-driven requirement, use PostgreSQL.

@@ -1,0 +1,15 @@
+A 30% activation drop with steady signups usually means something changed after acquisition: the user mix, onboarding/product experience, measurement, or an external dependency. Treat it as a funnel-debugging problem before redesigning anything.
+
+A good sequence is:
+
+- Validate the drop. Confirm the activation definition and analytics events didn't change, break, or arrive late. Compare your product analytics against raw events/database records if possible.
+- Pinpoint when it started. Plot activation rate daily by signup cohort. A sharp drop around one date suggests a deploy, experiment, tracking change, outage, pricing change, or third-party issue; a gradual decline suggests traffic mix or behavior changes.
+- Break activation into steps. For example: signup → verification → onboarding → first key action → activation. Compare last month with the previous 4–8 weeks to identify which transition deteriorated.
+- Segment the decline. Check acquisition source/campaign, device/OS/browser, country, plan, new vs. returning users, signup method, and experiment variant. You want to know whether the 30% decline is broad or concentrated in one segment.
+- Correlate with changes. Review releases, feature flags, experiments, authentication/email changes, permissions, integrations, infrastructure incidents, and marketing campaigns around the onset date.
+- Inspect failures and users. Look at error rates, latency, verification-email delivery, API failures, support tickets, session replays, and a sample of affected user journeys. Numbers tell you where; this often tells you why.
+- Test the leading hypothesis. Reproduce the problematic flow and, where feasible, roll back or fix the suspected change. Then track activation by new cohorts rather than waiting for a monthly aggregate.
+
+The highest-value artifact is usually a table of activation rates by funnel step × signup date × major segment. For example, if overall activation fell from 40% to 28%, but you discover mobile users still activate at 40% while a newly introduced campaign sends many web users who activate at 10%, that's an acquisition-mix issue. If every segment suddenly loses users at email verification starting June 12, investigate the verification flow instead.
+
+Avoid starting with the overall 30% number alone: it can conceal both where the loss occurs and whether existing users are actually behaving differently.

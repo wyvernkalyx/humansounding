@@ -1,0 +1,29 @@
+It's not fine. Here's the problem, bluntly:
+
+**"Results-driven professional"** says nothing. Nobody writes "process-indifferent amateur." It's a phrase that survives on resumes because it *sounds* like content while committing to zero information. Same with "10+ years of experience" — experience doing what? A recruiter scanning for six seconds learns only that you've been employed for a decade, which they can get from your work history anyway.
+
+A summary earns its space at the top of the page only if it tells the reader three things fast:
+
+1. **What you are** (specific role/discipline, not "professional")
+2. **What you've actually done** (a number, a scope, a named outcome)
+3. **What you're aiming at** (implicitly — the job you're applying to)
+
+**Template:**
+> [Specific title] with [X] years in [industry/domain], specializing in [1–2 concrete skills]. [Achievement with a number]. Seeking [type of role] where I can [specific contribution].
+
+**Examples of the same person, rewritten:**
+
+- *Supply chain:* "Supply chain manager with 12 years in consumer goods logistics. Cut fulfillment costs 18% across a 40-site network by renegotiating carrier contracts and rebuilding the routing model."
+
+- *Marketing:* "B2B content marketer with 10 years in SaaS. Grew organic traffic from 15K to 220K monthly sessions and built the demand-gen function at two Series B startups."
+
+- *Nursing:* "ICU nurse with 11 years in Level I trauma centers. Precepted 30+ new graduate nurses and led the unit's sepsis protocol rollout, cutting time-to-antibiotics by 22 minutes."
+
+Notice none of them use an adjective about personality. The numbers do that work.
+
+**Two other things worth knowing:**
+
+- If your resume is one page and tight, consider cutting the summary entirely. A weak summary is worse than none — it burns prime real estate. A strong one is worth it mainly when you're career-changing, or when your title history doesn't obviously match the target job.
+- Don't reuse one summary for every application. It's the easiest section to tailor, and the two or three keywords you swap in are often what gets you past applicant tracking filters.
+
+If you tell me your field, your target role, and one or two accomplishments you're proud of (with numbers if you have them), I'll write you a version you can actually use.

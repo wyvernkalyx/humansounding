@@ -1,0 +1,71 @@
+**Headline: “This Could Have Been an Email”: How to Run Meetings People Actually Want to Attend**
+
+We’ve all been there. You look at your calendar on Monday morning, and it’s a solid wall of overlapping rectangles. By Wednesday afternoon, you’re sitting on mute in your fifth video call of the day, mentally drafting your grocery list while someone reads text directly off a slide.
+
+Bad meetings are the ultimate productivity killer. They drain energy, fracture focus time, and cost companies billions in lost hours.
+
+Here’s the truth: **Meetings aren't the problem. *Badly run* meetings are.** 
+
+When done right, a meeting is the fastest way to align a team, spark creative breakthroughs, and make critical decisions. If you want to transform your team's culture and give everyone their time back, here is your playbook for running a truly great meeting.
+
+---
+
+### 1. The Pre-Game: 80% of Success Happens Before You Hit “Send”
+
+Great meetings don't start when the clock strikes the hour; they start days in advance.
+
+*   **Ask the Golden Question:** *Does this actually need to be a meeting?* If your goal is simply to broadcast information or get status updates, write a memo, send an email, or post in Slack. Meetings should be reserved for **discussion, debate, decision-making, and alignment.**
+*   **Implement "No Agenda, No Attenda":** Never schedule a meeting without a clear, written objective. Instead of a vague title like *“Project X Sync,”* use an action-oriented goal: *“Finalize Launch Date and Budget for Project X.”* 
+*   **Ruthlessly Prune the Guest List:** Follow Amazon’s famous “Two-Pizza Rule”—if a team can’t be fed by two pizzas, the meeting is too big. Only invite:
+    *   The Decision Maker
+    *   The Subject Matter Experts
+    *   The People Implementing the Decision
+    *(Everyone else can read the recap notes.)*
+
+---
+
+### 2. The Execution: Keep It Focused, Fast, and Fair
+
+Once you’re in the room (or the Zoom), you are the facilitator. Your job is to protect everyone’s time.
+
+*   **Default to 25 or 50 Minutes:** Stop scheduling default 30- and 60-minute blocks. Setting meetings to 25 or 50 minutes automatically builds in bio-breaks, travel time, and mental resets between calls.
+*   **Start on Time (Never Recap for Latecomers):** If you wait five minutes for late arrivals, you penalize the punctual. Start right on the dot. Latecomers will catch up, and over time, team habits will shift.
+*   **Use a "Parking Lot" for Tangents:** When someone inevitably brings up a good point that is off-topic, don’t let it hijack the agenda. Say: *“That’s a critical point, let’s put it in the parking lot and schedule 10 minutes next week to tackle it specifically.”*
+*   **Actively Draw Out the Quiet Voices:** The loudest person in the room is rarely the smartest. If two people are dominating the conversation, step in: *“I want to pause and hear from Sarah—you’ve been closest to the customer data on this. What are you seeing?”*
+
+---
+
+### 3. The Close: No Action Item Left Behind
+
+A meeting without clear outcomes is just a conversation. Spend the final five minutes securing accountability using the **W.W.W. Framework**:
+
+*   **W**ho: Exactly who owns the task? (Only *one* owner per task; shared ownership means nobody does it).
+*   **W**hat: What is the specific deliverable?
+*   **W**hen: What is the firm deadline?
+
+Before anyone logs off, summarize these points out loud: *“To recap: Dave is finalizing the copy by Thursday at 2 PM, and Elena will sign off on the design by Friday morning.”*
+
+---
+
+### 4. The Follow-Through: The 10-Minute Recap
+
+Within two hours of the meeting ending, send a short message to all attendees (and key stakeholders who didn’t need to attend). 
+
+Keep it ultra-scannable:
+*   **1-sentence summary** of what was decided.
+*   **Bullet points** of the W.W.W. action items.
+*   **Link** to any working documents.
+
+---
+
+### The Bottom Line: Be the Hero of Your Team’s Calendar
+
+Running a tight, efficient meeting isn’t just about productivity—it’s a matter of **respect**. When you run an organized, intentional meeting, you signal to your colleagues that you value their time and brainpower.
+
+**Challenge for this week:** Look at your calendar right now. Find one recurring meeting you host. Can you cut the duration by 15 minutes, remove two attendees, or cancel it entirely in favor of an async update? 
+
+Your team will thank you.
+
+***
+
+*What’s your biggest meeting pet peeve, or your favorite hack to keep calls on track? Let us know in the comments below!*

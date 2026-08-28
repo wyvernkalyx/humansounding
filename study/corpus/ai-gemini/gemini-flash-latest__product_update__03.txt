@@ -1,0 +1,53 @@
+Here are two templates for a product update about improved mobile performance—one for a **blog post / email newsletter** and another for a **short in-app message / App Store release note**.
+
+---
+
+### Option 1: Blog Post / Email Newsletter (Detailed & Engaging)
+
+**Subject:** ⚡ [Product Name] just got a major speed boost on mobile
+
+**Headline:** Faster, Smoother, Better: Experience the New [Product Name] on Mobile
+
+We know that work doesn’t just happen at your desk. Whether you’re reviewing updates between meetings, checking metrics on your commute, or managing projects from the field, you need a mobile experience that keeps up with you.
+
+Over the past few months, our engineering team has been hard at work under the hood. Today, we’re excited to roll out our **biggest mobile performance update yet**.
+
+Here is what’s new:
+
+*   **⚡ 2x Faster Load Times:** We’ve optimized our core architecture, cutting screen load times by up to **[e.g., 50%]**. Your dashboards and feeds now open almost instantly.
+*   **🧈 Silky-Smooth Navigation:** Say goodbye to stutter. Scrolling, searching, and switching between tabs are now fluid and responsive, even on older devices.
+*   **🔋 Lighter on Battery & Data:** We’ve reduced background processing and optimized media caching, meaning the app now uses **[e.g., 30%] less battery and significantly less mobile data**.
+*   **📶 Better Offline & Low-Connectivity Support:** Weak signal? No problem. The app now handles spotty network connections gracefully, saving your actions and syncing automatically once you’re back online.
+
+**How to get the update:**
+The performance improvements are live today on both iOS and Android. If your apps don't update automatically, simply head to the **[App Store / Google Play Store]** to download version **[X.X]**.
+
+👉 **[Update Your App Now]** *(Button)*
+
+We’re committed to making [Product Name] the fastest, most reliable tool in your pocket. Try it out and let us know what you think by replying to this email or dropping a review in the app store!
+
+— **The [Product Name] Team**
+
+---
+
+### Option 2: Short In-App Modal / App Store Release Notes
+
+**Headline:** 🚀 What’s New in Version [X.X]: Built for Speed!
+
+We’ve completely rebuilt our mobile engine to make your experience faster and smoother than ever. 
+
+**Highlights:**
+* **Instant Load Times:** Open the app and access your data in half the time.
+* **Smoother Scrolling:** Eliminated lag across all screens and feeds.
+* **Battery & Data Saver:** Reduced resource usage so you can work longer without draining your phone.
+* **Bug Fixes:** Various under-the-hood stability improvements.
+
+Update now to experience the difference! 
+
+[ **Update Now** ] | [ *Dismiss* ]
+
+---
+
+### 💡 Tips for customizing this:
+* **Add real metrics:** If you have real benchmarks (e.g., *“Time to interactive dropped from 3.2s to 1.1s”*), include them—data builds trust.
+* **Acknowledge user feedback:** If performance was a common customer complaint, add a line like: *“You told us the app felt sluggish, and we listened.”*

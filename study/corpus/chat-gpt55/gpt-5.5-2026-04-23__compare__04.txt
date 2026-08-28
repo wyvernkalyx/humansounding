@@ -1,0 +1,46 @@
+For a first-time investor, **index funds are usually the better starting point** than buying individual stocks because they offer instant diversification, lower effort, and lower risk of making a costly beginner mistake.
+
+| Factor | Index Funds | Individual Stocks |
+|---|---|---|
+| **What you own** | A basket of many stocks, often tracking an index like the S&P 500 or total market | Shares of one company |
+| **Risk** | Lower company-specific risk because you’re diversified | Higher risk because one company can perform badly |
+| **Effort required** | Low; can be mostly “set and forget” | High; requires researching companies and monitoring them |
+| **Diversification** | Built in | You must build it yourself by buying many stocks |
+| **Costs** | Often very low, especially broad-market index funds/ETFs | Trading may be cheap, but mistakes and poor diversification can be costly |
+| **Potential upside** | Market-average returns | Possible to outperform the market, but difficult |
+| **Potential downside** | Can fall with the market | A single stock can lose most or all of its value |
+| **Best for** | Long-term, hands-off investing | Investors willing to research and accept higher risk |
+
+### Index funds: advantages
+- **Simple**: One fund can give exposure to hundreds or thousands of companies.
+- **Diversified**: Bad performance from one company has less impact.
+- **Low cost**: Many index funds have very low expense ratios.
+- **Good long-term track record**: Broad market index funds have historically rewarded patient investors.
+- **Less emotional pressure**: You don’t need to decide which company is the “winner.”
+
+### Index funds: drawbacks
+- You won’t dramatically outperform the market.
+- You still can lose money when the overall market falls.
+- Some funds may be concentrated in certain sectors, depending on the index.
+
+### Individual stocks: advantages
+- You can invest in companies you understand and believe in.
+- You have the potential to beat the market.
+- They can be engaging if you enjoy business analysis.
+
+### Individual stocks: drawbacks
+- Higher risk if you choose poorly.
+- Requires time, research, and emotional discipline.
+- Beginners may overconcentrate in popular or familiar companies.
+- Even great companies can have overpriced stocks.
+
+### Practical beginner approach
+A common strategy is:
+
+1. **Start with broad index funds** as the core of your portfolio.
+2. Use **dollar-cost averaging**, investing a fixed amount regularly.
+3. Keep a long-term mindset, ideally 5–10+ years.
+4. If interested in individual stocks, limit them to a small “learning” portion of your portfolio, such as 5–10%.
+
+### Bottom line
+For most first-time investors, **index funds are the safer and simpler choice**. Individual stocks can be useful for learning or for a small part of a portfolio, but they require more knowledge, discipline, and tolerance for risk.

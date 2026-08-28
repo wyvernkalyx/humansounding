@@ -1,0 +1,25 @@
+**Subject:** Meet Our New Feature: Smarter Task Prioritization
+
+Hi [First Name],
+
+Managing projects just got easier.
+
+We’re excited to introduce **Smart Priorities**, a new feature in [App Name] that helps your team focus on the work that matters most. Instead of manually sorting through tasks, Smart Priorities automatically highlights what needs attention based on deadlines, dependencies, workload, and project status.
+
+With Smart Priorities, you can:
+
+- Quickly identify urgent and high-impact tasks  
+- Keep projects moving without constant check-ins  
+- Reduce bottlenecks across your team  
+- Make better decisions with real-time project insights  
+
+Whether you’re managing a small team or coordinating multiple projects, Smart Priorities helps everyone stay aligned and focused.
+
+**Try it today:** Log in to [App Name] and look for the new **Smart Priorities** view in your workspace.
+
+[Explore the New Feature]
+
+We can’t wait to hear what you think.
+
+Best,  
+The [App Name] Team

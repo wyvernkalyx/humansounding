@@ -1,0 +1,29 @@
+Usually yes, but it depends on who's buying.
+
+**When it's a real mistake**
+
+If you're selling self-serve or to SMBs, hiding pricing costs you the long tail. The pricing page is typically among the most-visited pages on a SaaS site — people go there second, right after figuring out what you do. When they can't find it, a meaningful chunk just leaves. They assume it's expensive, or that they'll get trapped in a sales call, and both assumptions push them toward a competitor who told them upfront.
+
+You also cede the narrative. People search "[your product] pricing," and if you don't answer, review sites, Reddit threads, and competitor comparison pages will — often with numbers that are wrong or stale.
+
+**When it's defensible**
+
+Genuine enterprise sales, where price varies 10x by deployment, seat count, and negotiated terms. Nobody expects Palantir to have a pricing page. Also fine if you're pre-revenue with design partners and are still figuring out the value metric — but then say that explicitly rather than leaving a blank.
+
+**The diagnostic question**
+
+Are you omitting pricing because of a strategy, or because you haven't decided?
+
+If it's strategy — "we need to establish value before the number lands, our ACV justifies a sales motion" — that's a legitimate trade you're making with open eyes. You're paying a conversion tax for control over the conversation.
+
+If it's avoidance — you don't know what to charge, you're afraid of picking wrong, you're worried you're too expensive — the missing page is a symptom, not the problem. The underlying issue is that you haven't identified your value metric (per seat? per usage? per outcome?), and that will bite you regardless of what your website says. Launching without resolving it means every sales conversation is improvised, deals aren't comparable, and you can't tell whether you're losing on price or on product.
+
+**Middle grounds worth considering**
+
+- Publish a starting price: "from $49/mo" plus "contact us" for enterprise. Filters out the wrong buyers without stonewalling the right ones.
+- Publish the *model* even if numbers are provisional — per seat, per 1,000 API calls. This alone answers most of what people want to know.
+- If you're free during beta, say "free while in beta, paid plans start in Q3, early users get grandfathered." Silence here reads as an impending bait-and-switch.
+
+**The one thing I'd avoid**
+
+A "Pricing" nav link that leads to nothing but a contact form. That's worse than no link at all — you've explicitly promised information and then withheld it, which is the exact moment trust drops. If you're not going to publish pricing, don't advertise a pricing page.

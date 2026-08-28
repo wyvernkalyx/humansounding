@@ -1,0 +1,73 @@
+To resolve a domain name (like `www.example.com`) into an IP address (like `93.184.216.34`), the Domain Name System (DNS) uses a hierarchical, distributed database lookup. 
+
+If your computer doesn't already know the IP address, it performs a **Recursive DNS Lookup**. Here is the step-by-step process of how it actually works.
+
+---
+
+### Step 0: The Local Cache Check
+Before querying the internet, your computer tries to find the answer locally to save time:
+1. **Browser Cache:** The browser checks if it recently resolved the domain.
+2. **Operating System Cache:** The OS checks its own DNS cache and its local `hosts` file.
+3. **Router Cache:** The request might hit your home router, which often maintains its own cache.
+
+If none of these have the answer, the request goes to the internet.
+
+---
+
+### The 4 Key Servers in a Full DNS Lookup
+
+When a full resolution is required, four types of servers work together:
+
+```
+[Your Computer] 
+      │
+      ▼
+1. DNS Recursive Resolver (ISP / 1.1.1.1 / 8.8.8.8)
+      │
+      ├───► 2. Root Nameserver (.)
+      │
+      ├───► 3. TLD Nameserver (.com)
+      │
+      └───► 4. Authoritative Nameserver (example.com)
+```
+
+---
+
+### Step-by-Step Resolution Process
+
+Let's trace what happens when you type **`www.example.com`** into your browser:
+
+#### 1. The Recursive Resolver gets the request
+Your computer sends a query to a **DNS Recursive Resolver** (usually provided by your ISP, or a public service like Cloudflare `1.1.1.1` or Google `8.8.8.8`). 
+* The resolver's job is to do the "legwork" of tracking down the IP address on your behalf.
+
+#### 2. Querying the Root Nameserver (`.`)
+Domains are read from right to left. The very end of every domain has an invisible dot representing the **Root Zone** (`www.example.com.`).
+* The resolver asks one of the world's **Root Nameservers** (there are 13 logical root server addresses worldwide, distributed across hundreds of physical locations).
+* **The Root's response:** *"I don't know the IP for `www.example.com`, but I know where the `.com` Top-Level Domain (TLD) servers are. Go ask them."* It provides the IP of the `.com` TLD server.
+
+#### 3. Querying the TLD Nameserver (`.com`)
+* The resolver now contacts the **TLD Nameserver** responsible for `.com` domains.
+* **The TLD's response:** *"I don't know the exact IP for `www`, but I know who manages `example.com`."* It returns the IP address of the domain's **Authoritative Nameserver** (e.g., `ns1.awsdns.com` or Cloudflare nameservers).
+
+#### 4. Querying the Authoritative Nameserver (`example.com`)
+* The resolver contacts the **Authoritative Nameserver**. This is the final authority that holds the actual DNS records configured by the website owner.
+* The resolver asks: *"What is the IP address for `www.example.com`?"*
+* **The Authoritative response:** *"Here is the **A record** (IPv4) or **AAAA record** (IPv6): `93.184.216.34`."*
+
+#### 5. Returning the Result and Caching
+* The Recursive Resolver receives the IP address, saves it in its local cache, and sends it back to your computer's OS.
+* Your OS caches it and hands it to your browser.
+
+#### 6. Establishing the Connection
+Now that your browser has the IP address (`93.184.216.34`), DNS resolution is complete. Your browser can now initiate a **TCP Three-Way Handshake** and **TLS Handshake** with the web server to load the website.
+
+---
+
+### Why this doesn't slow down the internet: TTL (Time to Live)
+
+Going through all 4 steps for every single click would make the internet feel sluggish. 
+
+To prevent this, every DNS record includes a **TTL (Time to Live)** value (measured in seconds). 
+* If a domain has a TTL of `3600` (1 hour), the Recursive Resolver will store the IP in its cache for 1 hour.
+* Any other user asking that same resolver for `www.example.com` during that hour gets an immediate response from the cache, skipping Steps 2, 3, and 4 entirely.

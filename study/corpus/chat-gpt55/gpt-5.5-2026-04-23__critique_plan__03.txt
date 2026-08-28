@@ -1,0 +1,364 @@
+Great idea. A “one project per week” approach is one of the best ways to learn data analysis because it forces you to practice the full workflow repeatedly:
+
+1. Ask a question  
+2. Get data  
+3. Clean it  
+4. Analyze it  
+5. Visualize it  
+6. Explain what you found  
+
+The key is to keep projects small enough to finish in a week, but varied enough to build skills.
+
+Here’s a solid 3-month roadmap.
+
+---
+
+## Recommended Tool Stack
+
+If you are starting from scratch, I would use:
+
+- **Spreadsheet basics**: Excel or Google Sheets
+- **SQL**: for querying data
+- **Python**: especially `pandas`, `matplotlib`, `seaborn`
+- **Visualization/dashboard tool**: Tableau, Power BI, or Looker Studio
+- **Portfolio**: GitHub, Notion, or a simple personal website
+
+You do not need to master everything at once. Start simple and add tools as you go.
+
+---
+
+# 12-Week Project Plan
+
+## Month 1: Foundations
+
+### Week 1: Personal Finance or Spending Analysis
+**Goal:** Learn basic cleaning, grouping, and visualization.
+
+Use your own bank/export data or a sample dataset.
+
+Questions:
+- Where does most spending go?
+- What are monthly trends?
+- Are there unusual spikes?
+
+Skills:
+- Spreadsheets
+- Basic charts
+- Categories and summaries
+
+Deliverable:
+- A short report with 3–5 charts and key takeaways.
+
+---
+
+### Week 2: Movie or TV Dataset Analysis
+Use IMDb, Netflix, or TMDB data from Kaggle.
+
+Questions:
+- Which genres have the highest ratings?
+- Has movie length changed over time?
+- Do ratings vary by decade?
+
+Skills:
+- Filtering
+- Grouping
+- Bar charts, histograms, scatterplots
+- Basic storytelling
+
+Deliverable:
+- Notebook or slides with findings.
+
+---
+
+### Week 3: SQL Analysis Project
+Use a sample database like:
+- Chinook music database
+- Northwind database
+- DVD rental database
+
+Questions:
+- Who are the top customers?
+- What products sell best?
+- Which countries generate the most revenue?
+
+Skills:
+- `SELECT`, `WHERE`, `GROUP BY`, `ORDER BY`
+- Joins
+- Aggregations
+
+Deliverable:
+- SQL queries plus a written summary.
+
+---
+
+### Week 4: Public Health or COVID Dataset
+Use data from Our World in Data, CDC, WHO, etc.
+
+Questions:
+- Which countries had the highest case rates?
+- How did trends change over time?
+- Is there a relationship between vaccination and outcomes?
+
+Skills:
+- Time series
+- Data cleaning
+- Line charts
+- Normalizing data per capita
+
+Deliverable:
+- A mini analytical report.
+
+---
+
+## Month 2: Intermediate Analysis
+
+### Week 5: Sales Dashboard
+Use a sample retail or ecommerce dataset.
+
+Questions:
+- What is revenue by region?
+- What products are most profitable?
+- Are there seasonal sales patterns?
+
+Skills:
+- Dashboard design
+- KPIs
+- Filters
+- Time-based analysis
+
+Deliverable:
+- Tableau, Power BI, or Looker Studio dashboard.
+
+---
+
+### Week 6: Customer Segmentation
+Use ecommerce/customer transaction data.
+
+Questions:
+- Who are the most valuable customers?
+- Can customers be grouped by behavior?
+- Which customers are at risk of churning?
+
+Skills:
+- RFM analysis: Recency, Frequency, Monetary value
+- Customer grouping
+- Histograms and boxplots
+
+Deliverable:
+- Customer segments with recommendations.
+
+---
+
+### Week 7: A/B Test Analysis
+Use a sample A/B testing dataset from Kaggle or generate your own.
+
+Questions:
+- Did version B improve conversion?
+- Is the result statistically significant?
+- What is the practical impact?
+
+Skills:
+- Conversion rates
+- Hypothesis testing
+- Confidence intervals
+- Statistical thinking
+
+Deliverable:
+- A decision memo: “Ship it or not?”
+
+---
+
+### Week 8: Web Scraping or API Project
+Choose a simple data source:
+- OpenWeather API
+- Spotify API
+- Reddit API
+- News API
+- Books or quotes site
+
+Questions:
+- What trends or patterns can you find?
+- How does data change over time?
+- Which topics/products/artists are most common?
+
+Skills:
+- APIs
+- JSON
+- Basic web scraping
+- Data collection
+
+Deliverable:
+- Dataset you collected plus analysis.
+
+---
+
+## Month 3: Portfolio-Level Projects
+
+### Week 9: Job Market Analysis
+Scrape or download job posting data.
+
+Questions:
+- What skills are most requested for data analyst roles?
+- Which tools appear most often?
+- How do salaries vary by location or skill?
+
+Skills:
+- Text analysis
+- Counts and frequency
+- Cleaning messy data
+- Practical insight generation
+
+Deliverable:
+- “Data Analyst Job Market Report.”
+
+---
+
+### Week 10: Geospatial Analysis
+Use data with locations, such as:
+- Crime data
+- Housing prices
+- Transit data
+- Restaurant inspections
+- Airbnb listings
+
+Questions:
+- Which areas have the highest activity?
+- Are there geographic clusters?
+- How do metrics vary by neighborhood?
+
+Skills:
+- Maps
+- Location-based grouping
+- Choropleth or point maps
+
+Deliverable:
+- Map-based visual analysis.
+
+---
+
+### Week 11: Predictive Analysis Light
+Do not over-focus on machine learning, but try a simple prediction project.
+
+Dataset ideas:
+- Housing prices
+- Customer churn
+- Bike rentals
+- Titanic survival
+- Student performance
+
+Questions:
+- Which features are related to the outcome?
+- Can you build a simple predictive model?
+- How accurate is it?
+
+Skills:
+- Train/test split
+- Regression or classification
+- Feature importance
+- Model evaluation
+
+Deliverable:
+- Notebook explaining model and limitations.
+
+---
+
+### Week 12: Capstone Project
+Pick one substantial project that combines everything.
+
+Good capstone ideas:
+- End-to-end ecommerce performance analysis
+- City housing affordability analysis
+- Streaming platform content strategy analysis
+- Marketing campaign performance analysis
+- Public transit usage analysis
+- Climate/weather trend analysis
+
+Skills:
+- Data sourcing
+- Cleaning
+- SQL/Python
+- Visualization
+- Recommendations
+- Executive summary
+
+Deliverable:
+- Portfolio-ready case study:
+  - Business question
+  - Data source
+  - Cleaning steps
+  - Analysis
+  - Visuals/dashboard
+  - Insights
+  - Recommendations
+
+---
+
+# Weekly Structure
+
+For each project, use this schedule:
+
+## Day 1: Define the question and find data
+Write 3–5 questions you want to answer.
+
+## Day 2: Clean the data
+Handle missing values, duplicates, bad column names, weird formats.
+
+## Day 3: Explore the data
+Use summaries, pivot tables, SQL queries, or pandas.
+
+## Day 4: Visualize
+Create charts that directly answer your questions.
+
+## Day 5: Interpret
+Write down insights, caveats, and possible recommendations.
+
+## Day 6: Polish
+Clean up notebook, dashboard, or slides.
+
+## Day 7: Publish
+Put it on GitHub, Notion, LinkedIn, or a portfolio.
+
+---
+
+# What to Focus On Most
+
+If your goal is employability, prioritize:
+
+1. **SQL**
+2. **Excel/spreadsheets**
+3. **Data cleaning**
+4. **Clear charts**
+5. **Business interpretation**
+6. **One dashboard tool**
+7. **Basic Python/pandas**
+
+Do not spend too much time trying to learn advanced machine learning early. For data analyst roles, clean analysis and communication matter more.
+
+---
+
+# Portfolio Advice
+
+For each project, include:
+
+- The question you investigated
+- The dataset source
+- Tools used
+- A few screenshots or charts
+- Your main findings
+- Limitations of the analysis
+- What you would do next
+
+By the end of three months, you do not need 12 perfect projects. You need maybe:
+
+- 3 strong portfolio projects
+- 4–6 smaller practice projects
+- Evidence that you can clean, analyze, visualize, and explain data
+
+---
+
+## My Take
+
+Yes, this is a very doable plan. The main risk is making each project too ambitious. Keep the weekly projects small, finish them, and publish them. Repetition matters more than perfection.
+
+A good rule:  
+**Each project should answer one main question and produce one clear deliverable.**

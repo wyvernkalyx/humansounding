@@ -1,0 +1,18 @@
+Yes — in general, **don’t put a hot laptop battery in the fridge or freezer**.
+
+Why not:
+
+- **Condensation** can form when you take it back out, which can cause corrosion or short circuits.
+- **Rapid temperature changes** can stress the battery and electronics.
+- **Charging or using lithium-ion batteries while cold** can damage them and increase risk.
+- If the battery is actually overheating or failing, a fridge is not a safe containment method.
+
+What to do instead:
+
+1. **Shut the laptop down and unplug it.**
+2. If the battery is removable and safe to handle, **remove it**.
+3. Put it on a **non-flammable surface** like tile, concrete, or metal, away from papers/fabric.
+4. Let it cool naturally at room temperature with good ventilation.
+5. If it’s **swollen, hissing, leaking, smoking, smells sweet/chemical, or gets too hot to touch**, keep away from it and consider it hazardous — contact the manufacturer, a battery recycler, or emergency services if there’s smoke/fire risk.
+
+If it’s only mildly warm after normal use, that’s usually fine. If it regularly gets very hot, the battery or cooling system may need service.

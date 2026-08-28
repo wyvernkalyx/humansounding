@@ -1,0 +1,88 @@
+It *can* be worth moving a small office to a four-day week, but it depends on whether you can maintain client/service coverage and measure output clearly. For many small offices, the best approach is a **trial period** rather than a permanent switch.
+
+## Potential benefits
+
+- **Recruitment and retention:** A four-day week is a strong perk, especially if salaries stay the same.
+- **Productivity gains:** Shorter weeks often force better prioritization, fewer unnecessary meetings, and more focused work.
+- **Lower burnout:** Staff may return more rested, reducing absenteeism and turnover.
+- **Cost savings:** Possible savings on utilities, office supplies, commuting support, or facilities usage.
+- **Employer brand:** It can differentiate your business.
+
+## Main risks
+
+- **Client coverage gaps:** If customers expect five-day availability, closing one day may hurt service.
+- **Work compression:** Staff may feel pressured to do five days of work in four, increasing stress.
+- **Uneven workload:** Some roles may adapt easily; others may not.
+- **Coordination problems:** Fewer overlapping hours can slow approvals or team communication.
+- **Perceived unfairness:** If some employees can take four days and others cannot, morale may suffer.
+
+## Key decision: which model?
+
+There are two common versions:
+
+### 1. True four-day week
+Employees work around **32 hours for the same pay**, with the expectation that productivity is maintained.
+
+Best if:
+- Work is output-based.
+- You can reduce low-value meetings/admin.
+- Staff have autonomy.
+- Client coverage can be managed.
+
+### 2. Compressed workweek
+Employees work **four longer days**, e.g. 4 x 10-hour days.
+
+Best if:
+- You need the same total hours.
+- Your work requires coverage rather than pure output.
+- You can manage fatigue from longer days.
+
+This is easier operationally but may be less beneficial for morale and burnout.
+
+## Options for a small office
+
+Instead of closing the whole office every Friday, consider:
+
+- **Staggered days off:** Half the team off Monday, half Friday.
+- **Core coverage:** Office remains open five days, but each person works four.
+- **Every-other-Friday off:** A softer transition.
+- **Seasonal trial:** Four-day weeks during quieter months.
+- **No-meeting day:** Try reducing meetings before reducing days.
+
+## How to test it
+
+Run a **3-month pilot** with clear rules.
+
+Track:
+
+- Revenue or billable output
+- Customer response times
+- Project completion rates
+- Employee satisfaction
+- Sick days/absences
+- Overtime or after-hours work
+- Missed deadlines
+- Client complaints
+
+Before the pilot, define what “success” means. For example:
+
+> “We will continue the four-day week if revenue, customer response times, and project deadlines remain within 95% of current levels, while employee satisfaction improves.”
+
+## Practical rules to set
+
+- Which day is off?
+- Is pay unchanged?
+- Are hours reduced or compressed?
+- How will urgent issues be handled?
+- Are clients told?
+- What happens during holidays?
+- Are part-time staff affected?
+- Can the arrangement be revoked if performance drops?
+
+## My recommendation
+
+If your office does knowledge work, admin, creative, finance, consulting, or project-based work, a **three-month pilot of a true 32-hour four-day week** may be worth trying.
+
+If you have customer-facing operations that require daily coverage, consider a **staggered four-day schedule** rather than closing one day entirely.
+
+The biggest mistake is announcing it permanently without testing. The best path is to pilot it, measure results, and adjust based on evidence.

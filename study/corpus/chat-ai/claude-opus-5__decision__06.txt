@@ -1,0 +1,30 @@
+Short answer: take the three-year deal only if the discount is meaningful (roughly 15%+ versus what you'd actually pay annually), the tool is in a mature category, and you can negotiate flex-down rights. Otherwise stay annual.
+
+**Compare against the right baseline.** The discount isn't 3-year price vs. today's annual price — it's 3-year price vs. the annual price path *including uplifts*. Many SaaS vendors have been pushing 7–12% annual increases. If you'd face those, a 10% multi-year discount plus a price lock is actually worth ~25–30% over the term. Ask the vendor directly what the renewal uplift cap is on the annual option; if they won't cap it, assume the high end.
+
+**The main risk is shelfware, not price.** Multi-year deals almost always carry seat minimums. If headcount could shrink, or adoption is unproven, you'll pay for licenses nobody uses — which wipes out the discount fast. A 15% discount on 100 seats is worse than full price on 70 seats.
+
+**Factors that push toward locking in three years:**
+- High switching costs (deep integrations, data migration, retraining). If you realistically wouldn't leave anyway, the annual "option to exit" is imaginary — you're paying a premium for flexibility you'll never use.
+- Mature, stable category: payroll, ERP, identity, storage.
+- Growing headcount, where you can lock per-unit rates now.
+- Budget predictability matters to your finance team.
+
+**Factors that push toward annual:**
+- Fast-moving category (anything AI-adjacent right now — pricing and capability are shifting every few months).
+- Uncertain adoption, or you're mid-rollout and don't know the real usage yet.
+- Vendor is an acquisition target or financially shaky.
+- Volatile headcount.
+- The ask is prepayment of all three years upfront — that's a different, much worse deal than a three-year term billed annually.
+
+**Get the upside without the full commitment.** The most valuable negotiation move is decoupling the *price lock* from the *term commitment*. Things worth asking for:
+
+- **Flex-down right:** reduce seats by 10–20% at each anniversary without penalty. This is the single highest-value clause and vendors grant it more often than people expect.
+- **Renewal cap on the annual option:** CPI or 3–5%, whichever is lower. Sometimes you can get this without committing to three years at all.
+- **Termination for convenience** at 12 or 24 months with 60–90 days' notice. Rarer, but it turns a three-year deal into an annual one with three-year pricing.
+- **Locked per-seat rate on adds**, so growth doesn't get priced at a premium later.
+- **Kill the evergreen auto-renewal** or shorten the notice window — 90-day auto-renews are how people end up accidentally locked in for another year.
+
+Timing helps: vendors are most flexible at the end of their fiscal quarter or year, and multi-year commitments are exactly what their reps are compensated on. That's your leverage to trade term length for the clauses above.
+
+If you tell me the category, the discount percentage, and whether your seat count is likely to grow or shrink, I can give you a sharper read.

@@ -1,0 +1,45 @@
+Mostly they are — but it's worth being precise about *how*, because the reasons point to different remedies. And they're not always wrong: a two-day task on a codebase you know well, done by a team with history, is often estimated fine. It's the multi-month, novel, cross-team work that reliably blows up.
+
+## The definitional problem
+
+An estimate is a prediction about a distribution, but it's almost always requested as a single number. Task durations are right-skewed: bounded below by "everything goes perfectly" and unbounded above. So the median outcome is already above the number most people say, and the mean is above the median. Ask for a point estimate and you've guaranteed a mismatch — the only question is the size and direction.
+
+Direction is systematically positive (over budget), which is the real complaint. That comes from the rest of the list.
+
+## Software work is discovery, not production
+
+Construction estimates work because someone has poured a foundation before and the variance is in weather and labor, not in whether foundations are possible. Writing software is mostly figuring out what precisely to build and what the system actually does. Anything genuinely repetitive gets abstracted into a library or a script — that's the whole trade. What's left is the part nobody has done before, at least not here, not in this codebase.
+
+So you're being asked to estimate how long it will take to learn something you haven't learned yet. The information that would make the estimate accurate is the same information you'd acquire by doing the work.
+
+## Decomposition is biased low
+
+The standard fix — break it into small pieces and sum them — helps with variance but has a structural bias: **you can only enumerate the tasks you think of.** Forgotten work is always positive. Nobody's breakdown accidentally includes a task that turns out not to exist, but everyone's omits the migration script, the flaky test, the security review, the fact that the third-party API's documented behavior is a lie.
+
+## The upside is truncated, the downside isn't
+
+Tasks that would finish early usually don't, because of scope filling and because "done early" gets absorbed into polish or the next thing. Tasks that go badly can go arbitrarily badly. Clip the good tail, keep the bad one, and aggregate over many tasks: the project slips even if individual estimates were "honest."
+
+## Queueing, not work
+
+For anything involving more than one team, elapsed time is dominated by waiting — for review, for approval, for the other team's sprint, for the environment. Wait times explode nonlinearly as people approach full utilization, and organizations that run everyone at 100% utilization are exactly the ones demanding tight estimates. The estimate covers the work; the calendar is made of the waiting.
+
+## Estimates get corrupted socially
+
+This is often the biggest factor and it has nothing to do with forecasting skill. Estimates are elicited, then negotiated down, then treated as commitments, then used as deadlines and later as performance evidence. Once that loop is visible, engineers stop reporting beliefs and start reporting whatever number survives the meeting. A measure used as a target stops measuring. You end up with a number that was never a prediction in the first place, and then act surprised when it doesn't predict.
+
+## The target moves
+
+Estimating a six-month project assumes the six-month project stays the same project. Requirements drift, priorities shift, a dependency gets deprecated. Some of the "overrun" is just scope arriving after the estimate was fixed, incorrectly booked against estimation error.
+
+---
+
+## What actually helps
+
+- **Ranges and probabilities.** "80% confident by mid-March" is a claim you can be right or wrong about. "March 12" isn't.
+- **Historical throughput over introspection.** How long did the last ten things like this take? This "outside view" beats detailed inside-view reasoning almost every time, and it's why most teams' best forecasting tool is just their own cycle-time data.
+- **Small slices, frequent re-forecasting.** Uncertainty collapses as you learn; an estimate from month three is worth ten from month zero.
+- **Separate the estimate from the commitment.** They're different objects with different owners. Conflating them destroys the information content of both.
+- **Spike the unknowns first.** Time-boxed investigation converts unbounded uncertainty into bounded uncertainty, which is the only thing estimation can handle.
+
+The honest summary: estimates are wrong because they're predictions about novel work made at the point of minimum information, then subjected to political pressure. You can shrink the error substantially, but the residual is irreducible — and pretending otherwise is more expensive than planning around it.

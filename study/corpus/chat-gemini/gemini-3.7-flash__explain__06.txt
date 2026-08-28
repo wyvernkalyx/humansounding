@@ -1,0 +1,48 @@
+When a company announces a data breach, it means unauthorized individuals (hackers, rogue employees, or cybercriminal groups) have accessed, copied, or stolen a database containing user information. 
+
+Your data doesn't disappear from the original service; rather, **a digital copy of it is now in the hands of bad actors.**
+
+Here is the step-by-step journey of what happens to your data once it leaves the company’s servers:
+
+---
+
+### 1. Verification and Sorting
+Immediately after the theft, the hackers analyze the "loot" to see what they have and how valuable it is.
+* **Low-value data:** Basic names, email addresses, and general site activity.
+* **Medium-value data:** Physical addresses, phone numbers, dates of birth, and encrypted passwords (which they will attempt to "crack").
+* **High-value data:** Plaintext passwords, Social Security numbers (SSNs), credit card information, driver's license numbers, and health records.
+
+### 2. The Dark Web Marketplace
+Once sorted, the data usually enters the cybercriminal economy, moving through several stages:
+* **Private Sale:** Initially, data is often sold privately to the highest bidder on Dark Web forums or encrypted Telegram channels for thousands of dollars.
+* **Bulk "Combo Lists":** Over time, as the data gets older, it is bundled with data from other breaches into massive lists containing billions of credentials.
+* **Free Dumps:** Eventually, the data is leaked publicly for free. Hackers do this to build their reputation in the cyber underground or because the data has been fully exploited.
+
+### 3. How Criminals Use Your Data
+Once the data is circulating, various types of criminals buy or download it to commit different types of fraud:
+
+* **Credential Stuffing (Account Takeover):** Automated bots take your leaked email and password and try them on thousands of other popular sites (Amazon, Netflix, banking apps, PayPal). Because many people reuse passwords, this is often highly successful.
+* **Hyper-Targeted Phishing:** Scammers use your specific leaked information to make fake emails, text messages (smishing), or phone calls (vishing) look authentic. For example, if a hotel chain was breached, a scammer might email you pretending to be that hotel, referencing your actual stay dates to trick you into clicking a malicious link.
+* **Identity Theft and Financial Fraud:** If sensitive data like your SSN, full name, and date of birth are leaked, criminals can open credit cards in your name, apply for loans, hijack your tax refunds, or file for unemployment benefits.
+* **SIM Swapping:** If your phone number and personal details are exposed, criminals may trick your mobile carrier into transferring your phone number to their device, allowing them to bypass SMS-based two-factor authentication.
+
+### 4. The "Mosaic Effect" (Data Aggregation)
+One of the most dangerous aspects of a breach is that your data does not live in isolation. 
+Data brokers and criminal syndicates use automated tools to **merge data from multiple breaches over the years**. 
+
+* Breach A had your email and password.
+* Breach B had your home address and phone number.
+* Breach C had your credit card number.
+
+When combined, criminals assemble a complete, highly detailed dossier on you, making future identity theft much easier.
+
+---
+
+### What Can You Do When You're Notified?
+
+Because you cannot "un-leak" data, your goal is to make the stolen data useless:
+
+1. **Change the Leaked Password Immediately:** If you used that password anywhere else, change it on those accounts, too. Use a password manager to generate unique passwords.
+2. **Enable Multi-Factor Authentication (MFA/2FA):** Turn on MFA across your important accounts (email, banking, shopping). Prefer authenticator apps (like Google Authenticator or 1Password) over SMS codes.
+3. **Freeze Your Credit:** If your Social Security number or date of birth was compromised, contact the major credit bureaus (Equifax, Experian, TransUnion in the US) and place a freeze on your credit. This prevents anyone from opening new accounts in your name.
+4. **Be on High Alert for Scams:** Expect an increase in phishing emails, spam calls, and suspicious text messages over the coming weeks and months.

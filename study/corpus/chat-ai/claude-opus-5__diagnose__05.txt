@@ -1,0 +1,28 @@
+A few distinct causes hide behind this symptom, and they need different fixes — so the useful first move is figuring out which one you have.
+
+**The answer exists but isn't findable.** Usually a vocabulary mismatch: your docs say "provisioning a workspace," the customer searches "add my team." Internal product nouns leak into headings. Check your docs search logs for zero-result and abandoned queries — that's the fastest read on this.
+
+**It's findable but not answer-shaped.** The information is technically present, spread across three pages, embedded in paragraph four of a conceptual overview. Docs organized around product architecture rather than around what people are trying to do produce this constantly. Nobody reads; they scan for something that looks like their situation.
+
+**It's not where the confusion happens.** The moment of need is in the product, at 11pm, staring at an error. If the error message doesn't link to the fix, the docs might as well not exist. Contextual help at the point of failure eliminates whole categories of tickets.
+
+**They don't trust the docs.** If someone has once followed your documentation into a wall — stale screenshots, wrong version, steps that no longer exist — they will route around it permanently. This is invisible in analytics and very hard to reverse.
+
+**They're not actually asking the question they asked.** "How do I export a CSV?" can mean "I need to convince my finance team this data is right." The doc answers the literal question and the person still writes in, because the real question was about risk, or permission, or reassurance that they won't break something. Documentation is bad at answering trust questions.
+
+**Asking is just cheaper.** If your chat support replies in three minutes and reading takes ten, asking is the rational choice. Good, fast support cannibalizes self-service. That's a tradeoff, not necessarily a failure.
+
+**The product is generating the questions.** Repeated questions about one flow often mean the flow is confusing, and the docs are scar tissue over a design problem. Worth checking whether the top five doc-answered questions cluster around one or two screens.
+
+---
+
+To diagnose, pull the last 50–100 tickets that had a documented answer and classify each one:
+
+- Couldn't find the doc
+- Found it, misread or misunderstood it
+- Found it, understood it, asked anyway
+- Doc was wrong, outdated, or incomplete
+
+You can get most of this by asking agents to paste the doc link they used and note whether the customer said some version of "oh, I missed that." Two weeks of this data will tell you more than any amount of speculation, and the four buckets point to completely different work — search and titles, rewriting, in-product placement or trust-building, and maintenance, respectively.
+
+One caveat worth naming: some volume of already-answered questions is normal and fine. Some people prefer to ask a human, and always will. The question worth asking isn't "why isn't this zero" but "which specific repeated questions are expensive enough to be worth engineering away" — usually a short list, often three or four questions accounting for a surprising share of contacts.

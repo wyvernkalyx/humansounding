@@ -1,0 +1,22 @@
+Compound interest means you earn interest not only on your original money, but also on the interest you’ve already earned. In other words, your gains can start producing gains of their own.
+
+Suppose you invest $1,000 at 10% interest per year:
+
+- After year 1: $1,100
+- After year 2: $1,210
+- After year 3: $1,331
+- After 10 years: about $2,594
+- After 20 years: about $6,727
+- After 30 years: about $17,449
+
+The basic formula is:
+
+Amount = Principal × (1 + interest rate)^number of periods
+
+So at 10% for 30 years, $1,000 becomes $1,000 × 1.10³⁰ ≈ $17,449.
+
+What surprises people is that exponential growth doesn’t feel intuitive. Early on, compounding looks unimpressive: the first year adds only $100. But later, the annual increases become large because they’re being calculated on a much bigger balance. In year 30 alone, for example, a 10% return would add roughly $1,586.
+
+Time therefore matters enormously. Starting earlier can sometimes matter more than contributing larger amounts later, because early money gets more years to compound.
+
+The same mechanism also works against you with debt. If unpaid interest is added to a balance and then itself accrues interest, debts can grow surprisingly quickly. That’s why compound interest can be extremely useful for long-term saving and extremely costly for certain kinds of borrowing.

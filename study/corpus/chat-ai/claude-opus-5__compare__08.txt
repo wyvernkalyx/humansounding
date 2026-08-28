@@ -1,0 +1,71 @@
+## The core dynamic at 60 people
+
+A 60-person company sits in the awkward middle. Typical ticket volume is roughly 30–90 tickets/month (about 0.5–1.5 per user), which is far below what a full-time help desk tech can absorb. But the *other* IT work — onboarding/offboarding, device procurement and imaging, identity and access management, SaaS admin, patching, backups, vendor wrangling, security questionnaires — easily adds up to a full role.
+
+So the real question usually isn't "help desk or MSP," it's "what mix of internal ownership and external capacity fits us."
+
+## Side-by-side
+
+| Dimension | In-house | Outsourced (MSP) |
+|---|---|---|
+| **Cost structure** | Fixed salary + benefits; you pay the same in slow months | Usually per-user/month; scales with headcount |
+| **Coverage** | One person = gaps for PTO, illness, turnover | 8×5 standard, 24×7 available; no single point of failure |
+| **Response time** | Often minutes; walk-up support | SLA-bound, typically 15 min–4 hrs by priority |
+| **Context** | Knows your apps, people, quirks, politics | Learns slowly; rotating techs restart the learning curve |
+| **Depth of expertise** | One generalist's ceiling | Bench with network, M365, security, cloud specialists |
+| **Employee experience** | Personal, high trust | Can feel transactional; users may route around it |
+| **Scaling** | Hiring lag of 2–4 months | Add seats in days |
+| **Security/compliance** | Full control of access and audit trail | Third party holds admin credentials; needs contractual controls |
+| **Institutional knowledge** | Concentrated in one head (risk) | Documented in their system (which you may not own) |
+| **Strategic work** | Same person can drive roadmap | Project work usually billed separately, often upsold |
+
+## Rough costs (US, 2024–25 ballpark)
+
+- **In-house IT generalist/sysadmin:** $65k–$100k base, $85k–$130k fully loaded. Add $5k–$15k/yr for tooling (RMM, ticketing, MDM, remote access).
+- **Outsourced full managed services:** ~$100–$200/user/month → **$72k–$144k/yr** at 60 users.
+- **Help desk only (no infrastructure management):** ~$40–$90/user/month → **$29k–$65k/yr**.
+- **Co-managed hybrid:** 1 internal IT lead ($100k–$130k loaded) + $40–$70/user/month for tier-1 and after-hours → **$130k–$180k/yr**.
+
+Note the totals are close enough that cost alone rarely decides it. What differs is *risk profile* and *what you get for the money*.
+
+## When in-house wins
+
+- You run custom, proprietary, or legacy systems an outsider can't learn quickly.
+- Regulatory posture makes third-party admin access painful (ITAR, certain HIPAA/CJIS setups, defense work).
+- You're in one office and people value walk-up support.
+- Culture is high-touch and executives expect a name and a face.
+- You're growing fast toward 150+ and want to build the team now.
+
+## When outsourcing wins
+
+- Distributed or remote-first workforce — proximity buys you nothing.
+- Standardized stack (Google Workspace or M365, SaaS-heavy, Macs or Windows, cloud-hosted everything).
+- You need coverage across time zones or after hours.
+- You've been burned by key-person risk, or you can't credibly recruit and manage an IT hire.
+- Predictable per-seat budgeting matters more than marginal cost.
+
+## The pattern that usually works at this size
+
+**One internal IT/ops lead + an MSP for tier-1 and overflow.** The internal person owns identity, security, vendor relationships, the roadmap, and anything requiring institutional context. The MSP absorbs password resets, printer issues, laptop setups, after-hours, and vacation coverage.
+
+This costs more than either option alone but removes the failure mode that actually hurts: the single internal person quitting, or the MSP owning your Microsoft tenant with no one internal who understands it.
+
+If budget forces a single choice at 60 people, outsourcing tends to be the safer default — until you hit a threshold (usually 80–120 employees, or the first compliance audit) where an internal owner becomes non-negotiable.
+
+## If you outsource, get these in the contract
+
+1. **You own the tenant.** Your Microsoft/Google global admin, domain registrar, and DNS stay in your name. The MSP gets delegated access you can revoke.
+2. **Documentation is yours on exit,** in exportable form, plus a defined 30–60 day transition assistance clause.
+3. **SLAs on response *and* resolution,** with priority definitions written down. "4-hour response" means nothing if resolution drifts for a week.
+4. **Named primary tech** with a defined backup, not a pure round-robin pool.
+5. **What's included vs. project-billed** — onboarding/offboarding, new office setups, migrations, and security incidents are common carve-outs.
+6. **Monthly reporting:** ticket volume, resolution time, top recurring issues. If they can't show you recurring-issue trends, they're not reducing your ticket count.
+7. **Termination for convenience** with 30–60 days' notice. Avoid 36-month lock-ins at this size.
+
+## Questions that will point you to the answer
+
+- How many tickets did you generate last month, and what fraction were password/access/hardware (commoditized) vs. app-specific (contextual)?
+- What happens today when your most IT-capable person is on vacation?
+- Do you have a compliance deadline (SOC 2, HIPAA, cyber insurance renewal) in the next 12 months?
+- Are you 60 people heading to 100, or 60 people staying at 60?
+- Is anyone currently doing IT work off the side of their desk, and what is that costing in their real job?

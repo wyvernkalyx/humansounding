@@ -1,0 +1,23 @@
+## Product Update: Single Sign-On is Now Available
+
+We’re excited to announce support for **Single Sign-On (SSO)**, making it easier and more secure for teams to access our platform.
+
+With SSO, users can sign in using their existing company credentials through an identity provider such as Okta, Google Workspace, Microsoft Entra ID, OneLogin, or any SAML 2.0-compatible provider.
+
+### What’s new
+
+- **Centralized authentication** through your organization’s identity provider
+- **Improved security** with fewer passwords to manage
+- **Faster onboarding and offboarding** for employees
+- **Support for SAML 2.0-based login**
+- **Optional enforcement of SSO** for your workspace
+
+### Why it matters
+
+SSO helps IT and security teams simplify access management while giving users a smoother login experience. By connecting authentication to your existing identity provider, admins can better control who has access and reduce the risk associated with password-based logins.
+
+### How to get started
+
+Workspace admins can configure SSO from the **Security** or **Authentication** settings page. Once set up, users will be able to log in using your organization’s identity provider.
+
+If you’d like help enabling SSO for your workspace, contact our support team or your account manager.

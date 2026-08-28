@@ -1,0 +1,47 @@
+For the vast majority of modern products—especially B2C apps, e-commerce, and self-serve B2B SaaS—**yes, launching without a pricing page is a significant mistake.** 
+
+However, there are a few specific business models and early-stage scenarios where omitting it is acceptable or even strategic.
+
+Here is a breakdown of why it usually hurts you, when it might make sense, and better alternatives.
+
+---
+
+### Why it is usually a mistake
+
+1. **"If you have to ask, you can't afford it"**
+   When potential customers don’t see pricing, their immediate assumption is that the product is expensive. This scares away price-conscious buyers, startups, and small-to-medium businesses (SMBs) who might have actually been able to afford it.
+2. **Huge drop in conversion (Friction)**
+   Modern buyers expect instant gratification and self-service. If a user has to "Book a Demo" or "Email for a Quote" just to find out if you cost $10/month or $10,000/month, they will likely just bounce and buy from a competitor who lists their prices transparently.
+3. **Wasted sales time on unqualified leads**
+   Without a pricing filter, your sales team will spend valuable time fielding calls and emails from leads who only have a $50 budget for a $5,000 solution. 
+4. **Lost SEO traffic**
+   One of the highest-intent search queries for any software or product is `"[Product Name] pricing"` or `"[Category] pricing"`. Without a pricing page, you lose out on ranking for high-converting search traffic.
+
+---
+
+### When it is NOT a mistake (The Exceptions)
+
+There are legitimate scenarios where launching without a public pricing page is the right move:
+
+* **High-Ticket Enterprise Sales:** If your annual contract value (ACV) is $50,000+, every deal requires custom security, compliance, integration, and user-count scoping. Transparent flat pricing doesn't work here.
+* **Customer Discovery / Alpha Testing:** If you have just built an MVP and genuinely do not know your value metric or willingness-to-pay, forcing every user onto a call allows you to negotiate, test different price points, and learn deeply about customer needs.
+* **Custom/Bespoke Solutions:** If the product relies heavily on variable costs (e.g., heavily customized hardware, variable API usage, or agency-hybrid services).
+
+---
+
+### Better Alternatives (The Middle Ground)
+
+If you are hesitating to put a hard price on your site, consider these hybrid approaches instead of hiding pricing completely:
+
+* **"Starting at $X":** Gives users a baseline so they know what ballpark they are in without locking you into a fixed quote.
+* **Tiered Pricing with a "Contact Us" tier:** Offer self-serve pricing for lower tiers (Free, Starter, Pro) and a "Contact Sales" button only for the Enterprise tier.
+* **Pricing Calculator:** If your pricing is complex (based on usage, seats, or bandwidth), let users toggle sliders to estimate their monthly bill.
+* **Free Beta Period:** If you aren't sure what to charge yet, launch as **"100% Free during our Public Beta"** with a clear note that paid plans will be introduced later. This attracts users without the friction of a hidden price.
+
+---
+
+### The Verdict
+
+* **If your product costs under ~$500/month:** Put the pricing on the page. Hiding it will kill your launch momentum.
+* **If your product is enterprise-only ($10k+ deals):** A "Request a Demo / Custom Quote" model is standard and expected.
+* **If you are validating the product:** Talk to early users directly, but transition to a public pricing page as soon as you find product-market fit.

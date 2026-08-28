@@ -1,0 +1,57 @@
+To determine whether your consultant is giving you sound technical advice or just trying to sell a larger, more expensive project, you need to understand the fundamental difference:
+
+*   **A Redesign** changes the **presentation layer** (UI/UX, visual branding, layout, CSS/HTML) while keeping the existing engine, database, and Content Management System (CMS).
+*   **A Rebuild** throws out the underlying infrastructure (CMS, database architecture, tech stack, third-party integrations) and starts from scratch.
+
+Here is a practical framework to judge whether a full rebuild is actually justified.
+
+---
+
+### 1. Valid Reasons for a Full Rebuild ("Green Flags")
+A rebuild is usually justified if your current foundation actively prevents you from reaching business goals. Look for these signs:
+
+*   **The technology is near end-of-life or unsupportable:**
+    *   Your platform is deprecated (e.g., Drupal 7, Magento 1, an obsolete custom PHP framework).
+    *   It is difficult or impossible to find developers to maintain the current stack.
+*   **Severe "Technical Debt":**
+    *   Every time someone fixes a bug or updates a plugin, three other things break.
+    *   The site has had dozens of developers over many years, resulting in conflicting, unmaintainable "spaghetti code."
+*   **The site is fundamentally unscalable or slow:**
+    *   Core Web Vitals/page speed are terrible, and the bottleneck is server architecture or database design, not just uncompressed images.
+*   **Business model/functional pivot:**
+    *   You are moving from a standard brochure site to a complex web app, membership portal, multi-currency e-commerce, or localized multi-language setup that the current platform cannot handle natively.
+*   **Editorial paralysis:**
+    *   Your marketing team cannot create new landing pages or update content without hiring an engineer every single time.
+
+---
+
+### 2. Warning Signs It Might Be Unnecessary ("Red Flags")
+Be cautious if you observe any of the following:
+
+*   **"Stack Bias":** The consultant only works in one specific technology (e.g., Webflow, WordPress, Next.js/Headless) and wants to move you there simply because it’s what their team knows.
+*   **Vague justifications:** They use buzzwords like *"it’s outdated,"* *"it’s not clean,"* or *"it won't scale,"* without pointing to concrete code bottlenecks or business risks.
+*   **They haven't audited the backend:** If they recommended a rebuild based solely on looking at the front-end design and didn't spend hours reviewing your codebase, database, or plugin ecosystem, their recommendation is a guess.
+
+---
+
+### 3. Five Direct Questions to Ask the Consultant
+Put the burden of proof on the consultant by asking these specific questions:
+
+1.  **"Can you list the top 3 specific technical blockers in our current setup that make a redesign impossible?"**
+    *   *What to listen for:* Concrete answers (e.g., *"Your CMS database schema cannot support the product filtering you want"*), not vague answers (e.g., *"The code is messy"*).
+2.  **"What is the estimated cost and timeline difference between a redesign and a rebuild?"**
+    *   *What to listen for:* A rebuild typically takes 2–3x longer and costs significantly more. They should be able to articulate why that premium has a clear Return on Investment (ROI).
+3.  **"What happens to our current SEO equity and integrations?"**
+    *   *What to listen for:* Rebuilds carry high risk for search rankings and third-party data flows (CRMs, ERPs, analytics). They must have a rigorous migration plan.
+4.  **"Could we do a phased or hybrid approach?"**
+    *   *What to listen for:* Can you redesign the critical pages now, and refactor the backend incrementally? If they dismiss modular improvements outright, ask why.
+5.  **"What will the Total Cost of Ownership (TCO) look like over the next 3 years for both options?"**
+    *   *What to listen for:* A redesign might be cheaper now but require high maintenance later; a rebuild is expensive upfront but should theoretically lower maintenance costs later.
+
+---
+
+### Recommended Next Steps
+
+1.  **Demand a Paid Technical Audit:** If they haven't done one, pay for a scoped 10–20 hour code and architecture audit. Make them document *why* the current code is unsalvageable.
+2.  **Get a Second Opinion:** Hire an independent technical contractor (who has **no interest** in winning the build contract) for a few hours to review the audit and your repository.
+3.  **Check Internal Bottlenecks:** Talk to your content editors and in-house developers. Ask them: *"Is the current system slowing you down daily, or is it just ugly?"* If it's just ugly, you need a redesign. If it's broken, you need a rebuild.

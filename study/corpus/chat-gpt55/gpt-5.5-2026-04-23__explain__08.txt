@@ -1,0 +1,36 @@
+In the United States, a bill becomes law through several steps involving Congress and the President:
+
+1. **A bill is introduced**
+   - A member of Congress introduces a proposed law, called a bill.
+   - Bills can start in either the **House of Representatives** or the **Senate**, except tax and spending bills, which must start in the House.
+
+2. **Committee review**
+   - The bill is sent to a congressional committee that specializes in the bill’s topic.
+   - The committee studies it, holds hearings, makes changes, and decides whether to send it forward.
+   - If the committee rejects or ignores the bill, it usually dies.
+
+3. **Debate and vote in one chamber**
+   - The full House or Senate debates the bill.
+   - Members may propose amendments.
+   - If a majority votes in favor, the bill moves to the other chamber.
+
+4. **The other chamber considers the bill**
+   - The bill goes through a similar process in the other chamber: committee review, debate, amendments, and a vote.
+   - Both the House and Senate must pass the same version of the bill.
+
+5. **Conference committee, if needed**
+   - If the House and Senate pass different versions, a conference committee works out a compromise.
+   - Both chambers must then vote to approve the final version.
+
+6. **The President acts**
+   - Once Congress passes the bill, it goes to the President.
+   - The President can:
+     - **Sign it**, making it law.
+     - **Veto it**, sending it back to Congress.
+     - **Do nothing** for 10 days while Congress is in session, in which case it becomes law.
+     - **Do nothing** for 10 days after Congress has adjourned, causing a “pocket veto,” and the bill does not become law.
+
+7. **Congress can override a veto**
+   - If the President vetoes the bill, Congress can still make it law with a **two-thirds vote** in both the House and the Senate.
+
+In short: a bill must pass both houses of Congress and either be signed by the President or survive a veto override to become law.

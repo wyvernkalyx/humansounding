@@ -1,0 +1,12 @@
+A drop from roughly a full day to three hours within a month is unusually fast. It could be battery deterioration, but often something has changed that makes the laptop consume much more power.
+
+Common causes include:
+- A background process or recent app/OS update using lots of CPU/GPU.
+- A discrete GPU staying active instead of switching to integrated graphics.
+- Higher screen brightness, refresh rate, or a new peripheral/dock.
+- Battery health deteriorating rapidly, especially in an older laptop or one exposed to heat.
+- Less commonly, a faulty battery, charger, or power-management firmware.
+
+A quick way to distinguish battery wear from increased power use is to check the battery's current full-charge capacity versus its original/design capacity. Windows can generate this with `powercfg /batteryreport` in Command Prompt; on a Mac, check System Settings → Battery → Battery Health (and System Information → Power for more detail).
+
+If you tell me the laptop model, operating system, approximate age, and the reported battery health/capacity, I can help narrow down exactly what's happening.

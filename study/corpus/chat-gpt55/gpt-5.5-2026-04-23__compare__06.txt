@@ -1,0 +1,49 @@
+For **12,000 miles per year**, both an electric car and a hybrid can make sense, but the better choice depends mostly on **charging access, purchase price, and driving habits**.
+
+### Quick cost comparison
+
+Assumptions:  
+- Electric car: **3.5 miles/kWh**  
+- Electricity: **$0.16/kWh**  
+- Hybrid: **50 mpg**  
+- Gas: **$3.50/gallon**
+
+| Category | Electric car | Hybrid |
+|---|---:|---:|
+| Annual miles | 12,000 | 12,000 |
+| Energy/fuel use | ~3,430 kWh | ~240 gallons |
+| Annual energy/fuel cost | **~$550** | **~$840** |
+| Tailpipe emissions | None | Low, but still burns gas |
+| Maintenance | Usually lower | Low, but has engine/oil changes |
+| Refueling/charging | Best with home charging | Very convenient anywhere |
+| Road trips | Requires charging planning | Easier, gas stations everywhere |
+| Upfront cost | Often higher, incentives may help | Usually lower |
+
+### Electric car advantages
+
+An EV is likely better if you can charge at home or work. At 12,000 miles per year, you’d probably spend around **$500–$700 per year on electricity**, depending on your rates. EVs also have fewer moving parts, no oil changes, and generally lower maintenance.
+
+They are especially appealing if:
+- You have a driveway/garage for charging.
+- Your daily driving is predictable.
+- You want lower emissions.
+- You qualify for EV tax credits or rebates.
+- You don’t mind planning charging stops on longer trips.
+
+### Hybrid advantages
+
+A hybrid is likely better if you don’t have easy charging access. A good hybrid getting around **45–55 mpg** would use roughly **220–270 gallons of gas per year**, so fuel costs may be around **$800–$1,000 annually** at current gas prices.
+
+Hybrids are especially appealing if:
+- You live in an apartment or can’t charge at home.
+- You take frequent long road trips.
+- You want lower fuel use without changing habits.
+- You want a lower upfront price.
+- You prefer quick refueling.
+
+### The key takeaway
+
+At **12,000 miles per year**, an EV may save you roughly **$300–$500 per year in fuel/energy costs** compared with a very efficient hybrid, assuming home charging. That’s helpful, but not always enough by itself to overcome a much higher purchase price.
+
+**Choose the electric car** if you can charge conveniently and the price after incentives is competitive.  
+**Choose the hybrid** if you want maximum convenience, lower upfront cost, or don’t have reliable home/work charging.

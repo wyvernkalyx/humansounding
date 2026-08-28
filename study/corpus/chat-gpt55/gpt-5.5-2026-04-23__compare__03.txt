@@ -1,0 +1,60 @@
+A **controller** is mainly responsible for making sure the company’s financial records are accurate. A **CFO** is responsible for using financial information to guide the company’s strategy, funding, and long-term financial health.
+
+In simple terms:
+
+> **Controller = “What happened?”**  
+> **CFO = “What should we do next?”**
+
+### Controller
+
+A controller oversees the accounting function. Their focus is accuracy, compliance, and financial reporting.
+
+Typical responsibilities include:
+
+- Managing the accounting team
+- Closing the books monthly/quarterly/yearly
+- Preparing financial statements
+- Ensuring GAAP/tax/compliance requirements are met
+- Managing audits
+- Overseeing payroll, accounts payable, accounts receivable
+- Maintaining internal controls
+- Producing budgets or reports, depending on the company
+
+The controller is usually the senior accounting person.
+
+### CFO
+
+A CFO is an executive responsible for the company’s overall financial strategy and direction.
+
+Typical responsibilities include:
+
+- Financial planning and forecasting
+- Cash flow strategy
+- Fundraising, debt, equity, and investor relations
+- Budgeting at a strategic level
+- Pricing, margin, and profitability analysis
+- M&A, acquisitions, or exits
+- Risk management
+- Working with the CEO and board on company strategy
+- Deciding how to allocate capital
+
+The CFO is usually part of the executive leadership team.
+
+### Key difference
+
+The **controller makes sure the numbers are right**.  
+The **CFO uses those numbers to make business decisions**.
+
+### Example
+
+If revenue is down:
+
+- The **controller** makes sure revenue was recorded correctly and explains what the reports show.
+- The **CFO** asks why revenue is down, what it means for cash flow, whether costs need to be cut, whether pricing should change, and how it affects investors or lenders.
+
+### In smaller companies
+
+The roles can overlap. A controller may act like a CFO, or a CFO may handle controller duties. But as companies grow, the distinction becomes clearer:
+
+- **Controller:** accounting and reporting
+- **CFO:** strategy, finance, capital, and leadership

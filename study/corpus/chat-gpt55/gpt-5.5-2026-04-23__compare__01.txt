@@ -1,0 +1,71 @@
+Practically speaking, both a VPN and a proxy can make your internet traffic appear to come from another location, but they work at different levels and provide different protections.
+
+## Proxy
+
+A proxy is an intermediary server that an app or browser connects through.
+
+### What it usually does
+- Changes your visible IP address for specific traffic
+- Often works per app, per browser, or per protocol
+- Common for web browsing, scraping, bypassing simple geo/IP restrictions
+
+### What it usually does not do
+- It does not necessarily encrypt your traffic
+- It usually does not protect all apps on your device
+- DNS requests may still go through your normal ISP unless configured carefully
+
+### Common proxy types
+- **HTTP proxy**: mainly for web traffic
+- **SOCKS proxy**: more general-purpose, can carry many types of traffic
+- **Transparent proxy**: often used by networks/ISPs; you may not configure it yourself
+
+## VPN
+
+A VPN creates an encrypted tunnel between your device and a VPN server.
+
+### What it usually does
+- Routes most or all device traffic through the VPN
+- Encrypts traffic between your device and the VPN provider
+- Changes your visible IP address
+- Usually handles DNS through the VPN to reduce leaks
+- Protects traffic on untrusted Wi-Fi from local snooping
+
+### What it does not do
+- It does not make you anonymous by itself
+- The VPN provider can potentially see metadata and, depending on traffic, some destination information
+- It does not protect you from malware, phishing, or logging into identifiable accounts
+
+## Practical comparison
+
+| Feature | Proxy | VPN |
+|---|---|---|
+| Changes visible IP | Yes | Yes |
+| Encrypts traffic | Sometimes, not guaranteed | Usually yes |
+| Covers all apps | Usually no | Usually yes |
+| Easy per-app use | Yes | Less commonly |
+| Protects on public Wi-Fi | Limited | Better |
+| Can hide activity from ISP | Partially, depending on setup | More effectively |
+| Speed | Often faster/lighter | Can be slower due to encryption |
+| Setup | Simple in browser/app | Usually system-level app/config |
+
+## Simple analogy
+
+A **proxy** is like asking someone else to fetch a website for you.
+
+A **VPN** is like putting all your internet traffic into a private tunnel to another place, then letting it exit from there.
+
+## Which should you use?
+
+Use a **proxy** if you only need to:
+- Change IP for one browser or app
+- Access region-specific web content
+- Route specific traffic through another server
+- Do lightweight automation or testing
+
+Use a **VPN** if you want to:
+- Protect your connection on public Wi-Fi
+- Route most device traffic through one encrypted tunnel
+- Reduce what your ISP or local network can see
+- Use a simpler “whole device” privacy setup
+
+In short: **a proxy is usually for routing specific app traffic through another server; a VPN is usually for encrypting and routing most or all of your device’s traffic through another server.**

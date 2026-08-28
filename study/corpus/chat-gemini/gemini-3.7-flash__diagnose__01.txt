@@ -1,0 +1,61 @@
+A slow period that happens at an **exact time on specific days (weekdays at 9:00 AM)** is almost always caused by one of two things: **a spike in human activity** or **a scheduled background job**.
+
+Here is a step-by-step plan to isolate the root cause:
+
+---
+
+### Step 1: Clarify the Timezone
+First, check whether "9:00 AM" refers to **your users' local time** or **the server’s system time**.
+* If it aligns with your **users' workday starting**, it's likely user-driven traffic or an automated business process (e.g., marketing email).
+* If it aligns with **UTC / Server time**, it is almost certainly a scheduled script or cron job.
+
+---
+
+### Step 2: Check for Scheduled Tasks & Background Jobs
+*Since the timing is so precise, this is the most common culprit.*
+
+* **System Cron Jobs / Task Scheduler:** Check your servers for tasks scheduled at `09:00` (or `08:55`).
+  * Linux: Check `crontab -l`, `/etc/cron.*`, and systemd timers.
+* **Database Maintenance:** Are daily backups, index rebuilds, or data warehouse ETL syncs running at 9 AM?
+* **Application Queues:** Are there scheduled bulk jobs (e.g., syncing inventory, generating morning PDF reports, charging recurring subscriptions)?
+* **Marketing Campaigns:** Does your marketing team send a daily newsletter, push notification, or automated email blast at 9:00 AM?
+
+---
+
+### Step 3: Check Traffic & Web Server Logs
+Determine if the site is slow because of *more users* or *the same users doing heavier things*.
+
+* **Traffic Volume:** Look at your CDN (Cloudflare, Fastly, AWS CloudFront) or Google Analytics. Is there a sharp spike in Requests Per Second (RPS) between 8:55 and 9:15 AM?
+* **Target URLs:** If traffic spikes, which URLs are being hit?
+  * If it’s `/login` or the dashboard $\rightarrow$ regular users arriving at work.
+  * If it’s an API endpoint $\rightarrow$ an internal integration or third-party scraper.
+  * If it’s a specific product/landing page $\rightarrow$ an external link or campaign.
+* **Bot Activity:** Look for aggressive web crawlers or price scrapers that might be scheduled to run every weekday morning.
+
+---
+
+### Step 4: Inspect Server and Database Metrics
+Look at your monitoring tools (Datadog, New Relic, AWS CloudWatch, Prometheus) for the 8:55 AM – 9:30 AM window:
+
+1. **CPU & RAM:** Does CPU hit 100%? If RAM spikes, is the system swapping to disk?
+2. **Database Health:**
+   * **Active Connections:** Are connection pools maxing out?
+   * **Locks:** Is a long-running transaction locking tables and causing all other queries to queue up?
+   * **Slow Query Log:** Enable the slow query log to catch expensive queries that only run during this window.
+3. **Disk I/O:** High disk write/read can grind an entire server to a halt even if CPU is relatively low (often caused by backups or un-indexed database searches).
+
+---
+
+### Step 5: Check Third-Party Integrations
+If your backend makes synchronous calls to external services (e.g., ERP, CRM, payment gateway, shipping API):
+* If that third-party service experiences a morning slowdown, your application threads will hang waiting for a response, quickly exhausting your web server's available worker pool.
+
+---
+
+### Action Plan for Tomorrow Morning
+
+1. **At 8:45 AM:** Open live monitoring (server metrics, database connections, and real-time logs).
+2. **At 9:00 AM:** Observe what spikes first:
+   * **Traffic spikes first $\rightarrow$ Server slows down:** You have a traffic scaling/capacity problem.
+   * **Database/CPU spikes *before* traffic increases:** You have an internal scheduled job/lock problem.
+   * **Response times go up, but CPU/traffic stay normal:** You have a database lock or a slow external API dependency.

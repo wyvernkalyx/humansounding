@@ -1,0 +1,284 @@
+To find the cause of a 30% activation drop, work backward from **measurement → where in the journey → who was affected → what changed**.
+
+## 1. First, verify it is a real drop
+
+Before assuming user behavior changed, check for tracking or definition issues.
+
+Ask:
+
+- Did the **activation event definition** change?
+- Did instrumentation, SDKs, analytics tools, or event names change?
+- Are events still firing correctly?
+- Did identity tracking change, e.g. anonymous users not merging with signed-up users?
+- Did signup volume stay steady across the same channels and geos?
+- Are you comparing the same time windows, e.g. full month vs partial month?
+
+Example:
+
+> If activation is “created first project,” confirm that `project_created` events are still being captured and tied to the correct user IDs.
+
+## 2. Break activation into a funnel
+
+Do not only look at signup → activated. Decompose the path.
+
+Example funnel:
+
+1. Signup completed
+2. Email verified
+3. Onboarding started
+4. Profile/workspace created
+5. Key action attempted
+6. Key action completed
+7. Activation reached
+
+Then compare last month vs previous months.
+
+Look for the step where conversion dropped most.
+
+Example:
+
+| Step | Previous Month | Last Month |
+|---|---:|---:|
+| Signup → Email verified | 80% | 78% |
+| Email verified → Onboarding started | 75% | 74% |
+| Onboarding → Workspace created | 70% | 48% |
+| Workspace created → Activated | 60% | 59% |
+
+In this case, the issue likely sits around onboarding or workspace creation.
+
+## 3. Segment the drop
+
+Averages can hide the cause. Split activation by key dimensions:
+
+### Acquisition source
+- Paid search
+- Organic
+- Referral
+- Affiliate
+- App store
+- Sales-led
+- Content/SEO
+
+Maybe signups are steady, but a high-quality channel declined and was replaced by lower-intent traffic.
+
+### User type
+- Company size
+- Role
+- Use case
+- Plan selected
+- Persona
+- Region/language
+
+### Platform/device
+- iOS vs Android
+- Web vs mobile
+- Browser
+- Desktop vs mobile web
+
+### Signup method
+- Google SSO
+- Email/password
+- Invite link
+- Magic link
+
+### Product/version
+- New onboarding flow
+- New pricing page
+- New app release
+- Feature flag exposure
+
+You are looking for a pattern like:
+
+> Overall activation dropped 30%, but only for mobile web users from paid social in Europe.
+
+That narrows the investigation dramatically.
+
+## 4. Compare cohorts, not just calendar months
+
+Look at users who signed up each week or day and measure activation within a fixed window.
+
+For example:
+
+- Activation within 1 day
+- Activation within 7 days
+- Activation within 14 days
+
+This helps distinguish between:
+
+- A true quality/product issue
+- A timing delay where users are activating later than usual
+
+Example:
+
+| Signup Cohort | 1-Day Activation | 7-Day Activation |
+|---|---:|---:|
+| Week 1 Previous Month | 35% | 48% |
+| Week 1 Last Month | 20% | 28% |
+
+If both 1-day and 7-day activation dropped, it is likely real. If only 1-day dropped, users may simply be taking longer.
+
+## 5. List everything that changed before the drop
+
+Create a timeline of changes 1–4 weeks before the activation decline.
+
+Check:
+
+### Product changes
+- New onboarding flow
+- New required fields
+- Removed default templates
+- Changed empty states
+- Added permissions
+- Changed activation-critical feature
+- Changed trial limits
+
+### Growth/marketing changes
+- New campaigns
+- Budget shifts
+- New landing pages
+- New targeting
+- Different signup offer
+- Different geos
+- Different intent mix
+
+### Technical changes
+- App release
+- Backend performance degradation
+- Email deliverability issue
+- OAuth/SSO issue
+- Payment or plan selection bug
+- API outage
+- Browser-specific bug
+
+### Sales/customer success changes
+- Demo routing changes
+- Delayed outreach
+- Changed qualification rules
+- Fewer onboarding calls
+
+You want to match the timing of the drop to a specific change.
+
+## 6. Check for quality of signups
+
+If signups are steady but activation drops, one common cause is **signup quality changed**.
+
+Look at:
+
+- % signups from each channel
+- % using business emails vs personal emails
+- % completing optional profile fields
+- % invited by existing teams
+- % bot/fake/spam signups
+- % target ICP users
+- landing page conversion rates by campaign
+- ad targeting or keyword changes
+
+Example:
+
+> Paid signups stayed flat, but 40% more came from broad-match keywords. Those users activated at half the normal rate.
+
+## 7. Inspect product friction around the failed step
+
+Once you identify the funnel step with the largest drop, investigate the experience.
+
+Use:
+
+- Session recordings
+- Heatmaps
+- Error logs
+- Support tickets
+- In-app feedback
+- User interviews
+- Onboarding survey responses
+- Rage clicks / repeated attempts
+- Time-to-complete metrics
+
+Look for:
+
+- Users stuck on a form
+- Confusing new copy
+- Required field causing abandonment
+- Slow page load
+- Broken button
+- Verification email not arriving
+- Permissions modal scaring users off
+- Empty state with no clear next action
+
+## 8. Look for technical failures
+
+Activation often depends on key infrastructure.
+
+Check:
+
+- Error rates on activation-critical endpoints
+- Page/app load times
+- Email delivery and open rates
+- OAuth failure rates
+- Payment/trial creation failures
+- Invite acceptance failures
+- API timeouts
+- Crash rates by app version
+- Browser console errors
+- Mobile app version adoption
+
+A small bug at a key point can easily create a 30% activation decline.
+
+## 9. Talk to affected users
+
+Pick users who signed up but did not activate, especially from the segment with the largest decline.
+
+Ask simple questions:
+
+- What were you trying to accomplish?
+- What stopped you?
+- Did anything confuse you?
+- Did you run into an error?
+- Did the product match what you expected?
+- What would have made you continue?
+
+Also compare with recently activated users:
+
+- What got them to the activation moment?
+- What path did they take?
+- What did they understand that others did not?
+
+## 10. Prioritize likely causes using impact
+
+Once you find suspects, rank them by:
+
+- Size of affected segment
+- Size of conversion drop
+- Timing match
+- Confidence from data
+- Ease of fixing
+
+A simple table helps:
+
+| Hypothesis | Evidence | Impact | Confidence | Next step |
+|---|---|---:|---:|---|
+| New onboarding step caused drop | Workspace creation fell from 70% to 48% after release | High | High | Roll back/test simplified flow |
+| Paid traffic quality declined | Paid social volume up, activation down | Medium | Medium | Audit campaigns |
+| Email verification issue | Verification rates down in Gmail users | High | Medium | Check deliverability |
+
+## Recommended order of investigation
+
+If you need a fast plan, do this:
+
+1. **Confirm tracking/definition did not change**
+2. **Build activation funnel and identify the failing step**
+3. **Segment by channel, device, geo, persona, signup method, and product version**
+4. **Compare against product/marketing/technical changes**
+5. **Inspect logs/session recordings/support tickets for the affected segment**
+6. **Interview non-activated users**
+7. **Fix or roll back the highest-confidence cause**
+8. **Monitor cohort activation daily after the fix**
+
+## Key principle
+
+A 30% activation drop with steady signups usually means one of three things:
+
+1. **You are attracting different/lower-intent users**
+2. **Something in onboarding or the activation path broke or became harder**
+3. **Measurement/tracking changed**
+
+Start by proving which one it is.

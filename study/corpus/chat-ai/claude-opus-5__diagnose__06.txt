@@ -1,0 +1,32 @@
+Most likely these aren't two problems. A meeting ends on time when items close; items close when someone makes a call and it gets written down. Overrun is evidence of non-closure, and the amnesia is downstream of the same thing. So the question is: why aren't things closing?
+
+**The differential**
+
+*Nothing was actually decided.* The most common cause of "nobody remembers what was decided" is that no decision occurred — there was a convergence of mood that four people left interpreting four different ways. Telltale sign: the same topic reappears in three consecutive weeks, each time treated as new. If this is it, the ambiguity is often serving a purpose — it lets people avoid a disagreement they don't want to have out loud.
+
+*Decision rights are undefined.* Nobody knows who owns the call, so the group defaults to seeking consensus, which is slow and doesn't hold. Sign: discussions that trail off into "let's think about it more" or "let's circle back" without anyone naming what would resolve it.
+
+*The agenda is a list of topics, not questions.* "Q3 roadmap" has no end condition, so it expands to fill available time. "Do we cut feature X or slip the date two weeks?" has one. Sign: item one eats forty minutes and the last three get compressed into the final five — which is also exactly when your most important decisions are getting made badly and recorded vaguely.
+
+*Status reporting is crowding out deciding.* If half the meeting is people reading out things that could have been a paragraph in a doc, decisions get pushed to the tired end.
+
+*Cold start.* No pre-read, so the first ten minutes of every item is people building context in real time, out loud, badly.
+
+*Capture is nobody's job, or it's the facilitator's job.* Whoever is running the conversation cannot also be recording it. And notes that arrive Thursday for a Monday meeting arrive after the memory has already decayed.
+
+**A test you can run next week**
+
+At each apparent decision point, say out loud: "So — decision is X, owner is Y, done by Z," and type it on a shared screen where everyone can see it.
+
+This is a diagnostic instrument, not just a discipline. Watch what happens:
+
+- If you can write the sentence easily and the meeting speeds up — you just had a capture problem, and you've fixed it.
+- If you try to write it and the room immediately starts amending it — you had a false-consensus problem. The sentence forced it into the open. Good; this is the fix working, even though it feels like it's making the meeting worse.
+- If you can't write it because nobody can say who the owner is — decision rights. Escalate that as its own issue outside the meeting.
+- If someone objects to writing things down as too rigid or bureaucratic — take that seriously as data. Occasionally it's genuine (early exploratory discussion shouldn't be minuted). Often it means someone benefits from the vagueness.
+
+**The structural fixes, in order of leverage**
+
+Put decisions first on the agenda and updates last, or move updates async entirely. Rewrite every agenda item as a question with a proposed answer attached — the proposer's job is to arrive with a recommendation, not an open topic. Name a scribe who isn't the facilitator. Circulate the decision log within an hour, not a day; it should be short enough that this is trivial, because it contains decisions and owners only, not a transcript. Open each meeting by reading last week's decisions aloud — thirty seconds, and it makes relitigating visible.
+
+If it would help, tell me what the meeting is actually for, who's in the room, and roughly how the time splits between updates and discussion. The diagnosis sharpens a lot with those — in particular, whether you have a process problem or a conflict-avoidance problem wearing a process problem's clothes.

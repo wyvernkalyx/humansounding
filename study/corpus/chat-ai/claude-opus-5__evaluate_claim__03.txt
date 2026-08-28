@@ -1,0 +1,18 @@
+Yes, that's generally good advice. A few reasons:
+
+**Condensation is the main risk.** Cooling a warm device quickly and then bringing it back into warm room air causes moisture to condense on — and inside — the electronics. That can corrode contacts or cause short circuits. Fridges are also humid environments to begin with.
+
+**Thermal shock.** Rapid temperature swings stress cell seals, adhesives, and solder joints. Lithium-ion cells don't love extremes in either direction; charging or discharging a very cold cell can also cause lithium plating, which permanently degrades capacity.
+
+**It doesn't fix the actual problem.** If a laptop is running hot, it's usually blocked vents, dust-clogged fans, a heavy workload, a soft surface blocking airflow, or a failing battery. Chilling it treats the symptom for a few minutes.
+
+**If the battery is hot because it's failing, the fridge is dangerous.** A cell heading toward thermal runaway generates heat internally and won't be stopped by refrigeration — you'd just have a potential fire in an enclosed space next to your food.
+
+**What to do instead**
+
+- Shut down or unplug, and let it cool at room temperature on a hard, flat surface.
+- Elevate the back slightly or use a laptop stand/cooling pad for airflow.
+- Clean dust from the vents and fans periodically.
+- If the battery is visibly swollen, unusually hot, or smells odd, stop using the laptop, don't charge it, don't puncture it, and take it to a proper e-waste/battery recycler or repair shop.
+
+**One nuance:** cool storage *does* slow the calendar aging of lithium-ion cells — but that means storing a room-temperature battery at around 40–60% charge, sealed in a bag, somewhere cool (a fridge at ~4°C is fine for long-term storage), and letting it return to room temperature before opening the bag or using it. That's very different from tossing a hot, running laptop in there.

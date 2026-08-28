@@ -9,8 +9,18 @@
 # reproducible without republishing somebody's article.
 study/corpus/*/*.txt
 
-# Except the AI set, which is our own generated output and belongs in the repo.
+# Except the AI sets, which are our own generated output and belong in the repo.
+# Every vendor, documents and chat alike: a study nobody can rerun against the
+# same text is not reproducible, and this text is ours to publish.
 !study/corpus/ai/*.txt
+!study/corpus/ai-*/*.txt
+!study/corpus/chat-*/*.txt
+
+# Superseded generations stay local. They are kept for provenance, not for
+# publication, and they must never be measured alongside the run that replaced
+# them. (This directory sits two levels deep, so the rule above does not reach
+# it; that is how 64 of them reached the public repo on 2026-08-28.)
+**/superseded-alias-run/
 
 # For a document you own outright, override deliberately:
 #   git add -f study/corpus/human/your-own-post.txt

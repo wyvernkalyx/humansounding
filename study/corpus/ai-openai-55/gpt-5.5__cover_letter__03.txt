@@ -1,0 +1,12 @@
+Dear Hiring Manager,
+
+I am writing to express my interest in the Junior Software Developer position at your company. I am excited about the opportunity to contribute my programming skills, problem-solving abilities, and enthusiasm for building reliable, user-focused software.
+
+Through my coursework, personal projects, and hands-on practice, I have gained experience with software development fundamentals, including writing clean code, debugging, working with databases, and using version control tools such as Git. I have worked with technologies such as JavaScript, Python, HTML, CSS, and SQL, and I am eager to continue expanding my technical skills in a professional environment.
+
+What attracts me most to this role is the opportunity to learn from experienced developers while contributing to meaningful projects. I am a quick learner, a strong communicator, and someone who enjoys collaborating with others to solve technical challenges. I take pride in being detail-oriented, adaptable, and committed to continuous improvement.
+
+I would welcome the opportunity to bring my motivation and technical foundation to your development team. Thank you for considering my application. I look forward to the possibility of discussing how my skills and enthusiasm align with your needs.
+
+Sincerely,  
+[Your Name]

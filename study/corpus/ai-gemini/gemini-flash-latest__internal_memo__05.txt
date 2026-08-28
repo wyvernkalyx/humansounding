@@ -1,0 +1,61 @@
+Here is a template for a company-wide memo explaining changes to the annual review process. You can customize the bracketed information to fit your organization's specific updates.
+
+***
+
+**MEMORANDUM**
+
+**TO:** All Employees  
+**FROM:** [Your Name/Department, e.g., People & Culture Team]  
+**DATE:** October 24, 2023  
+**SUBJECT:** Updates to Our Annual Performance Review Process  
+
+---
+
+### **1. Purpose**
+As part of our commitment to continuous growth, transparency, and employee development, we are updating our Annual Performance Review process for the upcoming cycle. 
+
+Based on employee feedback from our recent engagement survey, our goal is to shift away from a backward-looking evaluation toward a more continuous, forward-focused conversation about career development, achievements, and goal alignment.
+
+---
+
+### **2. What Is Changing?**
+
+Here is a summary of the key updates taking effect this cycle:
+
+* **Shift to Forward-Looking Development:** Rather than focusing solely on past performance, discussions will dedicate equal time to professional development goals, skill-building, and future career aspirations.
+* **Simplified Evaluation Criteria:** We have streamlined our core competencies from [e.g., 10 categories to 4 core pillars] to make self-evaluations and manager reviews clearer and less time-consuming.
+* **Streamlined Rating Scale:** We are replacing the previous [e.g., 1–5 numerical scale] with a four-tier descriptive model: *Exceeding Expectations, Meeting Expectations, Approaching Expectations,* and *Needs Improvement.*
+* **Incorporation of 360° Peer Feedback:** Employees will now have the option to invite up to [e.g., two peers] to provide brief, constructive feedback to ensure a well-rounded review.
+* **Quarterly Check-Ins:** The annual review will no longer be a standalone event. Starting next quarter, we will introduce lightweight, quarterly 1-on-1 check-ins to track progress and adjust goals in real time.
+
+---
+
+### **3. Review Timeline & Key Dates**
+
+Please mark your calendars for the following milestone dates:
+
+| Date | Action Item | Responsible Party |
+| :--- | :--- | :--- |
+| **[Date]** | Launch of review cycle in [HR Portal/System] | HR Team |
+| **[Date]** | Deadline for Employee Self-Reviews & Peer Nominations | Employees |
+| **[Date]** | Deadline for Manager Evaluations | Managers |
+| **[Date – Date]** | 1-on-1 Performance & Growth Conversations | Managers & Employees |
+| **[Date]** | Final reviews signed and submitted | All Staff |
+
+---
+
+### **4. Training and Support**
+
+We want everyone to feel confident and supported through this new process. We will be hosting informational and Q&A sessions:
+
+* **Employee Workshop:** *Writing Meaningful Self-Assessments* – [Date/Time] ([Link])
+* **Manager Workshop:** *Conducting Effective Growth Conversations* – [Date/Time] ([Link])
+
+User guides, templates, and FAQs are now available on the internal portal at **[Link to Intranet/HR Wiki]**.
+
+---
+
+### **5. Questions?**
+If you have any questions regarding these changes or the upcoming timeline, please reach out to your manager or contact the HR team at **[HR Email Address]**.
+
+Thank you for your dedication and commitment to making [Company Name] a place where we all learn and grow together.

@@ -1,0 +1,30 @@
+Yes, largely — and he has some heavyweight backing.
+
+**Who's changed their guidance**
+
+- **NIST SP 800-63B** explicitly says verifiers *shall not* require periodic password changes, and should force a change only when there's evidence of compromise. This has been their position since 2017.
+- **Microsoft** removed password expiration from its Windows security baselines in 2019, calling it "an ancient and obsolete mitigation of very low value."
+- **UK NCSC** advises against routine expiry for the same reasons.
+
+**The reasoning**
+
+Forced rotation makes passwords *worse*. People respond predictably: `Summer2024!` becomes `Autumn2024!`, or they append an incrementing digit, or reuse the same password across sites, or write it down. Meanwhile, rotation doesn't defend against the attacks that actually happen. Phishing, credential stuffing, and infostealer malware all get used within hours or days — not on day 85 of your 90-day window. You're paying a real cost in password quality and helpdesk tickets for very little protection.
+
+**What to do instead**
+
+- Require *length* over complexity — 14+ characters, passphrases welcome, drop the mandatory symbol/number rules
+- Screen new passwords against breached-credential lists (Entra ID Password Protection, or a HIBP-based check)
+- MFA everywhere, ideally phishing-resistant (FIDO2/passkeys) for admins
+- Monitor for credential exposure and force resets on evidence of compromise
+- Encourage password managers; allow paste and long strings
+
+**Where rotation still earns its keep**
+
+- **Shared and service accounts** — no MFA, often no ownership, and they need rotating when staff leave. Better still, automate it (LAPS for local admin passwords, managed service accounts, a vault with automatic rotation).
+- **Break-glass/emergency accounts** — rotate and re-seal after any use.
+- **Compliance obligations you can't argue with.** PCI DSS 4.0 requirement 8.3.9 still requires 90-day rotation for accounts where a password is the *only* factor — though you can substitute dynamic analysis of account security posture, and it doesn't apply if MFA is in place. Requirement 8.6.3 wants periodic rotation for application/system accounts based on a risk analysis. Some cyber insurers and contracts also still specify it.
+- **Confirmed or suspected compromise** — obviously.
+
+**One practical caveat:** auditors and questionnaires sometimes still expect 90-day rotation out of habit. The workable answer is a documented policy that cites NIST 800-63B, explains your compensating controls (MFA, breached-password screening, monitoring), and shows they're actually operating. That usually satisfies scrutiny — but check whether any specific framework binds you before you flip the switch.
+
+So: he's right on the general principle, but "no rotation" is only the correct answer once MFA and breached-password screening are actually in place. If those are missing, dropping rotation first is a step backwards.

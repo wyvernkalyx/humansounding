@@ -1,0 +1,72 @@
+Because “the answer exists” is not the same as “the customer can find, trust, and apply it.”
+
+Common reasons customers ask questions already covered in docs:
+
+1. **They cannot find the right page**
+   - Search is weak.
+   - Page titles do not match customer language.
+   - The answer is buried in a long article.
+   - Navigation reflects your product structure, not the customer’s task.
+
+2. **They do not know what to search for**
+   - Customers may describe the issue differently than your team.
+   - Example: docs say “configure SSO assertion mapping,” but customers search “login groups not working.”
+
+3. **The docs answer the technical question, not the real question**
+   - A doc may explain *how* to use a feature, but the customer wants to know:
+     - Should I use this?
+     - What happens if I do it wrong?
+     - Which option is best for my situation?
+     - Is this safe in production?
+
+4. **The answer lacks context**
+   - Customers often need prerequisites, examples, edge cases, and expected outcomes.
+   - A technically correct answer may still be hard to apply.
+
+5. **The docs are too generic**
+   - Customers want answers for their specific plan, role, integration, data model, or workflow.
+   - If the docs do not reflect their scenario, they ask support.
+
+6. **They do not trust the docs**
+   - If documentation has been outdated before, customers learn to confirm with a human.
+   - Even one stale or ambiguous article can reduce confidence.
+
+7. **The UI and docs do not line up**
+   - Labels, screenshots, menu paths, or feature names may differ.
+   - If the product says “Workspace Settings” and the docs say “Account Configuration,” customers get stuck.
+
+8. **The docs are written for knowledgeable users**
+   - Internal experts often skip “obvious” steps.
+   - New customers may need foundational concepts, not just instructions.
+
+9. **Support is easier than reading**
+   - If asking support gets a fast, personalized answer, customers may default to that.
+   - This is especially true for high-stakes actions like billing, permissions, data deletion, or security.
+
+10. **The question is really about reassurance**
+   - “Can I do X?” may actually mean:
+     - Will this break anything?
+     - Is this recommended?
+     - Has anyone else done this?
+     - Can you confirm before I proceed?
+
+A useful way to diagnose this is to look at repeated support questions and ask:
+
+- Did the customer not find the doc?
+- Did they find it but not understand it?
+- Did they understand it but not trust it?
+- Did the doc answer the wrong level of the question?
+- Is the product itself causing confusion?
+
+The fix is usually not just “write more docs.” It is often:
+
+- Improve search and article titles.
+- Use customer language, not internal terminology.
+- Add examples, decision trees, and troubleshooting sections.
+- Link docs from the exact place in the product where the question arises.
+- Keep screenshots and terminology current.
+- Add “when to use this” and “what happens next.”
+- Turn repeated support answers into clearer, more discoverable content.
+- Identify places where the product UX should prevent the question entirely.
+
+In short: customers ask because documentation is only one part of the help experience. If the product, docs, search, and support path are not aligned, customers will ask humans even when the answer technically exists.

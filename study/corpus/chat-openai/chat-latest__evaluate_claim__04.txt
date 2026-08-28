@@ -1,0 +1,15 @@
+Treat “cut onboarding time in half” as a hypothesis until the vendor defines exactly what they measured.
+
+Ask them to pin down:
+
+- “Onboarding time”: Is that time to account creation, initial setup, first productive use, or full proficiency?
+- “Half”: Half the elapsed calendar time, employee hours, training hours, or something else?
+- Baseline and comparison: 50% versus what process, and how similar was it to yours?
+- Evidence: How many customers/users were measured, over what period, and were unsuccessful implementations included?
+- Attribution: Was the improvement caused by the tool, or did customers also change staffing, workflows, training, or integrations?
+- Distribution: Ask for median and range, not just an average; a few dramatic successes can distort the mean.
+- Conditions: What implementation work, integrations, data cleanup, consulting, or process changes are required to achieve the result?
+
+For purchasing purposes, translate the claim into your own metric. If onboarding currently takes 20 calendar days and 12 staff-hours per hire, ask them to commit to which number they expect to become 10 or 6, under what conditions.
+
+A useful response to the vendor is: “Please show us how you define onboarding time, the baseline behind the 50% claim, the underlying customer results, and what assumptions would need to hold for us to expect a similar outcome.” Ideally, validate it with a pilot using a pre-agreed metric before putting the 50% figure into your business case.

@@ -1,0 +1,27 @@
+Partly, but "most" is doing a lot of work in that sentence.
+
+**Where the claim comes from**
+
+The stat usually traces back to Noam Wasserman's *The Founder's Dilemmas* (2012), based on data from thousands of founders. His finding is often quoted as "65% of startups fail due to cofounder conflict." What he actually found was closer to: 65% of high-potential startup failures involved *people problems* broadly — which includes founder-team disputes, but also bad hires, founder-investor conflict, and succession issues. It's a wider category than two cofounders falling out.
+
+**What other data says**
+
+CB Insights' post-mortem analyses (built from founders' own written explanations of why they shut down) consistently rank the top causes as: running out of cash / failing to raise, no market need, getting outcompeted, and flawed business models. "Not the right team" typically shows up mid-list, around 15–20% of cases. So in that dataset, team problems are common but not dominant.
+
+The datasets disagree partly because they measure different populations and use different methods. CB Insights skews toward venture-backed companies notable enough to publish a post-mortem; it misses the enormous number of startups that quietly evaporate.
+
+**The real complication: attribution**
+
+Cofounder conflict is often *downstream* of business failure rather than its cause. When a company is growing and everyone's equity is appreciating, disagreements get papered over. When growth stalls, the same disagreements become existential. So a lot of "we broke up" stories are really "we weren't working, and then we broke up."
+
+There's also a reporting bias problem that cuts both ways. Some founders prefer "the market wasn't there" over "I couldn't stand my cofounder." Others prefer "irreconcilable differences" over "our product didn't work." Self-reported failure causes are unreliable in a way that's hard to correct for.
+
+**Where it does hold up**
+
+Stage matters a lot. At the very earliest stage — pre-product-market-fit, pre-funding — there isn't much else to fail at yet. YC and Paul Graham have both said cofounder disputes are among the top killers of *very early* startups specifically. That's a narrower and more defensible claim than the general one.
+
+**The practical upshot**
+
+Even if the headline number is inflated, the advice built on it is sound, for a reason that has nothing to do with the statistic: cofounder conflict is one of the few failure modes largely within your control, and mitigating it is cheap. Vesting schedules with cliffs, an explicit equity split conversation early, clear decision rights for deadlocks, and defined role boundaries cost you a few uncomfortable conversations. Compare that to "build something people want," which is correct but not actionable in the same way.
+
+So: treat "most startups fail from cofounder conflict" as a useful exaggeration rather than a finding. It's a top-five cause, more prominent early, frequently a symptom rather than a root cause — and worth insuring against regardless of its true rank.

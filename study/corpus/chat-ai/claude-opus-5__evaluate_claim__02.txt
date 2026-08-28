@@ -1,0 +1,15 @@
+Your coworker is more right than the marketing would suggest, but "don't do anything" overshoots.
+
+**Where the hype fell apart:**
+
+- **Calorie burn is trivial.** Standing burns maybe 8–12 extra calories per hour versus sitting. That's a rounding error for weight loss.
+- **Metabolic benefits are weak.** Studies looking at blood sugar, cholesterol, and blood pressure show small and inconsistent effects. A 2024 analysis of UK Biobank accelerometer data found more standing time didn't reduce cardiovascular risk at all — and prolonged standing was linked to *higher* rates of circulatory problems like varicose veins and orthostatic hypotension.
+- **Effects fade.** Reviews of workplace sit-stand interventions find people do reduce sitting time initially — often 30 to 90 minutes a day — but adherence drops off, and the downstream health benefits are hard to detect.
+
+**Where there's something real:**
+
+- **Musculoskeletal comfort.** Some evidence that people with existing lower back or neck pain report improvement. Modest, but not nothing.
+- **Posture variety.** The plausible mechanism isn't standing per se — it's that a sit-stand desk makes it easy to change positions, and static anything for eight hours is the actual problem.
+- **Subjective energy/alertness.** People often report feeling better, though productivity and cognitive measures come out mostly null.
+
+**The practical upshot:** the thing with decent evidence behind it is *movement* — getting up and walking for a few minutes every half hour or so. Standing still at a desk is closer to sitting than it is to exercise. If you already have a standing desk, alternating positions is reasonable and probably slightly helpful for comfort. If you're deciding whether to buy one for health reasons, the money is better spent on a habit of short walking breaks.

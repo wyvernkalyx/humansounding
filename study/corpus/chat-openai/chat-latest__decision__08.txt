@@ -1,0 +1,13 @@
+Not necessarily. Launching without a pricing page can be a deliberate strategy, but for many products it adds friction at exactly the moment you want people to act.
+
+A pricing page is usually worth having when customers can understand, evaluate, and buy the product without much help—especially for SaaS, self-serve tools, consumer products, and straightforward B2B offerings. Hiding pricing can cause visitors to assume the product is expensive, require a sales call, or simply move on to a competitor.
+
+Launching without public pricing can make sense when:
+- Pricing genuinely depends on scope, usage, implementation, or negotiated contracts.
+- You're doing an early beta and still learning willingness to pay.
+- The product requires a consultative sales process before a meaningful quote is possible.
+- You intentionally want a small number of design partners rather than maximum signups.
+
+Even then, I wouldn't leave visitors with zero pricing information. You can publish something like "Plans start at $X/month," a pricing range, "free during beta," or explain exactly how pricing is determined. That gives prospects enough information to self-qualify.
+
+If you're launching soon and simply haven't figured pricing out yet, I'd generally prefer a simple, imperfect pricing page over no pricing page. You can change prices later. The early conversations and conversion data are part of how you learn whether the pricing works.

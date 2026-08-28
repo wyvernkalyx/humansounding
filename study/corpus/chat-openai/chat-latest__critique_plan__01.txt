@@ -1,0 +1,16 @@
+Send me the plan and I’ll review it for gaps and failure modes.
+
+For a 400-user weekend email migration, I’d specifically check:
+- Pre-migration inventory: users, aliases, shared mailboxes, distribution lists, delegates, forwarding rules, calendars, contacts, archives, mailbox sizes, and service accounts.
+- Identity/authentication: account provisioning, password strategy, SSO/MFA, conditional-access policies, and emergency admin access.
+- Mail flow/DNS: MX, SPF, DKIM, DMARC, autodiscover, DNS TTL reductions, propagation timing, and coexistence/routing during the transition.
+- Data migration: what is migrated, how incremental/delta syncs work, handling oversized/corrupt items, and reconciliation to prove completeness.
+- Client impact: Outlook/mobile profiles, cached credentials, shared calendars/mailboxes, conference-room systems, scanners/printers, CRM integrations, and third-party apps sending email.
+- Cutover plan: exact sequence, owners, dependencies, go/no-go criteria, freeze windows, user communications, and a realistic maintenance window.
+- Rollback: a predefined decision point and tested procedure for restoring mail flow/access without losing mail generated during the weekend.
+- Testing: representative pilot users and explicit tests for internal/external send/receive, replies, calendar invites, delegates, mobile devices, aliases, and integrations.
+- Security/compliance: retention/legal holds, journaling, encryption, audit logs, eDiscovery, backups, and regulatory requirements.
+- Support: Monday-morning staffing, escalation paths, troubleshooting documentation, spare licenses/admin capacity, and a way for users to get help if their email itself is inaccessible.
+- Validation: mailbox/item counts or other reconciliation, mail-flow monitoring, queue/bounce monitoring, authentication logs, and formal acceptance criteria.
+
+Paste your actual timeline/runbook—even if it’s rough—and I can identify specific missing steps, risky assumptions, and where rollback could fail.

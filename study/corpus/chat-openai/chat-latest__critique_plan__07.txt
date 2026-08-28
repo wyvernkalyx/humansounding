@@ -1,0 +1,14 @@
+A 20% margin can be part of the trigger, but I wouldn’t make it the trigger by itself. Margin tells you the first location is economically attractive; it doesn’t tell you whether those economics are durable or whether the operation can be replicated without weakening location #1.
+
+A stronger expansion gate would be something like:
+
+- Profitability: ≥20% location-level operating margin for at least 3–6 consecutive months, using fully loaded and normalized expenses.
+- Cash: Enough to fund the opening plus a meaningful contingency and several months of working capital without putting location #1 at risk.
+- Operations: Location #1 consistently meets service/quality targets without depending heavily on founders or exceptional employees.
+- Management: Someone besides the owner can reliably run location #1 while attention shifts to #2.
+- Demand: Evidence that the second market can support similar unit economics, rather than assuming success will transfer.
+- Repeatability: Hiring, training, inventory, sales, and reporting processes are documented and reproducible.
+
+One important distinction is what you mean by “20% margin.” A 20% contribution margin could still conceal an unprofitable location; a sustainable 20% operating margin after local labor, occupancy, management, and other normal operating costs is much more meaningful.
+
+So I’d change the rule from “open #2 when #1 hits 20% margin” to “begin the expansion process when #1 sustains ≥20% normalized operating margin and passes cash, management, and repeatability gates.” That reduces the risk of expanding immediately after one unusually good month.

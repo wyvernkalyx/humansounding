@@ -1,0 +1,11 @@
+Introducing Custom Reports
+
+We’ve launched a new reporting feature that makes it easier to turn your data into useful insights. With Custom Reports, you can choose the metrics that matter most, apply filters, and create reports tailored to your team’s needs.
+
+With the new reporting experience, you can:
+- Build reports using custom metrics, date ranges, and filters
+- Save frequently used reports for quick access
+- Export results for sharing or further analysis
+- View trends and compare performance over time
+
+Custom Reports are available now from the Reports section of your dashboard. We’d love to hear your feedback as you start using them.

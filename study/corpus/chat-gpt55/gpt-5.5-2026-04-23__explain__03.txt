@@ -1,0 +1,41 @@
+Software estimates are “always wrong” because they are predictions about uncertain work, not measurements of known work.
+
+The main reasons:
+
+1. **Software work is discovery-heavy**  
+   Much of programming is figuring out what the problem actually is, what the existing system really does, what edge cases matter, and which solution will work. If everything were already known, it would be closer to assembly-line work.
+
+2. **Requirements change**  
+   Stakeholders often refine their needs after seeing progress. A feature that sounded simple may become more complex once users, designers, compliance teams, or customers react to it.
+
+3. **Hidden complexity appears late**  
+   A task like “add export to CSV” may uncover permissions issues, performance problems, encoding bugs, data inconsistencies, or legacy assumptions. The estimate was made before those were visible.
+
+4. **Dependencies are unpredictable**  
+   Teams depend on APIs, libraries, infrastructure, other teams, approvals, test environments, and deployment systems. Delays or surprises in any of these can break the estimate.
+
+5. **People are optimistic**  
+   Developers and managers often estimate the “happy path”: if nothing interrupts us, the design works, no bugs appear, and the requirements are stable. Reality rarely follows the happy path.
+
+6. **Interruptions and context switching are underestimated**  
+   Meetings, production incidents, code reviews, support requests, onboarding, and unrelated urgent work all reduce actual development time.
+
+7. **Quality work is hard to predict**  
+   Writing the first version may be quick. Making it correct, secure, tested, maintainable, observable, and deployable can take much longer.
+
+8. **One bug can dominate the schedule**  
+   A single subtle concurrency issue, data migration problem, or integration bug can consume days or weeks. These events are hard to foresee.
+
+9. **Estimates are often treated as commitments**  
+   An estimate should mean “based on what we know, probably around this long.” But organizations often hear “this will be done by Friday.” That creates the impression the estimate “failed,” when the problem was false certainty.
+
+10. **Precision is misleading**  
+   Saying “this will take 17 days” sounds scientific, but software uncertainty is usually too high for that level of precision. A range like “2–4 weeks, with meaningful risk around integration” is more honest.
+
+So software estimates are wrong because they try to assign certainty to work that contains uncertainty, learning, changing requirements, and hidden complexity.
+
+A better way to think about estimates is:
+
+> An estimate is not a promise. It is a probability-based forecast based on current knowledge.
+
+Good teams improve estimates by using smaller tasks, historical data, ranges, risk buffers, iterative delivery, and frequent re-estimation as new information appears.

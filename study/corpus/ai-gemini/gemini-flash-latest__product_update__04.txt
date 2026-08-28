@@ -1,0 +1,73 @@
+Here are three templates for announcing Single Sign-On (SSO) support, depending on where you plan to share the update.
+
+---
+
+### Option 1: Product Blog Post / Customer Email (Comprehensive)
+
+**Subject:** New Feature: Single Sign-On (SSO) is now available in [Product Name] 🔐
+
+**Headline:** Level Up Your Security with Single Sign-On (SSO)
+
+Managing multiple passwords shouldn’t get in the way of getting work done. We’re excited to announce that **Single Sign-On (SSO)** is now officially available on [Product Name]! 
+
+With SSO, your team can now access [Product Name] securely using your organization’s existing identity provider—no more forgotten passwords, reset requests, or security bottlenecks.
+
+#### Why you’ll love SSO:
+* **Enhanced Security:** Reduce the risk of compromised credentials by enforcing your organization’s password policies, multi-factor authentication (MFA), and session rules.
+* **Frictionless Logins:** Team members can log in with a single click using the tools they already use every day.
+* **Centralized User Management:** IT administrators can easily manage user access, onboarding, and offboarding from a single dashboard.
+
+#### Supported Identity Providers
+Our integration supports **SAML 2.0**, allowing seamless connection with top identity providers, including:
+* Okta
+* Microsoft Azure AD / Entra ID
+* Google Workspace
+* OneLogin
+* PingIdentity (and any standard SAML 2.0 provider)
+
+#### Availability & Setup
+SSO is available starting today for all customers on our **[Enterprise / Business Plan]**. 
+
+Ready to set it up? 
+👉 **[Read our Step-by-Step Configuration Guide]** *(Link to Help Center)*
+
+*Need help setting up SSO for your organization or want to upgrade your plan? [Contact our support team / Reach out to your account manager].*
+
+---
+
+### Option 2: Short Changelog / In-App Notification (Concise)
+
+**🚀 New: Single Sign-On (SSO) is here!**
+
+You can now log into [Product Name] using your organization's identity provider. 
+
+* **One-click login:** No extra passwords to remember.
+* **Enterprise-grade security:** Works seamlessly with Okta, Azure AD, Google Workspace, and any SAML 2.0 provider.
+* **Available on:** [Enterprise/Business] Plans.
+
+👉 **[Configure SSO in Settings]** | **[View Documentation]**
+
+---
+
+### Option 3: Direct Email to IT Admins / Security Leads (B2B Focused)
+
+**Subject:** Now Live: SAML-based SSO for [Product Name]
+
+Hi [First Name],
+
+As your team grows, keeping your company data secure and access management simple is a top priority. 
+
+We’re pleased to let you know that **SAML 2.0 Single Sign-On (SSO)** is now live in [Product Name]. 
+
+**What this means for your IT & Security team:**
+1. **Centralized Access Control:** Grant or revoke access to [Product Name] instantly through your central IdP (Okta, Azure AD, Google, etc.).
+2. **Enforce Security Policies:** Automatically apply your company’s 2FA/MFA and password complexity requirements to all [Product Name] users.
+3. **Streamlined Audits:** Simplify compliance reporting for frameworks like SOC 2, ISO 27001, and HIPAA.
+
+To configure SSO for your workspace, head over to **Settings > Security > Authentication** or check out our **[Setup Documentation]**.
+
+If you have any questions or need assistance during configuration, simply reply to this email.
+
+Best regards,
+
+[Your Name/Company]

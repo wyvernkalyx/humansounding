@@ -1,0 +1,71 @@
+Here is a comprehensive, balanced performance review template. It celebrates the rep’s revenue success while addressing the administrative bottlenecks in a constructive, actionable way.
+
+---
+
+# Annual Performance Review
+
+**Employee Name:** [Employee Name]  
+**Job Title:** Sales Representative  
+**Reviewer:** [Manager Name], [Manager Title]  
+**Review Period:** [e.g., Q1–Q4 2023 / Annual 2023]  
+
+---
+
+### **Executive Summary**
+[Employee Name] has had a standout year in terms of revenue generation, finishing the year at **[e.g., 125%] of their assigned quota**. Their ability to prospect, build client relationships, and close high-value deals has made them an invaluable contributor to the sales team's overall success. 
+
+However, there is a clear divide between [Employee Name]’s front-end sales performance and back-end administrative execution. Consistent delays and inaccuracies in CRM updates, contract submissions, and order processing have created operational friction. Elevating their administrative diligence will be the primary focus for the upcoming review period to help them transition from a great salesperson to a fully well-rounded sales professional.
+
+---
+
+### **Key Accomplishments & Strengths**
+
+* **Exceptional Quota Attainment:** Exceeded the annual sales goal by [$ Amount / %], consistently ranking among the top performers on the team.
+* **Pipeline Generation & Closing:** Demonstrated strong negotiation skills and persistence in converting prospects, particularly with [mention a specific deal, account, or vertical].
+* **Client Relationship Management:** Built high-trust relationships with external stakeholders, resulting in high initial customer satisfaction scores and strong referral opportunities.
+* **Resilience and Drive:** Maintained high activity levels and enthusiasm, serving as an energy driver for the broader sales team.
+
+---
+
+### **Areas for Development: Administration & Process Compliance**
+
+While [Employee Name] excels in client-facing scenarios, their administrative follow-through requires immediate and focused improvement:
+
+* **CRM Hygiene & Data Integrity:** Deal stages, contact notes, and forecast dates in the CRM are frequently outdated. This impacts leadership’s ability to forecast accurately and creates visibility issues for account managers.
+* **Contract and Order Accuracy:** Paperwork submitted for onboarding often contains missing fields, incorrect billing terms, or delayed signatures. This has caused avoidable delays in customer onboarding and created extra work for the Operations and Finance teams.
+* **Internal Communication & Handoffs:** The transition from "Closed-Won" to customer success/implementation has occasionally been bumpy due to incomplete account documentation.
+
+**Business Impact:** Incomplete paperwork slows down revenue recognition and creates a disjointed experience for the customer immediately after the sale is made.
+
+---
+
+### **Core Competencies Rating**
+
+| Competency | Rating | Comments |
+| :--- | :--- | :--- |
+| **Sales & Quota Achievement** | **Exceeds Expectations** | Outstanding results; consistently outperformed targets. |
+| **Customer Engagement & Negotiation** | **Exceeds Expectations** | Strong presence, excellent objection handling, and relationship-building. |
+| **Operational & Admin Compliance** | **Needs Improvement** | Frequently misses paperwork deadlines; CRM updates are inconsistent. |
+| **Collaboration & Cross-Functional Work** | **Meets Expectations** | Great team player culturally, but administrative delays strain relations with Ops/Finance. |
+
+---
+
+### **Goals for Next Review Period**
+
+1. **CRM Compliance:** Update all deal stages, close dates, and notes within **24 hours** of client interactions. Maintain a 95%+ CRM data accuracy rate.
+2. **First-Time-Right Paperwork:** Achieve a **90% “clean submission” rate** on all contracts, MSAs, and onboarding documents submitted to Operations (minimizing kickbacks for missing data).
+3. **Time-Blocking Strategy:** Implement a daily or weekly dedicated "Admin Block" (e.g., Friday afternoons or 30 minutes at the end of each day) to ensure paperwork does not accumulate.
+4. **Sales Target:** Maintain top-tier sales velocity by hitting **100%+ of quota for [Next Quarter/Year]**.
+
+---
+
+### **Manager’s Final Remarks**
+> *"I want to thank [Employee Name] for an exceptional year of sales. The drive and talent they bring to the team are undeniable. If [Employee Name] can apply just 10% of the discipline they use in closing deals toward managing the administrative side of the sales cycle, they will not only be more efficient but also set themselves up for future leadership or senior account roles. I look forward to supporting them in mastering this part of the job."*
+
+---
+
+### **Signatures**
+
+**Manager Signature:** ___________________________ **Date:** ______________  
+**Employee Signature:** ___________________________ **Date:** ______________  
+*(Employee signature confirms receipt and discussion of the review, not necessarily agreement with all contents.)*

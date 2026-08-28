@@ -1,0 +1,98 @@
+It depends, but a useful default is:
+
+> **Keep patching if the tool is stable, cheap to maintain, and still supports the business. Rebuild if the tool is slowing the business down, creating risk, or making every change disproportionately expensive.**
+
+A ten-year-old tool is not automatically a problem. The question is whether it has become a liability.
+
+## Signs you should keep patching
+
+Patching may be the better choice if:
+
+- The tool is used by a limited number of people.
+- It rarely breaks.
+- Maintenance costs are predictable.
+- Security and compliance risks are low.
+- The business process it supports is stable.
+- There are only minor feature requests.
+- The team still understands the codebase.
+- Rebuilding would not unlock meaningful business value.
+
+In this case, a rewrite may be unnecessary risk. You may be better off doing targeted improvements: dependency upgrades, security fixes, better monitoring, documentation, and small UX improvements.
+
+## Signs you should rebuild or replace it
+
+A rebuild becomes more attractive if:
+
+- Every small change takes too long.
+- Bugs are frequent or hard to diagnose.
+- Key knowledge is held by one or two people.
+- The technology stack is unsupported or hard to hire for.
+- Security, compliance, or audit requirements are becoming harder to meet.
+- The tool blocks process improvements.
+- Users rely on manual workarounds outside the system.
+- Integrations are brittle.
+- Downtime or errors have real operational or financial impact.
+- The current architecture cannot support future needs.
+
+If the tool is becoming a drag on delivery, reliability, or risk management, continuing to patch may be more expensive than rebuilding.
+
+## Avoid the “big rewrite” trap
+
+A full rebuild from scratch is risky. It often takes longer than expected, misses hidden business rules, and can stall feature work.
+
+A better approach is often:
+
+1. **Audit the current tool**
+   - Who uses it?
+   - What workflows does it support?
+   - What breaks most often?
+   - What does it cost to maintain?
+   - What business risks does it create?
+
+2. **Decide whether to retire, replace, modernize, or rebuild**
+   - If a commercial SaaS tool can do the job, consider replacing it.
+   - If only parts are problematic, modernize those parts.
+   - If the whole system is structurally wrong, rebuild incrementally.
+
+3. **Rebuild in phases**
+   - Start with the highest-risk or highest-value area.
+   - Run old and new systems in parallel where possible.
+   - Migrate users gradually.
+   - Preserve existing business logic intentionally rather than rediscovering it through bugs.
+
+## A simple decision model
+
+Score the current tool from 1–5 on each of these:
+
+| Area | Question |
+|---|---|
+| Maintenance cost | Is it expensive or slow to change? |
+| Reliability | Does it break often or cause operational pain? |
+| Security/compliance | Does it create unacceptable risk? |
+| User productivity | Does it slow people down? |
+| Business fit | Does it still support how the business works? |
+| Talent risk | Is it hard to find people who can maintain it? |
+| Future needs | Can it support expected growth or changes? |
+
+If most scores are low, keep patching.
+
+If several are high, especially security, reliability, or business-blocking issues, plan a rebuild, replacement, or phased modernization.
+
+## My recommendation
+
+Do **not** decide based only on age. Decide based on cost, risk, and strategic importance.
+
+A practical path would be:
+
+1. Spend 2–4 weeks assessing the tool.
+2. Estimate annual maintenance cost and business impact.
+3. Identify the riskiest components.
+4. Compare three options:
+   - Continue patching
+   - Incremental modernization
+   - Full replacement/rebuild
+5. Prefer incremental modernization unless there is a strong reason for a clean rebuild.
+
+In many companies, the best answer is not “keep patching forever” or “rewrite everything,” but:
+
+> **Stabilize the current tool, stop unnecessary feature expansion, and gradually replace the parts that create the most cost or risk.**

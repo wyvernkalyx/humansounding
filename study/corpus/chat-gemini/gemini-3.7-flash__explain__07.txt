@@ -1,0 +1,42 @@
+Airlines deliberately overbook flights—selling more tickets than there are physical seats on the plane—primarily to **maximize revenue and prevent planes from flying with empty seats.** 
+
+Here is a detailed breakdown of why and how airlines use this practice:
+
+---
+
+### 1. The Reality of "No-Shows"
+On almost every commercial flight, a percentage of ticketed passengers do not show up. Reasons include:
+*   Missed connecting flights due to delays.
+*   Traffic or personal emergencies.
+*   Last-minute business plan changes.
+*   Passengers holding fully refundable tickets simply canceling at the last minute.
+
+Because these empty seats are virtually guaranteed across thousands of flights, airlines overbook to "backfill" those expected empty spots.
+
+### 2. Airline Seats are "Perishable" Inventory
+In retail, if a shirt doesn't sell today, it can be sold tomorrow. In aviation, an empty seat loses 100% of its value the second the airplane door closes. 
+*   The cost to operate a flight (fuel, crew salaries, airport gate fees) is roughly the same whether the plane is 80% full or 100% full.
+*   To cover these high fixed costs and make a profit, airlines must ensure every flight operates as close to 100% capacity (called "load factor") as possible.
+
+### 3. Sophisticated Data and Algorithms
+Airlines do not guess how many extra tickets to sell. They use complex predictive algorithms based on decades of data. The system analyzes:
+*   **Route history:** Business routes (e.g., New York to Chicago) have higher no-show rates than vacation routes (e.g., Minneapolis to Orlando).
+*   **Time and day:** Early morning flights often have more missed alarms/no-shows than afternoon flights.
+*   **Weather and seasonality:** Bad weather trends increase misconnects.
+*   **Ticket types:** Flights with many flexible/business-class tickets have higher cancellation rates.
+
+Using this data, an algorithm might determine that a 150-seat plane can safely sell 155 tickets because there is a 99% probability that at least 5 people won't show up.
+
+### 4. The Financial Math (Risk vs. Reward)
+Overbooking is a calculated financial risk. Airlines calculate that:
+$$\text{Revenue from extra tickets sold} > \text{Cost of compensating bumped passengers}$$
+
+Most of the time, the algorithm works, and the flight departs completely full. When everyone *does* show up, the airline must "bump" passengers. Even after paying for hotel vouchers, meals, and cash compensation (often hundreds or thousands of dollars to volunteers), the airline still comes out ahead financially over the course of millions of flights per year.
+
+### 5. Keeping Overall Ticket Prices Lower
+From an economic standpoint, maximizing the number of passengers on every flight allows airlines to distribute their fixed operational costs across more people. Industry analysts argue that without overbooking, airlines would operate with lower capacity and would have to raise base airfares across the board to maintain profitability.
+
+---
+
+### Summary
+Airlines overbook because **empty seats destroy profitability**, and **statistical data proves that people regularly miss flights**. When the system works, the airline maximizes revenue; when it fails, the airline relies on compensation and alternative flights to resolve the resulting seat shortage.

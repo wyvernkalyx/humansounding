@@ -1,0 +1,9 @@
+Encryption and hashing both transform data, but they serve different purposes.
+
+- Encryption is reversible. It converts readable data (plaintext) into unreadable data (ciphertext) using a key. Someone with the appropriate key can decrypt it back to the original data. It’s used to keep information confidential, such as messages, files, or network traffic. Examples include AES and ChaCha20.
+
+- Hashing is designed to be one-way. It converts data into a fixed-size value called a hash or digest. There is no key that lets you turn the hash back into the original data. Hashing is used for integrity checks, digital signatures, and—as part of specialized password-hashing schemes—password storage. Examples include SHA-256 and SHA-3; password storage should use algorithms such as Argon2id, scrypt, or bcrypt rather than plain SHA-256.
+
+For example, if you encrypt "hello", you can later decrypt it and recover "hello". If you hash "hello", you get a digest such as SHA-256's `2cf24dba...`, but the hash itself doesn't contain a reversible route back to "hello".
+
+In short: encryption protects confidentiality and is meant to be reversible with a key; hashing produces a one-way fingerprint primarily for verification.

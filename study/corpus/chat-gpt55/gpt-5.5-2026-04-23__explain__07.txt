@@ -1,0 +1,14 @@
+Airlines overbook flights because some passengers usually don’t show up.
+
+If an airline sells exactly as many tickets as there are seats, the plane may depart with empty seats due to missed connections, cancellations, last-minute changes, or no-shows. Empty seats mean lost revenue, while the flight’s operating cost is mostly the same whether the seat is filled or not.
+
+So airlines use historical data and forecasting models to estimate how many passengers are likely not to appear, then sell a small number of extra tickets. This helps them:
+
+- **Maximize revenue**
+- **Keep planes fuller**
+- **Offer more flexible tickets and rebooking options**
+- **Reduce the cost impact of no-shows**
+
+The risk is that sometimes more passengers show up than expected. When that happens, the airline may ask for volunteers to take a later flight in exchange for compensation. If not enough people volunteer, some passengers may be involuntarily denied boarding, usually with legally required compensation depending on the country and circumstances.
+
+In short: airlines overbook because statistically, not everyone shows up, and filling otherwise empty seats is financially valuable.

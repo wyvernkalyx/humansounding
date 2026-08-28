@@ -1,0 +1,40 @@
+Yes — **in most cases, your IT guy is right**.
+
+The old rule “change passwords every 90 days” is now widely considered outdated for normal user accounts **unless there is evidence the password may be compromised**. Modern guidance from organizations like **NIST** recommends *against* forced periodic password changes because they often make security worse.
+
+Why? Forced rotation tends to make people choose predictable passwords like:
+
+- `Summer2024!` → `Fall2024!`
+- `Password1!` → `Password2!`
+- Writing passwords down
+- Reusing similar passwords across systems
+
+Instead, current best practice is:
+
+1. **Use long, unique passwords/passphrases**
+   - Example: `correct-horse-laptop-river-73`
+2. **Use a password manager**
+   - So every site/app gets a unique password.
+3. **Enable MFA/2FA**
+   - Especially for email, VPN, admin accounts, banking, cloud apps.
+4. **Change passwords when there’s a reason**
+   - Suspected breach
+   - Phishing incident
+   - Malware on a device
+   - Employee departure
+   - Password was reused elsewhere
+   - Vendor/application compromise
+5. **Block known-compromised passwords**
+   - Many modern systems can check against breach databases.
+6. **Use monitoring and account lockout/rate limiting**
+   - Detect suspicious logins instead of relying on calendar-based resets.
+
+There are exceptions. Password rotation may still be required for:
+
+- Certain compliance frameworks or legacy policies
+- Shared/admin accounts
+- Service accounts/API keys
+- Environments without MFA or proper monitoring
+- High-risk systems
+
+So the short version: **Routine 90-day password rotation for ordinary users is generally outdated. “Change when compromised” plus MFA and strong unique passwords is the modern approach.**

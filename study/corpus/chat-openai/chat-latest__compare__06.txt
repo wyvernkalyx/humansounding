@@ -1,0 +1,14 @@
+At 12,000 miles per year—about 1,000 miles per month—both an EV and a hybrid can make financial sense. The biggest deciding factor is usually whether you can charge at home.
+
+Assuming typical U.S. prices and similarly sized vehicles:
+
+- Electric car: At roughly 3–4 miles/kWh and $0.17/kWh home electricity, expect around $500–$700/year for electricity. Maintenance is generally low because there are no oil changes and fewer drivetrain components. If you rely heavily on public fast charging, however, energy costs can approach or even exceed hybrid fuel costs.
+- Hybrid: At roughly 45–55 mpg and $3–$4/gallon gasoline, expect about $650–$1,050/year for fuel. Maintenance includes oil changes and conventional engine-related service, although hybrids are generally quite efficient and regenerative braking can reduce brake wear.
+- Purchase price: This varies much more by model than by powertrain. EV tax credits or other incentives can change the calculation substantially, but eligibility depends on the specific vehicle, buyer, and location.
+- Convenience: An EV is particularly convenient if you have overnight home charging—you start most days with a charged battery. A hybrid is easier if you live in an apartment without charging or frequently take long, unpredictable trips.
+- Long trips: Hybrids can refuel almost anywhere in a few minutes. Modern EVs can road-trip well, but charging stops are longer and charger availability varies by route.
+- Depreciation/insurance: These can easily outweigh the annual fuel savings. EV depreciation has been especially model-dependent, so compare actual insurance quotes and used/resale values rather than assuming one type wins.
+
+For a concrete example, a 50-mpg hybrid driven 12,000 miles uses 240 gallons. At $3.50/gallon, that's $840/year. A 3.5-mi/kWh EV uses about 3,430 kWh; at $0.17/kWh, that's about $583/year. The EV saves roughly $260/year in energy in this example, plus potentially a few hundred dollars in maintenance.
+
+So at 12,000 miles/year, I wouldn't choose solely on fuel savings: they're often too small to compensate for a large difference in purchase price. If you can charge cheaply at home and want an EV, it's generally the better fit for day-to-day running costs. Without reliable home/work charging, a high-mpg hybrid is often the simpler and potentially cheaper overall choice.

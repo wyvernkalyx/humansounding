@@ -1,0 +1,47 @@
+Here is a high-converting, friendly, and value-focused re-engagement email template. 
+
+***
+
+**Subject Options:**
+* **Option 1 (Curiosity/Value):** A lot has changed since your last visit, [First Name]
+* **Option 2 (Direct/Friendly):** We’ve missed you! Here’s a quick update (and a gift)
+* **Option 3 (Short & Punchy):** Still working on [Goal/Industry topic]?
+
+**Preview Text:** Log back in to see what’s new + a little something to welcome you back.
+
+***
+
+**Hi [First Name],**
+
+Life gets busy—we totally get it. It’s been about 3 months since you last logged into **[Product/Company Name]**, and we wanted to check in. 
+
+While you’ve been away, we’ve been hard at work making your experience smoother, faster, and more powerful. Here are a few new updates you might have missed:
+
+* **[Feature/Update 1]:** [1-sentence explanation of the benefit, e.g., *Automate your reports in half the time.*]
+* **[Feature/Update 2]:** [1-sentence explanation of the benefit, e.g., *A brand-new dashboard with custom integrations.*]
+* **[Feature/Update 3]:** [1-sentence explanation of the benefit, e.g., *Dozens of new ready-to-use templates.*]
+
+To help you jump back in and see these improvements in action, we’ve added **[Incentive: e.g., 20% off your next month / 100 free credits / an extended 14-day premium pass]** to your account.
+
+👉 **[Button: Log In & Explore What’s New]**
+*(Link directly to their dashboard or a "What's New" landing page)*
+
+---
+
+**Need a refresher?** 
+If you’re stuck on anything or want a quick tour of the new tools, check out our **[Quick Start Guide]** or just reply directly to this email—our team is happy to help you get rolling again.
+
+Hope to see you back soon!
+
+Warmly,  
+**The [Company Name] Team**
+
+---
+*P.S. If your priorities have changed and you no longer need [Product Name], no hard feelings! You can manage your notification preferences or [unsubscribe here].*
+
+***
+
+### 💡 Tips to Maximize Results:
+1. **Reduce Friction:** Use a magic link or auto-login link if your platform securely supports it, so they don’t have to struggle with a forgotten password.
+2. **Segment by Past Behavior:** If possible, tailor the "Feature Updates" to the specific tools they used most before going inactive.
+3. **Follow Up Once:** If they don't open this after 5–7 days, send a simple text-only follow-up asking: *"Quick question—did you find another solution, or are you just taking a break?"* This often gets high response rates.

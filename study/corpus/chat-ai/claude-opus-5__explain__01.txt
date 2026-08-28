@@ -1,0 +1,61 @@
+## The short version
+
+DNS is a distributed database organized as a tree. Resolving a name means walking down that tree from the root, asking each level "who's responsible for the next part?" until you reach a server that authoritatively knows the answer.
+
+## The actors
+
+**Stub resolver** — a small library in your OS (behind `getaddrinfo()`). It doesn't do the real work; it just asks one question and waits. Configured via `/etc/resolv.conf`, DHCP, or your network settings.
+
+**Recursive resolver** (also "recursor" or "caching resolver") — your ISP's server, `8.8.8.8`, `1.1.1.1`, or one on your own network. This does the actual legwork and caches results.
+
+**Authoritative servers** — root servers, TLD servers, and the servers that actually hold a zone's records. Each one answers only for the part of the tree it owns, and mostly answers with *referrals* rather than answers.
+
+## Walking through `www.example.com`
+
+Say the cache is completely cold.
+
+**1. The stub asks.** Your browser calls into the OS resolver, which checks `/etc/hosts` and any local cache, then sends a UDP packet to port 53 on the configured recursive resolver. The query has the **RD** (Recursion Desired) bit set, meaning "please go find this for me."
+
+**2. The resolver asks a root server.** The resolver ships with a hardcoded list of *root hints* — the IP addresses of the 13 root server names (`a.root-servers.net` through `m.root-servers.net`). Those 13 addresses are anycast, fronting well over a thousand physical instances worldwide, so the packet goes to whichever is topologically closest.
+
+The root doesn't know about `example.com`. It responds with a **referral**: the NS records for `.com`, plus *glue records* (the A/AAAA addresses of those nameservers) in the additional section. Glue is necessary to avoid a chicken-and-egg problem — you can't look up `a.gtld-servers.net` without already being able to resolve `.com`.
+
+**3. The resolver asks a `.com` server.** Same deal: `.com` doesn't hold `example.com`'s records, but it knows the delegation. It returns NS records for `ns1.example.com`, `ns2.example.com`, with glue.
+
+**4. The resolver asks `example.com`'s nameserver.** This server is authoritative for the zone. It returns the actual A record with the **AA** (Authoritative Answer) flag set.
+
+**5. The resolver caches and replies.** It hands the answer back to your stub, which hands it to the application.
+
+Note the asymmetry: your query to the resolver was **recursive** ("do all the work"), but the resolver's queries to the root/TLD/authoritative servers were **iterative** ("tell me what you know, I'll follow up"). Authoritative servers almost never do recursion for strangers.
+
+## Caching is what makes this survivable
+
+Every record carries a **TTL**. The resolver caches independently at each level:
+
+- The `.com` NS records might have a 2-day TTL — so step 2 essentially never happens again.
+- The `example.com` NS records get cached too.
+- The final A record might have a 300-second TTL.
+
+So the "cold" four-round-trip walk is rare. In steady state most lookups are one round trip, or zero if the answer is in the stub/browser cache. Negative answers (NXDOMAIN) are cached too, bounded by the SOA record's minimum field — otherwise typos would hammer the authoritative servers.
+
+This also explains why DNS changes "take time to propagate." Nothing is actually being pushed anywhere; you're just waiting for caches to expire. Lowering TTLs *before* a migration is the standard trick.
+
+## Complications that come up constantly
+
+**CNAMEs.** If `www.example.com` is a CNAME to `example.map.cdn.net`, the authoritative server returns the CNAME, and the resolver has to start a new resolution for the target — potentially back at the root. CDN-heavy sites can chain several deep.
+
+**QNAME minimization** (RFC 7816). Historically, the resolver sent the full name `www.example.com` to the root server, which didn't need to know it. Modern resolvers send only `com.` to the root and `example.com.` to the TLD, leaking less to intermediaries.
+
+**Transport.** DNS classically used UDP with a 512-byte payload limit. If a response exceeded that, the server set the **TC** (truncated) bit and the client retried over TCP. EDNS(0) lets clients advertise larger UDP buffers (commonly 1232 bytes now, to dodge IP fragmentation). TCP is still the fallback and is mandatory to support.
+
+**Search domains.** `/etc/resolv.conf` can specify search suffixes and an `ndots` value, so `foo` might be tried as `foo.corp.example.com` first. This is why Kubernetes clusters generate surprising numbers of failed lookups per resolution.
+
+## Security layers bolted on
+
+**DNSSEC** signs records cryptographically. Each zone signs its records (RRSIG), and the parent zone publishes a DS record hashing the child's key — forming a chain of trust up to the root KSK, which is the one key everyone trusts a priori. A validating resolver can then detect forged answers. Note this provides *authenticity*, not confidentiality: DNSSEC responses are still plaintext.
+
+**DoT / DoH / DoQ** encrypt the stub-to-resolver hop (TLS on port 853, HTTPS on 443, QUIC respectively). This hides your queries from the network path but tells your resolver operator everything. The resolver's upstream queries to authoritative servers are still usually plaintext, though encrypted authoritative transport is an active area of work.
+
+## Why it's built this way
+
+The delegation model means no single entity needs to know all names, and each zone owner controls their own records without coordinating with anyone above them. Caching means the root servers see a tiny fraction of the world's queries. Anycast means the "13 root servers" are actually distributed globally with no protocol changes required. It's a 1980s design that scaled several orders of magnitude past what it was built for, largely because of those three properties.

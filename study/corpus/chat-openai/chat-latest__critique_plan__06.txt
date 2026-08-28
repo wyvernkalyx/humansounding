@@ -1,0 +1,12 @@
+Yes, potentially—but I wouldn’t stop the drive rotation until the cloud backup is fully established and tested.
+
+Moving to cloud storage can simplify operations and give you off-site protection, but make sure the replacement preserves the properties you actually need: automated/versioned backups, encryption, retention history, and ideally ransomware-resistant or immutable copies. Plain cloud file syncing isn’t necessarily a backup.
+
+A sensible migration is:
+- Keep the existing drives intact while configuring the cloud backup.
+- Complete the initial upload and verify that all expected data is present.
+- Perform a test restore, including a few files and ideally a larger recovery scenario.
+- Check retention/versioning, encryption and account recovery/MFA, expected restore time, and storage/egress costs.
+- Only then retire the rotation. Consider keeping one final external backup disconnected and securely stored for a while.
+
+For important business data, I’d generally keep more than one independent backup copy rather than make a single cloud provider your only fallback.

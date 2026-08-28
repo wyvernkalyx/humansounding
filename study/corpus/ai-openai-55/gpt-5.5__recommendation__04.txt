@@ -1,0 +1,23 @@
+**Performance Review**
+
+**Employee:** [Developer Name]  
+**Role:** Software Developer  
+**Review Period:** [Time Period]
+
+[Developer Name] is a highly capable engineer with strong technical skills and a deep understanding of our systems, architecture, and development practices. They consistently produce high-quality work, solve complex technical problems, and often identify issues or improvements that others may miss. Their ability to reason through difficult engineering challenges has been a valuable asset to the team.
+
+Over the review period, [Developer Name] has made meaningful contributions to key projects, including [specific project/example]. Their code is generally well-structured, thoughtful, and reliable, and they often demonstrate strong ownership of technical outcomes. When focused on a problem, they are able to move quickly and deliver effective solutions.
+
+At the same time, collaboration and communication remain important areas for improvement. While [Developer Name] brings strong opinions and valuable technical judgment, their communication style can sometimes come across as dismissive, overly critical, or difficult to engage with. This has occasionally created friction with teammates and slowed down decision-making. In some cases, others may be hesitant to ask questions, propose ideas, or challenge assumptions, which can limit team effectiveness.
+
+To continue growing, [Developer Name] should focus on improving how they work with others, particularly in the following areas:
+
+- Communicating feedback in a constructive and respectful way  
+- Being more open to alternative approaches and team input  
+- Practicing patience when working through disagreements  
+- Helping create an environment where teammates feel comfortable contributing  
+- Balancing technical correctness with collaboration, delivery, and team alignment  
+
+The expectation going forward is that [Developer Name] continues to contribute strong technical work while also demonstrating more consistent professionalism and teamwork. Technical excellence is most impactful when paired with trust, approachability, and effective collaboration.
+
+Overall, [Developer Name] is a talented developer with significant potential to have a broader positive impact. Continued growth in interpersonal effectiveness will be essential for increasing their influence, supporting the team, and moving toward more senior levels of responsibility.

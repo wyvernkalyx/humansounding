@@ -1,0 +1,12 @@
+We’re sunsetting our legacy integration on [date].
+
+As our platform has evolved, we’ve introduced newer integration options that are more reliable, secure, and easier to maintain. To focus our resources on these improvements, we’ll discontinue support for [Legacy Integration] after [date].
+
+If you currently use this integration, you’ll need to migrate to [New Integration] before the sunset date to avoid any interruption in service. We’ve prepared a migration guide at [link] with steps to help you make the transition.
+
+Key dates:
+- [Date]: Sunset announcement
+- [Date]: Final day of support
+- [Date]: Legacy integration disabled
+
+We know migrations take planning, and we’re committed to making the process as smooth as possible. If you have questions or need help migrating, contact us at [support channel].

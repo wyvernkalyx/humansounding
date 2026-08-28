@@ -1,0 +1,44 @@
+A few things actually work, and they depend on what's happening.
+
+**First, figure out which version this is**
+
+- They present joint work as solely theirs
+- They restate your idea ten minutes later and it lands as theirs
+- They report your work upward without you in the room
+- Ownership was genuinely murkier than you remember
+
+The last one is worth thirty seconds of honest reflection, not because you're probably wrong, but because if you escalate on shaky ground you lose credibility for the real instances.
+
+**In the moment**
+
+Don't accuse. Just insert yourself back into the narrative, calmly and specifically:
+
+- *"Right — that's the approach I laid out Tuesday. The part I'd add is..."* Then keep talking. You've reclaimed it and moved on before anyone feels awkward.
+- Ask a question only the author could answer: *"Glad that's landing. When I was working through it, the messy part was the data lag — how were you thinking about handling that?"* If they didn't do the work, this is quietly devastating and you didn't accuse anyone of anything.
+- If you have an ally in the room, ask them privately to amplify: *"I want to come back to what she said earlier..."* This works better than self-advocacy because it comes from outside.
+
+**Structurally, so it stops happening**
+
+This matters more than any in-meeting comeback. The real problem is that your work reaches decision-makers through someone else. Fix the pipe.
+
+- Send a short written summary *before* the meeting to the people who matter. "Here's where I landed on X, happy to walk through it Thursday." Now there's a timestamped record and you've framed it first.
+- Ask to own the agenda item rather than having it relayed.
+- Build a direct line to whoever needs to know. If your manager only hears about your work secondhand, that's the actual vulnerability.
+
+**The direct conversation**
+
+Worth having once, privately, low-drama:
+
+*"In Thursday's meeting, the roadmap analysis came across as yours. That was my work. I'd like us to be clearer about attribution going forward."*
+
+Then stop talking. Someone who did it carelessly will be embarrassed and correct it. A repeat offender will get defensive, tell you you're being sensitive, or explain how it was really a team effort. Either way you've learned what you're dealing with, and you've established that you noticed — which alone deters a lot of people.
+
+**Escalating**
+
+If it continues, go to your manager, but frame it around visibility rather than grievance. "I want to make sure you've got a clear picture of what I'm contributing on X" plays very differently from "Dave keeps stealing my credit." The first is a professional asking for accurate accounting; the second sounds like a personality conflict, and managers avoid those. Bring specifics: what you did, when, what got presented.
+
+**The honest part**
+
+Sometimes the manager already knows and doesn't care, because the credit-taker is useful to them. If you fix your visibility, have the direct conversation, escalate cleanly, and nothing changes — that's not a failure of your tactics. It's information about where you work, and it's worth taking seriously rather than grinding against for another two years.
+
+Also worth internalizing: doing good work and making sure the right people know you did it are two different skills. The second one isn't self-promotion or politics. It's just part of the job, and the people who take credit understand that better than the people they take it from.

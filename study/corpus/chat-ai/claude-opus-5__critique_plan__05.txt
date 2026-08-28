@@ -1,0 +1,17 @@
+Directionally I like it. Meetings almost always accumulate past their usefulness because the burden of proof sits on the person who wants to cancel, and nobody wants to be that person. Flipping the default is the right move.
+
+The part I'd push on is "see what breaks," because breakage from removing coordination is mostly slow, diffuse, and easy to misattribute. The bad outcome isn't that something visibly fails in week three. It's that in week nine two teams ship overlapping work, or a customer problem that used to surface in a status meeting takes an extra month to reach you, and neither gets traced back to the calendar change. You'll declare the experiment a success because nothing obviously exploded.
+
+Three things I'd tighten:
+
+**Write down what "breaks" looks like before you cut.** Something like: duplicated work discovered late, decisions that stall for more than a week, someone learning about a launch after it happened, a new hire who can't name what the adjacent team is working on. If you don't pre-register the signals, you'll rationalize whatever happens.
+
+**Assume people won't tell you.** When a leader announces a meeting purge, asking for the meeting back reads as either weakness or disloyalty. Your quietest signal-carriers — juniors, remote folks, people on the org's periphery — are exactly the ones who lose the most and complain the least. Senior people will love this change and be genuinely fine, because they have hallway access and standing relationships to fall back on. That asymmetry will bias your read of the results.
+
+**Distinguish cheap-to-restore from expensive-to-restore.** A weekly team sync can come back next Tuesday with nothing lost. A cross-functional forum that was mostly working because of accumulated trust doesn't restart cleanly six months later — the relationships decay and the thing you bring back is a shell. I'd cut aggressively in the first category and surgically in the second.
+
+One reframe worth considering: half the *meetings* may be the wrong unit. Half the *attendee-hours* is often the bigger win and a smaller risk — the meeting still exists as a coordination point, but six people stop sitting through it. Shrinking invite lists and cutting sixty minutes to twenty-five gets you a lot of the time back without deleting the channel entirely.
+
+Also worth deciding: what replaces the deleted coordination? If the answer is "nothing," some of it will reappear as Slack threads and one-off DMs, which can be worse — same time cost, less shared context, no record. If the answer is a written update, say so explicitly, or the doc won't get written.
+
+Last thing: a quarter will surface the process breakage but probably not the strategic drift or the retention effects. Whatever you conclude in twelve weeks, hold it a little loosely.

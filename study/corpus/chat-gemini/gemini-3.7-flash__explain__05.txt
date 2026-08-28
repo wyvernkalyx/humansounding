@@ -1,0 +1,53 @@
+The fundamental difference between **encryption** and **hashing** comes down to **reversibility**:
+
+*   **Encryption** is a **two-way** process. You scramble data so it cannot be read, but it is designed to be decrypted back into its original form using a key.
+*   **Hashing** is a **one-way** process. You transform data into a unique, fixed-length fingerprint that is mathematically impossible to reverse back into the original data.
+
+---
+
+### 1. Encryption (Two-Way)
+
+Encryption is used to protect data in transit or at rest so that only authorized parties with the correct secret key can read it.
+
+*   **How it works:** You take readable data (plaintext), run it through an encryption algorithm with a secret key, and get unreadable data (ciphertext). Anyone with the matching key can reverse the process to read the original data.
+*   **Primary Purpose:** **Confidentiality** (keeping secrets).
+*   **Common Use Cases:**
+    *   Sending encrypted messages (e.g., WhatsApp, Signal).
+    *   Browsing secure websites (HTTPS/SSL).
+    *   Securing hard drives (e.g., BitLocker, FileVault).
+*   **Common Algorithms:** AES (Advanced Encryption Standard), RSA, ECC.
+
+---
+
+### 2. Hashing (One-Way)
+
+Hashing transforms any amount of input data into a fixed-length string of characters (called a "hash" or "digest"). It is deterministic, meaning the exact same input will *always* produce the exact same hash.
+
+*   **How it works:** You feed data into a hash algorithm, and it produces a unique string. You cannot "un-hash" this string to get the original data back.
+*   **Primary Purpose:** **Integrity** (verifying that data hasn't been altered) and **Authentication**.
+*   **Common Use Cases:**
+    *   **Storing Passwords:** Websites don't store your actual password. They store the hash. When you log in, they hash what you typed and see if it matches the stored hash.
+    *   **File Verification/Checksums:** Ensuring a downloaded file wasn't corrupted or tampered with.
+    *   **Digital Signatures & Blockchain:** Linking transactions and blocks securely.
+*   **Common Algorithms:** SHA-256, SHA-3, bcrypt (specifically for passwords).
+
+---
+
+### Summary Comparison
+
+| Feature | Encryption | Hashing |
+| :--- | :--- | :--- |
+| **Direction** | **Two-way** (can be decrypted) | **One-way** (cannot be reversed) |
+| **Keys** | Requires a Key to encrypt/decrypt | Does not require a key* |
+| **Output Size** | Varies based on input size | **Fixed length** regardless of input size |
+| **Primary Goal** | **Confidentiality** | **Integrity & Verification** |
+| **Example Use** | Sending a private credit card number | Safely storing a user's password |
+
+*\*Note: Some advanced hashing techniques (like HMAC) use keys for message authentication, but the hashing function itself remains mathematically irreversible.*
+
+---
+
+### A Simple Analogy
+
+*   **Encryption is like a locked safe:** You put a letter in a safe and lock it. As long as someone has the key, they can open the safe and read the original letter.
+*   **Hashing is like a blender:** You put ingredients (data) into a blender to make a smoothie (the hash). You can never turn the smoothie back into the original whole fruit, but if you put the exact same ingredients in, you will always get the exact same smoothie.

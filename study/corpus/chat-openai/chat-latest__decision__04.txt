@@ -1,0 +1,14 @@
+It can be, but the strongest version is usually a trial rather than an immediate permanent switch. For a small office, a four-day week tends to work well when output matters more than continuous five-day availability and the workload can genuinely fit into fewer hours.
+
+The key distinction is between a true four-day week—say, 32 hours at the same pay—and four 10-hour days. The former can improve retention, recruiting, focus, and burnout, but requires eliminating low-value work rather than simply compressing it. Four 10-hour days provide less of that benefit and can make long workdays tiring.
+
+Before changing, check:
+- Customer coverage: Do clients expect someone available Monday–Friday? If so, stagger employees' days off rather than closing entirely.
+- Workload: Can you remove meetings, unnecessary reporting, and interruptions without creating hidden overtime?
+- Economics: Define what needs to stay stable: revenue, output, response times, deadlines, and labor cost.
+- Staffing: Small teams have less redundancy, so vacations and sick leave can become more disruptive.
+- Legal/payroll issues: Overtime, leave accrual, benefits, and scheduling rules vary by jurisdiction.
+
+A good approach is an 8–12 week pilot with unchanged pay and explicit rules against routinely squeezing five days of work into four. Record a baseline first, then compare output or revenue, customer response times, errors/deadlines, overtime, sick leave, and employee sentiment. If customers are covered and productivity per employee stays roughly level while retention and satisfaction improve, it's probably worth keeping.
+
+For a typical small office, I'd favor testing a staggered 32-hour week before either permanently closing every Friday or adopting four 10-hour days.

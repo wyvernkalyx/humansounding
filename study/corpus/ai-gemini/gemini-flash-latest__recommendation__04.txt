@@ -1,0 +1,70 @@
+Here is a balanced, constructive, and professional performance review template for a developer who excels technically but struggles with collaboration and interpersonal dynamics. 
+
+It uses the principle that **the "how" (collaboration and culture) is just as important as the "what" (code and delivery).**
+
+---
+
+# Employee Performance Review
+
+**Employee Name:** [Developer Name]  
+**Job Title:** [e.g., Senior Software Engineer]  
+**Review Period:** [e.g., Q1–Q4 2023 / Annual Review]  
+**Manager:** [Manager Name]  
+
+---
+
+### **Executive Summary**
+[Developer Name] is an exceptionally talented engineer whose technical contributions have been critical to our team’s output this year. They possess deep domain expertise, write clean and efficient code, and consistently resolve complex architectural challenges quickly. 
+
+However, to reach their full potential and maximize their impact, [Developer Name] needs to make significant improvements in communication, collaboration, and team dynamics. High performance in our organization is measured not only by individual technical output but also by how effectively an engineer elevates the team around them.
+
+---
+
+### **Key Strengths (The "What")**
+
+* **Technical Excellence & Problem Solving:** [Developer Name] has a profound understanding of our tech stack. Their work on [mention a specific project, e.g., the API refactor / database migration] was delivered on time and demonstrated exceptional engineering quality.
+* **Execution & Velocity:** They are dependable when it comes to tackling difficult tickets and consistently produce high-volume, well-tested code with minimal bugs.
+* **System Reliability:** [Developer Name] demonstrates strong ownership during outages and complex debugging scenarios, quickly pinpointing root causes and implementing robust fixes.
+
+---
+
+### **Areas for Growth & Development (The "How")**
+
+While [Developer Name]’s individual technical ability is undeniable, their day-to-day interactions have created friction within the team and with cross-functional partners.
+
+#### 1. Code Review Delivery and Tone
+* **Observation:** Feedback left on pull requests (PRs) is often overly blunt, dismissive, or demanding rather than educational and collaborative.
+* **Impact:** Junior and mid-level engineers report feeling intimidated or discouraged from submitting PRs, leading to slower review cycles and reduced psychological safety.
+* **Expectation:** Shift the tone of code reviews to be constructive and inquisitive (e.g., using "Have you considered X?" instead of "This is wrong"). Focus on mentoring rather than policing.
+
+#### 2. Cross-Functional Collaboration & Openness to Input
+* **Observation:** During planning sessions and technical discussions, [Developer Name] frequently dismisses ideas from non-technical partners (Product, Design) or peers without clear, objective explanations. They tend to dominate discussions and exhibit frustration when decisions do not align with their preference.
+* **Impact:** This creates unnecessary friction in sprint planning, alienates stakeholders, and limits the diversity of solutions explored.
+* **Expectation:** Practice active listening. Acknowledge the business and UX constraints presented by Product/Design, and explain technical trade-offs with patience and empathy.
+
+#### 3. Receptivity to Feedback & Disagreement
+* **Observation:** When [Developer Name]’s own ideas or code are challenged, their initial reaction is often defensive rather than curious.
+* **Impact:** Colleagues avoid healthy technical debates to prevent conflict, which risks the team missing better collective solutions.
+* **Expectation:** Approach technical debates with an open mindset. Embrace the principle of *"disagree and commit"* once a team decision has been reached.
+
+---
+
+### **Goals & Action Plan for the Next Review Period**
+
+1. **Adopt a Constructive PR Framework:** Complete 100% of code reviews using constructive guidelines (e.g., separating "blocking issues" from "non-blocking suggestions/nitpicks" and providing clear explanations/resources).
+2. **Improve Cross-Functional Alignment:** Work proactively with the Product Manager during the discovery phase to align on trade-offs before technical specifications are finalized.
+3. **Peer Mentorship:** Successfully mentor one junior/mid-level engineer on a major initiative, focusing specifically on communication and supportive guidance. (Progress will be measured via 360 peer feedback).
+
+---
+
+### **Manager’s Closing Remarks**
+
+> *"[Developer Name], your technical talent is a massive asset to this organization. You have the raw ability to be a true technical leader. However, leadership requires bringing people with you, not just arriving at the solution first. In our engineering culture, being a high performer means acting as a force multiplier for the team. I am committed to supporting your growth in these collaborative areas, and I look forward to seeing your technical brilliance matched by strong, empathetic teamwork."*
+
+---
+
+### **Signatures**
+
+**Manager Signature:** ______________________ **Date:** _____________  
+**Employee Signature:** ______________________ **Date:** _____________  
+*(Signature indicates receipt of review, not necessarily agreement with all contents)*

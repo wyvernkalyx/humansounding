@@ -1,0 +1,88 @@
+For a 60-person company, you are at a classic **IT inflection point**. You are too large for the "tech-savvy employee" to handle IT on the side, but slightly too small to justify a full, multi-person internal IT department. 
+
+Here is a direct comparison of **In-House vs. Outsourced (MSP - Managed Service Provider)** IT help desks tailored specifically to your size.
+
+---
+
+### 1. Cost & Financials
+
+*   **In-House (1 Dedicated IT Generalist):**
+    *   **Direct Costs:** Salary ($65,000–$85,000) + Benefits/Taxes (approx. 25%) = **$80,000–$105,000/year**.
+    *   **Hidden Costs:** You must also pay for enterprise software licenses (ticketing system, remote management tools, antivirus, backup systems), which can add another **$5,000–$15,000/year**.
+    *   **Total:** ~$85,000 – $120,000 annually.
+*   **Outsourced (MSP):**
+    *   **Pricing Model:** Typically charged "per user/month" (ranging from $100 to $200/user depending on scope and location).
+    *   **Total for 60 users:** $6,000 – $12,000/month = **$72,000 – $144,000/year**.
+    *   **Software Included:** High-end security, monitoring, and ticketing tools are almost always baked into the monthly fee.
+
+**Verdict:** Costs are often comparable at 60 people, but outsourced provides enterprise-grade tools without separate procurement.
+
+---
+
+### 2. Availability, Redundancy, and Coverage
+
+*   **In-House:**
+    *   **The "Single Point of Failure":** If your one IT person gets sick, goes on vacation, or quits, you have **0% IT coverage**. 
+    *   **Hours:** Strictly business hours (e.g., 9 AM – 5 PM). After-hours support leads to employee burnout or overtime pay.
+*   **Outsourced:**
+    *   **Built-in Redundancy:** An MSP has a team. If Technician A is on leave, Technicians B and C step in with access to your documented systems.
+    *   **Hours:** Most MSPs offer extended hours (7 AM – 7 PM) or 24/7/365 coverage for emergencies as part of the contract.
+
+**Verdict:** Outsourced wins decisively on reliability and business continuity.
+
+---
+
+### 3. Breadth of Expertise vs. Company Context
+
+*   **In-House:**
+    *   **Breadth:** Limited. One person cannot be an expert in desktop support, cloud architecture (Azure/AWS), cybersecurity, compliance, and VoIP systems all at once.
+    *   **Context:** **High.** They will intimately understand your specific business workflows, company culture, executive quirks, and legacy software.
+*   **Outsourced:**
+    *   **Breadth:** **High.** You get access to Tier 1 support techs up to high-level Tier 3 network architects and Chief Information Security Officers (CISOs) without hiring them full-time.
+    *   **Context:** Lower. Support can feel transactional. You are one of many clients, and users might speak to a different technician each time they submit a ticket.
+
+**Verdict:** In-house wins for internal culture; outsourced wins for technical depth and cybersecurity.
+
+---
+
+### 4. Speed & Type of Support
+
+*   **In-House:**
+    *   **On-Site Presence:** Immediate physical help for hardware issues (jammed printers, broken laptop screens, meeting room AV setup).
+    *   **"Desk-Side" Bias:** Employees often bypass official ticketing systems and tap the IT person on the shoulder, disrupting their strategic work.
+*   **Outsourced:**
+    *   **Remote-First:** 95% of issues are resolved remotely. 
+    *   **SLA-Driven:** They are bound by contract to respond within a specific timeframe (e.g., urgent issues in under 15 minutes).
+    *   **On-Site Delay:** If physical hardware breaks, an MSP may take a few hours or a day to dispatch a technician (or charge extra for it).
+
+**Verdict:** In-house is better for physical hardware and immediate "walk-up" service; outsourced is better for structured, SLA-guaranteed remote support.
+
+---
+
+### Summary Comparison Table
+
+| Feature | In-House (1 Employee) | Outsourced (MSP) |
+| :--- | :--- | :--- |
+| **Typical Cost** | $85k – $120k/yr (All-in) | $72k – $144k/yr |
+| **Skill Range** | Generalist (Jack of all trades) | Multi-tier team (Specialists available) |
+| **PTO / Sick Coverage** | None (Major vulnerability) | 100% redundant team |
+| **Support Hours** | Standard business hours | Extended or 24/7 |
+| **Physical Presence** | Always in the office | Primarily remote (on-site as needed) |
+| **Scalability** | Hard to scale past 80–100 users | Can scale seamlessly from 60 to 200+ |
+| **Strategic IT/Cybersecurity** | Limited time/knowledge | Often included (vCIO services) |
+
+---
+
+### Recommendation for a 60-Person Company
+
+1. **Choose OUTSOURCED if:**
+   * Your workforce is **hybrid or fully remote**.
+   * You operate in a regulated industry (finance, healthcare, legal) requiring strict **cybersecurity and compliance** that one generalist cannot manage.
+   * You cannot afford downtime if a single internal IT employee takes leave.
+
+2. **Choose IN-HOUSE if:**
+   * 100% of your 60 employees work **in a single physical office** with heavy hardware dependencies (specialized machinery, complex AV/conference rooms, physical servers).
+   * Your company culture heavily values face-to-face, personalized internal service over ticket-based systems.
+
+3. **The "Middle Ground" (Co-Managed IT):**
+   Many 60-person companies hire a **junior in-house IT coordinator** ($50k–$60k) to handle on-site physical support and onboarding, while partnering with an **MSP on a lower-tier contract** ($2k–$3k/month) to provide software tools, handle complex backend cybersecurity, and cover vacations.

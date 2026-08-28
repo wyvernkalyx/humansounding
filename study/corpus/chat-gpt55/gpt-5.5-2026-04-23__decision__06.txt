@@ -1,0 +1,60 @@
+Usually: **take the three-year discount only if you’re highly confident you’ll still need the software for all three years and the contract has protections.** Otherwise, **go year-to-year** and preserve flexibility.
+
+### Choose the 3-year renewal if:
+- The software is **mission-critical** and hard to replace.
+- Usage/seats are stable or growing.
+- You have no planned vendor evaluation, migration, acquisition, restructuring, or major tech-stack change.
+- The discount is meaningful — often **15–25%+** is where it starts becoming compelling.
+- You can negotiate protections:
+  - Price increase cap after the term
+  - Ability to reduce seats annually
+  - Termination for breach/security failure
+  - SLA/support commitments
+  - Data export rights
+  - Product roadmap or feature commitments, if relevant
+  - Assignment/change-of-control protection
+
+### Go year-to-year if:
+- You may reduce headcount or usage.
+- You’re considering alternatives.
+- The product has quality, support, security, or roadmap concerns.
+- Your business needs may change significantly.
+- The discount is small, e.g. **under 10%**, unless price increases are expected.
+- The vendor is trying to lock you in because renewal risk is high.
+
+### Simple way to compare
+
+Calculate the value of the discount:
+
+> **Three-year savings = annual list price × discount % × 3**
+
+Example:  
+If the software costs **$100,000/year** and the vendor offers a **15% discount**, the three-year savings are:
+
+> $100,000 × 15% × 3 = **$45,000**
+
+Then ask:  
+“Is the flexibility to cancel, renegotiate, switch vendors, or reduce seats during the next three years worth more than $45,000?”
+
+If yes, go year-to-year.  
+If no, take the three-year deal.
+
+### One important distinction
+
+A three-year contract can mean two different things:
+
+1. **Three years prepaid upfront**  
+   - Higher cash-flow cost.
+   - You should demand a larger discount.
+   - Compare against your cost of capital.
+
+2. **Three-year commitment, paid annually**  
+   - Better than prepaying.
+   - Still creates lock-in.
+   - Try to negotiate annual seat adjustments.
+
+### My practical recommendation
+
+If the software is essential and you’re confident you’ll use it for three years, I’d push for a **three-year term paid annually**, with a discount and flexibility on seat counts.
+
+If there’s any serious uncertainty, go **year-to-year** or negotiate a middle ground: **one-year renewal with a two-year price lock** or **three-year pricing with annual opt-out rights**.

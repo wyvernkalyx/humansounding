@@ -1,0 +1,17 @@
+Subject: Mandatory Security Awareness Training
+
+Team,
+
+To help protect our systems, data, and customers, all staff are required to complete our new Security Awareness Training.
+
+The training covers key security practices, including identifying phishing attempts, protecting passwords and accounts, handling sensitive information, and reporting potential security incidents.
+
+Please complete the training by [deadline]. It should take approximately [duration] and is available at [training link/platform].
+
+Completion is mandatory for all staff. If you experience technical issues or need an accommodation, please contact [IT/Security/HR contact].
+
+Thank you for helping keep our organization secure.
+
+Best,
+[Name]
+[Title]

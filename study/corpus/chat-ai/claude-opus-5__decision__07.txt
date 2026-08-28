@@ -1,0 +1,20 @@
+Mostly no to the apparatus, mostly yes to the conversation.
+
+Formal reviews solve problems that come from scale: managers who don't observe the work directly, the need to compare people fairly across teams, documenting patterns before a termination, remembering what happened eleven months ago. None of that applies when there are two of you. Rating scales, self-assessment forms, and 360 feedback in a two-person company are cargo-culting.
+
+But there's a real failure mode in tiny companies: you talk constantly about the work and never about the working relationship. Small frictions never rise to the level of "worth interrupting the day," so they compound quietly until someone quits or blows up. A scheduled, structured conversation exists mainly to create permission to say things that feel too heavy to raise casually.
+
+**If it's a founder and an employee**, I'd do something twice a year, an hour, both of you prepared in advance:
+
+- What went well, what didn't, from each side
+- Is the comp right, and what would make it go up
+- What does this person want to be doing in two years, and does this job get them there
+- What do you each need from the other that you're not getting
+
+Write a short summary afterward — half a page, emailed. Not for HR theater, but because it protects both of you. Your employee gets a record of accomplishments for their next job. You get documentation if things ever go sideways with an unemployment claim or a discrimination complaint, where "we never wrote anything down" is a bad position. It also forces you to be honest: things that feel fine to say vaguely often turn out to be unfair or unfounded when you have to write them.
+
+The employee-side asymmetry is worth taking seriously. You know the company's finances, plans, and how you feel about their work. They know almost none of that. What feels to you like constant open communication can feel to them like operating in the dark about whether they're doing well and whether this job has a future.
+
+**If it's two co-founders**, drop the review framing entirely — one of you evaluating the other is the wrong relationship model. What you want instead is a periodic check-in on: are our roles still right, are we both putting in what we said we would, is the equity split still fair given how things have actually gone, and is there anything either of us is annoyed about. Quarterly is about right. This is the conversation most co-founder breakups happen for lack of.
+
+The one thing I'd guard against either way: don't let "we're small and informal" become a reason to defer every uncomfortable topic indefinitely. The structure isn't for the structure's sake. It's a commitment device against your own conflict avoidance.

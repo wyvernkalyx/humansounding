@@ -1,0 +1,57 @@
+A drop from “all day” to ~3 hours in one month usually points to one of these:
+
+1. **Battery health has degraded or a cell is failing**
+   - Lithium batteries normally decline gradually, but a weak/failing cell can cause a sudden capacity drop.
+   - If the laptop is 2–4+ years old, this becomes more likely.
+
+2. **Something is using much more power than before**
+   - A recent OS update, new app, browser tabs/extensions, antivirus scan, cloud sync, or background process can keep CPU/GPU active.
+   - Video calls, gaming, high brightness, or external monitors can also cut battery life sharply.
+
+3. **Power settings changed**
+   - Performance mode, high refresh rate, keyboard backlight, max brightness, or disabled battery saver can reduce runtime a lot.
+
+4. **Battery calibration/reading issue**
+   - Sometimes the laptop misreports battery percentage, making it seem like capacity collapsed.
+
+5. **Heat**
+   - Dusty fans, blocked vents, or a hot environment can force fans/CPU to work harder and degrade battery faster.
+
+### What to check first
+
+**On Windows:**
+1. Open Task Manager → sort by **CPU** and **Power usage**.
+2. Go to Settings → System → Power & battery → check **Battery usage by app**.
+3. Run a battery report:
+   ```cmd
+   powercfg /batteryreport
+   ```
+   Open the generated report and compare:
+   - **Design Capacity**
+   - **Full Charge Capacity**
+   
+   If Full Charge Capacity is far below Design Capacity, the battery has degraded.
+
+**On macOS:**
+1. Apple menu → System Settings → Battery → check usage.
+2. Open Activity Monitor → Energy tab.
+3. Check battery health:
+   - System Settings → Battery → Battery Health
+   - Or System Information → Power → look at **Cycle Count** and **Maximum Capacity**
+
+### Quick fixes to try
+
+- Restart the laptop.
+- Update the OS and drivers.
+- Lower brightness.
+- Turn on Battery Saver/Low Power Mode.
+- Close heavy background apps.
+- Check for browser extensions or many tabs.
+- Make sure vents are clean and fans are working.
+- If available, switch from “Best performance” to “Balanced” or “Battery saver.”
+
+### When to suspect the battery itself
+
+If battery health shows low capacity, “Service recommended,” swelling, sudden shutdowns, or the laptop drops from e.g. 40% to 5%, the battery likely needs replacement. If it’s under warranty, contact the manufacturer.
+
+If you tell me your laptop model, OS, age, and what the battery health report says, I can help interpret it.

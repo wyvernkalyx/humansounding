@@ -1,0 +1,10 @@
+It’s fine, but a little generic. “Quick question about your account” can also resemble phishing or automated support emails.
+
+Depending on the context, these may feel clearer and more trustworthy:
+
+- “Quick question about your [Company] account”
+- “Question about your [Product] account”
+- “[Name], a quick question about your account”
+- “Quick question about your recent account activity”
+
+If you tell me what the email is asking the recipient to do, I can suggest a subject line optimized for that purpose.

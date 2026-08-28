@@ -1,0 +1,19 @@
+Probably both — they're sampling different populations, and the disagreement itself is the useful signal.
+
+Support only talks to people having problems. That's near-total selection bias; if the product were 97% healthy, support's inbox would still look like a disaster. Sales mostly talks to prospects and champions — often the buyer rather than the daily user — and has a quota-shaped reason not to dwell on defects. Neither is a valid estimate of overall health.
+
+There's also an asymmetry in what each claim can prove. "It's broken" is an existence claim, and support has receipts. "It's fine" is a population claim, and one broken instance doesn't refute it. So support is probably right that real defects exist; sales may still be right that they aren't costing you deals.
+
+What actually resolves it:
+
+**Make both sides be specific.** Which accounts, which workflows, since when? "Customers are complaining" versus "these four enterprise accounts on v3 can't complete bulk import since the March release" are very different claims. Vagueness on either side usually means the person is generalizing from two anecdotes.
+
+**Segment.** The most common resolution is that both are literally true of different slices — new logos on the current version are fine, older accounts on legacy config are broken. Or SMB self-serve works and enterprise SSO doesn't. Check whether their populations even overlap.
+
+**Read the ticket mix, not the ticket count.** Sort tickets into: actual bugs, "how do I," and "I expected something else." If most are the latter two, the product isn't broken — the docs, onboarding, or the promises sales is making are. That's still a real problem, just a different one, and it explains why sales feels defensive.
+
+**Look at behavior instead of opinions.** Renewal and expansion rates by segment, activation rate on the flagged workflow, repeat-contact rate, escalation rate, and usage of the specific feature in question. Also look for silent churn — the accounts that never filed a ticket and just stopped logging in. Those are invisible to both teams.
+
+**Ask each side what would change their mind.** If sales can't name evidence that would make them concede a problem, they're defending a position rather than reporting one. Same for support.
+
+One tiebreaker heuristic: sales feels the product's problems on a lag of one renewal cycle. If support has been saying "broken" for two quarters and sales still says "fine," check whether churn has started moving yet. If it has, support was early, not wrong.

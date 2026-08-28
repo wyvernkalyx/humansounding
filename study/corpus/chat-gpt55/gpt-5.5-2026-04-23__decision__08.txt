@@ -1,0 +1,47 @@
+Not necessarily—but it’s often a mistake if your buyers expect self-serve evaluation.
+
+A missing pricing page creates friction. Many buyers use pricing to decide whether a product is even worth considering. If they can’t find it, they may assume it’s expensive, overly enterprise-focused, or not transparent, and leave.
+
+That said, there are cases where launching without a pricing page is reasonable.
+
+## It can make sense to skip pricing if:
+
+- You sell large enterprise contracts with highly variable pricing.
+- The product is early and you’re still learning willingness to pay.
+- Pricing depends heavily on usage, integrations, compliance, services, or custom implementation.
+- You want every lead to go through sales because qualification matters.
+- You’re running a private beta or limited launch.
+
+In those cases, “Contact sales” can be acceptable—especially if your audience is used to it.
+
+## It is usually a mistake if:
+
+- You are selling to SMBs, startups, creators, developers, or self-serve buyers.
+- Competitors publish pricing.
+- Your product has clear tiers or usage-based pricing.
+- Buyers can sign up without talking to sales.
+- You want inbound conversion from your website.
+
+For self-serve or product-led companies, not having pricing often reduces trust and lowers conversion.
+
+## A good compromise
+
+If you’re not ready to publish exact pricing, you can still give buyers useful signals:
+
+- “Plans start at $99/month”
+- “Typical customers pay $500–$2,000/month”
+- “Free plan available”
+- “Usage-based pricing based on seats/events/API calls”
+- “Contact us for enterprise pricing”
+- A pricing range or calculator
+- A comparison of tiers without exact prices
+
+This helps visitors self-qualify without locking you into a perfect pricing model.
+
+## Rule of thumb
+
+If your customer asks, “Can I afford this?” before they ask, “Can I talk to sales?”—you probably need a pricing page.
+
+If your customer asks, “Can this be customized for our organization?” before they ask about price, a contact-sales approach may be fine.
+
+So: launching without a pricing page isn’t automatically a mistake, but launching without any pricing signal often is.

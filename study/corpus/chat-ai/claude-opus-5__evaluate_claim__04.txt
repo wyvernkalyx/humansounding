@@ -1,0 +1,19 @@
+Treat it as a fact about their best case study, not a forecast about you. Vendors don't fabricate these numbers usually — they find the customer where the number was true and generalize outward. So the first question is what that customer looked like.
+
+**Half of what?** A 50% cut from a chaotic 12-week onboarding is very believable. A 50% cut from a tight 3-week onboarding is not, because what's left at that point is mostly irreducible: learning the domain, building relationships, getting enough context to make judgment calls. Tools don't compress that. So the claim implicitly tells you their reference customer was probably in bad shape at the start. If you're already decent, the ceiling on improvement is much lower.
+
+**Onboarding measured how?** This is where the number usually hides. Time-to-first-commit, time-to-quota, time-to-completion-of-required-training, and time-to-full-productivity are wildly different metrics, and the last one is the only one that matters much. If they halved "time to complete compliance modules," congratulations, that was never your bottleneck.
+
+**What else changed at the same time?** Companies that buy an onboarding tool are usually already in the middle of fixing onboarding — they've assigned someone to own it, written documentation, restructured the first-week schedule. The tool gets credit for the whole intervention. Ask what else the reference customer did concurrently. If the vendor doesn't know, that's informative on its own.
+
+A few things worth asking directly:
+
+- Can I talk to a customer who's similar to us in size and starting maturity — not your best result, your median one?
+- What does implementation actually cost in our people's time, and who maintains the content after launch?
+- What's your renewal rate, and what's the most common reason customers leave?
+
+That last one is useful mostly for the quality of the dodge.
+
+The thing I'd do before any of this: figure out where your onboarding time actually goes right now. Not estimates — go ask three recent hires what they were blocked on and for how long. It's remarkably common to discover that a big chunk is laptop provisioning, access requests sitting in someone's queue, or a manager who was traveling the first week. None of that gets fixed by a content platform, and you'd be buying a solution to a problem you don't have.
+
+If you do that diagnostic and find that the bottleneck genuinely is "new people can't find information and there's no structured path," then the tool category is plausibly right and it's worth negotiating a pilot with a pre-agreed success metric. If the bottleneck is somewhere else, the 50% claim could be perfectly honest and still irrelevant to you.

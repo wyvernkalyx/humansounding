@@ -1,0 +1,17 @@
+**Subject:** We miss you — see what’s new in your account
+
+Hi {{First Name}},
+
+It’s been a while since your last login, and we’d love to welcome you back.
+
+A lot can happen in 90 days — and there may be new features, updates, or opportunities waiting for you inside your account. Whether you’re picking up where you left off or just taking a quick look around, we’re here to help you get the most out of {{Company/Product Name}}.
+
+**Log back in today and explore what’s new:**  
+{{Login Link}}
+
+Need a hand getting started again? Our team is always happy to help.
+
+Welcome back,  
+The {{Company Name}} Team
+
+**P.S.** If you’ve forgotten your password, you can reset it here: {{Password Reset Link}}

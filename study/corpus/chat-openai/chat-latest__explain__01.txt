@@ -1,0 +1,23 @@
+DNS resolution translates a domain like `www.example.com` into an IP address such as `93.184.216.34`, which your computer can use to connect to the server.
+
+A typical lookup works like this:
+
+1. Your device checks local caches. The browser, operating system, or other local software may already have a recently resolved IP address. If so, DNS lookup can stop there.
+
+2. Your device asks a recursive DNS resolver. This is usually operated by your ISP or a service such as Cloudflare (`1.1.1.1`), Google (`8.8.8.8`), or an organization's internal DNS. The resolver also checks its cache.
+
+3. If the answer isn't cached, the resolver queries a DNS root server. For `www.example.com`, the root doesn't know the final IP address. Instead, it says, roughly, "Ask the `.com` nameservers."
+
+4. The resolver asks a `.com` TLD nameserver. The TLD server responds with the authoritative nameservers responsible for `example.com`.
+
+5. The resolver asks an authoritative nameserver for `example.com`. This server holds the domain's DNS records and might respond that `www.example.com` has an `A` record of `93.184.216.34`, or return another record such as a CNAME that requires further resolution.
+
+6. The resolver returns the answer to your device. Both the resolver and your device can cache it for the record's TTL (time to live), reducing the work needed for subsequent requests.
+
+Conceptually:
+
+`Your computer → recursive resolver → root → .com → example.com authoritative DNS → IP address`
+
+The actual network traffic can be a little more complicated. DNS traditionally uses UDP port 53, switching to TCP when necessary; modern clients may instead use encrypted DNS-over-HTTPS (DoH) or DNS-over-TLS (DoT). IPv4 addresses are stored in `A` records, while IPv6 addresses use `AAAA` records.
+
+One important distinction is that DNS resolution doesn't itself connect you to the website. After obtaining the IP address, your device establishes a connection to that address—typically TCP plus TLS for HTTPS, or QUIC for HTTP/3—and then makes the HTTP request.

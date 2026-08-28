@@ -1,0 +1,51 @@
+Good commitment — it's one of the few things that compounds. Here's what actually determines whether you make it to month twelve.
+
+**Do the volume math first**
+
+Count your reviews from the last 90 days across every platform, divide by 13, and you've got your weekly load. Then be honest about time per reply: a genuine one-off response to a positive review is 3–5 minutes. A negative one is 20–40 minutes once you factor in looking up the order, deciding whether to offer something, and drafting something you won't regret.
+
+Ten reviews a week sounds trivial until two of them are angry and you're doing it on a Friday night. Forty a week is a part-time job. If your number is in the hundreds, "personally" needs redefining before you commit publicly.
+
+**Define "personally" now, in writing, for yourself**
+
+There's a real difference between:
+- You write every word
+- You write the negative ones, someone drafts the positives and you approve
+- You use a skeleton but every reply names something specific from the review
+
+All three are defensible. The failure mode is starting at option one, burning out in March, sliding to boilerplate, and having customers notice — because they do notice. "Thanks for your feedback, we're glad you had a great experience!" fifty times in a row on a public profile reads worse than not replying at all. Pick your tier deliberately and build for it.
+
+**The negative reviews are the entire exercise**
+
+Positive replies are nice. Negative replies are where the money and the risk both live, because your response is read by prospective customers, not the complainer. The complainer has usually moved on. You're writing for the person scrolling reviews at 11pm deciding whether to book you.
+
+That reframe changes the writing. It means:
+- Don't argue facts, even when you're right. "That's not what happened" reads as defensive to everyone except you.
+- Don't over-apologize either. Groveling signals the complaint was probably valid and probably common.
+- Be specific enough to prove you actually read it. "The 40-minute wait on the 14th" beats "your recent experience."
+- Take it offline, but not in sentence one. One-line pivots to "please DM us" look like you're hiding. Address the substance briefly, *then* offer the channel.
+- Never disclose anything about the customer. If you're in healthcare, legal, or anything with confidentiality obligations, even confirming someone was a client can be a violation. Have a standing line for those.
+
+Decide your comp policy in advance — what triggers a refund, a partial, a redo, nothing. Otherwise you'll make it up emotionally, at night, inconsistently, and people will start noticing that the loudest reviewers get free stuff.
+
+**Platform gotchas**
+
+Rules differ and some will get you penalized. Yelp discourages soliciting reviews at all and has hidden businesses for it. Amazon heavily restricts seller-buyer communication. Google lets you reply publicly and edit later. App stores have their own quirks and character limits. Check the terms for each place you'll be replying before you're 200 replies deep in a habit that violates one.
+
+Also: you cannot reply to what you don't see. Set up alerts on every platform including the ones you forgot you're listed on — industry directories, Facebook, Apple Maps, BBB.
+
+**What keeps this alive at month eight**
+
+- **Batch it.** Two fixed slots a week beats "whenever." Reviews aren't urgent; a 48-hour response window is fine and arguably looks more considered than 20 minutes.
+- **Name a backup.** You'll get sick, go on holiday, have a bad month. Decide now who covers and whether that breaks the streak. My take: it doesn't, as long as they're not pretending to be you.
+- **Keep a swipe file, not a template file.** Save your own best replies. Reuse *structures* and *phrases*, not whole paragraphs.
+- **Set a rule for trolls and fakes.** Some reviews shouldn't be answered — flag and move on. Decide the criteria cold, in advance, rather than in the heat.
+- **Watch the emotional tax.** Reading criticism daily has a cumulative effect that most people underestimate. A run of harsh ones can genuinely wreck a week. Some people handle this by reading everything in one sitting rather than as it trickles in.
+
+**Decide what "it worked" means**
+
+Otherwise you'll finish the year with a warm feeling and no idea. Baseline these now: average star rating, review volume per month, percentage of negatives that get amended or updated, and if you can track it, conversion from your Google Business Profile. Reply rate itself is visible to customers on some platforms and is worth logging.
+
+The honest expected outcome: rating creeps up modestly, review volume rises (responding encourages more reviewing), and you learn more about your operational weak points than any survey would have told you. That last one is usually the biggest return and the one nobody plans for — so keep a running tally of recurring complaints. If three people mention the same thing in a quarter, that's a work order, not a reply.
+
+What's your volume roughly, and what business is this? The advice sharpens a lot depending on whether you're a restaurant, a SaaS product, or a dental practice.

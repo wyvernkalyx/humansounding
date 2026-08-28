@@ -1,0 +1,12 @@
+The basic loop is sound—spend, measure, decide—but several things could make six weeks of data misleading:
+
+- “Signups” may be the wrong success metric. Cheap signups can produce poor retention, activation, or revenue. Define the downstream outcome you actually care about.
+- Six weeks is arbitrary unless it gives you enough observations. With low traffic, it may be inconclusive; with high traffic, you might know much sooner. Set a sample-size/confidence target rather than relying only on elapsed time.
+- You need a baseline or comparison. Otherwise you won't know how many signups would have happened organically. Track incrementality where possible, not just ad-attributed conversions.
+- Attribution can lie. Platform-reported conversions may double-count, over-credit ads, or miss delayed conversions. Decide beforehand how you'll attribute signups.
+- One six-week campaign can test the wrong thing. Weak creative, targeting, landing pages, or onboarding could make a viable channel look bad. Plan controlled iterations rather than treating “ads” as one test.
+- Early performance can differ from steady-state performance because of platform learning, audience saturation, novelty, or seasonality.
+- You need decision thresholds before seeing the results. For example: scale if CAC is below $X with acceptable activation/retention; stop above $Y; continue testing in between. Otherwise it's easy to rationalize ambiguous results afterward.
+- Watch economics, not merely conversion volume. CAC should make sense relative to contribution margin/LTV, including the uncertainty in your LTV estimate.
+
+A stronger plan would be: define a qualified conversion, establish your baseline, set CAC and downstream-quality thresholds, estimate the sample size needed, run a few controlled creative/landing-page variants, and use six weeks as a maximum observation window rather than the main criterion for deciding.

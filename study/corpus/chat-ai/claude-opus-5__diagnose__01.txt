@@ -1,0 +1,63 @@
+A predictable, recurring window is actually good news — it's reproducible and usually has a single dominant cause. The first fork in the road is: **is this load, or is something running on a schedule?**
+
+## Step 1: Define "slow" precisely
+
+Before hunting, pin down:
+
+- **Which requests?** All pages, or specific endpoints (login, dashboard, search)?
+- **How slow, at which percentile?** p50 doubling means something different from p99 spiking while p50 is flat (the latter usually means contention, locks, or a subset of unlucky requests).
+- **Server-side or end-to-end?** Compare your server's request duration to real-user monitoring. If server timings are flat but users are slow, look at the network path, CDN, or client-side assets.
+- **Is it 9am in one timezone, or 9am local for each user?** If it tracks a single wall-clock time regardless of where users are, that points to something in your infrastructure. If it follows users' local mornings, it's a load pattern.
+- **How long does it last?** 5 minutes vs. 90 minutes tells you a lot.
+
+## Step 2: Overlay traffic and latency graphs
+
+This is the highest-value 10 minutes you'll spend. Pull up requests/second and response time for the 8:00–10:00 window over the last couple of weeks.
+
+- **Latency rises *with* traffic** → capacity or scaling problem.
+- **Latency rises *before* or *without* traffic** → something scheduled is competing for resources.
+- **Traffic is flat but latency spikes** → almost certainly a background job, cache expiry, or an external dependency.
+
+## If it looks like a scheduled job
+
+Inventory everything that fires around that time:
+
+- Cron jobs, systemd timers, Kubernetes CronJobs, Lambda schedules
+- Nightly/morning batch imports, ETL, report generation, invoice runs
+- Backups and snapshots (these can hammer disk I/O)
+- Database maintenance: vacuum/analyze, index rebuilds, statistics updates
+- Log rotation, antivirus/security scans, patch windows
+- Cache or CDN TTLs that expire on a daily boundary
+- Partner/vendor systems pushing you a daily file
+
+Check the database specifically for long-running queries, lock waits, and blocked sessions during the window. A batch job holding locks or saturating I/O will make normal queries crawl even at modest traffic.
+
+## If it looks like a load spike
+
+Common causes for a business-hours ramp:
+
+- **Login storm.** Password hashing (bcrypt/argon2) is deliberately CPU-expensive. Hundreds of simultaneous logins can pin your CPUs. Session creation and permission-loading on first request add to it.
+- **Cold caches.** If your app caches are empty overnight (or you deploy at 3am), 9am is the first real traffic hitting cold. Everything falls through to the database at once.
+- **Autoscaling lag.** Scale-up isn't instant — metric collection, scaling decision, instance boot, health checks, JIT warmup. You can easily be 5–15 minutes behind a sharp ramp.
+- **Connection pool exhaustion.** Requests queue waiting for a DB connection. Look for pool wait time as a distinct metric; it's often invisible if you only measure query duration.
+- **Third-party dependencies.** Your SSO/identity provider, payment gateway, or analytics vendor is also busiest at 9am. Check the latency of your outbound calls separately.
+- **N+1 queries and unbounded queries** that are tolerable at low concurrency and catastrophic at high concurrency.
+
+## Step 3: Get a trace from inside the window
+
+Metrics tell you *when*; traces tell you *where*. If you have an APM tool (Datadog, New Relic, Honeycomb, Sentry, OpenTelemetry + Jaeger), pull a few slow traces from 9:05am and compare them to the same endpoint at 2pm. The extra time will be sitting in one place: a specific query, an external HTTP call, GC pauses, or queueing before your code even runs.
+
+If you don't have tracing, this is the incident worth installing it for.
+
+## Quick mitigations to consider once you know the cause
+
+- Reschedule or throttle batch jobs; move them off peak or onto a replica
+- Pre-warm caches with a synthetic job at 8:30
+- Use **scheduled** scaling to pre-scale before 8:45 rather than reactive autoscaling
+- Move expensive work off the request path into a queue
+- Add a read replica for reporting queries
+- Raise connection pool limits (carefully — the database has its own ceiling)
+
+---
+
+If you can share what your stack looks like and whether the latency graph rises before or with traffic, I can narrow this down considerably.

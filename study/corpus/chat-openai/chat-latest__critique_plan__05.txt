@@ -1,0 +1,10 @@
+Good direction, but I’d change “see what breaks” into a controlled experiment. Cutting 50% indiscriminately could remove useful coordination along with meeting bloat.
+
+For the quarter:
+- Cancel recurring meetings without a clear owner, agenda, or decision/output.
+- Protect meetings where real-time discussion matters: decisions, complex problem-solving, sensitive conversations, and relationship-building.
+- Replace status/update meetings with async updates by default.
+- Track a few signals before and after: total meeting hours, decision speed, missed handoffs/rework, employee sentiment, and delivery outcomes.
+- Review after 4–6 weeks and restore or redesign only what evidence says you need.
+
+A strong framing for the team is: “We’re aiming to cut meeting time by 50% while maintaining or improving coordination and outcomes.” That makes the goal productivity, rather than simply fewer meetings.

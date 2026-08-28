@@ -1,0 +1,46 @@
+The core difference is legal: a condo owner owns real estate; a co-op owner owns shares in a corporation. Almost every practical difference flows from that.
+
+**What you actually own**
+
+- **Condo:** You get a deed to your unit — typically the interior space, defined by the building's declaration — plus an undivided percentage interest in common elements (roof, lobby, land). It's real property, recorded with the county.
+- **Co-op:** A corporation owns the building. You buy shares allocated to your apartment (more shares for bigger/higher/better units) and receive a *proprietary lease* giving you the right to occupy it. Legally you're a tenant-shareholder holding personal property, not a homeowner in the traditional sense.
+
+**Getting in**
+
+This is often the biggest lived difference. Co-op boards interview buyers and can reject them without stating a reason (they just can't reject for a reason prohibited by fair housing law). Board packages routinely demand tax returns, bank statements, employment verification, and personal and professional reference letters. Many boards impose their own underwriting: a maximum debt-to-income ratio (often 25–30%), minimum post-closing liquidity (often 1–2 years of mortgage plus maintenance in the bank), and a minimum down payment of 20–50%. Some buildings are all-cash.
+
+Condos typically have only a right of first refusal — the board can theoretically buy the unit on the same terms but almost never does, and it issues a waiver in a couple of weeks.
+
+**Financing**
+
+Co-op loans are share loans, not mortgages. Fewer lenders offer them, and closing requires a recognition agreement among you, the lender, and the co-op. Condos use conventional mortgages, but the *building* has to qualify — lenders look at owner-occupancy ratios, reserves, delinquencies, litigation, and whether one entity owns too many units. A non-warrantable condo can be as hard to finance as a restrictive co-op.
+
+**Monthly costs and taxes**
+
+Co-op maintenance looks higher because it bundles in your share of the building's property taxes *and* its underlying mortgage — yes, the corporation itself can carry a mortgage on the whole building, which is a form of leverage you inherit. Under IRC §216, you can deduct your proportionate share of the co-op's mortgage interest and real estate taxes (subject to the usual caps).
+
+Condo common charges cover operations only; you're billed property taxes directly. Both structures can hit you with special assessments.
+
+**Transaction costs**
+
+In New York, co-ops are meaningfully cheaper to buy: no mortgage recording tax (roughly 1.8–1.925% of the loan) and no title insurance, since there's no real property to insure — just a lien search. Condos incur both. On the other hand, co-ops more often charge a flip tax on sale (commonly 1–3%, or a per-share or profit-based formula) that goes to the building's reserves.
+
+**Rules and flexibility**
+
+Co-ops generally restrict subletting heavily — some ban it, many allow it only after a couple of years of residence and only for a limited period. Pied-à-terres, purchases in an LLC or trust, parents buying for a child, and foreign buyers with no U.S. credit history are frequently disfavored or forbidden. Renovations require an alteration agreement and board sign-off.
+
+Condos are far friendlier to investors, second-home buyers, and international purchasers, which is precisely why new construction is almost always condo.
+
+**Governance and exposure to neighbors**
+
+Co-op boards have wide latitude — in New York, courts defer to them under the business judgment rule, and a co-op can in extreme cases terminate a shareholder's lease for objectionable conduct. Also, because the corporation owes taxes and debt service regardless, shortfalls from non-paying shareholders get spread across everyone else. Condo unpaid common charges become a lien on the unit, but that lien often sits behind the first mortgage, so collection can be slow.
+
+**Selling**
+
+A condo has a wider buyer pool and a faster, more predictable close. A co-op sale can die at the board stage after months of work, and the restrictions compress the price — in Manhattan, comparable co-ops often trade at a noticeable discount per square foot to condos.
+
+---
+
+**The trade-off in one line:** co-ops are cheaper to buy and to close on, and the screening tends to produce financially stable, owner-occupied buildings; condos cost more but give you control, liquidity, and the freedom to rent, renovate, or sell without asking permission.
+
+Two caveats: co-ops are concentrated in New York City (with pockets in Chicago, D.C., and a few other markets) and are rare elsewhere, so in most of the country the question doesn't arise. And there are hybrids — condops, land-lease buildings, income-restricted HDFC co-ops — where the economics differ substantially. Before committing to either, have a real estate attorney read the offering plan or declaration, the bylaws, the house rules, and the last two years of board minutes and financials.

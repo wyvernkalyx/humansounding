@@ -1,0 +1,67 @@
+# How a Bill Becomes Law in the United States
+
+## 1. Introduction
+
+Only a member of Congress can formally introduce a bill, though the ideas often come from constituents, interest groups, the White House, or executive agencies. A representative drops the bill in the "hopper" in the House; a senator introduces it from the floor. It receives a number (H.R. 1234 or S. 1234) and is printed.
+
+One constitutional wrinkle: bills raising revenue must originate in the House (Article I, Section 7).
+
+## 2. Committee Referral
+
+The bill is referred to the standing committee (sometimes several) with jurisdiction over its subject — Ways and Means for tax bills, Armed Services for defense, and so on. Committees often pass bills to subcommittees, which may:
+
+- Hold **hearings** with expert witnesses, agency officials, and stakeholders
+- Conduct a **markup**, debating and amending the text line by line
+- **Report** the bill to the full chamber with a written report explaining it
+
+This is where most legislation dies. Thousands of bills are introduced each Congress; only a few hundred become law. A committee chair can simply decline to act. The House has a **discharge petition** (218 signatures) to force a bill out of committee, but it succeeds only rarely.
+
+## 3. Floor Consideration
+
+**In the House**, the Rules Committee — effectively an arm of the majority leadership — sets the terms of debate: how long, and which amendments (if any) may be offered. A "closed rule" bars amendments entirely. Alternatively, noncontroversial bills can pass under "suspension of the rules," which requires a two-thirds vote but limits debate. The House is fundamentally majoritarian: a determined majority can pass what it wants.
+
+**In the Senate**, procedure is far more permissive. Most business runs on unanimous consent agreements. Debate is generally unlimited, which gives rise to the **filibuster**: ending debate requires invoking cloture, which takes 60 votes. In practice, this means most significant legislation needs a 60-vote supermajority. Key exceptions include **budget reconciliation** bills, which pass by simple majority but are restricted (by the "Byrd rule") to provisions with direct budgetary effects.
+
+Each chamber then votes. Simple majority passes.
+
+## 4. Reconciling the Two Chambers
+
+The House and Senate must pass **identical text**. If their versions differ, they can:
+
+- Have one chamber simply accept the other's version
+- **"Ping-pong"** amendments back and forth between chambers
+- Convene a **conference committee** of members from both chambers to negotiate a compromise. The resulting conference report goes back to each chamber for an up-or-down vote — no amendments allowed.
+
+Conference committees were once standard but have become less common; leadership-brokered negotiations and ping-ponging now dominate.
+
+## 5. Presidential Action
+
+Once identical text passes both chambers, it goes to the President, who has four options:
+
+| Action | Result |
+|---|---|
+| **Sign** the bill | Becomes law |
+| **Veto** it | Returned to Congress with objections |
+| **Take no action for 10 days** (Sundays excluded) while Congress is in session | Becomes law without a signature |
+| **Take no action** when Congress adjourns within that 10-day window | **Pocket veto** — the bill dies and cannot be overridden |
+
+Congress can **override a regular veto** with a two-thirds vote in *both* chambers — a high bar that succeeds roughly 4% of the time historically.
+
+Note that the President must accept or reject the bill as a whole. The Line Item Veto Act of 1996 was struck down as unconstitutional in *Clinton v. City of New York* (1998).
+
+## 6. After Enactment
+
+The new law receives a public law number (e.g., P.L. 118-42), is published in the *Statutes at Large*, and is codified into the *U.S. Code*. Executive agencies then typically write implementing regulations through the rulemaking process, and courts may later interpret the statute or rule on its constitutionality.
+
+---
+
+## How It Actually Works
+
+The textbook version above is accurate but incomplete. In practice:
+
+- **Party leadership dominates.** The Speaker and Senate Majority Leader control the agenda; bills opposed by leadership usually never see a vote regardless of their support.
+- **Omnibus packages are the norm.** Rather than passing dozens of individual bills, Congress increasingly bundles legislation into massive must-pass vehicles — appropriations packages, the annual National Defense Authorization Act — often negotiated by a handful of leaders and voted on with little time for review.
+- **The 60-vote Senate threshold is the central chokepoint.** Much major legislation of the past two decades either passed through reconciliation, was attached to must-pass bills, or died in the Senate.
+- **Deadlines drive action.** Government shutdown threats and expiring authorizations do more to force votes than any other mechanism.
+
+If you'd like, I can go deeper on any particular stage — the filibuster and cloture, the reconciliation process and Byrd rule, or how appropriations differ from authorizing legislation.

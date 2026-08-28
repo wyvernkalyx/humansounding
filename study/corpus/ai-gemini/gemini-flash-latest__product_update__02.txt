@@ -1,0 +1,58 @@
+Here is a customizable product update template you can use for an email, blog post, or knowledge base article, followed by a shorter in-app notification version.
+
+---
+
+### Option 1: Full Email / Blog Post Announcement
+
+**Subject:** Important update: Sunsetting our integration with **[Integration Name]** on **[Date]**
+
+Hi **[First Name / Customer]**,
+
+At **[Company Name]**, we are constantly working to improve our platform’s performance, security, and overall user experience. As our product evolves, we occasionally need to retire older features to make room for faster, more reliable, and modern solutions.
+
+Today, we are writing to let you know that we will officially be sunsetting our integration with **[Integration Name]** on **[Final Sunset Date, e.g., November 1, 2024]**. 
+
+### Why is this happening?
+**[Choose one or customize: *e.g., The current integration relies on legacy APIs that no longer meet our performance and security standards / The vendor has discontinued support for this version / We are shifting our focus to deeper integrations with modern tools.*]**
+
+### What does this mean for you?
+* **Until [Date]:** The integration will continue to work as normal.
+* **On [Date]:** Data will no longer sync between **[Company Name]** and **[Integration Name]**. 
+* **Your Data:** Any historical data already synced to your **[Company Name]** account will remain safe and accessible. 
+
+### What should you do next?
+To ensure your workflows aren't interrupted, we recommend transitioning to an alternative solution before **[Date]**:
+
+1. **Use our new [Alternative Integration / v2 Integration]:** We recently launched **[Name of New Tool/Integration]**, which offers **[mention 1-2 benefits, e.g., real-time syncing and automated mapping]**. You can set it up here: **[Link to Setup Guide]**.
+2. **Alternative Workaround:** You can also use **[e.g., Zapier / CSV export / Webhooks]** to keep your data flowing seamlessly. 
+
+### Key Dates & Timeline
+* **[Date]:** Announcement and deprecation notice (today).
+* **[Date]:** End of active support and bug fixes for this integration.
+* **[Date]:** Complete shut-off. The integration will stop functioning.
+
+### We’re here to help
+We know workflow changes can be disruptive, and we want to make this transition as smooth as possible. If you need help migrating your data or setting up an alternative, please check out our **[Migration Guide]** or reach out to our team at **[Support Email / Link]**.
+
+Thank you for your understanding as we continue to build a better **[Company Name]**.
+
+Best regards,  
+**[Your Name / The Product Team]**  
+**[Company Name]**
+
+---
+
+### Option 2: Short In-App Notification / Banner
+
+**Title:** Deprecation Notice: **[Integration Name]** will be sunset on **[Date]**
+
+> **Body:** 
+> Starting on **[Date]**, our integration with **[Integration Name]** will no longer be supported and will stop syncing data. To avoid disruption to your workflow, we recommend switching to our **[New Integration Name / Alternative Method]**. 
+>
+> **[Read the Migration Guide]** | **[Dismiss]**
+
+---
+
+### Tips before sending:
+* **Give ample notice:** Standard SaaS practice is to give **30 to 90 days** notice depending on how critical the integration is to daily operations.
+* **Segment your audience:** If possible, send this notification *only* to active users of that specific integration to avoid confusing other customers.

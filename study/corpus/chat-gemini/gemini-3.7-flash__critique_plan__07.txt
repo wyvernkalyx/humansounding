@@ -1,0 +1,52 @@
+A **20% margin is a great health indicator, but it is incomplete as a sole trigger for expansion.** 
+
+Using margin alone is one of the most common traps in multi-unit scaling. A business can have a 20% margin and still fail when opening a second location. 
+
+Here is why that trigger is incomplete, what to clarify first, and the full scorecard you should use instead.
+
+---
+
+### 1. Clarify Which "20% Margin" You Mean
+* **Gross Margin (Revenue - Cost of Goods Sold):** If your *gross* margin is 20%, **do not expand.** You do not have enough cushion to cover operating overhead.
+* **Operating / EBITDA Margin (Profit before taxes/interest):** A 20% EBITDA margin is healthy in almost any brick-and-mortar or retail business.
+* **Duration:** Has it hit 20% for **12 consecutive months**? Seasonal spikes or early honeymoon periods can artificially inflate margins.
+
+---
+
+### 2. Why Margin Alone is Dangerous
+Opening Location #2 does not simply double your profits—it often halves the owner’s attention and introduces new fixed overhead. Location #2 commonly fails because:
+
+1. **Unit #1 decays:** The founder shifts focus to Location #2, and Location #1's service, quality, and margins drop.
+2. **Cash crunch:** Margin is an accounting metric, not cash in the bank. Location #2 will burn cash during build-out, launch, and ramp-up.
+3. **Founder dependency:** Success at Location #1 was driven by the founder's presence/charisma, not a repeatable system.
+
+---
+
+### 3. A Better Expansion Trigger Scorecard
+Instead of a single metric, use a **4-pillar gate** before signing a lease on Location #2:
+
+#### Pillar A: Financial Readiness (The Numbers)
+* [ ] **Sustained Profitability:** Location #1 has maintained a healthy net/EBITDA margin for at least **12 to 18 consecutive months** (surviving all seasonal dips).
+* [ ] **Self-Funded Buffer:** You have enough cash to cover the Capex for Location #2 **plus** 6 months of operating losses for Location #2, *without* draining Location #1’s emergency fund.
+* [ ] **Predictable Payback:** You know your Unit Economics (Customer Acquisition Cost, Average Ticket, Breakeven Timeline).
+
+#### Pillar B: Operational Independence (The "Hit by a Bus" Test)
+* [ ] **Owner-Independent:** Can the founder take a 3-week vacation with zero phone calls, and Location #1 still hits its 20% margin?
+* [ ] **General Manager in Place:** Location #1 has a fully trained GM who has a financial incentive to maintain performance.
+* [ ] **Documented SOPs:** Standard Operating Procedures exist in writing/video for opening, closing, inventory, training, customer service, and food/product preparation.
+
+#### Pillar C: Supply Chain & Vendor Leverage
+* [ ] **Replicable Supply Chain:** Can your current suppliers serve the new location at the same or better wholesale pricing?
+* [ ] **Tech Stack:** POS, inventory management, scheduling, and accounting software can manage multi-unit reporting under a single dashboard.
+
+#### Pillar D: Talent Pipeline
+* [ ] **Bench Strength:** You already know who from Location #1 is being promoted to help launch Location #2. (Never open Location #2 with a 100% brand-new staff).
+
+---
+
+### Recommended Next Step
+Refine your rule from:
+> *"We expand when Location 1 clears a 20% margin."*
+
+To:
+> *"We expand when Location 1 sustains a **15–20% EBITDA margin for 12 months**, operates **without founder day-to-day involvement**, and we have the **Capex + 6 months of operating cash reserve** fully funded."*

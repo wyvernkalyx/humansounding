@@ -1,0 +1,38 @@
+Strong instinct, but I’d frame it as a controlled experiment rather than “cut meetings by half and see what breaks.”
+
+Reactions:
+
+1. **Good goal: meeting load is usually undertaxed**
+   A lot of recurring meetings exist because no one has killed them yet. Cutting by 50% can force better writing, clearer ownership, and fewer status rituals.
+
+2. **Risk: “see what breaks” can create avoidable confusion**
+   Some meetings are load-bearing: decision forums, cross-functional coordination, 1:1s, escalation paths, planning checkpoints. If those vanish without replacement, the breakage may show up as delays, duplicated work, or misalignment rather than obvious failure.
+
+3. **Better version: cut deliberately**
+   I’d classify meetings into:
+   - **Kill:** pure status updates, low-attendance recurring meetings, meetings with no decisions.
+   - **Replace with async:** updates, dashboards, docs, decision logs.
+   - **Shorten:** 60 → 30 minutes, 30 → 15 minutes.
+   - **Keep/protect:** decision-making, customer-critical coordination, team health/1:1s, high-ambiguity work.
+
+4. **Set rules for meetings that survive**
+   For example:
+   - Every meeting needs an owner, purpose, agenda, and desired outcome.
+   - No agenda = cancel.
+   - Default to 25/50 minutes.
+   - Decisions captured in writing.
+   - Recurring meetings expire after the quarter unless renewed.
+
+5. **Measure what matters**
+   Track before/after:
+   - Meeting hours per person.
+   - Cycle time / decision latency.
+   - Missed deadlines or escalations.
+   - Employee sentiment.
+   - Manager/IC focus time.
+   - Customer or operational misses.
+
+6. **Communicate the “replacement system”**
+   If you remove meetings, people need to know where information lives and how decisions happen. Otherwise they’ll recreate meetings informally.
+
+My take: **yes, cut aggressively — but don’t just remove meetings. Replace them with clearer written updates, explicit decision rights, and lightweight escalation paths.** The best outcome is not fewer meetings by itself; it’s fewer meetings with no loss of alignment or speed.

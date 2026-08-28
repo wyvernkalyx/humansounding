@@ -1,0 +1,17 @@
+Software estimates are almost always wrong because software development is partly an exercise in discovering what needs to be built and how to build it. An estimate tries to predict the outcome before much of that discovery has happened.
+
+The main reasons are:
+
+- Requirements are incomplete or change. Users, stakeholders, and developers learn things once they see working software.
+- Novel work is uncertain. If a team has solved exactly the same problem before, it can estimate reasonably well—but then the work is often reusable rather than new development.
+- Hidden complexity appears during implementation. Integrations, legacy behavior, performance constraints, security requirements, and edge cases can turn apparently small tasks into large ones.
+- Tasks interact. A delay in one component can block several others, so errors don't simply average out.
+- People aren't interchangeable. Familiarity with the codebase, domain knowledge, interruptions, reviews, and collaboration all affect delivery time.
+- Estimates often become commitments. Once someone hears "two weeks," uncertainty gets forgotten and the number becomes a deadline. Teams may also be pressured to produce the number stakeholders want.
+- Small estimation errors compound. A project containing dozens of uncertain tasks can end up far from the original forecast.
+
+There is also a statistical problem: development time tends to have an asymmetric distribution. A task estimated at three days might unexpectedly take thirty, but it can't unexpectedly take minus twenty-four days. Surprises therefore tend to push schedules later more dramatically than earlier.
+
+That doesn't make estimation useless. It means estimates should be treated as forecasts rather than promises. Ranges and probabilities—such as "70% chance of finishing in 4–6 weeks"—communicate reality better than "it will take five weeks." Estimates also become substantially better when work is broken into small pieces and forecasts are continually updated using actual delivery data.
+
+So "software estimates are always wrong" is slightly overstated. The useful principle is: precise estimates made early are almost certainly inaccurate, while continuously revised probabilistic forecasts can still be very useful for planning.

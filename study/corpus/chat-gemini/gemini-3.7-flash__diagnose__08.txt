@@ -1,0 +1,36 @@
+**Believe Support.** 
+
+When it comes to the *current, real-world state* of a product, Support lives in reality, while Sales lives in optimism. 
+
+However, the complete truth usually sits somewhere in the middle once you understand the incentives and cognitive biases of both teams.
+
+---
+
+### Why Support is usually right about it being "broken"
+* **They see the edge cases and scale:** Support deals with real users trying to do real work, not controlled demos on high-speed Wi-Fi.
+* **No incentive to lie:** Support gains nothing by claiming a product is broken; in fact, a broken product makes their jobs harder, increases ticket volume, and leads to burnout.
+* **They know the friction points:** Even if a feature technically "works," if 40% of users can’t figure out how to use it without submitting a ticket, Support considers it broken (and practically speaking, it is).
+
+### Why Sales says it is "fine"
+* **They sell the "Happy Path":** Sales demonstrates the product under ideal conditions where everything goes right. 
+* **They sell the roadmap:** Sales is often thinking about what the product *will* be in the next release, not the bugs in the current build.
+* **Incentive bias:** Sales is measured on closed deals. Acknowledging technical flaws works directly against their compensation.
+
+---
+
+### The Caveat: Support's Blind Spot
+While Support is more technically accurate, beware of **selection bias**. 
+Support *only* hears from unhappy, confused, or blocked users. They rarely see the thousands of users who logged in, did their work without an issue, and logged out. Support can sometimes make a minor bug that affects 1% of users sound like a catastrophic company-ending failure because those are the only people yelling at them.
+
+---
+
+### How to Find the Objective Truth
+To get the real story, ask these three questions:
+
+1. **Ask Support for data, not feelings:** *"How many tickets have been filed about this specific issue this month, and what is the workaround?"*
+2. **Look at churn and retention data:** Are customers actually cancelling or demanding refunds because of this issue? If yes, it’s broken.
+3. **Ask Engineering or Product:** Ask them, *"If a customer uses this feature under heavy load or non-standard conditions, what actually happens?"*
+
+**The Rule of Thumb:** 
+* Believe **Sales** for what the product is *capable of achieving* in an ideal world.
+* Believe **Support** for what will happen when a normal human tries to use it on a Tuesday morning.

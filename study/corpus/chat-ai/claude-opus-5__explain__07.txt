@@ -1,0 +1,31 @@
+## The core problem: perishable inventory
+
+An airline seat is like a fresh fish — it has value right up until the moment the plane pushes back from the gate, and then it's worth exactly zero. That seat can never be sold again. Meanwhile, the cost of flying one more passenger who's already booked is tiny (a bit of fuel, a soda, maybe a checked bag handled). So the revenue from filling a seat is almost pure profit, while an empty seat is pure loss.
+
+## Why seats go empty: no-shows
+
+A meaningful fraction of ticketed passengers simply don't board — historically around 5–15% depending on the route, and much higher on some business-heavy short-haul routes. This happens because:
+
+- **Flexible and refundable fares** are held disproportionately by business travelers, whose plans change constantly. Someone holding a fully refundable ticket has little reason to cancel in advance.
+- **Missed connections** upstream mean passengers never arrive to take the second leg.
+- **Duplicate bookings**, illness, traffic, and ordinary life get in the way.
+
+If an airline sold exactly 180 seats on a 180-seat aircraft, it would routinely fly with 10–20 empty seats it could have sold.
+
+## The economics of the tradeoff
+
+Airlines run statistical models — revenue management systems — that predict no-show rates by route, day of week, season, departure time, and fare class. They then sell a calculated number of extra seats, pushing the overbooking level until the **expected marginal revenue from one more sale equals the expected marginal cost of having to bump someone.**
+
+That bumping cost is usually modest. Airlines first solicit volunteers at the gate with vouchers or cash, effectively running a small auction. Because some passengers genuinely have flexible schedules and a low value on their time, volunteers can often be found for a few hundred dollars — far less than the revenue from several extra tickets sold across many flights.
+
+There's a bonus wrinkle: when a passenger with a **nonrefundable** ticket no-shows, the airline keeps that fare *and* can sell the seat again. That seat generates revenue twice.
+
+## Downstream effects
+
+Overbooking raises average load factors, which in a competitive, thin-margin industry translates into somewhat lower fares than would otherwise prevail. It also means passengers with cheap tickets are subsidized, in a sense, by the system's ability to recycle no-show inventory.
+
+## Limits and pushback
+
+Not every airline does it. Carriers with entirely nonrefundable, restrictive fares see far fewer no-shows — Ryanair, for instance, doesn't overbook, and JetBlue long avoided it as a brand promise.
+
+Regulation also caps the upside. In the U.S., involuntary denied boarding triggers mandatory cash compensation scaled to the delay (up to a statutory maximum), and the EU's Regulation 261/2004 imposes similar duties. After the widely publicized 2017 United Express incident in which a passenger was forcibly dragged off an aircraft, several U.S. carriers raised their voluntary compensation ceilings dramatically and shifted toward soliciting volunteers earlier — at check-in rather than at the gate — precisely because the reputational cost of a bad bump turned out to be much larger than the models had assumed.

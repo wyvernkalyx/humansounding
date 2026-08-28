@@ -1,0 +1,62 @@
+For most small offices, moving to a four-day workweek is **worth it**, but with one major caveat: **it depends entirely on how dependent your business is on real-time client availability.**
+
+Because small businesses often lack the massive redundancy of large corporations, the transition carries unique advantages and specific risks. 
+
+Here is a breakdown of whether it makes sense for your small office, the models you can use, and how to decide.
+
+---
+
+### The Big Advantages for a Small Office
+
+1. **Unbeatable Recruiting & Retention Advantage**
+   Small businesses rarely compete with corporate giants on base salary or massive benefit packages. A four-day week is an incredible talent magnet that costs you zero additional payroll dollars.
+2. **Productivity Forcing-Function**
+   Data from global trials (like *4 Day Week Global*) shows that 90%+ of companies maintain or increase revenue. Why? Because teams are forced to eliminate low-value tasks: shortening 60-minute meetings to 15 minutes, cutting down on internal email loops, and automating repetitive tasks.
+3. **Reduced Burnout and Absenteeism**
+   Employees with three-day weekends use their extra day for doctor appointments, errands, and genuine rest. They show up Monday fully recharged, which drastically cuts down on unplanned sick days.
+
+---
+
+### The Unique Risks for Small Offices
+
+1. **The "Coverage" Problem**
+   If you have a 5-person team and a client calls on a Friday morning with an emergency, a completely closed office might lead to lost business. 
+2. **Single Points of Failure**
+   In a small office, specific people often hold exclusive knowledge of certain tasks (e.g., "Only Sarah knows how to run payroll"). If Sarah is off and work compresses into four days, covering for planned vacations or illness becomes tighter.
+3. **Stress Compression**
+   If you don't actively reduce the workload or streamline processes, you risk squeezing 40 hours of chaos into 32 hours, increasing daily stress rather than reducing it.
+
+---
+
+### Which Model Fits Your Office?
+
+Don't assume there is only one way to do it. The three most common formats are:
+
+| Model | How it Works | Best For... |
+| :--- | :--- | :--- |
+| **Standard 100-80-100** *(Recommended)* | 100% pay, 80% time (32 hours), 100% output. Entire office takes Friday (or Monday) off. | Project-based work, agencies, tech, internal operations. |
+| **Staggered Coverage** | Half the team works Mon–Thu; the other works Tue–Fri. Office stays open 5 days. | Client-facing offices, customer support, clinics. |
+| **The 9-Day Fortnight** | Employees get every *other* Friday off (working 9 days every two weeks). | A conservative stepping-stone if a full 4-day week feels too risky. |
+
+*(Note: Avoid the **4x10-hour day** model if possible. Studies show that 10-hour days lead to fatigue, higher error rates, and diminished returns after hour seven).*
+
+---
+
+### A Checklist: Is Your Small Office Ready?
+
+Ask yourself these four questions:
+
+* [ ] **Are we output-focused rather than "hours-logged" focused?** (Can you define what a successful week looks like in terms of results rather than desk time?)
+* [ ] **Can our clients tolerate asynchronous communication?** (If a non-urgent email comes in on Friday, is Monday morning response acceptable?)
+* [ ] **Can we cross-train staff?** (Are team members willing and able to cover basic functions for one another?)
+* [ ] **Are we willing to kill useless meetings?** (Are you ready to audit calendars and eliminate "status update" meetings?)
+
+---
+
+### Recommended Next Step: Run a 3-Month Pilot
+
+Do not make this a permanent policy change immediately. 
+
+1. **Set clear metrics:** Define what success looks like (e.g., revenue stays flat/grows, client response times stay under $X$ hours, error rates don't spike).
+2. **Announce a 90-day trial:** Tell the team, *"We are testing this for three months. If output stays at 100%, we will keep it. If productivity drops, we will return to five days."*
+3. **Review and adjust:** At the end of 90 days, survey both your employees (stress levels, work satisfaction) and review business performance.

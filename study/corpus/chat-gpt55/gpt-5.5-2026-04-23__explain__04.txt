@@ -1,0 +1,38 @@
+Compound interest means you earn interest not only on your original money, but also on the interest that has already been added.
+
+For example, suppose you invest $1,000 at 10% annual interest:
+
+- After 1 year: you earn $100, so you have $1,100.
+- After 2 years: you earn 10% on $1,100, not just the original $1,000, so you earn $110. Now you have $1,210.
+- After 3 years: you earn 10% on $1,210, giving you $1,331.
+
+The amount grows faster over time because the “base” earning interest keeps getting larger.
+
+A simple formula for compound interest is:
+
+\[
+A = P(1 + r)^t
+\]
+
+where:
+
+- \(A\) = final amount
+- \(P\) = starting principal
+- \(r\) = interest rate per period
+- \(t\) = number of periods
+
+So if you invest $1,000 at 10% for 10 years:
+
+\[
+1000(1.10)^{10} \approx 2594
+\]
+
+You would end up with about $2,594.
+
+Compound interest surprises people because growth starts slowly, then accelerates. In the early years, the gains may seem modest. But later, the accumulated interest itself begins generating large amounts of new interest. This creates a snowball effect.
+
+It also surprises people because humans tend to think linearly. We often expect things to grow by the same amount each year. But compound interest grows exponentially: the increase itself keeps increasing.
+
+This can work in your favor with investments and savings, especially over long periods. But it can also work against you with debt, such as credit cards, where interest can accumulate quickly if balances are not paid off.
+
+In short: compound interest is powerful because time turns small repeated growth into large results.

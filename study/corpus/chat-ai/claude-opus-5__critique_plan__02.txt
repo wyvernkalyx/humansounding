@@ -1,0 +1,54 @@
+Working blind on channel, budget, price point, and sales cycle — so some of these may not apply. The big ones first.
+
+## The plan's core weakness is "decide from there"
+
+**You haven't pre-specified the decision rule.** If you don't write down *before* launch what number means "scale," what means "kill," and what means "iterate," you'll interpret whatever you get through the lens of how much you want it to work. Six weeks of spend and effort creates enormous pressure to find a reason to continue. Write the thresholds down now, while you're neutral.
+
+**Related: "decide" implies a binary, but there are at least four outcomes** — scale, kill the channel, kill this *execution* and retry, or extend the test. The most likely result is ambiguity. Decide now what ambiguity means.
+
+## Signups are probably the wrong metric
+
+- **Signups are cheap to buy and easy to fake out.** Ad platforms optimize toward whoever clicks — offer a free trial and you'll get tire-kickers. A great signup number with terrible downstream conversion is worse than no test, because it tells you to scale something unprofitable.
+- **The metric that matters is CAC against value** — activation, retention, or revenue. If your sales cycle is longer than a few weeks, no one who signs up during the test will have converted by the time you decide. You need a *leading* indicator you've validated against real outcomes, or a maturation window after the ads stop.
+- **Week-6 signups are the least informative ones you'll have** on decision day. Consider ending spend at week 4-5 and letting the cohort age.
+
+## No counterfactual
+
+Without a baseline or holdout, you can't distinguish incremental signups from ones you'd have gotten anyway. This matters more than people expect:
+
+- Paid search often cannibalizes organic and branded traffic you already owned.
+- Platform-reported conversions systematically overstate — attribution windows, view-through credit, iOS and consent-mode gaps.
+- At minimum, capture 6-8 weeks of clean pre-period baseline. Better: hold out geos or run an on/off pattern so you have a within-test comparison.
+
+## The math on six weeks may not work
+
+Six weeks is a calendar-shaped number, not a statistics-shaped one. Two failure modes:
+
+- **Underpowered.** Most ad platforms need ~50 conversions per ad set per week to exit the learning phase. If your budget yields 8 signups a week, you'll finish with ~50 total, a huge confidence interval, and no real signal. Do this arithmetic before you spend: expected signups = budget ÷ guessed CPA. If the number is small, you're buying noise.
+- **Overpowered.** If you'll get 400 signups a week, you'd know in ten days and the remaining month is just money.
+
+**Also: which six weeks?** Holidays, B2B summer and December dead zones, a competitor's launch, your own PR spike — any of these contaminate the read.
+
+## Confounds and execution risk
+
+- **One creative + one audience + one landing page = you're testing that combination, not "ads."** A null result won't tell you which link failed. But splitting a small budget across twelve variants gives you twelve underpowered tests. Pick the level of granularity your budget can actually support.
+- **The landing page is usually the bottleneck**, not the ads. If it converts at 1%, no creative saves you, and you'll wrongly blame the channel.
+- **Tracking breaks silently.** The classic failure is discovering in week 4 that conversion events never fired. Verify end-to-end with test traffic before you spend a dollar, and check daily for the first week.
+- **Mid-flight fiddling resets the learning phase.** Decide in advance what you're allowed to change and what's frozen.
+
+## Two more
+
+**A successful test doesn't prove a scalable channel.** CAC curves bend upward — the first $3k buys your cheapest, highest-intent audience. Results at test budget rarely survive a 10x scale.
+
+**What's the decision actually worth?** If you'll run ads regardless because you have no other channel, or you'll quit regardless because you can't afford them, the test is theater. Spend the money on execution instead.
+
+## How I'd tighten it
+
+1. Write the decision table now: `CAC under $X → scale; $X–$Y → iterate on [specific thing]; over $Y → kill.`
+2. Pick the metric closest to money you can observe inside the window; validate one leading indicator against it.
+3. Back into budget from statistical power, not the other way around.
+4. Establish baseline and a holdout before day one.
+5. Verify tracking with live test traffic.
+6. Set a week-2 checkpoint with a pre-defined abort condition — but only for catastrophic failure, not soft signals.
+
+Three things that would sharpen this considerably: what's the budget, what's the time from signup to revenue, and what decision changes based on the result?

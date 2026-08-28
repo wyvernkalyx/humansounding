@@ -1,0 +1,240 @@
+Here are the holes I’d poke in a “run ads for six weeks, measure signups, decide from there” plan:
+
+## 1. “Signups” may be the wrong success metric
+
+Signups are easy to measure, but they may not equal business value.
+
+Questions:
+
+- Do signups activate?
+- Do they become paying customers?
+- Do they retain?
+- Do they refer others?
+- Are paid-ad users lower quality than organic users?
+
+If you optimize purely for signups, you may accidentally buy cheap, low-intent users.
+
+Better: define a funnel metric like:
+
+- Cost per activated user
+- Cost per qualified lead
+- Cost per trial-to-paid conversion
+- CAC vs expected LTV
+- Payback period
+
+## 2. Six weeks may be too short or too long
+
+Six weeks sounds reasonable, but it depends on your funnel.
+
+Too short if:
+
+- Users take weeks/months to convert.
+- You need enough volume for statistical confidence.
+- You need time to test creative, targeting, and landing pages.
+- Attribution windows are long.
+
+Too long if:
+
+- You are spending meaningfully with no early signal.
+- Tracking is broken.
+- Your offer/landing page is clearly not converting.
+
+Better: set interim checkpoints after week 1, 2, and 4, not just a final six-week review.
+
+## 3. You may not know whether ads caused the signups
+
+If you simply compare signups during the ad period, you may confuse correlation with causation.
+
+Problems:
+
+- Organic traffic may have increased anyway.
+- Seasonality may affect demand.
+- PR, referrals, email, SEO, or sales activity may influence signups.
+- Some users may click an ad but would have signed up regardless.
+
+Better: use some combination of:
+
+- Holdout/control geography or audience
+- Pre/post baseline comparison
+- Branded vs non-branded campaign separation
+- Incrementality testing where possible
+- Clear attribution rules
+
+## 4. Tracking can easily mislead you
+
+Ad platforms often overclaim conversions. Analytics tools can undercount or misattribute. iOS/privacy changes can distort results.
+
+Before spending, confirm:
+
+- Pixel/conversion tracking works.
+- UTM parameters are consistent.
+- Signup events are firing once per user.
+- You can connect ad source to later activation/revenue.
+- You have a dashboard everyone trusts.
+- You can distinguish new users from existing users.
+
+If tracking is weak, your six-week test may produce false confidence.
+
+## 5. No clear decision threshold
+
+“Decide from there” is vague. Decide what, based on what?
+
+You need predefined rules such as:
+
+- Scale if CAC is below $X and activation rate is above Y%.
+- Iterate if CAC is promising but landing-page conversion is below target.
+- Pause if spend exceeds $X with fewer than N qualified signups.
+- Continue testing if results are inconclusive but improving.
+
+Without thresholds, you risk rationalizing whatever result you get.
+
+## 6. Budget size matters more than calendar length
+
+A six-week test with $300 total spend may tell you almost nothing. A six-week test with $30,000 may be enough to learn a lot.
+
+You need enough budget to get meaningful volume at each stage of the funnel.
+
+For example:
+
+- If click-to-signup conversion is 5%, you need 1,000 clicks for 50 signups.
+- If only 20% of signups activate, that is 10 activated users.
+- If only 10% of activated users pay, that is 1 paying customer.
+
+So if your downstream conversion is low, signup volume alone may not be enough.
+
+## 7. You may underinvest in creative testing
+
+Most ad performance comes from the combination of:
+
+- Audience
+- Offer
+- Creative
+- Landing page
+- Timing
+- Channel
+
+If you run one or two ads for six weeks, you may conclude “ads don’t work” when actually the creative was weak.
+
+Better: test multiple angles:
+
+- Pain-point focused
+- Outcome focused
+- Social proof
+- Comparison/alternative
+- Urgency/timeliness
+- Educational/demo
+- Founder story, if relevant
+
+## 8. Channel choice may bias the conclusion
+
+“Ads” is too broad. Meta, Google Search, TikTok, LinkedIn, Reddit, YouTube, and X behave very differently.
+
+For example:
+
+- Google Search captures existing intent.
+- Meta/TikTok create demand but may produce lower immediate conversion.
+- LinkedIn can be expensive but useful for B2B targeting.
+- Reddit can work for specific niches but requires careful messaging.
+
+A failed test on one channel does not mean paid acquisition is bad.
+
+## 9. Landing page/product onboarding may be the bottleneck
+
+Ads might drive qualified traffic, but your site may fail to convert it.
+
+Possible issues:
+
+- Value proposition unclear
+- Weak headline
+- No proof/trust
+- Too much friction
+- Pricing confusion
+- Slow page speed
+- Mobile experience poor
+- Signup form too long
+- No clear call-to-action
+- Onboarding fails after signup
+
+You should measure the whole funnel, not just ad clicks and signups.
+
+## 10. You may optimize too early or too late
+
+Ad platforms need learning data, but they also waste money if left unchecked.
+
+Common mistake one: changing campaigns daily, preventing learning.
+
+Common mistake two: letting bad campaigns run for weeks because “we’re testing.”
+
+Better: define which variables can change and when.
+
+Example:
+
+- Week 1: validate tracking and initial CTR/CPC.
+- Week 2: cut obviously poor creatives/audiences.
+- Weeks 3–4: double down on promising combinations.
+- Weeks 5–6: validate consistency and downstream quality.
+
+## 11. You may ignore delayed conversion
+
+Some users may sign up days or weeks after clicking. Others may need retargeting.
+
+If you evaluate strictly at the six-week mark, you may miss lagging conversions.
+
+Better: define attribution windows and plan a post-test readout, e.g.:
+
+- Immediate signup rate
+- 7-day signup rate
+- 30-day activation/payment rate
+
+## 12. Competitors and auctions can distort results
+
+Ad costs fluctuate. Six weeks may include:
+
+- Holidays
+- End-of-quarter budget surges
+- Competitor launches
+- Seasonal buying behavior
+- Algorithm learning volatility
+
+Your results may not be representative of normal performance.
+
+## 13. You need to separate learning goals from growth goals
+
+A test should answer specific questions. For example:
+
+- Can we acquire users at a CAC below $X?
+- Which audience responds best?
+- Which message resonates?
+- Which channel has the best signup-to-activation quality?
+- Does paid traffic convert similarly to organic traffic?
+
+If the goal is just “get signups,” you may learn less than you should.
+
+---
+
+# A stronger version of your plan
+
+Instead of:
+
+> Run ads for six weeks, measure signups, and decide from there.
+
+Use:
+
+> Run a six-week paid acquisition test with predefined budget, channels, audiences, creative variants, tracking, and success thresholds. Measure not only signups but also activation, qualification, revenue, and CAC. Review early indicators weekly, optimize based on agreed rules, and make a scale/iterate/stop decision using predefined benchmarks.
+
+## Example decision framework
+
+Before launching, define:
+
+- Budget: $X total, $Y per channel
+- Target audience: specific segments
+- Channels: e.g. Google Search + Meta
+- Creative tests: at least 4–8 ad concepts
+- Landing pages: 1–2 variants if possible
+- Primary metric: cost per activated user or CAC
+- Secondary metrics: CTR, CPC, signup rate, activation rate, paid conversion
+- Success threshold: CAC below $X or cost per qualified signup below $Y
+- Stop-loss rule: pause any campaign after $Z spend without meaningful signal
+- Review cadence: weekly optimization plus final readout after attribution lag
+
+The biggest hole is this: **signups alone may make the campaign look successful while the business economics are terrible.** Make sure your test measures quality, causality, and unit economics—not just volume.

@@ -1,0 +1,36 @@
+It can absolutely be worth it, but the answer depends heavily on a few things that are worth working through concretely.
+
+**Run the actual net math first**
+
+A 15% cut is often smaller than it looks once you account for what commuting costs you:
+
+- Driving 30 miles round-trip, 240 days/year is ~7,200 miles — roughly $4,000–5,000/year in true vehicle cost (gas, maintenance, depreciation), plus parking.
+- Lunches out, coffee, work clothes, dry cleaning: easily $2,000–3,000/year.
+- If you have kids, before/after-care sometimes shrinks or disappears.
+- Time: a 45-minute each-way commute is ~375 hours a year — about nine 40-hour weeks of your life.
+
+On a $100k salary, a 15% cut is $15k pre-tax, maybe $10–11k after tax. If commuting costs you $7k a year plus 375 hours, you may be close to break-even or ahead. On a $60k salary, the same math is much harsher — fixed commute costs eat a bigger share, but $9k is also a bigger deal to your budget.
+
+**The thing people underestimate: compounding**
+
+Raises are percentages of your base, and future employers often anchor on your current salary. A 15% cut isn't a one-year cost — it can suppress the next decade of earnings unless you job-hop to reset. That's the strongest argument against.
+
+**The risk that actually matters most**
+
+Is the role *structurally* remote, or just currently-tolerated remote? A company that's remote-first, hires everywhere, and has no offices is very different from one where you'd be the exception. Return-to-office mandates have burned a lot of people who took exactly this trade. I'd want to know: Where does leadership sit? Are there remote people in senior roles? What's the written policy? Have they done an RTO reversal before?
+
+If the remote status is fragile, you've taken a permanent pay cut for a temporary benefit.
+
+**Questions that would sharpen this**
+
+- What's your current commute, and what would you actually do with the reclaimed time?
+- Can you relocate somewhere cheaper? That's where this trade becomes lopsidedly good — a 15% cut with a 40% housing cost drop is a huge win.
+- Is the new role a step up, sideways, or down in scope and title?
+- Do you get social and structural needs met outside of work? Some people thrive remote; others quietly deteriorate.
+- Is the pay cut from a *lower band*, or is it a below-band offer you could negotiate up?
+
+That last one is worth pushing on. Companies often use remote as a discount lever because candidates accept it. It's very reasonable to say: "I'm excited about this and remote work matters to me, but 15% is a big gap. Can we get closer to X?" A 7–8% cut is a much easier trade than 15%.
+
+**My general read:** if you have a real commute, the remote role is durable, and the job itself is a lateral or better move, this is usually worth it — the quality-of-life gain tends to outweigh the money for most people, and you can rebuild salary in 3–5 years or faster by switching jobs later. If the remote status is shaky, or the role is a step down in responsibility, you're paying a permanent price for something that might evaporate.
+
+What's your situation look like on the commute and the company's remote track record?

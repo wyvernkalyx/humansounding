@@ -1,0 +1,23 @@
+A few distinct problems, in rough order of severity:
+
+**It describes a mechanism, not a value proposition.** "Uber but for X" tells me what the interface looks like — an app, on-demand matching, gig supply — but nothing about who's underserved, what's broken today, or why you'd win. A listener can't evaluate it because there's nothing to evaluate.
+
+**The analogy imports assumptions that don't hold here.** Uber works because rides are urgent, commoditized, anonymous, and one-off. Any competent driver in any clean car is fine, and you'll probably never see them again. Dog walking is close to the inverse: it's scheduled and recurring, trust-intensive (a stranger enters your home and takes custody of something you love), and deeply relationship-based. People don't want *a* walker, they want *their* walker. So the core Uber magic — fungible supply, instant dispatch — is solving a problem dog owners mostly don't have. The actual constraint is trust and reliability, not latency.
+
+**It creates a retention problem you're announcing you haven't thought about.** Repeat, relationship-based services have brutal disintermediation. Once an owner finds a walker they like, both sides have every incentive to transact off-platform. Uber never faces this at scale; you will, from week two. If your pitch is the Uber analogy, the first question you'll get is "what stops them from paying her in cash," and you'd better have a real answer.
+
+**The formula itself is a negative signal.** Investors sat through hundreds of "Uber for X" pitches between roughly 2013 and 2017, and most of those companies are gone. Using the phrase now suggests you're pattern-matching to a template rather than reasoning from the specifics of this market.
+
+**It's not differentiated.** Rover and Wag exist. Wag was, quite literally, Uber-for-dog-walking, raised enormous money, and struggled badly — in part for the reasons above. Your one-liner is currently indistinguishable from a company that already tried this and had a hard time.
+
+**What to say instead**
+
+Lead with a specific customer and a specific broken thing. Something shaped like:
+
+> "Dog owners in dense cities can't find a walker they trust, and when their regular walker gets sick, the dog doesn't get walked. We [specific thing] so that [specific outcome]."
+
+Or go narrower and sharper — the best pitches usually name a wedge:
+
+> "We handle walking for the 40% of owners in [city] who live in buildings with a doorman, so we can do key-free entry and same-building route density."
+
+The test: after your sentence, can someone tell you who the customer is, what they're currently doing instead, and what changes? "Uber for dog walking" fails all three. If the analogy is genuinely useful shorthand, deploy it *after* you've established the insight — as a compression, not a substitute.

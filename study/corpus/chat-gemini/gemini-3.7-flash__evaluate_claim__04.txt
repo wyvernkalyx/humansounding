@@ -1,0 +1,37 @@
+You should read it with heavy, structured skepticism. In vendor-speak, "cuts onboarding time in half" is almost always a **best-case scenario achieved by an outlier customer who had an exceptionally broken process before buying the tool.**
+
+To evaluate what that claim actually means for *your* organization, break it down using these four filters:
+
+---
+
+### 1. How do they define "Onboarding"?
+Vendors often define onboarding narrowly (what their software touches), while you define it broadly (the business outcome).
+* **Administrative vs. Productive:** A tool might cut the time to fill out paperwork or provision software licenses from 4 days to 2 days (a 50% drop), but the person/client still takes 6 months to reach full productivity or value.
+* **The "Time-to-X" gap:** Are they measuring *time-to-setup*, *time-to-first-use*, or *time-to-autonomy*?
+
+### 2. 50% of what baseline?
+A 50% reduction is easy if the benchmark customer was running their process on manual spreadsheets, paper forms, and unstructured emails. 
+* If you already have decent systems in place, your marginal gain will likely be much smaller (e.g., 10–15%).
+* Ask what the customer’s stack and maturity level looked like *before* they implemented the tool.
+
+### 3. What is the "Implementation Tax"?
+Vendors rarely factor in the time, cost, and friction required to get the tool running:
+* How many weeks/months will your team spend configuring workflows, integrating APIs, and migrating data?
+* How long will it take your internal team to learn the tool before you realize those time savings?
+
+---
+
+### Questions to Ask the Vendor to Test the Claim
+
+To force the vendor past marketing talk and into reality, ask them these specific questions:
+
+1. **"Can you walk me through the exact start and end milestones you used to measure that 50% reduction?"**
+2. **"What did the customer have to change *culturally or operationally* outside of your software to get those results?"** (Software alone rarely cuts time in half; process redesign usually does.)
+3. **"What was the profile of the customer who saw those results (size, tech stack, previous process)?"**
+4. **"What is the average ramp time for our specific industry and company size, rather than the top quartile?"**
+5. **"Can I speak with a reference customer of our size who achieved a similar outcome?"**
+
+---
+
+### Summary Rule of Thumb
+Assume the tool will likely solve specific **friction points**, not the entire onboarding curve. Treat the "50%" claim as an indicator that the tool has strong automation capabilities, but model your internal ROI on a much more conservative estimate (e.g., 15–20% efficiency gain in specific sub-tasks).

@@ -1,0 +1,53 @@
+Based on your two symptoms—**running over time** and **amnesia regarding decisions**—your meeting is suffering from a classic operational failure: **it is functioning as an open-ended conversation rather than a decision-making engine.**
+
+Here is the diagnosis of what is actually happening and why.
+
+---
+
+### Part 1: Why it runs over (The Time Leak)
+
+1. **Mixing "Status" with "Problem Solving"**
+   * *The Issue:* People spend the first 30 minutes giving verbal status updates. Then, a complex problem gets brought up with only 10 minutes left, triggering a 25-minute debate that blows past the end time.
+2. **Lack of Timeboxing & Agenda Hygiene**
+   * *The Issue:* If the agenda is just a list of topics (or nonexistent), people speak until they run out of breath rather than until a goal is met. Without time limits per topic, the first item always gets an unfair share of the time.
+3. **No Active Facilitator (Passive Host Syndrome)**
+   * *The Issue:* The person running the meeting is acting as a participant rather than a traffic cop. When conversations veer into tangents or deep-dive rabbit holes ("parking lot" items), nobody steps in to cut it off.
+
+---
+
+### Part 2: Why nobody remembers decisions (The Amnesia)
+
+1. **"Phantom Consensus"**
+   * *The Issue:* A topic is discussed, people nod, the conversation drifts to the next topic, and everyone *assumes* an agreement was reached. Because no one explicitly said, *"So, the decision is X, owned by Y, due on Z,"* everyone leaves with a different interpretation of what happened.
+2. **The "Tragedy of the Commons" Note-Taking**
+   * *The Issue:* When documentation is "everyone’s job," it’s no one’s job. If there is no designated scribe projecting or capturing notes live, key points vanish into the ether.
+3. **Decisions are Buried in Discussion**
+   * *The Issue:* Even if someone takes notes, they write a transcript of *what was said* rather than an artifact of *what was decided*.
+
+---
+
+### The Prescription: How to fix it next week
+
+Implement these four structural guardrails immediately:
+
+#### 1. Shift Status to Async (Save 20 mins)
+* **Rule:** Status updates are written before the meeting (in Slack, Teams, or an email). 
+* **The Meeting is strictly for:** Blockers, cross-functional dependencies, and decisions.
+
+#### 2. Assign Two Roles (Rotate Weekly)
+* **The Facilitator:** Watches the clock, cuts off tangents, and says: *"We are out of time on this topic. Who is the single owner taking this offline?"*
+* **The Scribe:** Takes notes live in a shared document visible to everyone during the call.
+
+#### 3. Enforce the "W.W.D." Rule at the end of each topic
+Before moving to the next item, the facilitator must pause and ask the scribe to read back:
+* **W**hat was decided?
+* **W**ho owns the next step?
+* **D**eadline for completion?
+
+#### 4. The 5-Minute Hard Stop & Receipt
+End the meeting 5 minutes early. Use those final 5 minutes exclusively to review the action items. Within 15 minutes of the meeting ending, post a **3-to-5 bullet summary** in your team’s main communication channel (Slack/Teams):
+
+> **[Meeting Date] Key Decisions & Next Steps**
+> * **Decision:** We are going with Vendor A.
+> * **Action:** @Sarah to draft contract by Thursday.
+> * **Action:** @Dave to update the budget sheet by Monday.

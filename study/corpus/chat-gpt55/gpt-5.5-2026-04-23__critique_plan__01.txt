@@ -1,0 +1,389 @@
+I don’t see the actual plan pasted—send it over and I can review it line-by-line.
+
+In the meantime, for a 400-user weekend email migration, the biggest things teams often miss are below.
+
+## 1. Pre-migration discovery
+
+Make sure you have a complete inventory of:
+
+- All mailboxes, including disabled users
+- Shared mailboxes
+- Distribution lists / groups
+- Microsoft 365 / Google Workspace groups, if applicable
+- Resource mailboxes: rooms, equipment, booking calendars
+- Mail-enabled public folders
+- Aliases and secondary SMTP addresses
+- Forwarding rules
+- Delegated access: Send As, Send on Behalf, Full Access
+- Calendar sharing permissions
+- External contacts
+- Service accounts that send mail
+- Applications, printers, scanners, CRM systems, helpdesk tools, monitoring tools, websites, etc. that relay or send mail
+
+A lot of migrations succeed for users but fail for business workflows because app SMTP, scanners, or shared mailboxes were missed.
+
+## 2. Identity and authentication
+
+Confirm:
+
+- Usernames and primary email addresses match expectations
+- Password strategy is clear
+- MFA status is known
+- Conditional Access / security policies are ready
+- SSO or directory sync is working, if used
+- Users know whether their password changes
+- Admin break-glass accounts are available
+- Licensing is assigned before cutover
+
+Also validate that every user can actually sign into the new environment before migration weekend.
+
+## 3. DNS planning
+
+You will likely need to manage:
+
+- MX records
+- SPF
+- DKIM
+- DMARC
+- Autodiscover
+- MTA-STS / TLS-RPT, if used
+- CNAMEs for client configuration
+- Mobile/MDM-related DNS records, if applicable
+
+Lower TTLs ahead of the weekend, ideally 24–72 hours before cutover. Don’t wait until the weekend to lower TTLs.
+
+## 4. Mail flow coexistence
+
+If the migration is not truly “big bang,” define coexistence carefully:
+
+- Can old and new users email each other?
+- Where does inbound mail land before, during, and after cutover?
+- Are replies routed correctly?
+- Are aliases preserved?
+- Are distribution groups functional during transition?
+- Are shared mailboxes accessible in both systems?
+- Is there a mail relay or routing connector required?
+- What happens to email sent during DNS propagation?
+
+Even for a weekend migration, there is usually a gray period where both systems matter.
+
+## 5. Data migration scope
+
+Define exactly what gets migrated:
+
+- Mail
+- Calendar
+- Contacts
+- Tasks
+- Notes
+- Rules
+- Signatures
+- Categories
+- Delegates
+- Shared mailbox permissions
+- Public folders
+- Archive mailboxes
+- Litigation hold / retention data
+- Deleted items
+- Junk mail settings
+- Safe/blocked senders
+
+Many migration tools do not move all of these automatically.
+
+## 6. Mailbox size and throughput
+
+For 400 users, migration time is often constrained by data volume and throttling.
+
+You should know:
+
+- Total data size
+- Largest 10 mailboxes
+- Average mailbox size
+- Number of items, not just GB
+- Migration tool throughput
+- API throttling limits
+- Whether archive mailboxes are included
+- Whether you are pre-staging data before the weekend
+
+Ideally, pre-stage most mailbox data before cutover and use the weekend only for delta sync and final cutover.
+
+## 7. Client impact
+
+Plan for all client types:
+
+- Outlook for Windows
+- Outlook for Mac
+- Outlook mobile
+- Apple Mail
+- Native iOS Mail
+- Native Android Mail
+- Thunderbird or other IMAP clients
+- Webmail
+- Shared workstation profiles
+- VDI/RDS environments
+
+Decide whether users need to recreate profiles, sign in again, re-add mobile accounts, or get new Outlook profiles pushed automatically.
+
+## 8. User communication
+
+You need a communication plan before, during, and after the weekend.
+
+Include:
+
+- What is changing
+- When email may be unavailable
+- What users should do before migration
+- What users should not do during migration
+- How to access new webmail
+- How to configure mobile devices
+- How to report issues
+- Expected Monday morning behavior
+- Known limitations
+- Screenshots or quick-start guides
+
+Send reminders at least one week before, one day before, and after completion.
+
+## 9. Support plan for Monday morning
+
+For 400 users, Monday morning is where migrations are won or lost.
+
+Have:
+
+- Extra helpdesk staff
+- A triage process
+- Known-issue scripts
+- Floor walkers, if users are in offices
+- Dedicated war room bridge
+- Escalation contacts
+- Vendor support contact info
+- Admins monitoring mail flow
+- A dashboard or tracker for open issues
+- A priority system for executives/VIPs and business-critical teams
+
+Common Monday issues:
+
+- Outlook profile won’t connect
+- Mobile mail not syncing
+- Missing shared mailbox
+- Missing calendar permissions
+- Distribution list not working
+- User can receive but not send
+- Application mail stopped
+- Sign-in/MFA issues
+- Cached autocomplete addresses causing NDRs
+
+## 10. Backup and rollback
+
+You need a rollback strategy, even if you hope not to use it.
+
+Clarify:
+
+- What is the rollback decision point?
+- Who has authority to call rollback?
+- How long would rollback take?
+- Can MX be pointed back?
+- Will mail sent during cutover be recoverable?
+- Are old mailboxes kept intact?
+- Are DNS changes documented and reversible?
+- Are pre-migration backups or exports available?
+- Are you preserving audit/compliance data?
+
+Also be realistic: some email migrations are hard to truly roll back once clients and mail flow are changed.
+
+## 11. Compliance and retention
+
+Check:
+
+- Retention policies
+- Legal holds
+- eDiscovery requirements
+- Journaling
+- Message archiving
+- Mailbox audit logs
+- Data residency
+- Encryption policies
+- DLP rules
+- Transport rules
+- Disclaimer/signature rules
+
+Do not assume the new platform’s default policies match the old platform.
+
+## 12. Security controls
+
+Before go-live, verify:
+
+- Anti-spam
+- Anti-phishing
+- Anti-malware
+- Attachment policies
+- URL protection
+- Impersonation protection
+- External sender warnings
+- Quarantine access
+- Admin alerting
+- SPF/DKIM/DMARC alignment
+- Mail forwarding restrictions
+- OAuth app permissions
+- Legacy authentication disabled, if appropriate
+
+Email migrations are a common time for phishing and credential issues.
+
+## 13. Third-party integrations
+
+Inventory and test anything that uses email, including:
+
+- Copiers/scanners
+- ERP/CRM systems
+- Ticketing systems
+- Monitoring alerts
+- Backup alerts
+- Password reset systems
+- Websites/contact forms
+- HR/payroll systems
+- Marketing platforms
+- Accounting/invoicing systems
+- Multifunction devices
+- Voicemail-to-email
+- Fax-to-email
+- Security cameras/access systems
+
+For each one, know whether it uses SMTP relay, authenticated SMTP, OAuth, API integration, or an old mailbox credential.
+
+## 14. Testing plan
+
+Before cutover, test with pilot users.
+
+Your test cases should include:
+
+- Internal send/receive
+- External send/receive
+- Calendar invites internal/external
+- Shared mailbox access
+- Delegate sending
+- Distribution list delivery
+- Mobile access
+- Outlook desktop access
+- Webmail access
+- Room booking
+- Application-generated email
+- Scanner-to-email
+- Mail forwarding
+- Out-of-office
+- Signatures/disclaimers
+- Attachments
+- Large messages
+- Spam/quarantine behavior
+
+Use real users from different departments, not just IT.
+
+## 15. Cutover runbook
+
+Have a detailed migration runbook with:
+
+- Exact timeline
+- Named owners for every step
+- Pre-checks
+- DNS changes
+- Migration batch steps
+- Validation steps
+- Communication checkpoints
+- Escalation contacts
+- Rollback criteria
+- Post-cutover validation
+- Sign-off process
+
+Every step should have an owner, expected duration, and success/failure criteria.
+
+## 16. Licensing and capacity
+
+Confirm:
+
+- All users are licensed
+- Shared/resource mailboxes are handled correctly
+- Mailbox size limits are sufficient
+- Archive licensing is correct
+- Retention/eDiscovery licensing is correct
+- Security features are licensed
+- Migration tool licenses are sufficient
+- Admin accounts have necessary roles
+
+Licensing issues often appear only after cutover.
+
+## 17. VIP and critical user handling
+
+Identify:
+
+- Executives
+- Executive assistants
+- Finance/payroll
+- Sales/customer support
+- Legal/compliance
+- Operations teams
+- Anyone with heavy delegate/shared mailbox usage
+
+Migrate/pilot these carefully or assign dedicated support.
+
+## 18. Public folders and archives
+
+If applicable, public folders and archives can complicate the weekend.
+
+Check:
+
+- Are public folders being migrated?
+- Are permissions preserved?
+- Are archive mailboxes included?
+- Are PSTs involved?
+- Are users expecting historical mail older than a certain date?
+- Are old archives searchable after migration?
+
+## 19. Autocomplete/NK2/cache issues
+
+Users may complain that “email is bouncing” because Outlook autocomplete uses old internal addresses.
+
+Plan for:
+
+- Clearing autocomplete entries if needed
+- Rebuilding Outlook profiles
+- Ensuring X.500/proxy addresses are migrated where relevant
+- Preserving legacyExchangeDN values in Exchange migrations
+
+This is especially important in Exchange-to-Exchange or Exchange-to-M365 migrations.
+
+## 20. Post-migration monitoring
+
+After cutover, monitor:
+
+- Mail queues
+- NDRs
+- Sign-in failures
+- MFA failures
+- DNS propagation
+- Spam/quarantine rates
+- Helpdesk ticket volume
+- Migration tool error reports
+- Missing item reports
+- Connector health
+- Application relay logs
+
+Keep the old system available in read-only or coexistence mode until you are confident.
+
+---
+
+## The big things you may be missing
+
+If I had to pick the most commonly missed items, they are:
+
+1. Shared mailbox and delegate permissions  
+2. Applications, scanners, and SMTP relay devices  
+3. DNS TTL reduction before the weekend  
+4. Pilot migration with real business users  
+5. Monday morning support staffing  
+6. Rollback criteria and decision authority  
+7. Calendar permissions and room/resource mailboxes  
+8. Mail flow during DNS propagation  
+9. SPF/DKIM/DMARC updates  
+10. Autodiscover/client profile behavior  
+11. Legal hold, retention, archive, and compliance settings  
+12. Communication to users with clear “what to do Monday” instructions  
+
+Paste your actual weekend plan and I’ll point out specific gaps, risks, sequencing issues, and anything that should be moved earlier than cutover weekend.

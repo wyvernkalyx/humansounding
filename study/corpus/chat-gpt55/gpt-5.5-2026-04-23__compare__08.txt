@@ -1,0 +1,114 @@
+For a 60-person company, the choice between an in-house help desk and an outsourced help desk usually comes down to cost, service quality, control, and how complex your IT environment is.
+
+## Quick comparison
+
+| Area | In-house help desk | Outsourced help desk |
+|---|---|---|
+| Cost | Higher fixed cost: salaries, benefits, tools, training | Usually lower and more predictable monthly cost |
+| Responsiveness | Can be very fast, especially for onsite issues | Good for remote support, but onsite support may cost extra or be slower |
+| Company knowledge | Strong understanding of users, systems, and priorities | Takes time to learn your environment |
+| Coverage | Limited by staff hours and availability | Can offer extended hours, 24/7, holidays |
+| Control | More direct control over priorities and service style | Less direct control; depends on contract and SLA |
+| Scalability | Harder to scale without hiring | Easier to scale up or down |
+| Security and compliance | More control internally | Must carefully vet provider security practices |
+| User experience | More personal and familiar | Can feel less personal if not well managed |
+| Expertise | Limited to the skills of hired staff | Access to broader technical expertise |
+| Continuity risk | Risk if one IT person leaves or is unavailable | Provider has backup staff and processes |
+
+## In-house help desk
+
+### Advantages
+- Better knowledge of your company’s people, workflows, and systems.
+- More personal service for employees.
+- Faster handling of physical issues such as printers, Wi-Fi, laptops, meeting room equipment, and desk setups.
+- Greater control over priorities, security practices, and internal processes.
+- Useful if your company has specialized software, strict compliance needs, or complex internal systems.
+
+### Disadvantages
+- Expensive for a 60-person company if you need full coverage.
+- A single IT employee may become a bottleneck or single point of failure.
+- Limited support outside business hours unless you hire more staff.
+- Recruiting, training, and retaining IT talent takes management effort.
+- Harder to provide deep expertise across networking, cybersecurity, cloud tools, hardware, and applications.
+
+### Typical fit
+An in-house help desk makes sense if:
+- You need frequent onsite support.
+- Your systems are specialized or sensitive.
+- Employees require high-touch service.
+- You already have enough IT workload to justify at least one full-time IT person.
+
+## Outsourced help desk
+
+### Advantages
+- Lower fixed cost and easier budgeting.
+- Access to a team rather than relying on one person.
+- Better coverage options, including evenings, weekends, or 24/7 support.
+- Broader technical expertise.
+- Easier to scale as the company grows.
+- Provider typically brings ticketing systems, documentation, monitoring, and standard processes.
+
+### Disadvantages
+- Less familiarity with company culture and individual users.
+- Quality varies significantly by provider.
+- Some issues may require escalation, causing delays.
+- Onsite support may not be included or may cost extra.
+- Security, privacy, and access controls need close management.
+- Employees may be frustrated if the service feels impersonal or scripted.
+
+### Typical fit
+An outsourced help desk makes sense if:
+- Most employees work remotely or use standard cloud tools like Microsoft 365, Google Workspace, Slack, Zoom, and common SaaS apps.
+- You want predictable costs.
+- You need coverage beyond normal office hours.
+- You do not have enough IT work to justify multiple internal IT employees.
+
+## Cost considerations for a 60-person company
+
+### In-house
+A small company usually needs at least one IT generalist. Costs may include:
+
+- Salary and benefits
+- Ticketing/help desk software
+- Device management tools
+- Security tools
+- Training and certifications
+- Backup coverage during vacation or sick leave
+
+The main problem is coverage. One person may be enough most days, but not when they are unavailable or when multiple issues occur at once.
+
+### Outsourced
+Outsourced help desks often charge:
+
+- Per user per month
+- Per device per month
+- Fixed monthly retainer
+- Per-ticket or hourly support
+
+For 60 employees, outsourced support is often cheaper than hiring a full internal team, though not always cheaper than one junior or mid-level IT hire.
+
+## Best option for many 60-person companies: hybrid model
+
+A hybrid approach is often the most practical:
+
+- Keep one internal IT manager, systems administrator, or technically strong operations person.
+- Outsource Tier 1 help desk support, monitoring, patching, and after-hours coverage.
+- Escalate complex or strategic issues internally or to a specialist provider.
+
+This gives you:
+- Internal ownership and accountability
+- Better vendor management
+- Lower support burden
+- Broader expertise
+- Backup coverage
+- Better scalability
+
+## Recommendation
+
+For a typical 60-person company, an outsourced or hybrid help desk is usually the best choice.
+
+Choose **outsourced** if your IT environment is standard, mostly cloud-based, and you want predictable support costs.
+
+Choose **in-house** if you need frequent onsite support, have specialized systems, or require tight control over security and user experience.
+
+Choose **hybrid** if you want the best balance: internal IT ownership with outsourced day-to-day support and backup coverage.

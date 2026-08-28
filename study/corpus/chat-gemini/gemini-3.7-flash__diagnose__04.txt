@@ -1,0 +1,63 @@
+A 30% drop in activation with steady signups usually points to one of three things: **broken tracking**, a **product/technical break in the onboarding flow**, or a **shift in user quality/source**.
+
+Here is a structured, step-by-step diagnostic framework to find the root cause quickly:
+
+---
+
+### Step 1: Rule Out Data & Tracking Issues (First 30 mins)
+*Before investigating product bugs, confirm the drop is real.*
+* **Event tracking:** Check if the tracking event that defines “Activation” stopped firing properly (e.g., an ad blocker update, SDK upgrade, or broken tag).
+* **Definition change:** Did anyone change how activation is calculated in your BI tool/dashboard?
+* **Downstream check:** Look at downstream metrics (e.g., Day 7 retention, daily active usage). If downstream metrics look normal, it is likely a **tracking bug**. If downstream metrics are also collapsing, the issue is real.
+
+---
+
+### Step 2: Micro-Funnel Analysis (Where are they dropping?)
+Break down your activation flow step-by-step to identify the exact point of failure.
+
+* **Map the onboarding steps:**
+  * Signup $\rightarrow$ Email verification $\rightarrow$ Profile setup $\rightarrow$ First core action $\rightarrow$ Activated.
+* **Compare step-by-step conversion:**
+  * Overlay last month’s funnel against the previous month.
+  * **Identify the cliff:** Is the drop evenly distributed, or does one specific transition account for the entire 30% loss? (e.g., *"Step 2 to Step 3 dropped from 80% to 40%"*).
+
+---
+
+### Step 3: Segment the Data (Who is dropping?)
+Slice the activation metric across different dimensions to isolate the subset of affected users:
+
+* **Acquisition Channel:** Paid (Google, Meta), Organic, Direct, Referral.
+  * *Common cause:* Marketing launched a new campaign driving high-volume, low-intent traffic (or bots).
+* **Device / Platform / OS:** iOS vs. Android, Desktop vs. Mobile, Safari vs. Chrome.
+  * *Common cause:* A broken UI element or JavaScript error on a specific browser/OS version.
+* **Geography / Region:** 
+  * *Common cause:* Translation errors, localization bugs, or latency/CDNs issues in specific regions.
+* **User Type / Plan:** Free vs. Trial, B2B company size, self-serve vs. enterprise.
+
+---
+
+### Step 4: Audit Changes & Deployments (What changed?)
+Correlate the exact date of the drop with internal changes:
+
+1. **Product Releases:** Check release logs around the date the drop began. Was a new onboarding flow, permission request, or payment wall deployed?
+2. **Third-Party Dependencies:** Check auth providers (Google/Apple login), email delivery services (SendGrid/Postmark—are verification emails going to spam?), or SMS OTP providers.
+3. **Marketing / Ad Creative Changes:** Did ad messaging change? If the ad promises one thing and the product delivers another, intent to activate drops dramatically.
+
+---
+
+### Step 5: Look at Qualitative & Support Data
+* **Support Tickets:** Search Zendesk/Intercom for keywords related to onboarding, bugs, or confusion starting last month.
+* **Session Recordings:** Watch 20–30 session replays (via tools like FullStory, PostHog, or Hotjar) of users who signed up last month but failed to activate. Watch for:
+  * Rage clicks
+  * Form abandonment
+  * Unhandled error messages or infinite loading spinners
+
+---
+
+### Summary Checklist: Most Common Culprits
+| Area | Likely Cause |
+| :--- | :--- |
+| **Marketing** | New ad campaign brought low-intent users / bots. |
+| **Tech/Infra** | Verification emails delayed or landing in spam folders. |
+| **Product** | New onboarding step added excessive friction (e.g., mandatory credit card, forced survey). |
+| **Bugs** | Broken button/flow on mobile web or specific browsers (e.g., Safari iOS). |

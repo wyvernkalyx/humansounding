@@ -1,0 +1,33 @@
+**Postgres**, and it's not particularly close for this use case.
+
+At 50,000 records, scale is irrelevant — that's a rounding error for either database, and the entire dataset probably fits in RAM. So the decision comes down to which one models the problem better, and booking systems are almost a textbook case for relational.
+
+The core reason is that the hardest problem in any booking system is preventing double-bookings under concurrency. Postgres solves this declaratively with exclusion constraints:
+
+```sql
+CREATE EXTENSION IF NOT EXISTS btree_gist;
+
+CREATE TABLE bookings (
+  id          bigserial PRIMARY KEY,
+  resource_id bigint NOT NULL REFERENCES resources(id),
+  customer_id bigint NOT NULL REFERENCES customers(id),
+  during      tstzrange NOT NULL,
+  status      text NOT NULL DEFAULT 'confirmed',
+  EXCLUDE USING gist (resource_id WITH =, during WITH &&)
+    WHERE (status <> 'cancelled')
+);
+```
+
+That one constraint makes overlapping bookings on the same resource *physically impossible*, no matter what your application code does — no race conditions, no forgotten locks, no bug in a rarely-hit code path. In MongoDB you'd have to build that guarantee yourself in application logic, and getting it right under concurrency is genuinely tricky.
+
+Beyond that, booking data is heavily relational: bookings reference customers, resources, payments, cancellations, and staff. Foreign keys keep those relationships from rotting, and you'll want joins for the reporting you inevitably end up needing (occupancy rates, revenue by period, no-show rates). And if parts of your schema really do need to be flexible — custom fields that vary by booking type — `jsonb` columns give you the document model where you want it, without giving up transactions and constraints everywhere else.
+
+**When MongoDB would be a reasonable choice:**
+
+- Your team knows Mongo well and has no SQL experience, and this is a time-pressured project. Familiarity is a real engineering consideration.
+- Your bookings are strictly fixed slots (e.g. every appointment is a 30-minute block starting on the half hour). Then you can discretize time and put a unique index on `{resource_id, slot_start}`, which gets you a real uniqueness guarantee. This breaks down as soon as you need arbitrary durations, buffer times between bookings, or resources with varying availability.
+- The booking record is genuinely a self-contained document with wildly varying shape, and you have little cross-entity querying.
+
+If none of those apply, go with Postgres. It's also the safer default in the sense that it's easy to add document-style flexibility to a relational schema later, but hard to retrofit referential integrity and transactional guarantees onto a document store.
+
+One thing that could change my answer: if your "bookings" are actually something like event logs or analytics records with no overlap semantics and no cross-entity relationships, the calculus shifts. But that doesn't sound like what you're describing.

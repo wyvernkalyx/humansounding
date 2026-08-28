@@ -1,0 +1,24 @@
+A “full rebuild” can be justified, but it shouldn’t be accepted without specific technical evidence. The useful distinction is:
+
+- Redesign: primarily changes UX, visual design, content structure, and possibly the front-end while preserving much of the underlying platform.
+- Rebuild: replaces substantial parts of the technical foundation—CMS/framework, templates/components, data model, integrations, or hosting architecture.
+
+Ask the consultant to show which current constraints require rebuilding and why they cannot reasonably be fixed incrementally. Good evidence includes an unsupported or insecure platform, severe performance or accessibility problems rooted in the architecture, unmaintainable custom code, a CMS that fundamentally cannot support your workflows, brittle integrations, or a new business requirement the existing system genuinely cannot accommodate.
+
+Be more skeptical of explanations like “the code is old,” “it isn’t modern,” “we’d rather start clean,” or “a rebuild will be easier.” Old does not necessarily mean bad, and developers often find greenfield work more convenient even when it isn't the best business decision.
+
+I’d ask for a short written assessment covering:
+
+- What specifically is wrong with the existing site, with examples or measurements.
+- Which problems require a rebuild versus a redesign or targeted remediation.
+- What parts can be retained: content, URLs, CMS data, integrations, analytics, SEO equity, components, etc.
+- The estimated cost, timeline, and risk of three options: repair/optimize, redesign on the existing foundation, and rebuild.
+- What measurable improvements the rebuild should produce.
+- Migration risks, especially SEO, redirects, analytics, accessibility, integrations, and content.
+- Expected lifespan and ongoing maintenance cost of the proposed replacement.
+
+One particularly useful question is: “If our budget did not allow a rebuild, what would you do to this site over the next 12 months?” The answer often reveals whether rebuilding is genuinely necessary or merely the consultant's preferred implementation.
+
+You can also get a second developer or agency to perform a small, paid technical audit without telling them the first consultant's proposed solution. Give them access to the repository/CMS and ask them to assess maintainability, security, performance, dependencies, and upgrade paths. That is much more informative than getting another sales proposal.
+
+If you share your site URL, its CMS/technology (if you know it), and the consultant’s reasons for recommending a rebuild, I can help you evaluate whether those reasons actually support one.

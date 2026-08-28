@@ -1,0 +1,11 @@
+Mobile just got faster.
+
+We’ve improved performance across our mobile experience, making the app quicker and more responsive throughout your day.
+
+- Faster startup and loading times
+- Smoother scrolling and navigation
+- Reduced lag when switching between screens
+- Better responsiveness on older devices
+- Improved stability and fewer performance-related crashes
+
+No action is required beyond updating to the latest version. More performance improvements are on the way.

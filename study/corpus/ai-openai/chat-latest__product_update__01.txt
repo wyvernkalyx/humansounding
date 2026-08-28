@@ -1,0 +1,11 @@
+Introducing the Redesigned Dashboard
+
+We’ve redesigned the dashboard to make it faster and easier to find what matters most. The new experience brings clearer navigation, a more focused layout, and key information to the forefront—so you can spend less time searching and more time getting things done.
+
+What’s new:
+- Simplified navigation for quicker access to the tools you use most.
+- A cleaner layout that makes important metrics and activity easier to scan.
+- Improved performance for faster loading and smoother interactions.
+- Better responsive design across desktop, tablet, and mobile.
+
+The redesigned dashboard is rolling out now. We’ll continue refining the experience based on your feedback, so let us know what you think.

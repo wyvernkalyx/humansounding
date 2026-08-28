@@ -1,0 +1,38 @@
+Yes—moving backups to cloud storage can be the right direction, especially if your external-drive rotation is manual, error-prone, or not reliably offsite.
+
+But I would not necessarily stop using local backups entirely. A better target is usually:
+
+**Local backup + cloud/offsite backup**
+
+That gives you both:
+
+- **Fast restores** from local storage if a server, workstation, or file share fails
+- **Offsite protection** from cloud storage if there is theft, fire, flood, or ransomware
+- **Less manual handling** than rotating external drives
+
+Before retiring the drive rotation, make sure the cloud backup plan has:
+
+1. **Versioning / retention**
+   - You need to recover older file versions, not just the latest encrypted or deleted copy.
+
+2. **Ransomware protection**
+   - Ideally immutable backups, object lock, or protected snapshots.
+
+3. **Encryption**
+   - Data should be encrypted in transit and at rest.
+   - Decide who controls the encryption keys.
+
+4. **Restore testing**
+   - Do at least one real restore test before trusting it.
+
+5. **Clear recovery time expectations**
+   - Restoring terabytes from the cloud can be slow.
+   - Some providers charge for egress/downloads.
+
+6. **Monitoring and alerts**
+   - You should know immediately if backups stop running.
+
+7. **Retention policy**
+   - Define daily/weekly/monthly retention based on your recovery needs.
+
+My recommendation: **move to cloud backup, but keep at least one local backup target if fast recovery matters.** Once the cloud backups are proven and tested, you can stop the physical drive rotation if it is no longer adding meaningful protection.

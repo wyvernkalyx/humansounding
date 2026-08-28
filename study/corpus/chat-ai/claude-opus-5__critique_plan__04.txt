@@ -1,0 +1,36 @@
+Plenty, and most of it is predictable. The big ones:
+
+**The math of ramp time.** Support is domain-heavy — product quirks, tooling, refund policy, escalation rules, the weird stuff about your top 20 accounts. Most people need 2–4 weeks before they're net-positive. In a one-month engagement, you might get one productive week, paid for with senior agent hours spent training. It's genuinely possible to have *lower* throughput for the month than if you'd done nothing.
+
+**Backlogs aren't uniform.** Your existing team has been skimming the easy tickets. What's left is disproportionately the hard stuff: needs-engineering bugs, billing disputes, furious escalations, account-specific weirdness. That's exactly what a temp can't touch. The workable version of this plan is "temps handle new easy inflow, veterans attack the backlog" — which is a different plan, with different training and routing, and you should design for it deliberately.
+
+**Re-contact multiplication.** An undertrained agent's wrong answer doesn't close a ticket, it spawns two or three. Watch re-contact rate, not tickets closed.
+
+**Metric gaming.** If you measure them on tickets closed, they will close tickets: premature closes, "let us know if you still need help!", bulk canned replies. Backlog number drops beautifully. Nothing is resolved.
+
+**Backlog as symptom.** If inflow structurally exceeds capacity, a one-time push just resets the clock — you'll be here again in six weeks. Also, queueing behaves nonlinearly: past ~85% utilization, queues explode. You may need permanent slack, not a sprint.
+
+**Access and compliance friction.** PII, payment data, admin/impersonation rights, background checks, NDAs, SOC 2 or similar scope. Provisioning alone can eat the first week of a four-week engagement. Also worth a glance: agency markup (often 20–40%), co-employment and misclassification exposure, conversion fees if you want to keep someone good.
+
+**The week-five problem.** They finally get competent, then leave. Any macros they wrote, docs they fixed, or patterns they spotted walk out with them unless you force capture. Then you re-pay ramp cost next time.
+
+**Team read-through.** Your existing agents may hear "management thinks this is a volume problem" when they think it's a tooling, staffing, or product problem. Worth asking them first — they usually know the top contact drivers by heart.
+
+---
+
+**What I'd want to know before committing:**
+
+- What's the actual inflow rate vs. staffed capacity? Spike or structural deficit?
+- What are the top 10 contact drivers? Frequently one bug or one confusing billing screen generates a third of the volume, and fixing it beats two temps outright.
+- How much of the backlog is stale? A careful "are you still seeing this?" sweep often clears 20–40% of an aged queue, and anyone can do it.
+
+**Things that make it more likely to work:**
+
+- Go 2–3 months instead of 1. Ramp cost gets amortized instead of dominating.
+- Scope them narrowly: 3–5 ticket types, 5 macros, a hard escalation rule. Not "learn the product."
+- Consider overtime for existing staff first — already ramped, often eager for the money.
+- Consider a BPO with pre-trained agents over raw temps, if your domain allows it.
+- Compare against just declaring longer response times publicly for three weeks while you fix the root cause. Honest slowness beats fast wrong answers.
+- Define the week-five steady state before you start.
+
+None of this means don't do it. It means "two temps for a month" is a capacity input, not a plan.

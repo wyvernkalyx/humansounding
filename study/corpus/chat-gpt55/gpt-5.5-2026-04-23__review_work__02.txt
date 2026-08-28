@@ -1,0 +1,13 @@
+It’s **okay, but not ideal**.
+
+**“Quick question about your account”** is clear enough, but it can feel a bit generic or even slightly phishing-like because it doesn’t say which account or why you’re reaching out.
+
+Better options would be more specific:
+
+- **Question about your [Company/Product] account**
+- **Quick question about your [Product] setup**
+- **Can you confirm a detail on your [Company] account?**
+- **Following up on your [Company] account**
+- **Need your input on your [Product] account**
+
+If this is for sales or customer support, I’d avoid making it sound urgent or mysterious. A more specific subject line will likely feel more trustworthy.

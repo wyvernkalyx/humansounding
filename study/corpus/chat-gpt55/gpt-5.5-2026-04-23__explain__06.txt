@@ -1,0 +1,76 @@
+When a company says it was “breached,” it means someone accessed systems, accounts, files, or databases without authorization. What happens to your data depends on what the attacker reached and whether they copied it.
+
+### What may have happened to your data
+
+A breach can involve different kinds of exposure:
+
+- **Accessed:** Attackers may have viewed systems or records.
+- **Copied/exfiltrated:** Data may have been downloaded or stolen.
+- **Altered or deleted:** Less common for consumer breaches, but possible.
+- **Encrypted by ransomware:** Criminals may lock the company’s files and demand payment.
+- **Leaked or sold:** Stolen data may appear on dark web forums, criminal marketplaces, or public leak sites.
+
+Companies often initially say they are “investigating” because they may not yet know exactly what data was taken.
+
+### Types of data that could be involved
+
+Depending on the company, exposed data might include:
+
+- Name, address, phone number, email
+- Username and password
+- Security questions and answers
+- Date of birth
+- Payment card details
+- Bank account information
+- Social Security number or national ID
+- Medical records
+- Employment or payroll records
+- Purchase history or location data
+- Private messages, documents, or photos
+
+The risk depends heavily on the sensitivity of the data.
+
+### What attackers can do with stolen data
+
+Stolen data can be used for:
+
+- **Phishing:** More convincing scam emails, texts, or calls.
+- **Account takeover:** Trying your password on other websites.
+- **Identity theft:** Opening accounts or applying for credit in your name.
+- **Financial fraud:** Unauthorized transactions or loan applications.
+- **Blackmail or extortion:** Especially if sensitive personal, medical, or private data was exposed.
+- **Spam and targeting:** Your contact details may be added to scam lists.
+
+Even if passwords were “hashed” or encrypted, weak passwords can sometimes still be cracked, especially if the company used poor security practices.
+
+### What the company usually does next
+
+After discovering a breach, a company may:
+
+1. Shut down affected systems or block attacker access.
+2. Hire cybersecurity investigators.
+3. Determine what data was accessed or stolen.
+4. Notify regulators or law enforcement.
+5. Notify affected customers.
+6. Force password resets.
+7. Offer credit monitoring or identity theft protection.
+8. Patch security flaws and improve defenses.
+
+Notifications can take weeks or months because forensic investigations are often slow.
+
+### What you should do
+
+If you may be affected:
+
+- **Change your password** for that company.
+- **Change the same password anywhere else you reused it.**
+- **Enable multi-factor authentication** where possible.
+- **Watch for phishing emails, calls, or texts** pretending to be from the company.
+- **Monitor bank and credit card statements.**
+- **Consider freezing your credit** if Social Security number or similar ID data was exposed.
+- **Use a password manager** to create unique passwords.
+- **Be cautious of links** in breach-related emails; go directly to the company’s website instead.
+
+### Key point
+
+A breach does not always mean your data was definitely stolen, but it means the company lost control over some system or information. The seriousness depends on what data was exposed, whether it was copied, and how easily it can be used against you.

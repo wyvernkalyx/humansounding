@@ -1,0 +1,29 @@
+**Yes, your IT guy is 100% correct.** 
+
+The standard advice to force users to change their passwords every 30, 60, or 90 days has been officially retired by major cybersecurity authorities, including the **National Institute of Standards and Technology (NIST)**, **Microsoft**, and the **UK’s National Cyber Security Centre (NCSC)**.
+
+Here is why the advice changed, and what modern password security looks like today.
+
+---
+
+### Why Frequent Password Rotation Backfired
+Security experts realized that forcing users to change passwords frequently actually makes systems **less secure**, not more. It creates "password fatigue," leading to predictable human behaviors:
+
+1. **Predictable Transformations:** Instead of creating truly new passwords, people make minor, predictable changes. For example, `Winter2023!` becomes `Spring2024!`, or `P@ssword1` becomes `P@ssword2`. Hackers know these patterns and program their cracking tools to guess them first.
+2. **Weaker Passwords:** When people know they have to change a password in a few weeks, they choose shorter, simpler passwords that are easy to remember.
+3. **Insecure Storage:** Users end up writing passwords on sticky notes, saving them in unencrypted text files on their desktops, or reusing the same password across personal and work accounts.
+
+---
+
+### The Modern Standard for Password Security
+
+Instead of arbitrary expiration dates, modern cybersecurity standards recommend the following:
+
+* **Rotate Only When Compromised:** You should only change a password if there is a reason to believe it was exposed (e.g., a data breach, phishing attack, or malware detection).
+* **Length Over Complexity (Passphrases):** A long password made of 3–4 random words (e.g., `correct-horse-battery-staple` or `blue-jacket-coffee-table`) is exponentially harder for computers to crack than a short, complex one (like `Tr0ub4dor&`).
+* **Multi-Factor Authentication (MFA):** This is the single most important security measure. Even if a hacker guesses or steals your password, MFA prevents them from logging in without the secondary approval (such as an authenticator app prompt on your phone).
+* **Password Managers:** Encouraging employees to use a business password manager allows them to generate unique, 20+ character random passwords for every single site without having to memorize them.
+* **Breach Monitoring:** Instead of forced rotation, IT departments now use tools that automatically check passwords against databases of known leaked credentials and only force a reset if a match is found.
+
+### The Bottom Line
+Your IT guy is staying up to date with modern security frameworks (specifically **NIST Special Publication 800-63B**). Dropping the 90-day rotation policy in favor of **longer passphrases + MFA** makes life easier for employees while making the company significantly harder to hack.

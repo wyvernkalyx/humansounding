@@ -1,0 +1,40 @@
+## The basic problem it solves
+
+Imagine a friend hands you a coin and claims it's rigged to land on heads. You flip it 10 times and get 7 heads.
+
+Is that proof? Not really — a perfectly fair coin lands on heads 7 out of 10 times fairly often, just by luck. But what if you got 10 heads out of 10? That starts to feel like too much of a coincidence.
+
+The p-value is just a number that puts a scale on that gut feeling of "that's too much of a coincidence."
+
+## How it works
+
+To calculate it, you play devil's advocate. You *assume* the boring explanation is true — the coin is fair, the drug does nothing, the new website design changes nothing. Statisticians call this the "null hypothesis."
+
+Then you ask: **if the boring explanation were true, how often would I see results at least as dramatic as the ones I actually got?**
+
+That answer, expressed as a probability, is the p-value.
+
+- 7 heads out of 10 flips: p ≈ 0.17. A fair coin does that about 17% of the time. Nothing surprising.
+- 10 heads out of 10: p ≈ 0.001. A fair coin does that about 1 time in 1,000. Now you're suspicious.
+
+So a **small p-value means your data would be strange if nothing interesting were going on** — which is indirect evidence that something interesting *is* going on.
+
+## The 0.05 thing
+
+By convention, many fields treat p < 0.05 as "statistically significant." That's a result that would happen less than 5% of the time by pure chance.
+
+There's nothing magical about 0.05. It's a historical habit, roughly the equivalent of a judge deciding how much evidence counts as "enough." A p-value of 0.049 and one of 0.051 are essentially the same amount of evidence, even though one gets called "significant" and the other doesn't.
+
+## Four things a p-value is *not*
+
+**It's not the probability your theory is right.** It's the probability of your *data*, assuming the boring explanation. Those are different questions, and flipping them is the single most common mistake. (Compare: "most murderers own shoes" is very different from "most shoe-owners are murderers.")
+
+**It doesn't tell you the effect is big or important.** With a huge sample, a drug that lowers blood pressure by a trivial, useless amount can produce a tiny p-value. Significance and importance are separate things.
+
+**It doesn't tell you the result is real.** Rare things happen. If a hundred researchers study a hundred useless drugs, about five will get p < 0.05 by dumb luck. This is why replication matters so much.
+
+**It's not proof of "no effect" when it's large.** A big p-value often just means you didn't gather enough data to detect anything. Absence of evidence isn't evidence of absence.
+
+## In one sentence
+
+A p-value measures how surprised you should be by your results if nothing interesting were actually happening — small p, be surprised; large p, shrug.

@@ -1,0 +1,68 @@
+A 30% drop with flat signups is a strong signal — it means something changed *after* the front door. Here's the order I'd work in, because the cheap checks eliminate the most common causes.
+
+## 1. Confirm the metric is real (do this first)
+
+A surprising share of "sudden 30% drops" are measurement artifacts:
+
+- **Right-censoring.** If activation is "did X within 7/14/30 days," last month's cohort hasn't had time to finish. Compare only fully-matured cohorts, or measure activation-within-24h so cohorts are comparable.
+- **Event tracking broke.** Check whether an analytics SDK version, event rename, schema change, or pipeline gap coincides with the drop. Sanity-check the activation event count against a source of truth (database rows, server logs) rather than your analytics tool.
+- **Definition drift.** Did anyone change the activation query, the denominator (e.g., now counting invited teammates or bot signups as signups), or dedup logic?
+- **Seasonality.** Compare to the same month last year, not just last month.
+
+## 2. Find the shape of the drop
+
+Plot daily activation rate over 90+ days.
+
+- **A cliff on a specific day** → a deploy, config change, or third-party outage. Go straight to the changelog for that date.
+- **A gradual slope** → mix shift in who's signing up, or a slowly degrading dependency (email reputation, page speed).
+- **A step that partially recovered** → likely an incident someone already fixed unknowingly.
+
+## 3. Segment to localize it
+
+Slice activation rate by every dimension you have, and look at whether the drop is **concentrated** or **uniform**:
+
+- Platform / OS / app version / browser
+- Country, language
+- Acquisition channel and campaign
+- Signup method (email vs. Google/SSO)
+- Device type, new vs. invited user, plan tier
+
+Concentrated in one segment → almost always technical or a segment-specific funnel change. Uniform across all → global change, or back to a measurement problem.
+
+## 4. Check for mix shift (Simpson's paradox)
+
+Steady total signups can hide a composition change. If a paid campaign scaled up and brought lower-intent traffic, per-segment activation rates can be flat while the blended rate collapses.
+
+Test it: apply **last month's segment mix** to **the prior period's per-segment activation rates**. If that reproduces the 30% drop, your product didn't break — your traffic changed.
+
+## 5. Walk the funnel step by step
+
+Decompose activation into every micro-step (verify email → complete profile → connect data source → first action). Compute step-to-step conversion for both periods and find where the delta actually lives. Also look at:
+
+- Time-to-activation distribution (slower, or genuinely stalled?)
+- Client-side errors, crash rate, and API error rate at the suspect step
+- Drop-offs by field on any form that changed
+
+## 6. Suspect the boring infrastructure
+
+In my experience these cause more activation drops than product decisions:
+
+- **Email deliverability.** Verification or welcome emails landing in spam. Check bounce/spam-complaint rates, domain reputation, a new sending provider, a DMARC/DKIM change.
+- **SMS/OTP delivery** failures by country.
+- **OAuth provider changes** (Google/Apple consent screen, redirect URI policy).
+- **A new bot/captcha/WAF rule** blocking real users.
+- **Page speed or a broken asset** on a key onboarding screen.
+- **A forgotten A/B test** or feature flag rolled to 100%.
+- **Bot signups masking a real decline** — if bots grew while real signups fell, total looks flat and activation tanks. Check signup quality signals.
+
+## 7. Then go qualitative
+
+Once you have a suspect segment: watch 10–20 session replays of users who dropped at that step, read support tickets from the period, and send a one-question survey to non-activated users ("What stopped you from finishing setup?").
+
+## 8. Validate causation before you act
+
+Don't stop at correlation. Confirm with at least one of: an unaffected control segment that behaved normally, a dose-response relationship (rollout percentage vs. drop size), or a revert/fix that restores the metric.
+
+---
+
+**If you only have an hour:** check cohort maturity, diff your deploy/config changelog against the drop date, verify the activation event count against your database, and pull activation rate by app version and by signup method. That combination catches the majority of cases.

@@ -1,0 +1,188 @@
+Your meeting likely has two separate but related failures:
+
+## Diagnosis
+
+### 1. The meeting has no clear decision structure
+If nobody remembers what was decided, the meeting is probably functioning as a discussion forum, not a decision-making forum.
+
+Common symptoms:
+- Agenda items are vague: “Discuss project X”
+- People talk through issues but do not close them
+- Decisions are implied, not explicitly stated
+- No one owns the final call
+- The meeting ends with “sounds good” instead of “we decided X”
+
+### 2. The agenda is overloaded
+Running over usually means one or more of these is true:
+- Too many topics are included
+- Topics are too broad
+- Updates are being given live instead of shared beforehand
+- Hard conversations are discovered during the meeting rather than prepared for
+- No one is time-boxing discussions
+
+### 3. The meeting lacks a facilitator
+If everyone participates but no one manages the process, the meeting will drift.
+
+A facilitator should:
+- Keep the group on the topic
+- Cut off rabbit holes
+- Clarify when a decision is needed
+- Summarize decisions out loud
+- Assign owners and deadlines
+- Park unresolved issues
+
+### 4. Decisions are not being recorded in real time
+If notes are written later — or not at all — people will leave with different interpretations.
+
+The problem is not memory. The problem is lack of a visible decision log.
+
+### 5. Too much of the meeting is probably status reporting
+Weekly meetings often become verbal status updates. That is usually a bad use of group time.
+
+Status can often be handled asynchronously:
+- Written updates before the meeting
+- Dashboard
+- Project tracker
+- Short “red/yellow/green” summaries
+
+The live meeting should focus on:
+- Decisions
+- Blockers
+- Tradeoffs
+- Cross-functional coordination
+- Escalations
+
+---
+
+## Likely Root Cause
+
+Your weekly meeting does not have a strong operating system.
+
+It probably lacks:
+1. A decision-focused agenda  
+2. Time boxes  
+3. A facilitator  
+4. A note-taker or decision recorder  
+5. Clear owners for action items  
+6. A post-meeting recap  
+
+---
+
+## Fix It With This Format
+
+### Before the meeting
+Send an agenda with three categories:
+
+| Item | Desired outcome | Owner | Time |
+|---|---|---:|---:|
+| Project timeline issue | Decide whether to delay launch | Maya | 15 min |
+| Budget request | Approve/reject extra spend | Chris | 10 min |
+| Hiring blocker | Identify next action | Priya | 10 min |
+
+Avoid agenda items like:
+- “Discuss roadmap”
+- “Talk about hiring”
+- “Review project”
+
+Use outcome-based wording:
+- “Decide X”
+- “Approve Y”
+- “Choose between A/B”
+- “Assign owner for Z”
+
+---
+
+### During the meeting
+Use this rule for every topic:
+
+1. What is the issue?
+2. What decision or action is needed?
+3. Who decides?
+4. What did we decide?
+5. Who owns the next step?
+6. By when?
+
+At the end of each topic, someone should say:
+
+> “To confirm, we decided X. Sarah owns Y by Friday.”
+
+If you cannot say that, you did not finish the topic.
+
+---
+
+### End the meeting 5 minutes early
+Reserve the final 5 minutes for a recap:
+
+- Decisions made
+- Action items
+- Owners
+- Deadlines
+- Open issues
+- Parked topics
+
+This is non-negotiable. If you do not recap, people will leave with different versions of reality.
+
+---
+
+## Use a Simple Meeting Notes Template
+
+```text
+Meeting: Weekly Team Meeting
+Date:
+
+Decisions:
+1. 
+2. 
+3. 
+
+Action Items:
+- [Owner] will [action] by [date]
+- [Owner] will [action] by [date]
+
+Open Questions:
+- 
+
+Parked Topics:
+- 
+
+Topics Not Covered:
+- 
+```
+
+Send this within 30 minutes after the meeting.
+
+---
+
+## Rule of Thumb
+
+If an item does not require live discussion, remove it.
+
+Keep the weekly meeting for:
+- Decisions
+- Risks
+- Dependencies
+- Blockers
+- Escalations
+
+Move these out:
+- General updates
+- FYIs
+- Detailed reviews
+- Work that only involves two people
+- Topics with no owner or desired outcome
+
+---
+
+## Fast Experiment for Next Week
+
+For the next meeting, try this:
+
+1. Cap the agenda at 3–5 items.
+2. Assign a desired outcome to each item.
+3. Time-box every item.
+4. Appoint one facilitator.
+5. Record decisions live.
+6. End with a recap.
+7. Send notes immediately afterward.
+
+If the meeting still runs over, your agenda is too big or the wrong people are in the room.

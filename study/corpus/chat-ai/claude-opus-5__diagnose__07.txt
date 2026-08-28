@@ -1,0 +1,15 @@
+A few distinct things produce this pattern, and they call for opposite responses — so it's worth figuring out which one you're in.
+
+**Too many things in flight at once.** This is the most common and least obvious cause. If you're juggling six projects, each one sits idle most of the time while you work on the others, so *everything* finishes late even though your total output is fine. There's a real relationship here: how long something takes to finish depends on how much other work is competing with it, not just how fast you work. The tell is that you feel busy and productive but nothing crosses the finish line. The fix is counterintuitive — deliberately stall some work to finish other work, rather than nudging everything forward a little.
+
+**The hours themselves are degrading your judgment.** Past a certain point, extra hours produce work that needs rework, and rework consumes the hours you added. This one's self-reinforcing and hard to see from inside. The tell is more revisions, more "wait, I misread the requirement," more small errors than you used to make.
+
+**Fragmented time, not scarce time.** Ten hours cut into twenty pieces by meetings and messages isn't ten hours. If your calendar filled up over the same period your deadline performance dropped, this is probably it. The tell is that you're staying late to do the actual work because the day got eaten.
+
+**Your estimates were never right.** If you've *always* been slightly over, and the extra hours are just what it actually takes, the deadlines are the broken thing, not you. The tell is that the overrun is roughly proportional across everything, rather than a few disasters.
+
+**You're blocked more than you think.** Waiting on other people's input, unclear specs, decisions that haven't been made. Extra hours don't help when the constraint is external. The tell is that the delay is concentrated in specific dead periods rather than spread evenly.
+
+A quick way to tell them apart: for your last three late deliverables, write down roughly where the time actually went — focused work, rework, waiting, context switching. Most people are surprised, and the distribution usually points clearly at one of the above.
+
+What kind of work is it, and are these deadlines you set or ones handed to you? That changes which of these is most likely.

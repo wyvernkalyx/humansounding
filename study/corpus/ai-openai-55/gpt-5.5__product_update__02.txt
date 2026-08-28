@@ -1,0 +1,33 @@
+## Product Update: We’re Sunsetting Our Legacy Integration
+
+We’re updating our integration strategy to provide a more reliable, secure, and scalable experience for customers. As part of this work, we’ll be sunsetting our legacy **[Integration Name]** integration.
+
+### What’s changing
+
+The existing **[Integration Name]** integration will be discontinued on **[Sunset Date]**. After this date, the integration will no longer sync data, receive updates, or be supported by our team.
+
+### Why we’re making this change
+
+This legacy integration was built on older infrastructure that no longer meets our standards for performance, security, and long-term maintainability. By retiring it, we can focus on improving newer integration options and delivering a better overall experience.
+
+### What you need to do
+
+If you currently use the legacy **[Integration Name]** integration, please migrate to **[New Integration / Alternative Workflow]** before **[Sunset Date]**.
+
+To help with the transition, we’ve prepared:
+
+- A migration guide: **[Link]**
+- Documentation for the new integration: **[Link]**
+- Support from our team if you have questions or need help
+
+### Key dates
+
+- **Announcement date:** [Date]  
+- **Migration window begins:** [Date]  
+- **Legacy integration sunset date:** [Date]  
+
+### Need help?
+
+If you have questions or need assistance planning your migration, please contact us at **[Support Email]** or reach out to your customer success manager.
+
+We know changes like this can require planning, and we’re committed to making the transition as smooth as possible. Thank you for your understanding as we continue improving our platform.

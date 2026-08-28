@@ -1,0 +1,45 @@
+The distinction that matters is whether the constraint is in the presentation layer or below it. A redesign changes templates, visual design, information architecture, and content on top of the existing platform and data model. A rebuild replaces the platform, codebase, content model, or integrations. So the question to answer is: **what specifically do you need the site to do that the current foundation can't support?** A consultant recommending a rebuild should be able to name that thing concretely and show you the blocker.
+
+## Legitimate triggers for a rebuild
+
+- **Platform is end-of-life or unsupported.** Drupal 7, AngularJS, unsupported PHP or .NET versions, an abandoned proprietary CMS. This is checkable public information — don't take their word for it.
+- **No viable upgrade path.** Sometimes the major-version jump is effectively a rebuild anyway (Drupal 7→10 was famously this). If so, the honest framing is "you're rebuilding either way, so choose deliberately."
+- **The content model is structurally wrong.** If everything is stored as blobs of WYSIWYG HTML and you now need structured, reusable content across channels, no amount of redesign fixes that.
+- **Nobody can maintain it.** Bespoke code, no documentation, original developer gone, small changes take weeks. Ask your own team how long a trivial content-type change takes today.
+- **Security or compliance exposure** you can't remediate in place.
+- **Accessibility problems baked into platform-generated markup** you can't override.
+- **A hard integration requirement** — commerce, CRM, personalization, single sign-on — the stack genuinely can't accommodate.
+
+## Red flags
+
+- The justification is vibes: "outdated," "not modern," "technical debt" without specifics.
+- The recommended platform is the one they specialize in and resell.
+- Design and content problems are being described as technical ones. Ugly, poorly organized, and badly written are all fixable without touching the stack.
+- No serious attempt was made to cost the upgrade path.
+- The diagnosis arrived fast. A credible rebuild recommendation usually follows a real audit — code review, content inventory, integration map — not a two-hour discovery call.
+- The proposal quietly includes a long implementation retainer with the firm that made the diagnosis.
+
+## Questions to put to them in writing
+
+1. Name three things we need that the current platform can't do, and explain the technical reason for each.
+2. What's the upgrade path from our current version, what does it cost, and why did you rule it out?
+3. What percentage of content, URLs, and functionality carries over versus gets rebuilt?
+4. What's the 3–5 year total cost of ownership for each option, including licensing, hosting, and maintenance?
+5. What happens if we do nothing for 18 months?
+6. Would you recommend this same platform if someone else were implementing it?
+
+Question 6 is the useful one. Ask whether they'd be willing to do the strategy and platform selection while a different firm implements. The answer is informative regardless of whether you actually split the work.
+
+## Do a little independent diagnosis
+
+Look at your own evidence before accepting theirs. Check your backlog for how often the answer to a request was "the platform can't do that." Ask your developers — not the consultant — what they'd change and why. Run Lighthouse and an accessibility scanner like axe on your main templates. Look at analytics to identify whether your actual problem is traffic, conversion, or internal maintenance cost, because a rebuild addresses the third much more directly than the first two.
+
+Then consider paying a small fee for a second technical opinion from someone who does audits but not builds. A few thousand dollars against a six-figure decision is cheap.
+
+## Remember the middle options
+
+The framing "redesign or rebuild" is a false binary. Real alternatives include: putting a new front end on the existing CMS via its API; replatforming the back end while keeping the current design; incremental replacement section by section (the strangler-fig approach) rather than a big-bang cutover; or building a design system first and applying it to the existing templates.
+
+Weigh those against the genuine costs of a rebuild, which consultants tend to soft-pedal: SEO and URL risk, content migration effort that almost always exceeds estimates, staff retraining, and six to eighteen months during which you're not improving the site because you're rebuilding it.
+
+The consultant may well be right. But "right" should look like a specific named blocker, a costed comparison against the upgrade path, and a willingness to have the recommendation checked by someone who isn't bidding on the work.

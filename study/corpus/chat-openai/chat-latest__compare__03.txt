@@ -1,0 +1,16 @@
+The simplest distinction is: a controller owns the accuracy and operation of the finance function; a CFO owns the financial direction of the business.
+
+- Controller: primarily backward- and present-looking. They make sure the books are right, the close happens, financial statements are reliable, controls exist, taxes/compliance are handled, and accounting policies are followed. Typical responsibilities include the general ledger, AP/AR, payroll oversight, audits, reporting, and month-end/year-end close.
+- CFO: primarily present- and forward-looking. They use the financial picture to help decide where the company should go. Typical responsibilities include forecasting, budgeting, capital allocation, fundraising/debt, investor or board relationships, pricing/economics, M&A, risk management, and advising the CEO on major strategic decisions.
+
+A useful test is the question each role is expected to answer:
+
+Controller: “What happened financially, and are the numbers correct?”
+
+CFO: “Given the numbers, what should we do next?”
+
+In a larger company, the controller usually reports to the CFO. In a smaller company, the titles get blurry: someone called a “CFO” may actually spend most of their time doing controller work, while a strong controller may handle budgeting and strategic analysis that would belong to a CFO elsewhere.
+
+There’s also a difference in orientation. Controllers generally come from deeper accounting backgrounds and often have CPA-type expertise. CFOs can come from accounting, FP&A, investment banking, corporate finance, or operating backgrounds; their job requires more emphasis on strategy, financing, communication, and executive decision-making.
+
+If you’re deciding which one a company needs, a rough rule is: if your problem is “we don’t trust or get our financials on time,” you need controller capability. If it’s “our financials are solid, but we need someone to help us plan growth, raise capital, manage cash strategically, or make major business decisions,” you need CFO capability. Many growing businesses eventually need both.

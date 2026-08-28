@@ -1,0 +1,53 @@
+To choose the right path, you need to look at three factors: **your financial runway**, **the nature of the work**, and **the management capacity of your current developer**. 
+
+Going from one to two developers is a massive shift—it’s the moment you transition from a single person holding all the context to building an actual engineering organization.
+
+Here is a framework to help you decide:
+
+---
+
+### Choose a **Full-Time Developer** if:
+1. **The work is your core product:** You are building long-term intellectual property that will need constant iteration, maintenance, and refactoring.
+2. **You need redundancy & shared ownership:** If your current developer gets hit by a bus (or burns out), your business halts. A second employee builds institutional memory, shares on-call duties, and cares about long-term architecture rather than just closing tickets.
+3. **You have at least 12–18 months of runway:** Hiring an FTE is a fixed, long-term commitment. Factoring in recruiting, taxes, benefits, and equity, you need budget stability.
+4. **The scope is evolving:** If you don't know exactly what features you'll be building 3 months from now, full-time employees are far better at navigating ambiguity than contractors.
+
+---
+
+### Choose **Contractors** if:
+1. **The work is modular and well-defined:** You need a specific, bounded project done (e.g., a Shopify integration, a mobile app build, a design system implementation, or migrating a database).
+2. **You need specialized expertise:** Your current dev is a great generalist/backend engineer, but you temporarily need a senior DevOps expert, a security auditor, or an iOS specialist.
+3. **Runway/cash flow is volatile:** If you might need to cut expenses rapidly in 3–6 months, contractors turn fixed payroll into variable, easily pausable costs.
+4. **You need speed immediately:** Sourcing and hiring a good full-time dev takes 2–4 months, plus 1–2 months to ramp up. A contractor can often start next Monday.
+
+---
+
+### The Hidden Trap: Contractor Management Overhead
+If you only have **one** developer right now, bringing on contractors will **reduce your developer's individual output by 20% to 40%**. 
+
+Contractors require:
+* Detailed technical specifications.
+* Architectural guardrails.
+* Code reviews / PR approvals.
+* QA and debugging integration issues.
+
+If your current developer is already underwater, hiring contractors won't immediately relieve their stress—it might actually increase it in the short term.
+
+---
+
+### The Decision Matrix (Quick Test)
+
+| Question | If Yes... | If No... |
+| :--- | :--- | :--- |
+| Can you clearly define the deliverables down to the task level right now? | **Contractor** | **FTE** |
+| Will this code need constant daily iteration 12 months from now? | **FTE** | **Contractor** |
+| Is your runway less than 9 months? | **Contractor** | **FTE** |
+| Does your current dev have time to write specs and review code? | **Contractor** | **FTE** |
+
+---
+
+### Recommended Strategy for Most Early-Stage Teams
+
+If your budget allows, **start recruiting your 2nd Full-Time Developer now** (because hiring takes months), but **bring in a short-term contractor to knock out a specific, isolated bottleneck** while the hiring search is underway. 
+
+Once the full-time hire is onboarded, phase out the contractor.

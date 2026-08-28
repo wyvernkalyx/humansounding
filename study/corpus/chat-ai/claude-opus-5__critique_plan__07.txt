@@ -1,0 +1,26 @@
+Margin is a reasonable guardrail, but as a *sole* trigger it's weak — it measures the wrong thing. Profitability tells you location 1 works. Expansion readiness is about whether the *thing that makes it work* is transferable.
+
+**Where the trigger breaks down**
+
+- **Margin can be manufactured.** You can hit 20% by deferring maintenance, running lean on staffing, or by not paying yourself a market wage for the 60 hours you're putting in. None of that replicates at site 2, where you'll have to hire a real manager at real cost.
+- **Margin isn't cash.** You can clear 20% and still not have the working capital for a build-out, deposits, pre-opening payroll, and 6–12 months of ramp losses. Expansion is funded from the balance sheet, not the P&L.
+- **It ignores the actual constraint.** For most multi-unit operators, the binding constraint isn't capital or profitability — it's management bench. If nobody but you can run a location, site 2 doesn't make you a two-unit operator, it makes you a worse one-unit operator.
+- **It ignores headroom at site 1.** If location 1 is at 70% capacity, the cheapest growth available is filling the remaining 30% — near-zero marginal cost, no new lease, no new hiring risk.
+
+**A stronger composite gate**
+
+I'd want all of these before signing a lease:
+
+1. **Sustained** 20%+ over 12 months (covers seasonality), not a good quarter.
+2. **Location 1 runs without you** for 30–60 consecutive days with no performance degradation. This is the real test, and it's the one people skip.
+3. **A trained successor exists** — either the person who'll run site 2, or the person who'll take over site 1 while you open site 2.
+4. **Systems are documented** — hiring, training, opening/closing, ordering, and a reporting cadence that tells you what's happening remotely.
+5. **Cash on hand** to fund build-out plus the full ramp period without touching site 1's operating cash.
+6. **Site 1 is near capacity**, or you have evidence demand is geographically constrained rather than just soft.
+7. **Cannibalization modeled** — how much of site 2's revenue comes out of site 1's?
+
+**One clarifying question that changes the answer a lot**
+
+Twenty percent of *what?* Net margin, four-wall EBITDA, contribution margin, and gross margin are wildly different bars. In restaurants, 20% four-wall EBITDA is strong; 20% gross margin means you're going out of business. If you're measuring net margin *after* an allocated corporate overhead that doesn't yet exist, you may be setting an artificially high bar and delaying a move you could already make.
+
+Tell me the industry and which margin you mean, and I can be more specific about whether 20% is aggressive or conservative for your context.

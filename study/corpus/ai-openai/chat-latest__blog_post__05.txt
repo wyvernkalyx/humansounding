@@ -1,0 +1,71 @@
+# Home Network Security: The Basics Everyone Should Know
+
+Your home network connects a growing collection of devices: laptops, phones, TVs, game consoles, security cameras, smart speakers, and more. A few basic security measures can make that network significantly harder to compromise without making it difficult to use.
+
+## Start With Your Router
+
+Your router is the gateway between your home network and the internet, so securing it should be your first priority.
+
+Change the router’s administrator password from the factory default. Choose a long, unique password that you don’t use for any other account. If the router allows remote administration over the internet, disable that feature unless you specifically need it.
+
+It’s also worth checking for firmware updates. Router manufacturers periodically release updates that fix security vulnerabilities. Enable automatic updates when available; otherwise, check the manufacturer’s support site periodically.
+
+## Secure Your Wi-Fi
+
+Use WPA3 encryption if your router and devices support it. WPA2-AES remains a reasonable choice for older equipment, but older standards such as WEP should be avoided.
+
+Give your Wi-Fi network a strong, unique password. You generally don’t need to hide the network name (SSID); hiding it provides little meaningful security and can make connecting devices less convenient.
+
+You should also consider disabling Wi-Fi Protected Setup (WPS), particularly its PIN-based connection method. WPS was designed for convenience, but some implementations have security weaknesses.
+
+## Create a Guest Network
+
+Most modern routers can create a separate guest Wi-Fi network. This gives visitors internet access without necessarily giving them access to computers, storage devices, printers, or other equipment on your primary network.
+
+A guest network can also be useful for less-trusted smart-home and Internet of Things (IoT) devices. Some routers offer dedicated IoT networks or network isolation features for the same purpose.
+
+## Keep Everything Updated
+
+Security doesn’t end with the router. Computers, smartphones, smart TVs, cameras, and other connected devices can all contain vulnerabilities.
+
+Enable automatic operating-system and security updates wherever practical. For devices that no longer receive security updates, consider replacing them—especially when they handle sensitive information or can be accessed from the internet.
+
+## Protect Your Accounts
+
+Strong account security helps limit the damage if a password is stolen. Use unique passwords for important accounts and store them in a reputable password manager rather than reusing a memorable password everywhere.
+
+Enable multi-factor authentication (MFA) for services that support it, particularly email, cloud storage, financial accounts, and the online account associated with your router or smart-home system.
+
+## Be Careful With Internet-Exposed Devices
+
+Avoid exposing cameras, storage servers, or other home devices directly to the public internet unless you understand the security implications. Features such as automatic port forwarding can sometimes make devices reachable externally without this being obvious.
+
+If you need to access your home network while away, a properly configured VPN is generally preferable to exposing individual administrative interfaces directly to the internet.
+
+## Know What’s Connected
+
+Every so often, open your router’s management interface and review its list of connected devices. You’ll probably see more than you expect, from streaming boxes to thermostats.
+
+Rename devices in the router interface when possible so they’re easy to identify. If you see something you don’t recognize, investigate it rather than immediately assuming it’s an attacker—device names and hardware identifiers can be surprisingly cryptic.
+
+## Don’t Forget Physical Security and Backups
+
+Someone who can physically access networking equipment may be able to reset or reconfigure it. Keep your router and other important network hardware in a reasonably secure location.
+
+Network security also can’t prevent every problem. Maintain backups of important files using the 3-2-1 principle where practical: keep three copies of important data, on two types of storage, with at least one copy stored separately or off-site.
+
+## A Simple Home Security Checklist
+
+For most households, a strong foundation consists of:
+
+- Change default router administrator credentials.
+- Use WPA3 or WPA2-AES with a strong Wi-Fi password.
+- Keep router firmware and connected devices updated.
+- Disable unnecessary remote administration and WPS.
+- Use guest or isolated networks for visitors and IoT devices.
+- Use unique passwords and MFA for important accounts.
+- Avoid unnecessarily exposing devices to the internet.
+- Review connected devices periodically.
+- Maintain reliable backups.
+
+Home network security doesn’t require turning your house into an enterprise data center. Keeping software current, limiting unnecessary access, and using strong authentication addresses many of the most common risks—and provides a solid foundation as your network grows.

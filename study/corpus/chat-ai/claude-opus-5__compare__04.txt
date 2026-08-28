@@ -1,0 +1,55 @@
+## The core difference
+
+An **index fund** (or ETF) buys a whole market in one purchase — e.g., an S&P 500 fund gives you fractional ownership of 500 companies. An **individual stock** is a bet on one company's future.
+
+## Side-by-side
+
+| | Index funds | Individual stocks |
+|---|---|---|
+| **Diversification** | Built in — one bad company barely matters | You must build it yourself; needs 20–30+ holdings across sectors |
+| **Research required** | Minimal (pick broad, cheap, done) | Ongoing: financials, competition, management, valuation |
+| **Cost** | 0.03–0.20% annual expense ratio on broad funds | $0 commissions at most brokers, but higher bid/ask and trading costs if active |
+| **Risk of permanent loss** | Very low for broad market funds over long horizons | Real — companies go to zero (Enron, Bed Bath & Beyond, Nokia's collapse) |
+| **Realistic outcome** | Market return, roughly 7–10% nominal historically for US equities | Wide distribution; median stock underperforms the index |
+| **Taxes** | Very tax-efficient, low turnover | Each sale is a taxable event in a brokerage account |
+| **Time cost** | Near zero | Hours per month if done properly |
+
+## The uncomfortable evidence
+
+- Roughly **80–90% of professional active managers** underperform their benchmark over 15-year periods (SPIVA data). These are full-time teams with Bloomberg terminals.
+- Market returns are driven by a tiny minority of stocks. Hendrik Bessembinder's research found ~4% of US stocks accounted for all the net wealth creation above T-bills since 1926; the *median* stock's lifetime return was negative. Missing the winners is the default outcome.
+- The gap between fund returns and *investor* returns is largely behavioral — people sell after drops and buy after run-ups. Concentrated single-stock positions amplify this because volatility is much higher.
+
+## Where individual stocks genuinely make sense
+
+- **Learning.** Owning a company forces you to read a 10-K, which teaches more than any article. This has real value.
+- **Genuine informational edge** in an area you work in — though be careful, since a hunch isn't an edge, and your employer's stock concentrates your job risk and portfolio risk together.
+- **Control over specifics** — tax-loss harvesting individual lots, excluding companies you object to.
+- **Interest.** If picking stocks keeps you engaged enough to keep contributing, that's worth something.
+
+## A common practical structure
+
+Many first-time investors use a **core-and-satellite** approach:
+
+- **90–95%** in two or three broad index funds — e.g., a total US market fund, an international fund, and possibly a bond fund scaled to your time horizon. A single target-date or "all-world" fund does this in one ticker.
+- **5–10%** in individual stocks, treated as tuition. Size it so total loss would be annoying, not damaging.
+
+After a couple of years, compare your stock picks honestly against what the index did over the same period. Most people conclude the index wins and quietly consolidate; a few discover they enjoy the work.
+
+## Practical setup notes
+
+1. **Account type before investments.** Tax-advantaged space (401(k) match first, then IRA/Roth) usually beats a taxable brokerage for the same holdings.
+2. **Emergency fund and high-interest debt first.** Paying off 22% credit card debt is a guaranteed 22% return.
+3. **Automate contributions.** Consistency matters far more than selection for the first decade.
+4. **Money you need within ~5 years shouldn't be in stocks at all** — the market can be down 30–40% for years.
+5. **Check the expense ratio.** Two S&P 500 funds holding identical stocks can differ by 0.5%+ annually; that's a large drag over 30 years.
+
+## Common first-timer traps
+
+- Buying whatever is being discussed on social media (you're usually late).
+- Confusing a familiar brand with a good investment — good companies at bad prices are bad investments.
+- Owning five funds that all hold the same large-cap US stocks and calling it diversification.
+- Options and leveraged ETFs (3x funds) — these decay and are not long-term holdings.
+- Checking the balance daily. It increases the odds of selling at the worst time.
+
+*This is general educational information, not personalized advice — your tax situation, timeline, and risk capacity change the specifics.*

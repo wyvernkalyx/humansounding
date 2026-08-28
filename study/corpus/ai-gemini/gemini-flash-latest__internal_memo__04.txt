@@ -1,0 +1,36 @@
+**MEMORANDUM**
+
+**TO:** All Staff  
+**FROM:** [Your Name/Title, e.g., IT Security Team / Human Resources]  
+**DATE:** October 24, 2023  
+**SUBJECT:** Mandatory Cybersecurity and Data Privacy Training  
+
+***
+
+**Purpose**  
+As cyber threats continue to grow in sophistication, protecting our organization’s data, systems, and client information is a top priority. To ensure we maintain the highest standards of security and compliance, all employees are required to complete the newly updated **[Year/Name of Training, e.g., 2024 Information Security Awareness Training]**.
+
+**Training Details**  
+* **Format:** Online, self-paced modules via **[Platform Name, e.g., KnowBe4 / LMS Portal]**
+* **Duration:** Approximately **[e.g., 45–60 minutes]** (you may pause and resume as needed)
+* **Deadline:** **[Day of Week, Month Date, Year – e.g., Friday, November 17, 2023, by 5:00 PM]**
+
+**Key Topics Covered**
+* Recognizing phishing and social engineering attempts
+* Safe password management and multi-factor authentication (MFA)
+* Handling sensitive and confidential data
+* Remote work and mobile device security
+* Incident reporting procedures
+
+**Next Steps & How to Access**
+1. You will receive an automated email invitation today from **[Sender Name/Email Address]** with your personalized link.
+2. Log in using your standard single sign-on (SSO) credentials.
+3. Complete all modules and the brief knowledge check at the end.
+
+**Compliance**  
+Please note that completion of this training is **mandatory** for all full-time, part-time, and contract staff. Department managers will receive weekly status reports, and failure to complete the training by the deadline may result in temporary suspension of network access.
+
+**Questions and Support**  
+If you experience any technical difficulties or have questions regarding the training material, please reach out to the IT Helpdesk at **[IT Email/Phone Number/Ticket Link]**.
+
+Thank you for your prompt attention to this matter and for your ongoing commitment to keeping our organization secure.

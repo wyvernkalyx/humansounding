@@ -1,0 +1,62 @@
+## The Core Distinction
+
+**Encryption is two-way. Hashing is one-way.**
+
+Encryption transforms data into ciphertext that can be transformed *back* into the original, provided you have the right key. Hashing transforms data into a fixed-size digest that cannot be reversed — the original data is mathematically destroyed in the process.
+
+## Encryption
+
+**Purpose:** Confidentiality — keeping data secret from anyone without the key.
+
+**How it works:** An algorithm plus a key transforms plaintext → ciphertext. The same or a related key reverses it.
+
+- **Symmetric:** one shared key for both directions. Fast. Examples: AES-256-GCM, ChaCha20-Poly1305.
+- **Asymmetric:** a public key encrypts, a private key decrypts. Slower, solves key distribution. Examples: RSA, ECDH/ECIES.
+
+**Output:** Variable length, roughly proportional to the input.
+
+**Typical uses:** TLS/HTTPS traffic, encrypted disks, messaging apps, database fields you need to read back (like a stored API credential).
+
+## Hashing
+
+**Purpose:** Integrity and verification — proving data hasn't changed, or checking whether someone knows a secret without storing that secret.
+
+**How it works:** A deterministic function maps any input to a fixed-length digest. SHA-256 always produces 256 bits, whether you feed it one byte or a terabyte.
+
+**Key properties of a cryptographic hash:**
+- **Deterministic:** same input always yields the same digest.
+- **Preimage resistance:** given a digest, you can't feasibly find an input that produces it.
+- **Collision resistance:** you can't feasibly find two different inputs with the same digest.
+- **Avalanche effect:** flipping one bit of input changes roughly half the output bits.
+
+**Examples:** SHA-256, SHA-3, BLAKE2/BLAKE3. MD5 and SHA-1 are broken for collision resistance and shouldn't be used for security purposes.
+
+**Typical uses:** File checksums, Git commit IDs, blockchain, deduplication, digital signature schemes, password storage.
+
+## Side by Side
+
+| | Encryption | Hashing |
+|---|---|---|
+| Reversible | Yes, with the key | No |
+| Uses a key | Yes | No (plain hashing) |
+| Output size | Scales with input | Fixed |
+| Goal | Confidentiality | Integrity / verification |
+| Failure mode | Key leaks → data exposed | Collision found → forgery possible |
+
+## The Password Case
+
+This is where the distinction matters most in practice. **Passwords should be hashed, never encrypted.** If you encrypt them, whoever steals your database and your key gets every password in plaintext. If you hash them, you only ever compare digests.
+
+But general-purpose hashes are the wrong tool here — SHA-256 is *fast*, which means an attacker can try billions of guesses per second. Use a deliberately slow, memory-hard password hash:
+
+- **Argon2id** (current recommendation)
+- **scrypt**
+- **bcrypt**
+
+These also incorporate a **salt** — a unique random value per password — so identical passwords produce different digests and precomputed rainbow tables become useless.
+
+## Two Common Confusions
+
+**Encoding is neither.** Base64, URL encoding, and hex are reversible with no key and provide zero security. They exist to make data transport-safe, not secret.
+
+**Encryption alone doesn't guarantee integrity.** An attacker may be able to tamper with ciphertext in meaningful ways. That's why modern systems use **authenticated encryption** (AES-GCM, ChaCha20-Poly1305) or pair encryption with an **HMAC** — a keyed hash that proves both integrity and authenticity. In practice, the two techniques are usually combined rather than chosen between.

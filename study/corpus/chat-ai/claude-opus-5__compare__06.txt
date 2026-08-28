@@ -1,0 +1,38 @@
+## The Annual Cost Picture (12,000 miles)
+
+| | EV (~3.5 mi/kWh) | Hybrid (~48 mpg) | Gas car (~30 mpg, for reference) |
+|---|---|---|---|
+| Energy used | ~3,430 kWh | ~250 gallons | ~400 gallons |
+| Fuel cost (home charging @ $0.16/kWh; gas @ $3.20) | **~$550** | **~$800** | ~$1,280 |
+| If off-peak EV rate (~$0.11) | ~$375 | — | — |
+| If mostly DC fast charging (~$0.45/kWh) | ~$1,540 | — | — |
+| Maintenance | ~$300–400 | ~$500–600 | ~$700–900 |
+| Insurance | Typically $100–400 higher | Baseline | Baseline |
+
+**Takeaway:** at 12,000 miles/year with home charging, an EV saves roughly **$250–450/year on fuel** and maybe **$150–250 on maintenance** versus a hybrid. Call it $400–700/year. That's real, but it's not the slam dunk it becomes at 20,000+ miles/year — and it can vanish entirely if you rely on public fast charging or live somewhere with expensive electricity (CA, HI, New England).
+
+## What Actually Decides It
+
+**Home charging.** This is the single biggest factor. With a garage or driveway outlet, an EV is cheaper and more convenient — you leave every morning "full." Without it (apartment, street parking), a hybrid is usually the better call at this mileage.
+
+**Purchase price and depreciation.** Hybrids like the Prius, Corolla Hybrid, and Camry currently hold value exceptionally well. EVs have depreciated faster, which often costs more than the fuel savings recover over 5 years. The flip side: that same depreciation makes a **used EV** (2–4 years old) one of the best values on the market right now.
+
+**Incentives.** Federal EV tax credits changed significantly in late 2025 — verify current federal and state programs before budgeting, since a $7,500 credit versus none completely flips the math.
+
+**Climate.** Cold weather cuts EV range 20–30% and slows charging. Hybrids lose maybe 10–15% efficiency. If you're in Minnesota vs. Arizona, this matters.
+
+**Trip pattern.** 12,000 miles could be 33 miles/day of commuting (ideal EV) or 6,000 miles of commuting plus four 1,500-mile road trips (better hybrid case). Occasional long trips are fine in an EV; frequent ones in charging-sparse areas are a genuine hassle.
+
+**Upfront cost:** budget $500–2,000 for a Level 2 home charger, though at 33 miles/day a standard 120V outlet may actually suffice.
+
+## Don't Overlook the Plug-In Hybrid
+
+A PHEV (RAV4 Prime, Prius Prime, Sportage PHEV) with 35–45 miles of electric range covers most daily driving on electricity while keeping a gas tank for trips. At your mileage this can capture 70–80% of EV fuel savings with none of the road-trip planning. Downsides: higher purchase price than a regular hybrid, two powertrains to maintain, and the savings only materialize if you actually plug it in nightly.
+
+## Bottom Line
+
+- **Home charging + mostly local driving + you keep cars 8+ years** → EV wins, especially a lightly used one.
+- **No home charging, cold climate, or frequent long trips** → hybrid, easily. Lower stress, lower price, excellent resale.
+- **Mixed driving and you can plug in at home** → PHEV is the sweet spot.
+
+At 12,000 miles a year, this is closer to a lifestyle-fit decision than a spreadsheet decision. Both are good choices; the wrong one is an EV you can't conveniently charge.

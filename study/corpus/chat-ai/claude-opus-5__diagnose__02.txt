@@ -1,0 +1,36 @@
+Silent standoffs rarely fix themselves — they usually harden. Here's a sequence that works:
+
+**1. Talk to each of them separately, first.**
+Don't open with a joint meeting; that tends to feel like an ambush and makes people defensive. Meet with each one privately. Be curious rather than prosecutorial: "I've noticed you and Sam aren't coordinating the way you used to. What's your read on what's going on?"
+
+Listen for what kind of conflict this actually is:
+- **Task/process conflict** — disagreement about direction, ownership, quality standards. These are the easiest to fix and often a symptom of unclear roles.
+- **Relational conflict** — someone felt disrespected, undermined, or blamed. Usually there's a specific triggering incident.
+- **Something more serious** — bullying, harassment, discrimination. If this surfaces, stop and route it through HR; it's a different track entirely.
+
+**2. Ask yourself what you contributed.**
+Overlapping responsibilities, ambiguous decision rights, unequal recognition, or a deadline you set that forced them into competition. It's uncomfortable, but often the manager has built the trap the two of them fell into. Fixing the structure may solve more than fixing the relationship.
+
+**3. Set expectations before the joint conversation.**
+Tell each of them you'll be bringing them together, what the goal is, and what you'll be asking of them. No surprises. Ask each: "What would you need from the other person to work together effectively?"
+
+**4. Run the joint meeting with a narrow purpose.**
+Not to relitigate history or extract apologies. The purpose is a working agreement. Useful framing: *"You don't have to be friends. You do have to be colleagues who exchange information reliably. Let's define what that looks like."*
+
+Ground rules: no interrupting, describe behavior and impact rather than motives, stay on the current work.
+
+**5. Get specific, behavioral commitments.**
+"Communicate better" is useless. "Jamie owns the API spec and makes the final call; Sam raises concerns in the design review, not after merge" is enforceable. Same with: response time expectations, which decisions require both, standing check-in, who's copied on what.
+
+**6. Follow up on a schedule.**
+Check in with each of them in a week or two, then again in a month. Praise the improvement when you see it — people need to know the reset registered.
+
+**A few things to avoid:**
+
+- **Don't permanently route around them.** Splitting their work so they never interact rewards the freeze-out and teaches your team that going silent gets you out of hard collaboration.
+- **Don't try to be their therapist.** You need functional professional behavior. Their feelings about each other are their own business.
+- **Don't stay neutral if someone's actually behaving badly.** Even-handedness is right for a genuine two-sided conflict, but if one person is stonewalling or being contemptuous, name it directly and privately with them.
+
+**If it doesn't improve:** be explicit that professional collaboration is a job requirement, not a preference, and that continued refusal becomes a performance issue. At that point loop in HR and document. It rarely gets there — but knowing you're willing to go there tends to change the calculus for both of them.
+
+If you want to talk through the specific dynamic — what you know about the trigger, their seniority relative to each other, how long it's been going on — I can help you think through the actual conversation.

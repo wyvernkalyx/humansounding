@@ -1,0 +1,17 @@
+Don’t decide based on age alone. A ten-year-old tool can be perfectly healthy; the relevant question is whether patching it still has a lower total cost and risk than replacing it.
+
+I’d evaluate it on five dimensions:
+
+- Cost: How much engineering time goes to maintenance, workarounds, incidents, and onboarding versus useful features?
+- Changeability: Are ordinary changes becoming disproportionately slow or risky because of architecture or accumulated debt?
+- Reliability/security: Are unsupported dependencies, security gaps, data-integrity issues, or recurring outages creating material risk?
+- Business fit: Does the current design prevent workflows, integrations, automation, or scale that the organization now needs?
+- Replacement risk: How well do you actually understand the tool’s accumulated business rules and edge cases? Internal tools often contain a decade of undocumented requirements.
+
+A rewrite becomes compelling when several of the first four are materially bad and incremental modernization can’t address them economically. “The code is ugly” by itself usually isn’t enough.
+
+Also, the choice needn’t be “patch forever” versus “big-bang rewrite.” Often the safest approach is progressive replacement: stabilize the existing system, add observability and tests around critical behavior, establish cleaner boundaries/APIs, and replace the highest-cost components one at a time. That preserves obscure business logic while giving you measurable checkpoints and an exit option.
+
+Before committing, I’d spend 2–4 weeks quantifying the last 12 months of maintenance effort and incidents, identifying unsupported technology and major blockers, and estimating one or two representative future changes both ways. Compare three scenarios—continue maintaining, incremental modernization, and replacement—over roughly 3–5 years, including migration, training, dual-running, and opportunity costs.
+
+If you give me the tool’s stack, team size, maintenance burden, major pain points, and what you need it to do over the next few years, I can help make the keep/modernize/rebuild decision concretely.

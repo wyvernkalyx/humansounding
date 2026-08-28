@@ -1,0 +1,42 @@
+It is **not fine**. In fact, it’s one of the most common resume mistakes. 
+
+Here is why it doesn't work, followed by a formula to fix it.
+
+---
+
+### Why It’s Hurting Your Resume
+1. **"Results-driven" is a dead buzzword:** Recruiters see this phrase hundreds of times a week. It takes up space without proving you actually deliver results.
+2. **"Professional" is too vague:** It tells the reader nothing about your function, industry, or specialty.
+3. **"10+ years of experience" shows longevity, not impact:** Time spent in a career doesn't automatically mean high performance. 
+
+---
+
+### The 3-Part Fix Formula
+A great summary should be **2–3 sentences** answering three questions:
+1. **Who are you?** (Exact Job Title + Area of Expertise)
+2. **What have you accomplished?** (Quantifiable metric or major specialty)
+3. **What value do you offer the employer?** (Relevant skills that solve their problems)
+
+---
+
+### Before vs. After Examples
+
+#### 1. Operations / Management
+* **Before:** *Results-driven professional with 10+ years of experience.*
+* **After:** *Operations Director with 10+ years of experience scaling supply chain logistics for high-growth e-commerce brands. Reduced fulfillment overhead by 22% while managing cross-functional teams of 40+. Expert in ERP implementations and vendor contract negotiations.*
+
+#### 2. Marketing / Sales
+* **Before:** *Results-driven professional with 10+ years of experience.*
+* **After:** *B2B Marketing Strategist with over a decade of experience driving inbound pipeline for SaaS enterprises. Generated $14M+ in attributed pipeline in 2023 through data-driven SEO and paid acquisition campaigns.*
+
+#### 3. Software Engineering
+* **Before:** *Results-driven professional with 10+ years of experience.*
+* **After:** *Lead Software Engineer with 10+ years architecting fault-tolerant microservices in high-volume FinTech environments. Spearheaded migration to AWS that cut cloud latency by 35% and improved uptime to 99.99%.*
+
+---
+
+### Want me to write yours?
+Reply with:
+1. Your **Target Job Title** (e.g., Senior Project Manager, HR Director)
+2. Your **Industry** (e.g., Healthcare, Tech, Retail)
+3. **1 or 2 key accomplishments/metrics** you're proud of

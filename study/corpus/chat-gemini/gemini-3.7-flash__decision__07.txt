@@ -1,0 +1,52 @@
+**Short answer:** No to *corporate-style* formal reviews, but absolutely **yes to a structured, regular alignment process.**
+
+Running traditional, bureaucratic performance reviews (lengthy forms, 1-to-5 rating scales, 360-degree feedback tools) in a two-person company is overkill. It wastes time and introduces artificial corporate distance when you need maximum agility and trust.
+
+However, the biggest mistake two-person teams make is assuming that *talking all day* means you are *aligned*. You still need an intentional, dedicated space to discuss performance, expectations, and the relationship.
+
+Here is how you should handle it instead:
+
+---
+
+### If you are Two Co-Founders: The "Partnership Health Check"
+Do not review each other like a boss reviews an employee. Treat this as a co-founder retrospective every **quarter**. 
+
+Book a half-day off-site (even just at a coffee shop) and cover four areas:
+1. **Division of Labor:** Are we stepping on each other’s toes? Are critical tasks falling through the cracks?
+2. **Personal Sustainability:** What is your burnout/energy level (1–10)? What are you hating working on right now?
+3. **Behavioral Feedback:** "What is one thing I am doing that makes your job harder, and one thing I’m doing that helps the most?"
+4. **Vision & Alignment:** Are we still trying to build the exact same company at the exact same pace?
+
+---
+
+### If you are Founder + First Employee: The "Lightweight Review"
+If there is a power dynamic (boss and employee), you need a system that ensures the employee feels supported, knows where they stand, and understands their future.
+
+Run a lightweight review **every 3 to 6 months** using a simple agenda:
+
+#### 1. Retrospective (Looking Back)
+* **What went well:** Highlight 2–3 major wins.
+* **What could go better:** Discuss 1–2 specific areas for improvement. (No surprises—issues should have been flagged in real-time, not saved up for months).
+
+#### 2. Forward-Looking (Next 90 Days)
+* **Top 3 Priorities:** What does success look like over the next quarter?
+* **Resource Gaps:** "What do you need from me (tools, decisions, autonomy) to hit these goals?"
+
+#### 3. Growth & Compensation
+* **Career Trajectory:** How is their role evolving as the company grows?
+* **Compensation/Equity:** Are they hitting the milestones tied to pay increases, bonuses, or equity vesting?
+
+#### 4. Upward Feedback (Crucial)
+* "How can I be a better manager for you?" 
+* "Is there anything about how we operate that feels inefficient or frustrating?"
+
+---
+
+### The Rules of Feedback for a 2-Person Team
+
+* **Never save tactical feedback for the "review":** If someone writes bad code, handles a client poorly, or misses a deadline, talk about it that day. 
+* **Write down the takeaways:** Even if it’s just a 3-bullet-point summary in a shared Notion/Google Doc, document what you agreed on so you have a baseline for the next check-in.
+* **Separate "Day-to-Day Status" from "Big Picture":** Your weekly check-in is for *tasks*; your quarterly check-in is for *people and performance*.
+
+### When should you go "formal"?
+Stick to this lightweight, conversation-first model until you hit **around 6 to 10 employees**, or when you hire managers who need a standardized framework to evaluate others fairly.

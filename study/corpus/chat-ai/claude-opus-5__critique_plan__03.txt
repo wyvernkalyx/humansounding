@@ -1,0 +1,17 @@
+It's a good instinct — you'll learn more from twelve messy attempts than from twelve tutorials. But the weekly cadence is the part I'd push on, because it contains a specific failure mode: **twelve projects that are all secretly the same project.** Load a CSV, clean nulls, make a correlation heatmap, write "insights," repeat. That's week-one skill performed twelve times, and it's the most common way self-taught portfolios end up looking identical.
+
+A few things I'd change:
+
+**Escalate deliberately instead of keeping scope flat.** Fix the time, vary the difficulty. Something like: weeks 1–4 small and tool-focused (get fluent in one stack, do the boring reps), weeks 5–8 harder questions on messier data, weeks 9–12 a single project you carry across four weeks. That last one matters more than people expect — real analysis involves returning to something after you've slept on it and realizing your framing was wrong. You never hit that in a seven-day cycle.
+
+**Don't expect projects to teach you statistics.** They won't. You can do twenty analyses and never independently discover confounding, selection bias, or why your p-value is meaningless after you tried nine specifications. That knowledge has to come from reading, in parallel. Pair the projects with something like *Regression and Other Stories* or Cunningham's *Causal Inference: The Mixtape* — an hour or two a week, not another project. Otherwise you get someone who's fast in pandas and confidently wrong about what the numbers mean.
+
+**Solve the feedback problem early.** This is the real weakness of self-teaching. Nobody tells you your analysis is subtly broken. Three cheap fixes: (1) replicate a published analysis and check whether you get their numbers — if you don't, something specific is wrong and you have to find it; (2) use data where you can sanity-check against reality; (3) post write-ups somewhere people will critique them. Without this you'll build twelve weeks of confident habits and no calibration.
+
+**Avoid clean data.** Titanic and Iris teach you syntax, not analysis. Pull from government open-data portals, a public API, or scrape something. The skill that actually distinguishes analysts is deciding what to do when the data is ambiguous, incomplete, or when two sources disagree — and Kaggle-clean datasets have that part pre-removed.
+
+**End every project with a memo, not a notebook.** One page: here was the question, here's what I found, here's what I'd recommend, here's what would change my mind. This is the skill people don't practice and hiring managers actually screen for. A notebook with fifteen charts and no conclusion reads as "I know matplotlib." A memo reads as "I can think."
+
+One thing I'd genuinely reconsider: whether twelve projects beats six. Six projects with two weeks each — one week to build, one week to revisit, break, and rewrite — will probably teach you more, and produces a portfolio with less filler. The revisiting is where the learning compounds. But if the weekly rhythm is what keeps you actually doing it, keep it; consistency beats optimality, and a plan you abandon in week five teaches nothing.
+
+What's the goal on the other end — analyst role, supporting your current job, research, or just curiosity? The stack and the emphasis shift a fair amount. If it's employment, SQL deserves far more weight than most self-taught plans give it, and the communication piece becomes the differentiator rather than the modeling.

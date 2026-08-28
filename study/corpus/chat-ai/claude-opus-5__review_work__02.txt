@@ -1,0 +1,19 @@
+Honestly, in most contexts it's a weak choice. Three problems:
+
+**It reads like phishing.** "Your account" + vague urgency is the exact template security training teaches people to distrust. If you're a company emailing customers, you may trigger the instinct to delete or report rather than open.
+
+**It's a curiosity gap with no payoff.** It might get opened, but if the body turns out to be a sales pitch or something that isn't actually a quick question, the reader feels baited. That costs you more in future opens than you gained today.
+
+**It doesn't help anyone triage.** People scan inboxes deciding what to deal with now vs. later. A subject line that conveys nothing gets deferred, and deferred often means never.
+
+The fix is almost always specificity:
+
+- "Question about your March invoice"
+- "Need your shipping address for order #4471"
+- "Two options for renewing — which do you prefer?"
+
+Specific subject lines get fewer opens from the wrong people and more responses from the right ones, which is usually what you actually want.
+
+**When it's fine:** a genuine one-to-one email to someone who knows you, where the question really is quick. Even then, naming the topic gets you a faster reply.
+
+What's the actual email? If you tell me the sender, recipient, and what you need from them, I can suggest something sharper.

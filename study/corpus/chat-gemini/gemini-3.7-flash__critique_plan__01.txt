@@ -1,0 +1,46 @@
+You didn’t include the details of your plan in your prompt! Please paste your draft plan, and I will critique it specifically. 
+
+In the meantime, migrating **400 users over a 48-hour window** is a "Big Bang" cutover. When migrations of this size fail or cause chaos on Monday morning, it is usually because one of the following areas was missed:
+
+---
+
+### 1. Data & Throughput Constraints
+* **Did you pre-stage (pre-sync) the data?** 
+  * You cannot sync 400 mailboxes (often multiple terabytes) from scratch in 48 hours due to API throttling (especially from Microsoft 365, Google Workspace, or on-prem Exchange).
+  * *Standard fix:* Pre-sync 95%+ of historical data 1–2 weeks before cutover, then only run a **delta sync** over the weekend for recent changes.
+
+---
+
+### 2. DNS & Routing
+* **TTL (Time to Live) Reduction:** 
+  * Did you lower your MX, SPF, and Autodiscover DNS TTLs to **300 seconds (5 minutes)** at least 48–72 hours *before* the weekend? If not, old mail servers will still receive email well into Monday.
+* **Mail flow lockdown:** Do you have a plan to disable inbound mail on the legacy system post-cutover to avoid split-brain delivery?
+
+---
+
+### 3. Identity, Access & Devices (The "Monday 8:00 AM" Blockers)
+* **MFA / 2FA Enrollment:** Will 400 users be forced to set up MFA simultaneously on Monday morning? (This overwhelms help desks).
+* **Mobile Devices:** Mobile devices (iOS Mail, Android, Outlook Mobile) rarely update automatically; they usually require users to delete the old account and add the new one.
+* **Outlook Profiles:** Are you using a deployment script/tool (like ProfileUnity, BitTitan DeploymentPro, or GWSMO) to reconfigure desktop Outlook, or expecting users to create a new profile manually?
+* **Autocomplete / NK2 Caches:** If users rely heavily on Outlook autocomplete, moving to a new system can cause bounce-backs (NDRs) if X500 addresses or legacyExchangeDNs aren't mapped.
+
+---
+
+### 4. Non-User Mailboxes & Hidden Dependencies
+* **Shared Mailboxes & Calendars:** Are delegated permissions and send-as/send-on-behalf rights mapped and validated?
+* **Printers, Scanners, and Copiers:** Do office multi-function printers rely on the old email server for "Scan-to-Email"?
+* **Line-of-Business Apps:** Do your ERP, CRM, HR system, website forms, or monitoring tools use SMTP relay through the old email system?
+
+---
+
+### 5. Support & Rollback Planning
+* **Help Desk Ratio:** On Monday, expect a 20–30% ticket rate (80–120 tickets for 400 users) if end-user steps are required. Do you have dedicated "floor walkers" or extra tier-1 support scheduled?
+* **Rollback Trigger Point:** At what specific hour on Sunday do you make the "Go / No-Go" decision to revert DNS if data sync fails?
+
+---
+
+### To get a detailed review:
+Reply with:
+1. **Source and Target platforms** (e.g., Exchange 2016 to M365, Google to M365, IMAP to Google, etc.)
+2. **Migration tool** being used (e.g., native tools, BitTitan MigrationWiz, Quest, SkyKick)
+3. **Your step-by-step weekend timeline**

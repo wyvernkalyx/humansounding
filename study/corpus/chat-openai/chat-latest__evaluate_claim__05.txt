@@ -1,0 +1,14 @@
+Not really—at least not as stated.
+
+Cofounder conflict is a significant startup risk, and severe founder disagreements can absolutely kill companies. But the claim that “most startups fail because of cofounder conflict” isn’t supported by strong evidence.
+
+A few distinctions matter:
+
+- Startup postmortem studies usually rank lack of market need, running out of cash, poor business models, competition, and team problems among common causes. Founder/team conflict appears, but generally not as the cause of a majority of failures.
+- You may see claims such as “65% of startups fail because of cofounder conflict.” That statistic is frequently repeated online, often attributed to Harvard professor Noam Wasserman or his book The Founder’s Dilemmas. But it tends to mutate in retelling. Wasserman’s research documents how consequential founder/team tensions are; it does not establish that 65% of all startup failures are caused by cofounder conflict.
+- Causality is particularly difficult here. A company running out of money can create founder conflict; founder conflict can cause bad decisions that lead to running out of money. Postmortems often contain several intertwined causes rather than one clean explanation.
+- There’s also a denominator problem: many startups have only one founder, so a claim about cofounder conflict causing “most startup failures” is inherently suspicious unless it specifies what population is being measured.
+
+The defensible takeaway is: cofounder conflict is an important and somewhat preventable source of startup failure, but saying it causes “most” startup failures overstates what the evidence shows.
+
+If you're evaluating whether to start a company with someone, I’d treat founder compatibility as a major diligence item—not because there’s a reliable statistic saying it causes most failures, but because disagreements over commitment, roles, equity, control, risk tolerance, and what happens when someone wants out can become existential.

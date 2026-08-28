@@ -1,0 +1,12 @@
+A p-value is a way to ask: “If there were really no effect, how surprising would these results be?”
+
+Imagine testing whether a coin is fair. You flip it 100 times and get 70 heads. A p-value tells you how likely you would be to get a result at least that unusual just from random chance, assuming the coin really is fair.
+
+- A small p-value means the result would be unusual if there were no real effect. This is evidence against the “no effect” assumption.
+- A large p-value means the result isn’t particularly unusual under that assumption, so the data don’t give strong evidence against it.
+
+For example, p = 0.03 roughly means: “Assuming there is no real effect, results this extreme or more extreme would occur about 3% of the time.”
+
+Importantly, it does not mean “there’s a 3% chance the result is due to chance” or “there’s a 97% chance the hypothesis is true.” Those are common misconceptions.
+
+A p-value is best thought of as a measure of how incompatible the observed data are with a specific “nothing is happening” hypothesis—not as a final verdict about whether something is true.

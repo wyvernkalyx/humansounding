@@ -1,0 +1,19 @@
+The "never" part is too strong, but there's real logic underneath it.
+
+**The case for not prepaying:** A mortgage rate is a hurdle rate. If your rate is 3% and you can earn more than that elsewhere, prepaying is leaving money on the table. And "elsewhere" doesn't have to mean stocks — during periods when Treasuries or high-yield savings pay 4-5%, a 3% mortgage is beaten by essentially risk-free assets. That's about as close to free money as personal finance offers. Plus, fixed-rate debt gets cheaper in real terms as inflation erodes it, and home equity is illiquid — if you lose your job, having paid down your balance doesn't help much, whereas cash in a brokerage account does.
+
+**Where the advice breaks down:**
+
+- *The risk comparison is often rigged.* People compare a 3% mortgage to a 7-10% expected stock return, but those aren't the same risk. The honest comparison is to safe assets. If you're simultaneously holding bonds yielding less than your mortgage rate, you're arbitraging against yourself.
+- *"Invest the difference" often doesn't happen.* The math only works if you actually deploy the money rather than absorbing it into lifestyle.
+- *Cash flow has independent value.* No mortgage payment means a much lower income floor, which matters a lot for retirees managing sequence-of-returns risk, or for anyone wanting to take career risk.
+- *The tax angle is weaker than people assume.* Since the standard deduction roughly doubled in 2018, most households don't itemize, so mortgage interest isn't actually deductible for them.
+- *PMI is a special case.* If paying down to 80% loan-to-value eliminates private mortgage insurance, the effective return can be enormous — that one's usually worth doing.
+
+**Things that beat both options:** capturing a full employer 401(k) match, clearing high-interest debt, and building an emergency fund all come first. Maxing tax-advantaged accounts usually does too.
+
+One mechanical note: extra principal payments typically don't lower your monthly payment — they just shorten the term. You won't see cash flow relief until the loan is gone entirely, unless your lender offers a recast (usually for a small fee).
+
+So the defensible version is: "don't prepay a low-rate mortgage when you have better uses for the money and you'll actually use it that way." The absolutist version ignores that some people rationally value a guaranteed return and a lower monthly obligation over a higher expected but uncertain one.
+
+If you tell me your rate, roughly where you are on the tax-advantaged-account front, and your timeline, I can be more concrete.

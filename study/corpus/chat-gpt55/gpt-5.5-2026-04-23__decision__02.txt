@@ -1,0 +1,89 @@
+In most cases:
+
+- **Hire a second developer** if the work is **ongoing, core to the business, and requires product knowledge**.
+- **Use contractors** if the work is **temporary, specialized, or has uncertain duration**.
+
+My default recommendation would be: **hire a second developer if you expect at least 6–12 months of sustained engineering work.** Use contractors only to fill short-term gaps or handle specialized tasks.
+
+## Choose a second developer if…
+
+You have:
+
+1. **A long backlog of core product work**
+   - Features, infrastructure, bug fixes, internal tools, customer requests.
+   - Work that will keep coming, not just a one-off project.
+
+2. **Too much knowledge concentrated in one person**
+   - A second developer reduces key-person risk.
+   - They help with code review, architecture decisions, support, and continuity.
+
+3. **You need faster iteration**
+   - A full-time developer builds context over time.
+   - They will usually become more productive than contractors on product work.
+
+4. **Quality and maintainability matter**
+   - Contractors may deliver quickly, but long-term ownership can suffer.
+   - An employee has more incentive to keep the codebase healthy.
+
+5. **Engineering is strategically important**
+   - If software is central to the business, you generally want that capability in-house.
+
+## Choose contractors if…
+
+You need:
+
+1. **Short-term capacity**
+   - A deadline, migration, integration, or launch push.
+
+2. **Specialized expertise**
+   - Security review, DevOps, mobile app, data pipeline, UI redesign, performance tuning, etc.
+
+3. **Flexibility**
+   - If you are unsure whether the workload will continue, contractors reduce commitment.
+
+4. **Immediate availability**
+   - Hiring a good developer can take months.
+   - Contractors can start faster if scoped well.
+
+## Watch out for contractor overuse
+
+Contractors can look cheaper or easier, but they often become expensive if they are doing ongoing product development.
+
+Common issues:
+
+- Repeated onboarding costs.
+- Loss of product knowledge when they leave.
+- Inconsistent quality.
+- More management overhead.
+- Less ownership of long-term architecture.
+- Dependence on external people for core systems.
+
+If contractors are doing the same type of work every month, that is usually a sign you should hire.
+
+## Simple decision rule
+
+Ask:
+
+> “Will we still need this person’s work a year from now?”
+
+If yes: **hire.**
+
+If no or not sure: **use contractors.**
+
+## Best practical option
+
+A strong middle-ground approach:
+
+1. **Hire a second developer for core product work.**
+2. **Keep contractors for narrow, well-scoped projects.**
+
+For example:
+
+- Full-time developer: product features, bugs, architecture, support, code ownership.
+- Contractors: design refresh, AWS setup, QA automation, analytics, one-off integrations.
+
+## My recommendation
+
+Unless your workload is clearly temporary, I would lean toward **hiring a second developer**.
+
+A second in-house developer gives you compounding benefits: product knowledge, ownership, better continuity, less bottleneck risk, and stronger engineering capacity over time. Contractors are still useful, but mainly as a supplement — not as the backbone of your product development.

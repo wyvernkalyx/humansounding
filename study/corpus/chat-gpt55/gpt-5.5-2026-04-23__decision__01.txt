@@ -1,0 +1,74 @@
+For a booking system with ~50,000 records, **use PostgreSQL** in most cases.
+
+50,000 records is small for both PostgreSQL and MongoDB, so the decision should be based on data shape and correctness needs, not size.
+
+## Why PostgreSQL is usually better for bookings
+
+Booking systems typically need:
+
+- Preventing double bookings
+- Transactions
+- Date/time range queries
+- Constraints and data integrity
+- Relationships between users, bookings, rooms/services, payments, availability, etc.
+- Reliable reporting and analytics
+
+PostgreSQL is very strong for this.
+
+Example features that are useful:
+
+- `UNIQUE` constraints
+- Foreign keys
+- Transactions
+- Row-level locking
+- Date/time range types
+- Exclusion constraints to prevent overlapping bookings
+- Strong querying with SQL
+
+For example, PostgreSQL can enforce rules like:
+
+> “No two bookings for the same room can overlap in time.”
+
+That kind of rule is much easier and safer in PostgreSQL than in MongoDB.
+
+## When MongoDB may be a good fit
+
+MongoDB can work if:
+
+- Your data is document-shaped and changes often
+- You mostly retrieve whole booking documents
+- You do not have many relational constraints
+- You are comfortable enforcing booking-conflict rules in application code
+- You need flexible schemas more than strict consistency
+
+For example, MongoDB may fit if each booking is mostly self-contained and you rarely need complex joins or strict database-level constraints.
+
+## Recommendation
+
+For a typical booking system, choose:
+
+**PostgreSQL**
+
+It gives you better safety, consistency, and querying for reservations, schedules, payments, users, and availability.
+
+A rough schema might include:
+
+```sql
+users
+bookings
+resources -- rooms, tables, services, etc.
+payments
+availability
+```
+
+And indexes like:
+
+```sql
+(resource_id, start_time, end_time)
+(user_id)
+(status)
+```
+
+## Short answer
+
+Use **PostgreSQL** unless you have a very specific reason to use MongoDB. For 50,000 records, both can handle the load easily, but PostgreSQL is usually the better database for a booking system.

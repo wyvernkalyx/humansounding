@@ -1,0 +1,35 @@
+It looks like the plan itself didn't come through — I only see your question. Paste or describe it and I'll review it directly.
+
+In the meantime, here's what most commonly gets missed on a weekend cutover of this size. You can use it as a self-check while you re-send:
+
+**Things that break Monday morning**
+- **Non-human senders.** Multifunction printers/scanners, CRM, ERP, monitoring/alerting, backup jobs, ticketing systems, anything using SMTP relay or an app password. These are the #1 forgotten item.
+- **Mobile devices.** 400 users often means 500+ devices. Do they reconfigure themselves, or is that 500 support interactions? What's your instruction plan for BYOD?
+- **Outlook profile rebuilds.** Cached mode means OST re-download for everyone at once — check your internet egress bandwidth against 400 simultaneous syncs Monday at 8am.
+
+**Data and objects beyond user mailboxes**
+- Shared mailboxes, resource/room calendars, equipment mailboxes
+- Distribution lists, dynamic groups, mail-enabled security groups
+- Aliases / secondary SMTP addresses (users will notice fast if one is dropped)
+- Delegate permissions, calendar sharing, "send as"/"send on behalf"
+- Server-side rules, forwarding rules, out-of-office messages
+- Archives, PSTs, retention/legal hold, journaling for compliance
+
+**Mail flow and DNS**
+- MX TTL lowered days in advance (not during the cutover)
+- SPF, DKIM, DMARC updated for the new sending infrastructure — a DMARC miss means your mail starts landing in spam
+- Autodiscover records
+- Inbound spam filter re-pointed, allow/block lists migrated
+
+**Timing math**
+- What's your actual throughput ceiling? Total mailbox data ÷ realistic ingest rate (migration services throttle aggressively). Many weekend plans fail here — run the number and add 50%.
+- Are you doing pre-staged syncs with a final delta over the weekend, or a cold copy? A cold copy of 400 mailboxes rarely fits in 48 hours.
+
+**Process gaps**
+- **Pilot group.** Did 10–20 users go first, a week or two earlier, with real work? If not, you're finding your surprises at scale.
+- **Go/no-go checkpoint** with a defined time — e.g., "if we're not at X by Saturday 6pm, we roll back."
+- **Rollback plan** that's actually been tested, including what happens to mail delivered to the new system before you roll back.
+- **Monday support surge.** Extra staff, floor-walkers, a known escalation path. Expect 15–30% of users to file a ticket.
+- **Comms:** notice ahead, an "it's done, here's what to do" message, and a channel that works when email doesn't (Teams/Slack/SMS/phone tree).
+
+Send the plan over and I'll tell you which of these you've already covered and what's specific to your setup.

@@ -1,0 +1,91 @@
+**Encryption** and **hashing** are both cryptographic techniques, but they serve different purposes.
+
+## Encryption
+
+**Encryption is reversible.** It transforms readable data, called plaintext, into unreadable data, called ciphertext, using a key.
+
+The goal is **confidentiality**: keeping data secret from anyone who does not have the key.
+
+Example:
+
+```text
+Plaintext:  hello
+Encrypted:  X8a!qP91...
+```
+
+If you have the correct key, you can decrypt it back to:
+
+```text
+hello
+```
+
+Common uses:
+
+- Protecting files
+- Securing messages
+- HTTPS/TLS communication
+- Encrypting databases or backups
+
+Examples of encryption algorithms:
+
+- AES
+- RSA
+- ChaCha20
+
+## Hashing
+
+**Hashing is one-way.** It converts data into a fixed-size value called a hash, digest, or checksum.
+
+The goal is usually **verification**, not secrecy.
+
+Example:
+
+```text
+Input:  hello
+Hash:   2cf24dba5fb0a...
+```
+
+You cannot practically reverse the hash to recover `hello`.
+
+Common uses:
+
+- Storing passwords safely
+- Checking file integrity
+- Digital signatures
+- Detecting whether data has changed
+
+Examples of hashing algorithms:
+
+- SHA-256
+- SHA-3
+- BLAKE2
+- bcrypt, scrypt, Argon2 for password hashing
+
+## Key differences
+
+| Feature | Encryption | Hashing |
+|---|---|---|
+| Reversible? | Yes, with the key | No |
+| Uses a key? | Usually yes | Usually no |
+| Main purpose | Keep data secret | Verify data |
+| Output size | Often depends on input and mode | Usually fixed size |
+| Example use | Encrypt a message | Store a password hash |
+
+## Password example
+
+Passwords should usually be **hashed**, not encrypted.
+
+When a user creates a password, the system stores a hash of it. Later, when the user logs in, the system hashes the entered password and compares it to the stored hash.
+
+Good password storage uses a slow password-hashing algorithm like:
+
+- Argon2
+- bcrypt
+- scrypt
+
+Usually with a unique **salt** per password.
+
+## Simple summary
+
+- **Encryption** protects data so it can be read later by someone with the key.
+- **Hashing** creates a one-way fingerprint to verify data without recovering the original.

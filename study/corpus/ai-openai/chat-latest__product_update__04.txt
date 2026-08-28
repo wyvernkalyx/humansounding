@@ -1,0 +1,15 @@
+Single sign-on (SSO) is here
+
+We’ve added SSO support to make signing in faster, simpler, and more secure for your organization.
+
+With SSO, team members can access their accounts using your organization’s existing identity provider, reducing password management and helping IT teams manage access centrally.
+
+What’s included:
+- Sign in through your organization’s identity provider
+- Centralized user access and authentication
+- A streamlined login experience for your team
+- Easier onboarding and offboarding
+
+Admins can configure SSO from the organization settings. Once enabled, team members can use their existing work credentials to sign in.
+
+Check out our SSO setup guide to get started.

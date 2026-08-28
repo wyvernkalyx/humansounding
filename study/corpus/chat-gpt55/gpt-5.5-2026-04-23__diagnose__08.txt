@@ -1,0 +1,43 @@
+Believe neither **by default**. Believe the evidence.
+
+Sales and Support often see different realities:
+
+- **Sales** may be seeing demos, happy prospects, feature checklists, or a product that works well enough to sell.
+- **Support** sees real users, messy workflows, edge cases, integrations, bugs, and repeated complaints.
+
+So both can be “right” in their own context.
+
+The question to answer is not “who is correct?” but:
+
+> **For which customers, in which workflows, how often, and with what business impact is the product broken?**
+
+A practical way to handle it:
+
+1. **Define “fine” and “broken.”**  
+   Is the issue usability, reliability, missing features, performance, onboarding, integrations, or actual defects?
+
+2. **Look at support data.**  
+   Number of tickets, severity, repeat issues, affected accounts, churn risk, time to resolution.
+
+3. **Look at sales data.**  
+   Lost deals, objections, demo failures, feature gaps, win/loss notes, customer expectations set during sales.
+
+4. **Segment customers.**  
+   The product may be fine for small customers but broken for enterprise users, or fine for new users but broken at scale.
+
+5. **Reproduce the complaints.**  
+   Have Product/Engineering sit with Support and watch the issue happen.
+
+6. **Join customer calls.**  
+   Listen directly to frustrated users and successful users. Reality is usually clearer there.
+
+7. **Quantify impact.**  
+   A bug affecting 2% of users but causing enterprise churn may be more serious than a noisy low-impact issue.
+
+My bias: **Support should be taken very seriously**, because they are closest to post-sale reality. But Support can also overrepresent negative experiences because happy customers rarely file tickets.
+
+So the best answer is:
+
+> Believe Support about the pain, believe Sales about market perception, and use data to determine the scale and priority.
+
+If Support says it is broken, do not dismiss it. Investigate until you know whether it is a minor complaint, a major reliability issue, a bad-fit customer segment, or a mismatch between what Sales promises and what the product actually does.

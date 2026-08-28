@@ -1,0 +1,21 @@
+That’s a solid way to learn data analysis. Twelve-ish projects in three months gives you enough repetition to build skills while producing a portfolio. The main risk is doing 12 unrelated projects and repeatedly staying at beginner depth. I’d make each project deliberately harder than the previous one and reuse skills.
+
+A good 12-week progression:
+
+- Weeks 1–2: Excel/Google Sheets. Clean a messy dataset, use formulas/pivots, answer 3–5 concrete questions, and make a small dashboard.
+- Weeks 3–4: SQL. Analyze a relational dataset using joins, aggregations, CTEs, CASE statements, and window functions.
+- Weeks 5–6: Python + pandas. Import, clean, reshape, merge, and explore data; visualize with matplotlib/seaborn.
+- Week 7: Exploratory data analysis. Take a relatively unfamiliar dataset and figure out what matters without following a tutorial.
+- Week 8: Statistics. Confidence intervals, hypothesis tests, correlations, and careful interpretation.
+- Week 9: Business analysis. Pick something like customer retention, marketing performance, pricing, or product usage and make recommendations.
+- Week 10: Dashboarding. Build an interactive Power BI or Tableau dashboard for a defined audience.
+- Week 11: Messy/real-world data. Pull data from an API or multiple files, deal with missing values and inconsistent formats, then build a reproducible analysis.
+- Week 12: Capstone. Start with a question rather than a dataset and independently go from data acquisition → cleaning → analysis → visualization → conclusions.
+
+Keep each project constrained enough to finish in a week. A useful rhythm is roughly 20% learning and 80% actually working with the data. When you get stuck, look up the specific thing you need rather than trying to complete an entire SQL/Python course first.
+
+For every project, produce an artifact someone else can inspect: the dataset/source, cleaned analysis or SQL, 3–5 useful visualizations, conclusions in plain English, and a short README explaining the question, process, findings, and limitations. Put the stronger projects on GitHub; they don't all need to become polished portfolio pieces.
+
+One other important constraint: don't let AI write the analysis for you. It's useful for explaining an error, reviewing code you've written, or suggesting approaches after you've struggled with something. If it generates most of your SQL/Python, you can finish 12 impressive-looking projects without developing much ability to analyze data independently.
+
+If your goal is employability, I’d bias the three months toward SQL, Excel, dashboards, and communicating findings, with Python as an increasingly useful addition. The target at the end isn't “I know all these tools”; it's “give me unfamiliar data and a question, and I can work out how to answer it.”

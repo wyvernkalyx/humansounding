@@ -1,0 +1,66 @@
+For a small brand, the simplest way to remember the difference is:
+
+* **Trademarks** protect your **brand identity** (how customers find and recognize you).
+* **Copyrights** protect your **original creative content** (what you create).
+
+Here is a breakdown of how both apply to your business:
+
+---
+
+### 1. Trademark: Protecting Your Brand Identity
+A trademark acts as a "source identifier." Its primary legal purpose is to prevent consumer confusion in the marketplace so competitors cannot copy your look and trick customers.
+
+* **What it protects:**
+  * Your business name (e.g., *Nike*)
+  * Your logo (e.g., the *Swoosh*)
+  * Your slogan/tagline (e.g., *“Just Do It”*)
+  * Product names, distinct color schemes, or unique packaging shapes
+* **Symbols used:** 
+  * **™** (Unregistered trademark: means you claim common-law rights)
+  * **®** (Registered trademark: granted only after official government approval)
+* **Lifespan:** Can last **forever**, as long as you actively use it in business and file regular renewal fees.
+
+---
+
+### 2. Copyright: Protecting Your Creative Works
+A copyright protects original, tangible creative works of authorship. It gives you the exclusive right to reproduce, distribute, or display that creative work.
+
+* **What it protects:**
+  * Product photography and marketing videos
+  * Website copy, blog posts, and written guides
+  * Custom artwork or graphics printed on products (e.g., a graphic tee design)
+  * Website code and software
+* **Symbol used:** **©**
+* **Lifespan:** Long, but limited (typically the **creator's life + 70 years**).
+
+---
+
+### A Real-World Example: An Indie Coffee Roaster
+Imagine you start a business called **"Wild Bear Coffee Roasters."**
+
+| Asset | Is it a Trademark or Copyright? | Why? |
+| :--- | :--- | :--- |
+| The name **"Wild Bear Coffee"** | **Trademark** | It tells customers *who* made the coffee. |
+| The bear silhouette **Logo** | **Trademark** | It identifies your brand on bags and signage. |
+| The slogan **"Roast the Adventure"** | **Trademark** | It’s a brand tagline. |
+| The **photos** on your Instagram | **Copyright** | Original creative visual work. |
+| The **flavor descriptions** on your site | **Copyright** | Original written text. |
+| An **illustrated mural** on your café wall | **Copyright** | Original artistic work. |
+
+---
+
+### Key Practical Differences for Small Businesses
+
+1. **How you get protection:**
+   * **Copyright is automatic:** The moment you take a photo, write copy, or draw a design, you automatically own the copyright. (You can officially register it later if you need to sue an infringer for statutory damages).
+   * **Trademarks require proactive effort:** While you gain limited "common law" rights just by using a name locally, full nationwide protection requires a search and a formal registration process with your country's patent and trademark office (like the USPTO in the U.S.).
+
+2. **Cost:**
+   * **Copyright:** Very cheap to register officially (often $45–$65 per application in the US).
+   * **Trademark:** More expensive ($250–$350+ per class of goods in government fees, plus optional attorney fees).
+
+---
+
+### What should a small brand do first?
+1. **Search before you build:** Before buying domains and printing packaging, search your national trademark database to ensure no one else is already using your brand name in your industry.
+2. **Prioritize the Trademark:** If you have limited budget, securing a trademark for your **brand name** is usually the most critical early step. You can rebuild a website or reshoot photos (copyrights), but having to rebrand your entire business because of a trademark infringement dispute is costly and devastating.

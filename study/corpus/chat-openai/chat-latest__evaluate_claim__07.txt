@@ -1,0 +1,15 @@
+Yes, generally. Your IT guy is aligned with current security guidance.
+
+Forced password changes every 60 or 90 days used to be standard, but organizations such as NIST now recommend against periodic password changes unless there’s evidence the password has been compromised. Frequent forced changes tend to make people choose predictable variations (e.g., `Winter2026!` → `Spring2026!`) or weaker passwords.
+
+A stronger modern policy is:
+
+- Require long, unique passwords/passphrases and block commonly used or known-compromised passwords.
+- Don’t force arbitrary periodic changes; require a change when compromise is suspected or confirmed.
+- Use multi-factor authentication, preferably phishing-resistant methods such as passkeys/security keys where practical.
+- Encourage password managers so every service can have a different, randomly generated password.
+- Protect privileged/admin accounts particularly carefully.
+
+There are exceptions: regulatory requirements, contractual obligations, or particular threat models can still mandate rotation. Also, automatically rotating machine credentials, API secrets, or other non-human credentials is a somewhat different issue.
+
+For ordinary employee passwords, though, “change it every 90 days just because 90 days have passed” is largely outdated security practice.

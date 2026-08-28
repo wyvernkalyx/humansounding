@@ -1,0 +1,49 @@
+You should use **PostgreSQL**. 
+
+For a booking system, **data integrity, consistency, and preventing double-bookings** are your top priorities. PostgreSQL is significantly better suited for this use case than MongoDB.
+
+Here is a breakdown of why, especially given your scale:
+
+---
+
+### 1. Scale is not a bottleneck (50,000 records is tiny)
+50,000 records is a very small dataset for modern databases. Both MongoDB and PostgreSQL can hold this entirely in memory and query it in under a millisecond. Because scale is not a problem, your decision should come down to **correctness and data safety**.
+
+---
+
+### 2. Why PostgreSQL is the clear winner for Bookings
+
+* **Postgres' "Secret Weapon": Exclusion Constraints**
+  In a booking system, you must prevent two users from booking the same resource at the same time. 
+  PostgreSQL has native **Range Types** and **Exclusion Constraints**. You can literally tell Postgres at the database level: *"Never allow overlapping time ranges for the same item_id."*
+  ```sql
+  -- Postgres automatically rejects overlapping bookings at the database level:
+  ALTER TABLE bookings 
+  ADD CONSTRAINT no_overlapping_bookings 
+  EXCLUDE USING gist (room_id WITH =, booking_period WITH &&);
+  ```
+  In MongoDB, you have to handle this in application logic, which introduces the risk of race conditions unless you write complex locking mechanisms.
+
+* **Strict ACID Compliance & Transactions**
+  Bookings usually involve a chain of events: reserve resource $\rightarrow$ process payment $\rightarrow$ confirm booking $\rightarrow$ send invoice. PostgreSQL was built from day one to handle multi-table ACID transactions safely.
+
+* **Data is naturally Relational**
+  A booking system inherently consists of relationships:
+  * A **User** has many **Bookings**.
+  * A **Booking** belongs to a **Resource/Seat/Room** and has one **Invoice/Payment**.
+  SQL handles these relationships via Foreign Keys natively, ensuring orphaned records (e.g., a booking with no user) cannot exist.
+
+* **JSON Support (Best of both worlds)**
+  If you have custom, dynamic fields for bookings (e.g., varying questionnaire answers per booking), Postgres has `JSONB` support. You get the flexibility of MongoDB with the safety of a relational database.
+
+---
+
+### When would MongoDB make sense?
+You should only consider MongoDB if:
+1. Your team already knows MongoDB deeply and has zero experience with SQL.
+2. The booking "schema" changes drastically from document to document (e.g., booking a flight vs. booking a haircut vs. renting heavy machinery all in the exact same collection without a fixed structure).
+
+---
+
+### Conclusion
+**Choose PostgreSQL.** It will prevent race conditions, enforce data integrity, handle payments and relations better, and easily manage 50,000 records (and scale effortlessly to millions if you grow).

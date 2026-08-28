@@ -1,0 +1,16 @@
+The better choice depends mainly on whether the extra workload is sustained and whether it involves knowledge you want to keep in-house.
+
+A second developer is usually the better choice when you expect the work to remain for 12+ months, your existing developer is a bottleneck or single point of failure, and the work touches core product architecture. You pay a larger fixed cost, but gain continuity, ownership, and less coordination overhead.
+
+Contractors are usually better when demand is uncertain or lumpy, you need specialized skills temporarily, or maintaining flexibility matters more than building internal capacity. They can be more expensive per hour, but cheaper overall if you don't consistently need another full-time person.
+
+A useful way to decide is to compare:
+- Fully loaded employee cost: salary + payroll taxes + benefits + equipment + recruiting/management costs.
+- Contractor cost: expected hours × rate + time your team spends managing/onboarding them.
+- Utilization: if you can keep another developer doing valuable work roughly 70–80%+ of the year, an employee often becomes attractive.
+- Risk: consider what happens if your current developer leaves or contractors become unavailable.
+- Reversibility: contractors preserve cash and flexibility if your roadmap or revenue is uncertain.
+
+If the additional work is mostly core, recurring product development, I'd lean toward hiring the second developer. If it's project-based, specialized, or your workload/revenue outlook is uncertain, I'd use contractors until the demand proves persistent.
+
+If you give me your current developer's compensation, contractor rates/hours, expected workload, and how predictable revenue is, I can run the break-even comparison.

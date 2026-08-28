@@ -1,0 +1,17 @@
+Probably not as written — but the fix is small.
+
+Two problems with it:
+
+**"Things have been crazy here"** tells the client you're overloaded, which reads as "you weren't a priority" and quietly raises doubts about whether you can handle their work. Internal chaos isn't their problem, and mentioning it doesn't buy you goodwill.
+
+**There's no substance.** An apology with no new timeline or deliverable attached just restarts the waiting. The most reassuring thing you can send isn't a better apology — it's a date.
+
+Some alternatives depending on the situation:
+
+If you have the thing now: *"Thanks for your patience — here's the [X]."* Short, no grovelling, moves on.
+
+If you don't yet: *"Apologies for the slow reply. I'll have [X] to you by Thursday."* Commit to something specific, then hit it.
+
+If it's been genuinely long and the relationship matters: *"I'm sorry for the delay on this — that was longer than it should have been. Here's where things stand: [status]. You'll have [X] by [date]."* Own it plainly, no excuse, then pivot to facts.
+
+One caveat: if this is a client you've worked with for years and the delay was two days, your original line is perfectly fine. Warmth and informality are assets in an established relationship, and over-correcting into stiff professionalism can read as odd or distant. The advice above matters most with newer clients, or when the delay was long enough that they noticed and wondered.

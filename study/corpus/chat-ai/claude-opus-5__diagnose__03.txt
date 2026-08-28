@@ -1,0 +1,30 @@
+That pattern — a cliff instead of a slope — usually isn't the battery aging. Real chemical degradation is gradual: you lose maybe 20% capacity over a couple of years of daily charging. Losing two-thirds of your runtime in a month points to either something new that's eating power, or a cell that's actually failed.
+
+**First, find out which one.** This single check splits the diagnosis:
+
+- **Windows:** Open Command Prompt and run `powercfg /batteryreport`. It writes an HTML file (the path is printed) with your battery's *design capacity* vs. *full charge capacity*.
+- **Mac:** Hold Option, click the Apple menu → System Information → Power. Look at cycle count and condition. Or System Settings → Battery → Battery Health.
+- **Linux:** `upower -i /org/freedesktop/UPower/devices/battery_BAT0`
+
+If full-charge capacity is still 85–95% of design capacity, your battery is fine and something is draining it. If it's fallen to 50% or below, the hardware is the problem.
+
+**If the battery reports healthy — likely culprits:**
+
+An OS update is the most common trigger, since it can kick off reindexing (Windows Search, Spotlight) that runs for days, or reset power settings. Beyond that:
+
+- A background app looping — cloud sync clients re-uploading a library, antivirus stuck in a scan, an update service failing and retrying
+- Browser extensions or a runaway tab; one misbehaving page can hold a CPU core at 100%
+- On hybrid-graphics laptops, the discrete GPU getting engaged for everything instead of idling
+- Power plan flipped to High Performance, or display refresh rate bumped from 60Hz to 120Hz+
+
+Check Task Manager's or Activity Monitor's energy/power column and sort by usage. On Mac, Activity Monitor → Energy shows a 12-hour average, which catches intermittent offenders. On Windows, `powercfg /sleepstudy` will also show whether the machine is staying awake in standby and draining overnight.
+
+**If the battery reports degraded:**
+
+Batteries occasionally fail abruptly when one cell goes bad rather than wearing evenly, and the pack's usable capacity drops to whatever that weak cell allows. Age matters here — if the laptop is four or five years old, this is plausible and a replacement is the fix. If it's under warranty, most manufacturers cover batteries that drop below ~80% capacity within the coverage period.
+
+**One thing to check regardless:** put the laptop on a flat table and see if it rocks, or press gently on the trackpad. If the case is bowing, the trackpad sits proud, or the bottom panel is separating, that's a swollen battery. Stop charging it and get it replaced — swollen lithium cells are a genuine fire risk.
+
+**Also worth ruling out:** if this coincided with a seasonal temperature drop, cold reduces effective capacity noticeably, though 8 hours to 3 is more than cold alone would explain.
+
+If you tell me your OS and roughly how old the machine is, I can narrow it down further.

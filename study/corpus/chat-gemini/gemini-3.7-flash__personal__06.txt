@@ -1,0 +1,54 @@
+Having a colleague take credit for your work is infuriating, but reacting aggressively in the moment can backfire and make you look defensive. 
+
+The goal is to reclaim ownership **smoothly, professionally, and undeniably**. 
+
+Here is a step-by-step playbook for what to do in the moment, in private, and going forward.
+
+---
+
+### 1. In the Meeting: Reclaim with Detail (The "Yes, and..." method)
+Never accuse them directly in the meeting (e.g., *"Actually, that was my idea"*). It makes the room uncomfortable and puts people on the defensive. 
+
+Instead, chime in immediately with **deep, specific context that only the person who did the work would know**:
+
+* **If they present your idea:** 
+  > *"Thanks for highlighting that, [Name]. To add some context to what I was aiming for when I drafted that, the main reason I structured it this way was..."*
+* **If they present your data/slides:** 
+  > *"I’m glad those findings were useful, [Name]. When I was running that analysis, I also noticed [specific detail], which leads to our next step..."*
+* **If someone compliments them for your work:** 
+  > *"Thanks, [Boss/Colleague]! I put a lot of time into putting that together. [Colleague's Name] and I were just discussing how to roll it out."*
+
+**Why this works:** You don’t start a fight, but you make it blatantly obvious to everyone in the room that you are the subject matter expert and the creator of the work.
+
+---
+
+### 2. After the Meeting: Have the Direct 1-on-1
+Do not let it slide, or it will become a habit. Address it the same day while it’s fresh. 
+
+Give them a diplomatic way out, but make your boundary clear:
+
+> *"Hey [Name], in the meeting earlier today, when you brought up [Project/Idea], it came across as though you were the one who developed it. I put a lot of work into that [report/strategy], and visibility is important to me. Going forward, I expect to present my own work, or at least have my contribution accurately acknowledged. Can we agree on that?"*
+
+* **If they apologize/claim it was a mistake:** Great. You’ve put them on notice. They now know they can't get away with it quietly.
+* **If they get defensive or dismissive:** Don’t argue. Simply say: *"I understand your perspective, but I'm going to make sure my contributions are clear going forward."*
+
+---
+
+### 3. Change Your Habits: Build a "Paper Trail"
+If someone routinely steals credit, you must stop handing them the ammunition.
+
+* **Email deliverables first:** Never hand off a document or slide deck verbally. Email it to a wider group or to your manager with the colleague cc’d: *"Attached is the analysis I completed on [Topic]. Looking forward to discussing this in tomorrow's sync."*
+* **Watermark your work:** Put your name in the footer of slides or documents: *Created by [Your Name] | [Date]*.
+* **Speak first:** If you know an item on the agenda is yours, jump in early: *"I can take this one since I led the research on it."*
+
+---
+
+### 4. Manage Up: Protect Your Visibility with Your Boss
+If your boss is in these meetings and not noticing, you need to preempt the problem.
+
+* **In your 1-on-1s before big meetings:** *"Here are the three things I completed this week. I'm planning to share [Project X] in the team meeting on Thursday."*
+* **If the colleague persists despite your 1-on-1:** Go to your manager, but frame it around **team workflow and accuracy**, not personal drama:
+  > *"I need some guidance on a recurring dynamic. In recent meetings, [Colleague] has presented work I produced—like [Project A] and [Analysis B]—without mentioning my involvement. I spoke to them directly about it, but it happened again today. How can we ensure project ownership is clearer in these meetings?"*
+
+### Summary Rule
+**Never let their voice be the first or last thing heard about your work.** Own the narrative before the meeting via email, dive in with deep details during the meeting, and enforce boundaries immediately after.

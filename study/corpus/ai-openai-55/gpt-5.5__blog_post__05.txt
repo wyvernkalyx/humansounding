@@ -1,0 +1,219 @@
+# Home Network Security Basics: A Practical Guide for Everyday Users
+
+Your home network connects everything from laptops and phones to smart TVs, security cameras, printers, and voice assistants. While that convenience is great, it also creates opportunities for hackers, scammers, and malware if your network is not properly secured.
+
+The good news: you do not need to be a cybersecurity expert to make your home network much safer. A few simple steps can significantly reduce your risk.
+
+---
+
+## 1. Secure Your Wi-Fi Router
+
+Your router is the gateway between your home devices and the internet. If it is not protected, everything connected to it could be at risk.
+
+### Change the default router login
+
+Many routers come with default usernames and passwords like:
+
+- `admin / admin`
+- `admin / password`
+- `admin / 1234`
+
+Attackers know these defaults. Log in to your router’s admin panel and change the administrator password to something strong and unique.
+
+A strong password should be:
+
+- At least 12–16 characters
+- Unique to your router
+- A mix of words, numbers, and symbols
+- Not based on personal information
+
+---
+
+## 2. Use a Strong Wi-Fi Password
+
+Your Wi-Fi password should also be strong and separate from your router admin password.
+
+Avoid passwords like:
+
+- Your address
+- Your pet’s name
+- Your phone number
+- `password123`
+- `familywifi`
+
+Instead, use a passphrase such as:
+
+> `BlueCoffee!River72Cloud`
+
+This is easier to remember than a random string but still much harder to guess.
+
+---
+
+## 3. Use WPA2 or WPA3 Encryption
+
+Wi-Fi encryption protects the data traveling between your devices and your router.
+
+In your router settings, look for the wireless security mode. Use:
+
+- **WPA3-Personal** if available
+- **WPA2-Personal / WPA2-PSK** if WPA3 is not available
+
+Avoid older options like:
+
+- WEP
+- WPA
+- Open/no password
+
+These older standards are insecure and can be cracked much more easily.
+
+---
+
+## 4. Keep Your Router Firmware Updated
+
+Router manufacturers release firmware updates to fix security flaws and improve performance.
+
+Check your router settings for options such as:
+
+- Firmware Update
+- Software Update
+- Router Update
+
+Some routers update automatically, but others require manual updates. If your router has not received updates in years, consider replacing it with a newer model.
+
+---
+
+## 5. Create a Guest Network
+
+A guest network is a separate Wi-Fi network for visitors and less-trusted devices. This helps keep your main devices protected.
+
+Use a guest network for:
+
+- Visitors’ phones and laptops
+- Smart TVs
+- Smart speakers
+- Security cameras
+- Smart plugs
+- Other Internet of Things devices
+
+Many smart devices do not receive regular security updates, so keeping them separate from your main computers and phones is a smart move.
+
+---
+
+## 6. Disable WPS
+
+WPS, or Wi-Fi Protected Setup, was designed to make connecting devices easier, often by pressing a button or entering a short PIN. Unfortunately, WPS can be vulnerable to attacks.
+
+If you do not need it, disable WPS in your router settings.
+
+---
+
+## 7. Rename Your Wi-Fi Network
+
+Your Wi-Fi network name, also called the SSID, should not reveal personal information.
+
+Avoid names like:
+
+- `SmithFamilyWiFi`
+- `Apartment4B`
+- `JohnsRouter`
+- `123MainStreet`
+
+Instead, use something generic or creative that does not identify you or your location.
+
+---
+
+## 8. Turn Off Remote Administration
+
+Remote administration allows you to access your router settings from outside your home network. Most people do not need this feature.
+
+If enabled, it can create an unnecessary security risk. Look in your router settings for:
+
+- Remote Management
+- Remote Administration
+- Web Access from WAN
+
+Disable it unless you specifically know you need it.
+
+---
+
+## 9. Check Connected Devices Regularly
+
+Most routers let you view a list of connected devices. Review this list occasionally to make sure you recognize everything.
+
+If you see an unfamiliar device:
+
+1. Change your Wi-Fi password.
+2. Reboot your router.
+3. Reconnect only your trusted devices.
+4. Check again later.
+
+This is a simple way to catch unauthorized access.
+
+---
+
+## 10. Protect Your Devices Too
+
+Home network security is not only about the router. Your devices also matter.
+
+Basic device security includes:
+
+- Keeping computers, phones, and tablets updated
+- Using strong screen locks
+- Installing apps only from trusted sources
+- Running reputable antivirus protection on computers
+- Enabling automatic updates
+- Using multi-factor authentication for important accounts
+
+A secure router helps, but an infected laptop or phone can still create problems inside your network.
+
+---
+
+## 11. Be Careful with Smart Home Devices
+
+Smart home gadgets can be useful, but they are often weaker from a security standpoint.
+
+Before buying a smart device, ask:
+
+- Does the manufacturer provide updates?
+- Does it require a strong password?
+- Can default credentials be changed?
+- Does it work on a guest network?
+- Is the brand reputable?
+
+Also, remove or disconnect devices you no longer use.
+
+---
+
+## 12. Consider Using a Password Manager
+
+A password manager helps you create and store strong, unique passwords for your router, Wi-Fi, email, banking, and other accounts.
+
+This makes it much easier to avoid reusing passwords, which is one of the most common security mistakes.
+
+Popular password managers can also alert you if a password has been exposed in a data breach.
+
+---
+
+## Quick Home Network Security Checklist
+
+Use this checklist to improve your network security:
+
+- Change the default router admin password
+- Use a strong Wi-Fi password
+- Enable WPA2 or WPA3 encryption
+- Update router firmware
+- Disable WPS
+- Turn off remote administration
+- Set up a guest network
+- Keep devices updated
+- Review connected devices regularly
+- Use strong, unique passwords
+- Separate smart devices from main computers when possible
+
+---
+
+## Final Thoughts
+
+Home network security does not have to be complicated. Start with the basics: secure your router, use strong passwords, keep everything updated, and separate guest or smart devices from your main network.
+
+These simple steps can protect your personal information, reduce the risk of malware, and make it much harder for unwanted users to access your home network.

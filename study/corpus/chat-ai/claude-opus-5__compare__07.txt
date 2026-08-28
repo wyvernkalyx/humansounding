@@ -1,0 +1,31 @@
+They protect completely different things, and most small brands need both.
+
+**Trademark: protects how customers identify you**
+
+A trademark covers brand identifiers — your business name, logo, product names, tagline, and sometimes distinctive packaging or colors. The underlying purpose is preventing customer confusion about who's selling something.
+
+- **How you get it:** In the US, rights arise automatically from actually using the mark in commerce, but only in your geographic area and product category. Federal registration with the USPTO gives you nationwide rights, a legal presumption of ownership, the ® symbol, and stronger remedies in court.
+- **Scope:** Tied to specific categories of goods/services. Someone else can use a similar name in an unrelated industry (think Delta Airlines vs. Delta faucets).
+- **Duration:** Potentially forever, as long as you keep using it and file maintenance documents (first between years 5–6, then every 10 years).
+- **Cost:** Currently a few hundred dollars per class of goods in filing fees, plus attorney fees if you use one.
+
+**Copyright: protects creative work you made**
+
+Copyright covers original works fixed in a tangible form — your website copy, product photography, blog posts, videos, illustrations, textile patterns, music, software.
+
+- **How you get it:** Automatically, the moment you create the work. Registration with the Copyright Office is optional but required before you can sue for infringement in the US, and registering early (before infringement, or within 3 months of publication) unlocks statutory damages and attorney's fees.
+- **Duration:** Life of the author plus 70 years, or 95 years from publication for works made for hire.
+- **Cost:** Roughly $45–65 for a basic online registration.
+
+**Where they overlap**
+
+A logo can be both: copyright protects the artwork itself, trademark protects its role as a source identifier. But names and short slogans generally *can't* be copyrighted — too short to meet the originality threshold — which is why trademark is the right tool for your brand name.
+
+**Practical takeaways for a small brand**
+
+1. **Search before you commit.** Run your proposed name through the USPTO's TESS database and a general web search before printing packaging. Rebranding after a cease-and-desist is expensive.
+2. **Pick a distinctive name.** Invented or arbitrary names (Kodak, Apple for computers) are easy to protect. Descriptive names ("Best Coffee Roasters") are difficult or impossible until you prove customers associate them specifically with you.
+3. **Get written assignments from freelancers.** This trips up a lot of small businesses: if you hired a contractor to design your logo, *they* usually own the copyright unless your contract explicitly assigns it to you. "Work made for hire" doesn't automatically apply to independent contractors.
+4. **An LLC filing or domain registration is not a trademark.** Registering a business name with your state gives you no trademark rights.
+
+Worth noting this is US-focused — trademark rights in the EU, UK, China, and many other countries go to whoever *registers first*, not whoever used it first, so international sellers should file earlier. And I'm giving general information rather than legal advice; if there's real money riding on a name, a trademark attorney's clearance search is usually a worthwhile few hundred dollars.

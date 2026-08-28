@@ -1,0 +1,12 @@
+A slowdown at the same time every weekday strongly suggests something scheduled or a predictable traffic spike. Start by correlating metrics around 8:45–9:30am rather than changing capacity immediately.
+
+- Traffic: Check request rate, concurrent users, endpoint mix, and geographic/source changes. Compare 9am with a healthy period.
+- Scheduled work: Look for cron jobs, backups, ETL/reporting, cache invalidations, batch imports, search indexing, deployments, autoscaling schedules, and third-party syncs starting around 9am. Also check UTC/time-zone conversions.
+- Application: Compare p50/p95/p99 latency and error rates by endpoint. Distributed traces can reveal whether time is spent in your app, database, cache, or external APIs.
+- Database: Check CPU, connections, query latency, locks/waits, slow queries, and I/O. A scheduled report competing with normal web queries is a common culprit.
+- Infrastructure: Inspect CPU, memory, disk/network I/O, connection/socket pools, queue depth, load balancer metrics, and container/instance saturation. Check whether autoscaling reacts too slowly to a sharp 9am surge.
+- Dependencies: Look at latency/rate limits for authentication, payment, DNS, APIs, and other services you depend on.
+
+A particularly useful comparison is “8:30am healthy vs. 9:05am slow” on the same weekday, aligned on one dashboard. Find the metric that changes at the same moment latency rises, then drill into that subsystem.
+
+If you tell me your stack (AWS/Azure/GCP, application framework, database, and monitoring tools) and what “slow” means in your metrics, I can give you a concrete investigation sequence and queries/dashboards to use.

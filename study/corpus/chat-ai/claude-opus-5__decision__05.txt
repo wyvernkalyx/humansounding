@@ -1,0 +1,26 @@
+Default answer: keep patching. Age alone isn't a reason to rebuild, and ten years for an internal tool is unremarkable. But a few specific conditions flip it, and they're worth checking honestly.
+
+**Real triggers for a rebuild**
+
+- **The platform is EOL and unpatchable.** Unsupported runtime, framework with open CVEs, a database version your cloud provider is sunsetting. This is a deadline, not a preference.
+- **The knowledge is gone or leaving.** If one person understands it and they're heading out the door, you're already in a rebuild — just an unplanned one.
+- **The data model no longer matches the business.** This is the one that actually justifies rebuilds. If every new feature requires fighting the schema, encoding workarounds in application logic, or adding another `type` column with special-case branches, no amount of refactoring fixes it. Bad code is cheap to improve incrementally; a wrong domain model is not.
+- **Change cost has gone nonlinear.** Two-day features take three weeks, and touching one area breaks something unrelated.
+
+**Things that look like triggers but aren't**
+
+It's not written in your current stack. New hires find it unpleasant. It's "legacy." Someone senior wants a greenfield project. Vague technical-debt discomfort. None of these survive contact with the actual cost of a rewrite.
+
+**The cost you're probably underestimating**
+
+Ten-year-old internal tools encode hundreds of undocumented business rules — the finance team's fiscal calendar quirk, the report that has to round a specific way for an audit, the field someone repurposed in 2019. Those rules exist only in the code and in users' habits. You'll rediscover them one angry Slack message at a time. Rebuild estimates for systems like this run 2–3x, and you maintain both systems during the transition.
+
+**The option most teams skip**
+
+Strangler fig: stand up a new system alongside the old one and move functionality across piece by piece, routing users or traffic as each piece lands. Internal tools are *unusually* well-suited to this because you control the users — you can mandate that the new invoicing screen is the only one, migrate one department at a time, and roll back without a customer-facing incident. You get value early, you can stop halfway if priorities change, and you never face a big-bang cutover weekend.
+
+**A concrete way to decide**
+
+For the next month or two, track: hours spent on this tool, split between firefighting and new work, plus a list of requests rejected as "too hard given the current system." If total drag is under roughly 15–20% of one engineer and the rejected list is short, patching wins comfortably. If you're at half a person and the rejected list contains things the business genuinely needs, you have a real case.
+
+The thing that would sharpen this most: what's actually driving the question right now? An incident, an inability to ship something specific, someone leaving, or a general sense that it's time? Those point in quite different directions.

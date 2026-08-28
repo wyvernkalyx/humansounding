@@ -1,0 +1,49 @@
+## The mechanic
+
+Simple interest pays you only on your original deposit. Compound interest pays you on your deposit *plus* all the interest you've already earned. That small difference — interest earning interest — turns addition into multiplication.
+
+Mathematically, simple interest is linear: `A = P(1 + rt)`. Compound interest is exponential: `A = P(1 + r)^t`. The exponent is the whole story.
+
+Put $1,000 in at 7% a year:
+
+| Years | Simple interest | Compound interest |
+|---|---|---|
+| 10 | $1,700 | $1,967 |
+| 20 | $2,400 | $3,870 |
+| 30 | $3,100 | $7,612 |
+| 40 | $3,800 | $14,974 |
+
+At year 10 compounding looks like a modest bonus. At year 40 it's nearly four times better. Nothing changed except time.
+
+A useful shortcut is the **Rule of 72**: divide 72 by the interest rate to get the doubling time. At 7%, money doubles roughly every ten years. At 3%, every 24 years. At 12%, every six.
+
+## Why it blindsides people
+
+**Our intuition is linear.** When asked to estimate compound growth, people reliably guess low — often dramatically so. The brain extrapolates in straight lines because almost everything in daily life behaves that way: distance, wages, groceries. Exponentials aren't in our default toolkit.
+
+**The curve is boring for a long time, then violent.** Growth looks nearly flat for years, which reads as "this isn't working." Then it bends sharply. The classic illustration: a penny that doubles daily for 30 days ends up at about $5.4 million — and more than half of that appears on the final day. Every doubling produces more absolute gain than *all previous doublings combined*.
+
+**Most of the payoff arrives at the end.** In that $1,000 example, the account gains $3,870 during years 20–30 — more than it gained in the entire first two decades. People quit before the interesting part.
+
+**We anchor on the money we put in.** Contributions feel real and effortful; the multiplier feels abstract. Consider two savers, both earning 7%:
+
+- Saves $5,000/year from age 25 to 35, then stops entirely. Total contributed: **$50,000**. Balance at 65: **~$526,000**.
+- Saves $5,000/year from 35 to 65. Total contributed: **$150,000**. Balance at 65: **~$472,000**.
+
+The first person contributed a third as much and ended up ahead. Time in the market outweighed the amount, because early dollars get more doublings.
+
+**The feedback is too slow to learn from.** You can't feel a 7% annual return the way you feel a hot stove. There's no visceral experience that trains the intuition, so the surprise never wears off.
+
+## It cuts both ways
+
+The same math runs in reverse and is equally counterintuitive:
+
+- **Debt.** A $5,000 credit card balance at 22% APR, paid at the minimum, can take well over a decade to clear and cost more in interest than the original purchase. Compounding is working, just for someone else.
+- **Fees.** A seemingly trivial 1% annual investment fee — 6% net instead of 7% — costs you about **31% of your final balance** over 40 years. The fee compounds too, in the form of returns you never earned on the money skimmed off.
+- **Inflation.** At 3% inflation, prices double roughly every 24 years, quietly shrinking what a fixed sum can buy.
+
+## Honest caveats
+
+Real returns aren't smooth. Markets deliver 7% *on average* while lurching between +25% and −40% years, and the *order* of those returns matters if you're withdrawing money. Nominal growth also overstates gains — subtract inflation to see what you actually gained in purchasing power. And compounding assumes you reinvest: spend the interest, and you're back to simple interest.
+
+The practical takeaway is less "get a high rate" than "start early, keep costs low, and don't interrupt it." The exponent does the heavy lifting, but only if you give it time to run.

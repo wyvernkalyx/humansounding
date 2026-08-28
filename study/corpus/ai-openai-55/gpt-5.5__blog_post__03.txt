@@ -1,0 +1,216 @@
+# How to Run a Better Meeting: A Practical Guide
+
+Meetings can be incredibly useful—or a complete waste of time. At their best, they help teams make decisions, solve problems, align on priorities, and build trust. At their worst, they drain energy, interrupt deep work, and leave everyone wondering, “What was the point of that?”
+
+The good news: better meetings are not complicated. They require intention, structure, and a bit of discipline. Here’s how to run meetings that people actually find valuable.
+
+---
+
+## 1. Start With a Clear Purpose
+
+Before scheduling a meeting, ask yourself: **Why are we meeting?**
+
+A meeting should exist to accomplish something specific, such as:
+
+- Making a decision
+- Solving a problem
+- Gathering input
+- Aligning on a plan
+- Sharing important updates that require discussion
+
+If the goal is simply to distribute information, consider whether an email, document, or recorded update would be better. Not everything needs to be a meeting.
+
+A strong purpose sounds like:
+
+> “Decide which vendor to choose for the new CRM.”
+
+A weak purpose sounds like:
+
+> “Discuss CRM options.”
+
+The first one creates focus. The second one invites wandering.
+
+---
+
+## 2. Create an Agenda—and Share It in Advance
+
+A meeting without an agenda is like a road trip without a destination. You might eventually get somewhere, but probably not efficiently.
+
+Your agenda does not need to be complicated. It should answer three questions:
+
+1. **What are we trying to accomplish?**
+2. **What topics will we cover?**
+3. **What decisions or outcomes are expected?**
+
+Example:
+
+**Meeting Goal:** Decide launch timeline for the new website  
+**Agenda:**
+- Review current project status — 10 minutes
+- Discuss blockers and dependencies — 15 minutes
+- Evaluate launch date options — 20 minutes
+- Confirm next steps and owners — 10 minutes
+
+Send the agenda ahead of time so people can prepare. This improves the quality of discussion and reduces time wasted catching everyone up.
+
+---
+
+## 3. Invite the Right People—and Only the Right People
+
+One of the biggest meeting mistakes is inviting too many people. Every extra attendee adds cost, complexity, and potential distraction.
+
+Before adding someone to the invite, ask:
+
+- Do they need to make a decision?
+- Do they have essential context?
+- Are they responsible for next steps?
+- Would a summary afterward be enough?
+
+If someone only needs to be informed, send them notes after the meeting. Respecting people’s time is one of the simplest ways to improve meeting culture.
+
+---
+
+## 4. Set Expectations at the Beginning
+
+A good meeting starts with clarity. Take the first minute to confirm:
+
+- The purpose of the meeting
+- The desired outcome
+- The agenda
+- Any ground rules
+
+For example:
+
+> “The goal of this meeting is to decide which campaign concept we’re moving forward with. We’ll review the three options, discuss concerns, and leave with one clear decision and next steps.”
+
+This helps everyone understand how to participate and keeps the group focused.
+
+---
+
+## 5. Facilitate the Conversation
+
+Running a meeting is not just about talking through agenda items. It’s about guiding the group toward the outcome.
+
+A good facilitator:
+
+- Keeps the discussion on track
+- Makes space for quieter voices
+- Prevents one or two people from dominating
+- Clarifies decisions as they happen
+- Watches the time
+- Redirects tangents
+
+Useful phrases include:
+
+- “Let’s pause and come back to the decision we need to make.”
+- “I want to hear from someone who hasn’t spoken yet.”
+- “That’s important, but it may be a separate conversation.”
+- “Can we clarify what we’re deciding here?”
+
+Good facilitation does not mean controlling every moment. It means helping the meeting serve its purpose.
+
+---
+
+## 6. Make Decisions Explicit
+
+Many meetings feel productive in the moment but fail afterward because no one is clear on what was actually decided.
+
+When a decision is made, state it clearly:
+
+> “So we’ve agreed to launch on May 15, with the beta group starting two weeks earlier.”
+
+If there is no agreement, clarify the path forward:
+
+> “We’re not ready to decide today. Sarah will gather pricing data by Friday, and we’ll make the decision in Monday’s meeting.”
+
+Never let important decisions remain vague.
+
+---
+
+## 7. End With Action Items
+
+A meeting should produce movement. Before ending, review:
+
+- What was decided
+- Who owns each action item
+- Deadlines
+- Any follow-up needed
+
+A good action item includes a clear owner and due date:
+
+> “Marcus will send the revised proposal to the client by Thursday afternoon.”
+
+A weak action item sounds like:
+
+> “We should update the proposal.”
+
+If everyone owns it, no one owns it.
+
+---
+
+## 8. Finish on Time
+
+Ending on time is a sign of respect. It also builds trust. If people know your meetings run efficiently, they are more likely to show up engaged.
+
+To finish on time:
+
+- Assign time limits to agenda items
+- Move off-topic discussions to a parking lot
+- Give a five-minute warning near the end
+- Don’t try to solve every related issue in one meeting
+
+If you consistently run out of time, your agenda is too ambitious or the meeting needs a different format.
+
+---
+
+## 9. Send a Short Follow-Up
+
+After the meeting, send a concise summary. It should include:
+
+- Key decisions
+- Action items
+- Owners
+- Deadlines
+- Links to relevant documents
+
+This creates accountability and gives absent stakeholders visibility.
+
+Example:
+
+**Meeting Summary**
+- Decision: Launch date set for May 15
+- Decision: Beta group begins May 1
+- Action: Priya to finalize launch checklist by Friday
+- Action: James to update client communication plan by Tuesday
+
+The follow-up does not need to be long. It just needs to be clear.
+
+---
+
+## 10. Regularly Question Recurring Meetings
+
+Recurring meetings are often created with good intentions and then continue long after they stop being useful.
+
+Periodically ask:
+
+- Is this meeting still necessary?
+- Could it happen less often?
+- Could it be shorter?
+- Could part of it be handled asynchronously?
+- Are the right people still attending?
+
+Canceling or redesigning a recurring meeting can free up hours of productive time.
+
+---
+
+## Final Thoughts
+
+Better meetings are not about having more rules. They’re about respecting people’s time and creating conditions for useful work.
+
+If you want to improve your meetings quickly, start with these three habits:
+
+1. Define the purpose before scheduling.
+2. Use a clear agenda.
+3. End with decisions, owners, and deadlines.
+
+A good meeting leaves people with clarity, momentum, and confidence about what happens next. If your meetings consistently do that, you’re already ahead of the curve.

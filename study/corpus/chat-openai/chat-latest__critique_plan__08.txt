@@ -1,0 +1,18 @@
+That can be a strong year-long experiment—especially if the goal is learning from customers rather than merely signaling responsiveness. The key is making “personally” mean genuinely authored by you, not necessarily long or elaborate.
+
+Set the rules before you start:
+- Define the scope: which review platforms count, whether you answer star-only ratings, and whether old reviews are included. I’d start from a fixed date and answer every substantive new review.
+- Set a sustainable cadence: one or two short review sessions per day is safer than reacting to notifications continuously. Decide who covers genuine emergencies when you’re unavailable.
+- Keep responses proportional. A simple positive review may warrant two sentences; a detailed complaint deserves more attention. Repeating the same warm paragraph hundreds of times will quickly undermine the point.
+- For praise, mention something specific the customer said and thank them. Avoid turning every thank-you into a sales pitch.
+- For criticism, acknowledge the specific experience, state what you can actually verify or change, and move account/order details into a private channel. Don’t argue about whether their feelings are justified.
+- For abusive, fraudulent, legally sensitive, medical/safety-related, or employee-related reviews, create an escalation policy. “Reply to every review” shouldn’t mean improvising publicly where privacy, safety, litigation, or harassment is involved.
+- Never disclose customer information just to rebut an accusation. Even when you have receipts, a public review thread is usually the wrong place to litigate the customer's history.
+- Keep a lightweight log. Tag recurring issues—shipping, quality, billing, onboarding, staff behavior, feature requests—and send the patterns into the business. This is where the project can become much more valuable than reputation management.
+- Measure the year. Track response volume/time, review sentiment or rating trends, issues discovered, operational changes caused by reviews, and—where measurable—retention or recovery after complaints.
+
+I’d also give yourself a few constraints: no responding while angry, no copy-paste pretending to be personal, no promises you can’t enforce internally, and no incentives contingent on customers changing or deleting negative reviews.
+
+The biggest risk is scale. At 10 reviews a day, even five minutes each becomes roughly 300 hours over the year. At 100 a day, personal replies become a substantial job. Before announcing the commitment publicly, calculate last year's review volume and multiply it by your realistic average response time.
+
+A good internal standard is: “Every reviewer should be able to tell I read what they wrote, and every recurring problem should have somewhere to go inside the company.” If you can maintain those two things for a year, the exercise is likely to teach you considerably more than simply chasing a higher star rating.

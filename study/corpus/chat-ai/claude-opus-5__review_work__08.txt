@@ -1,0 +1,15 @@
+Straight: it's a hard name to defend.
+
+The core problem is that "synergy" and its variants have been the punchline for corporate emptiness for about twenty-five years — *Office Space*, *The Office*, every LinkedIn parody account. When someone hears "Synergize," a chunk of your audience will silently assume there's no substance behind it. That's a tax you pay on every first impression.
+
+Beyond the cringe factor:
+
+- **It says nothing.** Abstract to the point of meaninglessness. Doesn't hint at category, user, or benefit.
+- **It's dated.** Verb-ified buzzwords peaked around 2008 SaaS.
+- **Trademark and search are rough.** It's close to a generic descriptor, which makes it weak to protect and hard to own. You're also fighting the dictionary word for search results. synergize.com is almost certainly long gone.
+
+The honest counterweight: names matter less than founders think. "Google," "Yahoo," and "Slack" were all dumb before they meant something. If you already have customers and momentum, rebranding is expensive and probably not your highest-leverage move. Distribution beats naming.
+
+And there's one case where it genuinely works — if the product is *literally* about combining or integrating things, and you're selling to enterprise buyers who use that vocabulary unironically. That audience is far less allergic to it than a startup or developer crowd would be.
+
+What does it actually do, and who's buying? That changes the answer a lot, and I can help you generate alternatives if it's still early enough to move.

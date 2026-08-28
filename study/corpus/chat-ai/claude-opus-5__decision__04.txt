@@ -1,0 +1,27 @@
+Probably worth *piloting* — but whether it works depends much more on the shape of your work than on the idea itself. The single best predictor is whether your output is **capacity-based** (a fixed amount of work gets done per hour someone is present: reception, support desk, billable hours, retail) or **output-based** (results depend on focus and judgement, and there's slack in the week). The second type adapts well; the first type usually just loses 20% of capacity.
+
+**What the evidence actually shows**
+
+The widely cited UK trial (2022, ~60 mostly small companies, 100% pay for 80% hours) reported around 90% of participants continuing afterwards, roughly flat revenue, and clear drops in sick days, burnout and resignations. Similar results have come out of pilots in Ireland, Portugal and elsewhere. But these were self-selected companies who thought it would work, with no control groups and a lot of self-reported data. Read them as "this can work well" rather than "this will work for you."
+
+The mechanism matters more than the headline: the gains almost always come from cutting low-value activity — fewer and shorter meetings, less interruption, tighter prioritisation, killing reports nobody reads. If you can't name roughly 20% of your current activity that could disappear without anyone noticing, the hours have to come out of your people instead, and you get hidden overtime and resentment.
+
+**Risks that get underestimated in small offices**
+
+- **Single points of failure.** In a 10–20 person office there's usually one person who does payroll, or knows the invoicing system. Their absent day becomes a weekly bottleneck unless you cross-train first.
+- **It's very hard to reverse.** After a year, people treat it as part of their package. Withdrawing it feels like a pay cut and does real damage to trust. Pilot it with an explicit, written reversion clause and honest criteria, or don't pilot it.
+- **Work intensification.** Watch for people quietly working on their day off. If actual hours worked don't fall, you've just added stress and taken away recovery time.
+- **Client perception.** Usually manageable, but only if you're proactive — most clients care about response times and deadlines, not which days you're at your desk. Staggering days off so the office stays open five days solves most of this, at the cost of more coordination and less shared "everyone's off" benefit.
+- **Boring admin.** Holiday and bank holiday accrual arithmetic gets fiddly (a Friday bank holiday when nobody works Fridays), and contracts, part-time staff and pension arrangements need checking. Cheap to sort out in advance, annoying afterwards.
+
+**How to de-risk it**
+
+Measure a baseline for two or three months *before* you change anything: on-time delivery, revenue or output per head, client complaints and response times, sick days, and an anonymous wellbeing survey plus self-reported actual hours worked. Then run six months — three isn't long enough to see whether it survives a busy period.
+
+Before day one, publish the list of things you're stopping. This is the part companies skip and it's the part that determines the outcome. Also decide in advance what happens during crunch weeks, because the answer "we'll figure it out" reliably becomes "we quietly work five days."
+
+**Cheaper options worth considering first**
+
+A nine-day fortnight captures a lot of the recruitment and wellbeing benefit at half the capacity risk and is much easier to unwind. Compressed hours (four ten-hour days, same 40 hours) is a genuinely different product — it suits some people and is bad for others, especially those with school pickups, and fatigue can eat the gains. And it's worth simply asking your team: some offices discover people would rather have flexible start times or an extra WFH day than a fixed fourth day off.
+
+**The question I'd start with:** what problem are you solving? If it's recruitment and retention in a competitive market, a four-day week is a strong, cheap differentiator for a small office and the maths works easily — avoiding one resignation a year typically covers a lot. If you're trying to fix an overload or productivity problem, the four-day week is more likely to expose it than solve it, and you'd want to do the work-cutting exercise on its own first.

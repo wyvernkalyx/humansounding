@@ -1,0 +1,36 @@
+Hiring temporary workers for a short burst seems like the obvious fix for a backlog, but in customer support, it frequently backfires. The primary reason is **Brooks’ Law**: *adding manpower to a late project often makes it later.* 
+
+Here is a breakdown of what typically goes wrong in a 30-day temp scenario, followed by how to prevent it.
+
+---
+
+### 1. The "Training Tax" Makes the Backlog Worse First
+* **The Senior Drain:** Temps don’t arrive knowing your product, edge cases, tone of voice, or internal tools. Your senior reps—the ones who clear tickets the fastest—will have to spend 20–40% of their time onboarding, answering questions, and reviewing the temps' drafts.
+* **The Ramp-to-Value Ratio:** If it takes **2 weeks** to get a temp to 70% competence, and they leave at the end of week 4, you only get **2 weeks of net-positive work** in exchange for a massive training burden.
+
+### 2. The "Boomerang Ticket" Phenomenon
+* **Superficial Resolutions:** Temps incentivized by volume (or just trying to survive) often close tickets with canned responses that don't actually solve the problem.
+* **The Secondary Wave:** Customers reply back angrier 48 hours later. Now you have a reopen/escalation backlog on top of your original backlog, and senior reps have to spend twice as long untangling the mess.
+
+### 3. Security, Access, and IT Friction
+* **The 3-Day Delay:** Temps often sit idle for the first few days waiting for Okta invites, CRM seat licenses, database access, or hardware.
+* **Security & Privacy Risks:** Granting short-term contractors access to sensitive customer data (PII, billing systems) creates compliance headaches and increases the risk of unauthorized data handling.
+
+### 4. Ignoring the "Broken Pipe" (Treating the Symptom)
+* Backlogs are rarely just a capacity problem; they are usually a **product, bug, or documentation problem**.
+* Temps will answer the same repetitive question 500 times without fixing the root cause (updating the FAQ, reporting UX friction, or pushing for a bug fix). When the temps leave on Day 30, the backlog will simply rebuild itself within two weeks.
+
+### 5. Morale and Culture Drag
+* Your permanent team may feel resentful if they have to "babysit" temps while still carrying the emotional weight of customer escalations.
+* It signals to the team that management views their specialized, context-heavy job as simple "assembly-line" labor that anyone can pick up in an afternoon.
+
+---
+
+### If you *must* do this, how to make it work:
+
+If the decision is already locked in, do not just throw them into the general inbox. Constrain their scope aggressively:
+
+1. **Create an "Air Gap" (Single-Tasking):** Do not give them general queue access. Identify **one or two specific, low-risk ticket types** with unambiguous solutions (e.g., basic password resets, subscription cancellations, or standard shipping status checks) and route *only* those to the temps.
+2. **Use Them for Triage, Not Resolution:** Have temps categorize, tag, and collect missing information from customers (e.g., "Could you provide your order number and screenshots?") so the tickets are prepped and ready for senior reps to resolve instantly.
+3. **Over-Document Before Day 1:** If you don't already have step-by-step Standard Operating Procedures (SOPs) and macros for the specific tickets they will handle, write them *now*. If it's not documented, a temp cannot do it.
+4. **Buddy System:** Assign **one** specific permanent rep to be their dedicated buffer so the rest of your team can stay heads-down on the complex backlog.

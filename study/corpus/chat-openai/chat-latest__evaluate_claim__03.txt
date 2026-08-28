@@ -1,0 +1,10 @@
+Yes. Don’t put a hot laptop battery in the fridge or freezer, especially if it’s a lithium-ion battery.
+
+Rapid cooling can cause condensation inside the battery or laptop, potentially leading to corrosion or an electrical short. Refrigeration also won’t fix a battery that’s overheating because of damage or an internal fault.
+
+Instead:
+- Shut down and unplug the laptop, and disconnect the battery only if it’s designed to be removable safely.
+- Put it on a hard, nonflammable surface away from combustible materials and let it cool naturally at room temperature.
+- If the battery is swollen, hissing, leaking, smoking, extremely hot, or has a strange chemical smell, don’t use or charge it. Keep your distance and follow local fire/emergency guidance; a smoking or burning lithium-ion battery can be hazardous.
+
+If it merely gets warm during normal laptop use, that’s generally expected.

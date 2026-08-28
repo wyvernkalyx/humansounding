@@ -1,0 +1,37 @@
+Moving backups to the cloud is a great move, but **stopping local backups entirely to rely *only* on the cloud is generally not recommended.** 
+
+Here is why, along with a better alternative.
+
+---
+
+### The Risk of a "Cloud-Only" Strategy
+
+While cloud backups eliminate the hassle of manually swapping drives and protect against local disasters (fire, theft, flood), going 100% cloud creates a few major problems:
+
+1. **Slow Recovery Times (RTO):** If a server fails or you suffer data loss, downloading hundreds of gigabytes (or terabytes) from the cloud can take days or even weeks depending on your internet bandwidth. Local drives restore at gigabit speeds.
+2. **Internet Dependency:** If your internet connection goes down, you have zero access to your backups.
+3. **Ransomware Vulnerability:** If your cloud backup is just a synced folder or shares credentials with your main network, ransomware can encrypt both your live data and your cloud copy. 
+
+---
+
+### The Recommended Standard: The 3-2-1 Rule
+
+In IT and data security, the industry standard is the **3-2-1 Backup Strategy**:
+* **3** copies of your data (1 primary + 2 backups)
+* **2** different types of storage media (e.g., local storage + cloud)
+* **1** copy kept offsite (the cloud)
+
+---
+
+### The Better Solution: A Hybrid Approach
+
+Instead of swapping drives manually, you can automate everything while keeping both local and offsite copies:
+
+1. **Keep a Local Target (Automated):** Use a dedicated external drive permanently attached to the system or a small Network Attached Storage (NAS) device. Backups run here automatically every night—no manual drive swapping required.
+2. **Replicate to the Cloud:** Have your backup software automatically send a copy of those backups to the cloud (e.g., AWS S3 Glacier, Backblaze B2, Azure, or a dedicated backup service like Veeam/Acronis).
+3. **Enable Immutability (Object Lock):** In the cloud, turn on "immutable storage" so backups cannot be deleted or modified by ransomware or malicious actors for a set period (e.g., 30 days).
+
+### Summary Verdict
+* **Adding cloud storage:** Excellent idea.
+* **Eliminating manual drive rotation:** Good idea (automate it instead).
+* **Eliminating local backups entirely:** **High risk.** Keep an automated local copy for fast recovery, and use the cloud as your disaster-recovery safety net.

@@ -1,0 +1,15 @@
+## Product Update: Improved Mobile Performance
+
+We’ve made significant improvements to the mobile experience to help the app feel faster, smoother, and more reliable on phones and tablets.
+
+### What’s improved
+- **Faster load times:** Key screens now open more quickly, especially on slower connections.
+- **Smoother navigation:** Transitions between pages and actions feel more responsive.
+- **Reduced data usage:** We optimized how content loads to use less bandwidth where possible.
+- **Better stability:** We fixed several mobile-specific issues that could cause freezing or unexpected behavior.
+- **Improved performance on older devices:** The app should now run more consistently across a wider range of mobile hardware.
+
+### Why it matters
+These updates are designed to make everyday mobile use faster and more dependable, whether you’re checking in on the go, completing tasks, or switching between workflows.
+
+The improvements are available now. Make sure you’re using the latest version of the app or refresh your browser to get the best experience.

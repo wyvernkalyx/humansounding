@@ -1,0 +1,15 @@
+When a company says it was “breached,” it usually means someone gained unauthorized access to its systems or data. That doesn’t necessarily mean every customer’s information was stolen. A breach can range from brief access to one database to the theft of large amounts of customer information.
+
+What happens to your data depends on what the attacker accessed. Common possibilities include:
+
+- Personal information such as your name, address, phone number, email, date of birth, or government ID numbers may be copied or downloaded.
+- Login credentials may be stolen. Passwords can sometimes be recovered from poorly protected databases; even securely hashed passwords can occasionally be cracked, especially if they were weak.
+- Financial information such as card or bank details could be exposed, potentially enabling fraud.
+- Sensitive records—medical, employment, tax, location, or communications data—could be exposed and potentially used for fraud, blackmail, or targeted scams.
+- Attackers may sell or trade stolen data, combine it with information from previous breaches, or use it months or years later. Sometimes stolen data is never publicly released or demonstrably misused.
+
+Companies generally investigate which systems and records were affected, contain the intrusion, and determine whom they need to notify. A breach notice should tell you, at least approximately, when the incident occurred, what categories of your information were involved, and what the company is doing about it. Early notices can be incomplete because investigations take time.
+
+If you receive a notice saying your information was involved, the most useful response depends on what was exposed. Change an exposed password anywhere you reused it and enable multi-factor authentication. For Social Security numbers or similar identity information, consider freezing your credit with the relevant credit bureaus; a freeze is stronger protection than simply monitoring your credit. For card or bank information, monitor transactions and contact the financial institution if necessary. Also be especially suspicious of emails, calls, or texts that reference the breached company, because stolen information can make phishing attempts unusually convincing.
+
+If you paste the breach notice here (with identifying details removed), I can translate what it means for your particular data and what precautions are actually worthwhile.

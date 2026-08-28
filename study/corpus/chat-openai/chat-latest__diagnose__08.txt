@@ -1,0 +1,14 @@
+Neither by default. Sales and support see different slices of reality, and both can be accurately reporting what they see.
+
+Sales tends to see whether prospects buy and customers renew; support sees the people who hit problems. So “we can sell it” and “customers keep encountering serious defects” can both be true.
+
+Resolve it with shared evidence. Look at:
+- Defect frequency and severity, segmented by version, workflow, and customer type
+- Support ticket volume/trends, escalations, and time to resolution
+- Usage telemetry: failed workflows, crashes, abandonment, and feature adoption
+- Refunds, churn, renewals, and deals lost specifically because of product issues
+- A sample of recent support cases and sales calls to check whether the metrics hide something
+
+Then replace “fine vs. broken” with a testable statement such as: “For customers using workflow X, 8% encounter a blocking issue; for everyone else, failure rates are below 1%.”
+
+If you have to act before you have good data, give more weight to support on whether specific workflows actually function, and to sales on how those problems affect purchasing decisions—not to either team’s overall verdict on the product.
