@@ -36,11 +36,13 @@
   .notestrip a { margin-left: auto; font-size: 13px; flex: none; }
 
   .board { overflow: hidden; }
-  .brow2 { display: grid; grid-template-columns: 260px 1fr 250px; gap: 16px; padding: 12px 22px; border-bottom: 1px solid var(--grid); font-size: 14px; align-items: center; }
+  .brow2 { display: grid; grid-template-columns: 230px 1fr 150px 230px; gap: 16px; padding: 12px 22px; border-bottom: 1px solid var(--grid); font-size: 14px; align-items: center; }
   .brow2:last-child { border-bottom: none; }
   .brow2.h { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-muted); }
   .brow2 b { color: var(--ink-1); }
   .brow2 .ev { color: var(--ink-2); }
+  .brow2 .mdl { color: var(--ink-1); font-weight: 600; }
+  .brow2 .mdl.none { color: var(--ink-muted); font-weight: 400; font-style: italic; }
   .brow2 .chip { justify-self: start; }
   .boardnote { color: var(--ink-muted); font-size: 12.5px; margin: 14px 0 0; }
 
@@ -376,11 +378,11 @@ function renderBoard(d) {
   const q = boardFilter.q.trim().toLowerCase();
   const list = (d.trends || []).filter(t =>
     (boardFilter.cat === "all" || tellCat(t) === boardFilter.cat) &&
-    (!q || (t.tell + " " + (t.evidence || "") + " " + (t.dirLabel || "")).toLowerCase().includes(q)));
+    (!q || (t.tell + " " + (t.evidence || "") + " " + (t.dirLabel || "") + " " + (t.model || "")).toLowerCase().includes(q)));
   const rows = list.map(t =>
-    `<div class="brow2"><b>${escHtml(t.tell)}</b><span class="ev">${escHtml(t.evidence)}</span><span class="chip ${escHtml(t.dir)}">${glyph[t.dir] || ""}${escHtml(t.dirLabel || t.dir)}</span></div>`);
+    `<div class="brow2"><b>${escHtml(t.tell)}</b><span class="ev">${escHtml(t.evidence)}</span><span class="mdl${t.model ? "" : " none"}">${escHtml(t.model || "not measured here")}</span><span class="chip ${escHtml(t.dir)}">${glyph[t.dir] || ""}${escHtml(t.dirLabel || t.dir)}</span></div>`);
   document.getElementById("trendBoard").innerHTML = list.length
-    ? `<div class="brow2 h"><span>Tell</span><span>Evidence</span><span>Direction</span></div>` + rows.join("")
+    ? `<div class="brow2 h"><span>Tell</span><span>Evidence</span><span>Which model</span><span>Direction</span></div>` + rows.join("")
     : `<div class="boardempty">Nothing on the board matches — try another word or switch back to All.</div>`;
 }
 document.querySelectorAll(".fchip").forEach(b => b.addEventListener("click", () => {

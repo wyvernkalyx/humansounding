@@ -317,12 +317,13 @@ Research (use web search, be efficient): GPTZero's AI vocabulary page, new arXiv
 
 Rules — these are hard constraints:
 - Return ONLY the complete updated JSON object, no commentary, no code fences.
-- Preserve the exact structure and keys: updated, note, phrases, phraseSrc, dashes, dashSrc, trends, column, specimen. (Do not return "log" or "history"; the pipeline maintains those.)
+- Preserve the exact structure and keys: updated, note, phrases, phraseSrc, dashes, dashSrc, trends (each row: tell, evidence, dir, dirLabel, model), column, specimen. (Do not return "log" or "history"; the pipeline maintains those.)
 - Set "updated" to "${today}".
 - Only change a figure, evidence string, dir, or dirLabel if you found a sourced basis this run; otherwise leave it as is. NEVER invent statistics.
 - Name the source inside any evidence string you change (e.g. "(GPTZero, Aug 2026)").
 - "note": one plain sentence if something genuinely newsworthy happened for a general reader, else "". No hype.
 - trends: keep 8-16 rows; dir must be "rising", "falling", or "stable". You may add a row for a genuinely new, sourced tell or remove an obsolete one.
+- Each trend row also carries "model": which model the tell actually belongs to, under 40 chars. Fill it ONLY from per-model evidence you can cite this run, or from the site's own corpus measurements. If nobody has measured the tell per model, return an empty string. An empty string is the correct and expected answer for most rows; guessing a model name is worse than leaving it blank. Never infer a model from the vendor that happens to be in the news.
 - "column": the weekly column, written as a short narrative for casual readers, NOT a changelog. An object:
   - "title": a short, specific headline under 80 characters. Never clickbait.
   - "deck": one sentence under 180 characters summarizing the week.
@@ -388,6 +389,7 @@ for (const d of updated.dashes) if (!isStr(d.label, 60) || !isNum(d.v, 100)) fai
 if (!Array.isArray(updated.trends) || updated.trends.length < 6 || updated.trends.length > 20) fail("trends length");
 for (const t of updated.trends) {
   if (!isStr(t.tell, 120) || !isStr(t.evidence, 300) || !isStr(t.dirLabel ?? "", 80)) fail("trend row strings");
+  if (!isStr(t.model ?? "", 40)) fail("trend model");
   if (!["rising", "falling", "stable"].includes(t.dir)) fail("trend dir");
 }
 // validate the changelog entries
@@ -467,7 +469,7 @@ const clean = {
   phraseSrc: updated.phraseSrc,
   dashes: updated.dashes.map((d) => ({ label: d.label, v: d.v, ...(d.ref ? { ref: true } : {}) })),
   dashSrc: updated.dashSrc,
-  trends: updated.trends.map((t) => ({ tell: t.tell, evidence: t.evidence, dir: t.dir, dirLabel: t.dirLabel || t.dir })),
+  trends: updated.trends.map((t) => ({ tell: t.tell, evidence: t.evidence, dir: t.dir, dirLabel: t.dirLabel || t.dir, model: t.model || "" })),
   ...(specimen ? { specimen } : {}),
   history,
   log: [newEntry, ...prevLog].slice(0, 12),
