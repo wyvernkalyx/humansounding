@@ -27,3 +27,13 @@ study/corpus/*/*.txt
 
 node_modules/
 .DS_Store
+
+# Newsletter arm: the manifest lists which newsletters Gregg subscribes to,
+# which is personal information. Rates and derived counts are publishable; this is not.
+study/corpus/newsletter/MANIFEST.tsv
+
+# Corpus archives contain third-party human text. Never commit.
+study/**/*.tgz
+study/*.tgz
+
+_to_delete/

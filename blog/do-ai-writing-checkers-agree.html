@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do AI-writing checkers agree with each other? I tested three | HumanSounding</title>
+<meta name="description" content="Two independent open-source rule sets, run over the same 456 documents, reproduce three findings from this site's corpus study. Both also contain the same measurement mistake, and none of the five projects in this space has a corpus.">
+<link rel="canonical" href="https://humansounding.com/blog/do-ai-writing-checkers-agree.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="Do AI-writing checkers agree with each other? I tested three">
+<meta property="og:description" content="Three independently written rule sets, run over the same 456 documents. Where they agree, where they are wrong in the same way, and the dataset nobody in this field has.">
+<meta property="og:url" content="https://humansounding.com/blog/do-ai-writing-checkers-agree.html">
+<meta property="og:image" content="https://humansounding.com/og-replication.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Do AI-writing checkers agree with each other? I tested three","description":"Two independent open-source rule sets, run over the same 456 documents, reproduce three findings from this site's corpus study.","datePublished":"2026-08-29","dateModified":"2026-08-29","author":{"@type":"Organization","name":"HumanSounding","url":"https://humansounding.com/"},"mainEntityOfPage":"https://humansounding.com/blog/do-ai-writing-checkers-agree.html"}
+</script>
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  article { padding-top: 40px; }
+  .kicker { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
+  article h1 { font-size: 30px; margin: 0 0 18px; letter-spacing: -0.5px; line-height: 1.25; }
+  article h2 { font-size: 20px; margin: 30px 0 10px; letter-spacing: -0.3px; }
+  article h3 { font-size: 16.5px; margin: 24px 0 8px; letter-spacing: -0.2px; }
+  article p.body { color: var(--ink-1); font-size: 16.5px; line-height: 1.75; margin: 0 0 16px; }
+  :root[data-theme="dark"] article p.body { color: #e8e6e0; }
+  article code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; background: var(--surface-2, rgba(127,140,132,.12)); padding: 1px 5px; border-radius: 4px; }
+  .srcs { font-size: 13.5px; color: var(--ink-2); border-top: 1px solid var(--border); margin-top: 32px; padding-top: 18px; }
+  .pn { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap; }
+  .pn a { font-size: 13.5px; }
+  .chartfig { margin: 26px 0 30px; }
+  .chartfig img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 8px; }
+  .chartfig figcaption { font-size: 13.5px; color: var(--ink-2); margin-top: 10px; }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html" aria-current="page">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+
+<main class="wrap-post">
+  <article>
+    <div class="kicker">Study &middot; August 29, 2026</div>
+    <h1>Do AI-writing checkers agree with each other? I tested three</h1>
+
+    <p class="body"><em>How this was written: the measurement and the calls about what to keep are mine. Claude drafted the prose from my notes, and I revised it. The note is at the top because a piece about machine writing shouldn't make you read to the end to find out.</em></p>
+
+    <p class="body">Somebody pointed me at a GitHub repository this week called prose-humanizer, by Aman Maqsood. It is an agent skill and a small command-line linter that looks for the same kind of writing tells this site catalogs, built by somebody I have never spoken to, from sources I have never read. Twenty-two patterns in a JSON file.</p>
+
+    <p class="body">I have 456 documents sitting on a disk here from four models plus a human baseline, so I ran his linter over all of them. Then I found a second project doing the same thing, called soundshuman, and ran that one too. Three rule sets now, written by three people working separately, pointed at one pile of text.</p>
+
+    <p class="body">They agree with me on three things. They also both contain the same measurement mistake, which is the more useful half of this.</p>
+
+
+    <figure class="chartfig">
+      <img src="/og-replication.png" alt="Bar chart titled The same answer from three different rules. Claude Opus 5's em dash rate as a multiple of the human rate: HumanSounding's density rule 2.9 times, prose-humanizer's paired-dash rule 3.3 times, soundshuman's combined dash rule 2.9 times.">
+      <figcaption>Three rules written by three people, run over the same 456 documents against the same human baseline. Claude lands about three times the human rate in all of them.</figcaption>
+    </figure>
+
+    <h2>Where they agree</h2>
+
+    <h3>Em dashes are a Claude habit</h3>
+
+    <p class="body">My own measurement puts Claude Opus 5 at 11.05 per thousand words against 3.83 in pre-ChatGPT Medium articles. The prose-humanizer rule is not a density rule at all; it looks for two dashes inside one line, and it gives Claude 1.69 against 0.51 for the same human set. The soundshuman rule counts em dashes, en dashes, and spaced double hyphens together, and it gives Claude 12.20 against 4.17. Three definitions, three authors, and Claude lands about three times the human rate in all of them. The other three models sit at or below the humans in all of them too.</p>
+
+    <h3>The 2023 vocabulary is a Gemini habit</h3>
+
+    <p class="body">I built my word list from published frequency research. His list has 54 words and came from somewhere else. Mine gives Gemini 1.01 per thousand words. His gives Gemini 1.03, against 0.19 for Claude, 0.18 for the OpenAI chat model, and 0.23 for GPT-5.5. Two lists chosen by two people who did not compare notes, landing four decimal places apart on the same model.</p>
+
+    <h3>Negative parallelism is a bad tell</h3>
+
+    <p class="body">This is the "it's not just X, it's Y" construction that every listicle names first. Under the prose-humanizer rule the human set runs 0.18 per thousand words and every model runs at or below that. Under soundshuman's the humans run 0.30 and every model runs below. Under mine, humans sit above two of the four models. Nobody's implementation makes it work, and I have now watched it fail three times.</p>
+
+    <h2>Where they are wrong in the same way</h2>
+
+    <p class="body">The single biggest number in the prose-humanizer run is a rule called decorative-formatting, which produced 750 of 1,016 total findings across all 456 documents. It matches a markdown bullet carrying a bolded label. Gemini fires it at 9.83 per thousand words. My humans fire it at zero.</p>
+
+    <p class="body">That gap has nothing to do with writing. My human baseline is Medium articles scraped to plain text. Exactly one of the forty contains a <code>**</code>, and none contains a markdown heading. My AI documents were written to files by an API, so they arrive as markdown, and 40 of 40 Gemini documents contain bold. The rule cannot fire on one side of the comparison for reasons that have nothing to do with the sentences. Take it out and every model lands at or below the human rate.</p>
+
+    <p class="body">soundshuman makes the same mistake with a different pattern. It counts curly quotation marks, and humans run 11.24 per thousand words against Claude at zero. Scraped web pages preserve curly quotes because a CMS put them there. Text written to a file by an API arrives with straight ones. That rule runs backward, and its own note calls it a weak signal, which is generous.</p>
+
+    <p class="body">I filed the first one as an issue. I am not in a position to be smug about either, because the same trap ate a finding of mine three weeks ago: GPT-5.5 showed contrastive negation at twelve times the human rate until I checked it by genre and found every hit was in the two long formats, which were the only formats my human set covered.</p>
+
+    <h2>The rule I nearly kept</h2>
+
+    <p class="body">One rule in the three sets separates all four models from the humans in the same direction. It is the rule of three, "X, Y, and Z", and soundshuman counts it at 0.79 for humans against 4.35 and 4.46 for the two OpenAI models.</p>
+
+    <p class="body">Two things are tangled in it. The regular expression only matches the version with the serial comma, and humans use the serial comma about 60 percent of the time while the models use it 95 to 100 percent of the time. So the rule is partly counting a punctuation preference. Counting both spellings closes about a third of the gap.</p>
+
+    <p class="body">The rest is genre. GPT-5.5 writes 10.91 three-item lists per thousand words in recommendation letters and 1.81 in newsletters. Short documents are full of them. My human set is all long-form. Restricting every model to blog posts and newsletters, humans run 1.30, Claude runs 1.10, Gemini 1.67, ChatGPT 2.39, and GPT-5.5 2.27. A three-times effect becomes a not-quite-two-times effect, and Claude drops below the people.</p>
+
+    <p class="body">It goes in my notebook. It stays out of the checker.</p>
+
+    <h2>The part that surprised me</h2>
+
+    <p class="body">I cloned all five open projects in this space, including the four that prose-humanizer credits. Here is every one of them by total size, documentation and code included: 8,074 words, 9,239, 13,381, 1,987, and 4,722.</p>
+
+    <p class="body">None of them contains a corpus. There are no documents in any of them, and no rate tables. What the repositories call tests are hand-written one-line strings designed to trip specific regular expressions, which is a reasonable way to test a regular expression and no way at all to find out whether a rule describes anybody's writing.</p>
+
+    <p class="body">I did not expect that. I assumed I was the amateur here and that somewhere in this field there was a real dataset I had failed to find. I have not found one yet. Five projects, all of them shipping a rule list, and zero measured documents between them.</p>
+
+    <h2>What changes here</h2>
+
+    <p class="body">The three agreements make me more confident in the model-specific finding than I was on Monday, and less confident than I would be if the three of us had used different corpora instead of different rules. Same text, three instruments, is a weaker design than three texts and one instrument. It rules out my regular expressions being wrong. It does not rule out my forty Medium articles being unrepresentative, and I have since measured a second human set that runs at a quarter of their em dash rate, so that concern is live.</p>
+
+    <p class="body">The formatting confound is now a standing check rather than a lesson. Any rule that keys on markup gets stripped or excluded before it goes near a comparison, because my human corpus is plain text and my machine corpus is not, and that difference will manufacture a result every single time.</p>
+
+    <p class="body">The rules from all three projects are readable and machine-readable, which is how I was able to do any of this in an afternoon. Mine are parsed out of the checker page at runtime, which keeps the study honest but makes them awkward for anybody else to cite. That is the next thing I fix.</p>
+
+    <p class="srcs"><b>Method:</b> the corpora, the generator, and the measurement scripts are in <a href="https://github.com/wyvernkalyx/humansounding/tree/main/study">study/</a>. Rates are per 1,000 words. The two outside rule sets are <a href="https://github.com/amanmaqsood/prose-humanizer">amanmaqsood/prose-humanizer</a> and <a href="https://github.com/aashaexo/soundshuman">aashaexo/soundshuman</a>, both MIT, both run unmodified through their own command-line tools. The human baseline throughout is 40 Medium articles published between 2018 and 2022; author identities were not recorded.</p>
+
+    <div class="pn">
+      <a href="/blog.html">‹ All posts</a>
+      <a href="/blog/ai-self-narration.html">Why does AI keep apologizing and rating its own answers? &rsaquo;</a>
+    </div>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>

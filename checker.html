@@ -257,7 +257,7 @@ document.getElementById("checkBtn").addEventListener("click", () => {
   const tooShort = words < MIN_VERDICT_WORDS;
   const allowed = Math.max(1, Math.floor(words / 200));
   const emRule = { id: "em_dash", label: "Em-dash density", sev: 2,
-    fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words. Measured on our own corpus: published human articles average about 3.4 per 1,000 words, current model drafts about 11. Replace some with commas, parentheses, or a period.` };
+    fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words. Measured on our own corpora: the median pre-ChatGPT Medium article runs about 3.4 per 1,000 words (3.83 across that corpus of 40), current model drafts about 11. Human rates vary by genre: 25 pre-2022 email newsletters ran 1.05, so treat this as a long-form yardstick. Replace some with commas, parentheses, or a period.` };
   if (dashes.length > allowed) dashes.forEach(d => hits.push({ start: d.index, end: d.index + d[0].length, rule: emRule }));
 
   // sort, drop overlaps (keep earliest/longest)
