@@ -76,7 +76,8 @@
   .explain .label-caps { color: var(--accent); display: block; margin-bottom: 8px; }
   .explain p { font-size: 15px; line-height: 1.65; color: var(--ink-2); margin: 0; }
   .explain .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
-  .explain .chips span { background: var(--page); border: 1px solid var(--border); border-radius: 99px; padding: 5px 14px; font-size: 13px; color: var(--ink-1); }
+  .explain .chips span, .explain .chips a { background: var(--page); border: 1px solid var(--border); border-radius: 99px; padding: 5px 14px; font-size: 13px; color: var(--ink-1); text-decoration: none; }
+  .explain .chips a:hover { border-color: var(--ink-2); }
   .rising .label-caps { color: var(--delta-down); display: block; margin-bottom: 8px; }
   .rising .tell { font-size: 18px; font-weight: 700; }
   .rising .dir { display: block; font-size: 13.5px; line-height: 1.6; color: var(--ink-2); margin: 6px 0 12px; }
@@ -97,6 +98,7 @@
     <a class="nl" href="/" aria-current="page">Home</a>
     <a class="nl" href="/checker.html">Checker</a>
     <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/ai-writing-tells.html">Tells</a>
     <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
     <a class="nl nl-overflow" href="/blog.html">Blog</a>
     <a class="nl nl-overflow" href="/about.html">About</a>
@@ -162,11 +164,13 @@
         <span class="label-caps">New here? What's a "tell"?</span>
         <p>A tell is a word or writing habit that AI uses far more often than people do — so often that readers have learned to spot it. You don't need to know how AI works to fix them; you just need to know which ones you're sending.</p>
         <div class="chips">
-          <span>"delve"</span>
-          <span>"not just X, but Y"</span>
-          <span>em dashes everywhere</span>
-          <span>"in today's fast-paced world"</span>
+          <a href="/ai-writing-tells.html#slop-words">"delve"</a>
+          <a href="/ai-writing-tells.html#negative-parallelism">"not just X, but Y"</a>
+          <a href="/ai-writing-tells.html#em-dash">em dashes everywhere</a>
+          <a href="/ai-writing-tells.html#stock-openers">"in today's fast-paced world"</a>
         </div>
+        <p class="explain-more"><a href="/ai-writing-tells.html">All the tells, defined and measured &rsaquo;</a><br>
+        <a href="/why-does-ai-writing-sound-like-ai.html">Why does AI writing sound like AI? &rsaquo;</a></p>
       </div>
       <div class="card rising">
         <span class="label-caps">Rising this week</span>

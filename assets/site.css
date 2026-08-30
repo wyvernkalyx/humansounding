@@ -153,3 +153,8 @@ footer.site .privacy-badge { display: inline-flex; align-items: center; gap: 7px
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Chips on the home card double as doors into the tells glossary. */
+.chips a { color: inherit; text-decoration: none; }
+.chips a:hover { text-decoration: underline; }
+.explain-more { margin: 12px 0 0; font-size: 13.5px; line-height: 1.9; }

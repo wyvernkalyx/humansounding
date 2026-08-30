@@ -109,6 +109,25 @@ const present = ARMS.filter(([d]) => existsSync(join(CORPUS, d)) &&
   readdirSync(join(CORPUS, d)).some((f) => f.endsWith(".txt")));
 if (!present.length) throw new Error("No corpora found under study/corpus");
 
+// The human corpora are third-party text and are deliberately not committed, so
+// a CI checkout has the model arms and none of the human ones. Regenerating from
+// what is on disk there would quietly publish a glossary with no human baseline,
+// and every verdict on the page is a comparison against that baseline. So: if
+// the last published snapshot used arms this machine does not have, change
+// nothing and say why. Better a stale page than a confidently wrong one.
+const RATES = join(ROOT, "study", "rates.json");
+if (existsSync(RATES)) {
+  const prior = JSON.parse(readFileSync(RATES, "utf8")).arms.map((a) => a.key);
+  const here = present.map(([d]) => d);
+  const absent = prior.filter((k) => !here.includes(k));
+  if (absent.length) {
+    console.log(`Not rebuilding. ${absent.join(", ")} ${absent.length === 1 ? "is" : "are"} missing from study/corpus on this machine,`);
+    console.log(`and study/rates.json was built with ${prior.join(", ")}.`);
+    console.log("The human corpora are not committed on purpose. Run this where they live.");
+    process.exit(0);
+  }
+}
+
 const raw = measure(present.map(([d]) => join(CORPUS, d)));
 const arms = present.map(([d, name, human]) => ({ key: d, name, human,
   documents: raw.arms[d]?.documents ?? 0, words: raw.arms[d]?.words ?? 0 }));
@@ -154,14 +173,15 @@ if (missing.length) throw new Error("No definition for: " + missing.join(", ") +
 const SEVNAME = { 1: "Loudest", 2: "Structural", 3: "Legacy" };
 const fmt = (v) => (v === null || v === undefined ? "&mdash;" : v.toFixed(2));
 
-const ordered = entries.slice().sort((a, b) => {
-  const rank = (e) => ({ model: 0, shared: 1, mixed: 2, overlap: 3, weak: 4, rare: 5, silent: 6 })[e.verdict.kind] ?? 9;
-  return rank(a) - rank(b) || a.label.localeCompare(b.label);
-});
-
 // Self-narration is defined here but has no checker rule, so it carries no row
 // of rates. Listing it anyway is the point: the glossary is the vocabulary,
 // not an index of what the tool happens to match.
+// Alphabetical by the term a reader would look up, not by how well the rule
+// performed. A reference is something you scan for a word you half-remember;
+// ordering it by verdict would turn it into a ranking of our own tool.
+const ordered = entries.slice().sort((a, b) =>
+  DEFS[a.id].term.localeCompare(DEFS[b.id].term));
+
 const extras = Object.entries(DEFS).filter(([id, d]) => d.unmeasured && !entries.some((e) => e.id === id))
   .map(([id, d]) => ({ id, label: d.term, sev: null, verdict: { kind: "unmeasured",
     text: "Named and defined, deliberately not in the checker. Its forms are unbounded, so no pattern can match them." }, rates: null }));
@@ -179,7 +199,7 @@ function section(e) {
           </tbody>
         </table>` : "";
   return `      <section class="term" id="${anchor(e.id)}">
-        <h2>${esc(e.label)}${e.sev ? ` <span class="sev sev${e.sev}">${SEVNAME[e.sev]}</span>` : ` <span class="sev sev0">Instruction file only</span>`}</h2>
+        <h2>${esc(DEFS[e.id].term)}${e.sev ? ` <span class="sev sev${e.sev}">${SEVNAME[e.sev]}</span>` : ` <span class="sev sev0">Instruction file only</span>`}</h2>
         <p class="plain">${esc(d.plain)}</p>
         <p class="eg"><span class="lbl">Example</span> ${esc(d.example)}</p>
         <p class="eg"><span class="lbl">Instead</span> ${esc(d.instead)}</p>
@@ -187,7 +207,8 @@ function section(e) {
       </section>`;
 }
 
-const TERMS = [...ordered, ...extras];
+const TERMS = [...ordered, ...extras].sort((a, b) =>
+  DEFS[a.id].term.localeCompare(DEFS[b.id].term));
 const schema = {
   "@context": "https://schema.org", "@type": "DefinedTermSet",
   name: "AI writing tells", url: "https://humansounding.com/ai-writing-tells.html",
@@ -255,7 +276,7 @@ ${JSON.stringify(schema)}
     <a class="brand" href="/">HumanSounding</a>
     <a class="nl" href="/">Home</a>
     <a class="nl" href="/checker.html">Checker</a>
-    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/trends.html">Trends</a>\n    <a class="nl" href="/ai-writing-tells.html" aria-current="page">Tells</a>
     <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
     <a class="nl nl-overflow" href="/blog.html">Blog</a>
     <a class="nl nl-overflow" href="/about.html">About</a>
@@ -283,7 +304,7 @@ ${JSON.stringify(schema)}
     <p class="lede">The machine-readable version is <a href="/rules.json">rules.json</a>, generated from the same source as the <a href="/checker.html">checker</a>, so this page cannot drift away from the tool.</p>
 
     <ul class="toc">
-${TERMS.map((e) => `      <li><a href="#${anchor(e.id)}">${esc(e.label)}</a></li>`).join("\n")}
+${TERMS.map((e) => `      <li><a href="#${anchor(e.id)}">${esc(DEFS[e.id].term)}</a></li>`).join("\n")}
     </ul>
 
 ${TERMS.map(section).join("\n\n")}
