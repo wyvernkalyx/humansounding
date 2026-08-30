@@ -1,0 +1,102 @@
+{
+  "note": "Plain definitions and examples for the glossary. One entry per rule id in checker.html. The build fails if a rule has no entry here, so a new rule cannot ship without a definition.",
+  "terms": {
+    "negative_parallelism": {
+      "term": "Negative parallelism",
+      "plain": "Saying what something is not, immediately before saying what it is, with an intensifier in the middle.",
+      "example": "It's not just a checker, it's a way of thinking about writing.",
+      "instead": "It's a checker."
+    },
+    "contrastive_negation": {
+      "term": "Contrastive negation",
+      "plain": "The same move with the intensifier removed, usually split across two sentences. Defining a thing by what it isn't.",
+      "example": "This isn't a verdict. It's a place to look.",
+      "instead": "This is a place to look."
+    },
+    "slop_words": {
+      "term": "AI-favorite word",
+      "plain": "A word that machine drafts reach for far more often than people do. Delve, leverage, showcase, meticulous, pivotal, seamless.",
+      "example": "We leveraged the data to showcase pivotal insights.",
+      "instead": "We used the data to show what mattered."
+    },
+    "stock_openers": {
+      "term": "Stock opener",
+      "plain": "An opening line that could sit on top of any article on any subject.",
+      "example": "In today's fast-paced world, communication matters more than ever.",
+      "instead": "Open with the thing you actually found."
+    },
+    "testament": {
+      "term": "Inflated symbolism",
+      "plain": "Treating an ordinary fact as though it stands for something larger.",
+      "example": "The launch stands as a testament to the team's dedication.",
+      "instead": "The team shipped it in six weeks."
+    },
+    "editorializing": {
+      "term": "Editorializing aside",
+      "plain": "A sentence that tells the reader a fact is important rather than giving them the fact.",
+      "example": "It's important to note that the deadline has moved.",
+      "instead": "The deadline moved to Friday."
+    },
+    "vague_attribution": {
+      "term": "Vague attribution",
+      "plain": "Crediting a claim to an unnamed authority so it sounds sourced without being sourced.",
+      "example": "Experts say remote work is here to stay.",
+      "instead": "Name the expert, or make the claim yourself."
+    },
+    "trailing_participle": {
+      "term": "Trailing '-ing' analysis",
+      "plain": "An -ing clause bolted onto the end of a sentence to make a plain fact sound analyzed.",
+      "example": "Revenue rose 12 percent, underscoring the strength of the strategy.",
+      "instead": "Revenue rose 12 percent."
+    },
+    "summary_ending": {
+      "term": "Summary phrase",
+      "plain": "A closing that restates what the reader has just read instead of ending on the last new thing.",
+      "example": "In conclusion, the data shows a clear trend.",
+      "instead": "End on the trend itself."
+    },
+    "chatbot_artifact": {
+      "term": "Chatbot artifact",
+      "plain": "Residue from a chat window that got copied along with the text.",
+      "example": "Great question! Let me know if you'd like me to expand on any of this.",
+      "instead": "Delete it."
+    },
+    "hedged_balance": {
+      "term": "Hedged balance",
+      "plain": "Weighing both sides at length without ever landing on one.",
+      "example": "While there are challenges, there are also opportunities.",
+      "instead": "Say which one you think wins, or name the one thing that is genuinely uncertain."
+    },
+    "rule_of_three": {
+      "term": "Rule of three",
+      "plain": "Three near-synonyms in a row, used for rhythm rather than meaning.",
+      "example": "An innovative, transformative, and groundbreaking approach.",
+      "instead": "Keep the one word that is true."
+    },
+    "fragment_triplet": {
+      "term": "Fragment triplet",
+      "plain": "Three clipped sentence fragments in a row, borrowing cadence without adding information.",
+      "example": "Faster. Cleaner. Simpler.",
+      "instead": "One sentence that says what changed."
+    },
+    "bot_scaffolding": {
+      "term": "Fake-drama scaffolding",
+      "plain": "Canned suspense wrapped around an ordinary point.",
+      "example": "Here's the part nobody tells you. Let that sink in.",
+      "instead": "State the point."
+    },
+    "em_dash": {
+      "term": "Em-dash density",
+      "plain": "How often the long dash appears. People use it; some models use it several times more often than people do.",
+      "example": "The result was clear — and it changed everything — or so it seemed.",
+      "instead": "A comma, a period, or a pair of parentheses will usually do the same work."
+    },
+    "self_narration": {
+      "term": "Self-narration",
+      "plain": "Writing about the writing instead of about the subject. Rating your own confidence, announcing your honesty, apologizing for an earlier draft, or telling the reader how much something matters. Not in the checker, because it has no fixed shape to match.",
+      "example": "Worth saying, because it is the more interesting half.",
+      "instead": "Cut it. If the reader loses no fact about the subject, it was self-narration.",
+      "unmeasured": true
+    }
+  }
+}

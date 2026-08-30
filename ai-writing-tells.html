@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI writing tells: what each one means | HumanSounding</title>
+<meta name="description" content="Plain definitions for the patterns people call AI writing, with an example of each, and what happens when you count them across 110,305 words of machine and human prose.">
+<link rel="canonical" href="https://humansounding.com/ai-writing-tells.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="AI writing tells: what each one means">
+<meta property="og:description" content="Every named pattern, defined in plain English, with an example and the measured rate in four models and two sets of human writing.">
+<meta property="og:url" content="https://humansounding.com/ai-writing-tells.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"DefinedTermSet","name":"AI writing tells","url":"https://humansounding.com/ai-writing-tells.html","hasDefinedTerm":[{"@type":"DefinedTerm","name":"AI-favorite word","description":"A word that machine drafts reach for far more often than people do. Delve, leverage, showcase, meticulous, pivotal, seamless.","url":"https://humansounding.com/ai-writing-tells.html#slop-words"},{"@type":"DefinedTerm","name":"Chatbot artifact","description":"Residue from a chat window that got copied along with the text.","url":"https://humansounding.com/ai-writing-tells.html#chatbot-artifact"},{"@type":"DefinedTerm","name":"Contrastive negation","description":"The same move with the intensifier removed, usually split across two sentences. Defining a thing by what it isn't.","url":"https://humansounding.com/ai-writing-tells.html#contrastive-negation"},{"@type":"DefinedTerm","name":"Editorializing aside","description":"A sentence that tells the reader a fact is important rather than giving them the fact.","url":"https://humansounding.com/ai-writing-tells.html#editorializing"},{"@type":"DefinedTerm","name":"Em-dash density","description":"How often the long dash appears. People use it; some models use it several times more often than people do.","url":"https://humansounding.com/ai-writing-tells.html#em-dash"},{"@type":"DefinedTerm","name":"Fake-drama scaffolding","description":"Canned suspense wrapped around an ordinary point.","url":"https://humansounding.com/ai-writing-tells.html#bot-scaffolding"},{"@type":"DefinedTerm","name":"Fragment triplet","description":"Three clipped sentence fragments in a row, borrowing cadence without adding information.","url":"https://humansounding.com/ai-writing-tells.html#fragment-triplet"},{"@type":"DefinedTerm","name":"Hedged balance","description":"Weighing both sides at length without ever landing on one.","url":"https://humansounding.com/ai-writing-tells.html#hedged-balance"},{"@type":"DefinedTerm","name":"Inflated symbolism","description":"Treating an ordinary fact as though it stands for something larger.","url":"https://humansounding.com/ai-writing-tells.html#testament"},{"@type":"DefinedTerm","name":"Negative parallelism","description":"Saying what something is not, immediately before saying what it is, with an intensifier in the middle.","url":"https://humansounding.com/ai-writing-tells.html#negative-parallelism"},{"@type":"DefinedTerm","name":"Rule of three","description":"Three near-synonyms in a row, used for rhythm rather than meaning.","url":"https://humansounding.com/ai-writing-tells.html#rule-of-three"},{"@type":"DefinedTerm","name":"Self-narration","description":"Writing about the writing instead of about the subject. Rating your own confidence, announcing your honesty, apologizing for an earlier draft, or telling the reader how much something matters. Not in the checker, because it has no fixed shape to match.","url":"https://humansounding.com/ai-writing-tells.html#self-narration"},{"@type":"DefinedTerm","name":"Stock opener","description":"An opening line that could sit on top of any article on any subject.","url":"https://humansounding.com/ai-writing-tells.html#stock-openers"},{"@type":"DefinedTerm","name":"Summary phrase","description":"A closing that restates what the reader has just read instead of ending on the last new thing.","url":"https://humansounding.com/ai-writing-tells.html#summary-ending"},{"@type":"DefinedTerm","name":"Trailing '-ing' analysis","description":"An -ing clause bolted onto the end of a sentence to make a plain fact sound analyzed.","url":"https://humansounding.com/ai-writing-tells.html#trailing-participle"},{"@type":"DefinedTerm","name":"Vague attribution","description":"Crediting a claim to an unnamed authority so it sounds sourced without being sourced.","url":"https://humansounding.com/ai-writing-tells.html#vague-attribution"}]}
+</script>
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) {}
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  main.wrap-post { padding-bottom: 40px; }
+  .lede { font-size: 16.5px; line-height: 1.75; color: var(--ink-1); margin: 0 0 16px; }
+  :root[data-theme="dark"] .lede { color: #e8e6e0; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 34px; padding: 0; list-style: none; }
+  .toc a { font-size: 13px; text-decoration: none; border: 1px solid var(--border); border-radius: 999px; padding: 5px 11px; color: var(--ink-2); display: inline-block; }
+  .toc a:hover { color: var(--ink-1); }
+  section.term { border-top: 1px solid var(--border); padding: 26px 0 6px; }
+  section.term h2 { font-size: 21px; margin: 0 0 10px; letter-spacing: -0.3px; }
+  .sev { font-size: 10.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; border-radius: 4px; padding: 3px 7px; vertical-align: 3px; margin-left: 6px; background: var(--border); color: var(--ink-2); }
+  .plain { font-size: 16.5px; line-height: 1.7; color: var(--ink-1); margin: 0 0 12px; }
+  :root[data-theme="dark"] .plain { color: #e8e6e0; }
+  .eg { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin: 0 0 6px; }
+  .eg .lbl { font-size: 10.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-muted); margin-right: 8px; }
+  .vd { font-size: 14.5px; line-height: 1.6; margin: 14px 0 4px; padding-left: 12px; border-left: 3px solid var(--border); color: var(--ink-2); }
+  .vd-model, .vd-shared { border-left-color: #2f7d5d; color: var(--ink-1); }
+  :root[data-theme="dark"] .vd-model, :root[data-theme="dark"] .vd-shared { color: #e8e6e0; }
+  table.rates { border-collapse: collapse; margin: 14px 0 8px; font-size: 14px; width: 100%; max-width: 460px; }
+  table.rates caption { text-align: left; font-size: 12.5px; color: var(--ink-muted); padding-bottom: 8px; }
+  table.rates th, table.rates td { text-align: right; padding: 4px 10px 4px 0; border-bottom: 1px solid var(--border); }
+  table.rates th[scope="row"] { text-align: left; font-weight: 400; color: var(--ink-2); }
+  table.rates thead th { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-muted); }
+  table.rates .ci { color: var(--ink-muted); }
+  .method { font-size: 13.5px; color: var(--ink-2); border-top: 1px solid var(--border); margin-top: 34px; padding-top: 18px; }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More &#9662;</button>
+      <div class="menu">
+        <a href="/ai-writing-tells.html">Tells glossary</a>
+        <a href="/why-does-ai-writing-sound-like-ai.html">Why AI writing sounds like AI</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+
+<main class="wrap-post">
+  <article>
+    <div class="kicker">Reference &middot; measured 2026-08-30</div>
+    <h1>AI writing tells, and what each one means</h1>
+
+    <p class="lede">People arguing about AI writing mostly cannot name what they are looking at. These are the names, with an example of each, so the argument has words in it.</p>
+
+    <p class="lede">Under every definition is what happened when the pattern was counted across 110,305 words: 4 models and 2 sets of human writing from before ChatGPT existed. Most of these patterns are cited far more often than they occur. That is worth knowing before you accuse anybody of anything.</p>
+
+    <p class="lede">The machine-readable version is <a href="/rules.json">rules.json</a>, generated from the same source as the <a href="/checker.html">checker</a>, so this page cannot drift away from the tool.</p>
+
+    <ul class="toc">
+      <li><a href="#slop-words">AI-favorite word</a></li>
+      <li><a href="#chatbot-artifact">Chatbot artifact</a></li>
+      <li><a href="#contrastive-negation">Contrastive negation</a></li>
+      <li><a href="#editorializing">Editorializing aside</a></li>
+      <li><a href="#em-dash">Em-dash density</a></li>
+      <li><a href="#bot-scaffolding">Fake-drama scaffolding</a></li>
+      <li><a href="#fragment-triplet">Fragment triplet</a></li>
+      <li><a href="#hedged-balance">Hedged balance</a></li>
+      <li><a href="#testament">Inflated symbolism</a></li>
+      <li><a href="#negative-parallelism">Negative parallelism</a></li>
+      <li><a href="#rule-of-three">Rule of three</a></li>
+      <li><a href="#self-narration">Self-narration</a></li>
+      <li><a href="#stock-openers">Stock opener</a></li>
+      <li><a href="#summary-ending">Summary phrase</a></li>
+      <li><a href="#trailing-participle">Trailing '-ing' analysis</a></li>
+      <li><a href="#vague-attribution">Vague attribution</a></li>
+    </ul>
+
+      <section class="term" id="slop-words">
+        <h2>AI-favorite word <span class="sev sev1">Loudest</span></h2>
+        <p class="plain">A word that machine drafts reach for far more often than people do. Delve, leverage, showcase, meticulous, pivotal, seamless.</p>
+        <p class="eg"><span class="lbl">Example</span> We leveraged the data to showcase pivotal insights.</p>
+        <p class="eg"><span class="lbl">Instead</span> We used the data to show what mattered.</p>
+        <p class="vd vd-overlap">Highest in Gemini 3.7 Flash at 1.01, but the interval overlaps human writing. Not separation.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.09</td><td class="ci">0.00&ndash;0.23</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.11</td><td class="ci">0.00&ndash;0.29</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.09</td><td class="ci">0.00&ndash;0.29</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>1.01</td><td class="ci">0.55&ndash;1.55</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.33</td><td class="ci">0.15&ndash;0.57</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.57</td><td class="ci">0.11&ndash;1.24</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="chatbot-artifact">
+        <h2>Chatbot artifact <span class="sev sev3">Legacy</span></h2>
+        <p class="plain">Residue from a chat window that got copied along with the text.</p>
+        <p class="eg"><span class="lbl">Example</span> Great question! Let me know if you'd like me to expand on any of this.</p>
+        <p class="eg"><span class="lbl">Instead</span> Delete it.</p>
+        <p class="vd vd-silent">Fired zero times across 110,305 words. Widely cited, not measurable here.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="contrastive-negation">
+        <h2>Contrastive negation <span class="sev sev3">Legacy</span></h2>
+        <p class="plain">The same move with the intensifier removed, usually split across two sentences. Defining a thing by what it isn't.</p>
+        <p class="eg"><span class="lbl">Example</span> This isn't a verdict. It's a place to look.</p>
+        <p class="eg"><span class="lbl">Instead</span> This is a place to look.</p>
+        <p class="vd vd-shared">Elevated in Claude Opus 5 (0.92) and GPT-5.5 (1.90), against 0.15 at most in human writing. Shared by more than one model, so it is not a fingerprint.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.92</td><td class="ci">0.45&ndash;1.48</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>1.90</td><td class="ci">0.94&ndash;2.66</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.46</td><td class="ci">0.09&ndash;1.02</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.14</td><td class="ci">0.00&ndash;0.29</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.15</td><td class="ci">0.03&ndash;0.30</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.10</td><td class="ci">0.00&ndash;0.32</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="editorializing">
+        <h2>Editorializing aside <span class="sev sev2">Structural</span></h2>
+        <p class="plain">A sentence that tells the reader a fact is important rather than giving them the fact.</p>
+        <p class="eg"><span class="lbl">Example</span> It's important to note that the deadline has moved.</p>
+        <p class="eg"><span class="lbl">Instead</span> The deadline moved to Friday.</p>
+        <p class="vd vd-rare">Too rare to characterize: 1 hit in 110,305 words across every corpus.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.04</td><td class="ci">0.00&ndash;0.12</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="em-dash">
+        <h2>Em-dash density <span class="sev sev2">Structural</span></h2>
+        <p class="plain">How often the long dash appears. People use it; some models use it several times more often than people do.</p>
+        <p class="eg"><span class="lbl">Example</span> The result was clear — and it changed everything — or so it seemed.</p>
+        <p class="eg"><span class="lbl">Instead</span> A comma, a period, or a pair of parentheses will usually do the same work.</p>
+        <p class="vd vd-model">A Claude Opus 5 habit. 11.05 per 1,000 words, and its interval clears every other model and both human sets.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>11.05</td><td class="ci">9.56&ndash;12.59</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>1.63</td><td class="ci">0.80&ndash;2.71</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>3.30</td><td class="ci">1.88&ndash;4.92</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>2.70</td><td class="ci">2.01&ndash;3.44</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>3.83</td><td class="ci">2.66&ndash;5.09</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>1.05</td><td class="ci">0.21&ndash;2.25</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="bot-scaffolding">
+        <h2>Fake-drama scaffolding <span class="sev sev3">Legacy</span></h2>
+        <p class="plain">Canned suspense wrapped around an ordinary point.</p>
+        <p class="eg"><span class="lbl">Example</span> Here's the part nobody tells you. Let that sink in.</p>
+        <p class="eg"><span class="lbl">Instead</span> State the point.</p>
+        <p class="vd vd-rare">Too rare to characterize: 1 hit in 110,305 words across every corpus.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.05</td><td class="ci">0.00&ndash;0.14</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="fragment-triplet">
+        <h2>Fragment triplet <span class="sev sev1">Loudest</span></h2>
+        <p class="plain">Three clipped sentence fragments in a row, borrowing cadence without adding information.</p>
+        <p class="eg"><span class="lbl">Example</span> Faster. Cleaner. Simpler.</p>
+        <p class="eg"><span class="lbl">Instead</span> One sentence that says what changed.</p>
+        <p class="vd vd-rare">Too rare to characterize: 1 hit in 110,305 words across every corpus.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.05</td><td class="ci">0.00&ndash;0.17</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="hedged-balance">
+        <h2>Hedged balance <span class="sev sev1">Loudest</span></h2>
+        <p class="plain">Weighing both sides at length without ever landing on one.</p>
+        <p class="eg"><span class="lbl">Example</span> While there are challenges, there are also opportunities.</p>
+        <p class="eg"><span class="lbl">Instead</span> Say which one you think wins, or name the one thing that is genuinely uncertain.</p>
+        <p class="vd vd-rare">Too rare to characterize: 2 hits in 110,305 words across every corpus.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.09</td><td class="ci">0.00&ndash;0.28</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.04</td><td class="ci">0.00&ndash;0.12</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="testament">
+        <h2>Inflated symbolism <span class="sev sev2">Structural</span></h2>
+        <p class="plain">Treating an ordinary fact as though it stands for something larger.</p>
+        <p class="eg"><span class="lbl">Example</span> The launch stands as a testament to the team's dedication.</p>
+        <p class="eg"><span class="lbl">Instead</span> The team shipped it in six weeks.</p>
+        <p class="vd vd-silent">Fired zero times across 110,305 words. Widely cited, not measurable here.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="negative-parallelism">
+        <h2>Negative parallelism <span class="sev sev1">Loudest</span></h2>
+        <p class="plain">Saying what something is not, immediately before saying what it is, with an intensifier in the middle.</p>
+        <p class="eg"><span class="lbl">Example</span> It's not just a checker, it's a way of thinking about writing.</p>
+        <p class="eg"><span class="lbl">Instead</span> It's a checker.</p>
+        <p class="vd vd-overlap">Highest in ChatGPT at 0.55, but the interval overlaps human writing. Not separation.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.05</td><td class="ci">0.00&ndash;0.14</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.22</td><td class="ci">0.05&ndash;0.47</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.55</td><td class="ci">0.14&ndash;1.10</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.37</td><td class="ci">0.10&ndash;0.73</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.22</td><td class="ci">0.07&ndash;0.44</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.10</td><td class="ci">0.00&ndash;0.35</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="rule-of-three">
+        <h2>Rule of three <span class="sev sev1">Loudest</span></h2>
+        <p class="plain">Three near-synonyms in a row, used for rhythm rather than meaning.</p>
+        <p class="eg"><span class="lbl">Example</span> An innovative, transformative, and groundbreaking approach.</p>
+        <p class="eg"><span class="lbl">Instead</span> Keep the one word that is true.</p>
+        <p class="vd vd-overlap">Highest in ChatGPT at 0.46, but the interval overlaps human writing. Not separation.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.09</td><td class="ci">0.00&ndash;0.23</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.33</td><td class="ci">0.10&ndash;0.66</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.46</td><td class="ci">0.09&ndash;0.88</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.18</td><td class="ci">0.04&ndash;0.37</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.11</td><td class="ci">0.00&ndash;0.24</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.10</td><td class="ci">0.00&ndash;0.30</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="self-narration">
+        <h2>Self-narration <span class="sev sev0">Instruction file only</span></h2>
+        <p class="plain">Writing about the writing instead of about the subject. Rating your own confidence, announcing your honesty, apologizing for an earlier draft, or telling the reader how much something matters. Not in the checker, because it has no fixed shape to match.</p>
+        <p class="eg"><span class="lbl">Example</span> Worth saying, because it is the more interesting half.</p>
+        <p class="eg"><span class="lbl">Instead</span> Cut it. If the reader loses no fact about the subject, it was self-narration.</p>
+        <p class="vd vd-unmeasured">Named and defined, deliberately not in the checker. Its forms are unbounded, so no pattern can match them.</p>
+      </section>
+
+      <section class="term" id="stock-openers">
+        <h2>Stock opener <span class="sev sev3">Legacy</span></h2>
+        <p class="plain">An opening line that could sit on top of any article on any subject.</p>
+        <p class="eg"><span class="lbl">Example</span> In today's fast-paced world, communication matters more than ever.</p>
+        <p class="eg"><span class="lbl">Instead</span> Open with the thing you actually found.</p>
+        <p class="vd vd-rare">Too rare to characterize: 1 hit in 110,305 words across every corpus.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.05</td><td class="ci">0.00&ndash;0.17</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="summary-ending">
+        <h2>Summary phrase <span class="sev sev2">Structural</span></h2>
+        <p class="plain">A closing that restates what the reader has just read instead of ending on the last new thing.</p>
+        <p class="eg"><span class="lbl">Example</span> In conclusion, the data shows a clear trend.</p>
+        <p class="eg"><span class="lbl">Instead</span> End on the trend itself.</p>
+        <p class="vd vd-rare">Too rare to characterize: 6 hits in 110,305 words across every corpus.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.05</td><td class="ci">0.00&ndash;0.18</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.09</td><td class="ci">0.00&ndash;0.33</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.05</td><td class="ci">0.00&ndash;0.15</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.11</td><td class="ci">0.00&ndash;0.28</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="trailing-participle">
+        <h2>Trailing '-ing' analysis <span class="sev sev2">Structural</span></h2>
+        <p class="plain">An -ing clause bolted onto the end of a sentence to make a plain fact sound analyzed.</p>
+        <p class="eg"><span class="lbl">Example</span> Revenue rose 12 percent, underscoring the strength of the strategy.</p>
+        <p class="eg"><span class="lbl">Instead</span> Revenue rose 12 percent.</p>
+        <p class="vd vd-silent">Fired zero times across 110,305 words. Widely cited, not measurable here.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="term" id="vague-attribution">
+        <h2>Vague attribution <span class="sev sev2">Structural</span></h2>
+        <p class="plain">Crediting a claim to an unnamed authority so it sounds sourced without being sourced.</p>
+        <p class="eg"><span class="lbl">Example</span> Experts say remote work is here to stay.</p>
+        <p class="eg"><span class="lbl">Instead</span> Name the expert, or make the claim yourself.</p>
+        <p class="vd vd-silent">Fired zero times across 110,305 words. Widely cited, not measurable here.</p>
+        <table class="rates">
+          <caption>Hits per 1,000 words, with a 95% interval over documents. Measured 2026-08-30.</caption>
+          <thead><tr><th scope="col">Corpus</th><th scope="col">Rate</th><th scope="col">Interval</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Claude Opus 5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">GPT-5.5</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">ChatGPT</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Gemini 3.7 Flash</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, Medium articles</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+            <tr><th scope="row">Human, newsletters</th><td>0.00</td><td class="ci">0.00&ndash;0.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+    <p class="method"><b>How this was measured.</b> Rates are hits per 1,000 words, with a 95% confidence interval bootstrapped over whole documents rather than sentences. A pattern is called one model's habit only when its interval clears every other model and both human sets. Anything under 0.20 per 1,000 words is reported as too rare to characterize, because a single hit in twenty thousand words is noise. Corpora, generator, and measurement scripts are in <a href="https://github.com/wyvernkalyx/humansounding/tree/main/study">study/</a>. This page is generated; the definitions live in <a href="https://github.com/wyvernkalyx/humansounding/blob/main/glossary-definitions.json">glossary-definitions.json</a>.</p>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">&#9680; Theme</button>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>

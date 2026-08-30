@@ -1,0 +1,680 @@
+{
+  "version": "2026-08-30",
+  "note": "Rules as the humansounding.com checker runs them, with measured rates per 1,000 words. Generated from checker.html; do not edit by hand.",
+  "corpora": [
+    {
+      "key": "ai",
+      "name": "Claude Opus 5",
+      "human": false,
+      "documents": 40,
+      "words": 21814
+    },
+    {
+      "key": "ai-openai-55",
+      "name": "GPT-5.5",
+      "human": false,
+      "documents": 39,
+      "words": 18394
+    },
+    {
+      "key": "ai-openai",
+      "name": "ChatGPT",
+      "human": false,
+      "documents": 35,
+      "words": 10914
+    },
+    {
+      "key": "ai-gemini",
+      "name": "Gemini 3.7 Flash",
+      "human": false,
+      "documents": 40,
+      "words": 21818
+    },
+    {
+      "key": "medium",
+      "name": "Human, Medium articles",
+      "human": true,
+      "documents": 40,
+      "words": 26883
+    },
+    {
+      "key": "newsletter",
+      "name": "Human, newsletters",
+      "human": true,
+      "documents": 25,
+      "words": 10482
+    }
+  ],
+  "rules": [
+    {
+      "id": "negative_parallelism",
+      "label": "Negative parallelism",
+      "severity": 1,
+      "guidance": "State what it is; cut the contrast with what it isn't. Widely cited from 2023-24 ChatGPT transcripts (~6% of sampled messages). Our own August 2026 corpus found it more often in human long-form than in current model drafts, so treat it as a style note rather than evidence of anything.",
+      "pattern": "/\\b(?:it|this|that|she|he|[A-Z][a-z]+)?(?:'s|\\s+is|\\s+was)?\\s*n[o']t\\s+(?:just|only|merely|simply|about)\\s+[^.!?;]{2,60}?[,;—-]+\\s*(?:it'?s?|this is|but|that'?s?)\\b|\\bisn'?t\\s+(?:just|only|about)\\b/gi",
+      "rates": {
+        "ai": 0.05,
+        "ai-openai-55": 0.22,
+        "ai-openai": 0.55,
+        "ai-gemini": 0.37,
+        "medium": 0.22,
+        "newsletter": 0.1
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0.14
+        ],
+        "ai-openai-55": [
+          0.05,
+          0.47
+        ],
+        "ai-openai": [
+          0.14,
+          1.1
+        ],
+        "ai-gemini": [
+          0.1,
+          0.73
+        ],
+        "medium": [
+          0.07,
+          0.44
+        ],
+        "newsletter": [
+          0,
+          0.35
+        ]
+      },
+      "verdict": "Highest in ChatGPT at 0.55, but the interval overlaps human writing. Not separation."
+    },
+    {
+      "id": "stock_openers",
+      "label": "Stock opener",
+      "severity": 3,
+      "guidance": "Open with your actual point or a specific fact. 'Today's fast-paced world' is 107× more common in AI text.",
+      "pattern": "/\\bin today'?s\\s+(?:fast-paced|digital|ever-(?:changing|evolving)|modern|competitive)[^.!?,]{0,40}\\b|\\bin the ever-evolving\\b|\\blet'?s\\s+(?:dive|delve|unpack)\\b|\\bhere'?s the kicker\\b/gi",
+      "rates": {
+        "ai": 0,
+        "ai-openai-55": 0.05,
+        "ai-openai": 0,
+        "ai-gemini": 0,
+        "medium": 0,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0
+        ],
+        "ai-openai-55": [
+          0,
+          0.17
+        ],
+        "ai-openai": [
+          0,
+          0
+        ],
+        "ai-gemini": [
+          0,
+          0
+        ],
+        "medium": [
+          0,
+          0
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Too rare to characterize: 1 hit in 110,305 words across every corpus."
+    },
+    {
+      "id": "slop_words",
+      "label": "AI-favorite word",
+      "severity": 1,
+      "guidance": "Swap for the plain word: use, help, improve, show, key. These words spiked 6-35x in 2023-24 AI text, and the labs have since tuned them out: in our August 2026 corpus they appear more often in human Medium articles than in current model drafts. Still worth cutting, but no longer a sign of anything.",
+      "pattern": "/\\b(?:delve[sd]?|delving|tapestry|multifaceted|meticulous(?:ly)?|underscor(?:e|es|ing)|showcas(?:e|es|ing)|intricate|intricacies|pivotal|holistic|myriad|plethora|seamless(?:ly)?|transformative|groundbreaking|game-chang(?:er|ing)|paradigm shift|unprecedented|cutting-edge|ever-evolving|synerg(?:y|ies|istic)|leverag(?:e|es|ing)|harness(?:es|ing)?|foster(?:s|ing)?|facilitat(?:e|es|ing)|streamlin(?:e|es|ing)|bolster(?:s|ing)?|elevat(?:e|es|ing)|empower(?:s|ing)?|boasts)\\b/gi",
+      "rates": {
+        "ai": 0.09,
+        "ai-openai-55": 0.11,
+        "ai-openai": 0.09,
+        "ai-gemini": 1.01,
+        "medium": 0.33,
+        "newsletter": 0.57
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0.23
+        ],
+        "ai-openai-55": [
+          0,
+          0.29
+        ],
+        "ai-openai": [
+          0,
+          0.29
+        ],
+        "ai-gemini": [
+          0.55,
+          1.55
+        ],
+        "medium": [
+          0.15,
+          0.57
+        ],
+        "newsletter": [
+          0.11,
+          1.24
+        ]
+      },
+      "verdict": "Highest in Gemini 3.7 Flash at 1.01, but the interval overlaps human writing. Not separation."
+    },
+    {
+      "id": "testament",
+      "label": "Inflated symbolism",
+      "severity": 2,
+      "guidance": "Say what it did, with a specific. 'Plays a significant role in shaping' appears 182× more often in AI text.",
+      "pattern": "/\\b(?:stands?|serves?|is)\\s+as\\s+a\\s+testament\\b|\\ba testament to\\b|\\bwatershed moment\\b|\\b(?:enduring|lasting)\\s+legacy\\b|\\brich cultural heritage\\b|\\bplays?\\s+a\\s+(?:crucial|vital|pivotal|significant)\\s+role\\s+in(?:\\s+shaping)?\\b/gi",
+      "rates": {
+        "ai": 0,
+        "ai-openai-55": 0,
+        "ai-openai": 0,
+        "ai-gemini": 0,
+        "medium": 0,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0
+        ],
+        "ai-openai-55": [
+          0,
+          0
+        ],
+        "ai-openai": [
+          0,
+          0
+        ],
+        "ai-gemini": [
+          0,
+          0
+        ],
+        "medium": [
+          0,
+          0
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Fired zero times across 110,305 words. Widely cited, not measurable here."
+    },
+    {
+      "id": "editorializing",
+      "label": "Editorializing aside",
+      "severity": 2,
+      "guidance": "If it matters, just say it. If it doesn't, cut the sentence.",
+      "pattern": "/\\bit(?:'s|\\s+is)\\s+(?:important|worth|essential|crucial)\\s+(?:to\\s+(?:note|remember|understand|consider)|noting)\\b|\\bneedless to say\\b|\\bno discussion .{0,30}complete without\\b/gi",
+      "rates": {
+        "ai": 0,
+        "ai-openai-55": 0,
+        "ai-openai": 0,
+        "ai-gemini": 0,
+        "medium": 0.04,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0
+        ],
+        "ai-openai-55": [
+          0,
+          0
+        ],
+        "ai-openai": [
+          0,
+          0
+        ],
+        "ai-gemini": [
+          0,
+          0
+        ],
+        "medium": [
+          0,
+          0.12
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Too rare to characterize: 1 hit in 110,305 words across every corpus."
+    },
+    {
+      "id": "vague_attribution",
+      "label": "Vague attribution",
+      "severity": 2,
+      "guidance": "Name the source or own the claim yourself.",
+      "pattern": "/\\b(?:experts?|studies|research(?:ers)?|industry reports?|observers|critics|many)\\s+(?:say|says|show|shows|suggest|suggests|argue|agree|have noted|believe)\\b/gi",
+      "rates": {
+        "ai": 0,
+        "ai-openai-55": 0,
+        "ai-openai": 0,
+        "ai-gemini": 0,
+        "medium": 0,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0
+        ],
+        "ai-openai-55": [
+          0,
+          0
+        ],
+        "ai-openai": [
+          0,
+          0
+        ],
+        "ai-gemini": [
+          0,
+          0
+        ],
+        "medium": [
+          0,
+          0
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Fired zero times across 110,305 words. Widely cited, not measurable here."
+    },
+    {
+      "id": "trailing_participle",
+      "label": "Trailing '-ing' analysis",
+      "severity": 2,
+      "guidance": "End the sentence at the fact. If the implication matters, give it its own sentence.",
+      "pattern": "/,\\s+(?:highlighting|underscoring|emphasizing|reflecting|showcasing|demonstrating|signaling|ensuring|reinforcing|solidifying|cementing)\\s+[^.!?]{3,60}[.!?]/gi",
+      "rates": {
+        "ai": 0,
+        "ai-openai-55": 0,
+        "ai-openai": 0,
+        "ai-gemini": 0,
+        "medium": 0,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0
+        ],
+        "ai-openai-55": [
+          0,
+          0
+        ],
+        "ai-openai": [
+          0,
+          0
+        ],
+        "ai-gemini": [
+          0,
+          0
+        ],
+        "medium": [
+          0,
+          0
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Fired zero times across 110,305 words. Widely cited, not measurable here."
+    },
+    {
+      "id": "summary_ending",
+      "label": "Summary phrase",
+      "severity": 2,
+      "guidance": "End on your last new point instead of restating.",
+      "pattern": "/\\b(?:in\\s+conclusion|in\\s+summary|to\\s+summariz(?:e|se)|all\\s+in\\s+all|at\\s+the\\s+end\\s+of\\s+the\\s+day)\\b|(?:^|\\.\\s+)(?:overall|ultimately),/gi",
+      "rates": {
+        "ai": 0,
+        "ai-openai-55": 0.05,
+        "ai-openai": 0.09,
+        "ai-gemini": 0.05,
+        "medium": 0.11,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0
+        ],
+        "ai-openai-55": [
+          0,
+          0.18
+        ],
+        "ai-openai": [
+          0,
+          0.33
+        ],
+        "ai-gemini": [
+          0,
+          0.15
+        ],
+        "medium": [
+          0,
+          0.28
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Too rare to characterize: 6 hits in 110,305 words across every corpus."
+    },
+    {
+      "id": "chatbot_artifact",
+      "label": "Chatbot artifact",
+      "severity": 3,
+      "guidance": "Copy-paste residue from a chat window. Delete it.",
+      "pattern": "/\\bgreat question\\b|\\byou'?re absolutely right\\b|\\bi hope this (?:helps|message finds you well)\\b|\\blet me know if you (?:need|have|want)\\b|\\bcertainly!\\b|\\b(?:would you like me to|want me to|shall i)\\b[^.!?]{0,70}\\?/gi",
+      "rates": {
+        "ai": 0,
+        "ai-openai-55": 0,
+        "ai-openai": 0,
+        "ai-gemini": 0,
+        "medium": 0,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0
+        ],
+        "ai-openai-55": [
+          0,
+          0
+        ],
+        "ai-openai": [
+          0,
+          0
+        ],
+        "ai-gemini": [
+          0,
+          0
+        ],
+        "medium": [
+          0,
+          0
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Fired zero times across 110,305 words. Widely cited, not measurable here."
+    },
+    {
+      "id": "hedged_balance",
+      "label": "Hedged balance",
+      "severity": 1,
+      "guidance": "Commit to a position, or state exactly what's uncertain, once.",
+      "pattern": "/\\bwhile\\s+(?:challenges|there are|it'?s true)[^.!?]{3,60},|\\bboth\\s+sides\\b|\\bstrike[s]?\\s+a\\s+balance\\b|\\bwhether you'?re a\\b/gi",
+      "rates": {
+        "ai": 0,
+        "ai-openai-55": 0,
+        "ai-openai": 0.09,
+        "ai-gemini": 0,
+        "medium": 0.04,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0
+        ],
+        "ai-openai-55": [
+          0,
+          0
+        ],
+        "ai-openai": [
+          0,
+          0.28
+        ],
+        "ai-gemini": [
+          0,
+          0
+        ],
+        "medium": [
+          0,
+          0.12
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Too rare to characterize: 2 hits in 110,305 words across every corpus."
+    },
+    {
+      "id": "rule_of_three",
+      "label": "Possible rule-of-three",
+      "severity": 1,
+      "guidance": "Three near-synonyms for rhythm is an AI reflex. Keep the one precise word. Ignore if all three carry distinct meaning.",
+      "pattern": "/\\b\\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\\s*,\\s*\\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\\s*,?\\s+and\\s+\\w+(?:ive|ing|able|ant|ent|ful|ous|al|ed)\\b/gi",
+      "rates": {
+        "ai": 0.09,
+        "ai-openai-55": 0.33,
+        "ai-openai": 0.46,
+        "ai-gemini": 0.18,
+        "medium": 0.11,
+        "newsletter": 0.1
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0.23
+        ],
+        "ai-openai-55": [
+          0.1,
+          0.66
+        ],
+        "ai-openai": [
+          0.09,
+          0.88
+        ],
+        "ai-gemini": [
+          0.04,
+          0.37
+        ],
+        "medium": [
+          0,
+          0.24
+        ],
+        "newsletter": [
+          0,
+          0.3
+        ]
+      },
+      "verdict": "Highest in ChatGPT at 0.46, but the interval overlaps human writing. Not separation."
+    },
+    {
+      "id": "bot_scaffolding",
+      "label": "Fake-drama scaffolding",
+      "severity": 3,
+      "guidance": "Canned suspense wrapped around an ordinary point. Delete the wrapper and state the point.",
+      "pattern": "/\\bhere'?s (?:the part|the thing|what) (?:nobody|no one)\\b|\\bthe uncomfortable truth\\b|\\blet that sink in\\b|\\bplot twist\\b|\\bwhat (?:nobody|no one) tells you\\b|\\bhere'?s where it gets\\b/gi",
+      "rates": {
+        "ai": 0.05,
+        "ai-openai-55": 0,
+        "ai-openai": 0,
+        "ai-gemini": 0,
+        "medium": 0,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0.14
+        ],
+        "ai-openai-55": [
+          0,
+          0
+        ],
+        "ai-openai": [
+          0,
+          0
+        ],
+        "ai-gemini": [
+          0,
+          0
+        ],
+        "medium": [
+          0,
+          0
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Too rare to characterize: 1 hit in 110,305 words across every corpus."
+    },
+    {
+      "id": "contrastive_negation",
+      "label": "Contrastive negation",
+      "severity": 3,
+      "guidance": "Defining a thing by what it isn't. This is the 'not just X, it's Y' move with the intensifier removed, which is why it survives tuning. One is fine English; a run of them is a fingerprint. State what the thing is. Measured on our August 2026 corpus at 0.92 hits per 1,000 words in model drafts against 0.15 in published human articles, the widest proportional gap of any rule here.",
+      "pattern": "/(?:^|[.!?]\\s+)Not\\s+[a-z][^.!?]{2,55}[.]|(?:^|[.!?]\\s+)Not\\s+[a-z][^.!?]{2,80}?,?\\s+but\\s+[^.!?]{2,110}[.]|,\\s+not\\s+[a-z][a-z'-]{1,18}(?:\\s+[a-z][a-z'-]{1,18}){0,2}\\s*[.!?]|\\b(?:it|that|this|the\\s+\\w+|[A-Z][a-z]+)\\b[^.!?]{0,40}?\\b(?:isn'?t|is not|doesn'?t|does not|wasn'?t|aren'?t)\\b[^.!?]{0,55}[.]\\s+(?:It|That|This|They)'?s?\\b[^.!?]{0,65}[.]/g",
+      "rates": {
+        "ai": 0.92,
+        "ai-openai-55": 1.9,
+        "ai-openai": 0.46,
+        "ai-gemini": 0.14,
+        "medium": 0.15,
+        "newsletter": 0.1
+      },
+      "intervals": {
+        "ai": [
+          0.45,
+          1.48
+        ],
+        "ai-openai-55": [
+          0.94,
+          2.66
+        ],
+        "ai-openai": [
+          0.09,
+          1.02
+        ],
+        "ai-gemini": [
+          0,
+          0.29
+        ],
+        "medium": [
+          0.03,
+          0.3
+        ],
+        "newsletter": [
+          0,
+          0.32
+        ]
+      },
+      "verdict": "Elevated in Claude Opus 5 (0.92) and GPT-5.5 (1.90), against 0.15 at most in human writing. Shared by more than one model, so it is not a fingerprint."
+    },
+    {
+      "id": "fragment_triplet",
+      "label": "Possible fragment triplet",
+      "severity": 1,
+      "guidance": "Three clipped fragments in a row borrow rhythm without adding meaning. Ignore if each one carries a distinct point.",
+      "pattern": "/(?:^|[.!?]\\s+)[A-Z][A-Za-z'-]*(?:\\s+[a-z][A-Za-z'-]*)?\\.\\s+[A-Z][A-Za-z'-]*(?:\\s+[a-z][A-Za-z'-]*)?\\.\\s+[A-Z][A-Za-z'-]*(?:\\s+[a-z][A-Za-z'-]*)?\\./g",
+      "rates": {
+        "ai": 0,
+        "ai-openai-55": 0.05,
+        "ai-openai": 0,
+        "ai-gemini": 0,
+        "medium": 0,
+        "newsletter": 0
+      },
+      "intervals": {
+        "ai": [
+          0,
+          0
+        ],
+        "ai-openai-55": [
+          0,
+          0.17
+        ],
+        "ai-openai": [
+          0,
+          0
+        ],
+        "ai-gemini": [
+          0,
+          0
+        ],
+        "medium": [
+          0,
+          0
+        ],
+        "newsletter": [
+          0,
+          0
+        ]
+      },
+      "verdict": "Too rare to characterize: 1 hit in 110,305 words across every corpus."
+    },
+    {
+      "id": "em_dash",
+      "label": "Em-dash density",
+      "severity": 2,
+      "guidance": "length} em dash${dashes.length === 1 ? \"\" : \"es\"} in ${words} words. Measured on our own corpus: published human articles average about 3.4 per 1,000 words, current model drafts about 11. Replace some with commas, parentheses, or a period.",
+      "pattern": "/—|(?<!-)--(?!-)/g",
+      "rates": {
+        "ai": 11.05,
+        "ai-openai-55": 1.63,
+        "ai-openai": 3.3,
+        "ai-gemini": 2.7,
+        "medium": 3.83,
+        "newsletter": 1.05
+      },
+      "intervals": {
+        "ai": [
+          9.56,
+          12.59
+        ],
+        "ai-openai-55": [
+          0.8,
+          2.71
+        ],
+        "ai-openai": [
+          1.88,
+          4.92
+        ],
+        "ai-gemini": [
+          2.01,
+          3.44
+        ],
+        "medium": [
+          2.66,
+          5.09
+        ],
+        "newsletter": [
+          0.21,
+          2.25
+        ]
+      },
+      "verdict": "A Claude Opus 5 habit. 11.05 per 1,000 words, and its interval clears every other model and both human sets."
+    }
+  ]
+}
