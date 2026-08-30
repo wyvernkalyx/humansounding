@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why do AI-writing checkers miss the most obvious AI writing? | HumanSounding</title>
+<meta name="description" content="A regular expression can catch an em dash. It cannot catch a sentence whose fault is what it is doing. Six validated regexes found none of the 37 instances a reader found in the same 15 documents.">
+<link rel="canonical" href="https://humansounding.com/blog/why-ai-checkers-miss-ai-writing.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="Why do AI-writing checkers miss the most obvious AI writing?">
+<meta property="og:description" content="Self-narration runs near zero in first drafts and 14 to 20 per thousand words the moment you correct a model. Here is why no checker will ever catch it.">
+<meta property="og:url" content="https://humansounding.com/blog/why-ai-checkers-miss-ai-writing.html">
+<meta property="og:image" content="https://humansounding.com/og-checker-skill.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="HumanSounding weekly" href="https://humansounding.com/feed.xml">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Why do AI-writing checkers miss the most obvious AI writing?", "description": "A regular expression can catch an em dash. It cannot catch a sentence whose fault is what it is doing. Six validated regexes found none of the 37 instances a reader found in the same 15 documents.", "datePublished": "2026-08-30", "dateModified": "2026-08-30", "author": {"@type": "Organization", "name": "HumanSounding", "url": "https://humansounding.com/"}, "mainEntityOfPage": "https://humansounding.com/blog/why-ai-checkers-miss-ai-writing.html"}
+</script>
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  article { padding-top: 40px; }
+  .kicker { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
+  article h1 { font-size: 30px; margin: 0 0 18px; letter-spacing: -0.5px; line-height: 1.25; }
+  article h2 { font-size: 20px; margin: 30px 0 10px; letter-spacing: -0.3px; }
+  article p.body { color: var(--ink-1); font-size: 16.5px; line-height: 1.75; margin: 0 0 16px; }
+  :root[data-theme="dark"] article p.body { color: #e8e6e0; }
+  article ol.forms { color: var(--ink-1); font-size: 16.5px; line-height: 1.75; margin: 0 0 18px; padding-left: 22px; }
+  :root[data-theme="dark"] article ol.forms { color: #e8e6e0; }
+  article ol.forms li { margin: 0 0 4px; }
+  .stat { font-size: 17.5px; line-height: 1.6; margin: 0 0 10px; color: var(--ink-1); border-left: 3px solid var(--accent, #2f7d5d); padding-left: 14px; }
+  :root[data-theme="dark"] .stat { color: #e8e6e0; }
+  .srcs { font-size: 13.5px; color: var(--ink-2); border-top: 1px solid var(--border); margin-top: 32px; padding-top: 18px; }
+  .pn { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap; }
+  .pn a { font-size: 13.5px; }
+  .chartfig { margin: 26px 0 30px; }
+  .chartfig img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 8px; }
+  .chartfig figcaption { font-size: 13.5px; color: var(--ink-2); margin-top: 10px; }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html" aria-current="page">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More &#9662;</button>
+      <div class="menu">
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+
+<main class="wrap-post">
+  <article>
+    <div class="kicker">Study &middot; August 30, 2026</div>
+    <h1>Why do AI-writing checkers miss the most obvious AI writing?</h1>
+
+    <p class="body"><em>How this was written: the measurement and the calls about what to keep are mine. Claude drafted the prose from my notes, and I revised it. The note is at the top because a piece about machine writing shouldn't make you read to the end to find out.</em></p>
+
+    <p class="body">Last week I filed a bug report on somebody else's open-source project. Before sending it I ran the draft through my own checker, which seemed like the least I could do given what this site is for. Zero hits in 933 words.</p>
+
+    <p class="body">Then I read it again and found three sentences that were obviously AI-written.</p>
+
+    <p class="body">All three broke the same rule, and all three were problems with what the phrasing was doing rather than with any word in it. One read: "Worth saying, because it is the more interesting half."</p>
+
+    <p class="body">The name for it is self-narration: writing about the writing instead of about the subject. Models qualify the worth of what they are about to say, and people do that far less often. Cut the sentence and the reader loses no fact about the subject, which is the test.</p>
+
+    <p class="body">A person catches that in a second. Code has nothing to grab. Every word in the sentence is ordinary English, and the fault lives in the job it is doing.</p>
+
+
+    <figure class="chartfig">
+      <img src="/og-checker-skill.png" alt="Two rows of 37 dots. The top row, labeled instances a reader found, is filled in: 37. The bottom row, labeled instances the regexes found, is empty: 0.">
+      <figcaption>Six regular expressions, one per form of self-narration, validated on thirteen positive and twelve negative sentences. Run over the same fifteen documents a person read by eye, they matched nothing.</figcaption>
+    </figure>
+
+    <h2>What a checker can hold</h2>
+
+    <p class="body">Every rule on this site is a regular expression. That is not a limitation I apologize for; it is what makes the checker fast, private, and honest. Nothing leaves your browser, the rule that fired is printed next to the sentence that fired it, and you can read the source and see exactly why.</p>
+
+    <p class="body">Regular expressions are good at things with edges. An em dash is a character. A word on the ban list is a word. "It's not just X, it's Y" is a shape you can write down. Rules like these can be counted, and once you can count a rule you can measure it against human writing and find out whether it means anything. That is most of what I have published here.</p>
+
+    <p class="body">Self-narration has no edges. It is rule 13 in the <a href="/fix-your-ai.html">instruction file</a>, and deliberately not in the checker.</p>
+
+    <h2>The rule I could not count</h2>
+
+    <p class="body">Self-narration has six forms.</p>
+
+    <ol class="forms">
+      <li>Rating your own confidence</li>
+      <li>Announcing your integrity</li>
+      <li>Apologizing for an earlier draft</li>
+      <li>Describing the document's own body</li>
+      <li>Telling the reader how much something matters</li>
+      <li>Reviewing a source's prose rather than reporting what it said</li>
+    </ol>
+
+    <p class="body">When I first proposed the rule I did what I now do with every rule, and measured it before shipping it. Across all nine corpora, 456 model documents and 80 human documents, it fired almost nowhere. Between 0.00 and 0.14 hits per thousand words, and one of the six forms ran higher in the human sets than in three of the four models. On that evidence it could not go in the checker. It went in the instruction file instead.</p>
+
+    <p class="body">The zeros bothered me, because the behavior is obviously real.</p>
+
+    <h2>Self-narration shows up when you correct the model</h2>
+
+    <p class="body">It is almost absent from a first draft. It appears the moment you tell a model it got something wrong.</p>
+
+    <p class="body">Every document in my study was a single fresh answer to a prompt nobody had argued with, which is why the rule fired nowhere. So I built the corpus that was missing. Fifteen sessions, each one a writing task, a draft, a specific correction from me, and then the model's reply. Two of the five corrections were factual, the kind where it had invented a number or reversed a cause. The reply is the measured document, including whatever the model says alongside the fixed draft, because that is where the behavior lives.</p>
+
+    <p class="stat">Self-narration in single-turn writing: 0.00 to 0.14 per thousand words.</p>
+
+    <p class="stat">Self-narration in post-correction replies: 14.3 to 19.9.</p>
+
+    <p class="body">Two orders of magnitude, and it explains the zeros. The rule was never wrong. I had been looking for it in the one place it does not occur.</p>
+
+    <h2>Then the regexes failed</h2>
+
+    <p class="body">I wrote six regular expressions for those fifteen documents, one per form, built from real examples. I validated them first: thirteen hand-picked positive sentences, all thirteen caught. Twelve ordinary sentences that should not fire, none of them did.</p>
+
+    <p class="body">Run against the fifteen new documents, those regexes found nothing. A careful reader working from the same six definitions found thirty-seven instances in 2,208 words.</p>
+
+    <p class="body">Here is what the reader was catching. "Right." "Fair." "Fixed:" "Good catch." "Try this:" "Shorter:" "Here's the plainer version." "dialed back the victory-lap tone."</p>
+
+    <p class="body">There is no pattern there. Every one of those is ordinary English doing ordinary work in some other sentence, and any regular expression loose enough to catch them would flag half of everything anyone writes. The forms are unbounded. That is the whole problem, and no amount of work on my part fixes it.</p>
+
+    <h2>The checker and the instruction file do different jobs</h2>
+
+    <p class="body">This site ships two things. The checker is the box on humansounding.com where you paste a draft and it highlights the AI-writing tells. The <a href="/fix-your-ai.html">instruction file</a> is a page of rules you hand to a model before it writes, so the draft comes out cleaner to begin with.</p>
+
+    <p class="body">A tell belongs in the checker when its surface forms are bounded. Em dashes, watched vocabulary, contrastive negation, stock openers: finite shapes, countable, measurable against a human baseline, safe to show a stranger with a number attached.</p>
+
+    <p class="body">A tell belongs in the instruction file when the forms are open. Self-narration, telling the reader what matters, announcing your own honesty. These need somebody to read the sentence and ask what it is for. A person can do that in a second. A pattern matcher cannot do it at all.</p>
+
+    <p class="body">The dividing line is not how bad the tell is. Self-narration may be the most recognizable habit in the whole catalog, and it will never be in the checker.</p>
+
+    <h2>The fix that did not work</h2>
+
+    <p class="body">I thought I had an easy improvement. Rule 13 already explains the mechanism, in a sentence buried in the middle of it: AI prose addresses an evaluator, and human prose addresses a reader who is not grading you. Promote that to a framing statement at the top of the instruction file, ahead of every rule, and the model would carry it into everything it wrote.</p>
+
+    <p class="body">I generated the fifteen sessions three ways. No instruction file. The file as it ships. The file with the new framing section on top. A separate model scored all forty-five documents blind, with the files shuffled and renamed so it could not tell which condition it was reading.</p>
+
+    <p class="body">No instruction file: 14.3 per thousand words. The file as it ships: 16.5. The file with the framing line: 19.9.</p>
+
+    <p class="body">Five documents per condition, so those differences are noise and I am not claiming the framing line made anything worse. I am claiming there is no evidence it helps, which is enough to keep it out of the instruction file.</p>
+
+    <p class="body">The likely reason is that the diagnosis was right and the remedy did not follow from it. The model is answering the person who just corrected it. At that moment there really is an evaluator in the conversation, and telling it to imagine a reader does not change who just spoke.</p>
+
+    <h2>What the instruction file did fix</h2>
+
+    <p class="body">One thing moved. Closing offers, the "let me know if" and the "Better?" that models tack onto a reply, went from four in the control to zero with the instruction file.</p>
+
+    <p class="body">That is rule 12 working exactly as designed, because those are strings. The file removes what it can name. It struggles with a move that can be made a hundred ways.</p>
+
+    <h2>What changes here</h2>
+
+    <p class="body">Nothing in the checker. The rule stays out.</p>
+
+    <p class="body">The instruction file gets a new candidate rule to test, and this one is bounded, which is why I think it has a chance: when returning a revised draft, return the draft. No acknowledgment of the correction, no summary of what changed, no characterization of the previous version. That is an instruction with a shape, and I can measure whether it works before it ships.</p>
+
+    <p class="body">If you use a model to write, watch the reply that comes after you tell it that it got something wrong. That is where the writing starts being about the writing, and it is the one thing this site's checker will never catch for you.</p>
+
+    <p class="srcs"><b>Method:</b> the corpora, the generator, and the measurement scripts are in <a href="https://github.com/wyvernkalyx/humansounding/tree/main/study">study/</a>. Rates are per 1,000 words. The single-turn baseline is 456 model documents and 80 human documents across nine corpora. The post-correction corpus is fifteen sessions generated for this piece, scored by a separate model blind to condition, with the files shuffled and renamed. Five documents per condition, so the differences between conditions are noise and are reported as such.</p>
+
+    <div class="pn">
+      <a href="/blog.html">&lsaquo; All posts</a>
+      <a href="/blog/do-ai-writing-checkers-agree.html">Do AI-writing checkers agree with each other? &rsaquo;</a>
+    </div>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">&#9680; Theme</button>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>
