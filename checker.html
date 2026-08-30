@@ -55,6 +55,8 @@
     .btn { padding: 13px 18px; }
     .btn2 { padding: 12px 16px; }
   }
+  #checkList .tell-def { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--ink-muted); }
+  #checkList .tell-def:hover { border-bottom-color: var(--ink-1); }
 </style>
 </head>
 <body>
@@ -288,7 +290,18 @@ document.getElementById("checkBtn").addEventListener("click", () => {
   const cadence = cadenceFinding(text, words);
   if (cadence) groups.push({ rule: cadence, n: 1 });
   document.getElementById("checkList").innerHTML = groups.length
-    ? groups.map(g => `<b>${esc(g.rule.label)}${g.n > 1 ? ` · ${g.n}×` : ""}</b><span>${esc(g.rule.fix)}</span>`).join("")
+    ? groups.map(g => {
+        // Somebody who just had a rule fire is the most motivated reader that
+        // rule's definition will ever have. Link the name to it. The cadence
+        // finding is computed here rather than parsed from RULES, and has no
+        // glossary entry, so it stays plain text.
+        const slug = g.rule.id && g.rule.id !== "even_cadence" ? g.rule.id.replace(/_/g, "-") : null;
+        const name = esc(g.rule.label) + (g.n > 1 ? ` · ${g.n}×` : "");
+        const head = slug
+          ? `<b><a class="tell-def" href="/ai-writing-tells.html#${slug}">${name}</a></b>`
+          : `<b>${name}</b>`;
+        return `${head}<span>${esc(g.rule.fix)}</span>`;
+      }).join("")
     : tooShort
       ? `<b>Too short to measure</b><span>Nothing fired, but at ${words} words that is expected rather than reassuring. Most of these tells need several sentences to show up, and a single em dash is never flagged below 400 words. Paste 150 words or more for a result worth anything.</span>`
       : `<b>Nothing fired</b><span>None of the ${RULES.length + 2} tells matched. Suspiciously human, even.</span>`;
