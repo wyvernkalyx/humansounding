@@ -25,6 +25,12 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
+      - name: Rebuild the tells glossary and rules.json
+        run: node scripts/build-glossary.mjs
+
+      - name: Staleness check on published figures (report-only)
+        run: node scripts/check-staleness.mjs
+
       - name: Design-tell regression check (Impeccable detector, report-only)
         run: |
           npx --yes impeccable@3.5 detect index.html changelog.html *.html --no-advisory 2>&1 | tail -20 || true

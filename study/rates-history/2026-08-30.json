@@ -1,0 +1,561 @@
+{
+  "measured": "2026-08-30",
+  "arms": [
+    {
+      "key": "ai",
+      "name": "Claude Opus 5",
+      "human": false,
+      "documents": 40,
+      "words": 21814
+    },
+    {
+      "key": "ai-openai-55",
+      "name": "GPT-5.5",
+      "human": false,
+      "documents": 39,
+      "words": 18394
+    },
+    {
+      "key": "ai-openai",
+      "name": "ChatGPT",
+      "human": false,
+      "documents": 35,
+      "words": 10914
+    },
+    {
+      "key": "ai-gemini",
+      "name": "Gemini 3.7 Flash",
+      "human": false,
+      "documents": 40,
+      "words": 21818
+    },
+    {
+      "key": "medium",
+      "name": "Human, Medium articles",
+      "human": true,
+      "documents": 40,
+      "words": 26883
+    },
+    {
+      "key": "newsletter",
+      "name": "Human, newsletters",
+      "human": true,
+      "documents": 25,
+      "words": 10482
+    }
+  ],
+  "rates": {
+    "negative_parallelism": {
+      "ai": 0.05,
+      "ai-openai-55": 0.22,
+      "ai-openai": 0.55,
+      "ai-gemini": 0.37,
+      "medium": 0.22,
+      "newsletter": 0.1
+    },
+    "stock_openers": {
+      "ai": 0,
+      "ai-openai-55": 0.05,
+      "ai-openai": 0,
+      "ai-gemini": 0,
+      "medium": 0,
+      "newsletter": 0
+    },
+    "slop_words": {
+      "ai": 0.09,
+      "ai-openai-55": 0.11,
+      "ai-openai": 0.09,
+      "ai-gemini": 1.01,
+      "medium": 0.33,
+      "newsletter": 0.57
+    },
+    "testament": {
+      "ai": 0,
+      "ai-openai-55": 0,
+      "ai-openai": 0,
+      "ai-gemini": 0,
+      "medium": 0,
+      "newsletter": 0
+    },
+    "editorializing": {
+      "ai": 0,
+      "ai-openai-55": 0,
+      "ai-openai": 0,
+      "ai-gemini": 0,
+      "medium": 0.04,
+      "newsletter": 0
+    },
+    "vague_attribution": {
+      "ai": 0,
+      "ai-openai-55": 0,
+      "ai-openai": 0,
+      "ai-gemini": 0,
+      "medium": 0,
+      "newsletter": 0
+    },
+    "trailing_participle": {
+      "ai": 0,
+      "ai-openai-55": 0,
+      "ai-openai": 0,
+      "ai-gemini": 0,
+      "medium": 0,
+      "newsletter": 0
+    },
+    "summary_ending": {
+      "ai": 0,
+      "ai-openai-55": 0.05,
+      "ai-openai": 0.09,
+      "ai-gemini": 0.05,
+      "medium": 0.11,
+      "newsletter": 0
+    },
+    "chatbot_artifact": {
+      "ai": 0,
+      "ai-openai-55": 0,
+      "ai-openai": 0,
+      "ai-gemini": 0,
+      "medium": 0,
+      "newsletter": 0
+    },
+    "hedged_balance": {
+      "ai": 0,
+      "ai-openai-55": 0,
+      "ai-openai": 0.09,
+      "ai-gemini": 0,
+      "medium": 0.04,
+      "newsletter": 0
+    },
+    "rule_of_three": {
+      "ai": 0.09,
+      "ai-openai-55": 0.33,
+      "ai-openai": 0.46,
+      "ai-gemini": 0.18,
+      "medium": 0.11,
+      "newsletter": 0.1
+    },
+    "bot_scaffolding": {
+      "ai": 0.05,
+      "ai-openai-55": 0,
+      "ai-openai": 0,
+      "ai-gemini": 0,
+      "medium": 0,
+      "newsletter": 0
+    },
+    "contrastive_negation": {
+      "ai": 0.92,
+      "ai-openai-55": 1.9,
+      "ai-openai": 0.46,
+      "ai-gemini": 0.14,
+      "medium": 0.15,
+      "newsletter": 0.1
+    },
+    "fragment_triplet": {
+      "ai": 0,
+      "ai-openai-55": 0.05,
+      "ai-openai": 0,
+      "ai-gemini": 0,
+      "medium": 0,
+      "newsletter": 0
+    },
+    "em_dash": {
+      "ai": 11.05,
+      "ai-openai-55": 1.63,
+      "ai-openai": 3.3,
+      "ai-gemini": 2.7,
+      "medium": 3.83,
+      "newsletter": 1.05
+    }
+  },
+  "intervals": {
+    "negative_parallelism": {
+      "ai": [
+        0,
+        0.14
+      ],
+      "ai-openai-55": [
+        0.05,
+        0.47
+      ],
+      "ai-openai": [
+        0.14,
+        1.1
+      ],
+      "ai-gemini": [
+        0.1,
+        0.73
+      ],
+      "medium": [
+        0.07,
+        0.44
+      ],
+      "newsletter": [
+        0,
+        0.35
+      ]
+    },
+    "stock_openers": {
+      "ai": [
+        0,
+        0
+      ],
+      "ai-openai-55": [
+        0,
+        0.17
+      ],
+      "ai-openai": [
+        0,
+        0
+      ],
+      "ai-gemini": [
+        0,
+        0
+      ],
+      "medium": [
+        0,
+        0
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "slop_words": {
+      "ai": [
+        0,
+        0.23
+      ],
+      "ai-openai-55": [
+        0,
+        0.29
+      ],
+      "ai-openai": [
+        0,
+        0.29
+      ],
+      "ai-gemini": [
+        0.55,
+        1.55
+      ],
+      "medium": [
+        0.15,
+        0.57
+      ],
+      "newsletter": [
+        0.11,
+        1.24
+      ]
+    },
+    "testament": {
+      "ai": [
+        0,
+        0
+      ],
+      "ai-openai-55": [
+        0,
+        0
+      ],
+      "ai-openai": [
+        0,
+        0
+      ],
+      "ai-gemini": [
+        0,
+        0
+      ],
+      "medium": [
+        0,
+        0
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "editorializing": {
+      "ai": [
+        0,
+        0
+      ],
+      "ai-openai-55": [
+        0,
+        0
+      ],
+      "ai-openai": [
+        0,
+        0
+      ],
+      "ai-gemini": [
+        0,
+        0
+      ],
+      "medium": [
+        0,
+        0.12
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "vague_attribution": {
+      "ai": [
+        0,
+        0
+      ],
+      "ai-openai-55": [
+        0,
+        0
+      ],
+      "ai-openai": [
+        0,
+        0
+      ],
+      "ai-gemini": [
+        0,
+        0
+      ],
+      "medium": [
+        0,
+        0
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "trailing_participle": {
+      "ai": [
+        0,
+        0
+      ],
+      "ai-openai-55": [
+        0,
+        0
+      ],
+      "ai-openai": [
+        0,
+        0
+      ],
+      "ai-gemini": [
+        0,
+        0
+      ],
+      "medium": [
+        0,
+        0
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "summary_ending": {
+      "ai": [
+        0,
+        0
+      ],
+      "ai-openai-55": [
+        0,
+        0.18
+      ],
+      "ai-openai": [
+        0,
+        0.33
+      ],
+      "ai-gemini": [
+        0,
+        0.15
+      ],
+      "medium": [
+        0,
+        0.28
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "chatbot_artifact": {
+      "ai": [
+        0,
+        0
+      ],
+      "ai-openai-55": [
+        0,
+        0
+      ],
+      "ai-openai": [
+        0,
+        0
+      ],
+      "ai-gemini": [
+        0,
+        0
+      ],
+      "medium": [
+        0,
+        0
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "hedged_balance": {
+      "ai": [
+        0,
+        0
+      ],
+      "ai-openai-55": [
+        0,
+        0
+      ],
+      "ai-openai": [
+        0,
+        0.28
+      ],
+      "ai-gemini": [
+        0,
+        0
+      ],
+      "medium": [
+        0,
+        0.12
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "rule_of_three": {
+      "ai": [
+        0,
+        0.23
+      ],
+      "ai-openai-55": [
+        0.1,
+        0.66
+      ],
+      "ai-openai": [
+        0.09,
+        0.88
+      ],
+      "ai-gemini": [
+        0.04,
+        0.37
+      ],
+      "medium": [
+        0,
+        0.24
+      ],
+      "newsletter": [
+        0,
+        0.3
+      ]
+    },
+    "bot_scaffolding": {
+      "ai": [
+        0,
+        0.14
+      ],
+      "ai-openai-55": [
+        0,
+        0
+      ],
+      "ai-openai": [
+        0,
+        0
+      ],
+      "ai-gemini": [
+        0,
+        0
+      ],
+      "medium": [
+        0,
+        0
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "contrastive_negation": {
+      "ai": [
+        0.45,
+        1.48
+      ],
+      "ai-openai-55": [
+        0.94,
+        2.66
+      ],
+      "ai-openai": [
+        0.09,
+        1.02
+      ],
+      "ai-gemini": [
+        0,
+        0.29
+      ],
+      "medium": [
+        0.03,
+        0.3
+      ],
+      "newsletter": [
+        0,
+        0.32
+      ]
+    },
+    "fragment_triplet": {
+      "ai": [
+        0,
+        0
+      ],
+      "ai-openai-55": [
+        0,
+        0.17
+      ],
+      "ai-openai": [
+        0,
+        0
+      ],
+      "ai-gemini": [
+        0,
+        0
+      ],
+      "medium": [
+        0,
+        0
+      ],
+      "newsletter": [
+        0,
+        0
+      ]
+    },
+    "em_dash": {
+      "ai": [
+        9.56,
+        12.59
+      ],
+      "ai-openai-55": [
+        0.8,
+        2.71
+      ],
+      "ai-openai": [
+        1.88,
+        4.92
+      ],
+      "ai-gemini": [
+        2.01,
+        3.44
+      ],
+      "medium": [
+        2.66,
+        5.09
+      ],
+      "newsletter": [
+        0.21,
+        2.25
+      ]
+    }
+  }
+}
