@@ -74,7 +74,7 @@
 
     <p class="body"><em>How this was written: the measurement and the calls about what to keep are mine. Claude drafted the prose from my notes, and I revised it. The note is at the top because a piece about machine writing shouldn't make you read to the end to find out.</em></p>
 
-    <p class="body">Last week I filed a bug report on somebody else's open-source project. Before sending it I ran the draft through my own checker, which seemed like the least I could do given what this site is for. Zero hits in 933 words.</p>
+    <p class="body">Last week I filed a bug report on somebody else's open-source project. Before sending it, I ran the draft through my own checker, which seemed like the least I could do given what this site is for. Zero hits in 933 words.</p>
 
     <p class="body">Then I read it again and found three sentences that were obviously AI-written.</p>
 
@@ -111,7 +111,7 @@
       <li>Reviewing a source's prose rather than reporting what it said</li>
     </ol>
 
-    <p class="body">When I first proposed the rule I did what I now do with every rule, and measured it before shipping it. Across all nine corpora, 456 model documents and 80 human documents, it fired almost nowhere. Between 0.00 and 0.14 hits per thousand words, and one of the six forms ran higher in the human sets than in three of the four models. On that evidence it could not go in the checker. It went in the instruction file instead.</p>
+    <p class="body">When I first proposed the rule, I did what I now do with every rule, and measured it before shipping it. Across all nine corpora, 456 model documents and 80 human documents, it fired almost nowhere. Between 0.00 and 0.14 hits per thousand words, and one of the six forms ran higher in the human sets than in three of the four models. On that evidence, it could not go in the checker. It went in the instruction file instead.</p>
 
     <p class="body">The zeros bothered me, because the behavior is obviously real.</p>
 
@@ -155,7 +155,7 @@
 
     <p class="body">No instruction file: 14.3 per thousand words. The file as it ships: 16.5. The file with the framing line: 19.9.</p>
 
-    <p class="body">Five documents per condition, so those differences are noise and I am not claiming the framing line made anything worse. I am claiming there is no evidence it helps, which is enough to keep it out of the instruction file.</p>
+    <p class="body">Five documents per condition, so those differences are noise, and I am not claiming the framing line made anything worse. I am claiming there is no evidence it helps, which is enough to keep it out of the instruction file.</p>
 
     <p class="body">The likely reason is that the diagnosis was right and the remedy did not follow from it. The model is answering the person who just corrected it. At that moment there really is an evaluator in the conversation, and telling it to imagine a reader does not change who just spoke.</p>
 
