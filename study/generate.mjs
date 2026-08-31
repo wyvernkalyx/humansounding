@@ -482,7 +482,11 @@ if (servedModel && servedModel !== model) {
 // Say it here rather than leaving it to be noticed in the measurement.
 if (lengths.length) {
   const sorted = [...lengths].sort((a, b) => a - b);
-  const median = sorted[sorted.length >> 1];
+  // A real median: for an even count this is the mean of the two middle values.
+  // sorted[n >> 1] takes the upper of the two, which reads high on every even
+  // sample and put a wrong figure on the site for three weeks.
+  const mid = sorted.length >> 1;
+  const median = sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
   const under = lengths.filter((w) => w < 250).length;
   const floor = lengths.filter((w) => w < 100).length;
   console.log(`\nlength: median ${median} words, range ${sorted[0]}-${sorted[sorted.length - 1]}` + (USE_LENGTH ? " (asked for ~500)" : " (no length instruction sent)"));

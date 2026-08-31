@@ -37,3 +37,8 @@ study/**/*.tgz
 study/*.tgz
 
 _to_delete/
+
+# Peer study data. Derived tables are fine to commit; verbatim third-party
+# Reddit text is not, same rule as study/corpus/*/*.txt.
+study/peer/*/quote_bank.txt
+study/peer/*/synthesis.md

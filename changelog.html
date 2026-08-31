@@ -73,9 +73,34 @@
   </a>
   <a class="card edition" id="w2026-08-10" href="#w2026-08-10">
     <span class="d">Week of August 10, 2026</span>
-    <p>HumanSounding launched: the live trend board, the in-browser draft checker, the Spot the AI quiz, and downloadable instruction files for Claude, ChatGPT, and Gemini.</p>
+    <p>HumanSounding launched: the live trend board, the in-browser draft checker, and downloadable instruction files for Claude, ChatGPT, and Gemini.</p>
   </a>
   <!-- EDITIONS:END -->
+
+  <!-- CORRECTIONS: hand-written, newest first. The weekly pipeline only rewrites
+       between the EDITIONS markers above, so entries here survive the Monday run.
+       Standing rule: do not silently edit a published number. Somebody may have
+       quoted it. -->
+  <h2 class="page" id="corrections">Corrections</h2>
+  <p class="pagesub">Every figure on this site is measured, which means some of them turn out to be wrong. When one does, it gets an entry here rather than a quiet edit.</p>
+
+  <div class="card" id="c2026-08-31-medians">
+    <span class="d">August 31, 2026</span>
+    <h3>Two published medians were the upper middle value, not the median</h3>
+    <p>The human Medium baseline was published as a median of 3.4 em dashes per 1,000 words and Claude Opus 5 as 11.2. The correct figures are <b>3.10</b> and <b>11.06</b>. The script took <code>sorted[n &gt;&gt; 1]</code>, which on an even sample returns the upper of the two middle values instead of their mean. The corpus rates, the confidence intervals, and every verdict on the <a href="/ai-writing-tells.html">tells glossary</a> are unaffected, because none of them were computed that way. Corrected in the checker, the tooltip, the instruction file, and <a href="/rules.json">rules.json</a>.</p>
+  </div>
+
+  <div class="card" id="c2026-08-31-recall">
+    <span class="d">August 31, 2026</span>
+    <h3>An em-dash recall figure described one model and read as though it described all of them</h3>
+    <p>A note in the checker said the 1-per-200 threshold catches "38 of 40 AI documents." That was written when the machine arm was Claude alone. Measured across all four models it catches <b>56 of 154</b>: 38 of 40 from Claude, 7 of 40 from Gemini, 7 of 39 from GPT-5.5, and 4 of 35 from ChatGPT. The old figure overstated coverage by about two and a half times, and it argued against this site's own finding that em-dash density identifies one vendor rather than machine writing in general.</p>
+  </div>
+
+  <div class="card" id="c2026-08-31-rulesjson">
+    <span class="d">August 31, 2026</span>
+    <h3>The em-dash entry in rules.json shipped a broken guidance string</h3>
+    <p>The generator extracted that rule's guidance by cutting at the first full stop, and the first full stop in it falls inside a code placeholder. Published copies of <a href="/rules.json">rules.json</a> carried a guidance string beginning <code>length} em dash${dashes.length === 1 ...</code> with unresolved placeholders. Anyone who pulled the file before this date should pull it again.</p>
+  </div>
 </main>
 
 <footer class="site">

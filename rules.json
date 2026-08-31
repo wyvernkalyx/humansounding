@@ -1,5 +1,5 @@
 {
-  "version": "2026-08-30",
+  "version": "2026-08-31",
   "note": "Rules as the humansounding.com checker runs them, with measured rates per 1,000 words. Generated from checker.html; do not edit by hand.",
   "corpora": [
     {
@@ -67,23 +67,23 @@
         ],
         "ai-openai-55": [
           0.05,
-          0.44
+          0.45
         ],
         "ai-openai": [
-          0.15,
-          1.05
+          0.12,
+          1.07
         ],
         "ai-gemini": [
           0.09,
-          0.72
+          0.7
         ],
         "medium": [
-          0.07,
+          0.05,
           0.43
         ],
         "newsletter": [
           0,
-          0.33
+          0.35
         ]
       },
       "verdict": "Highest in ChatGPT at 0.55, but the interval overlaps human writing. Not separation."
@@ -151,23 +151,23 @@
         ],
         "ai-openai-55": [
           0,
-          0.28
+          0.3
         ],
         "ai-openai": [
           0,
-          0.3
+          0.29
         ],
         "ai-gemini": [
           0.54,
-          1.53
+          1.55
         ],
         "medium": [
           0.14,
-          0.56
+          0.57
         ],
         "newsletter": [
-          0.15,
-          1.3
+          0.14,
+          1.24
         ]
       },
       "verdict": "Highest in Gemini 3.7 Flash at 1.01, but the interval overlaps human writing. Not separation."
@@ -361,7 +361,7 @@
         ],
         "ai-openai-55": [
           0,
-          0.19
+          0.2
         ],
         "ai-openai": [
           0,
@@ -369,11 +369,11 @@
         ],
         "ai-gemini": [
           0,
-          0.14
+          0.15
         ],
         "medium": [
           0,
-          0.28
+          0.29
         ],
         "newsletter": [
           0,
@@ -449,7 +449,7 @@
         ],
         "ai-openai": [
           0,
-          0.29
+          0.28
         ],
         "ai-gemini": [
           0,
@@ -486,11 +486,11 @@
           0.23
         ],
         "ai-openai-55": [
-          0.1,
-          0.65
+          0.11,
+          0.63
         ],
         "ai-openai": [
-          0.12,
+          0.1,
           0.92
         ],
         "ai-gemini": [
@@ -503,7 +503,7 @@
         ],
         "newsletter": [
           0,
-          0.31
+          0.3
         ]
       },
       "verdict": "Highest in ChatGPT at 0.46, but the interval overlaps human writing. Not separation."
@@ -567,19 +567,19 @@
       "intervals": {
         "ai": [
           0.46,
-          1.52
+          1.51
         ],
         "ai-openai-55": [
-          0.92,
-          2.65
+          0.91,
+          2.68
         ],
         "ai-openai": [
           0.08,
-          1.04
+          0.97
         ],
         "ai-gemini": [
           0,
-          0.3
+          0.29
         ],
         "medium": [
           0.03,
@@ -587,7 +587,7 @@
         ],
         "newsletter": [
           0,
-          0.34
+          0.31
         ]
       },
       "verdict": "Elevated in Claude Opus 5 (0.92) and GPT-5.5 (1.90), against 0.15 at most in human writing. Shared by more than one model, so it is not a fingerprint."
@@ -638,7 +638,7 @@
       "id": "em_dash",
       "label": "Em-dash density",
       "severity": 2,
-      "guidance": "length} em dash${dashes.length === 1 ? \"\" : \"es\"} in ${words} words. Measured on our own corpora: the median pre-ChatGPT Medium article runs about 3.4 per 1,000 words (3.83 across that corpus of 40), current model drafts about 11. Human rates vary by genre: 25 pre-2022 email newsletters ran 1.05, so treat this as a long-form yardstick. Replace some with commas, parentheses, or a period.",
+      "guidance": "Measured on our own corpora: the median pre-ChatGPT Medium article runs 3.10 per 1,000 words (3.83 across that corpus of 40), current model drafts about 11. Human rates vary by genre: 25 pre-2022 email newsletters ran 1.05, so treat this as a long-form yardstick. Replace some with commas, parentheses, or a period.",
       "pattern": "/—|(?<!-)--(?!-)/g",
       "rates": {
         "ai": 11.05,
@@ -650,20 +650,20 @@
       },
       "intervals": {
         "ai": [
-          9.66,
-          12.53
+          9.57,
+          12.43
         ],
         "ai-openai-55": [
           0.8,
-          2.81
+          2.76
         ],
         "ai-openai": [
           1.89,
-          4.88
+          4.86
         ],
         "ai-gemini": [
-          1.99,
-          3.45
+          2.02,
+          3.43
         ],
         "medium": [
           2.65,
@@ -671,7 +671,7 @@
         ],
         "newsletter": [
           0.2,
-          2.29
+          2.26
         ]
       },
       "verdict": "A Claude Opus 5 habit. 11.05 per 1,000 words, and its interval clears every other model and both human sets."

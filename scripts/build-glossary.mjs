@@ -39,7 +39,10 @@ function loadRules() {
   // depends on document length. The study measures raw density, so it is added
   // here by hand with the same id the measurement uses.
   const emFix = (src.match(/fix: `\$\{dashes\.length\}[^`]*`/) || [""])[0]
-    .replace(/^fix: `[^.]*\.\s*/, "").replace(/`$/, "");
+    // Strip the runtime sentence, not "up to the first period": the first period
+    // in this template is inside ${dashes.length}, which shipped a rules.json
+    // guidance string beginning "length} em dash${dashes.length === 1...".
+    .replace(/^fix: `.*?\$\{words\} words\.\s*/s, "").replace(/`$/, "");
   return [
     ...rules.map((r) => ({ id: r.id, label: r.label, sev: r.sev, fix: r.fix, source: String(r.re) })),
     { id: "em_dash", label: "Em-dash density", sev: 2, fix: emFix, source: "/—|(?<!-)--(?!-)/g" },

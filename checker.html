@@ -245,13 +245,19 @@ document.getElementById("checkBtn").addEventListener("click", () => {
   }
   // em-dash density: flag each dash beyond the threshold below
   const dashes = [...probe.matchAll(EM_DASH)];
-  // Threshold measured, not assumed. On our August 2026 corpus of 40 documents
-  // per set: Claude Opus 5 runs a median 11.2 em dashes per 1,000 words,
-  // human Medium articles from 2016-2022 run 3.4, and casual 2004 blogging runs
-  // 0.0. The old 1-per-300 line flagged 18 of 40 human Medium articles. At
-  // 1-per-200 it flags 13 while still catching 38 of 40 AI documents, which is
-  // the same AI recall for fewer false alarms. The distributions genuinely
-  // overlap, so no threshold separates them cleanly.
+  // Threshold measured, not assumed. On our August 2026 corpus: Claude Opus 5
+  // runs a median 11.06 em dashes per 1,000 words, human Medium articles from
+  // 2016-2022 run 3.10, and casual 2004 blogging runs 0.00. (Corrected
+  // 2026-08-31: these were published as 11.2 and 3.4, computed with
+  // sorted[n >> 1], which takes the upper of the two middle values rather than
+  // their mean. See changelog.html.)
+  // The old 1-per-300 line flagged 18 of 40 human Medium articles. At 1-per-200
+  // it flags 13, so about a third of genuine human long-form writing trips it.
+  // What it catches is 56 of all 154 machine documents: 38 of 40 from Claude,
+  // 7 of 40 Gemini, 7 of 39 GPT-5.5, 4 of 35 ChatGPT. (Corrected 2026-08-31:
+  // this line read "38 of 40 AI documents", which was Claude-only recall from
+  // when the AI arm was Claude alone.) The threshold is a Claude detector, and
+  // the distributions genuinely overlap, so nothing separates them cleanly.
   // A short paste cannot produce a meaningful "nothing fired" result. Most rules
   // span two or more sentences, cadence refuses to run under 80 words, and the
   // dash rule cannot flag a single em dash below 400 words because `allowed`
@@ -262,7 +268,7 @@ document.getElementById("checkBtn").addEventListener("click", () => {
   const tooShort = words < MIN_VERDICT_WORDS;
   const allowed = Math.max(1, Math.floor(words / 200));
   const emRule = { id: "em_dash", label: "Em-dash density", sev: 2,
-    fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words. Measured on our own corpora: the median pre-ChatGPT Medium article runs about 3.4 per 1,000 words (3.83 across that corpus of 40), current model drafts about 11. Human rates vary by genre: 25 pre-2022 email newsletters ran 1.05, so treat this as a long-form yardstick. Replace some with commas, parentheses, or a period.` };
+    fix: `${dashes.length} em dash${dashes.length === 1 ? "" : "es"} in ${words} words. Measured on our own corpora: the median pre-ChatGPT Medium article runs 3.10 per 1,000 words (3.83 across that corpus of 40), current model drafts about 11. Human rates vary by genre: 25 pre-2022 email newsletters ran 1.05, so treat this as a long-form yardstick. Replace some with commas, parentheses, or a period.` };
   if (dashes.length > allowed) dashes.forEach(d => hits.push({ start: d.index, end: d.index + d[0].length, rule: emRule }));
 
   // sort, drop overlaps (keep earliest/longest)
