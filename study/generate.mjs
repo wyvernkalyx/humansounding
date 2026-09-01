@@ -32,6 +32,9 @@ import { writeFileSync, existsSync, mkdirSync, appendFileSync, readFileSync } fr
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadEnv, ENV_PATH } from "../scripts/load-env.mjs";
+import { VENDORS, Fatal, chat, listModels } from "./vendors.mjs";
+import { GENRES, CHAT_GENRES } from "./prompts.mjs";
+import { EXPERIENCE_GENRES } from "./prompts-experience.mjs";
 
 loadEnv();
 
@@ -48,13 +51,10 @@ const OUT = arg("out")
   ? (arg("out").endsWith("/") || arg("out").endsWith("\\") ? arg("out") : arg("out") + "/")
   : fileURLToPath(new URL(argv.includes("--mode") && argv[argv.indexOf("--mode") + 1] === "chat" ? "./corpus/chat-ai/" : "./corpus/ai/", import.meta.url));
 const MANIFEST = join(OUT, "MANIFEST.tsv");
-const VERSION = "2023-06-01";
-
-// Thinking tokens bill against max_tokens, and the thinking API itself differs
-// between model generations. Send no thinking config and leave generous
-// headroom: that combination works on every model this script might pick.
-// (Learned the hard way when the weekly refresh died silently on 2026-08-17.)
-const MAX_OUTPUT_TOKENS = 4000;
+// The vendor table, the retry rules and the token cap moved to
+// study/vendors.mjs on 2026-09-01 so study/reedit.mjs could share them. The
+// requests are the ones this script always sent, with one recorded exception on
+// the Gemini body; the note in vendors.mjs has it.
 
 // --mode chat swaps the document genres for conversational turns. The stance
 // markers the checker cannot see ("the honest answer", "two things worth
@@ -64,209 +64,11 @@ const MAX_OUTPUT_TOKENS = 4000;
 // failing to reach the register, not a finding about pushback. This mode is
 // the corpus that can answer the question.
 const MODE = arg("mode", "docs");
-if (!["docs", "chat"].includes(MODE)) { console.error(`--mode must be docs or chat`); process.exit(1); }
+if (!["docs", "chat", "experience"].includes(MODE)) { console.error(`--mode must be docs, chat or experience`); process.exit(1); }
 
 const N_PER_GENRE = Number(arg("n", 5));
 
-// Genres chosen to match what humansounding.com's visitors actually paste:
-// workplace and marketing prose written by non-writers under time pressure.
-const GENRES = [
-  {
-    id: "linkedin",
-    prompts: [
-      "Write a LinkedIn post about why our team switched to a four-day week.",
-      "Write a LinkedIn post announcing that I've been promoted to director of operations.",
-      "Write a LinkedIn post about what I learned from a project that failed.",
-      "Write a LinkedIn post about hiring for attitude over experience.",
-      "Write a LinkedIn post about attending my first industry conference in five years.",
-      "Write a LinkedIn post about why small businesses should care about cybersecurity.",
-      "Write a LinkedIn post about mentoring a junior colleague.",
-      "Write a LinkedIn post about leaving a job I loved.",
-    ],
-  },
-  {
-    id: "cover_letter",
-    prompts: [
-      "Write a cover letter for an operations manager job at a logistics company.",
-      "Write a cover letter for a marketing coordinator role at a nonprofit.",
-      "Write a cover letter for a junior software developer position.",
-      "Write a cover letter for a school administrator job.",
-      "Write a cover letter for an accounting role at a mid-sized manufacturer.",
-      "Write a cover letter for a customer success manager position at a SaaS company.",
-      "Write a cover letter for a nursing supervisor role at a regional hospital.",
-      "Write a cover letter for a project manager role in construction.",
-    ],
-  },
-  {
-    id: "newsletter",
-    prompts: [
-      "Write a newsletter issue about how to build a morning routine that sticks.",
-      "Write a newsletter issue about managing money in your twenties.",
-      "Write a newsletter issue about why most productivity systems fail.",
-      "Write a newsletter issue about dealing with burnout at work.",
-      "Write a newsletter issue about the psychology of habit change.",
-      "Write a newsletter issue about how to have difficult conversations.",
-      "Write a newsletter issue about sleep and performance.",
-      "Write a newsletter issue about what anger is actually telling you.",
-    ],
-  },
-  {
-    id: "marketing_email",
-    prompts: [
-      "Write a marketing email announcing a new feature in our project management app.",
-      "Write a marketing email for a local gym's January membership offer.",
-      "Write a marketing email inviting customers to a webinar on tax changes.",
-      "Write a marketing email re-engaging customers who haven't logged in for 90 days.",
-      "Write a marketing email launching a new line of running shoes.",
-      "Write a marketing email for an accounting firm offering year-end planning.",
-      "Write a marketing email announcing a price change to existing subscribers.",
-      "Write a marketing email promoting an online course on public speaking.",
-    ],
-  },
-  {
-    id: "blog_post",
-    prompts: [
-      "Write a blog post about choosing a password manager.",
-      "Write a blog post about remote work and company culture.",
-      "Write a blog post about how to run a better meeting.",
-      "Write a blog post about what to look for when buying a used car.",
-      "Write a blog post about the basics of home network security.",
-      "Write a blog post about switching careers in your forties.",
-      "Write a blog post about why customer feedback is hard to act on.",
-      "Write a blog post about starting a vegetable garden.",
-    ],
-  },
-  {
-    id: "internal_memo",
-    prompts: [
-      "Write a memo to staff announcing a new expense policy.",
-      "Write a memo to staff about returning to the office three days a week.",
-      "Write a memo announcing a reorganization of the customer service team.",
-      "Write a memo to staff about a new mandatory security training.",
-      "Write a memo explaining changes to the annual review process.",
-      "Write a memo announcing that the company has been acquired.",
-      "Write a memo to staff about reducing travel spending this quarter.",
-      "Write a memo introducing a new director of engineering to the company.",
-    ],
-  },
-  {
-    id: "product_update",
-    prompts: [
-      "Write a product update announcing a redesigned dashboard.",
-      "Write a product update explaining that we're sunsetting an old integration.",
-      "Write a product update about improved mobile performance.",
-      "Write a product update announcing single sign-on support.",
-      "Write a product update about a new reporting feature.",
-      "Write a product update apologizing for last week's outage.",
-      "Write a product update announcing our new pricing tiers.",
-      "Write a product update about accessibility improvements.",
-    ],
-  },
-  {
-    id: "recommendation",
-    prompts: [
-      "Write a letter of recommendation for a student applying to graduate school.",
-      "Write a letter of recommendation for an employee applying for an internal promotion.",
-      "Write a performance review for a sales rep who exceeded quota but struggled with paperwork.",
-      "Write a performance review for a developer who is technically strong and hard to work with.",
-      "Write a letter of recommendation for a colleague applying for a board seat.",
-      "Write a performance review for a first-year employee who improved steadily.",
-      "Write a letter of recommendation for a teacher applying for a principal role.",
-      "Write a performance review for a manager whose team has high turnover.",
-    ],
-  },
-];
-
-// Conversational turns. Same rule as the document prompts and it matters more
-// here: nothing mentions style, tone, structure, length or thinking out loud.
-// These are ordinary requests of the kind a person types into a chat box, and
-// what is being measured is what the model volunteers when nobody asked it to
-// perform carefulness. Prompts that said "explain your reasoning" would plant
-// the very behaviour under test.
-const CHAT_GENRES = [
-  { id: "decision", prompts: [
-    "Should I use Postgres or MongoDB for a booking system with about 50,000 records?",
-    "We're deciding between hiring a second developer or paying for more contractors. Which way should we go?",
-    "Should I take a 15% pay cut for a fully remote job?",
-    "Is it worth moving our small office to a four-day week?",
-    "Should we rebuild our ten-year-old internal tool or keep patching it?",
-    "Do I renew a three-year software contract at a discount or go year to year?",
-    "Should a two-person company bother with formal performance reviews?",
-    "Is it a mistake to launch a product without a pricing page?",
-  ]},
-  { id: "critique_plan", prompts: [
-    "Here's my plan for migrating 400 users to a new email system over one weekend. What am I missing?",
-    "My plan is to run ads for six weeks, measure signups, and decide from there. Poke holes in it.",
-    "I want to teach myself data analysis in three months by doing one project a week. Thoughts?",
-    "We're going to fix our support backlog by hiring two temps for a month. What could go wrong?",
-    "My plan for the quarter is to cut meetings by half and see what breaks. Reactions?",
-    "I want to move our backups from an external drive to cloud storage and stop the drive rotation. Sound right?",
-    "We plan to open a second location once the first one clears 20% margin. Is that the right trigger?",
-    "I'm going to reply to every customer review personally for a year. Talk me through it.",
-  ]},
-  { id: "explain", prompts: [
-    "Explain how DNS actually resolves a domain name.",
-    "Explain what a p-value is to someone who never took statistics.",
-    "Explain why software estimates are always wrong.",
-    "Explain how compound interest works and why it surprises people.",
-    "Explain the difference between encryption and hashing.",
-    "Explain what happens to my data when a company says it was breached.",
-    "Explain why airlines overbook flights.",
-    "Explain how a bill becomes law in the United States.",
-  ]},
-  { id: "diagnose", prompts: [
-    "Our website is slow every weekday at 9am and fine the rest of the day. Where do I start?",
-    "Two of my team members stopped talking to each other and the work is suffering. What now?",
-    "My laptop battery went from a full day to three hours in about a month. What's happening?",
-    "Signups are steady but activation dropped 30% last month. How do I find the cause?",
-    "Customers keep asking questions our documentation already answers. Why?",
-    "Our weekly meeting always runs over and nobody remembers what was decided. Diagnose it.",
-    "I keep missing deadlines even though I'm working more hours than ever. What's going on?",
-    "Sales says the product is fine and support says it's broken. Who do I believe?",
-  ]},
-  { id: "compare", prompts: [
-    "What's the difference between a VPN and a proxy, practically speaking?",
-    "Compare renting and buying a home for someone who moves every four years.",
-    "What's the real difference between a CFO and a controller?",
-    "Compare index funds and individual stocks for a first-time investor.",
-    "How do a co-op and a condo actually differ for the owner?",
-    "Compare an electric car and a hybrid for someone who drives 12,000 miles a year.",
-    "What's the difference between a trademark and a copyright for a small brand?",
-    "Compare an in-house help desk with an outsourced one for a 60-person company.",
-  ]},
-  { id: "review_work", prompts: [
-    "Read this and tell me if it's any good: 'Our mission is to empower businesses to unlock their full potential through innovative solutions.'",
-    "Is this a good subject line? 'Quick question about your account'",
-    "Here's my resume summary: 'Results-driven professional with 10+ years of experience.' Fix it or tell me why it's fine.",
-    "I wrote this to a client: 'Sorry for the delay, things have been crazy here.' Should I send it?",
-    "My about page opens with 'Founded in 2019, we are a team of passionate experts.' Thoughts?",
-    "Is 'circle back' an acceptable thing to write in a work email?",
-    "My pitch is 'Uber but for dog walking.' What's wrong with that as a description?",
-    "I named my product 'Synergize.' Be straight with me.",
-  ]},
-  { id: "personal", prompts: [
-    "I got an offer from a competitor and my current boss just asked me directly if I'm interviewing. What do I say?",
-    "My friend asked me to invest in her business and I don't think it will work. How do I answer?",
-    "I've been in the same job for eleven years and I can't tell if that's stability or being stuck.",
-    "My neighbor's tree drops branches in my yard every storm. How do I raise it without starting a feud?",
-    "I said yes to organizing the family reunion and now I regret it. What are my options?",
-    "A colleague takes credit for my work in meetings. What do I actually do about it?",
-    "I want to go back to school at 41 and everyone thinks it's a bad idea.",
-    "My adult son wants to move back home and I'm not sure I want that.",
-  ]},
-  { id: "evaluate_claim", prompts: [
-    "Someone told me you should never pay off a low-interest mortgage early. Is that right?",
-    "My coworker says standing desks don't actually do anything. True?",
-    "Is it true that you shouldn't put a hot laptop battery in the fridge?",
-    "A vendor claims their tool will cut our onboarding time in half. How should I read that?",
-    "I read that most startups fail because of cofounder conflict. Does that hold up?",
-    "Someone said breakfast being the most important meal was invented by cereal companies. Is it?",
-    "My IT guy says password rotation every 90 days is outdated advice. Is he right?",
-    "A consultant told us our website needs a full rebuild, not a redesign. How do I judge that?",
-  ]},
-];
-
-const SETS = MODE === "chat" ? CHAT_GENRES : GENRES;
+const SETS = MODE === "chat" ? CHAT_GENRES : MODE === "experience" ? EXPERIENCE_GENRES : GENRES;
 
 // Length. This constant existed from the first run and was never appended to a
 // prompt, so every corpus in study/corpus/ was generated with NO length
@@ -284,101 +86,10 @@ const LENGTH = " Around 500 words.";
 const USE_LENGTH = argv.includes("--length");
 const withLength = (p) => (USE_LENGTH ? p + LENGTH : p);
 
-const VENDORS = {
-  anthropic: {
-    env: "ANTHROPIC_API_KEY",
-    listUrl: () => "https://api.anthropic.com/v1/models?limit=40",
-    listHeaders: (k) => ({ "x-api-key": k, "anthropic-version": VERSION }),
-    listIds: (d) => (d.data || []).map((x) => x.id),
-    // Anthropic ids sort newest-first from the API, and the family is
-    // unambiguous, so this one can pick for itself.
-    autoPick: (ids) => ids.filter((id) => /^claude/.test(id))[0],
-    url: () => "https://api.anthropic.com/v1/messages",
-    headers: (k) => ({ "x-api-key": k, "anthropic-version": VERSION, "content-type": "application/json" }),
-    // max_tokens is required here. Elsewhere no cap is sent at all: the field
-    // name for it has diverged between vendors and between model generations,
-    // and a request field that only some models accept is exactly what broke
-    // the weekly refresh on 2026-08-17. The length instruction is in the prompt.
-    body: (model, prompt) => ({ model, max_tokens: MAX_OUTPUT_TOKENS, messages: [{ role: "user", content: prompt }] }),
-    text: (d) => (d.content || []).filter((b) => b.type === "text").map((b) => b.text).join("\n"),
-    served: (d) => d.model,
-    why: (d) => `stop_reason=${d.stop_reason}`,
-  },
-  openai: {
-    env: "OPENAI_API_KEY",
-    listUrl: () => "https://api.openai.com/v1/models",
-    listHeaders: (k) => ({ authorization: `Bearer ${k}` }),
-    listIds: (d) => (d.data || []).map((x) => x.id).sort(),
-    autoPick: () => null,
-    url: () => "https://api.openai.com/v1/chat/completions",
-    headers: (k) => ({ authorization: `Bearer ${k}`, "content-type": "application/json" }),
-    body: (model, prompt) => ({ model, messages: [{ role: "user", content: prompt }] }),
-    text: (d) => (d.choices || []).map((c) => c.message?.content || "").join("\n"),
-    served: (d) => d.model,
-    why: (d) => `finish_reason=${d.choices?.[0]?.finish_reason}`,
-  },
-  gemini: {
-    env: "GEMINI_API_KEY",
-    listUrl: (k) => `https://generativelanguage.googleapis.com/v1beta/models?key=${k}`,
-    listHeaders: () => ({}),
-    listIds: (d) => (d.models || []).map((m) => m.name.replace(/^models\//, "")).sort(),
-    autoPick: () => null,
-    url: (k, model) => `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${k}`,
-    headers: () => ({ "content-type": "application/json" }),
-    body: (model, prompt) => ({ contents: [{ parts: [{ text: prompt }] }] }),
-    text: (d) => (d.candidates || []).flatMap((c) => (c.content?.parts || []).map((p) => p.text || "")).join("\n"),
-    served: (d) => d.modelVersion,
-    why: (d) => `finishReason=${d.candidates?.[0]?.finishReason}`,
-  },
-};
-
 const VENDOR = arg("vendor", "anthropic");
 const V = VENDORS[VENDOR];
 if (!V) { console.error(`unknown --vendor ${VENDOR}. Use one of: ${Object.keys(VENDORS).join(", ")}`); process.exit(1); }
-const KEY = process.env[V.env];
-
-// Some failures will never fix themselves by trying again: a missing key, a
-// revoked key, an account with no credit on it. Those abort the whole run.
-// Others are transient: a per-minute rate limit, a 5xx. Those get a few backed
-// off retries. The first version of this did neither and fired 39 more doomed
-// requests after the first one came back saying the balance was zero.
-class Fatal extends Error {}
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-async function req(url, opts = {}, attempt = 0) {
-  const r = await fetch(url, opts);
-  const body = await r.text();
-  if (r.ok) return JSON.parse(body);
-
-  const fatal =
-    r.status === 401 || r.status === 403 ||
-    /insufficient_quota|billing_not_active|invalid_api_key|account_deactivated|API_KEY_INVALID|PERMISSION_DENIED/i.test(body);
-  if (fatal) {
-    let hint = "";
-    if (/insufficient_quota|billing/i.test(body)) {
-      hint = VENDOR === "openai"
-        ? "\n  Add credit at https://platform.openai.com/settings/organization/billing — API billing is separate from ChatGPT."
-        : "\n  This account has no usable balance for the API.";
-    } else if (r.status === 401 || /invalid_api_key|API_KEY_INVALID/i.test(body)) {
-      hint = `\n  Check ${V.env} in .env. The key is shown once at creation and cannot be read back.`;
-    }
-    throw new Fatal(`${r.status} from ${VENDOR}: ${(JSON.parse(body)?.error?.message || body).toString().slice(0, 200)}${hint}`);
-  }
-
-  // Transient. Honour Retry-After when the vendor sends one.
-  if ((r.status === 429 || r.status >= 500) && attempt < 3) {
-    const wait = Number(r.headers.get("retry-after")) * 1000 || 2000 * Math.pow(2, attempt);
-    console.log(`  ${r.status}, retrying in ${Math.round(wait / 1000)}s`);
-    await sleep(wait);
-    return req(url, opts, attempt + 1);
-  }
-  throw new Error(`${r.status}: ${body.slice(0, 300)}`);
-}
-
-async function listModels() {
-  return V.listIds(await req(V.listUrl(KEY), { headers: V.listHeaders(KEY) }));
-}
+const KEY = V.local ? "local" : process.env[V.env];
 
 // An alias like "chat-latest" is the most representative thing to sample,
 // because it is what ordinary users are served, and the least reproducible
@@ -387,15 +98,11 @@ async function listModels() {
 // model.
 let servedModel = null;
 
+// One turn: the conversation is an array with a single user message in it.
+// study/reedit.mjs sends the same array with three rounds of history on it.
 async function generate(model, prompt) {
-  const d = await req(V.url(KEY, model), {
-    method: "POST",
-    headers: V.headers(KEY),
-    body: JSON.stringify(V.body(model, prompt)),
-  });
-  if (!servedModel && V.served) servedModel = V.served(d) || null;
-  const text = (V.text(d) || "").trim();
-  if (!text) throw new Error(`empty response (${V.why(d)})`);
+  const { text, served } = await chat(V, VENDOR, KEY, model, [{ role: "user", content: prompt }]);
+  if (!servedModel) servedModel = served;
   return text;
 }
 
@@ -409,8 +116,46 @@ if (!KEY) {
 }
 
 mkdirSync(OUT, { recursive: true });
-if (!existsSync(MANIFEST)) writeFileSync(MANIFEST, "file\tmodel\tgenre\twords\tprompt\n");
+// The manifest is the only record of when a document was made and which model
+// actually answered. Until 2026-09-01 it carried neither, so the corpus had no
+// date on it at all once the file mtimes were lost to a clone, and the resolved
+// model id was printed to the console and thrown away. Both are recorded now.
+const MANIFEST_HEAD = "file\tmodel\tserved\tgenre\twords\tdate\tdate_src\tprompt";
+const RUN_DATE = new Date().toISOString().slice(0, 10);
+if (!existsSync(MANIFEST)) writeFileSync(MANIFEST, MANIFEST_HEAD + "\n");
 const already = readFileSync(MANIFEST, "utf8");
+{
+  const head = already.split("\n", 1)[0].replace(/\r$/, "");
+  if (head !== MANIFEST_HEAD) {
+    console.error(`\n${MANIFEST} has an older column layout:\n  ${head}`);
+    console.error(`Expected:\n  ${MANIFEST_HEAD}`);
+    console.error("Migrate it before generating, or the rows will not line up.");
+    process.exit(1);
+  }
+}
+
+// An arm is one model measured once. Adding a second generation to the same
+// directory silently averages two things the study exists to tell apart, and
+// it has happened: chat-gemini and chat-gpt55 each held an alias run and a
+// pinned run before the alias documents were withdrawn on 2026-09-01.
+//
+// This has to run AFTER the model id is resolved, which is why it is a function
+// and not the inline block it started life as. Inline, it read `model` from the
+// temporal dead zone of a `let` declared forty lines below and threw
+// ReferenceError on every run into a non-empty arm. It shipped that way this
+// morning and was never executed until the refactor smoke test hit it.
+function warnIfArmMixing(model) {
+  const prior = already.split("\n").slice(1).filter((r) => r.trim()).map((r) => r.split("\t"));
+  const models = [...new Set(prior.map((c) => c[1]))];
+  const dates = [...new Set(prior.map((c) => c[5]).filter(Boolean))];
+  if (prior.length && (!models.includes(model) || !dates.includes(RUN_DATE))) {
+    console.log(`\n! ${OUT} already holds ${prior.length} document${prior.length === 1 ? "" : "s"}`);
+    console.log(`!   model${models.length === 1 ? "" : "s"}: ${models.join(", ")}   date${dates.length === 1 ? "" : "s"}: ${dates.join(", ") || "unrecorded"}`);
+    console.log(`!   this run: ${model} on ${RUN_DATE}`);
+    console.log("! Adding to an existing arm blends two generations into one measurement.");
+    console.log(`! To track a change over time, write a new arm instead:  --out study/corpus/<name>-${RUN_DATE}/\n`);
+  }
+}
 
 // Everything that is not a general text model. A vendor's model list is mostly
 // speech, images, embeddings and coding variants, and burying the four ids that
@@ -419,7 +164,7 @@ const NOT_PROSE = /audio|image|realtime|transcribe|tts|whisper|embedding|moderat
 
 let model = arg("model");
 if (!model) {
-  const ids = await listModels();
+  const ids = await listModels(V, VENDOR, KEY);
   model = V.autoPick(ids);
   if (!model) {
     // Deliberately not guessing. Model names change faster than this file does,
@@ -439,6 +184,7 @@ if (!model) {
   }
 }
 if (model) {
+warnIfArmMixing(model);
 console.log(`vendor: ${VENDOR}   model: ${model}`);
 console.log(`writing up to ${N_PER_GENRE * SETS.length} documents to ${OUT}\n`);
 
@@ -455,7 +201,7 @@ for (const g of SETS) {
       const text = await generate(model, sent);
       writeFileSync(path, text.replace(/\r\n/g, "\n") + "\n");
       const words = (text.match(/\S+/g) || []).length;
-      if (!already.includes(name)) appendFileSync(MANIFEST, `${name}\t${model}\t${g.id}\t${words}\t${sent}\n`);
+      if (!already.includes(name)) appendFileSync(MANIFEST, `${name}\t${model}\t${servedModel || ""}\t${g.id}\t${words}\t${RUN_DATE}\trecorded\t${sent}\n`);
       made++;
       lengths.push(words);
       console.log(`  ${name}  ${words} words${words < 250 ? "  (short)" : ""}`);
