@@ -1,0 +1,56 @@
+Here's a ready-to-adapt re-engagement email. I've used brackets for anything you'll need to swap in for your product.
+
+---
+
+**Subject line options** (test 2–3):
+- It's been a while, [First Name]
+- Your [Product] account is still here when you're ready
+- Did we lose you at "hello"?
+- [First Name], you left something behind
+- 90 days without you (we're not counting… okay, we are)
+
+**Preview text:** A quick catch-up on what's new — plus a reason to come back.
+
+---
+
+**Body:**
+
+Hi [First Name],
+
+It's been about three months since you last logged in to [Product], so we wanted to check in — no strings attached.
+
+If [Product] wasn't the right fit, that's genuinely useful for us to know. But if life just got busy, here's what you've missed:
+
+- **[New feature]** — [one-line benefit, e.g., "cuts your weekly reporting down to about five minutes"]
+- **[Improvement]** — [one-line benefit]
+- **[Content or integration]** — [one-line benefit]
+
+Your account and data are exactly where you left them.
+
+**[Log back in →]**
+
+Not sure where to start? Reply to this email and [Name] from our team will point you to the one thing most likely to be useful for [use case / role]. A real reply, from a real person.
+
+Talk soon,
+[Sender name]
+[Title], [Company]
+
+*P.S. Would rather hear less from us? [Update your preferences] or [unsubscribe] — no hard feelings.*
+
+---
+
+**Optional incentive variant** (swap in after the bullet list if you're offering one):
+
+> To make coming back easy, here's [X% off your next month / an extended trial / 500 bonus credits], yours through [date]. Just log in and it's applied automatically.
+
+---
+
+**A few notes on making this work:**
+
+- **Lead with what changed, not with guilt.** "We miss you" underperforms concrete news about the product.
+- **One CTA.** The reply option is a soft secondary path, not a competing button.
+- **Segment if you can.** Users who onboarded but stalled need different copy than users who never activated — the first group needs a reason to return, the second needs help getting started.
+- **Keep the unsubscribe visible.** Re-engagement sends have elevated spam-complaint risk, and complaints hurt deliverability for your whole list. Making opt-out easy protects your sender reputation.
+- **Send at 3–4 emails max**, spaced 5–7 days apart, then sunset non-openers from your active list.
+
+Want me to write the follow-ups in the sequence, or adapt this for a specific product or audience?

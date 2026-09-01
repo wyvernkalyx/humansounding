@@ -1,0 +1,45 @@
+**MEMORANDUM**
+
+**To:** All Staff
+**From:** [Name], [Title], Finance
+**Date:** [Date]
+**Subject:** New Expense Policy Effective [Effective Date]
+
+---
+
+Beginning **[Effective Date]**, we are updating our expense and reimbursement policy. The changes are intended to simplify submissions, speed up reimbursements, and give managers clearer visibility into spending. Please read this memo in full, as it affects how you submit expenses going forward.
+
+**What's changing**
+
+1. **Single submission platform.** All expenses must be submitted through [System Name]. Emailed spreadsheets and paper forms will no longer be accepted after [Effective Date].
+2. **Submission deadline.** Expenses must be submitted within **30 days** of the transaction date. Submissions beyond 60 days require written approval from a department head.
+3. **Receipt threshold.** Itemized receipts are required for any expense over **$25** (previously $50). Photos of receipts uploaded to [System Name] are acceptable — no originals needed.
+4. **Pre-approval requirements.** Written manager approval is now required in advance for:
+   - Air travel and lodging
+   - Any single expense over **$500**
+   - Client entertainment over **$150**
+   - New software or subscription purchases of any amount
+5. **Per diem for meals.** Travel meals will be reimbursed at a flat per diem of **$[XX]/day** for domestic travel and **$[XX]/day** for international travel, replacing itemized meal reimbursement.
+6. **Reimbursement timing.** Approved expenses will be paid out on the **1st and 15th** of each month via direct deposit.
+
+**What's not changing**
+
+- Mileage continues to be reimbursed at the current IRS standard rate.
+- Company card holders should continue reconciling transactions monthly.
+- The list of non-reimbursable items (personal entertainment, traffic fines, upgrades to premium travel classes without approval, etc.) remains as previously published.
+
+**What you need to do**
+
+- **By [Date]:** Complete the 15-minute training module in [System Name] at [link].
+- **By [Date]:** Submit any outstanding expenses under the old process. Anything received after this date must be resubmitted in [System Name].
+- **Managers:** Review the approver guide at [link] and confirm your approval queue is set up correctly.
+
+**Questions**
+
+Full policy documentation is available at [link]. For questions, contact [Name] at [email] or attend one of the drop-in Q&A sessions on [Date/Time] and [Date/Time] at [location/link].
+
+Thank you for your cooperation as we transition. We expect these changes to reduce reimbursement turnaround from roughly [X] weeks to [Y] business days.
+
+---
+
+*Note: Replace bracketed placeholders with your organization's specifics. If you can share details like your expense system, actual thresholds, or the reasons behind the change, I can tailor the memo further — including a shorter version for email or Slack.*

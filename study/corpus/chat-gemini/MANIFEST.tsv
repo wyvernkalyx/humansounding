@@ -1,89 +1,65 @@
-file	model	genre	words	prompt
-gemini-flash-latest__decision__02.txt	gemini-flash-latest	decision	530	We're deciding between hiring a second developer or paying for more contractors. Which way should we go?
-gemini-flash-latest__decision__03.txt	gemini-flash-latest	decision	630	Should I take a 15% pay cut for a fully remote job?
-gemini-flash-latest__explain__04.txt	gemini-flash-latest	explain	781	Explain how compound interest works and why it surprises people.
-gemini-flash-latest__diagnose__01.txt	gemini-flash-latest	diagnose	543	Our website is slow every weekday at 9am and fine the rest of the day. Where do I start?
-gemini-flash-latest__diagnose__02.txt	gemini-flash-latest	diagnose	554	Two of my team members stopped talking to each other and the work is suffering. What now?
-gemini-flash-latest__diagnose__03.txt	gemini-flash-latest	diagnose	573	My laptop battery went from a full day to three hours in about a month. What's happening?
-gemini-flash-latest__compare__02.txt	gemini-flash-latest	compare	741	Compare renting and buying a home for someone who moves every four years.
-gemini-flash-latest__compare__03.txt	gemini-flash-latest	compare	611	What's the real difference between a CFO and a controller?
-gemini-flash-latest__compare__05.txt	gemini-flash-latest	compare	841	How do a co-op and a condo actually differ for the owner?
-gemini-flash-latest__review_work__01.txt	gemini-flash-latest	review_work	348	Read this and tell me if it's any good: 'Our mission is to empower businesses to unlock their full potential through innovative solutions.'
-gemini-flash-latest__review_work__02.txt	gemini-flash-latest	review_work	341	Is this a good subject line? 'Quick question about your account'
-gemini-flash-latest__review_work__03.txt	gemini-flash-latest	review_work	320	Here's my resume summary: 'Results-driven professional with 10+ years of experience.' Fix it or tell me why it's fine.
-gemini-flash-latest__review_work__04.txt	gemini-flash-latest	review_work	185	I wrote this to a client: 'Sorry for the delay, things have been crazy here.' Should I send it?
-gemini-flash-latest__review_work__05.txt	gemini-flash-latest	review_work	343	My about page opens with 'Founded in 2019, we are a team of passionate experts.' Thoughts?
-gemini-flash-latest__personal__01.txt	gemini-flash-latest	personal	456	I got an offer from a competitor and my current boss just asked me directly if I'm interviewing. What do I say?
-gemini-flash-latest__personal__02.txt	gemini-flash-latest	personal	438	My friend asked me to invest in her business and I don't think it will work. How do I answer?
-gemini-flash-latest__personal__03.txt	gemini-flash-latest	personal	536	I've been in the same job for eleven years and I can't tell if that's stability or being stuck.
-gemini-flash-latest__personal__04.txt	gemini-flash-latest	personal	640	My neighbor's tree drops branches in my yard every storm. How do I raise it without starting a feud?
-gemini-flash-latest__personal__05.txt	gemini-flash-latest	personal	628	I said yes to organizing the family reunion and now I regret it. What are my options?
-gemini-flash-latest__evaluate_claim__01.txt	gemini-flash-latest	evaluate_claim	613	Someone told me you should never pay off a low-interest mortgage early. Is that right?
-gemini-flash-latest__evaluate_claim__02.txt	gemini-flash-latest	evaluate_claim	381	My coworker says standing desks don't actually do anything. True?
-gemini-flash-latest__evaluate_claim__03.txt	gemini-flash-latest	evaluate_claim	360	Is it true that you shouldn't put a hot laptop battery in the fridge?
-gemini-flash-latest__evaluate_claim__04.txt	gemini-flash-latest	evaluate_claim	507	A vendor claims their tool will cut our onboarding time in half. How should I read that?
-gemini-flash-latest__evaluate_claim__05.txt	gemini-flash-latest	evaluate_claim	615	I read that most startups fail because of cofounder conflict. Does that hold up?
-gemini-3.7-flash__decision__01.txt	gemini-3.7-flash	decision	416	Should I use Postgres or MongoDB for a booking system with about 50,000 records?
-gemini-3.7-flash__decision__02.txt	gemini-3.7-flash	decision	520	We're deciding between hiring a second developer or paying for more contractors. Which way should we go?
-gemini-3.7-flash__decision__03.txt	gemini-3.7-flash	decision	582	Should I take a 15% pay cut for a fully remote job?
-gemini-3.7-flash__decision__04.txt	gemini-3.7-flash	decision	656	Is it worth moving our small office to a four-day week?
-gemini-3.7-flash__decision__05.txt	gemini-3.7-flash	decision	605	Should we rebuild our ten-year-old internal tool or keep patching it?
-gemini-3.7-flash__decision__06.txt	gemini-3.7-flash	decision	489	Do I renew a three-year software contract at a discount or go year to year?
-gemini-3.7-flash__decision__07.txt	gemini-3.7-flash	decision	517	Should a two-person company bother with formal performance reviews?
-gemini-3.7-flash__decision__08.txt	gemini-3.7-flash	decision	561	Is it a mistake to launch a product without a pricing page?
-gemini-3.7-flash__critique_plan__01.txt	gemini-3.7-flash	critique_plan	479	Here's my plan for migrating 400 users to a new email system over one weekend. What am I missing?
-gemini-3.7-flash__critique_plan__02.txt	gemini-3.7-flash	critique_plan	468	My plan is to run ads for six weeks, measure signups, and decide from there. Poke holes in it.
-gemini-3.7-flash__critique_plan__03.txt	gemini-3.7-flash	critique_plan	680	I want to teach myself data analysis in three months by doing one project a week. Thoughts?
-gemini-3.7-flash__critique_plan__04.txt	gemini-3.7-flash	critique_plan	571	We're going to fix our support backlog by hiring two temps for a month. What could go wrong?
-gemini-3.7-flash__critique_plan__05.txt	gemini-3.7-flash	critique_plan	522	My plan for the quarter is to cut meetings by half and see what breaks. Reactions?
-gemini-3.7-flash__critique_plan__06.txt	gemini-3.7-flash	critique_plan	368	I want to move our backups from an external drive to cloud storage and stop the drive rotation. Sound right?
-gemini-3.7-flash__critique_plan__07.txt	gemini-3.7-flash	critique_plan	551	We plan to open a second location once the first one clears 20% margin. Is that the right trigger?
-gemini-3.7-flash__critique_plan__08.txt	gemini-3.7-flash	critique_plan	754	I'm going to reply to every customer review personally for a year. Talk me through it.
-gemini-3.7-flash__explain__01.txt	gemini-3.7-flash	explain	620	Explain how DNS actually resolves a domain name.
-gemini-3.7-flash__explain__02.txt	gemini-3.7-flash	explain	373	Explain what a p-value is to someone who never took statistics.
-gemini-3.7-flash__explain__03.txt	gemini-3.7-flash	explain	684	Explain why software estimates are always wrong.
-gemini-3.7-flash__explain__04.txt	gemini-3.7-flash	explain	713	Explain how compound interest works and why it surprises people.
-gemini-3.7-flash__explain__05.txt	gemini-3.7-flash	explain	510	Explain the difference between encryption and hashing.
-gemini-3.7-flash__explain__06.txt	gemini-3.7-flash	explain	657	Explain what happens to my data when a company says it was breached.
-gemini-3.7-flash__explain__07.txt	gemini-3.7-flash	explain	498	Explain why airlines overbook flights.
-gemini-3.7-flash__explain__08.txt	gemini-3.7-flash	explain	685	Explain how a bill becomes law in the United States.
-gemini-3.7-flash__diagnose__01.txt	gemini-3.7-flash	diagnose	582	Our website is slow every weekday at 9am and fine the rest of the day. Where do I start?
-gemini-3.7-flash__diagnose__02.txt	gemini-3.7-flash	diagnose	649	Two of my team members stopped talking to each other and the work is suffering. What now?
-gemini-3.7-flash__diagnose__03.txt	gemini-3.7-flash	diagnose	536	My laptop battery went from a full day to three hours in about a month. What's happening?
-gemini-3.7-flash__diagnose__04.txt	gemini-3.7-flash	diagnose	562	Signups are steady but activation dropped 30% last month. How do I find the cause?
-gemini-3.7-flash__diagnose__05.txt	gemini-3.7-flash	diagnose	568	Customers keep asking questions our documentation already answers. Why?
-gemini-3.7-flash__diagnose__06.txt	gemini-3.7-flash	diagnose	542	Our weekly meeting always runs over and nobody remembers what was decided. Diagnose it.
-gemini-3.7-flash__diagnose__07.txt	gemini-3.7-flash	diagnose	591	I keep missing deadlines even though I'm working more hours than ever. What's going on?
-gemini-3.7-flash__diagnose__08.txt	gemini-3.7-flash	diagnose	406	Sales says the product is fine and support says it's broken. Who do I believe?
-gemini-3.7-flash__compare__01.txt	gemini-3.7-flash	compare	447	What's the difference between a VPN and a proxy, practically speaking?
-gemini-3.7-flash__compare__02.txt	gemini-3.7-flash	compare	728	Compare renting and buying a home for someone who moves every four years.
-gemini-3.7-flash__compare__03.txt	gemini-3.7-flash	compare	556	What's the real difference between a CFO and a controller?
-gemini-3.7-flash__compare__04.txt	gemini-3.7-flash	compare	607	Compare index funds and individual stocks for a first-time investor.
-gemini-3.7-flash__compare__05.txt	gemini-3.7-flash	compare	805	How do a co-op and a condo actually differ for the owner?
-gemini-3.7-flash__compare__06.txt	gemini-3.7-flash	compare	713	Compare an electric car and a hybrid for someone who drives 12,000 miles a year.
-gemini-3.7-flash__compare__07.txt	gemini-3.7-flash	compare	579	What's the difference between a trademark and a copyright for a small brand?
-gemini-3.7-flash__compare__08.txt	gemini-3.7-flash	compare	792	Compare an in-house help desk with an outsourced one for a 60-person company.
-gemini-3.7-flash__review_work__01.txt	gemini-3.7-flash	review_work	343	Read this and tell me if it's any good: 'Our mission is to empower businesses to unlock their full potential through innovative solutions.'
-gemini-3.7-flash__review_work__02.txt	gemini-3.7-flash	review_work	342	Is this a good subject line? 'Quick question about your account'
-gemini-3.7-flash__review_work__03.txt	gemini-3.7-flash	review_work	325	Here's my resume summary: 'Results-driven professional with 10+ years of experience.' Fix it or tell me why it's fine.
-gemini-3.7-flash__review_work__04.txt	gemini-3.7-flash	review_work	199	I wrote this to a client: 'Sorry for the delay, things have been crazy here.' Should I send it?
-gemini-3.7-flash__review_work__05.txt	gemini-3.7-flash	review_work	333	My about page opens with 'Founded in 2019, we are a team of passionate experts.' Thoughts?
-gemini-3.7-flash__review_work__06.txt	gemini-3.7-flash	review_work	275	Is 'circle back' an acceptable thing to write in a work email?
-gemini-3.7-flash__review_work__07.txt	gemini-3.7-flash	review_work	494	My pitch is 'Uber but for dog walking.' What's wrong with that as a description?
-gemini-3.7-flash__review_work__08.txt	gemini-3.7-flash	review_work	374	I named my product 'Synergize.' Be straight with me.
-gemini-3.7-flash__personal__01.txt	gemini-3.7-flash	personal	489	I got an offer from a competitor and my current boss just asked me directly if I'm interviewing. What do I say?
-gemini-3.7-flash__personal__02.txt	gemini-3.7-flash	personal	515	My friend asked me to invest in her business and I don't think it will work. How do I answer?
-gemini-3.7-flash__personal__03.txt	gemini-3.7-flash	personal	568	I've been in the same job for eleven years and I can't tell if that's stability or being stuck.
-gemini-3.7-flash__personal__04.txt	gemini-3.7-flash	personal	619	My neighbor's tree drops branches in my yard every storm. How do I raise it without starting a feud?
-gemini-3.7-flash__personal__05.txt	gemini-3.7-flash	personal	645	I said yes to organizing the family reunion and now I regret it. What are my options?
-gemini-3.7-flash__personal__06.txt	gemini-3.7-flash	personal	667	A colleague takes credit for my work in meetings. What do I actually do about it?
-gemini-3.7-flash__personal__07.txt	gemini-3.7-flash	personal	691	I want to go back to school at 41 and everyone thinks it's a bad idea.
-gemini-3.7-flash__personal__08.txt	gemini-3.7-flash	personal	640	My adult son wants to move back home and I'm not sure I want that.
-gemini-3.7-flash__evaluate_claim__01.txt	gemini-3.7-flash	evaluate_claim	592	Someone told me you should never pay off a low-interest mortgage early. Is that right?
-gemini-3.7-flash__evaluate_claim__02.txt	gemini-3.7-flash	evaluate_claim	424	My coworker says standing desks don't actually do anything. True?
-gemini-3.7-flash__evaluate_claim__03.txt	gemini-3.7-flash	evaluate_claim	403	Is it true that you shouldn't put a hot laptop battery in the fridge?
-gemini-3.7-flash__evaluate_claim__04.txt	gemini-3.7-flash	evaluate_claim	426	A vendor claims their tool will cut our onboarding time in half. How should I read that?
-gemini-3.7-flash__evaluate_claim__05.txt	gemini-3.7-flash	evaluate_claim	625	I read that most startups fail because of cofounder conflict. Does that hold up?
-gemini-3.7-flash__evaluate_claim__06.txt	gemini-3.7-flash	evaluate_claim	550	Someone said breakfast being the most important meal was invented by cereal companies. Is it?
-gemini-3.7-flash__evaluate_claim__07.txt	gemini-3.7-flash	evaluate_claim	415	My IT guy says password rotation every 90 days is outdated advice. Is he right?
-gemini-3.7-flash__evaluate_claim__08.txt	gemini-3.7-flash	evaluate_claim	718	A consultant told us our website needs a full rebuild, not a redesign. How do I judge that?
+file	model	served	genre	words	date	date_src	prompt
+gemini-3.7-flash__decision__01.txt	gemini-3.7-flash		decision	416	2026-08-28	mtime	Should I use Postgres or MongoDB for a booking system with about 50,000 records?
+gemini-3.7-flash__decision__02.txt	gemini-3.7-flash		decision	520	2026-08-28	mtime	We're deciding between hiring a second developer or paying for more contractors. Which way should we go?
+gemini-3.7-flash__decision__03.txt	gemini-3.7-flash		decision	582	2026-08-28	mtime	Should I take a 15% pay cut for a fully remote job?
+gemini-3.7-flash__decision__04.txt	gemini-3.7-flash		decision	656	2026-08-28	mtime	Is it worth moving our small office to a four-day week?
+gemini-3.7-flash__decision__05.txt	gemini-3.7-flash		decision	605	2026-08-28	mtime	Should we rebuild our ten-year-old internal tool or keep patching it?
+gemini-3.7-flash__decision__06.txt	gemini-3.7-flash		decision	489	2026-08-28	mtime	Do I renew a three-year software contract at a discount or go year to year?
+gemini-3.7-flash__decision__07.txt	gemini-3.7-flash		decision	517	2026-08-28	mtime	Should a two-person company bother with formal performance reviews?
+gemini-3.7-flash__decision__08.txt	gemini-3.7-flash		decision	561	2026-08-28	mtime	Is it a mistake to launch a product without a pricing page?
+gemini-3.7-flash__critique_plan__01.txt	gemini-3.7-flash		critique_plan	479	2026-08-28	mtime	Here's my plan for migrating 400 users to a new email system over one weekend. What am I missing?
+gemini-3.7-flash__critique_plan__02.txt	gemini-3.7-flash		critique_plan	468	2026-08-28	mtime	My plan is to run ads for six weeks, measure signups, and decide from there. Poke holes in it.
+gemini-3.7-flash__critique_plan__03.txt	gemini-3.7-flash		critique_plan	680	2026-08-28	mtime	I want to teach myself data analysis in three months by doing one project a week. Thoughts?
+gemini-3.7-flash__critique_plan__04.txt	gemini-3.7-flash		critique_plan	571	2026-08-28	mtime	We're going to fix our support backlog by hiring two temps for a month. What could go wrong?
+gemini-3.7-flash__critique_plan__05.txt	gemini-3.7-flash		critique_plan	522	2026-08-28	mtime	My plan for the quarter is to cut meetings by half and see what breaks. Reactions?
+gemini-3.7-flash__critique_plan__06.txt	gemini-3.7-flash		critique_plan	368	2026-08-28	mtime	I want to move our backups from an external drive to cloud storage and stop the drive rotation. Sound right?
+gemini-3.7-flash__critique_plan__07.txt	gemini-3.7-flash		critique_plan	551	2026-08-28	mtime	We plan to open a second location once the first one clears 20% margin. Is that the right trigger?
+gemini-3.7-flash__critique_plan__08.txt	gemini-3.7-flash		critique_plan	754	2026-08-28	mtime	I'm going to reply to every customer review personally for a year. Talk me through it.
+gemini-3.7-flash__explain__01.txt	gemini-3.7-flash		explain	620	2026-08-28	mtime	Explain how DNS actually resolves a domain name.
+gemini-3.7-flash__explain__02.txt	gemini-3.7-flash		explain	373	2026-08-28	mtime	Explain what a p-value is to someone who never took statistics.
+gemini-3.7-flash__explain__03.txt	gemini-3.7-flash		explain	684	2026-08-28	mtime	Explain why software estimates are always wrong.
+gemini-3.7-flash__explain__04.txt	gemini-3.7-flash		explain	713	2026-08-28	mtime	Explain how compound interest works and why it surprises people.
+gemini-3.7-flash__explain__05.txt	gemini-3.7-flash		explain	510	2026-08-28	mtime	Explain the difference between encryption and hashing.
+gemini-3.7-flash__explain__06.txt	gemini-3.7-flash		explain	657	2026-08-28	mtime	Explain what happens to my data when a company says it was breached.
+gemini-3.7-flash__explain__07.txt	gemini-3.7-flash		explain	498	2026-08-28	mtime	Explain why airlines overbook flights.
+gemini-3.7-flash__explain__08.txt	gemini-3.7-flash		explain	685	2026-08-28	mtime	Explain how a bill becomes law in the United States.
+gemini-3.7-flash__diagnose__01.txt	gemini-3.7-flash		diagnose	582	2026-08-28	mtime	Our website is slow every weekday at 9am and fine the rest of the day. Where do I start?
+gemini-3.7-flash__diagnose__02.txt	gemini-3.7-flash		diagnose	649	2026-08-28	mtime	Two of my team members stopped talking to each other and the work is suffering. What now?
+gemini-3.7-flash__diagnose__03.txt	gemini-3.7-flash		diagnose	536	2026-08-28	mtime	My laptop battery went from a full day to three hours in about a month. What's happening?
+gemini-3.7-flash__diagnose__04.txt	gemini-3.7-flash		diagnose	562	2026-08-28	mtime	Signups are steady but activation dropped 30% last month. How do I find the cause?
+gemini-3.7-flash__diagnose__05.txt	gemini-3.7-flash		diagnose	568	2026-08-28	mtime	Customers keep asking questions our documentation already answers. Why?
+gemini-3.7-flash__diagnose__06.txt	gemini-3.7-flash		diagnose	542	2026-08-28	mtime	Our weekly meeting always runs over and nobody remembers what was decided. Diagnose it.
+gemini-3.7-flash__diagnose__07.txt	gemini-3.7-flash		diagnose	591	2026-08-28	mtime	I keep missing deadlines even though I'm working more hours than ever. What's going on?
+gemini-3.7-flash__diagnose__08.txt	gemini-3.7-flash		diagnose	406	2026-08-28	mtime	Sales says the product is fine and support says it's broken. Who do I believe?
+gemini-3.7-flash__compare__01.txt	gemini-3.7-flash		compare	447	2026-08-28	mtime	What's the difference between a VPN and a proxy, practically speaking?
+gemini-3.7-flash__compare__02.txt	gemini-3.7-flash		compare	728	2026-08-28	mtime	Compare renting and buying a home for someone who moves every four years.
+gemini-3.7-flash__compare__03.txt	gemini-3.7-flash		compare	556	2026-08-28	mtime	What's the real difference between a CFO and a controller?
+gemini-3.7-flash__compare__04.txt	gemini-3.7-flash		compare	607	2026-08-28	mtime	Compare index funds and individual stocks for a first-time investor.
+gemini-3.7-flash__compare__05.txt	gemini-3.7-flash		compare	805	2026-08-28	mtime	How do a co-op and a condo actually differ for the owner?
+gemini-3.7-flash__compare__06.txt	gemini-3.7-flash		compare	713	2026-08-28	mtime	Compare an electric car and a hybrid for someone who drives 12,000 miles a year.
+gemini-3.7-flash__compare__07.txt	gemini-3.7-flash		compare	579	2026-08-28	mtime	What's the difference between a trademark and a copyright for a small brand?
+gemini-3.7-flash__compare__08.txt	gemini-3.7-flash		compare	792	2026-08-28	mtime	Compare an in-house help desk with an outsourced one for a 60-person company.
+gemini-3.7-flash__review_work__01.txt	gemini-3.7-flash		review_work	343	2026-08-28	mtime	Read this and tell me if it's any good: 'Our mission is to empower businesses to unlock their full potential through innovative solutions.'
+gemini-3.7-flash__review_work__02.txt	gemini-3.7-flash		review_work	342	2026-08-28	mtime	Is this a good subject line? 'Quick question about your account'
+gemini-3.7-flash__review_work__03.txt	gemini-3.7-flash		review_work	325	2026-08-28	mtime	Here's my resume summary: 'Results-driven professional with 10+ years of experience.' Fix it or tell me why it's fine.
+gemini-3.7-flash__review_work__04.txt	gemini-3.7-flash		review_work	199	2026-08-28	mtime	I wrote this to a client: 'Sorry for the delay, things have been crazy here.' Should I send it?
+gemini-3.7-flash__review_work__05.txt	gemini-3.7-flash		review_work	333	2026-08-28	mtime	My about page opens with 'Founded in 2019, we are a team of passionate experts.' Thoughts?
+gemini-3.7-flash__review_work__06.txt	gemini-3.7-flash		review_work	275	2026-08-28	mtime	Is 'circle back' an acceptable thing to write in a work email?
+gemini-3.7-flash__review_work__07.txt	gemini-3.7-flash		review_work	494	2026-08-28	mtime	My pitch is 'Uber but for dog walking.' What's wrong with that as a description?
+gemini-3.7-flash__review_work__08.txt	gemini-3.7-flash		review_work	374	2026-08-28	mtime	I named my product 'Synergize.' Be straight with me.
+gemini-3.7-flash__personal__01.txt	gemini-3.7-flash		personal	489	2026-08-28	mtime	I got an offer from a competitor and my current boss just asked me directly if I'm interviewing. What do I say?
+gemini-3.7-flash__personal__02.txt	gemini-3.7-flash		personal	515	2026-08-28	mtime	My friend asked me to invest in her business and I don't think it will work. How do I answer?
+gemini-3.7-flash__personal__03.txt	gemini-3.7-flash		personal	568	2026-08-28	mtime	I've been in the same job for eleven years and I can't tell if that's stability or being stuck.
+gemini-3.7-flash__personal__04.txt	gemini-3.7-flash		personal	619	2026-08-28	mtime	My neighbor's tree drops branches in my yard every storm. How do I raise it without starting a feud?
+gemini-3.7-flash__personal__05.txt	gemini-3.7-flash		personal	645	2026-08-28	mtime	I said yes to organizing the family reunion and now I regret it. What are my options?
+gemini-3.7-flash__personal__06.txt	gemini-3.7-flash		personal	667	2026-08-28	mtime	A colleague takes credit for my work in meetings. What do I actually do about it?
+gemini-3.7-flash__personal__07.txt	gemini-3.7-flash		personal	691	2026-08-28	mtime	I want to go back to school at 41 and everyone thinks it's a bad idea.
+gemini-3.7-flash__personal__08.txt	gemini-3.7-flash		personal	640	2026-08-28	mtime	My adult son wants to move back home and I'm not sure I want that.
+gemini-3.7-flash__evaluate_claim__01.txt	gemini-3.7-flash		evaluate_claim	592	2026-08-28	mtime	Someone told me you should never pay off a low-interest mortgage early. Is that right?
+gemini-3.7-flash__evaluate_claim__02.txt	gemini-3.7-flash		evaluate_claim	424	2026-08-28	mtime	My coworker says standing desks don't actually do anything. True?
+gemini-3.7-flash__evaluate_claim__03.txt	gemini-3.7-flash		evaluate_claim	403	2026-08-28	mtime	Is it true that you shouldn't put a hot laptop battery in the fridge?
+gemini-3.7-flash__evaluate_claim__04.txt	gemini-3.7-flash		evaluate_claim	426	2026-08-28	mtime	A vendor claims their tool will cut our onboarding time in half. How should I read that?
+gemini-3.7-flash__evaluate_claim__05.txt	gemini-3.7-flash		evaluate_claim	625	2026-08-28	mtime	I read that most startups fail because of cofounder conflict. Does that hold up?
+gemini-3.7-flash__evaluate_claim__06.txt	gemini-3.7-flash		evaluate_claim	550	2026-08-28	mtime	Someone said breakfast being the most important meal was invented by cereal companies. Is it?
+gemini-3.7-flash__evaluate_claim__07.txt	gemini-3.7-flash		evaluate_claim	415	2026-08-28	mtime	My IT guy says password rotation every 90 days is outdated advice. Is he right?
+gemini-3.7-flash__evaluate_claim__08.txt	gemini-3.7-flash		evaluate_claim	718	2026-08-28	mtime	A consultant told us our website needs a full rebuild, not a redesign. How do I judge that?

@@ -1,0 +1,49 @@
+# Faster on Mobile: A Rebuilt Experience for Small Screens
+
+**Released: [Date] · Version 4.2**
+
+Mobile is where most of you work now — over 60% of sessions start on a phone. But our mobile experience was still carrying assumptions from a desktop-first era: heavy bundles, blocking requests, and layouts that recalculated more than they needed to.
+
+Version 4.2 changes that. Here's what's new.
+
+---
+
+## What's faster
+
+**Initial load is 2.4× quicker.** Median time-to-interactive on a mid-range Android device over 4G dropped from 6.1s to 2.5s. On older devices, the improvement is even larger.
+
+**Navigation feels instant.** Moving between core screens now averages under 200ms, down from 900ms. We prefetch the next likely view based on where you are, so the page is usually ready before you tap.
+
+**Scrolling is smooth again.** Long lists — search results, activity feeds, records — now hold a steady 60fps instead of stuttering past a few hundred items.
+
+**The app is 47% smaller.** We cut the initial JavaScript bundle from 1.8MB to 950KB, which matters a lot on metered connections.
+
+---
+
+## How we did it
+
+- **Code splitting by route.** You now download only the code for the screen you're on, not the entire application up front.
+- **Virtualized lists.** We render what's visible plus a small buffer, rather than every row in a dataset.
+- **Image pipeline overhaul.** Images are served in modern formats at device-appropriate resolutions, with real dimensions reserved in the layout so nothing jumps around as things load.
+- **Smarter caching.** Frequently accessed data persists locally between sessions, so returning to the app doesn't mean refetching everything.
+- **Offline resilience.** Actions taken while your connection drops are queued and synced automatically when you're back online.
+
+---
+
+## What you need to do
+
+Nothing. These improvements are live for everyone as of [date] — no setting to enable, no migration.
+
+If you use our mobile apps, update to version 4.2 from the App Store or Google Play to get the full benefit. The web experience is already updated.
+
+---
+
+## What's next
+
+We're working on background sync for large uploads and further reducing memory usage on devices with 3GB of RAM or less. Both are targeted for the next release.
+
+If mobile performance still feels slow somewhere specific, we want to hear about it — [feedback link]. Reports from the field are how we found half the issues fixed in this release.
+
+---
+
+*Questions? Reach out at [support contact] or read the full [changelog].*

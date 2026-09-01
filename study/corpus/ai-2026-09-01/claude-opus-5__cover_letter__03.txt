@@ -1,0 +1,45 @@
+# Cover Letter — Junior Software Developer
+
+---
+
+**[Your Name]**
+[City, State] | [Phone] | [Email] | [LinkedIn/GitHub/Portfolio URL]
+
+[Date]
+
+**[Hiring Manager's Name]**
+[Company Name]
+[Company Address or "City, State"]
+
+Dear [Hiring Manager's Name / "Hiring Team"],
+
+I'm writing to apply for the Junior Software Developer position at [Company Name], which I found on [job board/company careers page/referral source]. As a [recent computer science graduate / bootcamp graduate / self-taught developer] with hands-on experience building [web applications / APIs / mobile apps] in [primary language, e.g., Python and JavaScript], I'm excited by the opportunity to contribute to [something specific about the company — a product, mission, or engineering value you genuinely find interesting].
+
+In my most recent role as [internship title / project role] at [Company or Project Name], I [accomplishment with a concrete outcome — e.g., "built a REST API in Node.js and Express that reduced average page load times by 40%" or "collaborated with three developers to ship a customer dashboard used by 500+ users"]. That experience taught me how to [transferable skill — e.g., "write maintainable code, participate in code reviews, and work within an Agile sprint cycle"].
+
+I've also invested significant time outside of formal work in strengthening my skills. For example, I built [personal project name], a [one-sentence description] using [tech stack], which [result — e.g., "taught me database design and authentication from the ground up" or "is currently used by ~200 monthly users"]. You can review the code at [GitHub link].
+
+What draws me to [Company Name] specifically is [genuine, researched reason — e.g., "your team's public commitment to open-source contributions," "the technical challenges of scaling your platform to millions of users," or "your engineering blog post on migrating to microservices, which I found genuinely useful"]. I'm looking for a team where I can learn from experienced engineers while contributing meaningfully from day one, and [Company Name]'s emphasis on [mentorship / code quality / product ownership] makes it exactly that kind of environment.
+
+I would welcome the chance to discuss how my skills in [2–3 key technologies from the job posting] can support your team's goals. Thank you for your time and consideration.
+
+Sincerely,
+**[Your Name]**
+
+---
+
+## Tips for customizing this
+
+**Do this before you send it:**
+- **Replace every bracket.** A letter with `[Company Name]` left in it goes straight to the reject pile.
+- **Mirror the job posting's language.** If they ask for "React and TypeScript," use those exact words rather than "front-end frameworks." Many companies screen with keyword-matching software.
+- **Lead with a real result in paragraph two.** Numbers beat adjectives: "reduced load time by 40%" is far stronger than "improved performance significantly."
+- **Make paragraph four specific.** If your reason for wanting the job could apply to any company, cut it and research something real. Their engineering blog, GitHub org, or recent product launch are good sources.
+
+**Common pitfalls for junior applicants:**
+- Don't apologize for lacking experience ("Although I only have six months of..."). State what you *have* done.
+- Don't just restate your résumé. Use the letter to add context and narrative.
+- Keep it to one page — roughly 250–400 words.
+- Always link your GitHub or portfolio. For junior roles, demonstrated code is often the strongest signal you can send.
+
+If you share the job posting and a bit about your background, I can tailor this into a specific draft for you.

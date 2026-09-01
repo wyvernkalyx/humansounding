@@ -58,7 +58,7 @@ For some claims yes, for others no, and the bootstrap already tells us which.
 | ChatGPT (chat) | 3.52 | [2.17, 5.24] |
 | **AI-favourite vocabulary** | | |
 | Human (Medium) | 0.30 | [0.11, 0.53] |
-| Gemini 3.7 | 0.96 | [0.61, 1.37] |
+| Gemini Flash | 0.96 | [0.61, 1.37] |
 | Claude Opus 5 | 0.18 | [0.05, 0.37] |
 | **paired dashes in a line** | | |
 | Human (Medium) | 0.56 | [0.23, 0.91] |

@@ -1,0 +1,54 @@
+# Introducing Custom Reports: Build the view you actually need
+
+**Available today on all Team and Enterprise plans**
+
+You've been asking for it in support tickets, feature requests, and more than a few pointed comments in our community forum. Today we're shipping Custom Reports — a flexible reporting builder that lets you slice your data however you want, without exporting a single CSV.
+
+## What's new
+
+Until now, reporting meant choosing from eight preset dashboards and hoping one of them answered your question. Custom Reports flips that around. You start with a blank canvas and build up:
+
+- **Pick your metrics.** Choose from 40+ metrics across projects, tasks, time tracking, and team activity. Combine up to six in a single report.
+- **Group and filter freely.** Break down by owner, team, label, status, custom field, or date range. Stack filters to get as specific as you need.
+- **Choose how it looks.** Tables, line charts, bar charts, stacked bars, and single-value scorecards. Switch visualizations without rebuilding the report.
+- **Save and share.** Save reports to your workspace, share them with specific teams, or pin them to a project dashboard so everyone sees the same numbers.
+
+## Scheduled delivery
+
+Reports are only useful if people see them. You can now schedule any saved report to send automatically — daily, weekly, or monthly — to email or a Slack channel. Recipients get a rendered snapshot plus a link to the live report, so nobody has to remember to check in on Monday morning.
+
+## Faster queries on large workspaces
+
+We rebuilt the query layer behind reporting from the ground up. Workspaces with more than 100,000 records should see reports load roughly 5–8x faster than the old dashboards. If you were one of the customers who occasionally hit a timeout, that should be a thing of the past.
+
+## How to get started
+
+1. Head to **Insights → Reports** in the left sidebar.
+2. Click **New report** and pick a starting template, or start from scratch.
+3. Add metrics, set your filters, choose a visualization, and save.
+
+We've also added six prebuilt templates for common questions — team workload, cycle time by project, overdue work by owner, time logged vs. estimated, throughput trends, and project health. They're fully editable, so they double as a decent starting point if you're not sure what you're looking for.
+
+## What's not in this release
+
+A few things we know you'll ask about:
+
+- **Cross-workspace reporting** isn't supported yet. Reports are scoped to a single workspace.
+- **PDF export** is coming next month. For now you can export to CSV or share a live link.
+- **Custom formulas** (e.g., calculated metrics combining two fields) are on the roadmap for Q3.
+
+## Pricing and availability
+
+Custom Reports is included at no additional cost on Team and Enterprise plans, rolling out to all workspaces over the next 48 hours. Starter plans keep access to the preset dashboards and can create up to three custom reports.
+
+## Tell us what breaks
+
+This is a big change to a part of the product a lot of you use daily. If a report doesn't return what you expect, or you're missing a metric you relied on, reply to this post or ping us at support@[yourproduct].com — we're watching feedback closely for the next couple of weeks and shipping fixes fast.
+
+---
+
+*Want to see it in action? [Join our 20-minute walkthrough](#) on Thursday at 11am ET.*
+
+---
+
+I made up the product and specifics here. If you tell me the actual product, feature details, audience (existing users vs. prospects), and channel (blog, in-app changelog, email), I can rewrite this to fit.

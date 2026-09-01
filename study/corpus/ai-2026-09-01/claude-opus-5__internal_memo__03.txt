@@ -1,0 +1,55 @@
+**MEMORANDUM**
+
+**TO:** All Customer Service Team Members
+**CC:** Department Managers, Human Resources
+**FROM:** [Name], VP of Customer Experience
+**DATE:** [Date]
+**SUBJECT:** Reorganization of the Customer Service Team, Effective [Date]
+
+---
+
+**Purpose**
+
+I'm writing to share details of an upcoming reorganization of our Customer Service team, which will take effect on **[Date]**. This memo outlines what is changing, why we're making these changes, and what you can expect over the coming weeks.
+
+**Why We're Making This Change**
+
+Over the past [18 months], our customer base has grown by roughly [X]%, and the mix of issues we handle has shifted significantly toward [technical support / account and billing inquiries]. Our current generalist structure has served us well, but it has led to longer resolution times on complex cases and inconsistent handoffs between shifts.
+
+The new structure is designed to:
+
+- Reduce average resolution time by routing issues to specialized teams
+- Create clearer escalation paths and ownership of complex cases
+- Give team members deeper expertise and more defined growth tracks
+
+**What's Changing**
+
+Effective [Date], the Customer Service team will be organized into three specialized pods:
+
+1. **Frontline Support** — Handles first-contact inquiries across all channels (phone, email, chat). Led by [Name].
+2. **Technical Resolution** — Owns escalated technical issues and complex troubleshooting. Led by [Name].
+3. **Accounts & Billing** — Manages billing disputes, subscription changes, and account administration. Led by [Name].
+
+Each pod will operate with dedicated queues and its own performance metrics. A new **Escalation Desk**, staffed on a rotating basis, will manage handoffs between pods to ensure no customer is passed back and forth.
+
+**What This Means for You**
+
+- **Roles and reporting lines:** Every team member will be assigned to one of the three pods. Your manager will meet with you individually between [Date] and [Date] to discuss your assignment.
+- **Compensation and job security:** This reorganization does **not** involve any reduction in headcount. No positions are being eliminated, and no one's compensation or benefits will change as a result of this restructuring.
+- **Training:** Pod-specific training will run from [Date] to [Date]. Schedules will be distributed by [Date], and training hours are fully paid and count toward your regular schedule.
+- **Shifts:** Current shift assignments remain unchanged for now. Any future adjustments will be discussed with at least [two weeks'] notice.
+
+**Timeline**
+
+| Date | Milestone |
+|---|---|
+| [Date] | Individual assignment conversations begin |
+| [Date] | Pod training begins |
+| [Date] | New structure goes live |
+| [Date] | 30-day check-in and feedback session |
+
+**Questions and Feedback**
+
+I know reorganizations can raise questions, and I want to address them directly. I'll be holding an all-hands Q&A on **[Date] at [Time]** in [Location / video link]. You're also welcome to raise questions with your current manager, with [HR Contact Name] in Human Resources, or with me directly at [email].
+
+Thank you for the work you do every day. The changes described here are a direct response to the growth you've helped create, and I'm confident this structure will make your work more focused and more rewarding.

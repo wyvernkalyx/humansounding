@@ -1,0 +1,54 @@
+Here's a ready-to-send draft. I've built it around a sample feature ("Auto Status Updates") — swap in your actual feature details and it'll hold up.
+
+---
+
+**Subject line options:**
+1. Stop chasing status updates. Seriously.
+2. Your Monday standup just got 20 minutes shorter
+3. New in [Product]: status reports that write themselves
+
+**Preview text:** No more "quick check-in" pings. Here's what's new.
+
+---
+
+**Body:**
+
+Hi [First Name],
+
+You know the drill. It's Thursday afternoon, the client wants an update, and you're pinging five people to find out what actually got done this week.
+
+We built something to end that.
+
+**Introducing Auto Status Updates** — available today in [Product Name].
+
+[Product] now pulls activity from your boards, tasks, and comments and turns it into a clean, shareable summary. Progress, blockers, what's next. No forms to fill out, no one to chase.
+
+**What you can do with it:**
+
+- **Generate a project update in one click** — or schedule it to send itself every Friday at 4pm
+- **Share externally without giving away access** — clients see a clean summary, not your messy backlog
+- **Catch blockers earlier** — flagged tasks surface automatically, so nothing sits stuck for a week
+
+Teams in our beta cut status meeting time by an average of [X]% — and stopped writing weekly recaps entirely.
+
+[**Try Auto Status Updates →**]
+
+It's live in your account now. Open any project, click **Updates** in the top nav, and generate your first one in about 30 seconds.
+
+Questions? Just hit reply — a real human reads these.
+
+[Name]
+[Title], [Product Name]
+
+*P.S. Want to see it in action first? [Watch the 90-second demo →]*
+
+---
+
+**Notes for adapting it:**
+
+- **Lead with the pain, not the feature.** The first two lines should describe a moment your user recognizes.
+- **Three benefits max.** More than that and people skim past all of them.
+- **One primary CTA.** The P.S. demo link is secondary — it catches people who aren't ready to click the main button.
+- **Swap the stat** for a real beta number, a customer quote, or cut it. Vague stats hurt more than they help.
+
+If you tell me the actual feature, who it's for (admins? end users? free-tier users you're trying to upgrade?), and your brand voice, I can tighten this up considerably.

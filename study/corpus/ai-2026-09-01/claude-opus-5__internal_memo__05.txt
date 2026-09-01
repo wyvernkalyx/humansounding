@@ -1,0 +1,68 @@
+# MEMORANDUM
+
+**TO:** All Employees
+**FROM:** [Name], Vice President of People Operations
+**DATE:** [Date]
+**SUBJECT:** Changes to the Annual Performance Review Process, Effective [Cycle Year]
+
+---
+
+## Purpose
+
+Beginning with the [Year] cycle, we are making four changes to how we conduct performance reviews. This memo outlines what is changing, why, and what you need to do.
+
+## Why We're Making These Changes
+
+Feedback from last year's engagement survey and manager focus groups pointed to three consistent problems: reviews arrived too late to be useful, ratings felt disconnected from day-to-day work, and compensation discussions overshadowed conversations about growth. The changes below address each of those issues directly.
+
+## What Is Changing
+
+**1. Quarterly check-ins replace the mid-year review.**
+Instead of one formal mid-year conversation, managers and employees will hold documented check-ins at the end of each quarter. These are intended to be brief — 30 minutes — and focused on progress against goals, obstacles, and support needed. The annual review will summarize these conversations rather than introduce new feedback.
+
+**2. Compensation decisions are separated from development conversations.**
+Performance reviews will be conducted in [Month]. Compensation and promotion decisions will be communicated in [Month + 2]. This separation is intended to let the review conversation focus on growth without the distraction of a pending salary number. Reviews will still inform compensation decisions; the timing is simply decoupled.
+
+**3. The rating scale is changing from five levels to four.**
+The new scale removes the ambiguous middle category that previously absorbed roughly 70% of all ratings:
+
+| Rating | Definition |
+|---|---|
+| Exceptional | Consistently exceeded expectations and expanded scope |
+| Strong | Met all expectations and exceeded several |
+| Developing | Met most expectations; specific gaps identified |
+| Not Meeting | Significant gaps requiring a documented improvement plan |
+
+We are also discontinuing forced distribution. Managers will no longer be required to fit their teams to a predetermined curve. Calibration sessions will continue to ensure consistency across departments.
+
+**4. Peer feedback becomes structured and limited.**
+Each employee will select three peers, and their manager may add up to two. Peer feedback will be collected through a standardized four-question form and shared with the employee in themed summary rather than verbatim. Unsolicited peer input outside this process will not be included in reviews.
+
+## Timeline
+
+| Date | Milestone |
+|---|---|
+| [Date] | Goal-setting deadline for all employees |
+| [Date] | Q1 check-in window opens |
+| [Date] | Peer reviewer selections due |
+| [Date] | Self-assessments due |
+| [Date] | Manager reviews due |
+| [Date] | Calibration sessions |
+| [Date] | Review conversations held |
+| [Date] | Compensation communicated |
+
+## What You Need to Do
+
+**All employees:** Complete goal-setting in [System] by [Date]. Goals should be specific enough that a colleague outside your team could tell whether you met them.
+
+**Managers:** Attend one of the three training sessions on the new rating scale and calibration process. Sessions are scheduled for [Dates]; register through [Link]. Attendance is required before you can submit reviews.
+
+## What Is Not Changing
+
+The review period remains [Month] through [Month]. Promotion eligibility criteria are unchanged. Employees on performance improvement plans continue under their existing terms.
+
+## Questions
+
+Submit questions to [email] or attend the open Q&A on [Date] at [Time]. A detailed FAQ and updated manager guide are available at [Link].
+
+We recognize that process changes create short-term friction, and we appreciate your patience as we work through the first cycle. If something isn't working, tell us — we would rather adjust in year one than wait.

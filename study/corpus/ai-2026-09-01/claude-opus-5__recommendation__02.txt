@@ -1,0 +1,42 @@
+[Your Name]
+[Your Title]
+[Department]
+[Company Name]
+[Date]
+
+**To:** [Hiring Manager's Name], [Title]
+**Re:** Recommendation for [Employee's Name] — [Position Title], [Department/Req #]
+
+Dear [Hiring Manager's Name],
+
+I am writing to enthusiastically recommend [Employee's Name] for the [Position Title] role in [Department]. As [his/her/their] [direct manager/team lead/senior colleague] for the past [X years], I have had the opportunity to observe [First Name]'s work closely, and I believe [he/she/they] is exceptionally well prepared for the added scope and responsibility this position requires.
+
+Since joining our team as [current title] in [month/year], [First Name] has consistently exceeded expectations. Among [his/her/their] most notable contributions:
+
+- **[Accomplishment 1]:** [Describe the project or initiative and the measurable result — e.g., "Led the migration of our reporting pipeline, reducing month-end close time from 12 days to 7 and eliminating roughly 20 hours of manual work per cycle."]
+- **[Accomplishment 2]:** [Include scope, stakeholders involved, and outcome.]
+- **[Accomplishment 3]:** [Highlight something that maps directly to the requirements of the new role.]
+
+Beyond results, what distinguishes [First Name] is [his/her/their] [key quality — e.g., judgment under pressure, ability to build trust across functions, ownership mentality]. [Give a brief, concrete example: "When our vendor missed a critical deadline last spring, [First Name] proactively assembled a contingency plan, briefed leadership within 24 hours, and kept the client relationship intact — without being asked to do so."] [He/She/They] is also a genuine multiplier for those around [him/her/them], having [mentored two junior analysts / documented processes the whole team now relies on / led onboarding for new hires].
+
+The [Position Title] role calls for [name one or two core requirements, e.g., "managing competing priorities across multiple business units and influencing without direct authority"]. [First Name] has already been operating at this level informally by [example]. In my view, this promotion would formalize responsibilities [he/she/they] has effectively grown into rather than ask [him/her/them] to stretch into something untested.
+
+If I were to note an area of continued development, it would be [brief, honest, and framed constructively — e.g., "delegating more readily rather than absorbing work personally"]. To [First Name]'s credit, [he/she/they] has actively sought feedback on this and made visible progress over the past [timeframe].
+
+I recommend [First Name] for this promotion without reservation, and I am confident [he/she/they] will succeed in it. While [his/her/their] departure would be a real loss to my team, [his/her/their] growth is the right outcome for [him/her/them] and for [Company Name]. Please feel free to contact me at [phone] or [email] if you would like to discuss [First Name]'s candidacy further.
+
+Sincerely,
+
+[Your Name]
+[Your Title]
+[Contact Information]
+
+---
+
+**Tips for customizing:**
+- **Be specific and quantify where possible.** "Improved customer satisfaction scores from 82% to 91%" carries far more weight than "is great with customers."
+- **Mirror the job posting.** Pull two or three key requirements from the internal listing and address them directly.
+- **Include one honest development note.** Internal readers know the candidate; a letter with zero balance reads as boilerplate and loses credibility.
+- **Keep it to one page.** Three to four tight paragraphs beat two pages of adjectives.
+
+If you share the employee's name, current and target roles, and a few accomplishments, I'm happy to draft a fully written version.

@@ -1,0 +1,57 @@
+# Sunsetting the [Integration Name] integration
+
+**Posted [Date] · [Product] Changelog**
+
+## What's changing
+
+On **[Sunset Date]**, we're retiring the [Integration Name] integration. After that date, the integration will stop syncing and will be removed from your workspace's Integrations page.
+
+We're replacing it with **[New Integration/Method]**, which supports [key improvement: e.g., two-way sync, custom field mapping, real-time updates] and is available to all plans today.
+
+## Why we're doing this
+
+The [Integration Name] integration was built on [legacy API / deprecated protocol], which [vendor] no longer supports. Keeping it running has meant [brief, honest reason: increasingly frequent sync failures / a maintenance burden that slows down work on the rest of the platform]. Rather than patch it further, we've invested that effort into [New Integration], which we can support properly for the long haul.
+
+## What this means for you
+
+**If you don't use [Integration Name]:** Nothing changes. You can ignore this update.
+
+**If you do use it:** You'll need to migrate to [New Integration] before [Sunset Date]. The migration takes about [X minutes] and preserves your existing [data/mappings/history]. We've written a step-by-step guide here: **[link]**.
+
+Any data already synced into [Product] will remain in place. Nothing will be deleted.
+
+## Key dates
+
+| Date | What happens |
+|---|---|
+| [Date] | [New Integration] available to all workspaces |
+| [Date] | [Integration Name] hidden from new installs; existing connections keep working |
+| [Date] | In-app reminders begin for affected workspaces |
+| **[Sunset Date]** | **[Integration Name] stops syncing and is removed** |
+
+## How to migrate
+
+1. Go to **Settings → Integrations** and select **[New Integration]**.
+2. Authorize your [vendor] account.
+3. Review your field mappings — we'll pre-fill them from your existing setup.
+4. Confirm, then disconnect the old integration.
+
+Full instructions, including how to handle [common edge case, e.g., custom field mappings or multiple connected accounts], are in the **[migration guide]**.
+
+## Questions?
+
+Reply to this post, reach us at **[support email]**, or book time with our team at **[link]**. If you have a complex setup or a large volume of historical data, contact us before [Date] and we'll help you plan the move.
+
+We know integration changes create work you didn't ask for, and we don't take that lightly. Thanks for bearing with us.
+
+— The [Product] Team
+
+---
+
+**A few notes on adapting this:**
+
+- **Give real lead time.** 60–90 days is typical; 30 is the floor if the integration is load-bearing for customers' workflows.
+- **Be specific about "why."** Vague reasons ("to focus on our core experience") read as evasive. A concrete cause builds trust.
+- **Segment the message** if you can — customers actively using the integration should get a direct email, not just a changelog entry.
+- **Say what happens to existing data** explicitly. It's the first question people ask.
+- **Don't over-apologize.** One honest acknowledgment at the end lands better than hedging throughout.

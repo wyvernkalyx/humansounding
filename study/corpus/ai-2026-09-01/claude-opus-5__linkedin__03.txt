@@ -1,0 +1,28 @@
+Here's a post you can adapt — I've left brackets where your specifics should go, since the details are what make these posts land.
+
+---
+
+**We spent eight months building something nobody wanted.**
+
+Last year, my team launched [project]. We'd done the work: research, roadmap, a build we were genuinely proud of. Six weeks after launch, we shut it down.
+
+Three things I took away:
+
+**1. Enthusiasm isn't validation.**
+Twenty people told us they loved the idea. Zero of them had asked for it, and none of them changed what they were doing to use it. "This is interesting" and "I need this" sound similar in a discovery call. They aren't.
+
+**2. The warning signs showed up early — we explained them away.**
+Low engagement in the pilot. A pushed deadline nobody flagged. We had a reason for each one. What we didn't have was the willingness to ask whether those reasons pointed at the same problem.
+
+**3. Killing it three months earlier would have been the win.**
+By month five, most of us privately suspected it wouldn't work. Nobody wanted to be the one to say it out loud. That silence cost more than the failure did.
+
+I'm not going to frame this as a blessing in disguise. It was expensive, and it was humbling.
+
+But I ask sharper questions now — and I say the uncomfortable thing sooner.
+
+If you've killed a project you cared about: what made you finally call it?
+
+---
+
+Want me to adjust the tone (more analytical, more conversational), shorten it, or tailor it to your actual project? If you share what happened, I can make it specific rather than generic — that's usually the difference between a post people scroll past and one they respond to.

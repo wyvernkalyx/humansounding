@@ -1,0 +1,119 @@
+**Subject line:** The morning routine problem isn't the morning
+
+---
+
+# The 6 A.M. Fantasy (and What Actually Works)
+
+Somewhere on the internet right now, a man is describing his morning. He wakes at 4:30. Cold plunge. Twenty minutes of meditation. Journaling, three pages. A workout. Green juice. Ninety minutes of "deep work" before the world stirs.
+
+You read it. You feel a surge of resolve. You set an alarm.
+
+Day one goes great. Day two is fine. Day four you sleep through it, day five you don't bother, and by day eight the whole thing has quietly joined the graveyard of previous selves you meant to become.
+
+This isn't a discipline problem. It's a design problem. Here's how to fix it.
+
+---
+
+## Why morning routines collapse
+
+**You inherited someone else's routine.** That 4:30 protagonist likely has no kids, controls his own calendar, and gets paid to have an impressive morning. You are borrowing the output of his life circumstances and wondering why it doesn't fit yours.
+
+**You built for your best day.** Most routines are designed by a well-rested, motivated version of you on a Sunday evening. Then they get executed by a version of you who slept badly, has a 9 a.m. meeting, and woke up already behind. A routine that only works on good mornings will only survive good mornings.
+
+**You made it a morning problem.** The single biggest predictor of how your morning goes is what time you fell asleep and what state you left the house in. You cannot out-discipline a 1 a.m. bedtime.
+
+---
+
+## The build
+
+### 1. Pick one keystone action
+
+Not five. One.
+
+Ask yourself: *if I did only one thing before 9 a.m., which one would make the rest of the day measurably better?* For some people it's twenty minutes of movement. For others it's writing before the inbox opens. For others it's simply eating breakfast sitting down.
+
+You are not trying to have an impressive morning. You are trying to install one reliable thing. Everything else can be added in month three, once the foundation holds weight.
+
+### 2. Anchor it to a behavior, not a time
+
+"I'll meditate at 6:15" fails the moment you wake at 6:40. "After I pour my coffee, I sit in the armchair for five minutes" survives, because the anchor moves with you.
+
+The formula: **After [existing habit], I will [new habit] in [specific location].**
+
+The existing habit has to be genuinely automatic — brushing teeth, starting the kettle, closing the bathroom door. Not "after I wake up feeling motivated."
+
+### 3. Make the first version embarrassingly small
+
+Your instinct will be to start with thirty minutes. Start with five. Or two.
+
+This feels like cheating. It isn't, because in the first month you are not building fitness or a writing practice — you are building the *identity of someone who does this*. Two minutes of yoga, done for twenty-one consecutive days, is worth vastly more than three heroic hour-long sessions followed by silence.
+
+The scale-up happens on its own. Once the behavior is automatic, extending it is trivial. Once it's abandoned, restarting is brutal.
+
+### 4. Do the setup the night before
+
+This is the part everyone skips and it's the part that actually works. Morning-you has almost no capacity for decisions or friction. So remove both, the night before, while you still have some executive function left:
+
+- Clothes out (workout gear counts as a decision eliminated)
+- Coffee loaded, kettle filled
+- Book, notebook, or mat physically placed where you'll be
+- One sentence written down: the first task you'll open tomorrow
+- Phone charging in another room
+
+That last one is the highest-leverage change on this list. If your first act is scrolling, you've handed your most cognitively fresh forty minutes to strangers with an advertising budget. Buy a $12 alarm clock. It's the best productivity purchase you'll make this year.
+
+### 5. Fix your wake time before you fix your wake hour
+
+Consistency beats earliness. A steady 7 a.m. every day — weekends included, within an hour — will do more for your energy than an inconsistent 5:30 that you crash-recover from on Saturday.
+
+If you do want to shift earlier, move in 15-minute increments, one increment per week, and move your *bedtime* first. Waking earlier without sleeping earlier isn't a routine. It's just sleep deprivation with a nice notebook.
+
+---
+
+## Build your Minimum Viable Morning
+
+This is the piece almost no one has, and it's the one that determines whether your routine survives past week three.
+
+Write down two versions:
+
+**The full version.** What you do on a normal day. Say: coffee, twenty minutes of reading, a walk, planning the day. Forty-five minutes.
+
+**The MVM.** What you do when you slept four hours, the kid is sick, you're in a hotel, or you woke up at 8:52 with a call at 9. Say: coffee, two pages, three deep breaths. Four minutes.
+
+The MVM is not failure. It's the whole point. It keeps the chain intact on the days that would otherwise break it — and those days are what actually kill routines, not a lack of ambition on the good ones.
+
+**The recovery rule: never miss twice.** One missed morning is noise. Two is the beginning of a new pattern. Whatever happened yesterday, tomorrow you do the MVM, no negotiation, no guilt tax.
+
+---
+
+## A note on timelines
+
+The "21 days to a habit" thing is a myth — it traces back to a 1960s plastic surgeon's observation about patients adjusting to their new faces, and it has haunted us ever since.
+
+The actual research (Lally et al., 2010, if you want the source) found a median of **66 days** to automaticity, with a range from 18 to 254 depending on the person and the complexity of the behavior.
+
+So: give it two months before you judge it. And if it still feels effortful at week six, that's normal, not evidence you've failed.
+
+---
+
+## This week's experiment
+
+Don't overhaul anything. Just do this:
+
+1. **Choose one keystone action.** Write it down.
+2. **Name its anchor.** "After I ______, I will ______."
+3. **Shrink it** to a version that takes under five minutes.
+4. **Write your MVM** — the ninety-second emergency version.
+5. **Tonight, do the setup.** Clothes, coffee, phone out of the bedroom.
+
+Then run it for seven days and notice what breaks. The breakage is the useful data — it tells you where the friction actually lives, which is almost never where you assumed.
+
+Reply and tell me what you picked. I read everything.
+
+See you next week,
+
+**— [Your name]**
+
+---
+
+*P.S. If you've tried and failed at this four times already: that's not a character flaw, it's four rounds of prototyping. The people with enviable morning routines mostly didn't get them right the first time either. They just kept shrinking the thing until it was small enough to survive a bad week.*

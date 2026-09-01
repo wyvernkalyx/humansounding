@@ -1,0 +1,52 @@
+Below is a complete letter you can adapt. I've used bracketed placeholders for details — the more specific anecdotes and evidence you can substitute in, the stronger it will be. (If you tell me the student's field, your relationship to them, and a few of their accomplishments, I can tailor it precisely.)
+
+---
+
+[Letterhead / Department Name]
+[University Name]
+[Address]
+
+[Date]
+
+Graduate Admissions Committee
+[Program Name]
+[Institution]
+
+**Re: Letter of Recommendation for [Student Full Name]**
+
+Dear Members of the Admissions Committee,
+
+It is a genuine pleasure to write in strong support of [Student Name]'s application to the [degree, e.g., Ph.D.] program in [field] at [Institution]. I am [Your Title] in the Department of [Department] at [University], where I have known [Student] for [length of time] as [their instructor in X and Y / their research advisor / their thesis supervisor]. Over [number] years of teaching and advising undergraduates, I can say without hesitation that [Student] ranks among the top [e.g., 5%] of students I have worked with, and I recommend [them] to you with my highest enthusiasm.
+
+I first came to know [Student] in my [course name and level] course, a demanding class of [number] students that emphasizes [brief description of the challenge — e.g., primary-source analysis, formal proof-writing, experimental design]. [Student] earned [grade / distinction], but the raw mark understates what set [them] apart. [Insert a specific illustration: e.g., "In a unit where most students were content to summarize the assigned readings, [Student] noticed an inconsistency between two of the studies we discussed and wrote an unassigned three-page memo tracing it to a difference in how the authors operationalized their key variable. It was the kind of question I would expect from a second-year graduate student."]
+
+[Student]'s research potential became even clearer when [they] joined my [lab / project] in [semester/year] to work on [brief description of the project]. [Student] took responsibility for [specific tasks — e.g., building the coding scheme, running the assays, cleaning and analyzing the dataset], and [describe growth in independence: e.g., "within two months was troubleshooting problems in the protocol without prompting and proposing modifications that we ultimately adopted"]. This work resulted in [outcome: a conference presentation at X, a co-authored manuscript under review at Y, an honors thesis awarded Z]. What impressed me most was [Student]'s response to setbacks: when [describe a failure or dead end], [they] [describe the constructive response]. Research rewards that particular kind of resilience, and it is not something one can teach.
+
+Beyond technical ability, [Student] has the intellectual and personal qualities that make for a productive colleague. [They] write with unusual clarity — [their] [thesis / seminar paper] on [topic] needed almost no editing from me, and I now share it with subsequent students as a model. [They] are also generous with peers: [specific example, e.g., "[Student] voluntarily organized a weekly problem-solving session for classmates struggling with the statistics component, and several told me it was the reason they passed the course."] In our meetings, [Student] listens carefully to criticism, distinguishes the substance of an objection from its delivery, and revises accordingly — an underrated trait, and one that predicts success in doctoral training better than almost anything else I observe.
+
+[Optional paragraph, if applicable: I should note that [Student] accomplished all of this while [relevant context — e.g., working twenty hours a week to support [their] education / as a first-generation college student / while completing a demanding double major]. In light of those circumstances, [their] record strikes me as all the more remarkable.]
+
+[Student]'s fit with your program is excellent. [Their] interest in [specific research area] aligns closely with the work of [Faculty Name(s)], particularly [brief note on the connection]. [Student] and I have discussed [their] goals at length, and [they] have thought carefully and realistically about what a research career entails — [they] are pursuing this path with clear eyes and for the right reasons.
+
+In sum, [Student] combines genuine intellectual curiosity, technical skill, strong writing, and the persistence that sustained research demands. I expect [them] to make real contributions to [field], and I would gladly welcome [them] as a graduate student in my own group. I recommend [them] to you in the strongest possible terms.
+
+Please do not hesitate to contact me at [email] or [phone] if I can provide any further information.
+
+Sincerely,
+
+[Signature]
+
+[Your Full Name]
+[Your Title]
+[Department, University]
+[Email] | [Phone]
+
+---
+
+**A few notes for strengthening it:**
+
+- **Specifics beat adjectives.** One concrete anecdote ("she found the error in the published dataset") does more work than three sentences of praise.
+- **Comparative statements carry weight.** Committees read hundreds of letters; "top 3 of the ~200 students I've taught" is far more informative than "outstanding."
+- **Name the relationship's depth honestly.** If you only had the student in one large lecture, say so — an over-claimed letter reads as hollow. It's better to be a credible modest voice than an implausible superlative one.
+- **Address the specific program.** A sentence naming faculty or resources signals that the application is considered rather than scattershot.
+- **Length:** one to two pages. Two full pages is standard for a research-oriented Ph.D. application.

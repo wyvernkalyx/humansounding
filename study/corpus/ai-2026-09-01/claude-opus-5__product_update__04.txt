@@ -1,0 +1,69 @@
+# Single Sign-On (SSO) is here
+
+**[Product Name] now supports SAML 2.0 and OIDC single sign-on**, so your team can log in with the identity provider you already use — and you can stop managing passwords one account at a time.
+
+---
+
+## What's new
+
+**Log in with your existing IdP.** Users authenticate through your identity provider and land directly in [Product Name]. No separate password to create, rotate, or forget.
+
+**Works with your stack.** We support any SAML 2.0 or OIDC-compliant provider, with tested setup guides for:
+
+- Okta
+- Microsoft Entra ID (formerly Azure AD)
+- Google Workspace
+- OneLogin
+- JumpCloud
+- Ping Identity
+
+**Just-in-time (JIT) provisioning.** New users get an account automatically the first time they sign in — no manual invites, no waiting on an admin.
+
+**Role mapping.** Map IdP groups to [Product Name] roles so people get the right permissions from day one, and lose them automatically when their group membership changes.
+
+**Enforced SSO.** Optionally require SSO for everyone in your workspace, disabling password and magic-link logins so there's exactly one way in.
+
+**Domain claiming.** Verify your email domain to make sure every account created with it routes through your IdP.
+
+---
+
+## Why it matters
+
+- **Faster onboarding and offboarding.** Deactivating someone in your IdP removes their access here too — immediately.
+- **Fewer credentials to attack.** No standalone passwords means no reused or phished passwords.
+- **Centralized policy.** Your MFA, conditional access, and session rules now apply to [Product Name] automatically.
+- **Cleaner audits.** Access decisions live in one system, with a single log to review.
+
+---
+
+## How to turn it on
+
+1. Go to **Settings → Security → Single Sign-On**.
+2. Choose **SAML** or **OIDC** and copy the ACS URL and Entity ID into your identity provider.
+3. Paste your IdP metadata URL (or upload the XML) back into [Product Name].
+4. Test the connection with your own account.
+5. Flip on **Require SSO** when you're ready to enforce it org-wide.
+
+Most teams finish in under 15 minutes. Full walkthroughs live in the [SSO documentation](#), including provider-specific guides and a troubleshooting checklist.
+
+---
+
+## Availability
+
+SSO is included on **[Business and Enterprise plans]** starting today, at no additional cost. Existing customers on those plans can enable it right now — no upgrade or sales call required.
+
+On a different plan? [See pricing](#) or [talk to us](#) about what makes sense for your team.
+
+---
+
+## What's next
+
+SSO is the first piece of a larger identity roadmap. Coming over the next few months:
+
+- **SCIM provisioning** for full directory sync, including automatic deprovisioning
+- **Multiple IdP connections** per workspace, for organizations with subsidiaries or acquisitions
+- **Session controls**, including configurable idle timeouts and forced re-authentication
+
+---
+
+**Questions or a provider we don't list yet?** Reply to this post, email [support@example.com](#), or ping us in [community channel]. We'd like to hear how the setup went.

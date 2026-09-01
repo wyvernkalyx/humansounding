@@ -1,0 +1,50 @@
+**MEMORANDUM**
+
+**TO:** All Employees
+**FROM:** [Name], [Title — e.g., Director of Information Security]
+**DATE:** [Date]
+**SUBJECT:** Mandatory Security Awareness Training — Completion Required by [Deadline]
+
+---
+
+**Overview**
+
+Effective [start date], all employees are required to complete a new Security Awareness Training program. This training replaces our previous annual module and reflects recent changes in the threat landscape, including a significant increase in phishing and social engineering attempts targeting our industry.
+
+**Why This Matters**
+
+Over the past [time period], we have seen a [X]% increase in attempted phishing attacks against company accounts. Human judgment remains our strongest defense — and our most common point of failure. This training is designed to give you practical tools to recognize and report threats before they cause harm.
+
+**What the Training Covers**
+
+- Identifying phishing, smishing, and pretexting attempts
+- Password hygiene and multi-factor authentication
+- Safe handling of sensitive and customer data
+- Device and remote-work security practices
+- How and when to report a suspected incident
+
+**Time Commitment and Format**
+
+The training consists of [number] modules totaling approximately [XX] minutes. It is self-paced and can be completed in multiple sittings. Modules are available at [platform/URL] using your standard company credentials. A short knowledge check follows each module; a score of [XX]% or higher is required to pass.
+
+**Deadline**
+
+All employees must complete the training by **[day, date]**. Managers will receive weekly completion reports for their teams. Please treat this as a work priority — time spent on the training is compensated and should be recorded as [time code, if applicable].
+
+**Support**
+
+- Technical issues with the platform: [IT Help Desk contact]
+- Questions about content or requirements: [Security team contact]
+- Accommodation requests (accessibility, language, scheduling): [HR contact]
+
+**Next Steps**
+
+1. Watch for an enrollment email from [sender] on [date].
+2. Log in at [URL] and complete all modules by [deadline].
+3. Save or forward your completion certificate to [recipient, if required].
+
+Thank you for taking this seriously. Security is a shared responsibility, and the few minutes you invest here protect our colleagues, our customers, and our business.
+
+[Name]
+[Title]
+[Contact information]

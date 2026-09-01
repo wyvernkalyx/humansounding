@@ -92,7 +92,7 @@ Counting both punctuations:
 |---|---|---|---|
 | Human (Medium) | 21 | 14 | 60% |
 | Claude Opus 5 | 34 | 1 | 97% |
-| Gemini 3.7 | 53 | 1 | 98% |
+| Gemini Flash | 53 | 1 | 98% |
 | ChatGPT (chat) | 49 | 0 | 100% |
 | GPT-5.5 | 78 | 4 | 95% |
 
@@ -122,7 +122,7 @@ long-form. Restricting every model to blog posts and newsletters:
 |---|---|---|
 | Human (Medium) | 26,883 | 1.30 |
 | Claude Opus 5 | 5,441 | 1.10 |
-| Gemini 3.7 | 7,800 | 1.67 |
+| Gemini Flash | 7,800 | 1.67 |
 | ChatGPT (chat) | 6,696 | 2.39 |
 | GPT-5.5 | 11,906 | 2.27 |
 

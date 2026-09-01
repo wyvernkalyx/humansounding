@@ -19,7 +19,7 @@ the same mistake I made three weeks ago, so I wanted to write it up properly.
   recorded, so I cannot tell you how many distinct writers are in there; the
   topics span forty unrelated subjects, but that is an impression and not a
   record. I am stating it because the main finding below does not depend on it.
-- **AI sets:** 40 documents each from Claude Opus 5, Gemini 3.7 Flash, an OpenAI
+- **AI sets:** 40 documents each from Claude Opus 5, Google's Gemini Flash, an OpenAI
   chat model, and GPT-5.5, across eight genres. Prompts never mention style.
   Written to files by API, so they arrive as markdown.
 
@@ -30,7 +30,7 @@ Corpus and method: https://github.com/wyvernkalyx/humansounding
 `decorative-formatting` produced **750 of 1,016 total findings** across all 456
 documents. Rates per 1,000 words:
 
-| rule | Human | Claude Opus 5 | Gemini 3.7 | ChatGPT | GPT-5.5 |
+| rule | Human | Claude Opus 5 | Gemini Flash | ChatGPT | GPT-5.5 |
 |---|---|---|---|---|---|
 | decorative-formatting | 0.00 | 0.05 | **9.83** | 0.18 | 1.83 |
 | dash-cluster | 0.51 | 1.69 | 0.10 | 0.62 | 0.00 |

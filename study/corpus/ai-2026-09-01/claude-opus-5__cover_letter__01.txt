@@ -1,0 +1,40 @@
+# Cover Letter — Operations Manager
+
+**[Your Name]**
+[City, State] | [Phone] | [Email] | [LinkedIn]
+
+[Date]
+
+[Hiring Manager Name]
+[Title]
+[Company Name]
+[City, State]
+
+Dear [Mr./Ms./Hiring Manager Name],
+
+I'm writing to apply for the Operations Manager position at [Company Name]. With [X] years of experience managing high-volume distribution and transportation operations — most recently overseeing a [size] sq. ft. facility, a team of [#], and [$X]M in annual freight spend — I'm drawn to [Company Name]'s reputation for [specific detail: e.g., its expanding cold-chain network, its 99%+ on-time delivery record, its recent acquisition of X]. I'd like to bring my track record of tightening execution while controlling cost to your operation.
+
+In my current role as [Your Title] at [Current Employer], I own daily performance across [inbound/outbound/last-mile/warehousing] and have delivered results including:
+
+- **Reduced cost per shipment by [X]%** by re-sequencing delivery routes and renegotiating rates with three regional carriers, saving approximately [$X] annually.
+- **Improved on-time-in-full performance from [X]% to [Y]%** through revised dock scheduling, daily tier meetings, and a simple KPI dashboard that gave supervisors real-time visibility.
+- **Cut turnover on the night shift by [X]%** by restructuring shift handoffs, standardizing onboarding, and building a cross-training matrix that also raised labor flexibility during peak.
+- **Led the implementation of [WMS/TMS system]** across [#] sites, completing rollout [on schedule/ahead of schedule] with no disruption to customer service levels.
+
+Beyond the metrics, I lead from the floor. I've found that the fastest gains usually come from listening to the people doing the work, removing friction they've learned to tolerate, and holding a consistent operating rhythm — daily huddles, visible standards, and root-cause problem solving rather than firefighting. I'm equally comfortable presenting P&L variance to executives and troubleshooting a jammed sorter at 5 a.m.
+
+I'd welcome the chance to discuss how I can support [Company Name]'s goals around [specific goal: growth, network expansion, service reliability, automation]. Thank you for your time and consideration.
+
+Sincerely,
+**[Your Name]**
+
+---
+
+### Tips for customizing this
+- **Replace every bracket**, and swap my example bullets for your real wins — numbers matter more than adjectives in ops hiring.
+- **Name the company's actual priorities.** Check their careers page, press releases, or the job posting's first three bullets, and mirror that language.
+- **Match the job description's scope.** If the role is 3PL warehousing, lead with WMS, labor management, and throughput. If it's transportation, lead with carrier management, DOT/FMCSA compliance, and cost per mile.
+- **Mention systems by name** (SAP, Manhattan, Oracle WMS, McLeod, Excel/SQL, Power BI) — these are often keyword-screened.
+- **Keep it to one page.** If it runs long, cut the third paragraph before cutting a bullet.
+
+If you share the job posting and a few details about your background, I can tailor this into a final version.

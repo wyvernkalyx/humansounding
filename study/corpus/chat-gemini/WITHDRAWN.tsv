@@ -1,0 +1,31 @@
+# Documents generated and then withdrawn from this arm. Kept because deleting
+# the record of a measurement that once existed is exactly the habit this
+# project argues against. These were generated against a model ALIAS, then
+# regenerated against the resolved and pinned id, and the files were removed
+# while these rows were not. Recorded 2026-09-01. They are not measured: only
+# .txt files on disk are, and none of these are on disk.
+file	model	served	genre	words	date	date_src	prompt
+gemini-flash-latest__decision__02.txt	gemini-flash-latest		decision	530		unknown	We're deciding between hiring a second developer or paying for more contractors. Which way should we go?
+gemini-flash-latest__decision__03.txt	gemini-flash-latest		decision	630		unknown	Should I take a 15% pay cut for a fully remote job?
+gemini-flash-latest__explain__04.txt	gemini-flash-latest		explain	781		unknown	Explain how compound interest works and why it surprises people.
+gemini-flash-latest__diagnose__01.txt	gemini-flash-latest		diagnose	543		unknown	Our website is slow every weekday at 9am and fine the rest of the day. Where do I start?
+gemini-flash-latest__diagnose__02.txt	gemini-flash-latest		diagnose	554		unknown	Two of my team members stopped talking to each other and the work is suffering. What now?
+gemini-flash-latest__diagnose__03.txt	gemini-flash-latest		diagnose	573		unknown	My laptop battery went from a full day to three hours in about a month. What's happening?
+gemini-flash-latest__compare__02.txt	gemini-flash-latest		compare	741		unknown	Compare renting and buying a home for someone who moves every four years.
+gemini-flash-latest__compare__03.txt	gemini-flash-latest		compare	611		unknown	What's the real difference between a CFO and a controller?
+gemini-flash-latest__compare__05.txt	gemini-flash-latest		compare	841		unknown	How do a co-op and a condo actually differ for the owner?
+gemini-flash-latest__review_work__01.txt	gemini-flash-latest		review_work	348		unknown	Read this and tell me if it's any good: 'Our mission is to empower businesses to unlock their full potential through innovative solutions.'
+gemini-flash-latest__review_work__02.txt	gemini-flash-latest		review_work	341		unknown	Is this a good subject line? 'Quick question about your account'
+gemini-flash-latest__review_work__03.txt	gemini-flash-latest		review_work	320		unknown	Here's my resume summary: 'Results-driven professional with 10+ years of experience.' Fix it or tell me why it's fine.
+gemini-flash-latest__review_work__04.txt	gemini-flash-latest		review_work	185		unknown	I wrote this to a client: 'Sorry for the delay, things have been crazy here.' Should I send it?
+gemini-flash-latest__review_work__05.txt	gemini-flash-latest		review_work	343		unknown	My about page opens with 'Founded in 2019, we are a team of passionate experts.' Thoughts?
+gemini-flash-latest__personal__01.txt	gemini-flash-latest		personal	456		unknown	I got an offer from a competitor and my current boss just asked me directly if I'm interviewing. What do I say?
+gemini-flash-latest__personal__02.txt	gemini-flash-latest		personal	438		unknown	My friend asked me to invest in her business and I don't think it will work. How do I answer?
+gemini-flash-latest__personal__03.txt	gemini-flash-latest		personal	536		unknown	I've been in the same job for eleven years and I can't tell if that's stability or being stuck.
+gemini-flash-latest__personal__04.txt	gemini-flash-latest		personal	640		unknown	My neighbor's tree drops branches in my yard every storm. How do I raise it without starting a feud?
+gemini-flash-latest__personal__05.txt	gemini-flash-latest		personal	628		unknown	I said yes to organizing the family reunion and now I regret it. What are my options?
+gemini-flash-latest__evaluate_claim__01.txt	gemini-flash-latest		evaluate_claim	613		unknown	Someone told me you should never pay off a low-interest mortgage early. Is that right?
+gemini-flash-latest__evaluate_claim__02.txt	gemini-flash-latest		evaluate_claim	381		unknown	My coworker says standing desks don't actually do anything. True?
+gemini-flash-latest__evaluate_claim__03.txt	gemini-flash-latest		evaluate_claim	360		unknown	Is it true that you shouldn't put a hot laptop battery in the fridge?
+gemini-flash-latest__evaluate_claim__04.txt	gemini-flash-latest		evaluate_claim	507		unknown	A vendor claims their tool will cut our onboarding time in half. How should I read that?
+gemini-flash-latest__evaluate_claim__05.txt	gemini-flash-latest		evaluate_claim	615		unknown	I read that most startups fail because of cofounder conflict. Does that hold up?

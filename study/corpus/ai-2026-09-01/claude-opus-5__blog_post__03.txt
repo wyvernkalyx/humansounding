@@ -1,0 +1,90 @@
+# Nobody Knows Why They're in Your Meeting
+
+There's a particular flavor of despair that sets in around minute 34 of a 60-minute meeting, when it becomes clear that the group has been circling the same point for twenty minutes, that no decision will be made, and that someone will suggest "taking this offline" in a way that means it will never be discussed again.
+
+Most advice about meetings is about hygiene: start on time, have an agenda, put your phone away. This is fine advice in the way that "eat vegetables" is fine advice. It's true, it's obvious, and it has never once changed anyone's behavior.
+
+The deeper problem is that most bad meetings aren't badly run. They're *miscast*. The organizer wanted one thing and scheduled another, and everyone in the room spent an hour trying to figure out which game they were playing.
+
+## Four meetings, and the sin of mixing them
+
+Almost every work meeting is one of four things:
+
+**A decision.** Someone with authority needs to choose between options, and they need input first. The output is a choice.
+
+**A generation.** You need more ideas than any one person has. Brainstorming, planning, problem-framing. The output is a wider option set.
+
+**An alignment.** Everyone needs the same picture in their head. Status, context-sharing, kickoffs. The output is a shared mental model.
+
+**A relationship.** Team lunches, one-on-ones, the fifteen minutes of chitchat you'd cut if you were being ruthless and shouldn't. The output is trust, which is not a nice-to-have and does not survive being made "efficient."
+
+The sin is mixing them without saying so. A decision meeting that opens with forty minutes of context-sharing has become an alignment meeting, and the decision gets made in the last four minutes by whoever is still awake. A brainstorm where the boss shares her preferred answer first has become a decision meeting with extra steps, and everyone knows it, and they'll generate nothing.
+
+So the single highest-leverage thing you can do is say, out loud, in the first thirty seconds: **"This is a decision meeting. By the end of it, we will have picked A or B."** Or: "This is a generation meeting. I don't want anyone evaluating anything for the first twenty minutes." You'd be amazed how much dysfunction is just people not knowing which mode they're in.
+
+## The invitation is a contract
+
+When you send a calendar invite, you are asking a group of people to give you a chunk of their finite, non-refundable life. Eight people, one hour, is a full workday. If you wouldn't ask a colleague to spend a workday on something, don't schedule that meeting.
+
+A useful discipline: write the invite so that a recipient can answer three questions without asking you.
+
+1. What is this meeting going to produce?
+2. Why am I specifically here?
+3. What do I need to do before I arrive?
+
+If you can't write a clear answer to (1), you don't need a meeting — you need to think harder alone, or write a document. If you can't answer (2) for someone, take them off the invite. If (3) is "nothing," ask whether reading would be more efficient than listening.
+
+That second question deserves particular attention. Every attendee should have a *role*: they're deciding, they're providing expertise, they're going to own the follow-through, or they'll be blindsided if they're not there. "Might be interested" is not a role. Invite them to read the notes.
+
+The instinct to invite everyone comes from a good place — inclusion, transparency, not wanting anyone to feel excluded. But there's a real cost. Groups get worse at deciding things roughly as they get bigger. Somewhere north of seven or eight people, honest disagreement quietly evaporates and gets replaced by performance. People stop saying "I think that's wrong" and start saying things designed to sound reasonable in front of an audience.
+
+## Read, don't present
+
+If your meeting has a deck that someone is going to walk through slide by slide, you have converted a document into a much slower and less useful document, and charged everyone an hour for the privilege.
+
+The alternative — popularized by Amazon but sensible regardless of what you think of Amazon — is to write it up properly and spend the first ten or fifteen minutes of the meeting reading it in silence. It feels strange the first time. It is dramatically better. Reading is three times faster than listening. People can re-read the confusing part. And crucially, writing prose forces you to have an actual argument, because you can't hide a weak idea behind a bulleted fragment the way you can in a deck.
+
+You don't need to adopt the full ritual. But the underlying principle holds: **use synchronous time for the things that actually require synchrony.** Information transfer isn't one of them. Disagreement, negotiation, and thinking together are.
+
+## Manage the first sixty seconds of discussion
+
+Whoever speaks first sets the frame, and everything afterward is a reaction to it. If that person is the most senior in the room, you have effectively ended independent thinking before it started. Nobody's going to open with "I disagree with the VP's premise."
+
+Some fixes, in rough order of how much effort they take:
+
+- **Go last if you're the boss.** Obvious, rarely done.
+- **Collect positions before discussing.** Have everyone write their view in a shared doc for two minutes, or drop a one-line take in chat, before anyone talks. This is remarkably effective at surfacing the disagreement that would otherwise stay buried.
+- **Call on the quiet expert directly.** "Priya, you've done three of these migrations. What are we missing?" Not "does anyone have thoughts?" — which reliably gets you nothing.
+- **Let silence sit.** After you ask a hard question, count to seven in your head. The urge to fill the gap is enormous. Resist it. The good answer usually arrives at second five.
+
+## The last five minutes are worth the other fifty-five
+
+Meetings decay at the end. Someone's already packing up, someone else is trying to squeeze in one more point, and the whole thing dissolves into a vague hum of goodwill. Then, a week later, nobody can agree on what was decided.
+
+Protect the last five minutes and use them for exactly two things:
+
+**Say the decision out loud.** "So: we're going with option B, launching March 12th." If anyone in the room disagrees with that summary, you want to find out now, not in Slack on Thursday.
+
+**Assign owners and dates.** Not "we should talk to legal" but "Marcus is emailing legal by Friday." An action item without a name attached is a wish. An action item without a date is a slower wish.
+
+Then send it in writing within the day. Three lines is enough. The point isn't documentation for its own sake; it's that writing it down catches the disagreements that politeness papered over.
+
+## If you're not the one running it
+
+Most of us attend far more meetings than we run, so: you have more leverage than you think, and most of it comes from asking sincere-sounding questions.
+
+"Just so I'm clear — are we deciding this today, or gathering input?" is a question you can ask in any meeting without seeming difficult, and it forces the organizer to pick a mode.
+
+"What would need to be true for us to choose the other option?" reopens a discussion that has prematurely converged.
+
+"Who's owning this?" at minute 55 has saved more projects than any project management software.
+
+And you can decline. Not everything, and not rudely, but "I don't think I'll add much here — happy to review the notes and weigh in if something needs me" is a normal, professional sentence that almost nobody says.
+
+## The real test
+
+Here's the question worth asking about any recurring meeting on your calendar: if it vanished tomorrow, what would actually break?
+
+For a surprising number of them, the honest answer is "nothing, though a few people would be mildly disoriented for two weeks." Those meetings are running on inertia. They were useful once, and then the project ended or the team reorganized or the problem got solved, and the meeting just... kept going, a small ghost haunting everyone's Tuesday.
+
+Cancel one this week. See who complains. If nobody does, you've just given a group of people back several hours a month, which is a better outcome than almost anything you'd have accomplished in the meeting.

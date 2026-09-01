@@ -51,7 +51,7 @@ ACKNOWLEDGMENTS.md, none of them yours.
 1,000 words. Long-form sets only in the table below; the chat sets are in the
 totals.
 
-| rule | Human (Medium) | Claude Opus 5 | Gemini 3.7 | ChatGPT (chat) | GPT-5.5 |
+| rule | Human (Medium) | Claude Opus 5 | Gemini Flash | ChatGPT (chat) | GPT-5.5 |
 |---|---|---|---|---|---|
 | decorative-formatting | 0.00 | 0.05 | **9.83** | 0.18 | 1.83 |
 | dash-cluster | 0.51 | **1.69** | 0.10 | 0.62 | 0.00 |

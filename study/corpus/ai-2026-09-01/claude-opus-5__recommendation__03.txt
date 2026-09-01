@@ -1,0 +1,104 @@
+# Annual Performance Review
+
+**Employee:** [Name]
+**Title:** Account Executive, [Region/Segment]
+**Reviewer:** [Manager Name]
+**Review Period:** [Jan 1 – Dec 31, 20XX]
+**Overall Rating:** Exceeds Expectations (with development area noted)
+
+---
+
+## Summary
+
+[Name] delivered a standout year in revenue performance, closing **$[X]** against a quota of **$[Y]** (**[Z]% of target**) and ranking **[#] of [#]** on the team. Their ability to build trust quickly with prospects, uncover real business pain, and drive urgency in the close is among the strongest on the team.
+
+That performance was partially offset by persistent gaps in administrative execution — specifically CRM hygiene, deal documentation, and timely expense and forecast submissions. These issues did not go unnoticed downstream: they created rework for Sales Operations, reduced forecast accuracy, and in at least two cases delayed contract processing for the customer. Closing this gap is the single highest-leverage change [Name] can make in the coming year, and it is a prerequisite for progression to [Senior AE / Team Lead].
+
+---
+
+## Key Accomplishments
+
+- **Quota attainment:** [Z]% of annual target ($[X] of $[Y]), with [#] consecutive quarters at or above plan.
+- **New business:** Landed [#] new accounts, including [Account Name] — a [$ value] logo that had been dormant in the pipeline for [#] months.
+- **Deal quality:** Average contract value of $[X], [%] above team average; average discount of [%], **below** team average — strong evidence of value-based selling rather than price-based selling.
+- **Customer relationships:** Consistently strong feedback from customers and from Customer Success on handoff quality of relationships (as distinct from handoff *documentation*).
+- **Team contribution:** Volunteered to mentor [#] new hires in ramp; their discovery call framework was adopted by the broader team in Q[#].
+
+---
+
+## Strengths
+
+**Consultative selling.** [Name] does the hard work of understanding a buyer's business before pitching. Deal reviews consistently show well-mapped stakeholders, clearly articulated business cases, and a defensible reason for the customer to act now.
+
+**Resilience and activity discipline.** [Name] maintained top-quartile outbound activity even in slow quarters and recovered from a soft Q[#] to finish [%] above plan — a sign of genuine self-management on the selling side of the role.
+
+**Coachability in the field.** [Name] applies coaching quickly on selling mechanics. Feedback on [e.g., multithreading, negotiation posture] in Q[#] showed up in behavior within weeks.
+
+---
+
+## Development Area: Administrative Execution and CRM Discipline
+
+This is a candid section, and I want to be clear that it is about impact, not preference.
+
+**What happened:**
+- CRM records were incomplete or stale in approximately **[%]** of open opportunities at quarter-end, including missing next steps, outdated close dates, and unlogged stakeholder contacts.
+- Forecast submissions were late in **[#] of [#]** cycles, requiring follow-up from me or Sales Ops each time.
+- Expense reports were submitted an average of **[#] days** past the deadline, with **[#]** requiring resubmission for missing documentation.
+- Two deals ([Account A], [Account B]) experienced processing delays of **[#] days** due to incomplete order forms or missing approvals at submission.
+
+**Why it matters:**
+1. **Customer experience.** Paperwork delays land on the customer, not on us. A slow contract turnaround undercuts the credibility [Name] worked hard to build during the sale.
+2. **Forecast integrity.** Leadership makes hiring, inventory, and investment decisions off the forecast. Stale pipeline data from a high-volume rep distorts the whole picture.
+3. **Team cost.** Sales Ops estimates **[#] hours** of rework this year attributable to incomplete submissions — time not spent supporting the rest of the team.
+4. **Personal risk.** Undocumented deals are fragile. If [Name] is out sick, on PTO, or moves roles, the institutional knowledge leaves with them.
+
+**Context I want to acknowledge:** Part of this is a real workload issue. [Name] carried [#] accounts, [%] above the team average, and admin burden scales with deal volume. Part of it is also that [Name] genuinely prioritizes selling time over admin time — an instinct that produced this year's number and, left unmanaged, will cap their career.
+
+---
+
+## Goals for [Next Review Period]
+
+| # | Goal | Measure | Deadline |
+|---|------|---------|----------|
+| 1 | Maintain quota performance | ≥100% of annual quota; ≥90% in each quarter | Ongoing |
+| 2 | CRM hygiene | 100% of open opportunities have current close date, next step, and stage at every Friday close of business; verified in weekly 1:1 | Weekly, from [date] |
+| 3 | Clean deal submissions | ≥95% of order forms submitted complete and first-pass approved (no resubmissions) | Measured quarterly |
+| 4 | On-time administrative submissions | 100% of forecasts and expense reports submitted by deadline | Monthly |
+| 5 | Build a sustainable system | Establish and document a personal admin routine (e.g., 30 min blocked daily or 90 min blocked weekly); review with manager | By [date, ~30 days out] |
+
+---
+
+## Support and Resources
+
+I own part of this outcome too. To that end:
+- I'll add a **5-minute CRM check** to our weekly 1:1 rather than raising issues only at quarter-end, so problems surface in days rather than months.
+- I've requested **[#] hours/week of SDR or sales support coverage** for [Name]'s book, given the above-average account load.
+- Sales Ops will run a **[1-hour] working session** on order form and approval workflows, with a one-page checklist [Name] can use at submission.
+- We'll revisit account coverage in Q[#] to confirm the book size is realistic.
+
+---
+
+## Development Plan / Next Steps
+
+- **30 days:** Admin routine documented and in place; CRM brought current across all open opportunities.
+- **60 days:** Two consecutive months of on-time forecast and expense submissions.
+- **90 days:** Formal check-in on all five goals. Sustained improvement makes [Name] a strong candidate for [Senior AE consideration / Team Lead track] in [timeframe].
+
+---
+
+## Manager's Closing Comments
+
+[Name] is a genuinely talented seller and one of the reasons we hit our regional number this year. I don't want to bury that under the admin conversation — the revenue result is real and it was earned.
+
+But I'd be doing [Name] a disservice if I let "great closer, messy operator" become their reputation. At the next level, the job is less about your own deals and more about whether the system around you can be trusted. The discipline gap is the only thing standing between [Name] and that next step, and it's a fixable one. I'm confident we get there this year.
+
+**Employee Comments:**
+_______________________________________________
+
+**Signatures**
+Employee: ________________ Date: __________
+Manager: ________________ Date: __________
+
+---
+
+*Note: Fill in bracketed fields with actual figures before delivery. Specific, documented examples make this review defensible in an HR context and far more credible to the employee than general characterizations. If the paperwork issues have already been the subject of prior formal warnings, consult HR about whether a written performance improvement plan should accompany this review.*

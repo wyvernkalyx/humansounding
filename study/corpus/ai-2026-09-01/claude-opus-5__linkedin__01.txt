@@ -1,0 +1,32 @@
+Here's a draft. I've bracketed the details only you can fill in — swap those in and it'll read as specific rather than generic.
+
+---
+
+**Six months ago, we moved to a four-day week. Here's the honest version of why.**
+
+It wasn't a perk. It wasn't a recruiting gimmick. It was a diagnosis.
+
+We looked at where our week actually went and found the same thing most teams find: a lot of it wasn't work. It was status meetings that could have been a paragraph. It was context-switching between six half-finished things. It was people at their desks on Friday afternoon, tired, producing very little, and feeling guilty about it.
+
+So instead of asking people to work harder inside a broken week, we cut the week and forced ourselves to fix it.
+
+What actually changed:
+– We killed [X] recurring meetings outright and shortened the rest.
+– Decisions that used to take a week of back-and-forth now get made in one place, once.
+– "Focus blocks" stopped being aspirational and started being defended.
+
+What I didn't expect: the constraint made us better at saying no. When you have four days, you can't pretend everything is a priority.
+
+The results after [six months]: [output/revenue metric held steady or improved], [retention/sick days figure], and a team that comes back on Monday with something left in the tank.
+
+It's not free. It took [three months] of messy iteration, and it doesn't suit every function — [our support team runs a staggered schedule instead]. Anyone telling you it's effortless is selling something.
+
+But I'd struggle to go back.
+
+If you're considering it, happy to share what we got wrong. Some of it was expensive.
+
+---
+
+Two things that would sharpen it: **one concrete number** (retention, revenue, delivery velocity) and **one thing that genuinely didn't work**. The failure is what makes a post like this credible instead of promotional.
+
+Want me to adjust the tone — more data-driven, more personal, or shorter for higher engagement?

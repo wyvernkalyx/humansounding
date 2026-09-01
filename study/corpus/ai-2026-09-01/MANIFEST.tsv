@@ -1,0 +1,41 @@
+file	model	served	genre	words	date	date_src	prompt
+claude-opus-5__linkedin__01.txt	claude-opus-5	claude-opus-5	linkedin	330	2026-09-01	recorded	Write a LinkedIn post about why our team switched to a four-day week.
+claude-opus-5__linkedin__02.txt	claude-opus-5	claude-opus-5	linkedin	256	2026-09-01	recorded	Write a LinkedIn post announcing that I've been promoted to director of operations.
+claude-opus-5__linkedin__03.txt	claude-opus-5	claude-opus-5	linkedin	293	2026-09-01	recorded	Write a LinkedIn post about what I learned from a project that failed.
+claude-opus-5__linkedin__04.txt	claude-opus-5	claude-opus-5	linkedin	354	2026-09-01	recorded	Write a LinkedIn post about hiring for attitude over experience.
+claude-opus-5__linkedin__05.txt	claude-opus-5	claude-opus-5	linkedin	322	2026-09-01	recorded	Write a LinkedIn post about attending my first industry conference in five years.
+claude-opus-5__cover_letter__01.txt	claude-opus-5	claude-opus-5	cover_letter	466	2026-09-01	recorded	Write a cover letter for an operations manager job at a logistics company.
+claude-opus-5__cover_letter__02.txt	claude-opus-5	claude-opus-5	cover_letter	480	2026-09-01	recorded	Write a cover letter for a marketing coordinator role at a nonprofit.
+claude-opus-5__cover_letter__03.txt	claude-opus-5	claude-opus-5	cover_letter	567	2026-09-01	recorded	Write a cover letter for a junior software developer position.
+claude-opus-5__cover_letter__04.txt	claude-opus-5	claude-opus-5	cover_letter	587	2026-09-01	recorded	Write a cover letter for a school administrator job.
+claude-opus-5__cover_letter__05.txt	claude-opus-5	claude-opus-5	cover_letter	494	2026-09-01	recorded	Write a cover letter for an accounting role at a mid-sized manufacturer.
+claude-opus-5__newsletter__01.txt	claude-opus-5	claude-opus-5	newsletter	1161	2026-09-01	recorded	Write a newsletter issue about how to build a morning routine that sticks.
+claude-opus-5__newsletter__02.txt	claude-opus-5	claude-opus-5	newsletter	1238	2026-09-01	recorded	Write a newsletter issue about managing money in your twenties.
+claude-opus-5__newsletter__03.txt	claude-opus-5	claude-opus-5	newsletter	1231	2026-09-01	recorded	Write a newsletter issue about why most productivity systems fail.
+claude-opus-5__newsletter__04.txt	claude-opus-5	claude-opus-5	newsletter	1279	2026-09-01	recorded	Write a newsletter issue about dealing with burnout at work.
+claude-opus-5__newsletter__05.txt	claude-opus-5	claude-opus-5	newsletter	1394	2026-09-01	recorded	Write a newsletter issue about the psychology of habit change.
+claude-opus-5__marketing_email__01.txt	claude-opus-5	claude-opus-5	marketing_email	386	2026-09-01	recorded	Write a marketing email announcing a new feature in our project management app.
+claude-opus-5__marketing_email__02.txt	claude-opus-5	claude-opus-5	marketing_email	346	2026-09-01	recorded	Write a marketing email for a local gym's January membership offer.
+claude-opus-5__marketing_email__03.txt	claude-opus-5	claude-opus-5	marketing_email	401	2026-09-01	recorded	Write a marketing email inviting customers to a webinar on tax changes.
+claude-opus-5__marketing_email__04.txt	claude-opus-5	claude-opus-5	marketing_email	411	2026-09-01	recorded	Write a marketing email re-engaging customers who haven't logged in for 90 days.
+claude-opus-5__marketing_email__05.txt	claude-opus-5	claude-opus-5	marketing_email	374	2026-09-01	recorded	Write a marketing email launching a new line of running shoes.
+claude-opus-5__blog_post__01.txt	claude-opus-5	claude-opus-5	blog_post	1449	2026-09-01	recorded	Write a blog post about choosing a password manager.
+claude-opus-5__blog_post__02.txt	claude-opus-5	claude-opus-5	blog_post	1401	2026-09-01	recorded	Write a blog post about remote work and company culture.
+claude-opus-5__blog_post__03.txt	claude-opus-5	claude-opus-5	blog_post	1416	2026-09-01	recorded	Write a blog post about how to run a better meeting.
+claude-opus-5__blog_post__04.txt	claude-opus-5	claude-opus-5	blog_post	1663	2026-09-01	recorded	Write a blog post about what to look for when buying a used car.
+claude-opus-5__blog_post__05.txt	claude-opus-5	claude-opus-5	blog_post	1431	2026-09-01	recorded	Write a blog post about the basics of home network security.
+claude-opus-5__internal_memo__01.txt	claude-opus-5	claude-opus-5	internal_memo	422	2026-09-01	recorded	Write a memo to staff announcing a new expense policy.
+claude-opus-5__internal_memo__02.txt	claude-opus-5	claude-opus-5	internal_memo	584	2026-09-01	recorded	Write a memo to staff about returning to the office three days a week.
+claude-opus-5__internal_memo__03.txt	claude-opus-5	claude-opus-5	internal_memo	514	2026-09-01	recorded	Write a memo announcing a reorganization of the customer service team.
+claude-opus-5__internal_memo__04.txt	claude-opus-5	claude-opus-5	internal_memo	349	2026-09-01	recorded	Write a memo to staff about a new mandatory security training.
+claude-opus-5__internal_memo__05.txt	claude-opus-5	claude-opus-5	internal_memo	601	2026-09-01	recorded	Write a memo explaining changes to the annual review process.
+claude-opus-5__product_update__01.txt	claude-opus-5	claude-opus-5	product_update	556	2026-09-01	recorded	Write a product update announcing a redesigned dashboard.
+claude-opus-5__product_update__02.txt	claude-opus-5	claude-opus-5	product_update	485	2026-09-01	recorded	Write a product update explaining that we're sunsetting an old integration.
+claude-opus-5__product_update__03.txt	claude-opus-5	claude-opus-5	product_update	415	2026-09-01	recorded	Write a product update about improved mobile performance.
+claude-opus-5__product_update__04.txt	claude-opus-5	claude-opus-5	product_update	484	2026-09-01	recorded	Write a product update announcing single sign-on support.
+claude-opus-5__product_update__05.txt	claude-opus-5	claude-opus-5	product_update	609	2026-09-01	recorded	Write a product update about a new reporting feature.
+claude-opus-5__recommendation__01.txt	claude-opus-5	claude-opus-5	recommendation	858	2026-09-01	recorded	Write a letter of recommendation for a student applying to graduate school.
+claude-opus-5__recommendation__02.txt	claude-opus-5	claude-opus-5	recommendation	538	2026-09-01	recorded	Write a letter of recommendation for an employee applying for an internal promotion.
+claude-opus-5__recommendation__03.txt	claude-opus-5	claude-opus-5	recommendation	1142	2026-09-01	recorded	Write a performance review for a sales rep who exceeded quota but struggled with paperwork.
+claude-opus-5__recommendation__04.txt	claude-opus-5	claude-opus-5	recommendation	983	2026-09-01	recorded	Write a performance review for a developer who is technically strong and hard to work with.
+claude-opus-5__recommendation__05.txt	claude-opus-5	claude-opus-5	recommendation	539	2026-09-01	recorded	Write a letter of recommendation for a colleague applying for a board seat.

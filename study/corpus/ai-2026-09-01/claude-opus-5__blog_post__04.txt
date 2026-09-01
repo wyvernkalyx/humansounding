@@ -1,0 +1,150 @@
+# What to Look For When Buying a Used Car
+
+Buying used is one of the smartest financial moves most drivers can make. A new car sheds roughly 20% of its value in the first year and about 40% by year three — let someone else eat that. But the tradeoff is uncertainty: you're inheriting a machine with a history you didn't witness.
+
+Here's how to buy with confidence.
+
+---
+
+## Before You Start Shopping
+
+### Set a real budget, not just a purchase price
+
+The sticker is only part of the story. Budget for:
+
+- **Sales tax and registration** (varies by state, often 5–10% of the price)
+- **Insurance** — get quotes on specific models *before* you buy. A used sports car can cost twice as much to insure as a sedan of the same value.
+- **Immediate maintenance** — set aside $500–$1,500. Almost every used car needs something: tires, brakes, a fluid flush, an overdue timing belt.
+- **The repair fund** — if you're buying a 10-year-old car, expect to spend $1,000–$2,000 a year on average maintenance and repairs.
+
+### Get pre-approved for financing
+
+Walk in with a pre-approval from your bank or credit union. Dealer financing can be competitive, but you won't know unless you have a number to beat. It also keeps the conversation focused on the price of the car rather than the monthly payment — a classic tactic for hiding a bad deal in a long loan term.
+
+### Research specific model years, not just models
+
+Reliability varies dramatically *within* a model line. A 2014 might have a transmission that fails at 90,000 miles while the 2016 redesign is bulletproof. Spend an hour on owner forums, NHTSA complaint data, and reliability rankings for the exact years you're considering. Search "[model] [year] common problems" and you'll learn more in 20 minutes than a salesperson will tell you in an hour.
+
+---
+
+## Where You Buy Matters
+
+**Private sellers** usually offer the best prices and the most honest picture of how the car was used — but there's no warranty, no recourse, and you handle the paperwork yourself.
+
+**Independent dealers** vary wildly. Some are excellent; some are flipping auction cars with hidden problems. Check reviews carefully.
+
+**Franchise dealers** cost more but tend to have better-vetted inventory and may offer limited warranties.
+
+**Certified Pre-Owned (CPO)** programs add a manufacturer-backed inspection and extended warranty. You'll pay a premium of roughly $1,000–$3,000. Whether that's worth it depends on the brand — read the actual warranty terms, since coverage differs enormously between manufacturers.
+
+---
+
+## The Vehicle History Report
+
+Run the VIN through Carfax or AutoCheck (dealers usually provide one free; ask). Look for:
+
+- **Title brands** — salvage, rebuilt, flood, lemon buyback. These slash resale value and can mean serious hidden damage. Some buyers accept a rebuilt title for a steep discount, but go in with eyes open and expect insurance complications.
+- **Accident history** — a minor fender-bender isn't disqualifying. Frame damage is.
+- **Number of owners** — one or two long-term owners is usually a good sign. Five owners in six years suggests a car people were eager to get rid of.
+- **Service records** — consistent maintenance is one of the best predictors of future reliability.
+- **Odometer inconsistencies** — mileage that jumps around indicates rollback fraud.
+- **Registration location** — a car from the Rust Belt or a coastal salt-air region deserves extra undercarriage scrutiny.
+
+**Important caveat:** history reports are incomplete. Accidents repaired without an insurance claim never show up. A clean report is reassuring, not proof.
+
+---
+
+## Your Own Inspection
+
+Bring a flashlight and a small magnet. Look at the car in daylight, when it's dry — rain hides paint defects, and a wet car looks better than it is.
+
+### Exterior
+
+- **Panel gaps.** Run your eye down each side of the car. Uneven gaps between doors, hood, and fenders suggest collision repair.
+- **Paint mismatch.** Look at panels from an angle in good light. Slight differences in color or texture (orange peel) mean repainting.
+- **Overspray.** Check door jambs, weatherstripping, and under the hood edges for paint where it shouldn't be.
+- **The magnet trick.** A magnet won't stick well to areas filled with body filler. (Doesn't work on aluminum or fiberglass panels.)
+- **Rust.** Surface rust on the underbody is normal on older cars. Bubbling paint on rocker panels, wheel arches, and around the rear window is a bad sign. Flaking or perforated frame rails are a hard no.
+- **Tires.** Are all four the same brand and roughly the same wear? Uneven wear across a tire's width points to alignment or suspension problems. Check the four-digit date code on the sidewall — tires older than six years should be replaced regardless of tread.
+- **Glass.** Check for chips and cracks. Mismatched manufacturer logos on the glass can indicate replacement after an accident.
+
+### Under the hood (engine cold)
+
+- **Oil.** Pull the dipstick. It should be brown or black, not milky (coolant intrusion — potentially a blown head gasket) and not gritty.
+- **Coolant.** Should be brightly colored and clean, not rusty or oily.
+- **Transmission fluid** (if it has a dipstick). Should be reddish and shouldn't smell burnt.
+- **Belts and hoses.** Look for cracking and fraying.
+- **Leaks.** Check for wet spots or crusty residue around gaskets. Look at the ground where the car has been parked.
+- **Corroded battery terminals** and a filthy engine bay suggest neglect — though a *suspiciously* pristine engine bay can mean someone steam-cleaned it to hide leaks.
+
+### Interior
+
+- **Smell first.** Mustiness or a strong air freshener may be masking water damage or smoke. Lift the trunk mat and check the spare tire well for water stains or silt — a flood-car giveaway.
+- **Wear vs. mileage.** A worn-through driver's seat bolster, shiny steering wheel, and worn pedals on a "45,000-mile" car is a rollback red flag.
+- **Test everything.** Every window, lock, mirror, seat adjustment, wiper, light, vent setting, the A/C (does it blow cold?), the heat, the radio, USB ports, sunroof, backup camera. Electrical gremlins are expensive and maddening.
+- **Warning lights.** Turn the key to "on" without starting. All the dash lights should illuminate, then go out when the engine starts. A check-engine bulb that never lights up at all may have been removed to hide a fault.
+
+---
+
+## The Test Drive
+
+Drive for at least 20 minutes, on both city streets and a highway. Turn the radio off.
+
+- **Cold start.** Insist on starting the engine cold. Warm engines hide knocks, smoke, and rough idling.
+- **Listen.** Ticking, knocking, whining, grinding, or a rhythmic clicking on turns (worn CV joints).
+- **Braking.** Brake hard in a safe empty space. The car should stop straight, without pulling, pulsing, or squealing. A spongy pedal means air or fluid problems.
+- **Steering.** Hands loose on a flat, straight road — does it drift? Any vibration at highway speed?
+- **Transmission.** Shifts should be smooth and prompt. Hesitation, hard clunks, or slipping (engine revs but speed doesn't increase) are serious.
+- **Bumps.** Drive over rough pavement. Clunks and rattles point to worn suspension components.
+- **Exhaust.** Have someone watch behind you during acceleration. Blue smoke = burning oil. White smoke that doesn't dissipate = coolant. Black = running rich.
+
+---
+
+## The Single Most Important Step: The Pre-Purchase Inspection
+
+**Pay an independent mechanic $100–$200 to inspect any car before you buy it.** Not the seller's mechanic — yours.
+
+They'll put it on a lift and see things you can't: frame damage, hidden leaks, worn bushings, brake and suspension life, and diagnostic trouble codes. The report gives you either peace of mind or a detailed list of negotiating leverage. Either way it pays for itself.
+
+**If a seller refuses a pre-purchase inspection, walk away.** There is no good reason to say no. That refusal is itself the answer.
+
+---
+
+## Paperwork and Closing
+
+- **The title** must be in the seller's name, and the name must match their ID. "It's my cousin's car" is how curbstoners (unlicensed flippers) operate.
+- **Check for a lien.** If the seller still owes money, the lender holds the title. Complete the transaction at the lender's bank so the payoff and title transfer happen together.
+- **Verify the VIN** on the dashboard, door jamb sticker, and title all match.
+- **Get a bill of sale** with the date, price, VIN, mileage, and both signatures.
+- **Understand "as-is."** Most used cars are sold with no warranty. The dealer's Buyers Guide window sticker must state whether the car comes with any warranty — read it.
+
+---
+
+## Negotiating
+
+Know the market value before you make an offer — check Kelley Blue Book, Edmunds, and, most usefully, what comparable cars are actually *listed* for in your area.
+
+Negotiate the out-the-door price, including all fees. Dealers add "documentation fees" (sometimes capped by state law) and occasionally bogus add-ons like nitrogen-filled tires, VIN etching, or paint protection. Ask for those to be removed.
+
+Use inspection findings as concrete leverage: "It needs $900 in tires and brakes; I'll pay $X."
+
+And be genuinely willing to leave. There is always another car. The buyer who can walk away gets the better deal — every time.
+
+---
+
+## Quick Red-Flag Checklist
+
+🚩 Seller won't allow an independent inspection
+🚩 Title isn't in the seller's name, or they don't have it "right now"
+🚩 Price is far below market with no explanation
+🚩 Pressure to decide immediately
+🚩 Milky oil or sweet-smelling exhaust
+🚩 Musty interior or silt under the carpet
+🚩 Wear that doesn't match the odometer
+🚩 Meeting somewhere other than a home or business
+
+---
+
+Buying used is mostly about patience. The car you feel rushed into is rarely the right one, and the extra week you spend looking is far cheaper than the transmission you didn't know was failing.
+
+Take your time, do the inspection, and drive away knowing exactly what you bought.

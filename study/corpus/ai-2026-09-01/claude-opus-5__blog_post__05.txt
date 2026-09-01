@@ -1,0 +1,81 @@
+# Home Network Security Basics: A Practical Guide
+
+Most people set up their home internet once — plug in the box the ISP mailed them, type the Wi-Fi password into their phone, and never think about it again. That's understandable. It's also how a lot of homes end up running a five-year-old router with a default admin password and a smart doorbell that hasn't received a patch since the last presidential election.
+
+The good news is that home network security isn't about becoming a security expert. It's about closing the handful of doors that automated attacks actually walk through. Here's what matters, roughly in order of impact.
+
+## First, a realistic threat model
+
+You are probably not being targeted by a nation-state. What you *are* facing is the internet's background radiation: automated scanners that sweep every IPv4 address looking for exposed admin panels, botnets that try default passwords on internet-connected cameras, and malware that spreads to whatever it can reach once one device on the network is infected.
+
+This is actually encouraging news, because opportunistic attacks are stopped by basic hygiene. The goal isn't to be impenetrable. It's to be uninteresting.
+
+## Your router is the front door
+
+Everything in your house talks to the internet through one device. If that device is compromised, an attacker can redirect your traffic, see what you connect to, and reach devices that you thought were safely tucked behind a firewall. It deserves more attention than any other piece of hardware you own.
+
+**Change the admin password.** This is the single highest-value thing on this list. The admin password protects the router's configuration page — it is *not* the same thing as your Wi-Fi password, and on a lot of consumer gear it still ships as `admin`/`admin` or is printed on a sticker along with a model number that tells an attacker exactly which default to try. Log into your router (usually `192.168.1.1` or `192.168.0.1`, check the sticker) and set something long and unique. Store it in a password manager.
+
+**Check whether your router still gets updates.** Router firmware has bugs, and those bugs get exploited. Most modern routers can auto-update; turn that on. The harder question is whether the manufacturer is still shipping updates at all. Consumer routers typically get security support for three to five years after release, and then they quietly stop. If yours is older than that and the vendor's support page has gone silent, replacing it is a legitimate security upgrade — not just a speed one. If you're renting equipment from your ISP, updates are usually handled for you, which is one of the few genuine advantages of that arrangement.
+
+**Use WPA3, or WPA2 with AES.** In your wireless settings you'll see encryption options. WPA3 is current and preferred; WPA2 (with AES/CCMP, sometimes labeled "WPA2-Personal") is still perfectly acceptable. Many routers offer a "WPA2/WPA3 transition" mode, which is a sensible default since older devices can't do WPA3. What you want to avoid is WEP or anything mentioning TKIP — both are broken and should not appear in a network built this decade.
+
+**Make the Wi-Fi passphrase long.** An attacker within radio range can capture the handshake when a device joins and then crack it offline, at whatever speed their hardware allows. Complexity matters less than length here. Four or five random words — `stapler-mango-drifting-cabinet` — beats `P@ssw0rd7!` by an enormous margin and is far easier to read aloud to a houseguest.
+
+**Turn off WPS.** That's the button-and-PIN system for joining devices without typing a password. The PIN implementation has known flaws that allow brute-forcing in hours. The convenience is not worth it.
+
+**Turn off remote management.** Some routers let you administer them from the internet. Unless you have a specific reason to need this, disable it. It's the difference between a lock on your front door and a lock on a door that's advertised on a public map.
+
+**Consider turning off UPnP.** Universal Plug and Play lets devices on your network automatically open ports through the firewall. It's convenient — game consoles and some apps use it — and it's also a way for malware to expose itself to the internet without asking you. Try disabling it. If your console or a specific app breaks, you can turn it back on or forward that one port manually.
+
+## Divide and conquer
+
+Your network is a trust zone. Every device on it can usually reach every other device. That's fine when it's two laptops and a printer; it's less fine when it's also a $30 smart plug from a company that may not exist next year.
+
+**Use the guest network.** Almost every router has one, and it's the easiest segmentation tool available. Put guests on it, obviously — but also consider putting your smart TVs, plugs, bulbs, and cameras there. If one of them gets compromised, it can't easily reach your laptop or your network-attached storage. Look for a setting called "client isolation" or "AP isolation" to further prevent devices on that network from talking to each other.
+
+Some newer routers offer a proper IoT network or VLAN support, which is better still. If you have it, use it.
+
+**Be deliberate about cameras and microphones.** Internet-connected cameras are the highest-consequence devices in most homes. Buy from vendors with a track record of patching, keep the firmware current, use unique passwords, and enable two-factor authentication on the associated cloud account. If a camera offers a feature you don't use — remote access, cloud recording, a built-in mic — turn it off.
+
+## Filter at the DNS layer
+
+Every time a device looks up a domain name, it asks a DNS resolver. By pointing your router at a filtering resolver, you get network-wide blocking of known malware and phishing domains for free, including on devices that can't run security software.
+
+[Quad9](https://quad9.net) (`9.9.9.9`) and [Cloudflare's malware-blocking resolver](https://one.one.one.one/family/) (`1.1.1.2`) both do this. Services like NextDNS or Pi-hole add per-device policies and ad blocking if you want to go further. This won't stop a determined attack, but it quietly neutralizes a lot of drive-by badness, and setup is a two-field change in your router's settings.
+
+## Don't forget the devices themselves
+
+A perfectly configured network doesn't help if someone phishes your email password.
+
+- **Turn on automatic updates** everywhere: phones, laptops, browsers. Unpatched software is the most common way people actually get compromised.
+- **Use a password manager.** Reused passwords are how one breach becomes six.
+- **Enable two-factor authentication** on your email account first, then your ISP account, then everything else. Your email is the recovery mechanism for every other account you have.
+- **Retire unsupported devices.** A phone or tablet that stopped getting security updates two years ago is a liability, especially if it's still logged into things.
+- **Back up.** A current backup turns ransomware from a catastrophe into an annoying afternoon.
+
+## Things you can safely skip
+
+Some advice circulates widely despite being close to useless.
+
+**Hiding your SSID** doesn't hide your network — it just stops broadcasting the name, which tools detect trivially. It mostly makes your own devices harder to connect.
+
+**MAC address filtering** sounds like a whitelist, but MAC addresses are transmitted unencrypted and can be spoofed in seconds. It's a speed bump for you, not for an attacker.
+
+**A consumer VPN does not secure your home network.** VPNs encrypt traffic between you and the VPN provider, which is genuinely useful on sketchy public Wi-Fi and for privacy from your ISP. It does nothing about a compromised router, a vulnerable IoT device, or a phishing email. It's a different tool for a different job.
+
+## The twenty-minute checklist
+
+If you do nothing else:
+
+1. Log into your router and change the admin password.
+2. Enable automatic firmware updates; check whether the router is still supported.
+3. Set encryption to WPA3 or WPA2-AES, with a long passphrase.
+4. Disable WPS and remote management.
+5. Move IoT devices to the guest network.
+6. Point DNS at a filtering resolver.
+7. Turn on 2FA for your email account.
+
+That's it. None of this requires special hardware or deep expertise, and it puts you well ahead of the automated attacks that make up the overwhelming majority of the threat. Set a calendar reminder to revisit it once a year — check for unfamiliar devices on the network, confirm updates are still landing, and retire anything that's aged out of support.
+
+Security at home isn't a project you finish. It's a set of defaults you get right once and then maintain with about an hour of attention a year. That's a good trade.

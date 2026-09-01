@@ -1,0 +1,44 @@
+Below is a cover letter you can adapt. I've written it for a staff/senior accountant role with manufacturing exposure — placeholders are in brackets, and I've added notes at the end on how to tailor it.
+
+---
+
+**[Your Name]**
+[City, State] | [Phone] | [Email] | [LinkedIn]
+
+[Date]
+
+[Hiring Manager Name]
+[Title]
+[Company Name]
+[City, State]
+
+Dear [Mr./Ms. Last Name],
+
+I'm writing to apply for the [Job Title] position at [Company Name]. With [X] years of accounting experience in [manufacturing/distribution/a related environment], I've built my career around the operational side of the ledger — inventory valuation, standard costing, and the month-end close discipline that keeps a production business running on accurate numbers.
+
+In my current role at [Current Employer], I own [describe scope: e.g., the full month-end close for a $[X]M business unit, including inventory reconciliation, WIP analysis, and manufacturing variance reporting]. A few results I'd bring with me:
+
+- Reduced the monthly close cycle from [X] to [Y] days by [restructuring the close calendar / automating journal entry preparation in [ERP]].
+- Identified $[X] in [margin leakage / unfavorable purchase price variance] through a review of [standard cost rolls / vendor pricing], leading to [corrective action].
+- Partnered with [operations/plant management] on [physical inventory process / cycle count program], improving inventory accuracy to [X]%.
+
+What draws me to [Company Name] specifically is [one genuine reason — e.g., your recent expansion into the [X] product line, your reputation in the [industry] market, or the fact that this role sits close to the plant floor rather than in a back office]. I do my best work when I can walk out to production and understand what's actually driving the numbers, and this position appears to offer exactly that.
+
+I'm proficient in [ERP: e.g., NetSuite, Epicor, SAP, Sage 100], advanced Excel [pivot tables, Power Query, lookups], and [any other tools], and I hold [CPA / CMA / degree in Accounting from [University]].
+
+I'd welcome the chance to discuss how I can support [Company Name]'s finance team. Thank you for your time and consideration.
+
+Sincerely,
+[Your Name]
+
+---
+
+**Notes for tailoring:**
+
+- **Name a real reason for this company.** Mid-sized manufacturers receive plenty of generic applications. One specific sentence about their products, markets, or growth separates you immediately.
+- **Match their vocabulary.** If the posting says "cost accounting" or "absorption variances" or "BOM maintenance," use those exact terms — many firms screen with keyword filters.
+- **Quantify at least two bullets.** Dollar amounts, day counts, and percentages carry far more weight than duty descriptions.
+- **Name the ERP.** Manufacturers care a great deal about system fit. If you don't know theirs, mention the systems you know and note that you pick up new platforms quickly.
+- **Keep it to one page.** Cut a bullet before you cut white space.
+
+If you tell me your experience level, the specific job posting, and a few accomplishments from your current role, I can rewrite this as a finished, non-template version.

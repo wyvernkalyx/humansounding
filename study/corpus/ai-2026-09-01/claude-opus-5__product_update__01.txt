@@ -1,0 +1,54 @@
+# Meet the new dashboard
+
+**TL;DR:** We rebuilt the dashboard from the ground up. It's faster, easier to scan, and you can finally arrange it however you want. Rolling out to all workspaces over the next two weeks.
+
+---
+
+## Why we rebuilt it
+
+The old dashboard was designed when most teams tracked two or three things. Today the average workspace tracks eleven — and the layout hadn't kept up. The most common piece of feedback we heard was some version of: *"I know the number I need is in here somewhere."*
+
+So we started over, with three goals: surface the important things immediately, let people customize the rest, and make the whole thing load fast enough that you stop noticing it.
+
+## What's new
+
+**Drag-and-drop layout.** Every widget can be moved, resized, or removed. Build a view for your daily standup, another for your monthly report, and switch between them with saved layouts.
+
+**A real overview section.** The top of the dashboard now shows your key metrics with period-over-period comparisons, so you can see direction, not just a number. Choose which metrics live up there — no more scrolling past charts you don't use.
+
+**Faster everything.** Initial load is roughly 3× faster, and widgets now render independently, so one slow query no longer holds up the entire page.
+
+**Better filtering.** Filters and date ranges apply across the whole dashboard at once and persist between sessions. Comparison ranges ("vs. previous period," "vs. same period last year") are built in.
+
+**Sharing that works.** Share a read-only link to any dashboard view, or schedule it as a recurring email digest — daily, weekly, or monthly.
+
+**Designed for smaller screens.** The dashboard is fully responsive, so the mobile experience is no longer a compressed desktop layout.
+
+**Accessibility improvements.** Full keyboard navigation, improved screen reader support, higher-contrast chart palettes, and a dark mode that isn't an afterthought.
+
+## What's changing
+
+- **Your existing widgets carry over.** We've mapped your current setup to the new layout automatically. Nothing to reconfigure unless you want to.
+- **"Quick Stats" is now the overview section.** Same data, better placement.
+- **The legacy dashboard stays available until [date].** You can toggle back anytime from the view switcher in the top-right while you get settled.
+- **Custom widget embeds** built on the old API will need updating — see the [migration guide] for details.
+
+## How to get it
+
+The new dashboard is rolling out gradually starting today and will reach all workspaces by [date]. When it's available, you'll see a prompt on your next login. Admins can enable it early for the whole workspace under **Settings → Workspace → Beta features**.
+
+No price change. It's included in every plan.
+
+## What's next
+
+We're already working on the follow-ups you asked for most: custom widget builder, cross-workspace dashboards, and CSV/PDF export for scheduled digests. Expect those over the next quarter.
+
+## Tell us what you think
+
+This one came directly from customer feedback, and we'd like to keep that going. Use the **Feedback** button in the dashboard header, or reply to this post — we read everything.
+
+— The [Product] Team
+
+---
+
+*Swap the bracketed items for your own dates, links, and product name. Happy to adjust the tone (more playful, more enterprise), trim it to a short changelog entry, or write the in-app announcement version.*
