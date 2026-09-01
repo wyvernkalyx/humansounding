@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Research and update trend data
         run: node scripts/refresh.mjs
@@ -31,10 +31,31 @@ jobs:
       - name: Staleness check on published figures (report-only)
         run: node scripts/check-staleness.mjs
 
+      # Report-only, but report all of it. Until 2026-08-31 this piped through
+      # tail -20, so 74 of 94 findings scrolled off unread every week and the
+      # single worst page never appeared. A check nobody can see the output of
+      # is not a check. The blog posts are scanned now too; the old glob
+      # covered only the repository root.
       - name: Design-tell regression check (Impeccable detector, report-only)
         run: |
-          npx --yes impeccable@3.5 detect index.html changelog.html *.html --no-advisory 2>&1 | tail -20 || true
-          echo "Design check complete (findings above are report-only; known-intended: bait samples, quote styling, small-caps labels)."
+          npx --yes impeccable@3.5 detect index.html changelog.html *.html blog/*.html --no-advisory > /tmp/impeccable.txt 2>&1 || true
+          grep -v '^npm ' /tmp/impeccable.txt > /tmp/imp.clean.txt || true
+          TOTAL=$(grep -cE '^[[:space:]]+\[[a-z-]+\]' /tmp/imp.clean.txt || echo 0)
+          {
+            echo "### Design check: $TOTAL findings (report-only)"
+            echo
+            echo "By rule:"
+            echo '```'
+            grep -oE '^[[:space:]]+\[[a-z-]+\]' /tmp/imp.clean.txt | tr -d ' []' | sort | uniq -c | sort -rn
+            echo '```'
+            echo "By page:"
+            echo '```'
+            awk '/^\//{f=$0; sub(/.*\//,"",f)} /^[[:space:]]+\[/{c[f]++} END{for(k in c) printf "%6d  %s\n", c[k], k}' /tmp/imp.clean.txt | sort -rn
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "--- full output ---"
+          cat /tmp/imp.clean.txt
+          echo "Report-only. Known-intended: bait samples quoting bad copy, and the checker's own quote styling."
 
       - name: Repackage skill and commit weekly updates
         run: |

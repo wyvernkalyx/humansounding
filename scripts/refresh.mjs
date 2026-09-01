@@ -218,14 +218,50 @@ function updateChangelog(log) {
   }).join("\n");
   replaceMarked("changelog.html", "<!-- EDITIONS:START (regenerated weekly by the research pipeline, newest first) -->", "<!-- EDITIONS:END -->", cards);
 }
+// The essays are hand-written and live outside the marker sections in
+// blog.html, so the feed has to go and find them. Until 2026-08-31 it carried
+// only the robot's weekly column, which meant anything consuming the feed got
+// the machine's output and none of Gregg's. Only /blog/ posts are included:
+// the evergreen top-level guides have no publication date and would arrive as
+// one undifferentiated dump in a reader.
+function essayItems() {
+  let src;
+  try { src = readFileSync("blog.html", "utf8"); } catch { return []; }
+  const cards = [...src.matchAll(/<a class="[^"]*"\s+data-kind="guide"\s+href="(\/blog\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/g)];
+  const out = [];
+  for (const [, href, body] of cards) {
+    const title = (body.match(/<h3>([\s\S]*?)<\/h3>/) || [])[1];
+    const deck = (body.match(/<p>([\s\S]*?)<\/p>/) || [])[1];
+    if (!title) continue;
+    let iso = null;
+    try {
+      const page = readFileSync(href.replace(/^\//, ""), "utf8");
+      iso = (page.match(/datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})/) || [])[1] || null;
+    } catch { /* the card outlives the page; skip rather than guess a date */ }
+    if (!iso) continue;
+    const strip = (h) => h.replace(/<[^>]+>/g, "").replace(/&middot;/g, "·").replace(/&amp;/g, "&").trim();
+    out.push({ iso, url: `https://humansounding.com${href}`, title: strip(title), deck: strip(deck || "") });
+  }
+  return out;
+}
+
 function writeFeed(log) {
-  const items = log.map((w) => `
+  const weekly = log.map((w) => ({
+    iso: w.iso,
+    url: `https://humansounding.com/${w.slug ? `blog/${w.slug}.html` : `changelog.html#w${w.iso}`}`,
+    guid: `https://humansounding.com/changelog.html#w${w.iso}`,
+    title: w.title || "This week in AI writing: " + w.week,
+    deck: w.deck || (Array.isArray(w.items) ? w.items.join(" • ") : ""),
+  }));
+  const all = [...weekly, ...essayItems()]
+    .sort((a, b) => (a.iso < b.iso ? 1 : a.iso > b.iso ? -1 : 0));
+  const items = all.map((it) => `
   <item>
-    <title>${escXml(w.title || "This week in AI writing: " + w.week)}</title>
-    <link>https://humansounding.com/${w.slug ? `blog/${w.slug}.html` : `changelog.html#w${w.iso}`}</link>
-    <guid isPermaLink="true">https://humansounding.com/changelog.html#w${w.iso}</guid>
-    <pubDate>${new Date(w.iso + "T12:00:00Z").toUTCString()}</pubDate>
-    <description>${escXml(w.deck || (Array.isArray(w.items) ? w.items.join(" • ") : ""))}</description>
+    <title>${escXml(it.title)}</title>
+    <link>${it.url}</link>
+    <guid isPermaLink="true">${it.guid || it.url}</guid>
+    <pubDate>${new Date(it.iso + "T12:00:00Z").toUTCString()}</pubDate>
+    <description>${escXml(it.deck)}</description>
   </item>`).join("");
   writeFileSync("feed.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>

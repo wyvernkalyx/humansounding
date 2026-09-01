@@ -1,0 +1,1108 @@
+{
+  "generated": "2026-09-01T15:03:38.490Z",
+  "what": "Per-document rule counts and word counts for the HumanSounding corpora. Counts only, no text.",
+  "why": "Every human rate this project publishes can be recomputed from this file. The documents themselves are other people's copyrighted prose and are not redistributable, so the counts are published instead.",
+  "how": "Counts are produced by study/measure.mjs against the RULES array parsed out of checker.html at runtime, so this file and the live checker cannot drift. em_dash counts raw dashes, including the double hyphen the checker treats as one. cadenceCV is the coefficient of variation of sentence length within the document.",
+  "rules": [
+    "negative_parallelism",
+    "stock_openers",
+    "slop_words",
+    "testament",
+    "editorializing",
+    "vague_attribution",
+    "trailing_participle",
+    "summary_ending",
+    "chatbot_artifact",
+    "hedged_balance",
+    "rule_of_three",
+    "bot_scaffolding",
+    "contrastive_negation",
+    "fragment_triplet",
+    "em_dash"
+  ],
+  "corpora": [
+    {
+      "key": "medium",
+      "documents": 40,
+      "words": 26883,
+      "rows": [
+        {
+          "id": "medium__001",
+          "date": "2020-09-18",
+          "words": 590,
+          "sentences": 42,
+          "meanSentence": 14.17,
+          "cadenceCV": 0.7665,
+          "counts": {
+            "em_dash": 9
+          }
+        },
+        {
+          "id": "medium__002",
+          "date": "2020-10-07",
+          "words": 336,
+          "sentences": 23,
+          "meanSentence": 14.65,
+          "cadenceCV": 0.547,
+          "counts": {
+            "em_dash": 5
+          }
+        },
+        {
+          "id": "medium__003",
+          "date": "2020-10-25",
+          "words": 209,
+          "sentences": 11,
+          "meanSentence": 19,
+          "cadenceCV": 0.4052,
+          "counts": {
+            "em_dash": 1
+          }
+        },
+        {
+          "id": "medium__004",
+          "date": "2019-09-21",
+          "words": 164,
+          "sentences": 17,
+          "meanSentence": 9.65,
+          "cadenceCV": 0.504,
+          "counts": {
+            "em_dash": 1
+          }
+        },
+        {
+          "id": "medium__005",
+          "date": "2020-12-13",
+          "words": 506,
+          "sentences": 3,
+          "meanSentence": 168.67,
+          "cadenceCV": 0.7749,
+          "counts": {
+            "em_dash": 2
+          }
+        },
+        {
+          "id": "medium__006",
+          "date": "2021-12-31",
+          "words": 512,
+          "sentences": 23,
+          "meanSentence": 22.3,
+          "cadenceCV": 0.5135,
+          "counts": {
+            "em_dash": 6
+          }
+        },
+        {
+          "id": "medium__007",
+          "date": "2020-12-23",
+          "words": 339,
+          "sentences": 55,
+          "meanSentence": 6.73,
+          "cadenceCV": 1.1957,
+          "counts": {
+            "slop_words": 1
+          }
+        },
+        {
+          "id": "medium__008",
+          "date": "2020-12-12",
+          "words": 198,
+          "sentences": 9,
+          "meanSentence": 22.11,
+          "cadenceCV": 0.3934,
+          "counts": {}
+        },
+        {
+          "id": "medium__009",
+          "date": "2019-01-02",
+          "words": 167,
+          "sentences": 10,
+          "meanSentence": 16.7,
+          "cadenceCV": 0.4654,
+          "counts": {}
+        },
+        {
+          "id": "medium__010",
+          "date": "2020-12-29",
+          "words": 701,
+          "sentences": 38,
+          "meanSentence": 18.47,
+          "cadenceCV": 0.7583,
+          "counts": {
+            "negative_parallelism": 2,
+            "summary_ending": 1,
+            "em_dash": 2
+          }
+        },
+        {
+          "id": "medium__011",
+          "date": "2019-10-22",
+          "words": 575,
+          "sentences": 27,
+          "meanSentence": 21.3,
+          "cadenceCV": 0.514,
+          "counts": {
+            "negative_parallelism": 1,
+            "em_dash": 4
+          }
+        },
+        {
+          "id": "medium__012",
+          "date": "2020-12-16",
+          "words": 788,
+          "sentences": 53,
+          "meanSentence": 14.87,
+          "cadenceCV": 0.6064,
+          "counts": {
+            "em_dash": 4
+          }
+        },
+        {
+          "id": "medium__013",
+          "date": "2021-06-17",
+          "words": 579,
+          "sentences": 36,
+          "meanSentence": 16.08,
+          "cadenceCV": 0.3752,
+          "counts": {
+            "slop_words": 1
+          }
+        },
+        {
+          "id": "medium__014",
+          "date": "2020-12-25",
+          "words": 1103,
+          "sentences": 58,
+          "meanSentence": 19.17,
+          "cadenceCV": 0.5972,
+          "counts": {
+            "em_dash": 4
+          }
+        },
+        {
+          "id": "medium__015",
+          "date": "2019-09-05",
+          "words": 316,
+          "sentences": 26,
+          "meanSentence": 12.15,
+          "cadenceCV": 0.6122,
+          "counts": {
+            "em_dash": 2
+          }
+        },
+        {
+          "id": "medium__016",
+          "date": "2020-12-23",
+          "words": 583,
+          "sentences": 28,
+          "meanSentence": 20.89,
+          "cadenceCV": 0.5064,
+          "counts": {
+            "slop_words": 1
+          }
+        },
+        {
+          "id": "medium__017",
+          "date": "2021-07-11",
+          "words": 1301,
+          "sentences": 101,
+          "meanSentence": 12.89,
+          "cadenceCV": 0.6002,
+          "counts": {
+            "editorializing": 1,
+            "em_dash": 3
+          }
+        },
+        {
+          "id": "medium__018",
+          "date": "2020-12-16",
+          "words": 409,
+          "sentences": 273,
+          "meanSentence": 2.47,
+          "cadenceCV": 2.6641,
+          "counts": {
+            "em_dash": 2
+          }
+        },
+        {
+          "id": "medium__019",
+          "date": "2020-11-18",
+          "words": 226,
+          "sentences": 14,
+          "meanSentence": 16.14,
+          "cadenceCV": 0.5026,
+          "counts": {
+            "slop_words": 1,
+            "em_dash": 2
+          }
+        },
+        {
+          "id": "medium__020",
+          "date": "2020-12-18",
+          "words": 1780,
+          "sentences": 66,
+          "meanSentence": 26.97,
+          "cadenceCV": 0.4765,
+          "counts": {
+            "negative_parallelism": 1,
+            "summary_ending": 2,
+            "hedged_balance": 1,
+            "em_dash": 12
+          }
+        },
+        {
+          "id": "medium__021",
+          "date": "2021-01-04",
+          "words": 1040,
+          "sentences": 46,
+          "meanSentence": 22.61,
+          "cadenceCV": 0.5589,
+          "counts": {
+            "slop_words": 1,
+            "contrastive_negation": 1,
+            "em_dash": 9
+          }
+        },
+        {
+          "id": "medium__022",
+          "date": "2022-01-09",
+          "words": 740,
+          "sentences": 44,
+          "meanSentence": 16.93,
+          "cadenceCV": 0.508,
+          "counts": {
+            "slop_words": 1,
+            "rule_of_three": 1
+          }
+        },
+        {
+          "id": "medium__023",
+          "date": "2020-07-29",
+          "words": 1306,
+          "sentences": 73,
+          "meanSentence": 17.89,
+          "cadenceCV": 0.5018,
+          "counts": {}
+        },
+        {
+          "id": "medium__024",
+          "date": "2020-12-03",
+          "words": 108,
+          "sentences": 8,
+          "meanSentence": 13.88,
+          "cadenceCV": 0.7166,
+          "counts": {}
+        },
+        {
+          "id": "medium__025",
+          "date": "2018-04-10",
+          "words": 894,
+          "sentences": 44,
+          "meanSentence": 20.45,
+          "cadenceCV": 0.7167,
+          "counts": {
+            "rule_of_three": 1,
+            "em_dash": 3
+          }
+        },
+        {
+          "id": "medium__026",
+          "date": "2020-05-12",
+          "words": 264,
+          "sentences": 17,
+          "meanSentence": 15.65,
+          "cadenceCV": 0.4807,
+          "counts": {}
+        },
+        {
+          "id": "medium__027",
+          "date": "2020-08-03",
+          "words": 351,
+          "sentences": 27,
+          "meanSentence": 13.04,
+          "cadenceCV": 0.611,
+          "counts": {}
+        },
+        {
+          "id": "medium__028",
+          "date": "2020-07-21",
+          "words": 1091,
+          "sentences": 100,
+          "meanSentence": 11.3,
+          "cadenceCV": 0.9628,
+          "counts": {
+            "slop_words": 2,
+            "em_dash": 2
+          }
+        },
+        {
+          "id": "medium__029",
+          "date": "2019-11-10",
+          "words": 487,
+          "sentences": 33,
+          "meanSentence": 14.76,
+          "cadenceCV": 0.4849,
+          "counts": {
+            "contrastive_negation": 1
+          }
+        },
+        {
+          "id": "medium__030",
+          "date": "2021-06-16",
+          "words": 447,
+          "sentences": 27,
+          "meanSentence": 16.56,
+          "cadenceCV": 0.596,
+          "counts": {
+            "contrastive_negation": 1,
+            "em_dash": 3
+          }
+        },
+        {
+          "id": "medium__031",
+          "date": "2020-12-14",
+          "words": 105,
+          "sentences": 7,
+          "meanSentence": 15,
+          "cadenceCV": 0.9707,
+          "counts": {
+            "em_dash": 3
+          }
+        },
+        {
+          "id": "medium__032",
+          "date": "2019-04-07",
+          "words": 1607,
+          "sentences": 79,
+          "meanSentence": 20.34,
+          "cadenceCV": 0.4842,
+          "counts": {
+            "negative_parallelism": 1,
+            "slop_words": 1,
+            "rule_of_three": 1,
+            "contrastive_negation": 1,
+            "em_dash": 6
+          }
+        },
+        {
+          "id": "medium__033",
+          "date": "2020-06-25",
+          "words": 1021,
+          "sentences": 97,
+          "meanSentence": 10.55,
+          "cadenceCV": 0.5666,
+          "counts": {
+            "negative_parallelism": 1
+          }
+        },
+        {
+          "id": "medium__034",
+          "date": "2020-12-02",
+          "words": 1289,
+          "sentences": 87,
+          "meanSentence": 14.83,
+          "cadenceCV": 0.6739,
+          "counts": {
+            "em_dash": 10
+          }
+        },
+        {
+          "id": "medium__035",
+          "date": "2021-01-08",
+          "words": 731,
+          "sentences": 57,
+          "meanSentence": 12.84,
+          "cadenceCV": 0.5874,
+          "counts": {}
+        },
+        {
+          "id": "medium__036",
+          "date": "2018-07-27",
+          "words": 928,
+          "sentences": 53,
+          "meanSentence": 17.53,
+          "cadenceCV": 0.4675,
+          "counts": {
+            "em_dash": 6
+          }
+        },
+        {
+          "id": "medium__037",
+          "date": "2020-02-10",
+          "words": 826,
+          "sentences": 37,
+          "meanSentence": 22.3,
+          "cadenceCV": 0.4671,
+          "counts": {}
+        },
+        {
+          "id": "medium__038",
+          "date": "2020-12-23",
+          "words": 142,
+          "sentences": 11,
+          "meanSentence": 12.91,
+          "cadenceCV": 0.8976,
+          "counts": {}
+        },
+        {
+          "id": "medium__039",
+          "date": "2019-12-10",
+          "words": 1473,
+          "sentences": 86,
+          "meanSentence": 17.17,
+          "cadenceCV": 0.5854,
+          "counts": {
+            "em_dash": 2
+          }
+        },
+        {
+          "id": "medium__040",
+          "date": "2020-12-28",
+          "words": 651,
+          "sentences": 72,
+          "meanSentence": 9.36,
+          "cadenceCV": 0.7497,
+          "counts": {}
+        }
+      ]
+    },
+    {
+      "key": "newsletter",
+      "documents": 25,
+      "words": 10482,
+      "rows": [
+        {
+          "id": "newsletter__001",
+          "date": null,
+          "words": 309,
+          "sentences": 23,
+          "meanSentence": 13.52,
+          "cadenceCV": 0.889,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__002",
+          "date": null,
+          "words": 337,
+          "sentences": 10,
+          "meanSentence": 33.7,
+          "cadenceCV": 0.5621,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__003",
+          "date": null,
+          "words": 510,
+          "sentences": 26,
+          "meanSentence": 19.65,
+          "cadenceCV": 0.5994,
+          "counts": {
+            "slop_words": 1,
+            "em_dash": 1
+          }
+        },
+        {
+          "id": "newsletter__004",
+          "date": null,
+          "words": 570,
+          "sentences": 30,
+          "meanSentence": 18.73,
+          "cadenceCV": 0.6419,
+          "counts": {
+            "em_dash": 2
+          }
+        },
+        {
+          "id": "newsletter__005",
+          "date": null,
+          "words": 365,
+          "sentences": 24,
+          "meanSentence": 15.21,
+          "cadenceCV": 0.6071,
+          "counts": {
+            "slop_words": 1
+          }
+        },
+        {
+          "id": "newsletter__006",
+          "date": null,
+          "words": 139,
+          "sentences": 9,
+          "meanSentence": 15.11,
+          "cadenceCV": 1.0283,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__007",
+          "date": null,
+          "words": 345,
+          "sentences": 20,
+          "meanSentence": 17.2,
+          "cadenceCV": 0.6146,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__008",
+          "date": null,
+          "words": 1644,
+          "sentences": 82,
+          "meanSentence": 20.01,
+          "cadenceCV": 0.6851,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__009",
+          "date": null,
+          "words": 246,
+          "sentences": 15,
+          "meanSentence": 16.53,
+          "cadenceCV": 0.5454,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__010",
+          "date": null,
+          "words": 600,
+          "sentences": 33,
+          "meanSentence": 18.27,
+          "cadenceCV": 0.6418,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__011",
+          "date": null,
+          "words": 128,
+          "sentences": 4,
+          "meanSentence": 32,
+          "cadenceCV": 0.5224,
+          "counts": {
+            "slop_words": 2
+          }
+        },
+        {
+          "id": "newsletter__012",
+          "date": null,
+          "words": 102,
+          "sentences": 6,
+          "meanSentence": 17.17,
+          "cadenceCV": 0.5781,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__013",
+          "date": null,
+          "words": 329,
+          "sentences": 19,
+          "meanSentence": 17.32,
+          "cadenceCV": 0.6617,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__014",
+          "date": null,
+          "words": 449,
+          "sentences": 17,
+          "meanSentence": 26.41,
+          "cadenceCV": 0.4525,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__015",
+          "date": null,
+          "words": 282,
+          "sentences": 17,
+          "meanSentence": 16.47,
+          "cadenceCV": 0.7016,
+          "counts": {
+            "slop_words": 1
+          }
+        },
+        {
+          "id": "newsletter__016",
+          "date": null,
+          "words": 327,
+          "sentences": 23,
+          "meanSentence": 14.09,
+          "cadenceCV": 0.5694,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__017",
+          "date": null,
+          "words": 109,
+          "sentences": 4,
+          "meanSentence": 27.25,
+          "cadenceCV": 0.9717,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__018",
+          "date": null,
+          "words": 117,
+          "sentences": 6,
+          "meanSentence": 19.33,
+          "cadenceCV": 0.6205,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__019",
+          "date": null,
+          "words": 867,
+          "sentences": 59,
+          "meanSentence": 14.66,
+          "cadenceCV": 0.5304,
+          "counts": {
+            "rule_of_three": 1
+          }
+        },
+        {
+          "id": "newsletter__020",
+          "date": null,
+          "words": 601,
+          "sentences": 31,
+          "meanSentence": 19.45,
+          "cadenceCV": 0.7098,
+          "counts": {
+            "em_dash": 5
+          }
+        },
+        {
+          "id": "newsletter__021",
+          "date": null,
+          "words": 401,
+          "sentences": 21,
+          "meanSentence": 19.1,
+          "cadenceCV": 0.6567,
+          "counts": {
+            "negative_parallelism": 1,
+            "em_dash": 1
+          }
+        },
+        {
+          "id": "newsletter__022",
+          "date": null,
+          "words": 227,
+          "sentences": 21,
+          "meanSentence": 10.81,
+          "cadenceCV": 0.5924,
+          "counts": {
+            "slop_words": 1
+          }
+        },
+        {
+          "id": "newsletter__023",
+          "date": null,
+          "words": 535,
+          "sentences": 33,
+          "meanSentence": 16.21,
+          "cadenceCV": 0.7892,
+          "counts": {
+            "contrastive_negation": 1,
+            "em_dash": 2
+          }
+        },
+        {
+          "id": "newsletter__024",
+          "date": null,
+          "words": 363,
+          "sentences": 28,
+          "meanSentence": 13.04,
+          "cadenceCV": 0.705,
+          "counts": {}
+        },
+        {
+          "id": "newsletter__025",
+          "date": null,
+          "words": 580,
+          "sentences": 24,
+          "meanSentence": 24.17,
+          "cadenceCV": 0.6886,
+          "counts": {}
+        }
+      ]
+    },
+    {
+      "key": "human",
+      "documents": 40,
+      "words": 16530,
+      "rows": [
+        {
+          "id": "blogauthorship__001",
+          "date": "2004",
+          "words": 1687,
+          "sentences": 100,
+          "meanSentence": 16.88,
+          "cadenceCV": 0.697,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__002",
+          "date": "2004",
+          "words": 757,
+          "sentences": 47,
+          "meanSentence": 16.11,
+          "cadenceCV": 0.5885,
+          "counts": {
+            "editorializing": 1,
+            "em_dash": 3
+          }
+        },
+        {
+          "id": "blogauthorship__003",
+          "date": "2004",
+          "words": 142,
+          "sentences": 6,
+          "meanSentence": 23.67,
+          "cadenceCV": 0.4109,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__004",
+          "date": "2004",
+          "words": 270,
+          "sentences": 17,
+          "meanSentence": 15.41,
+          "cadenceCV": 0.7422,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__005",
+          "date": "2004",
+          "words": 469,
+          "sentences": 47,
+          "meanSentence": 10.21,
+          "cadenceCV": 0.7471,
+          "counts": {
+            "summary_ending": 1,
+            "contrastive_negation": 1
+          }
+        },
+        {
+          "id": "blogauthorship__006",
+          "date": "2004",
+          "words": 827,
+          "sentences": 44,
+          "meanSentence": 18.82,
+          "cadenceCV": 0.4491,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__007",
+          "date": "2004",
+          "words": 143,
+          "sentences": 14,
+          "meanSentence": 10.21,
+          "cadenceCV": 0.5723,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__008",
+          "date": "2004",
+          "words": 217,
+          "sentences": 16,
+          "meanSentence": 13.69,
+          "cadenceCV": 0.7286,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__009",
+          "date": "2004",
+          "words": 485,
+          "sentences": 45,
+          "meanSentence": 10.78,
+          "cadenceCV": 0.7363,
+          "counts": {
+            "contrastive_negation": 3
+          }
+        },
+        {
+          "id": "blogauthorship__010",
+          "date": "2004",
+          "words": 446,
+          "sentences": 13,
+          "meanSentence": 34.31,
+          "cadenceCV": 0.3827,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__011",
+          "date": "2004",
+          "words": 195,
+          "sentences": 3,
+          "meanSentence": 65,
+          "cadenceCV": 0.8103,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__012",
+          "date": "2004",
+          "words": 163,
+          "sentences": 14,
+          "meanSentence": 11.71,
+          "cadenceCV": 0.9242,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__013",
+          "date": "2004",
+          "words": 121,
+          "sentences": 12,
+          "meanSentence": 10.08,
+          "cadenceCV": 0.4642,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__014",
+          "date": "2004",
+          "words": 124,
+          "sentences": 10,
+          "meanSentence": 12.4,
+          "cadenceCV": 0.5716,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__015",
+          "date": "2004",
+          "words": 368,
+          "sentences": 40,
+          "meanSentence": 9.82,
+          "cadenceCV": 0.6481,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__016",
+          "date": "2004",
+          "words": 1604,
+          "sentences": 93,
+          "meanSentence": 17.28,
+          "cadenceCV": 0.7013,
+          "counts": {
+            "contrastive_negation": 2
+          }
+        },
+        {
+          "id": "blogauthorship__017",
+          "date": "2004",
+          "words": 255,
+          "sentences": 14,
+          "meanSentence": 18.29,
+          "cadenceCV": 0.6664,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__018",
+          "date": "2004",
+          "words": 865,
+          "sentences": 58,
+          "meanSentence": 14.91,
+          "cadenceCV": 0.4512,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__019",
+          "date": "2004",
+          "words": 179,
+          "sentences": 20,
+          "meanSentence": 9.1,
+          "cadenceCV": 0.5292,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__020",
+          "date": "2004",
+          "words": 406,
+          "sentences": 26,
+          "meanSentence": 15.65,
+          "cadenceCV": 0.5045,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__021",
+          "date": "2004",
+          "words": 451,
+          "sentences": 31,
+          "meanSentence": 14.58,
+          "cadenceCV": 0.645,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__022",
+          "date": "2004",
+          "words": 185,
+          "sentences": 22,
+          "meanSentence": 8.41,
+          "cadenceCV": 0.6847,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__023",
+          "date": "2004",
+          "words": 392,
+          "sentences": 39,
+          "meanSentence": 10.18,
+          "cadenceCV": 0.8624,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__024",
+          "date": "2004",
+          "words": 180,
+          "sentences": 9,
+          "meanSentence": 20,
+          "cadenceCV": 1.0374,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__025",
+          "date": "2004",
+          "words": 484,
+          "sentences": 30,
+          "meanSentence": 16.13,
+          "cadenceCV": 1.2307,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__026",
+          "date": "2004",
+          "words": 135,
+          "sentences": 10,
+          "meanSentence": 13.8,
+          "cadenceCV": 0.7143,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__027",
+          "date": "2004",
+          "words": 246,
+          "sentences": 15,
+          "meanSentence": 16.4,
+          "cadenceCV": 0.4402,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__028",
+          "date": "2004",
+          "words": 313,
+          "sentences": 26,
+          "meanSentence": 12.12,
+          "cadenceCV": 1.0806,
+          "counts": {
+            "contrastive_negation": 1
+          }
+        },
+        {
+          "id": "blogauthorship__029",
+          "date": "2004",
+          "words": 142,
+          "sentences": 2,
+          "meanSentence": 71.5,
+          "cadenceCV": 0.7483,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__030",
+          "date": "2004",
+          "words": 525,
+          "sentences": 73,
+          "meanSentence": 8.1,
+          "cadenceCV": 0.9509,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__031",
+          "date": "2004",
+          "words": 1278,
+          "sentences": 91,
+          "meanSentence": 14.05,
+          "cadenceCV": 0.7363,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__032",
+          "date": "2004",
+          "words": 141,
+          "sentences": 12,
+          "meanSentence": 11.75,
+          "cadenceCV": 0.8763,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__033",
+          "date": "2004",
+          "words": 321,
+          "sentences": 22,
+          "meanSentence": 14.59,
+          "cadenceCV": 0.7797,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__034",
+          "date": "2004",
+          "words": 152,
+          "sentences": 10,
+          "meanSentence": 15.2,
+          "cadenceCV": 0.5839,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__035",
+          "date": "2004",
+          "words": 149,
+          "sentences": 17,
+          "meanSentence": 8.82,
+          "cadenceCV": 0.7429,
+          "counts": {
+            "contrastive_negation": 1
+          }
+        },
+        {
+          "id": "blogauthorship__036",
+          "date": "2004",
+          "words": 130,
+          "sentences": 14,
+          "meanSentence": 9.36,
+          "cadenceCV": 0.5533,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__037",
+          "date": "2004",
+          "words": 430,
+          "sentences": 39,
+          "meanSentence": 11.1,
+          "cadenceCV": 0.732,
+          "counts": {
+            "hedged_balance": 1
+          }
+        },
+        {
+          "id": "blogauthorship__038",
+          "date": "2004",
+          "words": 354,
+          "sentences": 40,
+          "meanSentence": 8.88,
+          "cadenceCV": 0.6508,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__039",
+          "date": "2004",
+          "words": 138,
+          "sentences": 13,
+          "meanSentence": 10.62,
+          "cadenceCV": 0.518,
+          "counts": {}
+        },
+        {
+          "id": "blogauthorship__040",
+          "date": "2004",
+          "words": 661,
+          "sentences": 58,
+          "meanSentence": 11.4,
+          "cadenceCV": 0.982,
+          "counts": {}
+        }
+      ]
+    }
+  ]
+}

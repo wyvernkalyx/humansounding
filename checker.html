@@ -168,7 +168,7 @@ const RULES = [
     fix: "End the sentence at the fact. If the implication matters, give it its own sentence." },
   { id: "summary_ending", label: "Summary phrase", sev: 2, re: /\b(?:in\s+conclusion|in\s+summary|to\s+summariz(?:e|se)|all\s+in\s+all|at\s+the\s+end\s+of\s+the\s+day)\b|(?:^|\.\s+)(?:overall|ultimately),/gi,
     fix: "End on your last new point instead of restating." },
-  { id: "chatbot_artifact", label: "Chatbot artifact", sev: 3, re: /\bgreat question\b|\byou'?re absolutely right\b|\bi hope this (?:helps|message finds you well)\b|\blet me know if you (?:need|have|want)\b|\bcertainly!\b|\b(?:would you like me to|want me to|shall i)\b[^.!?]{0,70}\?/gi,
+  { id: "chatbot_artifact", label: "Chatbot artifact", sev: 3, re: /\bgreat question\b|\byou'?re absolutely right\b|\b(?:i\s+)?hope this (?:helps|message finds you well)\b|\blet me know if you (?:need|have|want)\b|\bcertainly!\b|\b(?:would you like me to|want me to|shall i)\b[^.!?]{0,70}\?/gi,
     fix: "Copy-paste residue from a chat window. Delete it." },
   // Retired 2026-08-19. Measured at 0.89 hits per 1,000 words in human Medium
   // articles against 0.41 in current model drafts: it fires twice as often on

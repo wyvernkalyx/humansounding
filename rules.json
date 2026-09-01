@@ -1,31 +1,32 @@
 {
-  "version": "2026-08-31",
+  "version": "2026-09-01",
   "note": "Rules as the humansounding.com checker runs them, with measured rates per 1,000 words. Generated from checker.html; do not edit by hand.",
+  "method": "Rates per 1,000 words. Intervals are 95% percentile bootstrap over 2000 resamples of whole documents, seeded (20260831) so a rerun reproduces these numbers exactly.",
   "corpora": [
     {
       "key": "ai",
-      "name": "Claude Opus 5",
+      "name": "Claude Opus 5, Aug 2026",
       "human": false,
       "documents": 40,
       "words": 21814
     },
     {
       "key": "ai-openai-55",
-      "name": "GPT-5.5",
+      "name": "GPT-5.5, Aug 2026",
       "human": false,
       "documents": 39,
       "words": 18394
     },
     {
       "key": "ai-openai",
-      "name": "ChatGPT",
+      "name": "ChatGPT, Aug 2026",
       "human": false,
       "documents": 35,
       "words": 10914
     },
     {
       "key": "ai-gemini",
-      "name": "Gemini 3.7 Flash",
+      "name": "Gemini Flash, Aug 2026",
       "human": false,
       "documents": 40,
       "words": 21818
@@ -70,12 +71,12 @@
           0.45
         ],
         "ai-openai": [
-          0.12,
-          1.07
+          0.11,
+          1.1
         ],
         "ai-gemini": [
           0.09,
-          0.7
+          0.72
         ],
         "medium": [
           0.05,
@@ -83,10 +84,10 @@
         ],
         "newsletter": [
           0,
-          0.35
+          0.32
         ]
       },
-      "verdict": "Highest in ChatGPT at 0.55, but the interval overlaps human writing. Not separation."
+      "verdict": "Highest in ChatGPT, Aug 2026 at 0.55, but the interval overlaps human writing. Not separation."
     },
     {
       "id": "stock_openers",
@@ -109,7 +110,7 @@
         ],
         "ai-openai-55": [
           0,
-          0.17
+          0.16
         ],
         "ai-openai": [
           0,
@@ -151,7 +152,7 @@
         ],
         "ai-openai-55": [
           0,
-          0.3
+          0.29
         ],
         "ai-openai": [
           0,
@@ -162,15 +163,15 @@
           1.55
         ],
         "medium": [
-          0.14,
+          0.13,
           0.57
         ],
         "newsletter": [
-          0.14,
-          1.24
+          0.15,
+          1.22
         ]
       },
-      "verdict": "Highest in Gemini 3.7 Flash at 1.01, but the interval overlaps human writing. Not separation."
+      "verdict": "Highest in Gemini Flash, Aug 2026 at 1.01, but the interval overlaps human writing. Not separation."
     },
     {
       "id": "testament",
@@ -361,11 +362,11 @@
         ],
         "ai-openai-55": [
           0,
-          0.2
+          0.21
         ],
         "ai-openai": [
           0,
-          0.32
+          0.33
         ],
         "ai-gemini": [
           0,
@@ -373,7 +374,7 @@
         ],
         "medium": [
           0,
-          0.29
+          0.28
         ],
         "newsletter": [
           0,
@@ -387,7 +388,7 @@
       "label": "Chatbot artifact",
       "severity": 3,
       "guidance": "Copy-paste residue from a chat window. Delete it.",
-      "pattern": "/\\bgreat question\\b|\\byou'?re absolutely right\\b|\\bi hope this (?:helps|message finds you well)\\b|\\blet me know if you (?:need|have|want)\\b|\\bcertainly!\\b|\\b(?:would you like me to|want me to|shall i)\\b[^.!?]{0,70}\\?/gi",
+      "pattern": "/\\bgreat question\\b|\\byou'?re absolutely right\\b|\\b(?:i\\s+)?hope this (?:helps|message finds you well)\\b|\\blet me know if you (?:need|have|want)\\b|\\bcertainly!\\b|\\b(?:would you like me to|want me to|shall i)\\b[^.!?]{0,70}\\?/gi",
       "rates": {
         "ai": 0,
         "ai-openai-55": 0,
@@ -457,7 +458,7 @@
         ],
         "medium": [
           0,
-          0.11
+          0.12
         ],
         "newsletter": [
           0,
@@ -486,8 +487,8 @@
           0.23
         ],
         "ai-openai-55": [
-          0.11,
-          0.63
+          0.1,
+          0.67
         ],
         "ai-openai": [
           0.1,
@@ -499,14 +500,14 @@
         ],
         "medium": [
           0,
-          0.24
+          0.25
         ],
         "newsletter": [
           0,
           0.3
         ]
       },
-      "verdict": "Highest in ChatGPT at 0.46, but the interval overlaps human writing. Not separation."
+      "verdict": "Highest in ChatGPT, Aug 2026 at 0.46, but the interval overlaps human writing. Not separation."
     },
     {
       "id": "bot_scaffolding",
@@ -567,19 +568,19 @@
       "intervals": {
         "ai": [
           0.46,
-          1.51
+          1.52
         ],
         "ai-openai-55": [
-          0.91,
-          2.68
+          0.96,
+          2.71
         ],
         "ai-openai": [
-          0.08,
-          0.97
+          0.09,
+          0.98
         ],
         "ai-gemini": [
           0,
-          0.29
+          0.3
         ],
         "medium": [
           0.03,
@@ -587,10 +588,10 @@
         ],
         "newsletter": [
           0,
-          0.31
+          0.33
         ]
       },
-      "verdict": "Elevated in Claude Opus 5 (0.92) and GPT-5.5 (1.90), against 0.15 at most in human writing. Shared by more than one model, so it is not a fingerprint."
+      "verdict": "Elevated in Claude Opus 5, Aug 2026 (0.92) and GPT-5.5, Aug 2026 (1.90), against 0.15 at most in human writing. Shared by more than one model, so it is not a fingerprint."
     },
     {
       "id": "fragment_triplet",
@@ -650,31 +651,31 @@
       },
       "intervals": {
         "ai": [
-          9.57,
-          12.43
+          9.59,
+          12.53
         ],
         "ai-openai-55": [
-          0.8,
-          2.76
+          0.78,
+          2.75
         ],
         "ai-openai": [
-          1.89,
-          4.86
+          1.85,
+          4.84
         ],
         "ai-gemini": [
-          2.02,
-          3.43
+          2,
+          3.42
         ],
         "medium": [
-          2.65,
-          5.08
+          2.67,
+          5.12
         ],
         "newsletter": [
-          0.2,
-          2.26
+          0.22,
+          2.24
         ]
       },
-      "verdict": "A Claude Opus 5 habit. 11.05 per 1,000 words, and its interval clears every other model and both human sets."
+      "verdict": "A Claude Opus 5, Aug 2026 habit. 11.05 per 1,000 words, and its interval clears every other model and both human sets."
     }
   ]
 }

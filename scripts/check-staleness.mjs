@@ -89,10 +89,29 @@ for (const page of pages(ROOT)) {
   }
 }
 
+// "Nothing to report" has two very different causes, and until 2026-08-31 the
+// output did not distinguish them: either every published figure still matches
+// the current rates, or none of the snapshots on disk hold a rate that differs
+// from the current ones, so there was never anything a published figure could
+// be stale against. The second is not a pass, it is an absence of evidence, and
+// a weekly log line that reads the same either way invites false confidence.
+const movedCells = history.reduce((n, h) => {
+  for (const [rule, byArm] of Object.entries(current.rates)) {
+    for (const [arm, v] of Object.entries(byArm)) {
+      const old = h.rates?.[rule]?.[arm];
+      if (old !== undefined && old !== null && old !== v) n++;
+    }
+  }
+  return n;
+}, 0);
+
 if (!history.length) {
   console.log(`No history yet. Saving the first snapshot (${current.measured}); drift is checked from next run.`);
+} else if (!findings.length && movedCells === 0) {
+  console.log(`Staleness: nothing could be stale yet. ${history.length} prior snapshot${history.length === 1 ? "" : "s"} on disk, and not one rate differs from ${current.measured}, so there is no drift for a published figure to be behind.`);
+  console.log("This check only has something to say once a rate actually moves between two rebuilds.");
 } else if (!findings.length) {
-  console.log(`Staleness: nothing to report. ${history.length} prior snapshot${history.length === 1 ? "" : "s"} checked against ${current.measured}.`);
+  console.log(`Staleness: nothing to report. ${movedCells} rate${movedCells === 1 ? " has" : "s have"} moved across ${history.length} prior snapshot${history.length === 1 ? "" : "s"}, and no published figure quotes an old value.`);
 } else {
   console.log(`Staleness: ${findings.length} published figure${findings.length === 1 ? "" : "s"} ${findings.length === 1 ? "has" : "have"} moved more than ${MATERIAL * 100}% since publication.\n`);
   for (const f of findings) {

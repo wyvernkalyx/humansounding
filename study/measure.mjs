@@ -12,7 +12,7 @@
 // Each argument is a directory of .txt files, one document per file. Output is
 // a table plus machine-readable JSON on stderr-free stdout.
 
-import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
+import { readFileSync, readdirSync, statSync, existsSync, writeFileSync } from "node:fs";
 import { join, basename } from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
@@ -90,14 +90,48 @@ function measureDoc(raw, rules) {
 // Rate per 1000 words across a corpus, with a bootstrap CI over documents.
 // Resampling documents rather than sentences keeps the unit of independence
 // honest: one long AI article is one observation, not four hundred.
-function rateWithCI(docs, id) {
+// The resampling is seeded, so a rerun against an unchanged corpus reproduces
+// the published intervals exactly. With Math.random() it did not: a rerun on
+// 2026-08-31 returned identical rates and identical verdicts but 27 intervals
+// that had moved by a hundredth or two. Nothing depended on the difference, and
+// that is beside the point. rules.json is the artifact this project invites
+// people to check, and an artifact whose numbers change when you check it is
+// not checkable.
+//
+// The seed is derived per arm and per rule rather than set once globally, so
+// adding a rule or measuring a different set of corpora leaves every existing
+// interval untouched. Changing STUDY_SEED reshuffles everything, so treat it as
+// fixed and say so in the changelog if it ever moves.
+const STUDY_SEED = 20260831;
+
+function seedFrom(str) {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619) >>> 0;
+  }
+  return h >>> 0;
+}
+
+// mulberry32: small, fast, and good enough for a percentile bootstrap.
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function rateWithCI(docs, id, arm) {
   const per = docs.map((d) => ({ n: d.counts[id] || 0, w: d.words }));
   const point = (per.reduce((a, p) => a + p.n, 0) / per.reduce((a, p) => a + p.w, 0)) * 1000;
+  const rand = mulberry32((seedFrom(`${arm}:${id}`) ^ STUDY_SEED) >>> 0);
   const samples = [];
   for (let b = 0; b < BOOTSTRAP; b++) {
     let n = 0, w = 0;
     for (let i = 0; i < per.length; i++) {
-      const p = per[(Math.random() * per.length) | 0];
+      const p = per[(rand() * per.length) | 0];
       n += p.n; w += p.w;
     }
     samples.push(w ? (n / w) * 1000 : 0);
@@ -106,8 +140,15 @@ function rateWithCI(docs, id) {
   return { rate: point, lo: samples[Math.floor(BOOTSTRAP * 0.025)], hi: samples[Math.floor(BOOTSTRAP * 0.975)] };
 }
 
-const dirs = process.argv.slice(2);
-if (dirs.length < 1) { console.error("usage: node study/measure.mjs <dir> [dir2 ...]"); process.exit(1); }
+// --baseline <file> writes per-document rule counts and word counts instead of
+// the summary table, so the human comparisons this project publishes can be
+// reproduced by anyone without us redistributing other people's prose. No text
+// leaves this file, only counts.
+const argv = process.argv.slice(2);
+const bi = argv.indexOf("--baseline");
+const BASELINE = bi === -1 ? null : argv[bi + 1];
+const dirs = bi === -1 ? argv : argv.filter((_, i) => i !== bi && i !== bi + 1);
+if (dirs.length < 1) { console.error("usage: node study/measure.mjs <dir> [dir2 ...] [--baseline out.json]"); process.exit(1); }
 
 const rules = loadRules();
 const ids = [...rules.map((r) => r.id), "em_dash"];
@@ -118,6 +159,46 @@ const arms = dirs.map((dir) => {
   const docs = docsIn(dir).map((d) => ({ name: d.name, ...measureDoc(d.text, rules) }));
   return { arm: basename(dir), dir, docs };
 });
+
+if (BASELINE) {
+  // Dates come from MANIFEST.tsv where one exists and is readable. The
+  // newsletter manifest is deliberately not read: it lists who Gregg subscribes
+  // to, which is his information and not part of any finding.
+  const dateFor = (dir) => {
+    if (basename(dir) === "newsletter") return {};
+    try {
+      const rows = readFileSync(join(dir, "MANIFEST.tsv"), "utf8").trim().split("\n").slice(1);
+      return Object.fromEntries(rows.map((r) => {
+        const c = r.split("\t");
+        return [basename(c[0] || "", ".txt"), c[2] || null];
+      }));
+    } catch { return {}; }
+  };
+  const payload = {
+    generated: new Date().toISOString(),
+    what: "Per-document rule counts and word counts for the HumanSounding corpora. Counts only, no text.",
+    why: "Every human rate this project publishes can be recomputed from this file. The documents themselves are other people's copyrighted prose and are not redistributable, so the counts are published instead.",
+    how: `Counts are produced by study/measure.mjs against the RULES array parsed out of checker.html at runtime, so this file and the live checker cannot drift. em_dash counts raw dashes, including the double hyphen the checker treats as one. cadenceCV is the coefficient of variation of sentence length within the document.`,
+    rules: ids,
+    corpora: arms.map((a) => ({
+      key: a.arm,
+      documents: a.docs.length,
+      words: a.docs.reduce((s, d) => s + d.words, 0),
+      rows: a.docs.map((d) => ({
+        id: d.name,
+        date: dateFor(a.dir)[d.name] || null,
+        words: d.words,
+        sentences: d.sentences,
+        meanSentence: +d.meanSentence.toFixed(2),
+        cadenceCV: +d.cadenceCV.toFixed(4),
+        counts: Object.fromEntries(Object.entries(d.counts).filter(([, n]) => n > 0)),
+      })),
+    })),
+  };
+  writeFileSync(BASELINE, JSON.stringify(payload, null, 2) + "\n");
+  const rows = payload.corpora.reduce((s, c) => s + c.rows.length, 0);
+  console.log(`\nbaseline written: ${BASELINE} (${rows} documents, counts only, no text)`);
+}
 
 for (const a of arms) {
   const w = a.docs.reduce((s, d) => s + d.words, 0);
@@ -140,12 +221,12 @@ console.log("\nRate per 1,000 words (95% CI over documents)\n");
 const head = "tell".padEnd(24) + arms.map((a) => a.arm.padStart(26)).join("");
 console.log(head);
 console.log("-".repeat(head.length));
-const out = { generated: new Date().toISOString(), checker: CHECKER, arms: {}, rules: ids };
+const out = { generated: new Date().toISOString(), checker: CHECKER, seed: STUDY_SEED, bootstrap: BOOTSTRAP, arms: {}, rules: ids };
 for (const a of arms) out.arms[a.arm] = { documents: a.docs.length, words: a.docs.reduce((s, d) => s + d.words, 0), rates: {} };
 for (const id of ids) {
   let row = (labels[id] || id).slice(0, 23).padEnd(24);
   for (const a of arms) {
-    const r = rateWithCI(a.docs, id);
+    const r = rateWithCI(a.docs, id, a.arm);
     out.arms[a.arm].rates[id] = r;
     row += `${r.rate.toFixed(2)} [${r.lo.toFixed(2)}-${r.hi.toFixed(2)}]`.padStart(26);
   }

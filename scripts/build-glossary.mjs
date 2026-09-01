@@ -20,14 +20,21 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CHECKER = join(ROOT, "checker.html");
 const CORPUS = join(ROOT, "study", "corpus");
 
-// arm directory -> how it is named to a reader, and whether it is a human set
+// arm directory -> how it is named to a reader, and whether it is a human set.
+//
+// Every model label carries the month it was sampled, because a rate without a
+// date is a claim about a moving target. Corrected 2026-09-01: the Gemini arm
+// was labelled "Gemini 3.7 Flash" and its manifest records only the floating
+// alias gemini-flash-latest, so the version was never evidenced. The label now
+// says what the record supports. See study/corpus/*/MANIFEST.tsv for the model
+// id, the generation date, and (from 2026-09-01) the id that actually served.
 const ARMS = [
-  ["ai",            "Claude Opus 5",          false],
-  ["ai-openai-55",  "GPT-5.5",                false],
-  ["ai-openai",     "ChatGPT",                false],
-  ["ai-gemini",     "Gemini 3.7 Flash",       false],
-  ["medium",        "Human, Medium articles", true ],
-  ["newsletter",    "Human, newsletters",     true ],
+  ["ai",            "Claude Opus 5, Aug 2026",  false],
+  ["ai-openai-55",  "GPT-5.5, Aug 2026",        false],
+  ["ai-openai",     "ChatGPT, Aug 2026",        false],
+  ["ai-gemini",     "Gemini Flash, Aug 2026",   false],
+  ["medium",        "Human, Medium articles",   true ],
+  ["newsletter",    "Human, newsletters",       true ],
 ];
 
 function loadRules() {
@@ -49,8 +56,8 @@ function loadRules() {
   ];
 }
 
-function measure(dirs) {
-  const r = spawnSync("node", [join(ROOT, "study", "measure.mjs"), ...dirs],
+function measure(dirs, extra = []) {
+  const r = spawnSync("node", [join(ROOT, "study", "measure.mjs"), ...dirs, ...extra],
                       { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
   if (r.status !== 0) { console.error(r.stderr || r.stdout); throw new Error("measure.mjs failed"); }
   const last = r.stdout.trim().split("\n").pop();
@@ -132,6 +139,21 @@ if (existsSync(RATES)) {
 }
 
 const raw = measure(present.map(([d]) => join(CORPUS, d)));
+
+// The reproducibility file. Every human rate this project publishes is
+// recomputable from it, and it carries counts rather than text, so it can be
+// published where the documents themselves cannot. It rides on the glossary
+// build so it cannot fall out of step with the rates, and it covers all three
+// human corpora, including the 2004 blogs, which are measured here but are not
+// one of the arms the verdicts compare.
+const HUMAN_DIRS = ["medium", "newsletter", "human"]
+  .map((d) => join(CORPUS, d))
+  .filter((d) => existsSync(d) && readdirSync(d).some((f) => f.endsWith(".txt")));
+if (HUMAN_DIRS.length) {
+  measure(HUMAN_DIRS, ["--baseline", join(ROOT, "human-baseline.json")]);
+} else {
+  console.log("No human corpora present, so human-baseline.json was left alone.");
+}
 const arms = present.map(([d, name, human]) => ({ key: d, name, human,
   documents: raw.arms[d]?.documents ?? 0, words: raw.arms[d]?.words ?? 0 }));
 
@@ -148,13 +170,15 @@ const entries = rules.map((r) => {
 });
 
 writeFileSync(join(ROOT, "study", "rates.json"), JSON.stringify({
-  measured, arms, rates: Object.fromEntries(entries.map((e) => [e.id, e.rates])),
+  measured, seed: raw.seed ?? null, bootstrap: raw.bootstrap ?? null, arms,
+  rates: Object.fromEntries(entries.map((e) => [e.id, e.rates])),
   intervals: Object.fromEntries(entries.map((e) => [e.id, e.cis])),
 }, null, 2) + "\n");
 
 writeFileSync(join(ROOT, "rules.json"), JSON.stringify({
   version: measured,
   note: "Rules as the humansounding.com checker runs them, with measured rates per 1,000 words. Generated from checker.html; do not edit by hand.",
+  method: raw.seed == null ? undefined : `Rates per 1,000 words. Intervals are 95% percentile bootstrap over ${raw.bootstrap} resamples of whole documents, seeded (${raw.seed}) so a rerun reproduces these numbers exactly.`,
   corpora: arms,
   rules: entries.map((e) => ({ id: e.id, label: e.label, severity: e.sev,
     guidance: e.fix, pattern: e.source, rates: e.rates, intervals: e.cis,
@@ -256,11 +280,11 @@ ${JSON.stringify(schema)}
   .toc a:hover { color: var(--ink-1); }
   section.term { border-top: 1px solid var(--border); padding: 26px 0 6px; }
   section.term h2 { font-size: 21px; margin: 0 0 10px; letter-spacing: -0.3px; }
-  .sev { font-size: 10.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; border-radius: 4px; padding: 3px 7px; vertical-align: 3px; margin-left: 6px; background: var(--border); color: var(--ink-2); }
+  .sev { font-size: 11.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; border-radius: 4px; padding: 3px 7px; vertical-align: 3px; margin-left: 6px; background: var(--border); color: var(--ink-2); }
   .plain { font-size: 16.5px; line-height: 1.7; color: var(--ink-1); margin: 0 0 12px; }
   :root[data-theme="dark"] .plain { color: #e8e6e0; }
   .eg { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin: 0 0 6px; }
-  .eg .lbl { font-size: 10.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-muted); margin-right: 8px; }
+  .eg .lbl { font-size: 11.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-muted); margin-right: 8px; }
   .vd { font-size: 14.5px; line-height: 1.6; margin: 14px 0 4px; padding-left: 12px; border-left: 3px solid var(--border); color: var(--ink-2); }
   .vd-model, .vd-shared { border-left-color: #2f7d5d; color: var(--ink-1); }
   :root[data-theme="dark"] .vd-model, :root[data-theme="dark"] .vd-shared { color: #e8e6e0; }
