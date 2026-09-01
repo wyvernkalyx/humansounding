@@ -1,0 +1,39 @@
+# Everything Fails at the Review
+
+Every part of the loop except one is externally triggered. Email arrives, so you process. The meeting starts, so you show up. The review happens only because you decided it would — and every methodology quietly designates it the keystone. Allen said it outright: the review *is* the system.
+
+We built the keystone out of the least reliable material available. That's the whole failure, and no amount of tooling touches it.
+
+You know the collapse curve, so skip to the consequence. The app never failed. The review didn't happen for three weeks, the data drifted from reality, trust died, and after that the tool is a haunted list. Migration isn't irrational under those conditions — it's the cheapest available trust reset, with a UI change bolted on to make it feel like a decision.
+
+**Trust was always the product, and it doesn't degrade gracefully.** The original claim was epistemic: externalize commitments and your brain stops running background threads on them. Mind like water was contingent on complete, current, trusted capture. Once that condition breaks, the mechanics invert. A partially-trusted system is worse than none, because now you run the background threads *and* the overhead — you check the list and you also worry about what isn't on it. Every incomplete system taxes you twice.
+
+Fifteen years of discourse went into better contexts, better tags, better automation. You cannot ratchet your way to trust. One incident — something important the system failed to surface — destroys it. Twenty clean weeks don't restore it.
+
+**PKM made it worse by deleting the terminal state.** A task backlog is bounded in principle; things get done, or rot visibly enough that you can declare bankruptcy. A note graph has no *done*. No completion condition, no signal that maintenance has paid out, so the practice runs indefinitely against an unconfirmable return. That design selects for people who enjoy tending, not people who need output. Compare what the peak-Roam cohort shipped against the size of their graphs.
+
+**And the constraint usually isn't yours anyway.** You optimize your queue; it empties into someone else's. Theirs is the bottleneck. You've raised WIP upstream of the real constraint, which is the textbook way to make total flow time worse while feeling more productive. A clean personal Kanban ending in "waiting on Dana" is a well-organized record of your dependence on Dana. The high-leverage move is a shorter feedback loop with other people — smaller batches, earlier handoffs — which is an organizational intervention in personal-productivity clothing, and uncomfortable because it requires talking to someone instead of tuning a database.
+
+The finitude turn was the right correction and got metabolized as content. The tell: people who actually accept it *drop things loudly.* They send the declining email. If your acceptance hasn't produced visible, socially costly subtraction, it's aesthetics.
+
+## What survives
+
+Not a methodology. Four properties:
+
+**Externally triggered review, or none.** Attach it to something that happens whether you're motivated or not — a recurring meeting, a Monday report to a person. Solo weekly reviews have a survival rate near zero.
+
+**WIP caps someone else can see.** Self-enforced limits are suggestions. Witnessed ones are constraints.
+
+**A pre-priced failure mode.** The eleven-day gap is the operating environment, not an anomaly. If restoring trust requires an audit, you'll migrate instead. Design for a four-minute reset from a blank page and stop treating history as an asset.
+
+**Subtraction with a social cost.** Deletion nobody witnesses is deferral.
+
+## Where I'm stuck
+
+Every one of those concedes that the fully-trusted external system was never achievable. You'll run background threads regardless; the honest question is how many, not zero.
+
+Maybe these were never memory prosthetics. They're triage instruments — the job isn't to hold everything faithfully, it's to make tradeoffs legible often enough that you decline the right things. Under that reading, incompleteness isn't failure, and the review's real output isn't a groomed list but the two or three commitments you kill.
+
+Which means the metric was never tasks completed. It's things dropped on purpose. Mine for the quarter is lower than I'd like.
+
+Where does yours land?

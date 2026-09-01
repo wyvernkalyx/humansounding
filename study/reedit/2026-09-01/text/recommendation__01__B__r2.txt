@@ -1,0 +1,34 @@
+---
+
+**[Your Name]** | [Title], [Department], [Institution] | [Email]
+
+[Date]
+
+Dear [Colleague's First Name],
+
+[Student] is the strongest undergraduate researcher to come through my group since [former student], now [position, institution] — that's [number] students over [number] years. Take [him/her/them].
+
+You have the file, so three things it doesn't tell you.
+
+The [Journal] manuscript lists [him/her/them] second, but the [specific contribution] is entirely [his/hers/theirs]. I wrote the framing and little else.
+
+Last spring our central result failed across three replicate trials and I was ready to shelve the project. [Student] came back in two weeks with a candidate confounder we'd both missed and a control experiment already designed. [He/She/They] was right. That redirection is the paper. I've watched plenty of talented students go quiet when a result collapses; this one got louder and better organized.
+
+The caveat: [he/she/they] under-communicates when stuck and will burn a week before asking for help. It's improved under pressure from me, but a hands-off advisor would be the wrong match. Worth steering toward [Name] rather than [Name] — the interests look adjacent on paper, the methods aren't.
+
+I'd keep [him/her/them] in my own group if [he/she/they] weren't leaving. Call me if that's faster.
+
+Best,
+[Your Name]
+
+---
+
+**What went and why:**
+
+- **Verdict moved to the first sentence.** Everything after it now functions as support rather than buildup.
+- **Section headers cut.** At this length they'd outnumber the content.
+- **Transcript defense dropped** — it's the least load-bearing item, and a reader with the file can ask.
+- **One anecdote kept, told faster.** The replication story does more work than the other three points combined, so it survives at nearly full length while everything around it compresses.
+- **Caveat and fit advice merged** into a single practical paragraph, since both answer the same question: how do we place this person?
+
+If you need it shorter still, the CV-correction paragraph is the next to go.

@@ -1,0 +1,87 @@
+# Annual Performance Review
+
+**Employee:** [Name]
+**Title:** Account Executive, Mid-Market
+**Reviewer:** [Manager Name]
+**Review Period:** January 1 – December 31, [Year]
+**Date:** [Date]
+
+**Overall Rating:** Exceeds Expectations (with development area noted)
+
+---
+
+## Summary
+
+[Name] delivered an outstanding year of revenue performance, finishing at **127% of annual quota ($2.54M against a $2.0M target)** and ranking second on a team of nine. He consistently wins competitive deals, builds genuine trust with buyers, and is the person teammates seek out when a negotiation stalls.
+
+That commercial strength is offset by persistent gaps in administrative execution — CRM hygiene, deal documentation, expense reporting, and forecast submissions. These are not cosmetic issues: they have created downstream problems for forecasting accuracy, deal desk turnaround, and his own commission processing. Closing this gap is the single highest-leverage change [Name] can make in the coming year, both for the team and for his own advancement.
+
+---
+
+## Key Accomplishments
+
+- **Quota attainment:** 127% of plan; four of four quarters at or above target.
+- **New logo acquisition:** Closed 14 new accounts, including [Account A] ($310K ACV), the largest new-business win in the region this year.
+- **Win rate:** 34% on qualified opportunities, against a team average of 26%.
+- **Expansion:** Grew [Account B] from $45K to $128K through a well-executed multi-threading strategy that he later shared in a team enablement session.
+- **Customer feedback:** Named specifically in three customer reference calls as a reason the buyer chose us. Post-sale CSAT on his accounts averaged 4.7/5.
+- **Team contribution:** Volunteered to mentor two new hires during ramp; both attained quota in their first full quarter.
+
+**Strengths observed:** Discovery and qualification, executive presence, competitive positioning, resilience after losses, willingness to help peers.
+
+---
+
+## Development Area: Administrative Execution and CRM Discipline
+
+Specific observations from the review period:
+
+- **Forecast submissions:** Late in 9 of 12 months, typically by 2–4 days. On three occasions, missing data required [Manager] to reconstruct pipeline figures manually before the regional roll-up.
+- **CRM data quality:** Opportunity close dates and next steps were stale in approximately 40% of open deals at any given time (team average: 12%). Two deals closed in the quarter without contract values updated, which distorted Q3 forecast accuracy by roughly $180K.
+- **Deal documentation:** Incomplete handoff notes on five closed-won accounts required Customer Success to re-interview the customer on scope and commitments. One instance created a misalignment on implementation timeline that took three weeks to resolve.
+- **Expense and commission paperwork:** Q2 commission payment was delayed by one pay cycle due to unsubmitted deal approval forms. Expense reports were submitted an average of 41 days after incurrence, against a 30-day policy.
+
+**Why this matters:** Revenue results are excellent, but the surrounding process is how the business plans headcount, recognizes revenue, and serves customers after the sale. Right now, [Name]'s administrative gaps are being absorbed by his manager, deal desk, and CS partners. That is not sustainable, and it is currently the primary barrier to consideration for a Senior AE or team lead role, both of which carry responsibility for modeling process discipline for others.
+
+---
+
+## Goals for [Next Year]
+
+| # | Goal | Measure | Target Date |
+|---|---|---|---|
+| 1 | Achieve 100%+ quota attainment | Revenue against plan | Ongoing |
+| 2 | On-time forecast submission | 11 of 12 months submitted by deadline | Monthly |
+| 3 | CRM hygiene | ≥90% of open opportunities with current close date, next step, and stage at each Friday audit | Weekly |
+| 4 | Complete handoff documentation | 100% of closed-won deals with completed handoff template before kickoff call | Per deal |
+| 5 | Expense compliance | All reports submitted within 30 days | Monthly |
+
+---
+
+## Agreed Action Plan
+
+1. **Time blocking:** [Name] will block 30 minutes at 4:30 p.m. each Friday for CRM updates and pipeline review, treated as a non-negotiable calendar commitment.
+2. **Manager check-in:** Weekly 1:1s will open with a five-minute pipeline hygiene review for the first 90 days, then move to biweekly if metrics hold.
+3. **Tooling support:** [Name] will complete the mobile CRM logging training in January and enable automated activity capture, which should reduce manual entry substantially.
+4. **Administrative support:** Requesting approval for [Name] to use [X hours/month] of sales support resource for proposal formatting and document assembly — a reasonable investment given his revenue leverage. Note: this supports the workflow but does not transfer ownership of forecast accuracy or CRM data.
+5. **90-day review point:** Progress on Goals 2–5 will be formally reviewed on [Date]. Sustained improvement over two consecutive quarters is the stated prerequisite for Senior AE consideration.
+
+---
+
+## Manager Comments
+
+[Name] is a genuinely talented seller and one of the reasons this region hit plan. I want to be direct: the selling is not the question this year, and I do not want the administrative feedback to obscure how strong the results are. The question is whether he can pair that talent with the operational reliability the next role requires. I believe he can — the issues are habit and prioritization, not capability or attitude, and he has responded to this feedback constructively when we've discussed it informally. The action plan above is designed to make the habit easier to build rather than to add oversight for its own sake.
+
+---
+
+## Employee Comments
+
+_[Space for employee response]_
+
+---
+
+**Employee Signature:** ______________________ **Date:** __________
+
+**Manager Signature:** ______________________ **Date:** __________
+
+---
+
+*Note: Swap in your actual metrics, dates, and examples — specific, documented instances make the development feedback defensible and far more useful to the employee than general characterizations. If your organization ties ratings to compensation bands, confirm that "Exceeds Expectations" is consistent with the merit or commission outcome you intend before delivering this.*

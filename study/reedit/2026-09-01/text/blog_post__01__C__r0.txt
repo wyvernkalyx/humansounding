@@ -1,0 +1,91 @@
+# How to Choose a Password Manager (Without Overthinking It)
+
+Every few months someone in my life asks me which password manager they should use, and I've noticed the question is usually a stand-in for a different one: *am I about to make an expensive mistake?* Picking a place to store the keys to your entire digital life feels like it should require research. It does — but less than you'd think, and probably not the research you're imagining.
+
+Here's what actually matters.
+
+## First, why the browser's built-in option might be fine
+
+Let's get this out of the way, because a lot of security advice skips it: the password managers built into Chrome, Safari, Firefox, and Edge are genuinely decent now. They're free, they sync, they autofill well, and they'll flag reused or breached passwords.
+
+If the realistic alternative is that you keep using `Fluffy2019!` on forty websites, use the browser one. Today. The gap between "no password manager" and "browser password manager" is enormous. The gap between "browser password manager" and "dedicated password manager" is real but much smaller.
+
+You should look at a dedicated app if you:
+
+- Use devices across ecosystems (a Windows laptop and an iPhone, say) and want everything to work everywhere
+- Need to share credentials with a partner, family, or coworkers
+- Want to store more than passwords — recovery codes, software licenses, passport numbers, secure notes
+- Want stronger control over how your data is encrypted and where it lives
+
+That last group is a minority. Be honest about which one you're in.
+
+## The one architectural thing to check
+
+Nearly every reputable password manager uses **zero-knowledge encryption**: your vault is encrypted on your device with a key derived from your master password, and the company never sees that password or the key. Even if their servers are breached, attackers get encrypted blobs.
+
+This is table stakes. If a service can't explain clearly that it works this way, walk away.
+
+What separates good from great is the **key derivation function** — the math that turns your master password into an encryption key. Older ones (PBKDF2 with low iteration counts) are more vulnerable to brute-forcing if someone steals your encrypted vault. Modern ones (Argon2id, or PBKDF2 with a high iteration count) are dramatically more resistant.
+
+This isn't theoretical. When LastPass was breached in 2022, attackers walked away with copies of customer vaults. Users with strong master passwords and modern settings were mostly fine. Users with weak master passwords and legacy low-iteration settings were in real trouble, and some lost cryptocurrency holdings as a result. The encryption did its job exactly as designed — it just bought less time for the people with weak inputs.
+
+The lesson isn't "avoid that one company." It's: **assume your encrypted vault will someday be stolen, and choose accordingly.** Strong master password, modern KDF settings, and a vendor that upgrades defaults for existing users rather than leaving them on decade-old parameters.
+
+## Criteria that actually differentiate
+
+**Autofill that doesn't fight you.** This is the single biggest predictor of whether you'll still be using the thing in six months. A password manager you bypass because filling a login takes four taps is worse than useless — it trains you to reach for the manual workaround. Try the free tier or trial on the device you use most, especially mobile. Mobile autofill quality varies wildly between products and it's hard to judge from a features page.
+
+**Independent security audits.** Look for recent third-party audits, published publicly. Open source is a genuine plus — it means the encryption implementation can be inspected — but it's not a substitute for audits, and "open source" alone doesn't mean anyone competent has actually looked.
+
+**Recovery and emergency access.** Underrated to the point of negligence. Ask two questions:
+
+1. *What happens if I forget my master password?* With true zero-knowledge design, often the answer is "your data is gone forever." Some products offer recovery keys, account recovery via a second device, or organization-level recovery for business accounts. Know which model you're signing up for.
+2. *What happens if I die or am hospitalized?* Emergency access features let a designated contact request your vault, with a waiting period during which you can deny the request. If you have a spouse, dependents, or a business, this matters more than any feature on the marketing page.
+
+**Export and portability.** Verify you can export your vault to a standard format like CSV or JSON. You may never use it, but a product that makes leaving difficult is telling you something about how it plans to treat you later. Test the export *before* you commit — not two years in.
+
+**Passkey support.** Passkeys are the industry's actual replacement for passwords, and they're arriving fast. Any manager you pick now should store and sync passkeys across platforms. This is where cross-platform managers have a real edge over ecosystem-locked ones: an Apple-only passkey is inconvenient the day you buy an Android phone.
+
+**Sharing.** If you'll share credentials with anyone, look at how it works. Good implementations share individual items or folders with per-person permissions, and let you revoke access cleanly. Bad implementations are "just tell them the password," which defeats the point.
+
+## The question of storing your 2FA codes
+
+Most password managers will store your TOTP two-factor codes alongside your passwords. This is convenient — one tap, both factors filled.
+
+It also means one compromised vault yields both factors, which is arguably not two-factor authentication anymore.
+
+Reasonable people disagree here. My take: for most accounts, the convenience wins, because the alternative is that you don't enable 2FA at all. But keep the codes for your **most critical accounts** — primary email, bank, and the password manager itself — somewhere separate. A dedicated authenticator app or a hardware security key. Your email account is the master key to everything else via password resets; treat it accordingly.
+
+## Cloud-synced vs. self-hosted vs. local-only
+
+**Cloud-synced** (the default for most commercial products): the vendor stores your encrypted vault and syncs it across devices. Easiest, most reliable, and — because the vault is encrypted before it leaves your device — secure enough for the overwhelming majority of people.
+
+**Self-hosted**: you run the sync server yourself. Appealing if you have strong opinions and the skills to maintain it. Be realistic: a poorly maintained server you run is less secure than a well-maintained one someone else runs. Availability is also on you, and a password manager you can't reach is a bad day.
+
+**Local-only** (the KeePass family): an encrypted file you manage and sync however you like, or not at all. Maximum control, maximum friction, no vendor to trust. Great for people who enjoy this sort of thing; frustrating for people who don't. Also worth knowing that "local-only" often becomes "synced through Dropbox," which reintroduces a third party through a side door.
+
+## Your master password
+
+Whatever you choose, this is the part that's entirely on you.
+
+Use a **passphrase**, not a password: four to six random words, generated by dice or software rather than chosen by your brain. Something like `correct-battery-elder-nutmeg`. Long, memorable, and far harder to brute-force than `Tr0ub4dor&3`. Don't reuse it anywhere. Write it down and store it somewhere physically secure — a safe, a sealed envelope with important documents. This is not the security sin people think it is; the threat model for a piece of paper in your home is very different from the one for a credential typed into a login form.
+
+Turn on two-factor authentication for the password manager account itself.
+
+## Actually migrating
+
+Don't try to fix every password in one sitting. You'll burn out around account nineteen.
+
+Import what you have, then let the manager's security dashboard rank your accounts by risk. Fix reused and weak passwords on your **highest-value accounts first**: email, banking, phone carrier, and any account with a saved credit card. Then let the rest happen organically — every time you log into something and it prompts you, take thirty seconds to rotate that password. In a couple of months you'll be mostly done without ever having scheduled a "password day."
+
+Delete saved passwords from your browser once you've migrated, so you're not maintaining two half-populated vaults.
+
+## The honest summary
+
+Any well-audited, zero-knowledge password manager with good autofill on your devices will serve you well. The differences between the top handful are real but small, and they matter far less than the difference between using one and not.
+
+Pick a reputable option this week. Use a strong passphrase. Enable 2FA. Fix your email password today and everything else gradually.
+
+The perfect choice you make in three months is worth less than the good one you make tonight.
+
+*A note on specifics: features, pricing, and encryption defaults change frequently, and my knowledge has a cutoff date. Check any product's current documentation and recent audit history before committing.*

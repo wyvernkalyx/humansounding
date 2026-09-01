@@ -1,0 +1,58 @@
+**MEMORANDUM**
+
+**TO:** Department Directors; Team Leads (CS Reorg Working Group)
+**CC:** HR Business Partner; Operations
+**FROM:** [Name], VP of Customer Experience
+**DATE:** [Date]
+**SUBJECT:** CS Reorg — Final Structure and Execution Plan
+
+---
+
+The structure is final. Go-live is **[Month Day]**. This memo confirms decisions and assigns execution ownership.
+
+**Final Structure**
+
+| Team | Lead | Headcount | Scope |
+|---|---|---|---|
+| Tier 1 Support | [Name] | [#] | First-contact resolution; account, order, general |
+| Technical Support | [Name] | [#] | Troubleshooting, integrations, escalations |
+| Billing & Retention | [Name] | [#] | Invoicing, refunds, plan changes, saves |
+| Quality & Enablement | [Name] | [#] | Training, coaching, QA across all teams |
+
+Two changes from the draft we reviewed on [Date]:
+
+1. **Retention sits with Billing, not Tier 1.** The save-rate data from the pilot supported keeping the billing context with the save conversation.
+2. **Q&E reports to me directly** rather than to Tier 1, to preserve QA independence.
+
+**Ownership and Deadlines**
+
+| Owner | Deliverable | Due |
+|---|---|---|
+| Team leads | Individual assignment conversations complete | [Date] |
+| [Name], HR | Updated reporting lines in HRIS | [Date] |
+| [Name], Ops | Routing rules and queue config in [platform] | [Date] |
+| [Name], Q&E | Role-specific curricula finalized | [Date] |
+| Team leads | Kickoffs held | [Date] |
+| [Name], Ops | Go-live and monitoring | [Date] |
+
+**Decisions Requiring No Further Discussion**
+
+Headcount is flat. Comp bands, titles, and tenure are unchanged. Assignments were finalized [Date] based on the criteria we agreed to; leads should present them as decisions, not proposals.
+
+**Open Items**
+
+- **Coverage gap, Technical Support, [shift/region]** — [Name] to propose a solution by [Date]. Options are cross-training two Tier 1 agents or the contractor path we discussed.
+- **QA scorecard rewrite** — current rubric doesn't map to specialized roles. [Name] to bring a draft to the [Date] leadership sync.
+- **Escalation SLA between Tier 1 and Technical** — needs a number before go-live. [Name] to recommend.
+
+**What I Need From You**
+
+Deliver the assignment conversations by [Date] and flag any retention risk to me directly, not through HR. If someone is landing in a team they didn't want, I'd rather hear it this week than after go-live.
+
+**Reporting**
+
+Standing 20-minute sync, [Day] at [Time], through the 30-day mark. Dashboard for handle time, transfer rate, and CSAT by team will be live at go-live; [Name] owns it.
+
+All-hands Q&A is [Date] at [Time]. Leads should be present and aligned on the two changes noted above.
+
+— [Name]

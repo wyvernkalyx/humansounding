@@ -1,0 +1,19 @@
+**Three-day office schedule starts [Month Day]**
+
+**Tuesday and Wednesday** are company-wide in-office days. Your **third day** is set by your team — managers confirm by **[Date]**. Core hours are [10:00 a.m. – 3:00 p.m.]; otherwise your start and end times are your own.
+
+**What's ready when**
+
+- Desk assignments — [Date], via [system]
+- Parking and badge access — active [Date]
+- Café full hours — [Date]
+
+**How to use the days:** collaborative work in the office, focused work at home. Meetings stay video-enabled for anyone remote, traveling, or out.
+
+**Exceptions:** fully remote employees are unaffected. For medical or caregiving needs, contact [HR contact] — confidentially. Everyday adjustments just need a heads-up to your manager.
+
+Open questions to **[channel]** through Friday or anonymously at **[link]**.
+
+---
+
+I cut the memo header and the closing thanks, on the assumption this is for an email, Slack post, or intranet notice rather than a formal document. If it's going somewhere that needs the TO/FROM/RE block, say the word and I'll add it back.

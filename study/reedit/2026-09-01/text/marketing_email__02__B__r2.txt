@@ -1,0 +1,38 @@
+Same lapsed-member audience, cut to roughly half. The offer now leads; the familiarity moves into a single line instead of an opening paragraph.
+
+**Subject line:** No joining fee if you come back this month
+
+**Preview text:** Rejoin by Jan 31. Your old account's still there.
+
+---
+
+Hi [First Name],
+
+**Rejoin by January 31 and the joining fee's waived — first month $[XX].** Same no-contract terms as before.
+
+👉 [BUTTON: Reactivate My Membership]
+
+That link pulls up your old account. Nothing to re-enter.
+
+If it's been a while, [Coach Name] will build you a re-entry plan so you're not walking in cold — twenty minutes, free, no upsell.
+
+And if you're done with us, no hard feelings: [unsubscribe here].
+
+[Name]
+[Gym Name] · [Phone]
+
+*Previous members reactivating by Jan 31, [Year]. [Terms.]*
+
+---
+
+**What I cut and why:**
+
+- **The familiarity paragraph.** The squat-rack detail was doing real work in the long version, but at this length the proof of familiarity is the offer itself ("same terms as before," "your old account"). Warmth is implied by structure rather than stated.
+- **The persuasion line** ("if it's been on your list since October"). Short formats reward a single clear ask over a closing nudge.
+- **Alternate subject lines.** The subject now states the offer plainly, which matches the format.
+
+**Kept deliberately:** the re-entry plan and the opt-out. The first addresses the actual barrier, and the second is what keeps a win-back email from feeling like a collections notice.
+
+**If the placement is SMS or push instead**, this compresses further:
+
+> [Gym Name]: Joining fee waived if you rejoin by Jan 31, first month $[XX]. Your account's still here → [link]. Reply STOP to opt out.

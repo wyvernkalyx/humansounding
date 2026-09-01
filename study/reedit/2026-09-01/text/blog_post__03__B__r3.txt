@@ -1,0 +1,53 @@
+# Your Bad Meetings Are Load-Bearing
+
+If a meeting is obviously useless and it still exists, it isn't useless. It's doing something other than its stated job, and that something is holding weight. This is why the standard playbook — agenda as questions, named decider, silent read, fewer people — is correct and still doesn't work. It treats meetings as a coordination technology when they're mostly a political and emotional one.
+
+The usual hidden functions:
+
+**Anxiety management.** The weekly status meeting where nothing happens is a VP confirming the building hasn't burned down. The information is in the dashboard; the dashboard doesn't produce the feeling. Delete the meeting and the anxiety reroutes into DMs, which is worse.
+
+**Diffusion of responsibility.** Some meetings exist so a decision has eleven witnesses. Nobody wants to own the call, so it gets made ambiently with no name attached. These are exquisitely resistant to your decision framework, because clarity is the thing they're designed to prevent.
+
+**Access.** For a lot of people, the sync is the only reliable channel to someone senior. Cancel it and you haven't saved their time — you've cut their escalation path, and they'll find a costlier one.
+
+You can't delete a meeting by attacking its stated purpose. You have to substitute for its real one. Replace the status meeting with a written update *plus* a standing 15 minutes the anxious VP can use anytime, and it sticks. Skip the substitution and it returns in ninety days under a new name. So: what breaks, for whom, and what do they do instead?
+
+## Meetings are for convergence, not information
+
+"Could this have been an email" is a slogan, not an analysis. Async has real costs: latency compounds (four exchanges is four days async, eleven minutes live), it hands influence to whoever writes fastest and most confidently, threads fork instead of converging, and text is terrible at conflict.
+
+The variable isn't sync versus async. It's whether the thing needs **convergence pressure** — a moment where the group must land somewhere, with social cost attached to not landing. That's what meetings manufacture, and it's nearly their only comparative advantage. Distribution and idea generation, async. Groups converging under disagreement, meet.
+
+## Whoever frames the question has already won
+
+"Do we cut reporting to ship by the 15th?" has smuggled in the premise that those are the options. Someone thinks the real question is whether to ship at all, and now they have to fight the agenda before the substance — which reads as obstruction and costs them credibility.
+
+If you're framing: send the question to your likeliest dissenters beforehand and ask whether it's the right question. This is the cheapest way to learn your agenda rests on a premise your staff engineer thinks is insane. If you're attending: contest the frame in the first two minutes or accept it.
+
+## The decider is whoever can reopen it
+
+Naming a decider fails when someone outside the room can quietly reverse the decision later. The test: **who can reopen this, and what would it take?** If the answer is "the CTO, in a hallway, in four seconds," you ran a recommendation meeting, not a decision meeting.
+
+That's fine — but say so. "We're producing a recommendation for Dana, who takes it Thursday." People engage seriously with an honest recommendation meeting and perform at a dishonest decision meeting. And if a decision keeps reopening, the problem isn't the meeting; it's that someone whose consent it needed wasn't there, and they're routing around it.
+
+## You can only set defaults
+
+Calendars grow because inclusion is a signal and exclusion is an insult. Nobody gets promoted for declining. Individual willpower won't fix a gradient that points one direction forever — structure will:
+
+- **Expiration dates** on recurring meetings. An actual end date requiring actual renewal, so nobody has to be the person who killed anything.
+- **Annual bankruptcy.** Delete every recurring meeting; let people re-create what they miss. It works partly *because* it's indiscriminate.
+- **Separate attendance from access.** Most resistance to being uninvited is resistance to being uninformed. Make notes genuinely good and public and the invite stops being the only channel.
+- **A decision log.** Decisions decay; six months out nobody remembers what was decided or why, so it gets relitigated by people who weren't there. A searchable record of decision, date, rationale, and decider eliminates an entire category of meeting.
+
+Past a certain scope you can't facilitate your way out. You're not in most of the meetings. What propagates isn't skill — it's defaults.
+
+---
+
+I read "claim about results" as the quantitative one — "You'll get back half" — and removed just that sentence, leaving the rest untouched.
+
+If you meant something else, a few other candidates I left in place, any of which I can pull:
+
+- "It works partly *because* it's indiscriminate" (still asserts the tactic works, minus the number)
+- "Skip the substitution and it returns in ninety days under a new name"
+- "four exchanges is four days async, eleven minutes live"
+- "A searchable record... eliminates an entire category of meeting"

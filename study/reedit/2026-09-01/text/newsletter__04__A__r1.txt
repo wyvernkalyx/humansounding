@@ -1,0 +1,120 @@
+# WORK IN PROGRESS
+### *A newsletter about doing good work without disappearing into it*
+
+**Issue #48 — "The Plateau"**
+
+---
+
+Hi friends,
+
+Last issue covered the fundamentals, and judging by the replies, most of you didn't need them. The common thread in your inbox notes was some version of: *I know all this. I've done the inventory. I know which mismatch is mine. I'm still stuck.*
+
+So this one skips the definitions. You know the three dimensions. You've mapped yourself against the six mismatches. You've heard "set boundaries" enough times that the phrase has gone soft in your mouth.
+
+This issue is about what happens after that.
+
+---
+
+## The 70% plateau
+
+Here's the pattern I hear most often from people who've been at this a while:
+
+You make the changes. You cut the meetings, you take the leave, you have the conversation. And something genuinely lifts — the exhaustion recedes, the fog thins, you can read a book again. You get to roughly 70% of yourself.
+
+And then you stop there. For months.
+
+This is the part nobody warns you about, and it's where most people conclude the intervention failed. It usually hasn't. What's happened is that you've resolved the load problem, and load was never the whole problem. Exhaustion is the fastest dimension to recover because it responds to rest. Cynicism and diminished efficacy don't. They respond to *evidence*, accumulated slowly, that the work is worth doing and that you're capable of doing it.
+
+Which means the plateau isn't a sign to try harder at recovery. It's a sign you've moved from a rest problem to a meaning problem, and those have different treatments.
+
+---
+
+## Your cynicism is load-bearing
+
+Related, and worth sitting with: the detachment you're trying to get rid of is doing a job.
+
+Depersonalization is a protective response. It showed up because caring at full volume was costing you more than you could pay. If you succeed in dismantling it before the conditions that produced it have changed, you're not recovering — you're removing the shock absorber and driving the same road.
+
+Practically, this means being suspicious of the urge to force enthusiasm back. The "I just need to reconnect with my *why*" push, undertaken in an environment that hasn't changed, tends to produce a short spike followed by a worse crash. Let the cynicism lift on its own schedule. It will, if the conditions improve. If the conditions don't improve, it's telling you something accurate and you should probably listen to it rather than meditate it away.
+
+---
+
+## The mismatches you can't fix by yourself
+
+If you've done the diagnostic and landed on **workload** or **control**, you have workable material. Those negotiate. There's a version of the conversation that ends with something concretely different on Monday.
+
+**Fairness** and **values** don't work that way, and I think a lot of the stuckness people write to me about is the stuckness of trying to solve an organizational problem with personal tools.
+
+You cannot boundary your way out of a promotion process that rewards visibility over contribution. You cannot time-block around the knowledge that the thing your company sells is worse than what it says it sells. These are not attitude problems and they don't yield to sleep hygiene. They yield to one of three things: the organization changes, your position within it changes enough to give you leverage, or you leave.
+
+That's an uncomfortable list because it's short. But I'd rather you sit with a short accurate list than keep cycling through techniques that were never designed for your problem. A lot of the exhaustion in month eight is the exhaustion of applying the wrong tool with increasing force.
+
+---
+
+## Diagnosis as procrastination
+
+Gentle one, and it's aimed at the people most likely to be reading this.
+
+At some point, continuing to analyze your burnout becomes a way of not acting on it. The framework has done its job. You know which mismatch is yours. Rereading the literature, retaking the inventory, refining the taxonomy of your own suffering — this feels like progress and is often the opposite. It's the intellectual version of reorganizing your desk.
+
+If you've known the answer for more than a month and haven't moved on it, the obstacle isn't clarity. It's usually fear, or money, or the fact that the honest next step is genuinely costly. Those are real. But they're a different problem than the one you keep researching, and they need a different kind of attention.
+
+---
+
+## The strategic stay, with an actual date
+
+Most of you are not leaving tomorrow. The market is what it is, the healthcare is what it is, the timing is what it is. Staying is a legitimate choice.
+
+The failure mode isn't staying. It's staying *without deciding to*, which is how eighteen months disappear.
+
+If you're staying, make it explicit:
+
+- **Write down the date you'll reassess.** An actual date, in your calendar, with a reminder. Not "after this project" — projects reproduce.
+- **Write down the conditions that would change your answer.** "If the reorg doesn't give me a different manager." "If I'm still on-call rotation in March." Specific, falsifiable.
+- **Write down what you're extracting in the meantime.** Money, a title, a skill, a visa, a two-year mark on the résumé. Name the thing so that the cost has a purpose attached to it.
+- **Do one thing per month toward the exit** even though you're not exiting. Keep the network warm, keep the materials current. This is not disloyalty; it's the thing that keeps the stay a choice rather than a trap.
+
+The difference between a strategic stay and slow attrition is entirely whether you wrote it down.
+
+---
+
+## Why your boundaries keep reverting
+
+You held the line for three weeks and then it collapsed. This happens to nearly everyone, and it's not a willpower failure — it's a design failure.
+
+Boundaries maintained by individual vigilance decay under load, reliably, because the moment you're busiest is the moment you have the least vigilance available. The ones that survive are structural:
+
+- **Defaults over decisions.** Schedule-send by default. Calendar blocked by default. Notifications off by default and switched on deliberately, rather than the reverse.
+- **Boundaries with witnesses.** "I'm offline after 6" told to three colleagues holds far better than the same commitment made privately, because now reverting has a social cost.
+- **Boundaries that live in systems, not intentions.** A recurring calendar block beats a resolution. Removing yourself from a Slack channel beats promising not to check it.
+- **Boundaries with a stated exception.** "I don't work weekends unless there's a production incident" survives contact with reality. "I never work weekends" breaks on the first genuine emergency and then never gets rebuilt.
+
+Design for the version of you that's underwater, not the version reading this on a calm afternoon.
+
+---
+
+## What leaving does and doesn't fix
+
+For those closer to the door.
+
+Leaving reliably fixes a bad manager, a toxic team, an untenable workload, and an ethical conflict specific to that employer. Those are not small things. If that's your situation, go.
+
+Leaving does not reliably fix: a pattern of over-functioning that you'll reproduce anywhere, an identity fused to professional output, or the specific dread of a discipline you've stopped believing in. Those travel. They'll take about six months to reappear in the new job, and the reappearance is brutal precisely because you'd staked the recovery on the move.
+
+The useful question before jumping isn't "is this job bad." It's **"what portion of this is the job, and what portion is how I do jobs?"** Even a rough split — 80/20, 50/50 — changes what you do next. If it's mostly the job, move. If there's a real chunk that's yours, move *and* address the chunk, because the new place will hand you the same rope.
+
+---
+
+## 📬 Reader question
+
+**"I recovered, went back to full capacity, and burned out again in fourteen months. What did I do wrong?"**
+
+Probably nothing, in the sense you mean. Recurrence is common and it's usually a conditions problem rather than a technique problem — you returned to the same system, and the system produced the same result on roughly the same timeline. That's not a personal failure; that's a machine working as designed.
+
+The one thing I'd examine: whether your recovery was framed as *getting back to normal*. If normal was what broke you, restoring it is a return trip, not a repair. The people I know who've avoided round three generally didn't return to their prior capacity. They came back at 85% permanently, absorbed the smaller output as a cost of continuing to work at all, and stopped treating the old baseline as the goal.
+
+That's a real loss and I won't pretend otherwise. It's also, for a lot of people, the trade that made the career survivable.
+
+---
+
+##

@@ -1,0 +1,37 @@
+**MEMORANDUM**
+
+**To:** All Staff
+**From:** [Name], [Title]
+**Date:** [Date]
+**Subject:** Expense Policy — Final Details and Cutover Dates
+
+---
+
+As discussed at [meeting/all-hands/date], the revised expense policy takes effect **[effective date]**. Below are the confirmed details and the dates you need.
+
+**Confirmed thresholds and rules**
+
+| Item | Requirement |
+|---|---|
+| Submission window | [30] days from transaction date |
+| Itemized receipt required | $[25] and above |
+| Manager pre-approval | Single expenses over $[500]; all travel and client entertainment |
+| Meals/incidentals | Per diem schedule (no actual-cost claims) |
+| Reimbursement | [10] business days, paid via [direct deposit/payroll] |
+
+**Cutover dates**
+
+- **[Date]** — Last day to submit under the current process
+- **[Date]** — [System name] training module due
+- **[Effective date]** — New policy live; paper and email submissions no longer accepted
+
+**Two changes from what was previously circulated**
+
+- The receipt threshold moved from $[X] to $[25].
+- Mileage will now be reimbursed at the [IRS standard/company] rate of [$X.XX]/mile.
+
+Full policy: [link]. Questions to [name] at [email].
+
+---
+
+*If you'd like, I can strip this down further to a short email or Slack post, or produce a manager-only version with the approval workflow spelled out.*

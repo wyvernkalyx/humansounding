@@ -1,0 +1,63 @@
+# Performance Review — [Name], Account Executive
+**Period:** [Year] | **Overall:** Exceeds Expectations
+
+---
+
+## Results
+
+127% of quota ($2.54M / $2.0M). Four for four on quarterly targets. #2 on the team.
+
+- 14 new logos, including [Account A] at $310K ACV — largest regional new-business win of the year
+- 34% win rate on qualified opps vs. 26% team average
+- [Account B] expansion: $45K → $128K
+- Post-sale CSAT 4.7/5; named in three reference calls as a deciding factor
+- Mentored two ramping reps, both of whom hit quota in their first full quarter
+
+No concerns on the selling side. Discovery, competitive positioning, and executive presence are all strong enough that he's the right person to pull into a stalled negotiation.
+
+---
+
+## Administrative Execution
+
+The gap you're aware of, quantified:
+
+- **Forecasts:** late 9 of 12 months, 2–4 days typical. Three months required manual reconstruction before roll-up.
+- **CRM:** ~40% of open deals with stale close dates or next steps at any given time; team average 12%. Two closed deals with unupdated contract values distorted Q3 forecast accuracy by ~$180K.
+- **Handoffs:** incomplete notes on five closed-won accounts. One caused a three-week implementation timeline dispute.
+- **His own paperwork:** Q2 commission delayed a full pay cycle on unsubmitted approval forms. Expenses averaging 41 days against a 30-day policy.
+
+The cost is currently being absorbed by me, deal desk, and CS. It's the only thing standing between him and Senior AE.
+
+---
+
+## Goals
+
+| Goal | Measure |
+|---|---|
+| Quota | 100%+ attainment |
+| Forecasts | On time 11 of 12 months |
+| CRM hygiene | ≥90% of open opps current at Friday audit |
+| Handoffs | 100% of closed-won documented before kickoff |
+| Expenses | Within 30 days |
+
+---
+
+## Plan
+
+1. Friday 4:30 block for CRM and pipeline, treated as non-negotiable.
+2. First five minutes of every 1:1 on hygiene for 90 days, then biweekly if metrics hold.
+3. Mobile CRM training in January plus automated activity capture.
+4. Requesting [X hrs/month] of sales support for proposal assembly — worth it at his revenue leverage. Doesn't transfer ownership of forecast accuracy.
+5. Formal checkpoint [Date]. Two consecutive clean quarters is the stated bar for Senior AE.
+
+---
+
+## Manager Comment
+
+The selling isn't in question and I don't want the admin feedback to blur that — he's a reason we hit plan. The open question is whether he can pair it with the operational reliability the next role needs. I think he can; this reads as habit and prioritization, not capability, and he's taken the feedback well every time we've raised it informally. The plan is built to make the habit cheaper, not to add supervision.
+
+---
+
+**Employee comments:** _[space]_
+
+**Signatures:** ______________________ / ______________________

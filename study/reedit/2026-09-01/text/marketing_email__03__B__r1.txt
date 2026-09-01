@@ -1,0 +1,50 @@
+# Webinar Invitation Email — Practitioner Audience
+
+**Subject line options:**
+1. [Provision] guidance dropped. The proposed regs raise more questions than they answer.
+2. Technical session: [Provision] compliance ahead of the [Date] effective date
+3. Where the [Year] guidance is still silent — and how firms are handling it
+
+**Preview text:** 60 minutes, CPE-eligible. Open items, not overviews.
+
+---
+
+**Body:**
+
+[First Name],
+
+You've read the guidance. This session is about the parts it doesn't resolve.
+
+**[Webinar Title]**
+[Day, Date] · [Time, Time Zone] · 60 min · [X] CPE credits ([Field of Study])
+
+**Agenda**
+
+- **[§ / Provision]** — Interaction with [related provision] where the proposed regs are silent. Two defensible readings and the exposure profile of each.
+- **Transition rules** — Treatment of [transaction type] straddling the [Date] effective date, including the open question on [specific mechanic].
+- **[Reporting requirement]** — What the new [form/schedule] actually requires versus what the instructions imply, and the data most systems aren't currently capturing.
+- **Documentation** — What contemporaneous support is holding up under exam on [comparable prior provision], and what that suggests here.
+- **Open Q&A** — Submit questions at registration; we'll prioritize by frequency.
+
+**Panel:** [Name, credential, firm] · [Name, credential, firm] · [Name, former agency role, if applicable]
+
+[**Register →**]
+
+Materials include a technical summary with citations and a client-ready explainer you can rebrand. Recording available to registrants; CPE requires live attendance and polling responses.
+
+[Your Name]
+[Title] · [Company]
+[Direct line]
+
+*Positions discussed reflect the presenters' views as of the presentation date and are not advice for any specific taxpayer.*
+
+---
+
+**What changed and why**
+
+- **Assumed knowledge.** No definition of the provision, no "what this means for you," no reassurance that we'll skip the jargon. Jargon is the shared language here — avoiding it reads as condescension.
+- **Value proposition inverted.** The first version sold clarity. This one sells the unresolved edges, competing interpretations, and exam experience — the things a practitioner can't get from reading the primary source themselves.
+- **CPE moved up front.** For this reader it's often the deciding factor, and the eligibility mechanics matter.
+- **Urgency dropped.** "Seats are limited," countdown pressure, and the enthusiastic P.S. tend to reduce credibility with a professional audience. The effective date supplies the urgency on its own.
+- **Named panel with affiliations.** Peers evaluate the speaker before the topic. Firm names and any former agency background do more work than years of experience.
+- **Deliverables reframed.** A citation-backed summary and a white-label client explainer are practice assets, not lead-magnet checklists.

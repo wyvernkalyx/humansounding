@@ -1,0 +1,55 @@
+# Everyone Is Still Arguing About 2021
+
+The distributed-work discourse has been stuck for three years. One camp keeps re-litigating whether culture requires proximity; the other keeps insisting values are location-independent. Neither position has produced a new idea since the second lockdown, and both are arguing about the wrong layer of the stack.
+
+The scaffolding point is settled: co-location was providing passive information diffusion, norm calibration, and cheap trust accumulation as unpriced byproducts, and organizations that never had to build those deliberately discovered they couldn't. Fine. Everyone knows this. The interesting question is what happened to the companies that *did* try to build them deliberately — because a lot of them also drifted, and the reasons are more specific and more fixable than "culture needs an office."
+
+Here's what I think is actually going wrong.
+
+## Writing cultures fail on the read side
+
+Every distributed-work playbook mandates writing. Almost none mandate reading, and that's where it breaks.
+
+The predictable failure sequence: leadership institutes a docs-first norm. Volume goes up. Nobody's calendar changes to accommodate reading time. Documents become artifacts of having-done-the-process rather than instruments of decision-making. Six months in you have a wiki nobody trusts, meetings that still happen because "not everyone's read it," and a class of employee who has correctly identified that writing thoroughly is uncompensated labor.
+
+The diagnostic question isn't "do we write things down." It's **can a competent person reconstruct why a decision was made, by whom, and what was rejected — eighteen months later, without asking anyone.** Most orgs with heavy docs cultures fail this badly, because they're writing proposals and status, not provenance. Proposals are written to persuade and are abandoned the moment they're approved. What you need is the boring residue: decision, owner, considered-and-rejected, revisit-by.
+
+Two structural fixes that actually move the needle. First, the Amazon-style silent read at the top of the meeting — it looks wasteful and it isn't, because it's the only mechanism I've seen that makes reading a scheduled obligation rather than a virtue. Second, make document *decay* somebody's job. Untended docs don't stay neutral; they become actively misleading, and one confidently wrong wiki page costs more than ten missing ones. If nothing in your system marks a page as stale, your writing culture has a half-life of about a year.
+
+## The unglamorous answer is span of control
+
+A lot of what gets diagnosed as culture drift is a management capacity problem wearing a costume.
+
+The mechanism is straightforward. In an office, problem detection was passive — the manager who could read a room was doing real work that didn't appear on any calendar. Distributed, detection becomes an active, scheduled, effortful task. That's a genuine increase in the per-report cost of managing.
+
+Almost nobody adjusted for it. Companies went remote and held spans at eight, ten, twelve reports, then expressed surprise when managers stopped noticing that someone was disengaged four months before they quit. The manager didn't get worse. The job got harder and the headcount didn't move.
+
+This is unpopular because the fix is expensive and boring: distributed orgs need denser management, or flatter structures with genuinely autonomous units and no pretense of oversight in between. What you can't do is keep the org chart from 2019 and expect the same detection rate. A fair number of RTO mandates are, functionally, an attempt to restore passive detection rather than pay for active detection. That's an understandable trade. It's just worth naming honestly, because it's a real-estate-and-commute bill being paid to avoid a headcount bill.
+
+## Hybrid is a third mode, not a midpoint
+
+The most consequential error in the current round is treating hybrid as a compromise between two poles. It's a distinct operating model with its own failure mode, and it's harder than either extreme.
+
+The failure is asymmetry. Two people in a conference room and three on video is not a hybrid meeting; it's an in-person meeting with observers. Side conversations happen. Decisions get made in the ten minutes after the call ends. None of this requires malice and all of it is nearly impossible to police.
+
+The compounding version is presence bias in promotion. The empirical work — Bloom's hybrid RCT being the cleanest — suggests hybrid doesn't hurt output and does reduce attrition. But output isn't what promotion committees are actually reading, which brings me to the next thing.
+
+If you're running hybrid, the only versions I've seen work are the coordinated ones: entire teams in on the same days, meetings all-in-room or all-on-video with no mixed states, and anchor days chosen for collaborative work rather than distributed arbitrarily to satisfy a badge-swipe metric. Individually-chosen hybrid days produce the worst outcome available — the commute cost of the office plus the coordination cost of remote, and a two-tier org besides.
+
+## Promotion systems still run on effort proxies
+
+This is the piece I think is most underrated. Distributed work makes output more legible and effort dramatically less legible. That sounds like an unambiguous improvement, and it would be, if promotion systems evaluated output.
+
+They mostly don't. They evaluate visible reliability, responsiveness, presence in the right rooms, and a general sense that someone is *carrying things*. Those are effort proxies, and they were calibrated in an environment where effort was observable. Move remote and the proxies degrade unevenly: they still work for people who are loud in Slack, in a favorable time zone, or on the CEO's staff, and they stop working for the person quietly holding up a critical service.
+
+The result is a promotion process that's noisier than before but *feels* the same to the people running it, because the noise is invisible from the inside. Then you get attrition among high performers who correctly perceive that the system stopped tracking their contribution, and it gets logged as "remote work hurt our culture."
+
+If you went distributed and didn't rewrite your leveling criteria and calibration process, you didn't finish the migration. You just moved the meetings.
+
+## For juniors, the loss is observed failure
+
+The early-career problem gets attributed to a lack of mentorship, which I think is wrong and leads to bad interventions — more formal mentor pairings, more structured onboarding, more documentation of best practices.
+
+The actual loss is exposure to unfinished, unsuccessful, in-progress senior work. In an office, a junior person overhears a principal engineer being wrong in an argument, watches a sales lead recover from a bad call, sees a director get visibly frustrated and handle it. Remote, everything a junior sees is a finished artifact: the merged PR, the polished deck, the decision already made. They learn what good output looks like and nothing about how it's produced, which is precisely inverted from what they need.
+
+Structured mentorship doesn't fix this because mentorship conversations are also finished artifacts — the senior person is narrating a cleaned-up version. What works is deliberate exposure to mess: juniors on calls they don't need

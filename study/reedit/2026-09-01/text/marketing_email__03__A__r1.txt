@@ -1,0 +1,48 @@
+# Webinar Invitation Email — For an Informed Audience
+
+**Subject line options:**
+1. The [Provision] question your accountant is probably still hedging on
+2. [Date]: Where the new rules get genuinely ambiguous
+3. Beyond the headlines on [Provision Name]
+
+**Preview text:** 45 minutes on the open questions, the edge cases, and the elections you have to make before [deadline].
+
+---
+
+**Body:**
+
+Hi [First Name],
+
+You've read the summaries. What you probably haven't found is a straight answer on [specific ambiguity — e.g., how the transition rules interact with existing [X] arrangements].
+
+Neither has anyone else, which is the problem. Guidance on [Provision] is still thin, the [deadline date] election deadline isn't moving, and the default treatment is the wrong answer for a meaningful share of [audience].
+
+**[Webinar Title]**
+[Day, Date] · [Time, Time Zone] · 45 min + open Q&A
+
+**On the agenda:**
+
+- **[Provision A]:** where the statute and the proposed regs diverge, and how practitioners are handling the gap
+- **The [deadline] election:** who benefits from opting in, who gets burned, and the modeling we'd run before deciding
+- **[Provision B] and [existing structure]:** the interaction nobody flagged in the initial coverage
+- **What we expect from [agency] next** — and which decisions you shouldn't defer waiting for it
+- **Q&A** — unscripted, bring the messy fact patterns
+
+**Presenting:** [Name], [Credential], who has spent the last [X] weeks in the weeds on this with [number] clients in [industry/situation].
+
+[**Save My Seat →**]
+
+Recording and slides go to all registrants. Capped at [number] so the Q&A stays worth attending.
+
+[Your Name]
+[Title] · [Company]
+[Phone] | [Email]
+
+*P.S. Send your specific scenario when you register and we'll try to work it into the session.*
+
+---
+
+**Two things worth checking:**
+
+- Every bracketed provision needs to be a real, named change. With this audience, vagueness reads as "they don't know either" — the specificity *is* the credibility.
+- If your firm has an advertising review process, the "who gets burned" framing and any implied outcomes will likely need a qualifier.

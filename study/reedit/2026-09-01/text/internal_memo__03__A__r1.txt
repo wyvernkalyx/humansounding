@@ -1,0 +1,44 @@
+**MEMORANDUM**
+
+**TO:** Customer Service Team
+**FROM:** [Name]
+**DATE:** [Date]
+**SUBJECT:** Reorganization — effective [Date]
+
+---
+
+The reorganization we've been discussing is confirmed. Here are the details and the timeline.
+
+**Structure**
+
+Effective [Date], the department splits into three teams:
+
+- **Tier 1 Support** — [Name]
+- **Technical Support** — [Name]
+- **Billing & Retention** — [Name]
+
+**Quality & Enablement** stands up as a shared function under [Name], owning training, coaching, and QA across all three.
+
+**Your assignment**
+
+Assignments are based on performance data and the preferences you gave your manager in [month]'s one-on-ones. Your manager will confirm yours by [Date]. If your reporting line changes, you'll meet your new manager before then.
+
+No roles are being eliminated. Compensation, PTO, and tenure are unchanged.
+
+**Timeline**
+
+| [Date] | Assignment conversations complete |
+| [Date] | Team kickoffs |
+| [Date] | Role-specific training (3 half-days, no productivity targets) |
+| [Date] | Routing changes go live |
+| [Date] | 30-day check-in |
+
+Ops is handling the routing rules — nothing changes about how you work the queue.
+
+**Questions**
+
+All-hands Q&A on [Date] at [Time], [Location]. Anonymous questions to [link] by [Date]. HR office hours [Date] and [Date].
+
+Thanks for your patience while we worked this out.
+
+— [Name]

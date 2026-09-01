@@ -1,0 +1,35 @@
+**Assumption:** I've written this for your second-line reviewer — the VP who already knows [Name], the territory, the number, and the paperwork history, and who is reading this to make a calibration and promotion decision. So: no recap, no explaining why CRM hygiene matters, and it leads with the ask. If you meant the employee as the informed reader, see the note at the end.
+
+---
+
+**MEMO**
+
+**To:** [VP, Sales]
+**From:** [Manager]
+**Re:** [Name] — year-end rating and the Senior AE question
+**Date:** [Date]
+
+**Recommendation:** Exceeds Expectations. Not recommending Senior AE this cycle. Recommending an explicit 90-day gate with a decision point at [Date].
+
+**The number.** 127%, $2.54M on $2.0M, four of four quarters, #2 of nine. [Account A] at $310K ACV. 34% win rate against 26% team average. Both of his ramp mentees hit plan in their first full quarter. No argument here.
+
+**What's changed since we discussed this mid-year.** Nothing material. Forecast late in 9 of 12 months. CRM staleness holding around 40% of open deals against a 12% team average. The ~$180K Q3 forecast variance was his data, not market movement. Five incomplete CS handoffs, one of which cost three weeks on the [Account C] implementation timeline. Q2 commission delayed a full cycle on his own unsubmitted approval forms.
+
+**Why not Senior AE.** The role owns process modeling for the ramp cohort. He is currently a net consumer of deal desk capacity and my time rather than a contributor to standards. Promoting him now also sends the wrong signal to the two reps he mentored, both of whom carry clean pipelines.
+
+**Why not a lower rating.** The revenue is real and the gap is habit and prioritization, not capability or attitude. A Meets is defensible on paper and probably costs us the rep — he has options and knows it. I'd rather hold the rating and make the gate unambiguous.
+
+**What I need from you.**
+
+- Sign-off on Exceeds with the development note attached as written.
+- Approval for [X hrs/month] of sales support for proposal and document assembly. Cheap against his revenue leverage. Forecast accuracy and CRM ownership stay with him — the support is workflow, not transfer.
+- Confirmation that Exceeds lands where I think it does in the merit band. I don't want the comp outcome contradicting the message.
+- Your read on stating the 90-day gate to him in those words. My instinct is yes, plainly.
+
+**The gate.** On-time forecast 11 of 12 months. ≥90% CRM hygiene at the Friday audit. 100% handoff template completion pre-kickoff. Expenses inside 30 days. Two consecutive clean quarters before Senior AE goes back on the table.
+
+**Delivery.** 1:1 on [Date]. Number first, then the gate, no sandwiching. I expect he takes it constructively; he has each time so far.
+
+---
+
+*If the informed reader you had in mind was [Name] himself, the same compression applies but the emphasis shifts: cut the accomplishments list to a sentence, cut the rationale-for-rating entirely, and spend the space on the four gate metrics and what specifically comes off his plate via sales support. Tell me which and I'll rework it.*

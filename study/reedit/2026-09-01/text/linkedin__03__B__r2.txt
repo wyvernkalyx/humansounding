@@ -1,0 +1,19 @@
+---
+
+**The failure wasn't [project]. It was month [six], when I had enough signal to stop and didn't.**
+
+Not because the data was ambiguous. Because I'd spent [the spring] selling this internally and couldn't work out how to walk it back without torching my own credibility. So I protected the credibility and spent [nine more months] of your work doing it.
+
+Everything after that was competent execution of a decision I should have reversed.
+
+Two things I'm carrying forward. The discovery-to-build ratio was indefensible and I set it — [two weeks] of customer conversations against [eighteen months] of engineering is a priority you communicate with your calendar. And several of you flagged it in terms I heard as hedging. That's my listening, not your phrasing, but I'd rather we get blunter than rely on me reading between lines.
+
+What we came out with is real. It was just an expensive way to learn it, and the price was mostly paid by people who didn't make the call.
+
+---
+
+Notes:
+
+- **The lead now carries the whole post**, so month [six] and the credibility line are the two details worth getting exactly right. Everything else can flex.
+- **If you need to go shorter still,** cut the discovery-ratio sentence. The listening point is the one your team can act on immediately.
+- **The caveats from the last version still apply** — worth a check with the people you're referring to in that second takeaway, and with anyone above you if this is going somewhere public.

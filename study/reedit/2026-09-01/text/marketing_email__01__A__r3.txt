@@ -1,0 +1,19 @@
+The results claim you're thinking of — "cut the time they spend on schedule updates by [X]%" — was in the first draft, but it came out two versions ago and isn't in the current one. Here's that draft unchanged:
+
+**Subject:** Smart Timelines is live
+
+Hi [First Name],
+
+Move a task, and everything downstream reschedules itself — around weekends and PTO. Assignees get notified. Anything that blows a milestone gets flagged.
+
+Two things worth knowing: your existing dependencies carried over untouched, and locked tasks stay locked (we flag the conflict instead of overriding you).
+
+On by default in [Plan Name]. Turn it off per project in Settings → Scheduling.
+
+[**Open Timeline view →**] · [Release notes]
+
+[Name]
+
+Worth flagging: everything left is a capability claim, and each one needs to be true of your actual build before this goes out. Specifically that cascades skip weekends *and* PTO, that assignees are notified automatically, that milestone overruns are flagged, that existing dependencies migrated cleanly, that locked tasks are respected rather than overridden, and that the per-project toggle lives at Settings → Scheduling. I wrote those from the feature description in your brief, not from anything verified.
+
+If one of those is the line you can't publish, tell me which and I'll cut or soften it.

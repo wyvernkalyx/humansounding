@@ -1,0 +1,14 @@
+**MEMORANDUM**
+
+**TO:** All Staff
+**FROM:** [Name], [Title]
+**DATE:** [Date]
+**SUBJECT:** Security Awareness Training — due [Deadline]
+
+Complete the updated Security Awareness Training in [platform] by **[Deadline]**. Everyone with system access, contractors and interns included. Access restrictions apply after the deadline per [Policy #].
+
+[platform] → My Learning → "[Course Name]". About [35] minutes, [80]% to pass, unlimited retakes.
+
+The phishing and BEC modules were rebuilt around [Q[X] incidents] — don't skim them.
+
+Accommodations, access issues, or credit for equivalent training: [name], [email].

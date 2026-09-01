@@ -1,0 +1,38 @@
+**These only work if live merge fields feed them.** Without real behavioral data, use the short version — a generic "we miss you" underperforms a two-line note.
+
+---
+
+**Subject:** Your [last project name] is still sitting there
+*Alt: Quick question about [Account Name] / [X] items flagged, nobody reviewing*
+
+Hi [First Name],
+
+Your [project/report/workflow] hasn't been touched since [date]. Not chasing you — just flagging that it's still live, still connected to [integration], still doing [thing] in the background. If that's intentional, ignore this.
+
+If it's not, two things changed that affect your setup:
+
+**[Change tied to their configuration]** — the workaround you used for [thing] isn't necessary anymore.
+
+**[Change tied to their plan]** — [specific implication].
+
+[**Open [project name] →**]
+
+If you've moved to something else, tell me what and why. I'll stop emailing and you'll have done me a favor.
+
+[Sender Name]
+
+---
+
+**Short version:**
+
+[First Name] —
+
+[Teammate] logged in [X] times last month. You haven't since [date].
+
+Deliberate handoff, or did something break for you?
+
+[Sender Name]
+
+---
+
+Send the long version only to accounts with real accrued activity; firing it at a dormant single-seat account reads as automated.

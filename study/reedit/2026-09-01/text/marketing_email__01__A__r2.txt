@@ -1,0 +1,13 @@
+**Subject:** Smart Timelines is live
+
+Hi [First Name],
+
+Move a task, and everything downstream reschedules itself — around weekends and PTO. Assignees get notified. Anything that blows a milestone gets flagged.
+
+Two things worth knowing: your existing dependencies carried over untouched, and locked tasks stay locked (we flag the conflict instead of overriding you).
+
+On by default in [Plan Name]. Turn it off per project in Settings → Scheduling.
+
+[**Open Timeline view →**] · [Release notes]
+
+[Name]

@@ -1,0 +1,34 @@
+[
+  {
+    "role": "user",
+    "content": "Write a LinkedIn post about what I learned from a project that failed."
+  },
+  {
+    "role": "assistant",
+    "content": "Here's a draft. I've used brackets where you'll want to drop in real specifics — the concrete details are what make these posts land instead of reading like generic wisdom.\n\n---\n\n**Eighteen months ago I pitched [project]. Last [month], we shut it down.**\n\nWe were solving a problem that wasn't a problem.\n\nNot for lack of effort. The team shipped on time, the tech worked, the demo was genuinely impressive. But we'd built the whole thing on an assumption we never seriously tested: that [customers would pay to solve X]. When we finally put it in front of real users, they were polite. Politeness is the worst signal you can get.\n\nThree things I took away:\n\n**Enthusiasm isn't validation.** Early conversations were full of \"that's interesting\" and \"keep me posted.\" I read those as demand. They were manners.\n\n**The expensive mistakes happen before you write any code.** We spent [X months] building and [two weeks] on discovery. That ratio should have been closer to reversed.\n\n**Killing it sooner would have been the braver call.** I saw the warning signs around month [six] and talked myself out of them, because I'd already sold the vision internally and didn't want to be the person who changed their mind. Sunk cost is an ego problem as much as a finance one.\n\nThe project failed. I'd argue the team didn't — we know more about [our market] now than any competitor deck could have taught us.\n\nWhat's the failure that taught you the most?\n\n---\n\nA few notes:\n\n- **The closing question** is optional but it does drive comments if that's what you're after. Cut it if it feels like bait.\n- **Name your own role in it.** The post works because you're taking responsibility, not narrating from a distance. Resist any urge to soften that in editing.\n- **Check with your team and legal** before naming clients, revenue figures, or anything about why a specific deal died.\n\nIf you tell me the actual project, your industry, and what genuinely went wrong, I can rewrite this so it sounds like you rather than like a LinkedIn template."
+  },
+  {
+    "role": "user",
+    "content": "You've written this for someone with no context, which isn't what I asked for. Rewrite it for a reader who already knows the background."
+  },
+  {
+    "role": "assistant",
+    "content": "Fair enough — here it is written on the assumption your audience already watched it happen.\n\n---\n\n**Most of you know how this one ended. So I'll skip the recap and go to the part I've been sitting with.**\n\nThe failure wasn't the shutdown. It was month six.\n\nThat's when I had enough information to call it, and didn't. I told myself I needed more data. What I actually needed was to not be the person who'd spent a year selling everyone on a thing and then walked it back. Sunk cost gets framed as a finance problem. Mine was pure ego.\n\nThe rest of it — the polite customer calls we read as interest, the discovery phase we compressed because we were \"already sure\" — those were real mistakes, but they were survivable ones. Plenty of projects recover from bad early assumptions. Fewer recover from a lead who won't say the quiet thing out loud.\n\nWhat I'd tell myself at month six: the team can absorb a change of direction. They're a lot less good at absorbing six more months of watching you not make one.\n\nTo everyone who worked on it — you built exactly what I asked for, and you built it well. That part was never in question.\n\n---\n\n**Optional harder close**, if you want it to land with more edge:\n\n> I'm not looking for the silver lining on this one. It cost real time and real money and a few people deserved a better use of a year. But if the lesson only cost me once, that's the best available outcome.\n\nA few notes:\n\n- The insider version works better with **one specific admission** rather than a list. I made month six the spine — swap it for whatever your actual moment of knowing was.\n- If people internally are still raw about it, the thank-you line matters more than anything else in the post. Consider putting it higher.\n- Tell me the real failure mode and I'll sharpen this to your voice."
+  },
+  {
+    "role": "user",
+    "content": "This runs much longer than it needed to and buries the point. Cut it to about half the length and lead with the main point."
+  },
+  {
+    "role": "assistant",
+    "content": "**I knew at month six. I didn't call it until month twelve. That's the failure — not the shutdown.**\n\nI told myself I needed more data. What I needed was to not be the person who'd spent a year selling everyone on a thing and then walked it back. Sunk cost gets framed as a finance problem. Mine was ego.\n\nThe bad early assumptions were survivable. Plenty of projects recover from those. Fewer recover from a lead who won't say the quiet thing out loud.\n\nWhat I'd tell myself at month six: the team can absorb a change of direction. They're much worse at absorbing six more months of watching you not make one.\n\nTo everyone who worked on it — you built exactly what I asked for, and you built it well. That part was never in question.\n\n---\n\nSwap \"month six\" for your real moment of knowing, and the numbers will do the rest of the work."
+  },
+  {
+    "role": "user",
+    "content": "You put in a claim about results that I never gave you, and I can't publish that. Take out the claim about results and leave everything else as it is."
+  },
+  {
+    "role": "assistant",
+    "content": "**I knew at month six. I didn't call it until month twelve. That's the failure — not the shutdown.**\n\nI told myself I needed more data. What I needed was to not be the person who'd spent a year selling everyone on a thing and then walked it back. Sunk cost gets framed as a finance problem. Mine was ego.\n\nThe bad early assumptions were survivable. Plenty of projects recover from those. Fewer recover from a lead who won't say the quiet thing out loud.\n\nWhat I'd tell myself at month six: the team can absorb a change of direction. They're much worse at absorbing six more months of watching you not make one.\n\n---\n\nI removed the closing line about the team building it well and that being \"never in question\" — that was my assertion about the quality of their output, not yours.\n\nIf you still want to end on the team rather than on yourself, a version that claims nothing: *\"To everyone who worked on it — thank you. The delay was mine, not yours.\"*\n\nAnd if the claim you meant was the month six / month twelve timeline, tell me and I'll pull those too."
+  }
+]

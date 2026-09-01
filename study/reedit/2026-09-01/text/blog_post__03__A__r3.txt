@@ -1,0 +1,47 @@
+I cut the empirical outcome claim in "Killing a meeting you don't own" — the assertion that partial exits are more achievable than full ones and compound. That was an efficacy claim you never gave me. Everything else is unchanged.
+
+Two other sentences are also unsourced assertions rather than reasoning, in case you meant one of those: "two 1:1s beforehand beat any amount of skilled moderation" and "most competent people hit it." Say the word and I'll pull either.
+
+---
+
+# The Meeting Isn't the Problem
+
+If you already run meetings well — agenda as questions, named decider, silent read, decisions captured at the end — and they still go nowhere, more facilitation won't help. A meeting that fails despite good technique is almost always doing a job nobody has named. Find the job first.
+
+## The usual hidden jobs
+
+**Reassurance.** A senior person is anxious and being in the room lowers it. Stated purpose: coordination. Real purpose: presence. Fix it by delivering the reassurance more cheaply — a written update they trust, a dashboard they check themselves.
+
+**Cover.** Decisions need witnesses so nobody owns them alone. The tell: thorough discussion, unremarkable outcome, and later nobody can say who decided.
+
+**A patch over broken information flow.** Two teams meet weekly because there's no shared source of truth. This meeting runs forever until you fix the underlying system.
+
+**Social maintenance.** Genuinely valuable, usually disguised as work. If that's the real value, design for it — a bad status meeting is a worse social event than a good one.
+
+Only one diagnosis — "this is a decision forum, run badly" — responds to the standard advice. The rest need a different intervention entirely.
+
+## The undiscussable
+
+Meetings that circle for an hour usually contain a disagreement nobody will state. Someone thinks the project shouldn't exist. Someone thinks a peer is underperforming. So the group argues about sequencing instead, endlessly, because the surface argument can't resolve without the real one.
+
+Name the shape, not the accusation: *"We've come back to timeline three times and it hasn't moved. I don't think timeline is the disagreement."* If it's interpersonal, take it out of the room — two 1:1s beforehand beat any amount of skilled moderation. And go first with candor; people match what's demonstrated, not what's invited.
+
+## Your own gravity
+
+If you're senior, your opinion doesn't enter the discussion — it ends it. This is invisible from your seat, because it looks like agreement.
+
+Speak last and mean it. Have people write positions down before discussion so you can see the distribution before you contaminate it. Mark the strength of your views explicitly — "weakly held, argue with me" — because otherwise everything reads as firm. When the room converges fast, suspect deference, not consensus.
+
+Worse than deciding openly: performing openness when you've already decided. If it's decided, say so and use the time to pressure-test implementation.
+
+## Killing a meeting you don't own
+
+A political problem, not a process one. Attacking the meeting attacks its creator, so attack the underlying need instead: propose a cheaper replacement, offer to own it, frame it as a trial. *"I'll send a written update Tuesdays covering exactly this — want to drop the sync for a month and see if anything breaks?"* The owner keeps the outcome and loses only the meeting.
+
+If that fails, shrink your surface area. Attend biweekly, send a delegate, get dropped from the half you don't need.
+
+## The ceiling
+
+Individual meeting hygiene has a limit, and most competent people hit it. Past that point, a full calendar is a symptom of structure: unclear decision rights, dependencies that don't match the org chart, no written channel anyone trusts, a norm that nothing counts unless it was said aloud.
+
+If every meeting on your calendar is individually defensible and you're still drowning, the problem isn't the meetings. It's that the organization coordinates through rooms because the alternatives don't work — and nobody fixes that by running a better hour.

@@ -1,0 +1,28 @@
+When the reader already knows the background, the post stops being a story and becomes a verdict. No setup, no reveal, no explaining what went wrong — they watched it go wrong. What they don't know is what you concluded, so that's the whole post now.
+
+---
+
+**[Project] is dead and most of you know why. Here's what I think it cost us, and what I think we bought.**
+
+I'm not going to relitigate the timeline. You lived it.
+
+What I keep coming back to is month [six]. That's when I had enough signal to call it and didn't. Not because the data was ambiguous — because I'd spent [the spring] selling this internally and couldn't figure out how to walk it back without torching my own credibility. So I protected the credibility and spent [nine more months] of your work to do it.
+
+That's the actual failure. Everything downstream was competent execution of a decision I should have reversed.
+
+Two things I'm taking into the next one:
+
+The discovery-to-build ratio was indefensible, and I set it. [Two weeks] of customer conversations against [eighteen months] of engineering isn't a process failure, it's a priority I communicated by how I spent the calendar.
+
+And I need people who will tell me I'm wrong in a way I can't reinterpret as enthusiasm. Several of you tried. I heard hedging where you meant no. That's on my listening, not your phrasing — but I'd rather we build the habit of being blunter than rely on me getting better at reading between lines.
+
+The [market research / infrastructure / customer relationships] we came out with is real, and I'm not going to pretend the whole thing was waste. But it was an expensive way to learn it, and the price was mostly paid by people who weren't the ones who chose it.
+
+---
+
+Notes on this version:
+
+- **It's riskier than the first draft.** Naming month six and taking public responsibility is the thing that makes it credible to people who were there — a vaguer version would read as spin, and they'd know. But if there's any active dispute about who decided what, or if leadership above you sees this as airing internal business, run it past someone first.
+- **Watch for it landing as blame.** Lines like "several of you tried" are meant to credit people, but a reader who raised a flag and got overruled may read it as being volunteered into your redemption arc. Worth checking with one or two of them.
+- **I cut the closing question.** Inviting an audience who lived the failure to share their own failures reads as tone-deaf.
+- **Length:** this is close to the ceiling for a post where the reader has no story pulling them through. If you trim, cut the second takeaway before the first — the discovery-ratio point is the one that changes future behavior.

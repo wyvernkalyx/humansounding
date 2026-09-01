@@ -1,0 +1,129 @@
+**THE SLOW BUILD**
+*Issue #48 — Small changes, stacked over time*
+
+---
+
+**Subject:** You don't need another habit-stacking tutorial
+
+**Preview:** For people on their fifth morning routine. The failure modes nobody writes about.
+
+---
+
+Last issue was the build. This one is for everyone who wrote back some version of: *I know all this. I've done all this. It still stops.*
+
+Fair. If you've read the books, you already have the anchors and the two-minute rule and the never-miss-twice sign taped above your desk. Knowing more about habit formation is not your constraint. It hasn't been for years.
+
+So let's skip the foundations and go at the things that actually break routines for people who already know how to build them.
+
+---
+
+## Failure mode 1: The floor became the ceiling
+
+You shrank it until it was stupid. Good — that's the move, and it worked. One page. Three minutes. Shoes on, walk to the corner.
+
+Then eighteen months later you're still doing one page.
+
+The minimum viable version is a *ramp*, not a destination, but nothing in the system ever tells you to leave it. The whole apparatus is optimized against missing, and a floor you never exceed never triggers a miss. You have perfect adherence to something that stopped mattering.
+
+**The fix:** hold two numbers, not one. A **floor** (never below, non-negotiable, protects the chain) and a **default** (what a normal day looks like when nothing has gone wrong). Floor: one page. Default: 700 words. Review the default quarterly; leave the floor alone forever.
+
+If your default has been the same for a year, you're not maintaining a habit. You're maintaining a streak.
+
+---
+
+## Failure mode 2: You're defending a routine whose reason expired
+
+The 6am writing block was built when you were finishing a book. The book came out in 2023. You are still getting up at 6 to write, and it now produces nothing you care about, and every morning has a faint smell of obligation you can't place.
+
+This is the one I see most in people who are *good* at habits. The routine outlives the goal, gets absorbed into identity, and becomes very hard to kill precisely because you're proud of having kept it. Then it quietly consumes the hour that a different, currently-relevant thing needed.
+
+**The fix:** expiration dates. Every element gets one — six or twelve months out. On that date it doesn't automatically continue; you have to re-argue for it. Most survive. The ones that don't were costing you an hour a day for reasons that stopped existing.
+
+---
+
+## Failure mode 3: You've never tested which part is load-bearing
+
+Your morning has six elements. You believe it works. You don't know *what* works, because you've never run it without any given piece.
+
+Almost certainly one or two elements are doing nearly all the work and the rest is ritual scaffolding that came along for the ride. That's not automatically bad — scaffolding has a real function, it makes the load-bearing part feel inevitable — but you should know which is which, because when life compresses your morning from 90 minutes to 20, you need to know what to cut without guessing.
+
+**The fix:** subtractive testing. Remove one element for two weeks. Note what degrades — mood, output, sleep, how the afternoon goes. Restore, then remove the next. Takes a quarter to get through six items. You'll end up cutting at least one thing permanently, and you'll stop treating the sequence as a single indivisible object.
+
+---
+
+## Failure mode 4: You designed for your good weeks
+
+You know the friction principles. But the routine you're running was still specified against a normal Tuesday — the 80% case — and normal Tuesdays are not where routines die. They die during the launch, the flu, the newborn, the move, the six weeks your parent was in hospital.
+
+Anyone can hold a system at full capacity. The design question that actually matters is: **what does this look like at 20% capacity, and did I design that version deliberately, or am I improvising it while exhausted?**
+
+**The fix:** write three tiers and name them, so switching is a decision rather than a collapse.
+
+| Tier | When | What |
+|---|---|---|
+| Full | Normal weeks | The whole sequence, 75 min |
+| Compressed | Travel, deadline, bad sleep | Load-bearing element only, 20 min |
+| Survival | Crisis, illness, grief | Ten breaths outside. That's it. |
+
+The point isn't the content. It's that dropping to Survival is a *move within the system* instead of evidence that the system failed. That distinction is worth more than any individual habit.
+
+---
+
+## The skill nobody trains: re-entry
+
+Never-miss-twice handles a bad Tuesday. It does nothing for the real thing — the six-week gap, where you stopped and the reason you stopped was legitimate and now there's a wall of accumulated meaning around restarting.
+
+Re-entry is a separate skill from building, and it's the one that determines whether you have a routine at 45 or a graveyard of nine-day attempts. Some things I've learned doing this badly, repeatedly:
+
+**Restart smaller than feels dignified.** You'll want to resume at your old default. Don't — you'll fail in four days and add another layer to the wall. Restart at your floor, or below it. Your body doesn't remember your PR; it remembers six weeks of nothing.
+
+**Don't diagnose first.** The urge is to figure out what went wrong before starting again. That's procrastination in a lab coat. Restart tiny for a week, *then* diagnose, when you have current data instead of a story.
+
+**Kill the debt narrative.** There is no catch-up. Nothing is owed. The chain isn't real — it was a motivational fiction that was useful right up until the moment it started charging you interest.
+
+**Change one surface thing.** New notebook, different room, different time. Enough novelty that today reads as a beginning instead of a failed continuation.
+
+**Expect the first two weeks to feel worse than starting from zero.** They do. The comparison to your old competence is the whole cost, and it's temporary.
+
+---
+
+## A harder question than adherence
+
+You are probably tracking whether you did the thing. That was the right metric in month one.
+
+At this point the better question is: **is the downstream thing moving?**
+
+A morning routine executed at 96% for two years that hasn't produced a manuscript, a change in bloodwork, a business, or a noticeably different internal weather is not a habit success. It's a very disciplined hobby. Adherence is a proxy, and like all proxies it becomes the target if you stare at it long enough.
+
+So once a quarter, ignore the calendar of Xs entirely and ask: what is this hour actually *for*, and did it deliver? Sometimes the answer is "it's for feeling like myself," which is a completely legitimate output. But say it out loud, because if that's the goal, half your elements are probably optimized for the wrong thing.
+
+---
+
+## The renegotiation you're avoiding
+
+Routines don't usually break. They get outgrown — by a baby, a promotion, a diagnosis, a relationship, a body that's ten years older than the one you designed for.
+
+The failure isn't the change. It's spending eight months trying to force the old structure through new circumstances, treating each miss as a discipline problem, when the honest read is that the routine is now wrong and needs rebuilding from the constraints up.
+
+Signals you're overdue:
+
+- You've been at 60–70% adherence for two months and interpreting it as weakness
+- You feel resentment, not resistance (different feelings — resistance is 6am grogginess, resentment is the sense that something is stealing from you)
+- The routine only works on days that no longer occur regularly
+- You're protecting it against people who have a real claim on that time
+
+**The fix:** an annual teardown. Delete the whole thing on paper. Then rebuild from current constraints — actual wake time, actual obligations, actual energy, actual current goal — and see what you re-add. Usually 60% comes back unchanged, 20% comes back modified, 20% turns out to have been inertia. Do it in September rather than January, when you can think clearly and no one is watching.
+
+---
+
+## This week's experiment
+
+No new habits. An audit:
+
+1. List every element of your current morning, with its honest duration.
+2. Mark each: **load-bearing**, **scaffolding**, or **unexamined**.
+3. For each, write the goal it was originally built to serve — and whether that goal is still live.
+4. Write your Compressed and Survival tiers, if you don't have them.
+5. Pick the one unexamined element you're least willing to remove, and remove it for two weeks.
+
+That last one is the whole exercise, honestly. The resistance you

@@ -1,0 +1,71 @@
+# Re-Engagement Email: 90-Day Inactive Customers
+
+## Subject Line Options
+1. It's been a while, [First Name] — here's what you've missed
+2. Your [Product] account is still here (and it's gotten better)
+3. We saved your spot
+4. 3 things that changed since your last visit
+5. Still interested? Just checking. 👀
+
+**Preview text:** Your account, settings, and data are exactly where you left them.
+
+---
+
+## Main Email
+
+**Subject:** It's been a while, [First Name] — here's what you've missed
+
+Hi [First Name],
+
+We noticed you haven't logged into [Product Name] in a few months. No hard feelings — life gets busy.
+
+But a lot has changed since [Month of last login], and we think a few things might be worth a second look:
+
+**[Feature/Update #1]** — [One-line benefit, e.g., "Reports that used to take 20 minutes now build themselves."]
+
+**[Feature/Update #2]** — [One-line benefit]
+
+**[Feature/Update #3]** — [One-line benefit]
+
+Your account is exactly as you left it — [settings, saved data, integrations, team members] all intact. One click and you're back in.
+
+[**Log back in →**]
+
+If [Product Name] isn't the right fit anymore, we'd genuinely like to know why. Just hit reply — a real person reads every response, and it takes 30 seconds to tell us what went wrong.
+
+Thanks for giving us a shot in the first place,
+
+[Sender Name]
+[Title], [Company]
+
+*P.S. — [Optional incentive: "Come back this week and we'll extend your plan by 30 days, on us." or "Want a 15-minute walkthrough of what's new? Grab a time here."]*
+
+---
+
+## Shorter Alternative (Plain-Text Style)
+
+**Subject:** Still interested?
+
+Hi [First Name],
+
+Quick one: you haven't logged into [Product Name] since [Month]. I'm trying to figure out if that's because:
+
+1. You're busy and just haven't gotten back to it
+2. Something wasn't working the way you expected
+3. You've moved on to something else
+
+If it's #1 — [your account's right here]. If it's #2 or #3, hit reply and tell me. I'd rather hear it than guess.
+
+[Sender Name]
+[Company]
+
+---
+
+## Notes for Deployment
+
+- **Personalize the "what's new" section** by segment. A dormant power user needs different reasons to return than someone who never finished onboarding.
+- **Lead with value, not guilt.** Avoid "We miss you!" framing — it centers your needs, not theirs.
+- **Save the discount for email 2 or 3.** Leading with a coupon trains customers to churn for deals and devalues the product-led reason to return.
+- **Suggested cadence:** Day 0 (this email) → Day 5 (social proof / customer story) → Day 12 (incentive + clear last-chance framing) → sunset from the active list.
+- **Include a visible unsubscribe and a "pause emails" option.** Cleaning your list improves deliverability more than squeezing a few extra sends out of unengaged contacts.
+- **A/B test the subject line first** — it drives the majority of open-rate variance in win-back campaigns.

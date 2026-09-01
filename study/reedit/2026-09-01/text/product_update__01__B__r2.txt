@@ -1,0 +1,20 @@
+# Dashboard 2.0 is live — and 8x faster
+
+Rebuilt from the ground up. 20+ widget dashboards now load in ~1s, down from ~8s.
+
+**Also new:**
+- Drag-and-drop, resizable widgets that sync across devices
+- Real-time metrics (no more five-minute cycle)
+- Global filters that persist between sessions
+- Saved views with shareable read-only links
+- Dark mode
+
+**Migration:** Your widgets carried over as-is. Legacy dashboard stays available in settings for 60 days.
+
+**Not in this release:** per-widget CSV export and time-series annotations. Both are coming next cycle.
+
+Feedback button is in the header.
+
+---
+
+**What changed:** led with the performance number since it's the most concrete win, collapsed the feature list to scannable bullets, and compressed migration and known gaps to one line each. This should fit an in-app changelog, release note, or Slack post — tell me the actual placement and I'll trim or restructure to match.

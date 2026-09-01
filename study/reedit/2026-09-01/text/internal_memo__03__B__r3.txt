@@ -1,0 +1,37 @@
+**MEMO — CS Reorg: Final Structure, Go-Live [Month Day]**
+**To:** Directors; Team Leads | **From:** [Name], VP Customer Experience | **Date:** [Date]
+
+**The structure is final. Leads must complete individual assignment conversations by [Date].** Present assignments as decisions, not proposals. Headcount, comp bands, titles, and tenure are unchanged.
+
+**Structure**
+
+| Team | Lead | HC |
+|---|---|---|
+| Tier 1 Support | [Name] | [#] |
+| Technical Support | [Name] | [#] |
+| Billing & Retention | [Name] | [#] |
+| Quality & Enablement | [Name] | [#] |
+
+Two changes from the [Date] draft: **Retention moved to Billing**, and **Q&E now reports to me** to preserve QA independence.
+
+**Deadlines**
+
+- Assignment conversations — leads — [Date]
+- HRIS reporting lines — [Name] — [Date]
+- Routing/queue config — [Name] — [Date]
+- Training curricula — [Name] — [Date]
+- Go-live — [Name] — [Date]
+
+**Open items**
+
+- Technical Support coverage gap, [shift/region]: [Name] to propose by [Date]
+- QA scorecard rewrite: draft at [Date] sync
+- Tier 1 → Technical escalation SLA: needed before go-live
+
+**From you:** hit the [Date] conversation deadline and flag retention risk to me directly this week, not after go-live.
+
+Standing 20-minute sync [Day] at [Time] through day 30. All-hands Q&A [Date] at [Time] — leads present and aligned on the two changes above.
+
+---
+
+*Removed: the "(pilot save-rate data)" justification for the Retention move — that was the only results claim in this version. The move itself is still stated. If leads will ask why, you may want a non-data rationale ready, or I can suggest one.*

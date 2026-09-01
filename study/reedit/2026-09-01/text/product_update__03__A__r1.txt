@@ -1,0 +1,41 @@
+# Mobile Performance: The Fixes Are Live
+
+**Release [X.Y] — [Date]**
+
+The mobile slowdown is fixed. Details below.
+
+## Cold start: 4.1s → 1.6s
+
+We deferred non-essential initialization until after first interactive paint. Analytics, feature-flag hydration, and prefetch warming now run post-render instead of blocking it. Measured on the mid-tier Android reference device, not a flagship.
+
+## Bundle: 38% smaller
+
+Dropped four unused dependencies, moved to AVIF/WebP across the board, and code-split by route. You now pull down the screen you asked for, not the whole app.
+
+## Scroll: locked at 60fps
+
+List virtualization is in. Inbox, search results, and the activity feed recycle views rather than rendering the full set. The frame drops into the 30s on long lists are gone.
+
+## Offline behavior
+
+Broader cache coverage, exponential backoff on retries, and an action queue that flushes on reconnect. The indefinite spinner on flaky connections should no longer be reproducible — if you hit it, file it.
+
+## Battery: −22%
+
+Background sync batches network calls and honors Doze / Low Power Mode. Telemetry is from the beta cohort over two weeks, so treat it as directional until we have broader data.
+
+## Benchmark target has moved
+
+We now gate releases against the mid-tier Android device on simulated 3G. Flagship-on-Wi-Fi numbers are no longer sufficient to ship. This is the change most likely to affect your work — budget accordingly.
+
+## Next
+
+- Predictive prefetch on common navigation paths
+- Progressive image placeholders
+- TTI work on the three heaviest screens
+
+Rolling out over the next few days via standard auto-update.
+
+---
+
+*Metrics are placeholders — swap in the real benchmark output before this goes out.*

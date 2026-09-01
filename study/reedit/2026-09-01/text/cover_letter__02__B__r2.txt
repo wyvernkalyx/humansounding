@@ -1,0 +1,33 @@
+Assuming this is for an email body or an application-form text box — places where a formatted letter looks out of place and people skim. I kept the warm-reader framing and cut to about 125 words.
+
+---
+
+**Subject: Marketing Coordinator — [Your Name]**
+
+Hi [First Name],
+
+I'm applying for the Marketing Coordinator role, and I'd want to spend the first few months on three things: [opportunity #1], [opportunity #2], and documenting the content workflow so it doesn't live in one person's head.
+
+Those come from what I've seen [volunteering / contracting] here since [year] — including [one specific project in four or five words]. I know the constraints, and I'd rather do a few things consistently than announce ten.
+
+Résumé attached. Happy to talk whenever it's useful.
+
+[Your Name]
+[Phone] • [Email]
+
+---
+
+**What I cut and why:**
+
+- **The "since you already know the background" opener.** Clever framing costs a sentence you no longer have. Lead with the plan.
+- **The specific-moment anecdote.** It was the emotional core of the longer version, but at this length the concrete plan does more work.
+- **The bulleted list.** Three items in a sentence read faster on a phone than three bullets with sub-clauses.
+- **The 90-day line.** It was redundant once the plan moved to the top.
+
+What survived: the plan, the proof you've been inside, and the constraint acknowledgment. Those are the three things a warm reader can't get from your résumé.
+
+**If the placement is different than I guessed:**
+
+- **LinkedIn message** — drop the subject line and "Résumé attached," add "I've applied through the portal."
+- **Form field with a hard character limit** — cut the second paragraph to just "This comes from [volunteering] here since [year]."
+- **Still a formal letter, just shorter** — say so and I'll restore the salutation and sign-off block.

@@ -1,0 +1,44 @@
+Here's the same email for a reader who's already up to speed — an active user or beta participant who doesn't need the problem explained or the product introduced. The main changes: no scene-setting, no feature definitions, and the value stated as a delta rather than a discovery.
+
+---
+
+**Subject line options:**
+1. Smart Timelines is live
+2. Smart Timelines: out of beta, on your account now
+3. The dependency updates you asked for shipped
+
+**Preview text:** Auto-shifting dependencies, time-off awareness, and milestone risk flags — all live.
+
+---
+
+Hi [First Name],
+
+Smart Timelines is out of beta and enabled on your account.
+
+**What's changed since [beta / the last release]:**
+
+- **Auto-shift now respects team time off**, not just weekends — the most requested fix from beta.
+- **Milestone risk flags** appear the moment a task pushes past a milestone date, instead of at the next sync.
+- **Downstream notifications** go only to people whose dates actually moved. No more all-project blasts.
+- **[Any other delta — API support, bulk linking, mobile parity]**
+
+Beta teams cut schedule-update time by [X]% and caught slipping deadlines [X] days earlier on average.
+
+Your existing dependency links carried over. Open Timeline view and it's already working.
+
+[**Open Timeline view →**]
+
+Two things worth knowing: [known limitation, e.g., recurring tasks don't auto-shift yet — that's next quarter], and [changelog / docs link] has the full detail.
+
+Thanks for the beta feedback — a good amount of it is in this release.
+
+[Name]
+[Title], [Product]
+
+---
+
+Two notes on the rewrite:
+
+The opening line is the whole strategy. An informed reader wants the news in the first six words, and everything after that should be detail they can skim or skip. The original spent four sentences earning attention this reader has already given you.
+
+"A reader who already knows the background" could mean a few different people, though. This version assumes an active user or beta participant. If you meant an internal stakeholder, a returning lapsed user, or a customer on a lower plan who's heard about the feature but can't use it yet, the framing shifts quite a bit — tell me which and I'll adjust.

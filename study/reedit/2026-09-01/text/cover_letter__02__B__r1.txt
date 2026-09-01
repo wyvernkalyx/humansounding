@@ -1,0 +1,40 @@
+I've assumed "already knows the background" means the hiring manager knows *you* — you've volunteered there, interned, worked a contract, or come in through a strong internal referral. That changes a lot: you can skip the mission-fit pitch and the resume recap, and instead write like someone continuing a conversation.
+
+---
+
+**[Your Name]**
+[City, State] • [Phone] • [Email]
+
+[Date]
+
+Dear [First Name],
+
+I'm applying for the Marketing Coordinator role, and since you already know most of what a cover letter usually covers, I'll use this to say what the application itself can't.
+
+The [volunteer work / contract / internship] I've done with [Organization] over the past [timeframe] has been the clearest test of whether this is work I want to do full time, and the answer is yes. [One specific moment — the week you rebuilt the newsletter template, the event you ran comms for, the conversation with a program director that reframed how you write about the work.] That's the part of the job I want more of.
+
+A few things I'd want to take on in the role, based on what I've seen from the inside:
+
+- **[Specific gap or opportunity you've noticed]** — [what you'd do about it, in one line]. I've already [drafted / tested / started] [something concrete], and I'd want to finish it properly.
+- **[Second one]** — [approach].
+- **[Third one, ideally something that helps the team, not just the metrics]** — e.g., documenting the content workflow so it survives staff turnover.
+
+I know the constraints here: [small team / limited budget / competing priorities across programs]. I'd rather do three things consistently than announce ten. My instinct is to start by [first 90 days in one sentence].
+
+Happy to talk through any of this whenever it's useful. Thanks for the encouragement to apply — [or: thanks for thinking of me for this].
+
+[Your Name]
+
+---
+
+**What changed and why:**
+
+- **No mission paragraph.** They know why you care; restating it reads as filler or, worse, as if you forgot they know you.
+- **No skills list.** They've seen your work. Listing Mailchimp to someone who watched you use Mailchimp is a downgrade.
+- **Forward-looking, not backward.** With a cold reader you prove you *can* do the job. With a warm reader you show what you'd *do with* the job. The middle section becomes a mini-plan rather than a highlight reel.
+- **Shorter and less formal.** Roughly 250 words. The stiff register of a standard cover letter would land oddly from someone they've had coffee with.
+- **Acknowledges constraints.** Insider credibility comes from knowing what's hard, not from enthusiasm.
+
+**One caution:** if the role goes through a formal HR process or a hiring committee, other people may read this who *don't* know you. In that case, add one sentence up top establishing your history — "As you know, I've coordinated communications for [Program] as a volunteer since [year]" — so the letter still works for a stranger.
+
+If you meant a different reader — a board member, a former colleague at another org, someone who knows the *organization* but not you — tell me which and I'll redo it.

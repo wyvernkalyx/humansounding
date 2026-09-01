@@ -1,0 +1,27 @@
+Checking both short versions — neither one actually contains a results claim. There's no metric, no outcome, nothing quantified. So there's nothing to cut, and the drafts stand exactly as they are:
+
+---
+
+I'm now Director of Operations at [Company].
+
+Same team, bigger lever. Thanks to everyone who helped get me here — more soon.
+
+---
+
+**Or:**
+
+---
+
+New title today: Director of Operations at [Company].
+
+Grateful to [manager's name] and the team. The work ahead is the fun part.
+
+---
+
+The only place results language showed up was in my personalization notes on the very first draft, where I suggested you *could* add something like "helped cut fulfillment times by 30%." That was a suggestion, not text in the post, and it never made it into any version.
+
+If something in here is reading as a results claim to you, my guess is "same team, bigger lever" — it gestures at impact without asserting any. If that phrasing is the issue, I can swap it for something flatter:
+
+> I'm now Director of Operations at [Company]. Thanks to everyone who helped get me here — more soon.
+
+Or if the constraint is about something else entirely — the manager tag, the implication of a team you now lead, a compliance rule about announcing before an internal memo goes out — tell me what it is and I'll adjust.

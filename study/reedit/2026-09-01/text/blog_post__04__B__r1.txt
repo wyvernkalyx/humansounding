@@ -1,0 +1,90 @@
+# Buying a Used Car: Notes for People Who've Done This Before
+
+You know how to check oil. You know what a title brand is. You've heard the "always get a pre-purchase inspection" advice enough times that it's become white noise. So let's skip that and talk about the parts that actually separate a good buy from an expensive one — the stuff that lives at the margins, where most of the money is won or lost.
+
+## Buy the specific car, not the model
+
+Generic reliability rankings are nearly useless at this level. What matters is the specific powertrain and model-year combination.
+
+Within a single nameplate you'll often find one engine that runs to 250k and another that eats timing chain guides at 90k. First model years of a new generation carry real risk; so do the years right after a mid-cycle refresh introduced a new transmission or an emissions system. Sometimes the "worse" car on paper — the base trim with the older, carried-over engine — is the one you want.
+
+Spend an hour on the model-specific forum before you spend a minute on listings. You're looking for the failure mode that owners describe with resignation rather than anger: the thing everyone knows is coming, the mileage it arrives at, and what it costs. Then check whether the car in front of you has already had it done, and whether the receipt says OEM part or the cheapest available.
+
+## History reports are a floor, not a signal
+
+A clean Carfax means nothing was reported. That's it. Cash-repaired collision damage, out-of-network service, and anything that happened before a title wash won't be there.
+
+More useful moves:
+
+- Run both Carfax and AutoCheck. They pull from different sources, and auction announcements sometimes appear in one and not the other.
+- Read the *geography and timing* of the report, not just the events. A car that moved from Houston to Phoenix three months after a hurricane deserves a hard look at the seat rails, seatbelt anchors, and the connectors under the carpet.
+- Gaps matter more than entries. Four years of dealer service followed by six years of silence usually means the car left the maintenance-records economy, not that it stopped needing oil.
+- Fleet and rental history isn't automatically bad. Rentals get their scheduled service religiously and get abused between services. Corporate fleet cars are often the opposite. Know which you're looking at.
+
+## Bring a scan tool and a paint gauge
+
+Two cheap tools do more diagnostic work than an hour of squinting.
+
+**A paint depth gauge** ($30–$50) reads factory paint at a consistent thickness across a panel. Bodywork shows up as numbers that spike or wander. Take readings on every panel including the roof, and compare left to right. This finds respray that eyeballing misses on silver and white cars.
+
+**An OBD-II scanner with mode $06 and readiness monitors** is where the real intelligence is. The check-engine light being off tells you nothing; what you want to know is:
+
+- **Are the readiness monitors set?** Unset monitors on a car that's been driven means codes were cleared recently. This is the single best tell for a seller hiding an intermittent fault, and almost nobody checks it.
+- **Freeze frame data** on any stored or pending codes.
+- **Long-term fuel trims** at idle and at load. Double-digit positive trims mean unmetered air or a fuel delivery problem the light hasn't caught yet.
+- **Module-level scan**, not just powertrain. ABS, SRS, and body modules hold the history of collisions and electrical gremlins that the ECU doesn't.
+
+On anything with adaptive transmission logic, look at adaptation values and clutch counters if you can access them. On German cars, check whether battery registration was ever done — it's a small thing that tells you whether the previous owner's shop knew what it was doing.
+
+## Price the deferred maintenance, then subtract it
+
+The most common expensive mistake at the experienced end isn't buying a broken car. It's buying a *sound* car with $4,000 of accumulated service intervals sitting on top of it and paying market price anyway.
+
+Build the list before you negotiate: timing belt and water pump, transmission fluid on the unit the manufacturer swears is "lifetime," transfer case and differentials, brake fluid, spark plugs on the V6 where the rear bank requires intake removal, suspension bushings, and tires with a date code older than the last presidential election. Price it with real local labor rates.
+
+A car with a documented $3,500 major service already done is frequently a better buy at a $2,000 premium than the cheaper example that hasn't. This is the single clearest inefficiency in the private-party market, because most buyers price on mileage and cosmetics.
+
+## Sitting is worse than driving
+
+A 40,000-mile car that did 4,000 miles a year has spent most of its life with fluids pooling, seals drying, rust forming on rotors and cylinder walls, rubber hardening, and a battery cycling to death. A 120,000-mile car that did 20,000 highway miles a year on schedule is often mechanically healthier and always cheaper.
+
+The market pays for the odometer. You should pay for the maintenance history and the way the car was used. That gap is where the value is.
+
+## The PPI you should actually be asking for
+
+"Take a look at it" gets you a lift inspection and a shrug. Specify:
+
+- Full multi-module scan with a printout, including readiness monitors
+- Compression or leakdown if the engine family has known ring or valve issues
+- Borescope the cylinders on direct-injection engines with carbon reputations
+- Cooling system pressure test
+- Measure brake rotor thickness and pad life in millimeters, not "fine"
+- Structural check: pinch welds, frame rail seams, radiator support fasteners, spot-weld patterns in the trunk and under the carpet
+
+Use a marque specialist for anything German, Japanese-performance, diesel, or EV. A good general shop will miss the model-specific tell that a specialist finds in four minutes.
+
+## EVs and hybrids: different homework entirely
+
+The pack is most of the car's value, and its condition is invisible from the outside.
+
+Get state-of-health from the vehicle's own data — via OBD dongle and an app like Car Scanner or a marque-specific tool — not from the range estimate on the dash, which is a rolling average of recent driving. Look at module-level cell voltage spread if you can; a wide delta predicts trouble the aggregate SOH number hides.
+
+Then check the boring administrative traps that cost real money:
+
+- Does the battery/drive-unit warranty transfer to a second owner, and what's the remaining term and mileage?
+- Were software-unlocked features tied to the original purchaser? Some manufacturers do not transfer them, and the car you test-drove may lose capability at title transfer.
+- What's the DC fast-charging share of its life? Heavy fast-charging in hot climates degrades packs measurably.
+- What does an out-of-warranty pack replacement actually cost from this manufacturer today? For some models the answer exceeds the car's value, which changes how you should think about the entire purchase.
+
+## Buy the spec you want, not the one that's nearby
+
+Widen the search radius to 500 miles and the picture changes completely. Shipping runs roughly $500–$1,200 for a domestic move, which is less than the premium you'll pay for a compromised local example.
+
+Remote purchases work if you're disciplined: an inspection from a marque specialist near the car, a video walkaround where *you* direct the camera, verified funds through the seller's lienholder or an escrow you chose, and clarity on the destination state's inspection and emissions requirements before you commit. California in particular will make a non-compliant out-of-state car your problem in ways that don't show up until registration.
+
+## Negotiate the total, not the theater
+
+You already know to work out-the-door pricing. The subtler points:
+
+- Doc fees are statutorily capped in some states and unlimited in others. Know which you're in; it changes whether the fee is a real negotiation or a fixed cost.
+- Financing reserve is a profit center. Arrive pre-approved. If the d

@@ -1,0 +1,26 @@
+Here's a tight version, main point first:
+
+---
+
+I'm now Director of Operations at [Company].
+
+Same team, bigger lever. Thanks to everyone who helped get me here — more soon.
+
+---
+
+**Or, if you want one line of warmth:**
+
+---
+
+New title today: Director of Operations at [Company].
+
+Grateful to [manager's name] and the team. The work ahead is the fun part.
+
+---
+
+**What I cut:**
+- The "you already know the story" framing — at this length, skipping the recap is implied, not stated
+- The multi-part thank-you, down to one clause
+- Anything explaining the role or what comes next
+
+One thing worth checking: where's this going? A Slack post or company newsletter blurb can stay this bare. If it's still LinkedIn, this reads a little clipped for the platform — people expect at least a sentence of substance. And if it's for a bio line or email signature, you'd want it stripped further to just the title and company, no announcement framing at all.

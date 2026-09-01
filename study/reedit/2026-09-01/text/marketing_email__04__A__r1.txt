@@ -1,0 +1,79 @@
+## Subject Line Options
+1. Your [last project name] is still sitting there
+2. [First Name] — [specific thing they built] is 80% done
+3. Picking up where you left off
+4. Your team's been using it without you
+5. Quick question about [Account Name]
+
+**Preview text:** Nothing's been deleted. Nothing's expired.
+
+---
+
+## Main Email
+
+**Subject:** Your [last project name] is still sitting there
+
+Hi [First Name],
+
+[Dynamic: "Your [project/report/workflow name] hasn't been touched since [date]."]
+
+Not chasing you about it — just flagging that it's still live, still connected to [integration they set up], and still doing [whatever it does] in the background. If that's intentional, ignore this.
+
+If it's not, two things changed that affect your setup specifically:
+
+**[Change #1 tied to their configuration]** — the workaround you were using for [thing] isn't necessary anymore.
+
+**[Change #2 tied to their plan or usage tier]** — [specific implication for them].
+
+[**Open [project name] →**]
+
+And if you've moved to something else, tell me what and why. I'll stop emailing and you'll have done me a favor.
+
+[Sender Name]
+[Title]
+
+---
+
+## Shorter Alternative
+
+**Subject:** Quick question about [Account Name]
+
+[First Name] —
+
+[Teammate name] logged in [X] times last month. You haven't since [date].
+
+Is that a deliberate handoff, or did something break for you specifically?
+
+[Sender Name]
+
+---
+
+## Third Option — Data-Led
+
+**Subject:** [X] [items] processed while you were away
+
+[First Name],
+
+Since [last login date], [Account Name] has:
+
+- [Metric 1 — e.g., processed 1,240 tickets]
+- [Metric 2 — e.g., saved an estimated 31 hours]
+- [Metric 3 — e.g., flagged 8 exceptions nobody reviewed]
+
+That last one's the reason I'm writing. [Specific consequence of the unreviewed items.]
+
+[**Review flagged items →**]
+
+[Sender Name]
+
+---
+
+## Notes
+
+- The behavioral merge fields (last project, teammate activity, unreviewed items) are what make these work. Without live data feeding them, fall back to the shorter version — a vague "we miss you" performs worse than a two-line note.
+- The third option only sends to accounts with genuine accrued activity. Firing it at a dormant single-seat account with zero data reads as automated and undermines the other two.
+- Third option assumes multi-seat or ongoing automation; skip it for solo, manual-use accounts.
+
+---
+
+*Assumed "knows the background" means the recipient — an existing user with account history — so I've cut the product framing and written these to reference their specific configuration and usage rather than re-explaining the tool. Say the word if you meant something else and I'll adjust.*

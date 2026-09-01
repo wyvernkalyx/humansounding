@@ -1,0 +1,62 @@
+# COMPOUND
+*A newsletter for people still figuring it out*
+
+**Issue #47 — Money in Your Twenties: The Judgment Calls**
+
+---
+
+Hi friends,
+
+**The ladder is solved. What's left is about four judgment calls where the standard advice is a heuristic, not an answer — and the biggest one is equity comp.** Everything below is those four.
+
+---
+
+## 1. Equity comp (the one that actually moves the number)
+
+**RSUs: sell on vest, always, absent a specific thesis.** You recognized ordinary income at the vest price and your basis reset there. Holding buys you no tax advantage for the first year — it's a pure unhedged bet. Ask the clarifying question: *handed the cash, would I buy this much of my employer's stock?* You're already long this company through salary, bonus, health insurance, and network.
+
+Options are sharper:
+- **ISOs** throw the bargain element into AMT at exercise. You can owe cash tax on paper gains in illiquid stock. Model it in November, not April.
+- **83(b) within 30 days** starts the capital-gains clock and kills the spread problem — but it's a risk decision wearing a tax costume.
+- **QSBS** rules changed in 2025 (tiered holding periods, higher caps, acquisition-date effective dates). Don't rely on 2021 knowledge.
+- **ESPP** with a 15% discount and a lookback, sold immediately, is close to free money. The disqualifying disposition is fine.
+
+## 2. Roth is not automatic
+
+"Low bracket now, so Roth" compares your *marginal* rate today to your *effective* rate later — different animals. Traditional withdrawals fill the standard deduction and bottom brackets first, so a modest pre-tax balance comes out cheap. That argues for some traditional, not zero.
+
+Roth genuinely wins at 12%, in a low-earning year, or ahead of a sharp ramp. It weakens at 24%+, in a high-tax state you may leave, and if you'll have gap years for cheap conversions. The real move is **filling low-bracket years with Roth and high-bracket years with traditional** — not picking a team.
+
+## 3. The accounts nobody tells you about
+
+**HSA** is the best account in the code and most people use it as a checking account. Max it, pay medical costs out of pocket, invest the balance, keep the receipts for a decade.
+
+**Mega backdoor Roth** — search your plan document for "after-tax." The gap between the deferral limit and the total additions limit is roughly $23.5k vs ~$70k.
+
+**Pro-rata rule** — any pre-tax traditional IRA balance (including that first-job rollover) taints your backdoor conversion across *all* IRAs. Roll it into your 401(k) before December 31.
+
+## 4. Liquidity is a variable
+
+"Three to six months" averages people with nothing in common. The inputs are income volatility, labor-market depth, whether your job loss correlates with drawdowns, and your fixed-cost floor. Two months is defensible for a government employee with a working partner; a first-year startup hire in a one-employer city wants nine to twelve — and shouldn't rush to prepay a 5% loan.
+
+Count **Roth contribution basis** as backstop liquidity. It's a bad first line — you can't put it back — but it means the money isn't really locked, which is an argument for funding the Roth even when cash feels thin. And hold it in T-bills or a Treasury money fund, not HYSA, if you're in a 9–13% state.
+
+---
+
+## The frame underneath all of it
+
+At 27 the present value of your future earnings dwarfs your portfolio, probably by an order of magnitude. For most people that stream behaves like a bond — which is the actual case for near-100% equities this decade. Not "you're young, you'll recover." That's a vibe.
+
+The caveat matters more than the rule: **if your income is equity-like** — commission, startup comp, a career levered to one sector — you are already carrying the risk, and the concentration question from section one is the whole ballgame. Diversifying the portfolio doesn't fix a correlated paycheck. Selling the RSUs does.
+
+Reply and tell me which call you're sitting on.
+
+**— The Compound**
+
+*General education, US rules, not personalized advice.*
+
+---
+
+**What I changed:** I cut "Your outcomes in this decade get decided by" from the opening — that asserted a causal result about reader outcomes that you never gave me. The lead still opens on the same point (four judgment calls, equity comp first).
+
+If you meant a different line, the other two candidates are "probably by an order of magnitude" in the closing section and "close to free money" in the ESPP bullet. Say the word and I'll strike either.

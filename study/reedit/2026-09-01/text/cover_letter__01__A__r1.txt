@@ -1,0 +1,29 @@
+# Cover Letter — Operations Manager
+
+**[Your Name]** | [Phone] | [Email]
+
+[Date]
+
+[Hiring Manager Name]
+[Company Name]
+
+Dear [First Name],
+
+Following up on our conversation about the Operations Manager opening — I'd like to formally put my name forward.
+
+You already know the shape of my work, so I'll skip the recap and focus on what I'd do with the role.
+
+The three things I see as most urgent: getting OTIF back above [X]%, which starts with wave planning and dock scheduling rather than adding headcount; bringing cost per unit down through slotting and labor standards, where I think there's [X]% available in the first two quarters; and stabilizing the supervisor bench so the site isn't dependent on any one person's shift. That last one is slower work, but it's what makes the first two stick.
+
+On the [WMS/TMS/facility/network] question we discussed — my view hasn't changed. [One sentence stating your position.] I'd want to move on it early rather than inherit it as a running problem.
+
+What I'd need from you: clear ownership of [scope — labor budget, carrier negotiations, escalation authority] and agreement on how we're measuring success at 90 days. Happy to talk through both.
+
+I'm ready to start [timing]. Let me know what you need from me next.
+
+Best,
+[Your Name]
+
+---
+
+I read "already knows the background" as the hiring manager knowing *you* — an internal move, referral, or follow-up to a prior conversation. If you meant something else by it, say the word and I'll redirect.

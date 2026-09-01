@@ -1,0 +1,75 @@
+## Assumption
+Reading this as: same asset, written for an experienced lifecycle/CRM marketer rather than someone who needs win-back principles explained. Rationale stripped, decisions stated, edge cases flagged.
+
+---
+
+## Subject lines (test set)
+
+1. It's been a while, [First Name] — here's what you've missed
+2. Your [Product] account is still here
+3. We saved your spot
+4. 3 things that changed since your last visit
+5. Still interested?
+
+**Preview:** Settings, data, and integrations exactly where you left them.
+
+---
+
+## Send 1 — Product-led
+
+**Subject:** It's been a while, [First Name] — here's what you've missed
+
+Hi [First Name],
+
+You haven't logged into [Product] since [Month]. Fair enough — but a few things have changed:
+
+**[Feature #1]** — [Benefit, one line]
+**[Feature #2]** — [Benefit, one line]
+**[Feature #3]** — [Benefit, one line]
+
+Your account is intact: [settings / saved data / integrations / team members]. One click and you're back in.
+
+[**Log back in →**]
+
+If [Product] isn't the right fit anymore, reply and tell me why. A real person reads every response.
+
+[Sender Name]
+[Title], [Company]
+
+---
+
+## Send 2 alternate — Plain-text, reply-optimized
+
+**Subject:** Still interested?
+
+Hi [First Name],
+
+Quick one: no login since [Month]. Trying to work out whether that's because:
+
+1. Busy, haven't gotten back to it
+2. Something didn't work the way you expected
+3. You've moved on
+
+If it's #1, [your account's right here]. If it's #2 or #3, hit reply. I'd rather hear it than guess.
+
+[Sender Name]
+
+---
+
+## Build notes
+
+**Segmentation** — Split the dormant pool at minimum three ways before build: activated-then-lapsed, onboarded-but-never-activated, and seat-holders who were never the buyer. The "what's changed" block only lands for group one; group two needs a setup path, group three needs routing to the account owner instead.
+
+**Dynamic content** — `[Month]` and the feature block should pull from last-login timestamp and plan tier. If you can't populate features dynamically, cut to the plain-text variant rather than shipping generic release notes.
+
+**Cadence** — Day 0 product-led, Day 5 customer story or use-case, Day 12 incentive with explicit last-touch framing, then sunset. Hold any discount to send 3.
+
+**Suppression** — Exclude open support tickets, active trials, accounts in renewal windows, and anyone with a billing failure in the last 30 days (different journey entirely). Confirm the 90-day window measures last *login*, not last email open — those diverge badly for API-heavy accounts.
+
+**Reply handling** — Send from a monitored address. The plain-text variant will generate replies; route them somewhere before launch or drop the CTA.
+
+**Measurement** — Primary metric is 30-day return-to-active, not opens or clicks. Secondary: unsubscribe rate as a list-hygiene signal, and reply volume as qualitative churn data. Expect the plain-text version to win on replies and lose on clicks.
+
+---
+
+If you meant the *recipient* instead — e.g. a long-tenured power user who knows the product cold and doesn't need features re-explained — say the word and I'll rewrite the copy itself on that basis.

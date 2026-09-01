@@ -1,0 +1,54 @@
+**MEMORANDUM**
+
+**TO:** All Staff
+**FROM:** [Name], [Title]
+**DATE:** [Date]
+**RE:** Three-day schedule — confirmed details and start date
+
+---
+
+Following the all-hands on [Date], here are the confirmed details. Start date is **[Month Day]**.
+
+**Schedule**
+
+- **Tuesday and Wednesday** — company-wide, everyone in.
+- **Third day** — set by your team. Managers confirm by **[Date]**.
+- **Core hours** — [10:00 a.m. – 3:00 p.m.] on in-office days. Start and end times are otherwise yours.
+
+**Logistics**
+
+| Item | Status |
+|---|---|
+| Desk assignments | Distributed [Date] via [system] |
+| Parking / transit | [Subsidy details]; badge access active [Date] |
+| Café | Full hours resume [Date]; [breakfast] on anchor days |
+| Meeting rooms | Booking opens [Date] |
+
+**Working norms**
+
+Keep collaborative work — planning, reviews, design sessions — on in-office days. Protect remote days for focused work. All meetings stay video-enabled for people who are remote, traveling, or out sick.
+
+**Exceptions**
+
+- Employees hired as fully remote are unaffected.
+- For medical, caregiving, or other circumstances, contact your manager or [HR contact]. These conversations are confidential.
+- Day-to-day adjustments — appointments, deliveries, a sick kid — need a heads-up to your manager, not an approval.
+
+**Dates**
+
+| [Date] | Team third days confirmed |
+| [Date] | Desks and parking distributed |
+| [Date] | Schedule takes effect |
+| [Date] | Check-in survey |
+
+**Questions**
+
+I answered the main ones at the all-hands and won't re-litigate them here. For anything still open: **[channel]** through Friday, anonymous submissions at **[link]**, or grab me directly.
+
+Thanks for the patience while we worked out the details.
+
+[Name]
+
+---
+
+I assumed "already knows the background" means staff who heard the announcement and rationale at an all-hands, so this version drops the justification entirely and functions as the logistics follow-up. If you meant a different reader — managers who need to run the rollout, or an exec team reviewing the plan — tell me which and I'll redo it.

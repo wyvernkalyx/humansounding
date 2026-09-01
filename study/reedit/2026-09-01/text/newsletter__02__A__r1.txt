@@ -1,0 +1,71 @@
+# COMPOUND
+*A newsletter for people still figuring it out*
+
+**Issue #47 — Money in Your Twenties: The Judgment Calls**
+
+---
+
+Hi friends,
+
+You know the ladder. Starter cash → match → high-interest debt → real emergency fund → tax-advantaged investing → everything else. If that's news to you, go read issue #12 and come back.
+
+This issue is about the part after that: the places where the standard advice is a heuristic wearing a lab coat, and where a twentysomething's situation genuinely differs from the median personal-finance reader. Most of these are decisions you make once or twice this decade and then live with for thirty years.
+
+---
+
+## Roth is not automatic
+
+"You're in a low bracket now, so Roth" is directionally fine and analytically sloppy. The real comparison is your **marginal** rate today against your **effective** rate on that dollar in retirement — and those are different animals.
+
+In retirement, traditional withdrawals fill the standard deduction and the bottom brackets first. If your traditional balance ends up modest, a meaningful chunk of it comes out at rates well below what you're paying now, even if your total income looks similar. That argues for at least some pre-tax money, not zero.
+
+Where Roth genuinely dominates: you're in the 12% bracket, you had a low-earning year (grad school, a gap, a startup that paid in equity), or you expect a sharp income ramp. Where the case weakens: you're already at 24%+ at 27, you live in a high-tax state and might not retire there, and you're likely to have years between quitting and RMDs to do cheap Roth conversions.
+
+The unglamorous answer is that you probably want both buckets, and the highest-value move is usually **filling low-bracket years with Roth and high-bracket years with traditional** rather than picking a side and defending it forever.
+
+---
+
+## The accounts most people miss
+
+Assuming you're already maxing the deferral limit:
+
+**The HSA is the best account in the tax code** and it's mostly used as a spending account. Triple tax-free, no RMDs, and after 65 it functions like a traditional IRA for non-medical spending. The move is to max it, pay current medical costs out of pocket, invest the balance, and keep a folder of receipts you can reimburse yourself for decades later. This only works with an HDHP and only if you can actually absorb the deductible — which, if you've built the emergency fund, you can.
+
+**The mega backdoor Roth** exists in a minority of plans, but if yours allows after-tax contributions with in-plan Roth conversion, the gap between the employee deferral limit and the total additions limit is very large (roughly $23.5k vs ~$70k in 2025). Nobody at your company will tell you about this. Search your plan document for "after-tax."
+
+**The backdoor Roth's landmine is the pro-rata rule.** If you have any pre-tax traditional IRA balance — including that rollover from your first job — your conversion is partly taxable, and it's calculated across all your IRAs, not the one you touched. Fix: roll the pre-tax IRA *into* your current 401(k) before December 31, then do the backdoor cleanly.
+
+---
+
+## Equity comp is where the real money is decided
+
+If you have RSUs, the default should be **sell on vest, always**, unless you have a specific reason otherwise. The tax argument for holding is weaker than people think: you already recognized ordinary income at the vest price and your basis reset there, so holding is a pure, unhedged bet with no tax benefit for the first year. The clarifying question is the standard one: *if I were handed the cash equivalent today, would I buy this much of my employer's stock?* Almost nobody says yes. Your salary, your bonus, your health insurance, and your professional network are already correlated to this company.
+
+If you have options, the decisions get sharper:
+
+- **ISOs** generate an AMT preference item on the bargain element at exercise, which means you can owe real cash tax on paper gains in illiquid stock. Model this before December, not in April.
+- **Early exercise + 83(b)** within 30 days can start the capital gains clock and eliminate the spread problem entirely — but you're buying stock in a private company with post-tax cash you may never see again. This is a risk decision dressed up as a tax decision.
+- **QSBS** is worth understanding if you're at a startup, but the rules were revised in 2025 (holding-period tiers, higher exclusion caps, effective dates tied to when the stock was acquired). Don't rely on what you read in 2021.
+- **ESPP with a 15% discount and a lookback** and immediate sale is close to free money. Take it, then sell. The disqualifying disposition is fine.
+
+---
+
+## Your emergency fund is a variable, not a constant
+
+"Three to six months" is a compromise between people with wildly different risk profiles. The actual inputs are: how volatile your income is, how liquid your labor market is, how correlated your job loss is with a market drawdown, whether you have dependents, and what your fixed cost floor looks like.
+
+A tenured government employee with a working partner and cheap rent might rationally hold two months. A first-year startup employee in a single-employer city with a 60% fixed-cost ratio should hold nine to twelve, and probably shouldn't be in a hurry to prepay a 5% loan.
+
+Also worth counting toward your real liquidity: **Roth IRA contribution basis** comes out at any time, tax- and penalty-free. It's a poor first line of defense — you can't put it back — but it means "the money's locked up" is not quite true, and it's an argument for funding the Roth even when your cash cushion feels thin.
+
+And park it correctly. Treasury bills and Treasury money market funds are exempt from state income tax; a high-yield savings account isn't. In a 9-13% state that gap is real.
+
+---
+
+## Your human capital is the biggest position you hold
+
+At 27, the present value of your future earnings dwarfs your portfolio, probably by an order of magnitude. Two implications people draw and only one of them holds up cleanly.
+
+The clean one: for most people, that future earnings stream behaves more like a bond than a stock, which is the actual justification for a near-100% equity allocation this decade. Not "you're young, you can recover" — that's a vibe. The reason is that you're already massively long a stable, non-market-correlated asset, and your portfolio is a small satellite around it.
+
+The caveat: if your income *is* equity-like — commission sales, startup equity, a career levered to

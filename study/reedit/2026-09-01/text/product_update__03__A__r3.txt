@@ -1,0 +1,23 @@
+# Mobile Performance: Fixed
+
+**Release [X.Y] — [Date]**
+
+Cold start is down from 4.1s to 1.6s, bundle size is down 38%, and long lists hold 60fps. The mobile slowdown is resolved.
+
+**How:** Deferred non-essential init (analytics, flag hydration, prefetch warming) until after first interactive paint. Dropped four unused dependencies, moved to AVIF/WebP, code-split by route. List virtualization across inbox, search, and activity feed.
+
+**Also in this release:** broader cache coverage, backoff on retries, and an action queue that flushes on reconnect — the indefinite spinner on flaky connections should be gone.
+
+**What affects you:** Releases now gate against the mid-tier Android reference device on simulated 3G. Flagship-on-Wi-Fi numbers won't ship.
+
+**Next:** predictive prefetch, progressive image placeholders, TTI work on the three heaviest screens.
+
+Rolling out over the next few days via auto-update.
+
+*Metrics are placeholders — swap in real benchmark output before this goes out.*
+
+---
+
+I removed the battery claim — it was the one where I'd invented not just a number but a source ("beta cohort, two weeks"), which is the least publishable kind of fabrication.
+
+Worth flagging: the cold start, bundle size, and 60fps figures in the opening line are also numbers I generated, not ones you gave me. Same for "four unused dependencies." If you want those out too rather than replaced, say the word and I'll strip them.

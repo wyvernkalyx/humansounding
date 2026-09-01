@@ -1,0 +1,57 @@
+# Webinar Invitation Email
+
+**Subject line options:**
+1. New tax rules are here — what they mean for your bottom line
+2. [Date]: Free webinar on the [Year] tax changes
+3. Don't let the new tax rules catch you off guard
+
+**Preview text:** A 45-minute breakdown of what changed, what it costs, and what to do next.
+
+---
+
+**Body:**
+
+Hi [First Name],
+
+The [Year] tax changes are official — and some of them take effect sooner than most people expect.
+
+Between [specific change #1, e.g., updated deduction limits] and [specific change #2, e.g., new reporting requirements], the rules that shaped your last return may not apply to your next one. The gap between "I'll deal with it at filing time" and "I planned for this" can be worth thousands.
+
+That's why we're hosting a free live webinar:
+
+**[Webinar Title]**
+📅 [Day, Date]
+🕐 [Time, Time Zone] · 45 minutes + live Q&A
+💻 Online — join from anywhere
+
+**What we'll cover:**
+
+- **What actually changed** — the handful of updates that affect [audience: small business owners / individual filers / your industry], minus the jargon
+- **What it means in dollars** — real examples showing the before-and-after impact
+- **What to do before [deadline date]** — practical moves you can make now, not next April
+- **Your questions, answered live** — bring them to the Q&A
+
+**Your presenter:** [Name], [Title/Credential] with [X] years advising [audience type] on tax strategy.
+
+[**Save My Seat →**]
+
+Can't make it live? Register anyway and we'll send you the recording and slides.
+
+Seats are limited to keep the Q&A useful, so we'd recommend grabbing yours now.
+
+See you there,
+
+[Your Name]
+[Title] · [Company]
+[Phone] | [Email]
+
+*P.S. Registrants also get our [Year] Tax Change Checklist — a one-page summary you can hand straight to your accountant.*
+
+---
+
+**Notes for customization:**
+
+- **Swap the vague for the specific.** Naming one or two real changes in the opening lines will outperform generic "big changes are coming" language.
+- **Segment if you can.** A version for business owners and a version for individuals will beat one email trying to serve both.
+- **Timing.** Send 10–14 days out, with reminders at 3 days, 1 day, and 1 hour before.
+- **Compliance check.** If you're a licensed firm, run the copy past whoever handles your advertising review — claims about savings or outcomes often need qualifying language.

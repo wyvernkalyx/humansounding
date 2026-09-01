@@ -1,0 +1,40 @@
+# Webinar Invitation — Condensed, Results Claim Removed
+
+**Subject:** [Provision]: the open questions the proposed regs leave you with
+
+**Preview text:** 60 min, CPE-eligible. Technical session, not an overview.
+
+---
+
+The proposed regs on [§ / Provision] leave [specific mechanic] unresolved — with a [Date] effective date. We're running a working session on how firms are taking positions in the meantime.
+
+**[Webinar Title]**
+[Day, Date] · [Time, Time Zone] · 60 min · [X] CPE ([Field of Study])
+
+- **[§ / Provision]** — two competing readings where the regs are silent, and the considerations bearing on each
+- **Transition rules** — [transaction type] straddling the effective date
+- **[Reporting requirement]** — what the [form/schedule] requires versus what the instructions imply
+- **Q&A** — submit at registration, prioritized by frequency
+
+**Panel:** [Name, credential, firm] · [Name, former agency role]
+
+[**Register →**]
+
+Materials: technical summary with citations, plus a client-ready explainer you can rebrand. CPE requires live attendance.
+
+[Your Name] · [Company] · [Direct line]
+
+*Presenters' views as of the presentation date; not advice for any specific taxpayer.*
+
+---
+
+**What I removed — and a flag**
+
+I read the results claim as **"defensible readings"** and **"the exposure profile of each."** Both imply a prediction about how a position would fare if challenged, which is the kind of outcome assertion advertising review usually objects to. Replacements are neutral: "competing readings," and "the considerations bearing on each" describes the analysis without forecasting how it lands.
+
+Everything else is unchanged.
+
+**Worth confirming:** if what you actually needed cut was something else, tell me which line and I'll swap it instead. Two other candidates, in case:
+
+- **"how firms are taking positions in the meantime"** — arguably implies the approaches discussed are working in practice. Neutral alternative: *"how firms are approaching the open items."*
+- **"client-ready explainer you can rebrand"** — a deliverable promise rather than a results claim, but some reviewers treat "client-ready" as an implied fitness-for-use assurance. Neutral alternative: *"a draft client explainer you can adapt."*

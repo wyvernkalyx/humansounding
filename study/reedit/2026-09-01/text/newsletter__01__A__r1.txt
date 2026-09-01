@@ -1,0 +1,113 @@
+Assuming you mean a regular subscriber — someone who's read the earlier issues, knows the frameworks, and doesn't need habit-stacking explained. Here's that version. (If "background" meant something more specific, tell me and I'll re-aim.)
+
+---
+
+**THE SLOW BUILD**
+*Issue #47*
+
+---
+
+**Subject:** Re-entry is the skill
+
+**Preview:** You don't have a habit problem. You have a February problem.
+
+---
+
+You know the mechanics. Anchor, floor, night-before setup, never miss twice. We did all that in the spring issues and I'm not going to relitigate it.
+
+The mechanics aren't why your routine died.
+
+Nearly every reply I got to the September survey described the same shape: built it, ran it for five to seven weeks, something disrupted it — travel, illness, a work crunch, one genuinely terrible week — and then never came back. Not *couldn't*. Didn't. The routine was fine. The re-entry was the failure point.
+
+So that's the issue. Not how to build one. How to survive the collapse, which is the only part that's actually hard.
+
+---
+
+## The gap between missing and quitting
+
+"Never miss twice" is good as far as it goes, and it goes about as far as two days. It has nothing to say about the seven-day gap, which is where routines actually go to die.
+
+Here's the thing nobody accounts for: the cost of returning scales with the length of the absence, but not for practical reasons. Practically, day eight is identical to day two — you get up, you do the thing. The cost is entirely psychological, and it compounds because of what the gap *means*. Two days off is a blip. Eight days off is evidence. And once it's evidence, coming back requires admitting the evidence was real, which is more expensive than just quietly letting the whole thing dissolve.
+
+That's why people don't restart. Not laziness. Restarting means acknowledging the lapse, and the dissolution option lets you avoid ever having that conversation with yourself.
+
+The fix is to make re-entry procedurally boring — decided in advance, no self-assessment required. Which brings me to the thing I've actually been using.
+
+---
+
+## The re-entry protocol
+
+Write this down now, while nothing is broken. One index card.
+
+> **If I've missed 3+ days:**
+> Tomorrow I do the floor version. Only the floor version. I do not do the full routine. I do not evaluate whether the routine is working. I do not redesign it.
+> Day two: floor version again.
+> Day three: resume normal.
+
+Three rules, and the second one is the one people violate.
+
+**Do not resume at full volume.** The instinct after a lapse is to overcorrect — come back harder to make up ground. This fails every time, because you're now running a routine that requires high motivation while operating from a deficit. You get two good days and a second collapse, and the second collapse is much worse than the first, because now you have a pattern instead of an incident.
+
+**Do not evaluate during re-entry.** A lapse feels like information. It mostly isn't. The urge to redesign the routine after missing a week is almost always avoidance in a productive costume — redesigning feels like progress and requires no unpleasant mornings. Give it three normal days first. If it still seems broken then, it might be. Usually it isn't.
+
+**Do not treat the gap as debt.** There's nothing to make up. The chain metaphor is load-bearing for building and actively harmful for recovering, because it prices a lapse as loss rather than as pause. You didn't lose eight days of progress. You had eight days without a specific input. The accumulated benefit didn't unwind.
+
+---
+
+## Drift, and why it looks like success
+
+The other failure mode, and the one I'm more susceptible to.
+
+Routines don't only die by collapse. They die by expansion. Mine went from twenty minutes to ninety over about four months, entirely through reasonable individual decisions — add the mobility work, extend the journaling because it was going well, add a second coffee and a podcast, and at some point the routine had eaten the productive part of the morning and I was doing preparation instead of work.
+
+The tell isn't duration. It's that additions only ever happen on good days, and good days are exactly when your judgment about sustainable volume is worst. You're calibrating the routine to a state you're in maybe two mornings a week, then failing to hit it the other five and reading that as discipline failure.
+
+I now run what I'd call a maintenance audit, roughly quarterly:
+
+- What's the actual duration, timed, not estimated? (Mine was 40 minutes longer than I'd have guessed.)
+- Which elements would I genuinely miss if they vanished tomorrow?
+- Which ones survive only because they're upstream of something I like?
+- Is anything here load-bearing for the *day*, or is it all load-bearing for the *routine*?
+
+That last one is the real question. Elements that exist to justify the routine's existence are the first cut.
+
+---
+
+## When to kill it
+
+I don't think I've said this in eleven months of writing about habits, so: sometimes the correct move is to end the routine.
+
+Signals it's time:
+
+**Life structure changed and the routine didn't.** New job, new kid, moved cities, changed seasons. A routine built for the old shape will keep failing against the new one, and you'll keep reading that as a personal failure rather than a fit problem.
+
+**It's become a condition for starting.** If you can't work without having completed the routine, it's stopped being a support and become a dependency. Real test: can you skip it entirely on a Tuesday and still have a good day? If not, it's a fragility, whatever else it's doing.
+
+**You've rebuilt it three times and it's failed three times the same way.** That's not a discipline problem. That's data, and it's the one case where redesign is warranted — not the version where you missed a week and want an excuse to make a new spreadsheet.
+
+Killing it deliberately is different from letting it lapse. Deliberate is cheap. Lapse costs you the belief, which is the expensive part and the reason the March gap took me until June to recover from.
+
+---
+
+## This week
+
+Two things, ten minutes total.
+
+1. Write the re-entry protocol. Index card, put it where you'll find it in a bad week — not in Notion, you won't open Notion in a bad week.
+2. Time your routine tomorrow. Actual clock. Compare to what you'd have estimated.
+
+If the second number is more than 30% off the first, you have drift, and drift resolves faster than collapse does. Cut one element this week. Pick the one you'd defend hardest — that's usually the one holding a place rather than earning it.
+
+---
+
+## Mailbag
+
+**"Does the never-miss-twice rule apply during a genuine crisis?"**
+
+No. Suspend it. A crisis isn't a lapse, and treating it as one converts a hard month into a hard month plus a self-recrimination project. Declare the routine formally paused, name a restart date, and use the re-entry protocol when you get there. The formal pause is doing real work — it's what stops the gap from becoming evidence.
+
+---
+
+Next issue: the evening side, which several of you have now asked about enough times that I've stopped being able to ignore it.
+
+**Sam**

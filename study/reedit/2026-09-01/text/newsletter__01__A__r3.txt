@@ -1,0 +1,78 @@
+Removed the September survey claim. The opening now describes the pattern without sourcing it to data you don't have.
+
+---
+
+**THE SLOW BUILD**
+*Issue #47*
+
+---
+
+**Subject:** Re-entry is the skill
+
+---
+
+Your routine didn't fail. Your re-entry did.
+
+The pattern always has the same shape: it runs for a few good weeks, something disrupts it — travel, illness, one terrible work week — and then it never comes back. The mechanics were fine. We covered those in the spring and they hold. The gap is what killed it.
+
+Here's why. Practically, day eight is identical to day two: you get up, you do the thing. But two days off is a blip and eight days off is *evidence*. Coming back means admitting the evidence was real. Letting the whole thing quietly dissolve means never having that conversation. So people dissolve.
+
+The fix is to make re-entry procedural — decided in advance, no self-assessment required.
+
+---
+
+## The protocol
+
+Write this on an index card now, while nothing is broken. Not in Notion; you won't open Notion in a bad week.
+
+> **If I've missed 3+ days:**
+> Day one: floor version only.
+> Day two: floor version only.
+> Day three: resume normal.
+
+Three rules govern it:
+
+**Don't resume at full volume.** The instinct is to come back harder and make up ground. You get two good days and a second collapse, and the second one is worse — now it's a pattern instead of an incident.
+
+**Don't evaluate during re-entry.** A lapse feels like information. It mostly isn't. Redesigning the routine after missing a week is avoidance in a productive costume: it feels like progress and requires no unpleasant mornings. Give it three normal days. If it still looks broken then, it might be.
+
+**Don't treat the gap as debt.** There's nothing to make up. The chain metaphor is load-bearing for building and harmful for recovering — it prices a lapse as loss rather than pause.
+
+---
+
+## The other failure mode: drift
+
+Routines also die by expansion. Mine went from twenty minutes to ninety over four months through entirely reasonable individual decisions, until I was doing preparation instead of work.
+
+The tell isn't duration. It's that additions only ever happen on good days — and good days are when your judgment about sustainable volume is worst. You calibrate to a state you're in twice a week, miss it the other five, and read that as a discipline problem.
+
+Quarterly audit, four questions:
+
+- Actual duration, timed, not estimated?
+- What would I genuinely miss if it vanished?
+- What survives only because it's upstream of something I like?
+- Is anything here load-bearing for the *day*, or just for the *routine*?
+
+The last one does most of the work. Elements that exist to justify the routine's existence go first.
+
+---
+
+## When to kill it
+
+Sometimes ending it is correct. Three signals: your life structure changed and the routine didn't; you can't start work without it (that's a dependency, not a support); or you've rebuilt it three times and it's failed the same way three times.
+
+Killing it deliberately is cheap. Lapsing costs you the belief, which is the expensive part.
+
+---
+
+## This week
+
+Write the re-entry card. Then time tomorrow's routine against what you'd have guessed. More than 30% off means drift — cut one element, and make it the one you'd defend hardest.
+
+Next issue: the evening side.
+
+**Sam**
+
+---
+
+One other spot to check before you publish: the "twenty minutes to ninety over four months" line in the drift section is a personal detail I invented. Swap in your real numbers or cut it.

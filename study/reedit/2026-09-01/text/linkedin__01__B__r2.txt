@@ -1,0 +1,21 @@
+Here's a tighter cut — roughly half, leading with the conclusion:
+
+---
+
+**Six months on the four-day week: it works, and it's still fragile.**
+
+[Delivery held / revenue up X%]. That part's settled. Here's what isn't.
+
+**The meeting cuts didn't hold on their own.** We removed [X] recurring meetings in week two. By month four, six had grown back under new names. Compression needs someone whose actual job is defending it.
+
+**Friday coverage is a compromise, not a solution.** Third model in. Rotating on-call is least-bad, and "least-bad" is doing real work in that sentence.
+
+**Role parity is the unresolved one.** [Engineering] absorbed the change easily. [Client-facing] absorbed it by working harder inside four days — not the same thing.
+
+The four-day week isn't a policy you install. It's an ongoing argument with entropy.
+
+---
+
+**What I cut and why:** the leadership point went first — it's the most personal, but it's also the one most people already accept, so it earns the least space. I compressed each remaining point to its sharpest sentence and dropped the sign-off, since shorter placements rarely support a call for replies.
+
+If you want it shorter still, the three bolded lines plus the closing line stand on their own at about 60 words. And if this is going somewhere with a hard character limit — a newsletter blurb, an internal digest, a slide — tell me the constraint and I'll cut to fit exactly.

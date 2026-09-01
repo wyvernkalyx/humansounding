@@ -1,0 +1,38 @@
+# Cover Letter — Junior Software Developer
+
+**[Your Name]**
+[City, State] | [Phone] | [Email] | [GitHub/Portfolio URL] | [LinkedIn]
+
+[Date]
+
+**[Hiring Manager Name]**
+[Company Name]
+[Company Address or "City, State"]
+
+Dear [Hiring Manager Name / Hiring Team],
+
+I'm writing to apply for the Junior Software Developer position at [Company Name], which I found on [job board / company careers page / referral source]. As a [recent computer science graduate / self-taught developer / bootcamp graduate] with hands-on experience building [web applications / APIs / mobile apps] in [primary language or stack], I'm excited by the opportunity to contribute to a team working on [specific product, mission, or technology the company is known for].
+
+In my most recent role as [internship title / project or role] at [Company/School/Project], I [built or contributed to a specific thing]. For example, I developed [brief project description — e.g., "a REST API in Node.js and PostgreSQL that handled inventory data for 500+ product SKUs"], which [measurable or concrete outcome — e.g., "reduced manual data entry time by roughly 40%"]. That project taught me how to [relevant skill: write testable code, work with Git in a team, debug under a deadline, translate vague requirements into tickets].
+
+I'm particularly drawn to [Company Name] because [specific, genuine reason — their open-source work, a product you use, their engineering blog, their approach to mentorship]. I noticed [specific detail], and it aligns closely with the kind of work I want to grow into. I'm also comfortable being early in my career: I ask questions, I take code review seriously, and I ramp up quickly on new tools — I picked up [technology] in [timeframe] to complete [project].
+
+My core technical skills include [Language 1, Language 2], [Framework], [Database], and [Git/Docker/AWS/testing framework]. You can see examples of my work at [GitHub or portfolio link], including [name of your best project].
+
+I'd welcome the chance to talk about how I can support the team at [Company Name]. Thank you for your time and consideration.
+
+Sincerely,
+**[Your Name]**
+
+---
+
+## Tips for customizing this
+
+- **Replace vague claims with specifics.** "Built a full-stack app" is weaker than "built a Django app that lets users track workouts, with 200 lines of unit tests and CI via GitHub Actions."
+- **Mirror the job posting's language.** If they say "React and TypeScript," those exact words should appear if they're true for you.
+- **Keep it to one page** — roughly 250–400 words. Hiring managers skim.
+- **Address a real person** when you can. Check LinkedIn or the company's team page; "Dear Hiring Team" is fine as a fallback, but avoid "To Whom It May Concern."
+- **Lead with enthusiasm for their work, not just your need for a job.** One sentence proving you researched the company beats three paragraphs about yourself.
+- **Don't apologize for inexperience.** Skip phrases like "although I lack professional experience." Frame what you *have* done instead.
+
+Want me to tailor this to a specific job posting or your actual background? Paste the listing and a few details about your projects and I'll draft a version you can send as-is.

@@ -1,0 +1,22 @@
+**[Your Name]** | [Phone] | [Email] | [GitHub]
+
+[Date]
+
+Dear [Name],
+
+Following up on our conversation at [event / after your note / since my internship wrapped in August] — I've applied for the Junior Software Developer role and wanted to put my interest in writing.
+
+You already know the work I did on [project]. What I'd add is that since then I've [concrete development: shipped X, learned Y, finished Z], which addresses the gap you flagged around [thing they mentioned]. The [specific piece] you saw was rough in places; I rewrote the [component] with proper test coverage and it's been running against live data since [month].
+
+What draws me to this role specifically is [aspect of the team's work you discussed]. I want to spend the next few years getting good at [skill area] under people who are already good at it, and from what I've seen of how your team handles [code review / architecture decisions / on-call], that's the environment.
+
+I'm available to start [date] and happy to walk through any of the code at [link].
+
+Thanks again for [the introduction / your time in September / encouraging me to apply].
+
+Best,
+**[Your Name]**
+
+---
+
+I read your note as: the letter's recipient already has context on the candidate — a referral, a former intern, someone who's already met the hiring manager — so it shouldn't reintroduce everything from scratch. If you actually meant that *you* have the context and just wanted the letter without the explanatory scaffolding, tell me and I'll give you the cold-application version, stripped.

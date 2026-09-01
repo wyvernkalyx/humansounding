@@ -1,0 +1,33 @@
+Assuming this is for a placement with less room and less patience — an email to affected admins, or a changelog entry that links out. I've kept the breaking changes, since that's the part a technical reader can't get elsewhere, and dropped everything that duplicates the guide.
+
+---
+
+# Classic [Tool] integration shuts off [Sunset Date]
+
+**Migrate now → [migration guide]**
+
+Read-only mode starts **[Date]**. At sunset, Classic connections are deleted and syncing stops. Data in [Product] and [Tool] is unaffected — but nothing moves between them until you reconnect.
+
+**To migrate:** [Settings → Integrations → [Tool] → Connect]. Needs [admin] in [Tool]. Field mappings import automatically — verify, activate, disconnect Classic. Takes about [5 minutes].
+
+## If you've built on Classic
+
+- **Payloads:** [`record_id` → `id`, Unix → ISO 8601 timestamps, `metadata` flattened.] Full diff in the [changelog].
+- **Auth:** OAuth replaces API keys. Existing keys stop working at sunset and aren't migrated.
+- **Sync:** Two-way by default — [Tool] can write back to [Product]. Check your conflict settings before activating.
+- **No equivalent:** [legacy CSV export format], [per-user connection scoping]. Contact us if you rely on either.
+
+Questions: **[support@example.com]** or in-app chat.
+
+— The [Product] Team
+
+---
+
+### What I cut
+
+- **The status table** — a returning reader doesn't need the milestones already passed. One live date (read-only) and one hard date (sunset) carry the same weight.
+- **Rate limits** — real, but it's a tuning problem, not a breakage. Belongs in the changelog.
+- **"After sunset" section** — folded the one line that mattered (data stays put) into the opening.
+- **Escalation paths** — [account manager] mention only earns its space in a post people read start to finish.
+
+If the placement is tighter still — an in-app banner or a Slack/status post — say the word and I'll get it to two sentences plus a link.

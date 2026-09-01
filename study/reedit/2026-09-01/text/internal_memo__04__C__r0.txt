@@ -1,0 +1,44 @@
+**MEMORANDUM**
+
+**TO:** All Employees
+**FROM:** [Name], [Title — e.g., Chief Information Security Officer]
+**DATE:** [Date]
+**SUBJECT:** Mandatory Security Awareness Training — Complete by [Deadline]
+
+---
+
+Beginning [start date], all employees are required to complete our updated Security Awareness Training. This annual requirement supports our obligations under [regulation/policy, e.g., SOC 2, HIPAA, company Information Security Policy] and reflects the growing sophistication of phishing and social engineering attacks targeting organizations like ours.
+
+**What the training covers**
+
+- Recognizing phishing, smishing, and business email compromise attempts
+- Password hygiene and multi-factor authentication
+- Safe handling of confidential and customer data
+- Device security for remote and hybrid work
+- How and when to report a suspected incident
+
+**Who must complete it**
+
+All employees, contractors, and interns with access to company systems. There are no exemptions.
+
+**Time required and deadline**
+
+The training takes approximately [30–45] minutes and may be completed in more than one sitting. It must be finished by **[Deadline date]**. Please treat this as work time and schedule it accordingly with your manager.
+
+**How to access it**
+
+1. Log in to [platform name] at [URL] using your company credentials.
+2. Select "[Course Name]" from your assigned learning path.
+3. Complete all modules and the brief knowledge check at the end (a score of [80]% is required to pass; the assessment may be retaken).
+
+You will receive a confirmation email upon completion. Automated reminders will be sent at [interval] to anyone with an outstanding assignment.
+
+**If the deadline is missed**
+
+Managers will receive completion reports on [date]. Employees who have not completed the training by [Deadline] may have system access restricted until the requirement is satisfied, consistent with [Policy #].
+
+**Questions or accommodations**
+
+If you need an accommodation, have difficulty accessing the platform, or believe you have already completed equivalent training, contact [name/team] at [email] or [extension].
+
+Thank you for taking the time to complete this. Most security incidents begin with a single click, and the awareness you build here is our most effective defense.

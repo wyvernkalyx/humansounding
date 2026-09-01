@@ -1,0 +1,26 @@
+**MEMORANDUM**
+
+**To:** All Staff
+**From:** [Name], [Title]
+**Date:** [Date]
+**Subject:** Expense Policy — Effective [Date]
+
+---
+
+The revised expense policy takes effect **[date]**. Details below; full text at [link].
+
+**Key provisions**
+
+- **Submissions** move to [system name] on [date]. Legacy forms will be rejected after that date.
+- **Deadline:** [30] days from transaction date. Later submissions need department head sign-off.
+- **Receipts:** itemized, required at **$[25]**+. Card statements don't qualify.
+- **Pre-approval:** required for any expense over **$[500]**, and for all travel and client entertainment regardless of amount.
+- **Travel meals** shift to per diem. Rates are in Appendix [A].
+- **Reimbursement:** [10] business days from approval, paid via [method].
+
+**Action required**
+
+- Clear outstanding expenses under the old process by **[date]**.
+- Complete the [system name] module by **[date]**.
+
+Q&A sessions: [dates/times], [registration link]. Otherwise, [name] at [email].

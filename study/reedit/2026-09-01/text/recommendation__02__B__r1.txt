@@ -1,0 +1,43 @@
+**[Company Name / Letterhead]**
+
+[Date]
+
+**Re: [Employee Name] — Promotion to [Target Position Title], Req. #[XXXX]**
+
+Dear [Name / Promotion Committee],
+
+You know [Employee First Name]'s record, so I'll skip the summary and give you the part you can't get from the file: my assessment of whether [he/she/they] can do the job at the next level. [He/She/They] can, and I'd argue [he/she/they] already [is/are].
+
+Three things I'd want weighed in the decision:
+
+**1. [He/She/They] [has/have] been operating above grade for [timeframe].** The [project/workstream, e.g., vendor transition] was scoped as a [Current Title] deliverable and became something larger — [brief outcome, e.g., a full process redesign that cut cycle time 40% and is now the standard across three regions]. Nobody assigned that expansion; [Employee First Name] saw it and took it.
+
+**2. The judgment holds up under pressure.** During [specific difficult episode], [he/she/they] [chose/pushed back/escalated] [specific decision] when the easier move was [alternative]. That call cost [him/her/them] [short-term friction/goodwill with X] and was correct. That's the behavior I most want in this seat, and it's the hardest thing to verify from a résumé.
+
+**3. [He/She/They] build[s] capability in other people.** [Brief evidence — e.g., two of the three analysts [he/she/they] mentored have been promoted; the onboarding documentation [he/she/they] wrote is now used department-wide.] The current role doesn't reward this. The target role depends on it.
+
+On the concern I expect will come up: [state it plainly — e.g., [he/she/they] [has/have] not formally managed direct reports / limited exposure to [X] stakeholders / relatively short tenure at grade]. It's fair, and I don't think it's disqualifying. [Evidence/mitigation — e.g., [he/she/they] [has/have] led a three-person workstream informally since January, including two difficult performance conversations [he/she/they] handled without my involvement.] The gap is experience, not aptitude, and it closes faster in the role than outside it.
+
+One more thing worth saying explicitly: this promotion takes [Employee First Name] off my team, and I'm recommending it anyway. I'd rather absorb the backfill than watch [him/her/them] plateau here or take the growth somewhere else.
+
+Happy to discuss candidly, on or off the record — [phone] / [email].
+
+Sincerely,
+
+[Your Name]
+[Your Title]
+
+---
+
+**What changed and why:**
+
+| First version (reader is new to the candidate) | This version (reader knows the background) |
+|---|---|
+| Opens by establishing your relationship and tenure | Opens by naming what you're uniquely positioned to add |
+| Recounts the career trajectory and hire date | Assumes it; goes straight to the above-grade evidence |
+| Lists achievements broadly | Selects the two or three that specifically predict success at the *next* level |
+| Maps the job description requirement by requirement | Assumes the committee has the JD; addresses the likely *objection* instead |
+| Growth area framed gently as coachability | Growth area named plainly, because a knowledgeable reader will raise it anyway and pre-empting it builds credibility |
+| Formal, complete, ~500 words | Compressed, conversational, argumentative — a memo between peers |
+
+The core principle: with an informed reader, description is noise. Everything that survives the edit should be either **evidence they don't have** (private moments of judgment, unassigned work, difficult conversations you witnessed) or **an argument** about how to interpret evidence they do have.

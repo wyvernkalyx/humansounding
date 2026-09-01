@@ -1,0 +1,49 @@
+I've removed the outcome claim in the paint gauge section ("Ninety seconds, and it finds bodywork that's invisible in good light and absent from every report") — that's the line asserting a specific result I had no basis for. If you meant a different one, tell me which and I'll swap the edit.
+
+---
+
+# Buying a Used Car When You Already Know the Drill
+
+**The main point: a clean Carfax and a generic PPI tell you almost nothing. What separates a good buy from an expensive one is inspecting for the specific way *this model* fails, and verifying that the seller hasn't cleared the evidence.**
+
+Everything below serves that.
+
+## Find the signature failure first
+
+Every platform has one. Spend an afternoon on the forums before you spend an hour in a parking lot: mechatronic units on dry-clutch DSGs, HPFPs on N54s, ring land failure on turbo Subarus, carbon buildup on early DI engines, torque converter shudder on ZF 8-speeds, CVTs across Nissan's lineup, PowerShift transmissions in Fiestas.
+
+Then ask the corollary: has the fix already been done, with paperwork? A car with the known-weak part documented as replaced often beats a lower-mileage example still running the original.
+
+## Scan before you drive
+
+Bring a tool that reads all modules, not just generic powertrain codes.
+
+- **Readiness monitors.** All "incomplete" means codes were cleared within the last 50 miles or so. On a car that's been sitting three weeks, that isn't innocent.
+- **Every module.** Transmission, ABS, SRS, and body control store faults that never light the dash. SRS codes in particular can reveal deployment history the report missed.
+- **Pending codes and freeze frame.** Pending means something is failing intermittently. Freeze frame tells you under what conditions.
+
+Mileage lives in multiple modules on many cars, too — worth comparing against the cluster.
+
+## Buy the paint depth gauge
+
+Thirty to fifty dollars. Reference off the roof, then work panel by panel. Factory readings cluster tight; a door at 300 microns was resprayed, a quarter at 800 has filler. Unreported cash repairs leave no trace on a history report, so the gauge covers ground the paperwork can't.
+
+## Direct the PPI, don't just order one
+
+A chain-shop multipoint check is a tire-tread reading with extra steps. When you book, specify: full multi-module scan with printout, compression or leakdown if the engine has ring or valve issues, borescope on a DI engine you're worried about, and lift photos of frame rails, subframe mounts, and rear suspension pickups. Name the known failure and ask them to check it.
+
+Use a marque specialist. They know what a stretched timing chain sounds like cold; a general shop may not.
+
+## Read records for intervals, not thickness
+
+A fat folder isn't maintenance. Look at spacing. Twelve-thousand-mile oil changes on a turbo DI engine with an obviously severe-service commute means sludge and coked bearings regardless of the sticker. Check whether the "lifetime-filled" transmission ever got serviced (it isn't lifetime; the fluid just outlives the warranty). Check whether brake fluid was ever flushed — the most-skipped item on the list, and a reliable proxy for how seriously everything else was taken.
+
+## Ask how the car got here
+
+An off-lease car with franchise service history is a known quantity. An auction car the dealer bought three weeks ago is not — they know only what the grade sheet said.
+
+Two questions at any dealership: *how long has it been on the lot*, and *trade-in or auction*. The first is leverage; floorplan interest accrues daily and inventory software marks cars down automatically. The second tells you how much the seller actually knows.
+
+## If it's electrified, the battery is the car
+
+Get a state-of-health reading, not a dashboard range estimate — dealer diagnostic, service report, or third-party app over OBD. You want capacity against original and cell balance. Check DC fast-charge history too; a car that lived on high-rate charging has degraded differently than one that trickled overnight.

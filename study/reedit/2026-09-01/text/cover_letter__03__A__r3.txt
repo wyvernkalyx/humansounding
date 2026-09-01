@@ -1,0 +1,20 @@
+**[Your Name]** | [Phone] | [Email] | [GitHub]
+
+[Date]
+
+Dear [Name],
+
+I've applied for the Junior Software Developer role, and I'd like the job.
+
+Since [the internship / we spoke], I've [concrete development: shipped X, learned Y]. That closes the gap you flagged around [thing]. I rewrote the [component] with real test coverage.
+
+I'm available [date]. Code at [link].
+
+Thanks again for [the intro / your time].
+
+Best,
+**[Your Name]**
+
+---
+
+I cut "it's been running against live data since [month]" — that was the outcome claim I'd invented. If you also want "That closes the gap you flagged around [thing]" gone, say the word; it asserts an effect I don't have grounds for either.

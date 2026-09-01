@@ -1,0 +1,34 @@
+# Webinar Invitation — Tightened
+
+**Subject:** The [Provision] election deadline is [date]. The default is wrong for a lot of people.
+
+**Preview text:** 45 minutes on the open questions and the calls you can't defer.
+
+---
+
+Hi [First Name],
+
+The [Provision] election is due [deadline date], guidance is still thin, and the default treatment is the wrong answer for a meaningful share of [audience]. We're spending 45 minutes on how to decide anyway.
+
+**[Webinar Title]**
+[Day, Date] · [Time, Time Zone] · 45 min + open Q&A
+
+- **The [deadline] election:** who benefits from opting in, who gets burned, and the modeling we'd run first
+- **[Provision A]:** where the statute and proposed regs diverge, and how practitioners are handling the gap
+- **[Provision B] and [existing structure]:** the interaction the initial coverage missed
+- **Q&A** — bring the messy fact patterns
+
+**[Name], [Credential]** — [X] weeks deep in this with [number] clients in [industry].
+
+[**Save My Seat →**]
+
+Recording to all registrants. Capped at [number] to keep the Q&A useful.
+
+[Your Name] · [Title] · [Company]
+[Phone] | [Email]
+
+*P.S. Send your scenario at registration and we'll try to work it in.*
+
+---
+
+**One note:** the subject line is doing the heavy lifting here — it needs a real provision name and a real date to land.

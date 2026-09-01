@@ -1,0 +1,27 @@
+Here's the same post written for people who've been following along — no origin story, no case-making, straight into the part that's actually still interesting:
+
+---
+
+**Six months in on the four-day week. The update nobody asks for but everyone wants.**
+
+The headline is boring: it works. [Delivery held / revenue up X%]. That part is settled and I'm not going to relitigate it.
+
+What's less settled:
+
+**Friday coverage is still a compromise, not a solution.** We're on our third model. Rotating on-call is the least-bad option so far, but "least-bad" is doing real work in that sentence. Anyone who tells you they solved this in one go is selling something.
+
+**The meeting cuts didn't hold on their own.** We removed [X] recurring meetings in week two. By month four, six had quietly grown back under new names. Compression isn't self-sustaining — it needs someone whose actual job is to defend it.
+
+**Role parity is the unresolved one.** [Engineering / product] absorbed the change easily. [Client-facing / support] absorbed it by working harder inside four days, which is not the same thing and we knew it and did it anyway for a while. Fixing that has been the real project.
+
+**And the leadership thing is true.** If you're answering Slack on Fridays, you've quietly repriced the whole arrangement for everyone below you. I've been bad at this. I'm less bad now.
+
+The thing I'd tell my six-months-ago self: the four-day week isn't a policy you install. It's an ongoing argument with entropy.
+
+Ask me again at twelve months.
+
+---
+
+**What changed in the rewrite:** I cut the setup and the "why we did it" section entirely, dropped the persuasion, and moved the failure modes to the front — for an audience that already knows the premise, the unresolved problems *are* the content. The tone is also more candid, since insiders tend to read polish as spin.
+
+If the "already knows the background" reader is specifically your own team rather than your network, I'd take it further — name people, name the actual meetings, and drop the LinkedIn-ish closing line. Want that version?

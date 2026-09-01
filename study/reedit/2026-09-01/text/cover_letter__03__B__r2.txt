@@ -1,0 +1,20 @@
+# Cover Letter — Junior Software Developer
+*Short version, for a reader who knows you*
+
+Hi [Name],
+
+I'm applying for the Junior Software Developer role on [team] — I'd like the job, and I think I'm ready for it now in a way I wasn't when we last talked.
+
+The change since [project]: [one specific thing — "I rebuilt the reporting pipeline in Go and cut the nightly job from 40 minutes to 6"]. That was the gap, and it's closed.
+
+I already know [the codebase / the deploy process / how the team works], so ramp-up should be short. Happy to talk through [scope / timing / where you need coverage] whenever it's useful.
+
+Thanks, [Name].
+
+[Your Name]
+
+---
+
+**What moved:** the ask is now sentence one instead of paragraph one, and everything that explained *why this company* is gone — a reader who knows you doesn't need it. Cut the credential list, the soft closing, and the "if I'm not right for this" line, which reads as hedging at this length.
+
+**Placement notes:** this fits an email body, a LinkedIn message, or a Slack DM. If it's going in an application field that also takes a resume, keep the header line with your contact info. If it's a DM, drop the sign-off entirely.

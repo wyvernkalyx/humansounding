@@ -1,0 +1,35 @@
+The results claim was already gone — the beta stats line ("cut schedule-update time by [X]%...") came out when I halved the length. So the short version stands as written:
+
+---
+
+**Subject:** Smart Timelines is live
+
+**Preview text:** Auto-shifting dependencies, time-off aware, milestone risk flags.
+
+---
+
+Hi [First Name],
+
+Smart Timelines is out of beta and enabled on your account. Your existing dependency links carried over — open Timeline view and it's already working.
+
+**New since beta:**
+
+- Auto-shift respects team time off, not just weekends
+- Milestone risk flags fire the moment a task pushes past a date
+- Notifications go only to people whose dates actually moved
+
+[**Open Timeline view →**]
+
+One gap: [recurring tasks don't auto-shift yet]. Full detail in the [changelog].
+
+Thanks for the beta feedback — a lot of it is in here.
+
+[Name]
+
+---
+
+Two things worth checking:
+
+If you meant the **longer informed-reader version**, that one still has the stats line and I can strip it in a second.
+
+And if your constraint is broader than performance numbers — say legal wants no forward-looking or outcome language at all — then a couple of lines here might need a look. "Milestone risk flags fire the moment a task pushes past a date" is a behavioral promise about the product, and "[recurring tasks don't auto-shift yet]" implies a roadmap commitment. Neither is a results claim as I read it, but if the restriction came from review rather than from you, it's cheap to soften both now instead of after they flag it.

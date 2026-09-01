@@ -1,0 +1,28 @@
+# Classic [Tool] integration shuts off [Sunset Date]
+
+**Posted [Date]**
+
+The Classic [Tool] integration goes read-only on **[Date]** and is fully disabled on **[Sunset Date]**. If you're still on it, migrate before then.
+
+**Migrating**
+
+Go to **[Settings → Integrations → [Tool]]** and click **Connect**. Your Classic field mappings carry over automatically — review them, activate, then disconnect Classic. Takes about [5 minutes]. Historical data is untouched.
+
+[Full migration guide →]
+
+**If you don't migrate**
+
+The connection is removed on [Sunset Date] and syncing stops. Nothing is deleted on either side; changes just stop flowing until you reconnect.
+
+**Two things to check**
+
+- **Custom [webhook consumers / API calls]** built against Classic payloads will break. [Payload diffs here] — the main change is [X].
+- **[Specific Classic-only feature]** has no direct equivalent yet. If you depend on it, email [support@example.com] before [Date] so we can sort out a path for you.
+
+Questions: [support@example.com] or in-app chat. [Enterprise] customers, your [account manager] can run the migration with you.
+
+— The [Product] Team
+
+---
+
+I've cut the feature comparison, the rationale, and the "what is this integration" framing, and assumed your readers already know the new integration exists and roughly why Classic is going away. Two things worth confirming on your end: whether this is going to *all* users or only affected workspaces (if it's a general changelog, you'll want one line of orientation at the top), and whether you actually have a Classic-only feature gap — that section is the one people will look for first, so it's worth being concrete rather than dropping it.

@@ -1,0 +1,49 @@
+# The Building Was Doing More Work Than You Think, and Less Than They Say
+
+The distributed-work argument has been stuck for four years because both sides are defending the wrong thing. The pro-office camp defends a mechanism (proximity) as though it were an outcome. The pro-remote camp defends an outcome (flexibility) as though the mechanisms were free. What's actually interesting is narrower: co-location produced several organizational goods as *byproducts*, nobody designed those mechanisms, and so almost nobody knows how to rebuild them deliberately.
+
+That's the whole thesis. Culture didn't die. The scaffolding came off, and a lot of companies discovered they'd never poured the wall.
+
+## The standard advice is right and insufficient
+
+You already know the playbook: write things down, default to public, async-first, fewer meetings, document decisions. It's correct. It's also under-specified in ways that produce predictable failures, and I'd guess most of the disappointment with distributed work comes from executing the playbook literally and getting the letter without the spirit.
+
+**"Write things down" degrades into documentation theater.** The failure mode isn't too little writing, it's writing with no consumer. Wikis rot because nobody owns them and nothing breaks when they're wrong. The version that works is narrower: capture *decisions*, not knowledge. What we chose, who chose it, what we rejected and why, when we revisit. Decision records have a natural consumer (the next person who wants to reopen the question) and a natural expiry. General-purpose documentation has neither, which is why your wiki is a graveyard and your ADRs, if you have them, probably aren't.
+
+**"Default to public" creates performance.** Move everything into open channels and you don't get transparency, you get people writing for an audience. The half-formed thought, the "I think this is wrong but I'm not sure," the tentative disagreement — these move to DMs, and now your public record is a highlight reel while the real conversation is invisible and unsearchable. Worse than the office, where at least the hedged version was audible to whoever was nearby. If you want public defaults to work you have to explicitly protect low-stakes, low-polish posting, and the way you do that is by having senior people post badly on purpose.
+
+**"Async-first" quietly reallocates power.** Written decision-making advantages fast, confident writers and disadvantages people who think out loud, non-native speakers, and anyone whose value shows up in synchronous judgment rather than prose. This isn't an argument against it — the office had its own biases, mostly toward whoever was loudest in the room and closest to the executive — but it's a real redistribution, and treating it as a neutral efficiency gain is how you end up with a leadership bench that's accidentally selected for a narrow trait.
+
+## What actually breaks, and what's measurable about it
+
+Three things degrade, and they degrade at very different rates, which is why the damage is easy to miss for a year and then hard to reverse.
+
+**Weak ties collapse fastest and quietest.** The Microsoft network study (Yang et al., 2022) found firm-wide collaboration networks became more static and siloed after the shift to remote, with fewer new connections and more time spent in existing clusters. Strong ties held. Cross-group bridges didn't. This matters because weak ties are the mechanism by which information crosses org boundaries, and their loss shows up not as an obvious failure but as a slow increase in duplicated work, surprise dependencies, and decisions made without input that would have been trivially available. You can instrument this crudely — look at the ratio of cross-org to intra-org meeting participants over time, or how many distinct people a given employee interacts with per quarter.
+
+**Junior development is the genuinely unresolved problem.** Early-career productivity gains from proximity are real and appear in the literature more consistently than almost anything else in this debate. Even Bloom's famously positive Ctrip experiment found remote workers were promoted at lower rates. Emanuel and Harrington's work on call centers found remote workers less productive, with much of the effect concentrated in the mentorship channel. I don't think this is solvable with better process; I think it requires manufactured exposure — juniors on calls they don't need to attend, real pairing on real work, and a rate of explicit feedback that feels excessive to the person giving it. Most companies have not paid this cost and are quietly hiring fewer juniors instead, which is a defensible business decision and an industry-level problem.
+
+**Manager detection goes from passive to active.** The specific loss is that a competent manager could previously notice a struggling report without being told. Remotely, that signal has to be actively solicited, which means more one-on-ones, more direct questions, and — the part nobody wants to fund — smaller spans of control. If you went distributed and kept spans at eight or ten, you didn't go distributed, you deferred a cost.
+
+## The real argument underneath the RTO argument
+
+Here's what I think is actually going on with a lot of mandates, and it's not culture.
+
+Distributed work forces evaluation on output. That's usually framed as a benefit, and in principle it is. But most organizations cannot actually evaluate output. They evaluate a blend of output, visible effort, responsiveness, and social proximity to power, and the blend is undocumented because nobody would defend it out loud. Remove the office and you strip out three of the four inputs, exposing that the fourth was never well-specified.
+
+That's an uncomfortable position for a management layer to be in, and "we've lost our culture" is a much more sympathetic thing to say than "I can no longer tell who's good." Some fraction of RTO is real estate obligations, some is soft headcount reduction, and some is genuine belief in collaboration effects. But a meaningful fraction is a performance-management capability gap wearing a culture costume.
+
+The test is simple: ask whether the org can articulate what a strong quarter looks like for a given role without reference to activity. If it can't, proximity isn't restoring culture, it's restoring the ability to conflate presence with contribution.
+
+## Hybrid is the hard case, not the compromise
+
+Fully distributed is a coherent design. Fully co-located is a coherent design. Hybrid is where I'd expect most of the actual failure, because it lets you keep the costs of both and the discipline of neither. If two-thirds of the meeting is in a conference room and one-third is on a screen, the screen loses — and the people on the screen learn that presence is the price of influence, which reintroduces proximity bias while you're paying for distributed infrastructure.
+
+The versions of hybrid that seem to work are the ones with a hard structural rule: either everyone is remote for a given meeting regardless of location, or the in-person days are synchronized across the whole team and used for things that specifically require bodies in a room. "Three days a week, your choice which" is not a policy, it's the absence of one, and it reliably produces the commute without the benefit.
+
+## What I'd actually do
+
+Treat co-location as a scarce, expensive input with specific uses: trust formation, difficult conversations, messy divergent work, and concentrated norm-calibration for new hires. Buy exactly that — a few well-designed multi-day gatherings a year, agenda built entirely around things that fail over video — and stop buying generic presence.
+
+Then pay the management costs honestly. Smaller spans. Decision records with owners. Protected space for unpolished thinking. An explicit, written answer to the norms everyone is currently guessing at: response-time expectations, when it's acceptable to decline a meeting, how much polish a shared draft needs, whether disagreeing with a VP in a public channel is career-limiting. Every org has answers; almost none have written them, and remote hires are inferring them from a much thinner signal than they used to.
+
+None of this is free, and the honest version of the pro-distributed argument isn't that it's costless — it's that the costs are visible, budgetable, and buy you a culture encoded in practice rather than in a lease. The alternative isn't a culture that works. It's one whose mechanisms you've never had to look at directly.

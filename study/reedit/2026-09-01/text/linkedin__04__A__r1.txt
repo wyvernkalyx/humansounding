@@ -1,0 +1,21 @@
+**"Hire for attitude, train for skill" is the most repeated line in hiring and the least operationalised.**
+
+Everyone agrees with it. Then the shortlist gets built on years-in-seat anyway — because experience is scoreable and attitude isn't, and hiring managers default to whatever they can defend in a debrief.
+
+So the useful question isn't whether attitude matters. It's what you're actually measuring when you claim to measure it.
+
+Three things I've found are worth scoring, because they predict something and you can hear them in an interview:
+
+**How fast they say "I don't know."** Not humility as a personality trait — speed. The lag between not knowing and admitting it is the single best proxy I've found for how someone will behave when a project is going sideways.
+
+**What they do with the correction.** Give real feedback in the interview and watch. Do they metabolise it and adjust, or defend the original position? You're not testing agreeableness. You're testing whether new information changes anything.
+
+**Whether they've thought about the problem before asking about it.** Curiosity that hasn't done any homework is just enthusiasm.
+
+The failure mode is obvious and everyone walks into it anyway: "attitude" collapses into "someone I'd enjoy working with," and you build a team that agrees with you. If your attitude criteria aren't written down before the interview, that's what you're doing — you've just replaced a biased-but-visible filter with a biased-and-invisible one.
+
+Structure the assessment or don't claim you're doing it.
+
+---
+
+*One note: I've assumed "background" means your audience already knows the hire-for-attitude argument and doesn't need it re-explained — so this skips the setup and goes at the operational gap instead. If you meant background on your own hiring situation or a specific role you're recruiting for, tell me the specifics and I'll rebuild it around that.*

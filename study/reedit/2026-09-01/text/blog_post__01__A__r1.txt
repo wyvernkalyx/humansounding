@@ -1,0 +1,63 @@
+# Choosing a Password Manager: The Parts That Are Actually Contested
+
+Most write-ups on this topic spend their length establishing that you should use a password manager and that zero-knowledge encryption exists. Assuming that's settled, the remaining decision is narrower and more interesting than the review sites suggest — and the axes that differentiate products are mostly not the ones on the comparison tables.
+
+## Your vault is a durable artifact
+
+Design around the assumption that an encrypted copy of your vault will eventually be exfiltrated and retained indefinitely. This isn't paranoia; it's the LastPass scenario, and it reframes the whole evaluation. Attackers get an offline artifact they can grind against improving hardware forever. Everything about your choice should be evaluated against *how long that artifact resists offline attack*, not against how good the vendor's perimeter is.
+
+That collapses to two variables: the entropy of your secrets, and the cost per guess.
+
+Cost per guess means KDF parameters. Argon2id with sane memory and parallelism settings is the current answer; PBKDF2 at high iteration counts is acceptable. The question worth actually investigating isn't which KDF a vendor advertises — it's **whether they migrate existing accounts when defaults change**. LastPass's real failure mode was a long tail of accounts still sitting at iteration counts from a decade prior, some absurdly low, because the parameter was set at account creation and never revisited. Ask any candidate: what happens to my parameters when you raise the defaults? Silent server-side upgrade on next unlock is the right answer. "Users can adjust in settings" means most users won't.
+
+Entropy is where the two-secret designs earn their keep. 1Password's Secret Key model mixes a high-entropy device-stored value into key derivation, so a stolen vault isn't crackable from the master password alone regardless of how weak that password is. This is a genuinely different threat model, not a marketing distinction — it converts "vault theft plus weak password" from catastrophic to non-viable. The cost is that recovery becomes a real operational problem, since losing both the password and every device holding the Secret Key is terminal. Bitwarden and most others put the entire burden on your passphrase. Both are defensible; they just fail differently, and you should know which failure you've signed up for.
+
+## Metadata is where the encryption boundary leaks
+
+Ask what's *outside* the encrypted envelope. LastPass shipped vault URLs unencrypted, which meant the breach immediately yielded a per-user map of every service each victim used — excellent phishing targeting even for accounts whose passwords were never cracked.
+
+Vendors vary on item counts, folder names, item types, timestamps, and attachment sizes. Some of this is unavoidable for sync efficiency; some is legacy laziness. Few vendors document it prominently, so you're usually reading security whitepapers or audit reports to find out. It's a reasonable proxy for whether the crypto design was done deliberately or accreted.
+
+## The client is the real attack surface
+
+Server-side breaches are the ones that make news, but the browser extension is where the interesting attacks live. Autofill is a mechanism for a page to induce your vault to disclose secrets, and the history of clickjacking, hidden-iframe, and cross-origin fill bugs is not short. Any manager with browser integration is trading attack surface for the usability that makes you actually use it.
+
+Practical mitigations: disable automatic fill in favor of explicit invocation, keep the extension's site-access permissions narrow rather than all-URLs where the product supports it, and prefer managers that require an interaction per fill rather than filling on page load. The unlock-timeout setting deserves more thought than it gets — a vault that stays unlocked all day on a machine with an unaudited extension inventory is doing less work than the encryption suggests.
+
+If your threat model includes targeted attacks, the desktop app plus manual copy-paste is meaningfully safer than extension autofill, at real cost to convenience. Most people shouldn't make that trade. Some should.
+
+## TOTP colocation
+
+The standard objection — colocating both factors defeats the point — is correct in the vault-compromise case and irrelevant in the credential-stuffing and phishing cases that actually account for most account takeovers. Since TOTP's main value is against remote credential reuse rather than against an adversary who already owns your vault, colocation is fine for the long tail.
+
+Keep the exceptions somewhere else: primary email, financial accounts, the domain registrar and DNS provider if you have them, and the password manager's own second factor. For those, hardware keys where supported. The registrar in particular gets forgotten and is the single point from which everything else can be rebuilt by an attacker.
+
+## Passkeys and the portability problem
+
+Assume any manager you pick handles passkey storage and sync. The differentiator is exit cost. Platform-bound credentials in the Apple or Google keychains are fine until you switch ecosystems, at which point there's no clean migration path. Cross-platform managers are the hedge, and FIDO has been working on credential exchange formats to make transfers possible between providers — worth checking current implementation status, since intent and shipped support have historically diverged here.
+
+Broader point: passkeys reintroduce lock-in that passwords never had, because a password can always be typed into anything and a passkey can't. That raises the stakes on vendor portability generally.
+
+## Governance risk
+
+You're making a multi-year commitment to an organization, not just a codebase. Ownership changes, funding pressure, and post-acquisition monetization have degraded more password managers than cryptographic flaws have. Signals worth weighting: how the vendor handled its last incident disclosure, whether audits cover the full client and crypto implementation or just a narrow perimeter, whether the audit reports are published or merely referenced, and whether export is a first-class documented feature or something you have to dig for.
+
+Open source helps but proves less than people assume — auditable isn't audited, and the extension and mobile clients are the parts most likely to hold the interesting bugs and least likely to get scrutiny.
+
+Test the export path before you commit, and again periodically. A vendor's willingness to make leaving easy is the best available proxy for how they'll behave when incentives shift.
+
+## Self-hosting
+
+Self-hosting a Bitwarden-compatible server moves the encrypted blob under your control without changing the crypto — the client does the work either way. So the trade isn't confidentiality, it's availability and patch discipline versus removing yourself from a high-value aggregate target.
+
+Aggregate targeting is a real consideration: a vendor holding millions of vaults attracts attention your VPS doesn't. But an unpatched self-hosted instance and a sync outage during travel are also real. Self-host if you already run infrastructure with monitoring and a backup regime you've actually restored from. Otherwise the vendor's ops team is better than yours.
+
+## Emergency access
+
+Worth checking the implementation, not just the feature checkbox. Sound designs wrap your vault key to the emergency contact's public key at grant time, with a time-delayed release you can veto — meaning the vendor never holds plaintext and the contact holds nothing usable until the timer expires. Weaker designs route through vendor-mediated recovery, which reintroduces a trusted party you'd otherwise designed out.
+
+If you have dependents, a business, or shared financial infrastructure, this is a higher-consequence feature than most of the above, and it's the one that gets configured last or never.
+
+---
+
+Specifics move: KDF defaults get raised, audit reports age out, ownership changes, and passkey interop is actively evolving. Verify current state against vendor documentation and recent audits rather than any writeup, including this one.

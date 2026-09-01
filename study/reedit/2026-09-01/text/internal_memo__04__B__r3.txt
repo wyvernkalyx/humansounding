@@ -1,0 +1,25 @@
+The current version doesn't contain a claim about results — the efficacy line ("most security incidents begin with a single click, and the awareness you build here is our most effective defense") was cut back at the second rewrite, when we dropped the persuasion aimed at a first-time reader. So there's nothing to remove here.
+
+Here's the text unchanged:
+
+---
+
+**Security Awareness Training is due [Deadline].**
+
+Complete it at [URL] → "[Course Name]." Takes ~[30–45] minutes, resumable, [80]% to pass with unlimited retakes.
+
+New this cycle: [new module], [updated content], and a scenario-based assessment replacing multiple choice.
+
+Manager completion reports go out [date]. Access restrictions apply after the deadline per [Policy #].
+
+Exceptions or accommodations: [Name], [email].
+
+---
+
+If something in here is still a problem on your end, these are the closest candidates — tell me which and I'll cut it:
+
+- **"[80]% to pass with unlimited retakes"** — a stated performance threshold. If the concern is committing to a specific score or implying an assessment outcome, this is the line.
+- **"Manager completion reports go out [date]"** — reports individual completion status to managers. If the sensitivity is around reporting or tracking, this is it.
+- **"a scenario-based assessment replacing multiple choice"** — describes the testing method.
+
+Or, if you were working from the longer first draft, the line to remove there is the closing paragraph beginning "Most security incidents begin with a single click."

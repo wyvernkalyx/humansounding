@@ -1,0 +1,63 @@
+Assuming "already knows the background" means an audience that's seen the deprecation notices and understands why — existing Classic users who now just need the mechanics. That shifts the piece from persuasion to reference: no rationale, more technical specificity, action first.
+
+---
+
+# Classic [Tool] Integration: Final Migration Notice
+
+**Posted [Date] · [Product Updates]**
+
+Classic shuts off **[Sunset Date]**. Read-only mode begins **[Date]**. If you haven't migrated, do it now — **[migration guide →]**
+
+## Where things stand
+
+| Date | Status |
+|---|---|
+| **[Date]** | ✅ New Classic connections disabled |
+| **[Date]** | ✅ In-app banners live |
+| **[Date]** | ⬜ Read-only mode — syncs run, settings lock |
+| **[Sunset Date]** | ⬜ Connections deleted, syncs stop |
+
+## Migration
+
+**[Settings → Integrations → [Tool] → Connect]**. Requires [admin] in [Tool]. Your Classic field mappings import automatically; verify them, activate, disconnect Classic. Historical records are untouched.
+
+## Differences that will break things
+
+The new integration isn't a drop-in replacement at the API layer. If you've built on top of Classic:
+
+**Webhook payloads.** [`record_id` is now `id`; timestamps are ISO 8601 instead of Unix epoch; the `metadata` object is flattened one level.] Full diff in the [changelog].
+
+**Auth.** OAuth replaces static API keys. Existing keys stop working at sunset — they aren't migrated. Requires [`read:records`, `write:records`, `read:users`] scopes.
+
+**Sync behavior.** Real-time webhooks replace [15-minute] polling. Two-way sync means [Tool] can now write back to [Product] — if you were relying on [Product] being authoritative, review your conflict settings before activating.
+
+**Rate limits.** [X req/min per workspace, up from Y.] Bulk operations should use [the batch endpoint] rather than looping.
+
+## Known gaps
+
+Two Classic behaviors have no direct equivalent:
+
+- **[Legacy CSV export format]** — use [the reports API] or [the new export schema].
+- **[Per-user connection scoping]** — the new integration is workspace-level. If you depend on per-user auth, contact us before [Date].
+
+If you're using something else that hasn't carried over, tell us now: **[support@example.com]**.
+
+## After sunset
+
+Connections are removed. Data in both systems stays put; nothing syncs until you reconnect. Migration remains available indefinitely — you just lose sync continuity in the gap.
+
+Questions: **[support@example.com]**, in-app chat, or your [account manager] on [Enterprise/Business].
+
+— The [Product] Team
+
+---
+
+### What changed and why
+
+- **Cut the rationale entirely.** A reader who knows the background doesn't need the [v1 API] deprecation story again; repeating it reads as filler or defensiveness.
+- **Cut the feature list.** They've seen the pitch. What they haven't seen is the breakage detail.
+- **Promoted the breaking changes** from a one-line FAQ answer to the longest section — for an informed reader this is the actual payload of the post.
+- **Added "known gaps."** A general audience gets reassurance ("we've mapped most workflows"); an informed audience gets the specific list, because they'll find out anyway and would rather find out now.
+- **Timeline became a status board** rather than a schedule — checkmarks tell a returning reader what they've already lived through.
+
+If you meant a different "already knows" — internal engineering, the support team prepping for ticket volume, or a partner-facing note to [Tool] themselves — the emphasis shifts again. Happy to take a pass at any of those.

@@ -1,0 +1,34 @@
+**Subject:** Smart Timelines is live
+
+**Preview:** Dependencies now cascade. Here's what changed and what didn't.
+
+---
+
+Hi [First Name],
+
+Smart Timelines shipped this morning. It's the dependency cascade you've been asking for since [Month].
+
+**What's new:**
+
+- Dependent tasks shift automatically when you move a predecessor — skipping weekends and anyone's booked PTO
+- Affected assignees get notified with their new dates
+- Anything that pushes past a milestone gets flagged in Timeline view
+
+**What to know before you rebuild your plans:**
+
+- Existing dependencies carried over. Nothing you've already linked needs redoing.
+- Cascades respect manual date locks. If you've pinned a task, it stays pinned and we flag the conflict instead.
+- Circular dependencies now throw an error at creation rather than silently failing.
+- Bulk changes over [X] tasks queue and process in the background — you'll get a summary when it's done.
+
+It's on by default in [Plan Name]. Turn it off per project in Settings → Scheduling if you'd rather keep manual control.
+
+[**Open Timeline view →**] · [Release notes]
+
+[Name]
+
+---
+
+**What changed:** I cut the problem setup, the "how it works" explainer, and the social proof. A reader who already knows the background doesn't need to be sold on why manual rescheduling is painful — they need to know it shipped, what it does to their existing data, and where the edge cases are. That's why the second section is longer than the first.
+
+If by "background" you meant something more specific — they've been in the beta, or you teased this at [event] — tell me and I'll adjust the reference points. And if you give me the real product and feature, I'll drop the brackets.

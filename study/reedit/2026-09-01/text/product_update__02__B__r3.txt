@@ -1,0 +1,26 @@
+Removed the **"Takes about [5 minutes]"** time estimate — that was the only outcome promise in the piece. Everything else is unchanged.
+
+---
+
+# Classic [Tool] integration shuts off [Sunset Date]
+
+**Migrate now → [migration guide]**
+
+Read-only mode starts **[Date]**. At sunset, Classic connections are deleted and syncing stops. Data in [Product] and [Tool] is unaffected — but nothing moves between them until you reconnect.
+
+**To migrate:** [Settings → Integrations → [Tool] → Connect]. Needs [admin] in [Tool]. Field mappings import automatically — verify, activate, disconnect Classic.
+
+## If you've built on Classic
+
+- **Payloads:** [`record_id` → `id`, Unix → ISO 8601 timestamps, `metadata` flattened.] Full diff in the [changelog].
+- **Auth:** OAuth replaces API keys. Existing keys stop working at sunset and aren't migrated.
+- **Sync:** Two-way by default — [Tool] can write back to [Product]. Check your conflict settings before activating.
+- **No equivalent:** [legacy CSV export format], [per-user connection scoping]. Contact us if you rely on either.
+
+Questions: **[support@example.com]** or in-app chat.
+
+— The [Product] Team
+
+---
+
+One flag, in case I read this wrong: if the constraint also covers **"Data in [Product] and [Tool] is unaffected"** — a statement about what migration will and won't do to customer data — that line would need to go too. I left it because it reads as a factual description of system behavior rather than a performance claim, and because removing it would leave the data-loss question unanswered, which is the thing most readers open this email to check. Tell me which way it should land and I'll adjust.

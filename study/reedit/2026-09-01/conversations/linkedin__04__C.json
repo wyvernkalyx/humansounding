@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "Write a LinkedIn post about hiring for attitude over experience."
+  },
+  {
+    "role": "assistant",
+    "content": "**The résumé tells you where someone's been. It doesn't tell you where they're going.**\n\nI've stopped leading with \"Have you done this before?\"\n\nNot because experience doesn't matter — it does. But I've watched plenty of perfectly qualified people stall out, and plenty of \"underqualified\" ones become the person everyone wants on their project.\n\nThe difference was almost never raw skill. It was how they behaved when they didn't know something.\n\nThe ones who worked out tended to:\n→ Say \"I don't know\" quickly, then go find out\n→ Treat feedback as information, not an attack\n→ Ask questions that showed they'd already wrestled with the problem\n→ Care whether the work was actually good, not just finished\n\nYou can teach the software. You can teach the process. It's much harder to teach someone to care.\n\nOne caveat, because this advice gets abused: \"hire for attitude\" too often becomes code for \"hire people I'd grab a beer with.\" That's how teams end up looking and thinking exactly alike. Attitude isn't likeability. It's curiosity, ownership, and how someone handles being wrong — and those are things you can actually assess with structured questions.\n\nSo now I ask candidates about the last time they were completely out of their depth. What they did. What they'd do differently. Whether they're honest about the part they got wrong.\n\nThat answer tells me more than ten years on a CV.\n\nWhat's the best \"unqualified\" hire you've ever made?\n\n---\n\nA few notes: if you have a real example of a hire like this, drop a sentence about them after the opening — specifics outperform generalities on LinkedIn every time. Happy to make this shorter, punchier, or more story-driven, or add a couple of hashtags if that fits your usual posting style."
+  }
+]

@@ -1,0 +1,28 @@
+# Short Version — Operations Manager (~150 words, main point first)
+
+*Best for: email body, internal note, or a message where the letter sits alongside a résumé that carries the detail.*
+
+---
+
+Subject: Operations Manager — [site/region]
+
+Dear [Name],
+
+I'd like to be considered for the Operations Manager role at [site/region]. You know my numbers, so here's my read on the job instead.
+
+[Site/region]'s dock congestion and thin supervisor bench are the same problem: the schedule can't flex because too few people can run a shift alone. Fix the bench and OTIF follows.
+
+My first 90 days: work all shifts before changing anything, then tighten appointment discipline — cheapest lever, and it makes every other metric readable. By day 90, bring you a costed plan for [initiative] with a real payback, not a headcount request.
+
+One thing I'd need from you: whether [known constraint] is fixed or negotiable. That changes the sequencing.
+
+Ready for a P&L this size, and I'd rather grow into it here than learn a new network from scratch.
+
+Best,
+[Your Name]
+
+---
+
+**What I cut:** the three-part constraint list (kept the strongest one), the day-by-day phase breakdown, and the latitude question on carrier mix/capex — those are better raised in conversation.
+
+**Note on placement:** if this goes out as an email, the first line is doing the work of a subject line and an opener at once. Make sure the résumé or attachment carries the metrics this version now assumes.

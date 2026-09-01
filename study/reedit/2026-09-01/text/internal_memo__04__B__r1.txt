@@ -1,0 +1,38 @@
+Here's a stripped-down version for an audience already familiar with the program — no rationale, no explanation of why security training exists, just the delta from last cycle and what they need to do.
+
+---
+
+**MEMORANDUM**
+
+**TO:** All Employees
+**FROM:** [Name], [Title]
+**DATE:** [Date]
+**SUBJECT:** FY[XX] Security Awareness Training — Due [Deadline]
+
+---
+
+This year's Security Awareness Training opens [start date] and is due **[Deadline]**. Same platform, same process as last cycle.
+
+**Access:** [Platform] → [URL] → "[Course Name]" in your assigned learning path.
+
+**Time:** ~[30–45] minutes, resumable. [80]% to pass; unlimited retakes.
+
+**What's new this cycle:**
+- [New module — e.g., AI-generated voice and video impersonation]
+- [Updated content — e.g., revised incident reporting workflow following the move to [tool]]
+- [Change — e.g., the assessment is now scenario-based rather than multiple choice]
+
+**Enforcement:** Manager completion reports go out [date]. Access restrictions apply after [Deadline] per [Policy #].
+
+**Exceptions and accommodations:** [Name], [email], [extension].
+
+---
+
+A few notes on what changed and why:
+
+- **Cut the "who must complete it" section.** A returning audience knows there are no exemptions; restating it reads as distrust.
+- **Cut the closing appeal.** The "most incidents begin with a single click" line is persuasion aimed at someone who needs convincing. For this reader it's filler, and filler trains people to skim your memos.
+- **Replaced the topic list with a "what's new" list.** This is the highest-value change. A repeat audience's real question is "is this the same thing I did last year?" — answering it directly is both more useful and more likely to prevent click-through-without-reading.
+- **Compressed access instructions to one line.** Numbered steps are for first-time users.
+
+If your actual audience is a mix of veterans and new hires, I'd send this version broadly and give new hires a separate onboarding note with the fuller context.

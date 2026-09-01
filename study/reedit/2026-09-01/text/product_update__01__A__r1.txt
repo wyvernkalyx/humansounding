@@ -1,0 +1,38 @@
+# Dashboard redesign: shipped
+
+Live for all accounts as of today. Here's what changed since the beta build you saw last month.
+
+## Deltas from beta
+
+**Layout persistence works now.** Drag-and-drop was in beta but layouts reset on logout. Fixed — they save per user and sync across devices.
+
+**Global filters replaced per-widget filters.** Set date range, segment, or team once and it propagates. This was the top beta complaint and it's the biggest behavioral change in the release.
+
+**Render time is down to ~1s at 20+ widgets.** Beta was sitting around 3s. The remaining win came from batching the metric queries instead of firing one per widget.
+
+**Shareable views made the cut.** Read-only external links included. This wasn't in beta scope; we pulled it forward because the weekly-report use case kept coming up.
+
+**Dark mode.** Also not in beta scope. It was cheap once the component library landed.
+
+## What didn't make it
+
+- **Custom widgets** — beta next month. The query builder needs more work than we thought.
+- **Scheduled digests** — after custom widgets, since they depend on the same saved-view plumbing.
+- **Metric alerts** — scoped, not started.
+
+## Migration
+
+Existing widgets carried over in order. **Reset to default layout** is in the settings menu if you'd rather rebuild.
+
+Legacy dashboard stays available from the same menu for 60 days, then it's gone. We're not maintaining both past that.
+
+## Known issues
+
+- Filters don't yet apply to embedded reports inside widgets
+- Layout sync can lag ~30s across simultaneously open sessions
+
+Feedback goes to the button in the header or straight back to me.
+
+---
+
+Let me know if you want this shorter, aimed at a specific audience (beta group vs. all customers vs. internal), or built around your real feature and issue list.

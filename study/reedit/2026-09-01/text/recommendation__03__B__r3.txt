@@ -1,0 +1,15 @@
+**One flag before the text:** removing the results claim leaves the rating and the rationale resting on an unstated premise. "Exceeds Expectations" and "the gap is habit, not capability" both implicitly assert strong performance, and a calibration reader will ask what the rating is based on. I've left them in as instructed, but if the constraint is that the figures can't be stated *anywhere*, the recommendation may not stand on its own — you'd likely need to point to the number in a separate system of record and reference it, or defer the rating. Your call; you know the reason on your end.
+
+I also left the ~$180K Q3 variance in, since it's evidence of the documentation gap rather than a performance result. Say the word if that needs to go too.
+
+---
+
+**Re: [Name] — Exceeds Expectations, no Senior AE this cycle. Recommending a 90-day gate with a decision point [Date].**
+
+**Gap:** Unchanged since mid-year. Forecast late 9 of 12 months. CRM staleness ~40% of open deals vs. 12% team average. The ~$180K Q3 variance was his data, not the market. Five incomplete CS handoffs, one costing three weeks on [Account C]. Q2 commission delayed a cycle on his own unsubmitted forms.
+
+**Rationale:** Senior AE owns process modeling for the ramp cohort; he's currently a net consumer of deal desk and my time. But the gap is habit, not capability — a Meets is defensible on paper and probably costs us the rep. Hold the rating, make the gate unambiguous.
+
+**Gate:** On-time forecast 11 of 12. ≥90% CRM hygiene at Friday audit. 100% handoff templates pre-kickoff. Expenses inside 30 days. Two clean quarters before Senior AE returns to the table.
+
+**Need from you:** (1) Sign-off on Exceeds with the development note attached. (2) [X hrs/month] sales support for document assembly — workflow only, CRM and forecast ownership stay with him. (3) Confirm Exceeds lands where I think it does in the merit band. (4) Your read on stating the gate to him in these words; my instinct is yes, plainly.

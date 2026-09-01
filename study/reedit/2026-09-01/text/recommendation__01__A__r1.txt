@@ -1,0 +1,41 @@
+Priya Raghunathan
+Professor of Psychology
+Department of Psychological Sciences
+Whitmore State University
+praghunathan@whitmore.edu | (503) 555-0182
+
+March 3, 2025
+
+Graduate Admissions Committee
+Ph.D. Program in Cognitive Psychology
+University of Michigan
+
+Dear Members of the Committee:
+
+I am writing in support of Daniel Reyes's application to your doctoral program in cognitive psychology. I have worked with Daniel for nearly three years — first in my seminar on memory and attention, then as a research assistant, and for the past eighteen months as the lead student on a project of his own design. He is the strongest undergraduate researcher I have supervised in fourteen years at Whitmore, and I recommend him without qualification.
+
+Daniel came to my seminar in his sophomore year, unusual for a course that assumes a full semester of statistics and a research methods background. He earned the highest grade in a class of twenty-six, but the grade understates what happened. Midway through the term we read the literature on retrieval-induced forgetting, and Daniel raised an objection I had not heard from a student before: that the standard paradigm confounds inhibition with simple output interference, and that the field's preferred control condition doesn't actually rule the latter out. He was right, and he was right in a way that took him to a 1994 paper he had found on his own, not on the syllabus. I asked him to stay after class. That conversation became the beginning of his research career.
+
+The project he eventually built asks whether the inhibitory effects in that paradigm survive when retrieval practice is entirely covert — that is, when participants rehearse mentally rather than typing responses. Designing this properly is harder than it sounds; you need a way to verify that covert retrieval occurred at all. Daniel's solution was to use pupillometry as a convergent measure, which meant teaching himself eye-tracking from scratch on equipment nobody in my lab had used in four years. He spent most of a summer getting the calibration stable and wrote the preprocessing pipeline in Python himself, including an artifact-rejection routine that two other students in the lab now use.
+
+I want to describe what happened when the first wave of data came in, because it is the reason I am writing this letter in these terms. The effect wasn't there. Daniel had eighty subjects and a null result on the measure his entire design hinged on. He came to my office genuinely deflated, and then a week later came back with a reanalysis: he had noticed that the null was driven almost entirely by participants whose pupillary response suggested they hadn't engaged in the covert task, and that among compliant participants the effect was robust and in the predicted direction. He proposed treating compliance as a moderator rather than discarding those subjects, preregistered the follow-up, and ran a second sample of sixty to test it. The prediction held. He did all of this before I had suggested any of it. The willingness to sit with a disappointing result, interrogate it, and come back with a sharper question rather than a rescue narrative is a disposition I associate with good third-year graduate students, not undergraduates.
+
+That work is now his honors thesis and the basis of a manuscript we are preparing for *Journal of Experimental Psychology: Learning, Memory, and Cognition*, on which Daniel is first author. He presented preliminary findings at the Psychonomic Society meeting in November and fielded a pointed question from a senior researcher about his exclusion criteria with more composure than I would have managed at his age. He answered it well, and then followed up by email afterward with a supplementary analysis.
+
+On the collaborative side: Daniel trained four newer students in the lab and rewrote our eye-tracking documentation because he thought the existing version assumed too much. He is the person other undergraduates go to when something breaks, and he is unusually good at receiving criticism — I have watched him take apart a draft I had marked up heavily and return with something better, without defensiveness or overcorrection. He has done all of this while working around twenty hours a week at the campus writing center.
+
+The one thing on his transcript that requires a word is the B– in Advanced Statistics in fall of his junior year, which sits oddly against the rest of his record. That semester overlapped with a serious illness in his family, and he was commuting home most weekends. He did not ask for accommodations and did not mention it to me until well after the fact. His subsequent work in computational modeling, where he earned an A, is the better indicator of his quantitative ability, as is the analysis work described above.
+
+Daniel's interests in inhibitory control and retrieval dynamics map directly onto the work being done in your department, and he has thought carefully about why Michigan specifically — he can talk in detail about how he would extend his covert-retrieval paradigm using the resources available there. Of the students I have advised, I would place him in the top two percent, alongside a student from 2017 who is now a tenure-track faculty member in the Midwest. I expect Daniel to have a similar trajectory, and I would take him as a graduate student myself if we had a doctoral program.
+
+I am glad to discuss his application further at either the email or number above.
+
+Sincerely,
+
+Priya Raghunathan
+Professor of Psychology
+Whitmore State University
+
+---
+
+Send me the actual names, field, and a couple of specifics and I'll swap them in — the structure here holds for most cases.

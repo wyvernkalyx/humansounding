@@ -1,0 +1,78 @@
+# Sunsetting the [Tool] Classic Integration
+
+**Posted [Date] · [Category: Product Updates]**
+
+**TL;DR:** The Classic [Tool] integration will stop working on **[Sunset Date]**. If you're one of the [~X%] of workspaces still using it, switch to the new [Tool] integration before then — migration takes about [5 minutes] and preserves your existing [syncs/mappings/data].
+
+---
+
+## What's changing
+
+We're retiring the Classic [Tool] integration, which we first shipped in [Year]. It will be fully disabled on **[Sunset Date]**.
+
+The new [Tool] integration, available since [Month Year], replaces it entirely and adds:
+
+- **[Two-way sync]** instead of one-directional pushes
+- **[Field-level mapping]**, including custom fields
+- **[Real-time webhooks]** rather than [15-minute] polling
+- **[OAuth-based auth]** — no more managing API keys manually
+
+## Why we're doing this
+
+The Classic integration was built on [Tool]'s [v1 API], which [Tool] is deprecating on [Date]. Rather than patch a version that would keep degrading, we've focused our engineering time on the new integration — which is faster, more reliable, and something we can actually keep improving.
+
+Maintaining both versions also meant every new feature had to be built twice. Consolidating means fixes and improvements reach everyone sooner.
+
+## Timeline
+
+| Date | What happens |
+|---|---|
+| **[Date]** | Announcement (today). New Classic connections can no longer be created. |
+| **[Date]** | In-app banners appear for affected workspaces. Reminder emails sent to admins. |
+| **[Date]** | Classic integration enters read-only mode — existing syncs continue, but settings can't be changed. |
+| **[Sunset Date]** | Classic integration is fully disabled. Connections are removed. |
+
+## What you need to do
+
+If you see a **"Classic"** label under **[Settings → Integrations → [Tool]]**, you're affected. Here's how to migrate:
+
+1. Go to **[Settings → Integrations]** and click **Connect** next to [Tool].
+2. Authorize with your [Tool] account. (You'll need [admin permissions] in [Tool].)
+3. Review the imported field mappings — we carry over your Classic configuration automatically, but it's worth a quick check.
+4. Click **Activate**, then disconnect the Classic integration.
+
+Your historical [synced data / records / logs] stays exactly where it is. Nothing is deleted during migration.
+
+📄 **[Full migration guide →]**
+
+## FAQ
+
+**What happens if I don't migrate before [Sunset Date]?**
+Your Classic connection will stop syncing and be removed. No data in [Product] or [Tool] is deleted, but new changes won't flow between them until you connect the new integration.
+
+**Does this cost anything extra?**
+No. The new integration is included in [all plans / the same plans as before].
+
+**I use a feature in Classic that isn't in the new integration.**
+Let us know at [support@example.com] — we've mapped most workflows, but if we've missed yours, we want to hear about it before [Sunset Date].
+
+**I built something on top of the Classic [webhook payloads / API endpoints].**
+See the [changelog for payload differences]. The main change is [brief description].
+
+## Need help?
+
+Reach us at **[support@example.com]** or in-app chat. If you're on [Enterprise/Business], your [account manager] can walk your team through the migration.
+
+We know integration changes are disruptive, and we don't take them lightly. Thanks for bearing with us.
+
+— The [Product] Team
+
+---
+
+### Notes for adapting this
+
+- **Give at least 60–90 days' notice** for anything customers have built workflows around; 30 days is the bare minimum for a minor integration.
+- **Lead with the date and the action**, not the reasoning. People skim.
+- **Be specific about what's *not* affected** — most sunset anxiety is about data loss.
+- **Don't over-explain the "why."** One honest paragraph beats three defensive ones. If the real reason is low usage, it's fine to say "fewer than 1% of workspaces use it" — that's more credible than a vague appeal to focus.
+- **Match the channel to the impact**: in-app banner + email to affected admins for anything that breaks workflows; changelog entry alone for low-impact removals.

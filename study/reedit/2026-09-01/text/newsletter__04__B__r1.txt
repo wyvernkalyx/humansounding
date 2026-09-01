@@ -1,0 +1,102 @@
+# WORK IN PROGRESS
+### *A newsletter about doing good work without disappearing into it*
+
+**Issue #47 — "You Named It. Now What?"**
+
+---
+
+Hi friends,
+
+Skipping the throat-clearing this week. You know the three dimensions. You can probably name which of the six mismatches is yours without looking it up. You've read the piece about how burnout is an organizational problem wearing a personal costume, and you agreed with it, and it changed approximately nothing about your Tuesday.
+
+So let's talk about the part that comes after the diagnosis — where the advice thins out and most of us get stuck.
+
+---
+
+## The gap nobody writes about
+
+There's a strange stage that follows correct self-diagnosis. You know exactly what's wrong. You can articulate it in a sentence. And you still wake up at 5:40am with your jaw clenched, because knowing the mechanism of a trap is not the same as being out of it.
+
+I think this gap exists because insight is cheap and conditions are expensive. Naming your mismatch costs an afternoon of honest reflection. Changing it costs political capital, income risk, a difficult conversation with someone who has power over you, or the admission that the last three years were a wrong turn.
+
+So people stall in the diagnosis, polishing it. It feels like progress. It isn't.
+
+**The question for this stage isn't "what's wrong?" It's "what's the smallest change that would actually alter the conditions, and what is it costing me to keep not making it?"**
+
+---
+
+## Efficacy is the one to watch
+
+Of the three dimensions, exhaustion gets the attention because it's loud. Cynicism gets the moral panic because it makes you unpleasant at standup. But the one I'd tell an experienced reader to track is **reduced efficacy** — the collapsed belief that your work is any good or matters.
+
+Two reasons.
+
+**It recovers last.** Sleep debt clears in weeks. Detachment softens when the pressure drops. But the sense that you're bad at your job has a long half-life, and it tends to persist after the conditions that produced it have improved. Which means you can be objectively recovered and still be operating on a self-assessment written during the worst month of your year.
+
+**It's the best relapse predictor I know of.** If you go back into the same environment still believing you're barely competent, you will over-function to prove otherwise. You'll take the extra project. You'll say yes to the thing you swore you'd decline. Low efficacy generates exactly the behavior that reproduces burnout — and it feels like conscientiousness the entire time.
+
+If you're rebuilding, rebuild efficacy deliberately. Small scoped projects you can actually finish. Written evidence of things that went well, because your memory is currently an unreliable narrator. Feedback from someone whose judgment you trust and who is not you.
+
+---
+
+## Your cynicism was load-bearing
+
+Worth saying plainly: the detachment was adaptive. When you couldn't reduce the demands, you reduced how much you cared. That's not a character flaw; it's a rational response to an unregulatable stressor, and it probably kept you functional through a period that would otherwise have flattened you.
+
+The problem is that it doesn't switch off when conditions improve. It's a load-bearing wall you installed in a hurry, and now it's holding up your whole relationship to the work.
+
+Practical implication: when things get better, **re-engagement will feel unsafe before it feels good.** Caring again means exposing yourself to disappointment you're currently insulated from. A lot of people misread that discomfort as evidence the job is still wrong, and leave at exactly the moment recovery was becoming possible.
+
+I don't have a clean test for distinguishing "still bad" from "healing hurts." But I'd say: if the conditions have genuinely changed and you're still numb after a couple of months, that's data. If they've changed and you're numb after two weeks, that's just the wall coming down slowly.
+
+---
+
+## Recovery isn't rest, and rest isn't one thing
+
+You already know a vacation doesn't fix burnout. The more useful refinement is *why* — the effects of time off fade fast, often within a couple of weeks of return, unless something structural changed while you were gone. Time off is a pause on the input, not a repair of the mechanism.
+
+The more actionable frame comes out of recovery research (Sonnentag and colleagues), which distinguishes several things we lazily bundle as "rest":
+
+- **Psychological detachment** — genuinely not thinking about work. The heaviest lift and the one most people fail. Being physically away while mentally litigating a Slack thread is not detachment.
+- **Relaxation** — low-activation, low-demand states.
+- **Mastery** — challenging non-work activities that build competence. Counterintuitively energizing, and directly useful if your efficacy is shot.
+- **Control** — deciding for yourself how your own time goes. Often the actual scarce resource for people burned out on the *control* mismatch.
+
+The point: prescribe against your deficit. If your job has stripped your autonomy, a rigidly scheduled wellness regimen is more of the same disease. If your efficacy is gone, lying still won't touch it — you need mastery. Undifferentiated "rest more" is why so many people take a week off and come back unchanged.
+
+---
+
+## Job crafting, when you can't change jobs
+
+For most people the honest options aren't "fix the org" or "quit." They're the middle: incrementally renegotiating what the role is, from inside it. Wrzesniewski and Dutton's framing is still the most useful I've found, and it splits three ways:
+
+**Task crafting.** Change what you actually do — the mix, the boundaries, the sequence. Trade the thing that drains you for the thing a colleague avoids and you don't mind. Most managers will approve a swap far more readily than a reduction, because headcount math stays intact.
+
+**Relational crafting.** Change who you do it with and how. Who you sit near, whose projects you attach to, which meetings you're actually present in. If your mismatch is community, this is your primary lever, and it's the one people neglect because it doesn't feel like "real" work.
+
+**Cognitive crafting.** Change the story about what the work is for. The failure mode here is obvious — this is where "reframe it!" becomes a way to gaslight yourself into tolerating something intolerable. Use it when the work is genuinely meaningful and you've lost sight of that. Don't use it to manufacture meaning that isn't there. If your mismatch is values, cognitive crafting is not a treatment, it's a sedative.
+
+---
+
+## When it isn't burnout, it's moral injury
+
+This is the distinction I most wish had reached me earlier.
+
+If your central problem is that you're being asked to do things you believe are wrong — ship the thing you know is unsafe, deliver the message you know is false, manage someone out under a pretext — then "burnout" is the wrong word, and it's doing you active harm.
+
+Burnout vocabulary locates the injury in your capacity: you're depleted, you didn't manage stress well, you need better recovery. Moral injury locates it in the transgression: something was asked of you that violated your sense of right, and you complied, or watched. The symptoms overlap heavily. The treatments don't. Sleep does not fix guilt. Boundaries do not fix complicity.
+
+If that's the situation, the honest interventions are narrower and harder: stop doing the thing, get authority to change the thing, or leave. Everything else is management of a symptom you're going to keep regenerating.
+
+---
+
+## Auditing your "strategic stay"
+
+A lot of readers wrote in after the last issue on this, so: yes, deciding to stay in a job that's grinding you down is a legitimate strategy. Mortgages are real. Health insurance is real. The market is what it is.
+
+But a strategic stay has properties that an indefinite drift doesn't, and it's worth checking whether yours still qualifies:
+
+- **A written trigger.** Not "when things improve" — a specific, observable condition. *If the reorg lands and I still report to X. If Q2 ends without the hire.*
+- **A date.** On the calendar. In the future but not in the fog. Six months is usually about right; "sometime next year" is not a date.
+- **Preserved optionality.** Are you maintaining the relationships, the portfolio, the savings, the version of you that is employable elsewhere? A stay that consumes your ability to leave has stopped being a strategy.
+- **A witness.** Someone who knows the terms and will ask you about them. Left alone, we renegotiate with ourselves

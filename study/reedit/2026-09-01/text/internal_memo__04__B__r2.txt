@@ -1,0 +1,22 @@
+Assuming a Slack/intranet post or short email blast — I've dropped the memo header, since those placements carry sender and date automatically. Add it back if you need the formal format.
+
+---
+
+**Security Awareness Training is due [Deadline].**
+
+Complete it at [URL] → "[Course Name]." Takes ~[30–45] minutes, resumable, [80]% to pass with unlimited retakes.
+
+New this cycle: [new module], [updated content], and a scenario-based assessment replacing multiple choice.
+
+Manager completion reports go out [date]. Access restrictions apply after the deadline per [Policy #].
+
+Exceptions or accommodations: [Name], [email].
+
+---
+
+What I cut and why:
+
+- **Moved the deadline to the first line, as the headline.** In a scannable placement, the one thing that must survive a two-second glance is the date and the fact that action is required.
+- **Merged access and logistics into one line.** Platform, time, and passing score are all "how," and a returning reader processes them as a single unit.
+- **Compressed "what's new" from bullets to a sentence.** Bullets cost vertical space; three short items read fine inline.
+- **Dropped "same platform, same process as last cycle."** Implied by the absence of any note to the contrary.

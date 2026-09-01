@@ -1,0 +1,17 @@
+# Migrate off the Classic [Tool] integration by [Sunset Date]
+
+**Posted [Date]**
+
+Classic goes read-only [Date] and shuts off [Sunset Date]. To migrate: **[Settings → Integrations → [Tool]] → Connect**. Your field mappings carry over; review, activate, disconnect Classic. [Full guide →]
+
+If you don't migrate, the connection is removed and syncing stops. No data is deleted on either side.
+
+Two flags: custom [webhook/API] code built on Classic payloads will break ([diffs here]), and [Classic-only feature] has no equivalent yet — email [support@example.com] before [Date] if you rely on it.
+
+Questions: [support@example.com] or in-app chat.
+
+— The [Product] Team
+
+---
+
+Removed the "~[5 minutes]" migration time — I'd invented that. Everything else is unchanged. If you do have a real figure, it's a useful thing to include, since it lowers the barrier to acting.

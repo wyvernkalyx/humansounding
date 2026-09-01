@@ -1,0 +1,18 @@
+---
+
+**The failure wasn't [project]. It was month [six], when I had enough signal to stop and didn't.**
+
+Not because the data was ambiguous. Because I'd spent [the spring] selling this internally and couldn't work out how to walk it back without torching my own credibility. So I protected the credibility and spent [nine more months] of your work doing it.
+
+Everything after that was competent execution of a decision I should have reversed.
+
+Two things I'm carrying forward. The discovery-to-build ratio was indefensible and I set it — [two weeks] of customer conversations against [eighteen months] of engineering is a priority you communicate with your calendar. And several of you flagged it in terms I heard as hedging. That's my listening, not your phrasing, but I'd rather we get blunter than rely on me reading between lines.
+
+It was an expensive lesson, and the price was mostly paid by people who didn't make the call.
+
+---
+
+Notes:
+
+- **What I cut:** "What we came out with is real." That was the only outcome claim in the piece. Removing it left "It was just an expensive way to learn it" with nothing to point back to, so I reworked that clause to stand alone. Everything else is untouched.
+- **One thing to be aware of:** that line was the post's only upside, so the ending is now unrelieved. For a team audience that read the previous draft, this may land colder than you intend. If you want to soften it without making a results claim, something forward-looking about the next project would do it — happy to draft that if useful.

@@ -1,0 +1,37 @@
+# Webinar Invitation — Condensed
+
+**Subject:** [Provision]: the open questions the proposed regs leave you with
+
+**Preview text:** 60 min, CPE-eligible. Technical session, not an overview.
+
+---
+
+The proposed regs on [§ / Provision] leave [specific mechanic] unresolved — with a [Date] effective date. We're running a working session on how firms are taking positions in the meantime.
+
+**[Webinar Title]**
+[Day, Date] · [Time, Time Zone] · 60 min · [X] CPE ([Field of Study])
+
+- **[§ / Provision]** — two defensible readings where the regs are silent, and the exposure profile of each
+- **Transition rules** — [transaction type] straddling the effective date
+- **[Reporting requirement]** — what the [form/schedule] requires versus what the instructions imply
+- **Q&A** — submit at registration, prioritized by frequency
+
+**Panel:** [Name, credential, firm] · [Name, former agency role]
+
+[**Register →**]
+
+Materials: technical summary with citations, plus a client-ready explainer you can rebrand. CPE requires live attendance.
+
+[Your Name] · [Company] · [Direct line]
+
+*Presenters' views as of the presentation date; not advice for any specific taxpayer.*
+
+---
+
+**Cuts made**
+
+- **Lead is now the hook.** The unresolved mechanic plus the effective date opens the email — that single sentence carries the argument for attending, so it survives even if nothing below the fold gets read.
+- **Agenda trimmed from five items to four,** each to one line. Documentation and exam experience folded out; they were valuable but the least differentiated.
+- **Subject lines cut to one.** Shorter placements usually mean a single slot, and option 1 does the most work.
+- **Panel reduced to two names,** keeping the firm affiliation and the agency background — the two credentials that move registration.
+- **Disclaimer kept.** It's compressible but not droppable if your advertising review is involved.

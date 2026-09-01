@@ -1,0 +1,57 @@
+# Choosing a Password Manager, for People Who Already Know Why
+
+**Vault encryption is the part everyone evaluates and the part that differentiates least.** Every credible product does client-side encryption with a modern KDF. The real variance is in metadata handling, the fill path, and recovery cryptography — none of which fit on a comparison table. Evaluate those instead.
+
+## Metadata, not ciphertext
+
+Ask precisely what's inside the encrypted envelope and what sits beside it in plaintext.
+
+LastPass is the canonical failure: URLs stored unencrypted, so the stolen vaults were a target-selection dataset before anyone cracked a single master password. Attackers could sort for exchanges and SSO portals and prioritize.
+
+The questions with genuinely different answers across products:
+
+- Are item names, folders, and tags encrypted, or only the secret fields?
+- What does the sync protocol leak — item counts, per-item sizes, modification timestamps?
+- What's logged server-side, and for how long? Access logs are subpoenable and breachable even when the vault isn't.
+
+A product that syncs opaque blobs beats one that encrypts fields, identical primitives notwithstanding.
+
+## KDF: the migration problem, not the algorithm
+
+Argon2id over PBKDF2, obviously. Two subtler things matter more.
+
+**Parameters are set at account creation and rarely migrated.** A vendor can ship excellent new defaults and leave a decade of accounts on 5,000 iterations. Check whether upgrades are forced or merely available in a settings pane nobody opens. Silent mandatory migration is a real differentiator and a signal about engineering culture.
+
+**Mobile caps your desktop.** Argon2id's value is memory-hardness; phone memory budgets are tight and aggressive settings get clients OOM-killed. If one parameter set spans all devices, your weakest client sets the ceiling. Some vendors handle this well; some quietly cap memory low enough to erase the advantage.
+
+The alternative approach — mixing device-stored random entropy into derivation, à la 1Password's Secret Key — makes offline attack infeasible regardless of master password quality, at the cost of a harder recovery story.
+
+## The fill path is underweighted
+
+Browser extensions are privileged code in a hostile document context. Clickjacked fill prompts, cross-origin iframes, loose origin matching — the tension between frictionless filling and strict origin binding never resolves. Most buyers spend their evaluation on breach scenarios and none here, which is backwards relative to incidence.
+
+Endpoint compromise, meanwhile, is a lost cause everywhere. Memory zeroing is harm reduction, not a boundary. Don't optimize for it.
+
+## Recovery is cryptography
+
+Every recovery path is a deliberate hole in zero-knowledge. Fine — vaults with no recovery get shadow-copied into text files — but know the shape of the hole.
+
+Good pattern: vault key wrapped to a trustee's public key at designation time, time-delayed release, vetoable. Ask whether adding a trustee is *cryptographically* visible to you or just reported by a server you're trusting.
+
+Interrogate organizational escrow harder: who holds the key, and can enrollment happen silently after the fact?
+
+Enterprise SSO deserves specific attention. "Log in with Okta, vault unlocks" cannot be zero-knowledge without a separate key-holding component your org runs — Bitwarden's Key Connector or equivalent. Otherwise your IdP admin is a vault admin. Possibly an acceptable trade; make it deliberately.
+
+## Sharing and passkeys, briefly
+
+Per-item key wrapping to recipient public keys is correct, and most serious products do it. But revocation removes future access — it doesn't retract plaintext already decrypted and cached. Rotating the secret is the only real revocation, and nothing automates that for you.
+
+On passkeys: you're picking a passkey provider, so evaluate it as one. Cross-platform managers have a structural edge, because a credential locked in one vendor's keychain is exactly the portability problem passkeys were meant to solve. Check that it registers as a proper platform authenticator across your OSes, that export exists in any form, and that it degrades gracefully when a relying party insists on a hardware-backed attestation it can't provide.
+
+*Product specifics change; verify current documentation and recent audits before committing.*
+
+---
+
+I read "claim about results" as the research-findings claim in the fill path section — I cut "the findings recur across products" and let the sentence rest on the structural argument alone.
+
+Two other candidates if I guessed wrong: the LastPass sentence about what the unencrypted URLs enabled attackers to do, or "backwards relative to incidence," which implies data on attack frequency. Say the word and I'll swap the edit.

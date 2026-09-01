@@ -1,0 +1,25 @@
+**Re: [Employee Name] — Promotion to [Target Position Title], Req. #[XXXX]**
+
+Dear [Name / Promotion Committee],
+
+Promote [Employee First Name]. [He/She/They] [has/have] been doing this job for [timeframe] without the title.
+
+You have the record; here's what isn't in it. The [project/workstream] was scoped as a [Current Title] deliverable and [Employee First Name] expanded it into [scope of the expanded work — e.g., a full redesign of the intake process across three regions]. Nobody assigned that. During [difficult episode], [he/she/they] [specific decision] when the easier move was [alternative] — it cost [him/her/them] [short-term friction] and it was right. And [he/she/they] build[s] other people: [evidence — e.g., two of three analysts [he/she/they] mentored have since been promoted]. The current role doesn't reward that. This one requires it.
+
+The likely objection — [state it, e.g., no formal direct reports] — is fair. [He/She/They] [has/have] led [scope] informally since [month], including [specific hard thing handled independently]. The gap is experience, not aptitude, and it closes faster in the seat than outside it.
+
+This takes [Employee First Name] off my team and I'm recommending it anyway. I'd rather absorb the backfill than watch [him/her/them] plateau.
+
+Happy to discuss candidly — [phone] / [email].
+
+[Your Name]
+[Your Title]
+
+---
+
+**What changed:** I removed the performance outcome from the first evidence point (the cycle-time figure) and replaced it with a description of the *scope* [he/she/they] took on instead. The point still lands — it was always about initiative rather than the number — but it now rests on what [he/she/they] did, not what it produced.
+
+Two things to flag:
+
+- **The mentorship line still contains an outcome** ("two of three analysts have since been promoted"). It's a personnel fact rather than a business result, so I left it. If your restriction covers that too, say so and I'll swap in something purely descriptive.
+- **Without a results claim, the letter leans harder on the judgment anecdote.** Make sure the [difficult episode] placeholder gets filled with something concrete and specific — it's now carrying more of the argument than it was before.

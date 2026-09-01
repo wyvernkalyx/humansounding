@@ -1,0 +1,35 @@
+# You Can't Schedule Your Way Out of Overcommitment
+
+Most productivity systems fail for a structural reason, not a discipline one: they're retrieval architectures solving a problem that stopped binding a decade ago.
+
+GTD, PARA, the Zettelkasten revival — all built on the premise that your mind is a bad storage device and a trusted external index converts anxiety into action. Correct, for the era. Information was scarce relative to your ability to act on it, and the expensive step was finding the right thing at the right moment.
+
+Search is good now. Capture is frictionless. Nobody's real problem is that the note is lost.
+
+The binding constraint is **selection under structural overcommitment**, and no retrieval system touches it. Better retrieval makes it worse: you can now resurface and reactivate every commitment you've ever made, efficiently feeding an already-saturated queue.
+
+The math is unkind. If arrival rate exceeds service rate, no scheduling discipline stabilizes the system. You can reorder the queue brilliantly; it still grows without bound. Every method in the canon is a scheduling discipline. **λ > μ has two solutions — fewer arrivals or more capacity — and neither is a methodology.**
+
+Which means the honest diagnosis for a lot of collapsed systems isn't poor implementation. The system worked correctly and correctly reported that you've taken on more than you can do. Then you shot the messenger and migrated to Things.
+
+Three mechanisms make the collapse look like a personal failing instead of a design one.
+
+**The review is an emotional task wearing an information task's clothes.** It's the load-bearing element in most methodologies and the first thing everyone drops — usually attributed to weak discipline. I don't buy it; people sustain harder rituals for years. The difference is that the review's actual function is recurring confrontation with the gap between stated and revealed priorities. The aversion scales with how misaligned you are. So it runs smoothly when you're on track and becomes unbearable exactly when you need it. Any component whose difficulty is proportional to your dysfunction is decorative.
+
+**Systems represent what's easy to represent.** Discrete, nameable, checkable units — which overweights work with clean boundaries and underweights judgment, coordination, the twenty-minute conversation that never shows up anywhere. Over time you drift toward the legible, because that's what generates feedback. Goodhart's law running inside your own head. This is how organized people end up producing medium-value output with excellent hygiene, and it's invisible from inside: the system reports full compliance. There's no field for *the important thing was illegible so I did tickets instead.*
+
+**There are no restart semantics.** Every methodology specifies steady-state operation; almost none specify recovery from the eleven-day gap that's guaranteed by illness, travel, or ordinary entropy. You return to something stale and mildly accusatory, trust in the index breaks, and the premise collapses — the whole thing was offloaded vigilance to something you believed. Migrating to a new app is usually just the only available reset ritual. Bankruptcy with extra steps. Cheaper to declare it directly.
+
+Underneath all three: a mature system is an identity artifact. Deleting the abandoned project isn't deleting a row, it's conceding you're not the person who does that. Grief-adjacent, at low intensity, spread across four hundred items. Any subtraction mechanism that ignores this loses to the one that doesn't — neglect.
+
+So the constraints I'd hold any system to now: it reduces arrivals rather than ordering them (a WIP cap with forced eviction, or it isn't a cap); it's operable at 60% capacity; it has a pre-authorized bankruptcy state; and it has a slot, however crude, for illegible work.
+
+The question worth answering before you rebuild anything: were your last three collapses **capacity failures or selection failures?** They're indistinguishable from the inside and have opposite remedies. Capacity failures want better infrastructure. Selection failures want fewer commitments and one uncomfortable conversation.
+
+Infrastructure is more fun. That's the whole problem.
+
+---
+
+**What I changed:** the quantified outcome — "the twenty-minute conversation that prevented three weeks of rework" — is now "the twenty-minute conversation that never shows up anywhere." Same function in the list, no asserted result. Everything else is verbatim; still ~615 words.
+
+**One flag, in case I picked the wrong line:** there's a second candidate I left alone — "this is how organized people end up producing medium-value output with excellent hygiene." It's a claim about what the system produces, so if that's the one your side is worried about, say so and I'll cut it (it comes out cleanly as "*...that's what generates feedback. Goodhart's law running inside your own head. And it's invisible from inside: the system reports full compliance.*"). Happy to pull both if you'd rather be safe.

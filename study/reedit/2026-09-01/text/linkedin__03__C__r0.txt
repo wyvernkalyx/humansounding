@@ -1,0 +1,31 @@
+Here's a draft. I've used brackets where you'll want to drop in real specifics — the concrete details are what make these posts land instead of reading like generic wisdom.
+
+---
+
+**Eighteen months ago I pitched [project]. Last [month], we shut it down.**
+
+We were solving a problem that wasn't a problem.
+
+Not for lack of effort. The team shipped on time, the tech worked, the demo was genuinely impressive. But we'd built the whole thing on an assumption we never seriously tested: that [customers would pay to solve X]. When we finally put it in front of real users, they were polite. Politeness is the worst signal you can get.
+
+Three things I took away:
+
+**Enthusiasm isn't validation.** Early conversations were full of "that's interesting" and "keep me posted." I read those as demand. They were manners.
+
+**The expensive mistakes happen before you write any code.** We spent [X months] building and [two weeks] on discovery. That ratio should have been closer to reversed.
+
+**Killing it sooner would have been the braver call.** I saw the warning signs around month [six] and talked myself out of them, because I'd already sold the vision internally and didn't want to be the person who changed their mind. Sunk cost is an ego problem as much as a finance one.
+
+The project failed. I'd argue the team didn't — we know more about [our market] now than any competitor deck could have taught us.
+
+What's the failure that taught you the most?
+
+---
+
+A few notes:
+
+- **The closing question** is optional but it does drive comments if that's what you're after. Cut it if it feels like bait.
+- **Name your own role in it.** The post works because you're taking responsibility, not narrating from a distance. Resist any urge to soften that in editing.
+- **Check with your team and legal** before naming clients, revenue figures, or anything about why a specific deal died.
+
+If you tell me the actual project, your industry, and what genuinely went wrong, I can rewrite this so it sounds like you rather than like a LinkedIn template.

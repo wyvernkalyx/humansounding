@@ -1,0 +1,20 @@
+# Cover Letter — Junior Software Developer
+*Short version, for a reader who knows you*
+
+Hi [Name],
+
+I'm applying for the Junior Software Developer role on [team] — I'd like the job, and I think I'm ready for it now in a way I wasn't when we last talked.
+
+The change since [project]: [one specific thing — "I rebuilt the reporting pipeline in Go"]. That was the gap, and it's closed.
+
+I already know [the codebase / the deploy process / how the team works], so ramp-up should be short. Happy to talk through [scope / timing / where you need coverage] whenever it's useful.
+
+Thanks, [Name].
+
+[Your Name]
+
+---
+
+**What changed:** only the outcome metric came out of the example placeholder. The sentence now names the work without quantifying its effect. Everything else is untouched.
+
+**One thing to watch:** that metric was carrying most of the weight in the middle paragraph. Without it, "that was the gap, and it's closed" is doing the persuading on its own. If you can't cite results, the next strongest substitute is scope or duration rather than impact — "I've been maintaining it in production since [month]," or "I owned that service end to end." Both describe the work without claiming a measured outcome. Say the word if you want a version built that way.

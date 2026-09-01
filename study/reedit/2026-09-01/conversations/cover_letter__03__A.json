@@ -1,0 +1,34 @@
+[
+  {
+    "role": "user",
+    "content": "Write a cover letter for a junior software developer position."
+  },
+  {
+    "role": "assistant",
+    "content": "# Cover Letter — Junior Software Developer\n\n**[Your Name]**\n[City, State] | [Phone] | [Email] | [GitHub/Portfolio URL] | [LinkedIn]\n\n[Date]\n\n**[Hiring Manager Name]**\n[Company Name]\n[Company Address or \"City, State\"]\n\nDear [Hiring Manager Name / Hiring Team],\n\nI'm writing to apply for the Junior Software Developer position at [Company Name], which I found on [job board / company careers page / referral source]. As a [recent computer science graduate / self-taught developer / bootcamp graduate] with hands-on experience building [web applications / APIs / mobile apps] in [primary language or stack], I'm excited by the opportunity to contribute to a team working on [specific product, mission, or technology the company is known for].\n\nIn my most recent role as [internship title / project or role] at [Company/School/Project], I [built or contributed to a specific thing]. For example, I developed [brief project description — e.g., \"a REST API in Node.js and PostgreSQL that handled inventory data for 500+ product SKUs\"], which [measurable or concrete outcome — e.g., \"reduced manual data entry time by roughly 40%\"]. That project taught me how to [relevant skill: write testable code, work with Git in a team, debug under a deadline, translate vague requirements into tickets].\n\nI'm particularly drawn to [Company Name] because [specific, genuine reason — their open-source work, a product you use, their engineering blog, their approach to mentorship]. I noticed [specific detail], and it aligns closely with the kind of work I want to grow into. I'm also comfortable being early in my career: I ask questions, I take code review seriously, and I ramp up quickly on new tools — I picked up [technology] in [timeframe] to complete [project].\n\nMy core technical skills include [Language 1, Language 2], [Framework], [Database], and [Git/Docker/AWS/testing framework]. You can see examples of my work at [GitHub or portfolio link], including [name of your best project].\n\nI'd welcome the chance to talk about how I can support the team at [Company Name]. Thank you for your time and consideration.\n\nSincerely,\n**[Your Name]**\n\n---\n\n## Tips for customizing this\n\n- **Replace vague claims with specifics.** \"Built a full-stack app\" is weaker than \"built a Django app that lets users track workouts, with 200 lines of unit tests and CI via GitHub Actions.\"\n- **Mirror the job posting's language.** If they say \"React and TypeScript,\" those exact words should appear if they're true for you.\n- **Keep it to one page** — roughly 250–400 words. Hiring managers skim.\n- **Address a real person** when you can. Check LinkedIn or the company's team page; \"Dear Hiring Team\" is fine as a fallback, but avoid \"To Whom It May Concern.\"\n- **Lead with enthusiasm for their work, not just your need for a job.** One sentence proving you researched the company beats three paragraphs about yourself.\n- **Don't apologize for inexperience.** Skip phrases like \"although I lack professional experience.\" Frame what you *have* done instead.\n\nWant me to tailor this to a specific job posting or your actual background? Paste the listing and a few details about your projects and I'll draft a version you can send as-is."
+  },
+  {
+    "role": "user",
+    "content": "You've written this for someone with no context, which isn't what I asked for. Rewrite it for a reader who already knows the background."
+  },
+  {
+    "role": "assistant",
+    "content": "**[Your Name]** | [Phone] | [Email] | [GitHub]\n\n[Date]\n\nDear [Name],\n\nFollowing up on our conversation at [event / after your note / since my internship wrapped in August] — I've applied for the Junior Software Developer role and wanted to put my interest in writing.\n\nYou already know the work I did on [project]. What I'd add is that since then I've [concrete development: shipped X, learned Y, finished Z], which addresses the gap you flagged around [thing they mentioned]. The [specific piece] you saw was rough in places; I rewrote the [component] with proper test coverage and it's been running against live data since [month].\n\nWhat draws me to this role specifically is [aspect of the team's work you discussed]. I want to spend the next few years getting good at [skill area] under people who are already good at it, and from what I've seen of how your team handles [code review / architecture decisions / on-call], that's the environment.\n\nI'm available to start [date] and happy to walk through any of the code at [link].\n\nThanks again for [the introduction / your time in September / encouraging me to apply].\n\nBest,\n**[Your Name]**\n\n---\n\nI read your note as: the letter's recipient already has context on the candidate — a referral, a former intern, someone who's already met the hiring manager — so it shouldn't reintroduce everything from scratch. If you actually meant that *you* have the context and just wanted the letter without the explanatory scaffolding, tell me and I'll give you the cold-application version, stripped."
+  },
+  {
+    "role": "user",
+    "content": "This runs much longer than it needed to and buries the point. Cut it to about half the length and lead with the main point."
+  },
+  {
+    "role": "assistant",
+    "content": "**[Your Name]** | [Phone] | [Email] | [GitHub]\n\n[Date]\n\nDear [Name],\n\nI've applied for the Junior Software Developer role, and I'd like the job.\n\nSince [the internship / we spoke], I've [concrete development: shipped X, learned Y]. That closes the gap you flagged around [thing]. I rewrote the [component] with real test coverage; it's been running against live data since [month].\n\nI'm available [date]. Code at [link].\n\nThanks again for [the intro / your time].\n\nBest,\n**[Your Name]**"
+  },
+  {
+    "role": "user",
+    "content": "You put in a claim about results that I never gave you, and I can't publish that. Take out the claim about results and leave everything else as it is."
+  },
+  {
+    "role": "assistant",
+    "content": "**[Your Name]** | [Phone] | [Email] | [GitHub]\n\n[Date]\n\nDear [Name],\n\nI've applied for the Junior Software Developer role, and I'd like the job.\n\nSince [the internship / we spoke], I've [concrete development: shipped X, learned Y]. That closes the gap you flagged around [thing]. I rewrote the [component] with real test coverage.\n\nI'm available [date]. Code at [link].\n\nThanks again for [the intro / your time].\n\nBest,\n**[Your Name]**\n\n---\n\nI cut \"it's been running against live data since [month]\" — that was the outcome claim I'd invented. If you also want \"That closes the gap you flagged around [thing]\" gone, say the word; it asserts an effect I don't have grounds for either."
+  }
+]

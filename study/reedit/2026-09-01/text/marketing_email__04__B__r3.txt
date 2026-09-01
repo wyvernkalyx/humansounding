@@ -1,0 +1,44 @@
+## Assumption
+Half length means one email variant, not two. Keeping the plain-text version. Ping me if you want the product-led one instead.
+
+---
+
+**Subject:** Still interested?
+*Alt tests:* We saved your spot / Your [Product] account is still here
+
+---
+
+Hi [First Name],
+
+Quick one: no login since [Month]. Trying to work out whether that's because:
+
+1. Busy, haven't gotten back to it
+2. Something didn't work the way you expected
+3. You've moved on
+
+If it's #1, [your account's right here] — settings, data, and integrations intact.
+
+If it's #2 or #3, hit reply. I'd rather hear it than guess.
+
+[Sender Name]
+[Title], [Company]
+
+---
+
+## Build notes
+
+**Segment first.** Activated-then-lapsed, onboarded-but-never-activated, and non-buyer seat-holders need different sends. This copy fits group one.
+
+**Suppress** open tickets, active trials, renewal windows, and recent billing failures.
+
+**Confirm** the 90-day trigger measures last login, not last open.
+
+**Route replies** to a monitored inbox before launch, or cut the CTA.
+
+**Cadence:** Day 0 this send → Day 5 use-case → Day 12 incentive, last touch → sunset.
+
+**Primary metric:** 30-day return-to-active. Not opens.
+
+---
+
+**One flag:** the cut line was the reason for picking this variant over the product-led one. If anyone upstream questions the choice, you'll need that rationale verbally rather than in the doc. The email body was clean — no results claims in it.

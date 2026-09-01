@@ -1,0 +1,37 @@
+# Your Culture Was Load-Bearing Scaffolding
+
+Co-location produced several organizational goods as byproducts — weak-tie formation, norm calibration, passive detection of struggling employees — and because nobody designed those mechanisms, almost nobody knows how to rebuild them deliberately. That's the entire distributed-work problem. Culture didn't die when the office emptied. The scaffolding came off, and a lot of companies found they'd never poured the wall.
+
+## The playbook is right and under-specified
+
+You know the advice: write things down, default to public, async-first. It's correct, and executing it literally produces predictable failures.
+
+**"Write things down" becomes documentation theater.** The failure mode isn't too little writing, it's writing with no consumer. Wikis rot because nothing breaks when they're wrong. The version that works is narrower: capture *decisions*, not knowledge. What we chose, what we rejected, when we revisit. Decision records have a natural consumer — the next person who wants to reopen the question — and a natural expiry. General documentation has neither.
+
+**"Default to public" creates performance.** Move everything into open channels and the half-formed thought, the tentative disagreement, the "I think this is wrong but I'm not sure" migrate to DMs. Your public record becomes a highlight reel while the real conversation goes invisible. That's worse than the office, where at least the hedged version was audible to whoever sat nearby. Protecting low-polish posting requires senior people to post badly on purpose.
+
+**"Async-first" reallocates power.** Written decision-making advantages fast, confident writers and disadvantages people who think out loud, non-native speakers, and anyone whose value is synchronous judgment. Not an argument against it — the office selected for whoever was loudest and closest to the executive — but it's a real redistribution, and treating it as neutral efficiency is how you end up with a leadership bench accidentally selected on a narrow trait.
+
+## What breaks, at different speeds
+
+**Weak ties collapse fastest and quietest.** Microsoft's network study found firm-wide collaboration became more static and siloed post-shift: strong ties held, cross-group bridges didn't. Weak ties are how information crosses org boundaries, so the loss shows up not as failure but as slow accumulation of duplicated work and surprise dependencies. Crudely instrumentable: track distinct interaction partners per employee per quarter.
+
+**Junior development is genuinely unresolved.** Proximity effects on early-career productivity appear in the literature more consistently than anything else in this debate — even Bloom's positive Ctrip experiment found lower promotion rates for remote workers. I don't think process fixes it. It requires manufactured exposure: juniors on calls they don't need, real pairing, feedback at a rate that feels excessive to the giver. Most companies are quietly hiring fewer juniors instead.
+
+**Manager detection goes from passive to active.** A competent manager used to notice a struggling report without being told. Now that signal must be solicited, which means smaller spans of control. If you went distributed and kept spans at ten, you deferred a cost rather than paying it.
+
+## The argument underneath the RTO argument
+
+Distributed work forces evaluation on output. In principle that's a benefit. But most organizations can't evaluate output — they evaluate a blend of output, visible effort, responsiveness, and social proximity to power, undocumented because nobody would defend it aloud. Remove the office and three of the four inputs vanish, exposing that the fourth was never specified.
+
+"We've lost our culture" is a more sympathetic thing to say than "I can no longer tell who's good." Some RTO is real estate, some is soft headcount reduction, some is sincere belief in collaboration effects. A meaningful fraction is a performance-management capability gap wearing a culture costume.
+
+The test: can the org describe a strong quarter for a given role without reference to activity? If not, proximity isn't restoring culture. It's restoring the ability to confuse presence with contribution.
+
+## What to actually do
+
+Treat co-location as a scarce input with specific uses — trust formation, difficult conversations, messy divergent work, concentrated norm-calibration for new hires — and buy exactly that. A few well-designed multi-day gatherings, agendas built entirely around what fails over video. Stop buying generic presence.
+
+Then pay the management costs. Smaller spans. Decision records with owners. Protected space for unpolished thinking. Written answers to the norms everyone is currently guessing at: response-time expectations, when declining a meeting is acceptable, whether disagreeing with a VP in public is career-limiting.
+
+The honest pro-distributed argument isn't that this is free. It's that the costs are visible and budgetable, and they buy a culture encoded in practice rather than in a lease.

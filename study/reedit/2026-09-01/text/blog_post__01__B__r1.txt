@@ -1,0 +1,68 @@
+# Choosing a Password Manager, for People Who Already Know Why
+
+You don't need the pitch. You know what zero-knowledge means, you know why reuse is fatal, you probably have opinions about Argon2id parameters. So let's skip the on-ramp and talk about the parts of this decision that are actually contested.
+
+The short version of my thesis: **vault encryption is the part everyone evaluates and the part that differentiates least.** Every credible product does client-side encryption with a modern KDF. The interesting variance is in metadata handling, client attack surface, recovery cryptography, and organizational failure modes — the stuff that doesn't fit on a comparison table.
+
+## Get the threat model straight before comparing features
+
+There are three scenarios worth designing around, and they pull in different directions.
+
+**1. Vendor breach, encrypted blobs exfiltrated.** This is the LastPass scenario and the one the crypto actually addresses. Your defense is master password entropy multiplied by KDF cost. It's also the scenario where *metadata* leakage bites — more on that below.
+
+**2. Endpoint compromise.** Your defenses here are thin, everywhere, in every product. An attacker with code execution in your user context can key-log the master password, scrape the unlocked vault from process memory, or just wait and hijack the session. Vendors will tell you about memory zeroing and secure enclaves; treat this as harm reduction, not a boundary. If you're evaluating products primarily on their resistance to a compromised endpoint, you're optimizing a lost cause.
+
+**3. Client-side credential exfiltration via the fill path.** Underweighted relative to how exploitable it is. Browser extensions are privileged code running in a hostile document context. There's a recurring literature of autofill attacks — clickjacked fill prompts, hidden or cross-origin iframes, overly permissive origin matching — and the findings tend to recur across products because the underlying tension (frictionless filling vs. strict origin binding) never goes away.
+
+Most buyers spend their evaluation effort on scenario 1 and almost none on scenario 3, which is backwards relative to actual incidence.
+
+## Metadata is where the real differences hide
+
+Ask precisely what is inside the encrypted envelope and what sits beside it in plaintext.
+
+LastPass is the cautionary example: URLs were stored unencrypted, so the stolen vaults were a target-selection dataset even before anyone cracked a master password. Attackers could sort for crypto exchanges and enterprise SSO portals and prioritize accordingly.
+
+Related questions with real answers that differ by product:
+
+- Are item names, folder structure, and tags encrypted, or just the secret fields?
+- Are attachments encrypted with the same key hierarchy, or stored separately?
+- What does the sync protocol leak — item counts, modification timestamps, per-item sizes? Traffic analysis on a sync stream tells you plenty about a target's routine.
+- What does the vendor log server-side, and for how long? IP, device fingerprint, and access-time logs are subpoenable and breachable even when the vault isn't.
+
+A product that encrypts the whole record and syncs opaque blobs is meaningfully better than one that encrypts fields, even if both use identical primitives.
+
+## KDF parameters: the migration problem, not the algorithm
+
+Argon2id over PBKDF2, obviously. But the algorithm choice is the easy part, and two subtler things matter more.
+
+**Parameters are usually set at account creation and rarely migrated.** A vendor can announce excellent new defaults and leave a decade of existing accounts on 5,000 PBKDF2 iterations. Check whether the product *forces* a re-derivation on existing accounts or merely offers it in a settings pane nobody opens. Silent, mandatory upgrades are a genuine differentiator and a signal about engineering culture generally.
+
+**Mobile constrains Argon2 memory.** Argon2id's value comes from memory-hardness, and memory budgets on phones are tight — some clients get killed by the OS at aggressive settings. If the product supports a single parameter set across all your devices, your desktop security is capped by your weakest mobile client. Ask how they handle this. Some products handle it well; some quietly cap memory low enough to erode the advantage over PBKDF2.
+
+Then there's the approach of adding entropy outside the master password entirely — 1Password's Secret Key being the canonical implementation. A 128-bit random value stored on-device and mixed into key derivation makes offline attack on a stolen vault infeasible regardless of master password quality. It's an elegant answer to the human-entropy problem and it changes your recovery story substantially: lose the Secret Key and the emergency kit, and no amount of remembering your password helps.
+
+## Recovery is cryptography, so evaluate it as cryptography
+
+Every recovery mechanism is a deliberate hole in the zero-knowledge story. That's not a criticism — vaults with no recovery path get abandoned or shadow-copied into a text file — but you should understand the shape of the hole.
+
+The good pattern: your vault key is wrapped to a trustee's public key at the time you designate them, with a time-delayed release you can veto. The vendor holds ciphertext they can't read, and the trustee's private key is required. Ask whether the wrapping happens at designation time and whether adding a trustee is *cryptographically* visible to you, or merely reported by a server you're trusting to tell the truth.
+
+The pattern to interrogate harder: organizational recovery via an escrowed key. Someone in your org can decrypt your vault. Verify whether that key is held by the vendor or by your organization, and whether escrow enrollment can happen silently after the fact.
+
+The enterprise SSO case deserves specific attention. "Log in with Okta and your vault unlocks" cannot be zero-knowledge unless there's a separate key-holding component — Bitwarden's Key Connector pattern, or an equivalent — that your org runs. If the IdP alone gates decryption, your IdP admin is now a vault admin. That may be an acceptable trade for a company; it should be a deliberate one.
+
+## Sharing: revocation is almost never cryptographic
+
+Per-item key wrapping to recipient public keys is the correct design, and most serious products do something like it. But understand what revocation actually means: you're removing future access, not retracting the plaintext they already decrypted and possibly cached. Rotating the underlying secret is the only real revocation, and no password manager does that for you.
+
+For team deployment, the questions that predict pain are boring ones: SCIM provisioning quality, whether audit logs capture item-level access or just authentication events, whether shared collections support per-item permissions or only folder-level grants, and whether there's a break-glass path that doesn't route through one person's phone.
+
+## Passkeys: the portability question is unresolved
+
+If you're picking a manager now, you're picking a passkey provider, so evaluate it as one.
+
+Cross-platform managers have a structural advantage over ecosystem-bound ones here, for the obvious reason: a credential that lives in one vendor's keychain is a credential you can't take to a different phone. That's the whole problem passkeys were supposed to make less bad.
+
+Things to check:
+
+- Does it register as a proper platform

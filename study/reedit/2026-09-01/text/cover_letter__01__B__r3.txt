@@ -1,0 +1,30 @@
+# Short Version — Operations Manager (results claim removed)
+
+---
+
+Subject: Operations Manager — [site/region]
+
+Dear [Name],
+
+I'd like to be considered for the Operations Manager role at [site/region]. You know my numbers, so here's my read on the job instead.
+
+[Site/region]'s dock congestion and thin supervisor bench are the same problem: the schedule can't flex because too few people can run a shift alone.
+
+My first 90 days: work all shifts before changing anything, then tighten appointment discipline — cheapest lever, and it makes every other metric readable. By day 90, bring you a costed plan for [initiative] with a real payback, not a headcount request.
+
+One thing I'd need from you: whether [known constraint] is fixed or negotiable. That changes the sequencing.
+
+Ready for a P&L this size, and I'd rather grow into it here than learn a new network from scratch.
+
+Best,
+[Your Name]
+
+---
+
+**What I removed:** "Fix the bench and OTIF follows." — the one sentence promising a specific performance outcome. Everything else is unchanged.
+
+**Two phrases to check, in case your constraint is broader than I read it:**
+- "cheapest lever, and it makes every other metric readable" — implies an outcome, though it's framed as reasoning rather than a promise.
+- "with a real payback" — refers to a future plan's projected return, not a result you've delivered.
+
+If either needs to go, say so and I'll cut them without touching anything else.

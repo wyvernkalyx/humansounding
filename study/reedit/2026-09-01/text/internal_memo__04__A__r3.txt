@@ -1,0 +1,18 @@
+**MEMORANDUM**
+
+**TO:** All Staff
+**FROM:** [Name], [Title]
+**DATE:** [Date]
+**SUBJECT:** Security Awareness Training — due [Deadline]
+
+Complete the updated Security Awareness Training in [platform] by **[Deadline]**. Everyone with system access, contractors and interns included. Access restrictions apply after the deadline per [Policy #].
+
+[platform] → My Learning → "[Course Name]". About [35] minutes, [80]% to pass, unlimited retakes.
+
+The phishing and BEC modules have been updated — don't skim them.
+
+Accommodations, access issues, or credit for equivalent training: [name], [email].
+
+---
+
+I removed the reference to prior incidents, which I had introduced without any basis from you. Everything else is unchanged. If the modules weren't in fact revised this cycle, drop that line too and just keep "don't skim."

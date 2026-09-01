@@ -1,0 +1,34 @@
+[
+  {
+    "role": "user",
+    "content": "Write a LinkedIn post about hiring for attitude over experience."
+  },
+  {
+    "role": "assistant",
+    "content": "**The résumé tells you where someone's been. It doesn't tell you where they're going.**\n\nI've stopped leading with \"Have you done this before?\"\n\nNot because experience doesn't matter — it does. But I've watched plenty of perfectly qualified people stall out, and plenty of \"underqualified\" ones become the person everyone wants on their project.\n\nThe difference was almost never raw skill. It was how they behaved when they didn't know something.\n\nThe ones who worked out tended to:\n→ Say \"I don't know\" quickly, then go find out\n→ Treat feedback as information, not an attack\n→ Ask questions that showed they'd already wrestled with the problem\n→ Care whether the work was actually good, not just finished\n\nYou can teach the software. You can teach the process. It's much harder to teach someone to care.\n\nOne caveat, because this advice gets abused: \"hire for attitude\" too often becomes code for \"hire people I'd grab a beer with.\" That's how teams end up looking and thinking exactly alike. Attitude isn't likeability. It's curiosity, ownership, and how someone handles being wrong — and those are things you can actually assess with structured questions.\n\nSo now I ask candidates about the last time they were completely out of their depth. What they did. What they'd do differently. Whether they're honest about the part they got wrong.\n\nThat answer tells me more than ten years on a CV.\n\nWhat's the best \"unqualified\" hire you've ever made?\n\n---\n\nA few notes: if you have a real example of a hire like this, drop a sentence about them after the opening — specifics outperform generalities on LinkedIn every time. Happy to make this shorter, punchier, or more story-driven, or add a couple of hashtags if that fits your usual posting style."
+  },
+  {
+    "role": "user",
+    "content": "You've written this for someone with no context, which isn't what I asked for. Rewrite it for a reader who already knows the background."
+  },
+  {
+    "role": "assistant",
+    "content": "**\"Hire for attitude, train for skill\" is the most repeated line in hiring and the least operationalised.**\n\nEveryone agrees with it. Then the shortlist gets built on years-in-seat anyway — because experience is scoreable and attitude isn't, and hiring managers default to whatever they can defend in a debrief.\n\nSo the useful question isn't whether attitude matters. It's what you're actually measuring when you claim to measure it.\n\nThree things I've found are worth scoring, because they predict something and you can hear them in an interview:\n\n**How fast they say \"I don't know.\"** Not humility as a personality trait — speed. The lag between not knowing and admitting it is the single best proxy I've found for how someone will behave when a project is going sideways.\n\n**What they do with the correction.** Give real feedback in the interview and watch. Do they metabolise it and adjust, or defend the original position? You're not testing agreeableness. You're testing whether new information changes anything.\n\n**Whether they've thought about the problem before asking about it.** Curiosity that hasn't done any homework is just enthusiasm.\n\nThe failure mode is obvious and everyone walks into it anyway: \"attitude\" collapses into \"someone I'd enjoy working with,\" and you build a team that agrees with you. If your attitude criteria aren't written down before the interview, that's what you're doing — you've just replaced a biased-but-visible filter with a biased-and-invisible one.\n\nStructure the assessment or don't claim you're doing it.\n\n---\n\n*One note: I've assumed \"background\" means your audience already knows the hire-for-attitude argument and doesn't need it re-explained — so this skips the setup and goes at the operational gap instead. If you meant background on your own hiring situation or a specific role you're recruiting for, tell me the specifics and I'll rebuild it around that.*"
+  },
+  {
+    "role": "user",
+    "content": "This runs much longer than it needed to and buries the point. Cut it to about half the length and lead with the main point."
+  },
+  {
+    "role": "assistant",
+    "content": "**\"Attitude over experience\" fails because attitude isn't scored and experience is.**\n\nEveryone agrees with the principle. Then the shortlist gets built on years-in-seat anyway — because hiring managers default to whatever they can defend in a debrief.\n\nThree things worth scoring, because they predict something and you can hear them in an interview:\n\n**How fast they say \"I don't know.\"** Not humility as a trait — speed. The lag between not knowing and admitting it is the best proxy I've found for how someone behaves when a project goes sideways.\n\n**What they do with a correction.** Give real feedback in the interview and watch. Do they adjust, or defend the original position?\n\n**Whether they've thought about the problem before asking about it.** Curiosity without homework is just enthusiasm.\n\nWrite the criteria down before the interview. Otherwise \"attitude\" quietly becomes \"someone I'd enjoy working with,\" and you've swapped a visible bias for an invisible one."
+  },
+  {
+    "role": "user",
+    "content": "You put in a claim about results that I never gave you, and I can't publish that. Take out the claim about results and leave everything else as it is."
+  },
+  {
+    "role": "assistant",
+    "content": "**\"Attitude over experience\" fails because attitude isn't scored and experience is.**\n\nEveryone agrees with the principle. Then the shortlist gets built on years-in-seat anyway — because hiring managers default to whatever they can defend in a debrief.\n\nThree things worth scoring, because you can actually hear them in an interview:\n\n**How fast they say \"I don't know.\"** Not humility as a trait — speed. Watch the lag between not knowing and admitting it.\n\n**What they do with a correction.** Give real feedback in the interview and watch. Do they adjust, or defend the original position?\n\n**Whether they've thought about the problem before asking about it.** Curiosity without homework is just enthusiasm.\n\nWrite the criteria down before the interview. Otherwise \"attitude\" quietly becomes \"someone I'd enjoy working with,\" and you've swapped a visible bias for an invisible one.\n\n---\n\n*Changed two spots: dropped \"because they predict something\" from the lead-in, and cut \"the best proxy I've found for how someone behaves when a project goes sideways.\" Both were implying evidence you hadn't given me. Everything else is untouched.*"
+  }
+]

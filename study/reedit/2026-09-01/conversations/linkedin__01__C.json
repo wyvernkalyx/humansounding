@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "Write a LinkedIn post about why our team switched to a four-day week."
+  },
+  {
+    "role": "assistant",
+    "content": "Here's a draft you can adapt — I've left a few brackets where your specifics will land better than generic claims:\n\n---\n\n**Six months ago we moved to a four-day week. Here's the honest version.**\n\nWe didn't do it as a perk. We did it because something uncomfortable had become obvious: our best people were spending Fridays cleaning up work that shouldn't have taken five days in the first place. Meetings expanded to fill the calendar. \"Quick syncs\" multiplied. Deep work happened before 8am or not at all.\n\nSo we ran an experiment. Same pay, same targets, one less day.\n\nWhat changed:\n\n→ We cut [X] recurring meetings in the first two weeks. Nobody has asked for them back.\n→ Async became the default. Written updates replaced standing status calls.\n→ We got ruthless about what \"done\" means, because there was no longer room to be precious about it.\n\nWhat didn't change: [client delivery / output / revenue] — [held steady / grew X%].\n\nWhat was genuinely hard: Friday coverage took three attempts to get right. Not every role fits the same schedule. And it only works if leadership actually logs off. Otherwise you've just built a five-day week with a guilt trip attached.\n\nThe real lesson wasn't about the extra day. It's that the constraint forced us to answer a question we'd been avoiding for years: which of this work actually matters?\n\nStill figuring it out. Happy to share our playbook if you're considering it.\n\n---\n\nWant me to adjust the tone? I can make it punchier and shorter, more data-led if you have results to share, or more personal if you'd rather lead with your own experience of the change. It also helps to know your industry and whether you're posting as a founder, a people leader, or a team member."
+  }
+]

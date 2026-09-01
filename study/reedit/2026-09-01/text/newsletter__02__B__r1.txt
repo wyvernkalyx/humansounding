@@ -1,0 +1,87 @@
+# COMPOUND
+*A newsletter for people still figuring it out*
+
+**Issue #52 — Money in Your Twenties, Advanced Edition: What Actually Moves the Needle Once the Basics Are Handled**
+
+---
+
+Hi friends,
+
+Issue #47 was the ladder: starter cash, employer match, high-interest debt, real emergency fund, invest, everything else. A lot of you wrote back with some version of *"I did all that. Now what?"*
+
+So this one is for you — the reader who's already automating, already in index funds, already knows what a Roth is. The stuff below is less about discipline and more about **allocation of attention**. Because past a certain point, most of what personal finance content sells you is optimization theater: fun to think about, worth about eleven dollars a year.
+
+Here's where the actual leverage is.
+
+---
+
+## The Uncomfortable Hierarchy
+
+Ranked by how much each will plausibly change your net worth at 45, for a typical high-savings twentysomething:
+
+1. **Career trajectory and savings rate.** Not close. Everything else is a rounding error.
+2. **Not blowing yourself up.** Concentration, leverage, uninsured catastrophe, a divorce with no conversation beforehand.
+3. **Tax structure.** Which accounts, in what order, holding what.
+4. **Asset allocation.** Meaningful, but the honest range of defensible answers for a 27-year-old is narrow.
+5. **Fund selection within that allocation.** Basically noise below ~10bps.
+
+Most people spend their attention in exactly reverse order. Two hours comparing VTI and VOO, zero hours on whether they should be interviewing.
+
+The rest of this issue is mostly items 2 and 3, because item 1 is a career newsletter and items 4 and 5 are solved.
+
+---
+
+## Fill the Buckets in the Right Order
+
+Assuming you're past the match and the high-interest debt, the tax-advantaged ordering that holds up for most people:
+
+**HSA, if you're eligible for one.** It's the only triple-tax-advantaged account that exists — deductible in, tax-free growth, tax-free out for medical. The move is to treat it as a stealth retirement account: invest it rather than spending it, pay current medical costs out of pocket, and keep the receipts. There's no deadline on reimbursement, so you're effectively holding a tax-free option you can exercise decades later. (Two caveats: it requires a high-deductible plan, which isn't right for everyone, and a couple of states — California and New Jersey — don't conform, so it's taxed at the state level there.)
+
+**401(k) to the limit.** Then:
+
+**Backdoor Roth IRA**, if you're over the direct contribution income limits. The trap is the pro-rata rule: it aggregates *all* your traditional, SEP, and SIMPLE IRA balances as of December 31. One forgotten rollover IRA from an old job turns your clean conversion into a partially taxable mess. The fix is usually to roll that balance *into* your current 401(k) first, if the plan accepts it. Do this before you convert, not after.
+
+**Mega backdoor Roth**, if your plan supports it — meaning it allows after-tax contributions *and* either in-plan conversion or in-service withdrawals. Most don't. If yours does, it's one of the largest tax-advantaged spaces available to a W-2 employee, and almost nobody uses it. Search your plan documents for "after-tax," not "Roth." They're different things and the language is genuinely confusing.
+
+**Then taxable.** Which is fine. A taxable brokerage account holding broad equity funds is remarkably tax-efficient, and unlike retirement accounts, it's liquid — which matters if your twenties include a sabbatical, a business, or a bad year.
+
+---
+
+## Roth vs. Traditional Is Not Age-Based
+
+The standard advice — "you're young, do Roth" — is a proxy for the actual question, which is: **is your current marginal rate higher or lower than your expected rate at withdrawal?**
+
+For a 24-year-old analyst, Roth is obviously right. For a 29-year-old in a high-tax state earning $280k, it usually isn't — you're likely deducting at a combined marginal rate you'll never see again, especially if you might retire somewhere without state income tax.
+
+Two refinements people miss:
+
+- **The contribution limits are nominal, not real.** $23k of Roth space holds more purchasing power than $23k of traditional space, because the traditional dollars carry an embedded tax liability. If you're limit-constrained and cash-rich, that tilts Roth even at similar rates.
+- **Tax diversification has option value.** Nobody knows what rates look like in 2060. Having both types gives you withdrawal flexibility later, which is worth something even if the expected values are a wash.
+
+If you genuinely can't tell which side of the line you're on, split. The cost of being wrong is small; the cost of paralysis is that you don't contribute.
+
+---
+
+## Asset Location (Not Allocation)
+
+Once you have money in more than one account type, *where* you hold each asset starts to matter.
+
+The rough principle: tax-inefficient assets go in tax-sheltered accounts. Bonds, REITs, and anything throwing off ordinary income belong in your 401(k) or traditional IRA. Broad equity index funds do best in taxable, where they generate mostly qualified dividends, let you harvest losses, capture the foreign tax credit on international holdings, and eventually get a step-up in basis.
+
+The corollary that surprises people: **your allocation should be measured across your whole portfolio, not per account.** If your 401(k) is 100% bonds and your taxable is 100% equities, you don't have two weird portfolios. You have one sensible one.
+
+At your age, though — be honest about whether you need bonds at all. The standard argument for a young accumulator is that a bear market early in your investing life is *good*: you're buying, not selling. Sequence-of-returns risk cuts the other way in accumulation. The real reason to hold bonds in your twenties isn't math, it's whether you'll panic-sell equities in a 40% drawdown. If you would, hold enough bonds that you won't. That's a legitimate and non-embarrassing reason.
+
+---
+
+## Equity Comp: Where the Real Money and the Real Mistakes Are
+
+If you're getting paid partly in stock, this section is worth more than the rest of the issue combined.
+
+**RSUs are cash.** They're taxed as ordinary income at vest, at which point you own a stock you would almost certainly not have chosen to buy. Default behavior is to sell at vest and diversify. "But I believe in the company" — you already do, structurally, with your salary, your bonus, your unvested grants, and your professional network. Watch out for the withholding trap, too: many companies withhold at the flat 22% supplemental rate, which badly under-withholds if you're in a higher bracket. That's an April surprise a lot of people meet exactly once.
+
+**ISOs are a tax puzzle with a trap door.** Exercising creates a bargain element that's invisible for regular tax and very visible for AMT. Getting the favorable long-term treatment requires holding two years from grant and one year from exercise — which means fronting cash *and* holding concentrated illiquid risk to get there. People have owed six-figure AMT bills on paper gains in stock that later went to zero. If you're exercising anything meaningful, pay an actual CPA. This is the one place where a few hundred dollars of professional advice has an absurd expected return.
+
+**If you can early-exercise, the 83(b) election window is 30 days.** Not negotiable, not extendable, not forgiven. Calendar it the day you sign.
+
+**Concentration is the actual risk in your twenties.** Not volatility — concentration. Your human capital and your employer stock are the same bet. When the company struggles, you get laid off and your portfolio drops in the same week. A reasonable ceiling is somewhere in the 10

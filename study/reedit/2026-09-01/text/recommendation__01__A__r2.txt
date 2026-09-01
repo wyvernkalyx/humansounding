@@ -1,0 +1,33 @@
+Priya Raghunathan
+Professor of Psychology
+Department of Psychological Sciences
+Whitmore State University
+praghunathan@whitmore.edu | (503) 555-0182
+
+March 3, 2025
+
+Graduate Admissions Committee
+Ph.D. Program in Cognitive Psychology
+University of Michigan
+
+Dear Members of the Committee:
+
+Daniel Reyes is the strongest undergraduate researcher I have supervised in fourteen years at Whitmore. I would place him in the top two percent of students I have advised, and I would take him as a doctoral student myself if we had a Ph.D. program. I recommend him without qualification.
+
+The clearest evidence is how he handled a failed experiment. Daniel designed a study — his own idea, not an extension of mine — testing whether retrieval-induced forgetting survives when retrieval practice is entirely covert, using pupillometry to verify that mental rehearsal actually occurred. He taught himself eye-tracking from scratch and wrote the preprocessing pipeline in Python, including an artifact-rejection routine two other students now use. Then the first wave of data came back null on the measure his whole design depended on: eighty subjects, no effect.
+
+A week later he returned with a reanalysis. He had noticed the null was driven almost entirely by participants whose pupillary response suggested they hadn't engaged in the covert task, and that among compliant participants the effect was robust and in the predicted direction. He proposed treating compliance as a moderator, preregistered the follow-up, and ran a second sample of sixty. The prediction held. He did all of this before I suggested any of it. Sitting with a disappointing result, interrogating it, and returning with a sharper question rather than a rescue narrative is a disposition I associate with good third-year graduate students.
+
+That work is his honors thesis and the basis of a manuscript we are preparing for *JEP: Learning, Memory, and Cognition*, with Daniel as first author. He presented preliminary findings at Psychonomic Society in November and handled a pointed question about his exclusion criteria with real composure, following up by email afterward with a supplementary analysis.
+
+He is also a genuinely good colleague: he trained four newer students, rewrote our eye-tracking documentation because he thought the existing version assumed too much, and takes heavy criticism on drafts without defensiveness. He has done this while working twenty hours a week at the campus writing center.
+
+One item on the transcript needs a word. The B– in Advanced Statistics, fall of his junior year, coincided with a serious illness in his family; he was commuting home most weekends and did not ask for accommodations or mention it to me until much later. His A in computational modeling and the analysis work above are the better indicators of his quantitative ability.
+
+His interests in inhibitory control and retrieval dynamics map directly onto your department's work, and he can speak in detail about how he would extend his paradigm with the resources available there. I am glad to discuss his application further.
+
+Sincerely,
+
+Priya Raghunathan
+Professor of Psychology
+Whitmore State University

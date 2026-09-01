@@ -1,0 +1,45 @@
+# Used Cars: Where the Money Actually Is
+
+The expensive mistake experienced buyers make isn't buying a broken car. It's buying a *sound* car with $4,000 of deferred maintenance sitting on top of it and paying market price anyway.
+
+The used market prices on mileage and cosmetics. It does not price on service history, and that gap is where your money is. Everything below follows from that.
+
+## Price the maintenance, then subtract it
+
+Before you negotiate, build the list: timing belt and water pump, transmission fluid on the unit the manufacturer calls "lifetime," transfer case and diffs, plugs on the V6 where the rear bank needs the intake off, brake fluid, bushings, and tires with a date code older than the last election. Price it at local labor rates.
+
+A car with a documented $3,500 major service already done is often the better buy at a $2,000 premium. Most buyers won't pay that premium, which is precisely why it's available.
+
+## Sitting is worse than driving
+
+A 40,000-mile car that covered 4,000 a year has spent its life with seals drying, rotors pitting, rubber hardening, and a battery cycling to death. A 120,000-mile car that did highway miles on schedule is usually healthier and always cheaper. Pay for how the car was used, not what the odometer says.
+
+## Buy the powertrain, not the nameplate
+
+Generic reliability rankings are useless at this level. Within one model you'll find an engine that runs to 250k and another that eats timing chain guides at 90k. First years of a generation carry real risk, as do the years a refresh introduced a new transmission.
+
+Spend an hour on the model forum before a minute on listings. You're looking for the failure everyone describes with resignation rather than anger — the thing that's coming, when, and what it costs. Then check whether this car has had it done, and whether the receipt says OEM.
+
+## Bring a scanner, not just your eyes
+
+The check-engine light being off tells you nothing. **Readiness monitors** tell you everything: unset monitors on a driven car mean codes were cleared recently. It's the best tell for a hidden intermittent fault and almost nobody checks it.
+
+Also pull freeze frame data, long-term fuel trims at idle and load (double-digit positive means unmetered air the light hasn't caught yet), and scan *every module* — ABS, SRS, and body modules remember collisions the ECU doesn't.
+
+A $40 paint depth gauge is the other tool worth carrying. Bodywork shows up as numbers that spike or wander across a panel, including on silver and white cars where your eye fails.
+
+## Treat the history report as a floor
+
+A clean Carfax means nothing was reported. Run both Carfax and AutoCheck — auction announcements land in one and not the other. Read geography and timing, not just events: a car that left Houston three months after a hurricane deserves a hard look at seatbelt anchors and the connectors under the carpet. Gaps matter more than entries.
+
+## Specify the PPI
+
+"Take a look at it" gets you a shrug. Ask for: full multi-module scan with printout including monitors, cooling system pressure test, rotor thickness in millimeters, borescope on any carbon-prone direct-injection engine, and a structural check of pinch welds, rail seams, and trunk spot-welds. Use a marque specialist for anything German, diesel, or electric.
+
+## EVs: the pack is the car
+
+Get state-of-health from the vehicle's data, not the dash range estimate. Check cell voltage spread — a wide delta predicts trouble the aggregate number hides. Then the administrative traps: does the battery warranty transfer to a second owner, do software-unlocked features survive title transfer, and what does an out-of-warranty pack cost today? For some models that figure exceeds the car's value, which changes the entire calculation.
+
+## Widen the radius
+
+Shipping runs $500–$1,200 domestically — less than the premium you'll pay for a compromised local example. Buy the spec you want, inspect it with a specialist near the car, and confirm your destination state's emissions rules before you wire funds. California will make a non-compliant out-of-state car your problem at registration, not before.

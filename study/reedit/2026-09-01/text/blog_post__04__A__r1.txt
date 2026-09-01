@@ -1,0 +1,65 @@
+# Buying a Used Car When You Already Know the Drill
+
+You know to run the VIN, get a pre-purchase inspection, and check the tire date codes. Fine. Here's the layer underneath that — where experienced buyers still get burned.
+
+## History reports are a floor, not a verdict
+
+Carfax shows you what got reported. Unreported repairs — cash jobs, body shops that don't feed the databases, anything a seller paid for out of pocket to protect their premiums — leave no trace. So does damage repaired before the first title transfer.
+
+Cross-check. Run both Carfax *and* AutoCheck; they pull from overlapping but non-identical sources, and it's common for one to show an incident the other missed. Run the free NICB VINCheck, which pulls insurance total-loss records and can surface a car whose title got washed through a state with loose branding rules. Check NHTSA for open recalls while you're at it — and note whether any are the unfixable-for-now variety where parts have been backordered for two years.
+
+For mileage, a digital cluster swap is trivial and leaves a clean report. What doesn't lie: the wear pattern. Steering wheel finish, pedal rubber, driver's seat bolster, and the shine on the shifter should all agree with each other and with the odometer. Some manufacturers also store mileage in multiple modules — a good scan tool will show you the ECU's number alongside the cluster's.
+
+## Plug in before you turn the key
+
+Bring a scanner that reads more than generic powertrain codes. Three things matter:
+
+**Readiness monitors.** If every monitor reads "not ready" or "incomplete," the battery was disconnected or codes were cleared recently — probably within the last 50 miles. On a car that's been sitting on a lot for three weeks, that's not innocent. Walk, or at minimum drive it long enough for monitors to set before you commit.
+
+**All modules, not just the engine.** Transmission, ABS, SRS, body control, and any manufacturer-specific modules store their own faults that never trigger a check engine light. Airbag codes in particular are worth knowing about, since they can indicate deployment history the report doesn't show.
+
+**Freeze frame and pending codes.** A pending code tells you something is failing intermittently. Freeze frame data on a stored code tells you the conditions when it happened, which often tells you whether it's a real problem or a one-off.
+
+## Buy the paint depth gauge
+
+Thirty to fifty dollars for a basic magnetic-induction gauge, and it will pay for itself the first time you use it. Take a reference reading on the roof (rarely repainted), then work panel by panel. Factory readings usually cluster within a tight band — say 100–140 microns. A door reading 300 has been resprayed. A quarter panel reading 800 has filler in it.
+
+This finds work that's invisible in good light and finds it in about ninety seconds. It's the highest-leverage tool a private buyer can carry, and it works on aluminum panels too if you get a dual-mode gauge.
+
+## Direct the inspection, don't just order one
+
+A generic PPI at a chain shop is a multipoint checklist and a tire-tread reading. You want more than that, and you should say so when you book it.
+
+Ask specifically for: a full multi-module scan with a printout, a compression or leakdown test if the engine is known for ring or valve issues, a borescope of the cylinders on a direct-injection engine you're worried about, and a lift inspection with photos of the frame rails, subframe mounts, and rear suspension pickup points. If the car is a specific model with a specific known failure, name it and ask them to check it.
+
+Then use an independent shop that specializes in the marque, not the closest generic garage. A BMW specialist knows what a stretched timing chain sounds like on a cold start; a general shop may not.
+
+## Know the one thing that kills this model
+
+Every platform has a signature failure. Your job is to find out what it is and inspect for *that*, specifically, rather than doing a generalized once-over.
+
+The forums will tell you in an afternoon. Some examples of the genre: mechatronic units on dry-clutch DSGs, high-pressure fuel pumps and wastegate rattle on N54s, ring land failure on turbo Subarus, oil consumption on certain 2.4L GM and Subaru engines, carbon buildup on any early direct-injection engine without port injection, torque converter shudder on ZF 8- and 9-speeds, PowerShift transmissions in Fiestas and Focuses, CVT longevity across most of Nissan's lineup, and head gasket weeping on EJ25s.
+
+Then ask the corollary question: has the fix already been done, and is there paperwork? A car with a documented replacement of the known-weak component is often a *better* buy than a low-mileage example that's still on the original part.
+
+## Read service records for intervals, not volume
+
+A thick folder is not the same as good maintenance. Look at the spacing.
+
+Oil changes at 12,000-mile intervals on a turbocharged direct-injection engine that specifies 7,500 under normal use and 5,000 under severe use — with a commute profile that's obviously severe — tells you the engine has been treated to sludge and coked turbo bearings regardless of what the sticker says. Check whether the transmission fluid was ever changed on a car the manufacturer calls "lifetime filled" (it isn't; the fluid just outlives the warranty). Check whether the timing belt interval has come and gone. Check whether brake fluid was ever flushed, which is the single most-skipped service on the list and a decent proxy for how seriously the owner took everything else.
+
+Stamps in a booklet mean less than dated invoices with line items.
+
+## Ask how the car got here
+
+Provenance shapes the risk profile more than mileage does.
+
+An off-lease car with one owner and a franchise dealer service history is a fairly known quantity. A car the dealer bought at auction three weeks ago is not — the dealer knows only what the auction grade sheet and their own recon department told them. Fleet and rental cars are usually maintained on schedule but driven without affection. Ex-rental sedans are often genuinely fine value if you accept that.
+
+At a dealership, ask two questions: *how long has it been on the lot*, and *did you take it in on trade or buy it at auction*. The first gives you leverage — inventory management software marks cars down automatically as they age, and a 60-day-old unit is costing them floorplan interest daily. The second tells you how much the seller actually knows about the car.
+
+## If it's electrified, the battery is the car
+
+Everything else is secondary. Get a state-of-health reading, not a dashboard range estimate.
+
+Depending on the platform, that's a dealer diagnostic, a service report, or a third-party app over OBD (LeafSpy for Nissans, various apps for Teslas, Car Scanner for a lot of others). You're looking for capacity relative to original and for cell balance. Also check DC fast-charging

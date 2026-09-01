@@ -1,0 +1,70 @@
+# COMPOUND
+*A newsletter for people still figuring it out*
+
+**Issue #52 — Money in Your Twenties: You're Optimizing the Wrong Things**
+
+---
+
+**The main point, up front:** once your basics are automated, almost everything left that feels like personal finance is noise. Ranked by actual impact on your net worth at 45:
+
+1. **Career trajectory and savings rate.** Not close.
+2. **Not blowing yourself up.** Concentration, leverage, uninsured catastrophe.
+3. **Tax structure.** Which accounts, in what order, holding what.
+4. **Asset allocation.** Real, but the defensible range for a 27-year-old is narrow.
+5. **Fund selection.** Noise below ~10bps.
+
+Most people spend their attention in exactly reverse order — two hours comparing VTI and VOO, zero hours on whether they should be interviewing. Here's where it should go instead.
+
+---
+
+## Fill the buckets in order
+
+Past the match and the high-interest debt:
+
+**HSA first, if you're eligible.** Only triple-tax-advantaged account there is. Invest it, pay medical costs out of pocket, keep the receipts — there's no deadline on reimbursement, so you're holding a tax-free option you exercise in thirty years. (California and New Jersey don't conform.)
+
+**401(k) to the limit.** Then **backdoor Roth**, watching the pro-rata rule: it aggregates every traditional, SEP, and SIMPLE IRA balance you hold on December 31. One forgotten rollover IRA turns a clean conversion into a taxable mess. Roll it into your 401(k) *before* you convert.
+
+**Mega backdoor Roth** if your plan allows after-tax contributions plus in-plan conversion. Most don't. Search your plan documents for "after-tax," not "Roth" — different things, confusing language, and it's the biggest unused tax shelter available to a W-2 employee.
+
+**Then taxable**, which is fine. Broad equity funds are tax-efficient there, and liquidity matters if your twenties include a sabbatical or a business.
+
+---
+
+## Two corrections to standard advice
+
+**Roth vs. traditional isn't about age.** It's about whether your current marginal rate beats your expected withdrawal rate. Obvious Roth at 24. Usually not obvious at 29 earning $280k in a high-tax state. If you can't tell, split — the cost of being wrong is small, the cost of paralysis isn't.
+
+**Measure allocation across your whole portfolio, not per account.** Bonds and REITs belong in tax-sheltered accounts; equities in taxable, where you get qualified dividends, loss harvesting, and eventual step-up. A 100%-bond 401(k) plus a 100%-equity brokerage isn't two weird portfolios. It's one sensible one.
+
+And be honest about whether you need bonds at all right now. Early drawdowns are *good* for an accumulator — you're buying. The only real reason to hold bonds in your twenties is if you'd panic-sell without them. That's a legitimate reason. Just name it accurately.
+
+---
+
+## Equity comp: where the money and the mistakes are
+
+If you're paid partly in stock, this is worth more than everything above.
+
+**RSUs are cash.** Taxed as ordinary income at vest, leaving you holding a stock you'd never have chosen to buy. Default to selling at vest. Also: many companies withhold at the flat 22% supplemental rate, which badly under-withholds at higher incomes. That's an April surprise most people meet exactly once.
+
+**ISOs have a trap door.** Exercising creates a bargain element that's invisible for regular tax and very visible for AMT. People have owed six figures on paper gains in stock that later went to zero. Hire a CPA — best expected return of any few hundred dollars you'll spend.
+
+**The 83(b) window is 30 days.** Not extendable. Calendar it the day you sign.
+
+**Concentration is the real risk.** Your salary and your employer stock are the same bet. When the company struggles, you lose the job and the portfolio in the same week. Cap single-stock exposure somewhere around 10–20% and enforce it with a scheduled sell plan, not a judgment call you make while watching the ticker.
+
+---
+
+## This week
+
+Two things, both boring:
+
+**Check your 401(k) plan document for after-tax contributions.** Ten minutes. Potentially five figures a year of Roth space.
+
+**Write down your single-stock percentage.** If it's above your ceiling, set a sell schedule now, while nothing is happening. Decisions made calmly execute; decisions made during a drawdown don't.
+
+You are not behind. You're just aiming at the wrong target.
+
+**— The Compound**
+
+*General education, not personalized advice. US account types and tax rules. Equity comp especially warrants a professional.*

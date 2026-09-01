@@ -1,0 +1,41 @@
+# Choosing a Password Manager
+
+**Assume an encrypted copy of your vault will eventually be stolen and kept forever.** Every other consideration follows from that. It's not paranoia — it's the LastPass scenario — and it means you're not evaluating a vendor's perimeter, you're evaluating how long an offline artifact resists cracking on hardware that keeps improving.
+
+That reduces to two variables: entropy of your secrets, and cost per guess.
+
+## Cost per guess
+
+Argon2id with sane memory and parallelism is the current answer; high-iteration PBKDF2 is acceptable. But the parameter a vendor advertises matters less than **whether they migrate existing accounts when defaults change**. LastPass's real failure was a long tail of accounts still on decade-old iteration counts, because the value was set at creation and never revisited. The right answer to "what happens when you raise defaults?" is a silent server-side upgrade on next unlock. "Users can adjust it in settings" means most won't.
+
+## Entropy
+
+This is where two-secret designs earn their keep. 1Password's Secret Key mixes a high-entropy device-stored value into derivation, so a stolen vault isn't crackable from the master password alone — converting "vault theft plus weak password" from catastrophic to non-viable. The cost is that recovery becomes terminal if you lose both the password and every device holding the key. Bitwarden and most others put the whole burden on your passphrase. Both are defensible; know which failure mode you've bought.
+
+## Metadata
+
+Ask what sits *outside* the encrypted envelope. LastPass shipped vault URLs in the clear, so the breach immediately yielded a per-user map of every service each victim used — excellent phishing targeting even where passwords never cracked. Vendors vary on item counts, folder names, timestamps, attachment sizes. You'll usually find this in whitepapers rather than comparison tables, and it's a decent proxy for whether the crypto design was deliberate or accreted.
+
+## The client, not the server
+
+Server breaches make news; the browser extension is where the interesting bugs live. Autofill is a mechanism for a page to induce your vault to disclose secrets, and the history of clickjacking and cross-origin fill bugs isn't short.
+
+Prefer explicit invocation over fill-on-load, keep extension site permissions narrow, and treat the unlock timeout as a real setting rather than a default. If your threat model includes targeted attacks, desktop app plus manual copy-paste is meaningfully safer at real cost to convenience. Most people shouldn't make that trade.
+
+## Portability and governance
+
+You're committing to an organization for years. Ownership changes and post-acquisition monetization have degraded more password managers than cryptographic flaws have. Open source helps less than assumed — auditable isn't audited, and the extension and mobile clients are simultaneously the likeliest to hold bugs and the least scrutinized.
+
+Test the export path before committing and periodically after. A vendor's willingness to make leaving easy is the best available proxy for how they'll behave when incentives shift.
+
+Passkeys sharpen this. A password can be typed into anything; a passkey can't. Platform-bound credentials in the Apple or Google keychains are fine until you switch ecosystems. Cross-platform managers are the hedge — check current status of FIDO credential exchange support, where intent and shipped functionality have historically diverged.
+
+## Two things that get configured last or never
+
+**TOTP colocation** is fine for the long tail — the standard objection holds only in the vault-compromise case, not the credential-stuffing case that drives most takeovers. Keep the exceptions elsewhere, ideally on hardware keys: primary email, financial accounts, the manager's own second factor, and your domain registrar. The registrar is the single point from which an attacker rebuilds everything else, and it's always forgotten.
+
+**Emergency access** deserves an implementation check, not a checkbox check. Sound designs wrap your vault key to the contact's public key at grant time with a vetoable delay, so the vendor never holds plaintext. Weaker ones route through vendor-mediated recovery, reintroducing the trusted party you designed out. If you have dependents or shared financial infrastructure, this is higher-consequence than most of the above.
+
+---
+
+*KDF defaults rise, audits age, ownership changes, passkey interop is in flux. Verify against current vendor documentation rather than any writeup, including this one.*

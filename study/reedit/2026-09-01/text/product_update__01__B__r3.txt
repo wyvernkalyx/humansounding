@@ -1,0 +1,22 @@
+# Dashboard 2.0 is live
+
+Rebuilt from the ground up, with a new data-fetching layer under the hood.
+
+**Also new:**
+- Drag-and-drop, resizable widgets that sync across devices
+- Real-time metrics (no more five-minute cycle)
+- Global filters that persist between sessions
+- Saved views with shareable read-only links
+- Dark mode
+
+**Migration:** Your widgets carried over as-is. Legacy dashboard stays available in settings for 60 days.
+
+**Not in this release:** per-widget CSV export and time-series annotations. Both are coming next cycle.
+
+Feedback button is in the header.
+
+---
+
+**What changed:** removed the load-time figures from the headline and opening line. Since those numbers were carrying the lead, I replaced them with a neutral statement about the rewrite — it signals the work happened without asserting a result. Everything else is untouched.
+
+If you'd rather not reference the data-fetching layer at all, the opening line can just be "Rebuilt from the ground up," or you can lead with custom layouts instead.

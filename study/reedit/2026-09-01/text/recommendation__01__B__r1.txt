@@ -1,0 +1,43 @@
+Here's the same letter recast for a reader who already has the file — a colleague in the target program who has seen the CV, transcript, and writing sample, and may have met the student at a visit day. The rhetorical job changes completely: nothing needs introducing, so the letter's value lies in calibration, candor, and the things that don't appear on paper.
+
+---
+
+**[Your Name]**
+[Title], [Department], [Institution]
+[Email] | [Phone]
+
+[Date]
+
+Dear [Colleague's First Name],
+
+You've got [Student]'s file, so I'll skip the recitation and give you what the file can't.
+
+**Calibration.** [Student] is the strongest undergraduate researcher to come through my group since [former student], who you may remember is now [position, institution]. That's [number] years and roughly [number] students. I don't make that comparison casually, and I'd make it again if you asked me in five years.
+
+**What the transcript understates.** The [grade/course] in [Course] is real, and it's not what you might assume. [He/She/They] was [reason — e.g., "carrying twenty hours a week at a job through that semester" / "taking the graduate section as a sophomore and competing with fourth-year students"]. The trajectory afterward is the signal; the single data point isn't.
+
+**What the CV overstates.** The [Journal] manuscript lists [him/her/them] second, but the [specific contribution — e.g., "segmentation pipeline and the entire supplementary analysis"] is [his/hers/theirs]. I wrote the framing and did very little else. Conversely, I'd discount the [conference/poster line] — that was a low bar and everyone in the lab presented.
+
+**The thing that actually persuades me.** [Specific episode, told tightly — e.g., "Last spring our central result failed to replicate across three trials. I was prepared to shelve the project. [Student] came back inside two weeks with a literature review, a candidate confounder we'd both missed, and a control experiment already designed. [He/She/They] was right. That redirection is the paper."] I've watched a lot of talented students go quiet when a result collapses. [He/She/They] got louder and more organized. That's the disposition that finishes a dissertation.
+
+**Where [he/she/they] will need managing.** [Honest limitation — e.g., "[Student] under-communicates when stuck and will burn a week before asking. I've pushed on this and it's improved, but a hands-off advisor would be a bad match. [He/She/They] also writes a first draft that buries the argument on page four — fixable, and [he/she/they] takes edits without ego, which is more than half the battle."] I mention this because you'll find out in year one anyway, and I'd rather you hear it from me.
+
+**Fit.** [He/She/They] should be working with [Name] on [problem], not [Name] on [problem] — the interests look adjacent on paper but the methods aren't, and I think [he/she/they] knows it. Worth asking directly if you interview.
+
+Short version: I'd take [him/her/them] in my own group if [he/she/they] weren't leaving, and I think [he/she/they] will be a credit to your program. Happy to talk by phone if that's more useful than more paragraphs.
+
+Best,
+[Your Name]
+
+---
+
+**What changed and why:**
+
+- **No introductions, no summary of credentials.** A reader with the file experiences recapitulation as a waste of their time — and as evidence the writer has nothing firsthand to add.
+- **Comparative ranking moved to the top.** For an informed reader, calibration against named predecessors is the single most valuable thing a letter provides, because it's the one judgment only the writer can make.
+- **Added a section correcting the record in both directions.** Telling a colleague what the CV *inflates* buys enormous credibility for everything else in the letter. A committee that doesn't know you can't reward that; a colleague who does will.
+- **Added a candid limitation.** In the first version this would read as sabotage. Here it reads as professional honesty between peers who will both be accountable for the outcome.
+- **Specific advising recommendation.** Only possible when you can assume the reader knows the department's internal landscape.
+- **Compressed by roughly half, and the register dropped** — contractions, direct address, a closing offer to talk. Informed readers want signal density and a human on the other end, not formality.
+
+One caution: this version depends on an actual relationship with the recipient and on your willingness to stake your own reputation. If you're not confident the reader will read your candor as candor, use the first version and add only the calibration paragraph.

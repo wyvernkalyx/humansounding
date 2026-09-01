@@ -1,0 +1,20 @@
+**MEMORANDUM**
+
+**TO:** All Staff
+**FROM:** [Name], [Title]
+**DATE:** [Date]
+**SUBJECT:** Security Awareness Training — due [Deadline]
+
+The updated training is live in [platform] as of today. Everyone with system access completes it, including contractors and interns. No exemptions.
+
+**Deadline:** [Date]
+**Time:** ~[35] minutes, can be split across sittings
+**Access:** [platform] → My Learning → "[Course Name]"
+
+Pass mark is [80]% on the closing assessment; unlimited retakes.
+
+The content has changed meaningfully since last cycle — the phishing and BEC modules were rebuilt around [the incidents we saw in Q[X] / the new attack patterns], so skimming on the assumption you've seen it before won't serve you well.
+
+Managers get completion reports on [date]. Access restrictions apply after [Deadline] per [Policy #].
+
+Accommodations, access problems, or credit for equivalent external training: [name] at [email].

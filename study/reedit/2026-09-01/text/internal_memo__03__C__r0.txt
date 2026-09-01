@@ -1,0 +1,64 @@
+**MEMORANDUM**
+
+**TO:** All Customer Service Team Members
+**CC:** Department Directors; Human Resources
+**FROM:** [Name], VP of Customer Experience
+**DATE:** [Date]
+**SUBJECT:** Customer Service Team Reorganization, Effective [Month Day, Year]
+
+---
+
+**Overview**
+
+I'm writing to share that we are reorganizing the Customer Service team, effective **[Month Day, Year]**. This change moves us from a single generalist support pool to three specialized teams. Our goal is to shorten resolution times, deepen expertise, and give every team member a clearer path for growth.
+
+**Why We're Making This Change**
+
+Over the past year, our ticket volume grew 38% and our product line expanded to include [Product/Service]. Under the current model, agents handle everything from password resets to complex billing disputes, which has led to longer handle times, more transfers, and uneven customer outcomes. Feedback from the Q[X] engagement survey also told us that many of you want more focused work and clearer advancement opportunities. This reorganization responds directly to both.
+
+**What's Changing**
+
+Beginning [Date], the department will be organized into three teams:
+
+- **Tier 1 Support** — First-contact resolution for account access, order status, and general inquiries. Led by [Name].
+- **Technical Support** — Product troubleshooting, integrations, and escalated technical cases. Led by [Name].
+- **Billing & Retention** — Invoicing, refunds, plan changes, and cancellation saves. Led by [Name].
+
+A new **Quality & Enablement** function, led by [Name], will own training, coaching, and QA across all three teams.
+
+**What This Means for You**
+
+- **No positions are being eliminated.** Every current team member has a role in the new structure.
+- **Compensation and benefits are unchanged.** Pay, PTO balances, and tenure are unaffected.
+- **Team assignments** were based on demonstrated strengths, past performance, and the preferences many of you shared in your last one-on-one. Your manager will confirm your assignment individually by **[Date]**.
+- **Some reporting lines will change.** If your manager is changing, you'll meet with your new manager before the transition date.
+
+**Timeline**
+
+| Date | Milestone |
+|---|---|
+| [Date] | Individual assignment conversations complete |
+| [Date] | Team kickoff meetings with new managers |
+| [Date] | Specialized training begins (three half-day sessions) |
+| [Date] | New structure and routing go live |
+| [Date] | 30-day check-in and feedback review |
+
+**Support During the Transition**
+
+We know change is disruptive, even when it's positive. To make this as smooth as possible:
+
+- Each team will complete role-specific training before go-live, with no productivity targets during training weeks.
+- Ticket routing rules will be updated by the Operations team; you won't need to change how you work in the queue.
+- HR will hold open office hours on [Date] and [Date] for confidential questions.
+
+**Questions**
+
+I'll host an all-hands Q&A on **[Date] at [Time] in [Location/Link]** to walk through the details and answer questions. If you'd prefer to ask something anonymously in advance, please submit it through [form/link] by [Date].
+
+Thank you for the work you do every day. Our customers consistently tell us that our support team is the reason they stay with us, and this change is meant to give you the structure and focus to do that work even better.
+
+— [Name]
+
+---
+
+*Want me to tailor this? Share your company's specifics — team size, the actual new structure, whether any roles are affected, and your tone preference — and I'll revise it.*

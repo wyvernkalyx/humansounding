@@ -1,0 +1,172 @@
+**THE SLOW BUILD**
+*Issue #47 — Small changes, stacked over time*
+
+---
+
+**Subject:** The 5am routine that lasted nine days
+
+**Preview:** Why your morning routine keeps collapsing, and the boring fix that works.
+
+---
+
+Two Januaries ago I built the perfect morning.
+
+5:00 wake. Twenty minutes of meditation. Forty-five minutes of writing. Gym at 6:30. Cold shower. Journal. At my desk by 8:15 having already, as the internet promised, *won the day*.
+
+It lasted nine days.
+
+Day ten I slept through the alarm, skipped the whole thing, and felt so much like a failure that I didn't try again until March. That's the part people don't mention: a routine that collapses doesn't just cost you the routine. It costs you the belief that you're the kind of person who can keep one.
+
+So this issue is about the unglamorous version — the one that survives a bad night's sleep, a sick kid, a 6am flight, and February.
+
+---
+
+## Why morning routines fail
+
+Almost always one of these four:
+
+**1. You designed it for a fantasy version of you.**
+The routine you sketch on a Sunday night is written by your most optimistic self, and executed by your 6am self, who is a completely different person with completely different opinions. Design for the 6am guy. He's grumpy and he's in charge.
+
+**2. It's all-or-nothing.**
+A seven-part routine has seven points of failure. Miss the workout and the whole sequence feels broken, so you skip the rest. Fragility scales with complexity.
+
+**3. There's no anchor.**
+"Meditate in the morning" isn't a plan, it's a hope. Habits need to attach to something that already reliably happens.
+
+**4. It actually starts the night before.**
+You cannot out-discipline a 1am bedtime. Most "morning routine problems" are evening problems wearing a disguise.
+
+---
+
+## The build
+
+### Step 1: Pick one thing. One.
+
+Not a routine — a keystone. Ask: *if I only got to protect one thing every morning for the next year, which one would change the most?*
+
+Common answers: movement, writing, reading, sitting quietly, a real breakfast, ten minutes of planning before the inbox opens.
+
+You'll add more later. But a one-item routine has a 100% completion rate on days you do it, and completion is what builds identity. Six items means you go 4-for-6 and feel like you lost.
+
+### Step 2: Shrink it until it feels stupid
+
+Whatever you picked, cut it down until skipping it would be more effort than doing it.
+
+- Exercise → put on running shoes and walk to the corner
+- Writing → one paragraph
+- Meditation → three minutes
+- Reading → one page
+
+Yes, it's too small to produce results. That's fine — you're not optimizing for results yet, you're optimizing for *never missing*. Results come from the version of this that still exists in month eight.
+
+The rule I use: **the floor is tiny, the ceiling is open.** You must do one page. You may do forty. Most mornings you'll do more, but the obligation stays small, which is exactly why it survives the bad days.
+
+### Step 3: Anchor it to something already automatic
+
+Format: **After I [existing thing], I will [new thing] in [place].**
+
+- After I pour my coffee, I'll write one paragraph at the kitchen table.
+- After I brush my teeth, I'll do three minutes of stretching on the bedroom floor.
+
+Pick an anchor that happens *every* day, not most days. "After my commute" dies the moment you work from home. "After I put the kettle on" is bulletproof.
+
+Then say it out loud, or write it on a sticky note and put it on the anchor object. Specificity is doing most of the work here — research on implementation intentions consistently shows that naming *when* and *where* roughly doubles follow-through compared to intention alone.
+
+### Step 4: Move the friction to the night before
+
+This is the highest-leverage step and it takes four minutes.
+
+Your morning self has almost no capacity for decisions or setup. Your 9pm self has plenty. So use 9pm you as staff:
+
+- Clothes out (workout gear where you'll trip on it)
+- Document open on the screen, cursor in place
+- Coffee loaded, mug on the counter
+- Phone charging **in another room**
+- One sentence on paper: the first thing you'll do tomorrow
+
+The phone one is not optional in my experience. If the first input of your day is other people's demands, the routine is over before it starts — you're now reacting, and reacting mode is very hard to exit.
+
+### Step 5: Write the bad-morning version *now*
+
+Every routine needs a documented minimum. Decide it today, while you're calm, so you're not negotiating with yourself at 6:40 on four hours of sleep.
+
+> Full: 30 min walk + journal + slow breakfast
+> **Bad morning: step outside and take ten breaths.**
+
+The bad-morning version isn't a consolation prize. It's the whole point. It keeps the chain intact and keeps you the kind of person who does this, which is the actual asset.
+
+### Step 6: Never miss twice
+
+You will miss. Missing once is noise. Missing twice is how a routine becomes a former routine.
+
+So drop the streak-counting — streaks make one bad day feel catastrophic. Instead put an X on a wall calendar and hold one rule: **two blanks in a row is the emergency.** That's the only metric that matters.
+
+---
+
+## The ramp
+
+Roughly how I'd stage it:
+
+| Weeks | What you're doing |
+|---|---|
+| 1–2 | One tiny habit, anchored. Nothing else changes. |
+| 3–4 | Same habit, let the duration grow naturally. Add the night-before setup. |
+| 5–6 | Add a second element — only if the first one now feels automatic. |
+| 7+ | Adjust wake time if (and only if) bedtime has already moved. |
+
+Notice wake time is last. Everyone starts there. It's the hardest variable and the least important one — a consistent 7:00 beats an inconsistent 5:30 every single time. If you want to wake earlier, move your bedtime first and let the mornings follow.
+
+---
+
+## Five traps worth naming
+
+- **Copying someone else's routine.** That founder's 4:30am block works because they have no children and a home gym. Steal the structure, not the schedule.
+- **Optimizing before you're consistent.** Don't research the best journaling method. Write badly for two weeks first.
+- **Routine as procrastination.** If your morning routine has grown to 2.5 hours and you still haven't started the actual work, the routine has become the avoidance.
+- **Requiring perfect conditions.** Travel, illness, and chaos are not exceptions to normal life — they *are* normal life, about 20% of the time. Your routine has to work at hotel-room quality or it doesn't work.
+- **Judging it by feel.** Some mornings it feels transcendent, most it feels like nothing. Neither is data. Ninety days is data.
+
+---
+
+## This week's experiment
+
+Do exactly this, and nothing more:
+
+1. Name one keystone habit.
+2. Shrink it to a version that takes under five minutes.
+3. Write your anchor sentence: *After I ______, I will ______ at/in ______.*
+4. Write your bad-morning version underneath it.
+5. Tonight, do the four-minute setup.
+
+Run it for seven days. Don't add anything, even if you feel great on day three — *especially* if you feel great on day three. That enthusiasm is precisely what talked you into the nine-day version.
+
+Hit reply and tell me what you picked. I read all of them, and I'll share a few next issue.
+
+---
+
+## From the mailbag
+
+**Q: I work nights / rotating shifts. Is a morning routine even possible?**
+
+Yes, but stop calling it morning. What you actually want is a *first-hour routine* — a consistent sequence attached to waking, whenever that is. The anchor approach works better for you than most people, because "after I make my first coffee" travels across any schedule while "at 6:30am" doesn't. Keep the sequence identical, let the clock time float.
+
+---
+
+## One thing worth your time
+
+James Clear's chapter on habit stacking in *Atomic Habits* is the clearest short treatment of the anchor idea — about fifteen minutes to read, and it's the fifteen minutes that changed how I set all of this up.
+
+---
+
+That's the issue. The routine that works is almost always smaller and duller than the one you want to want. Build the dull one. Let it get interesting later.
+
+See you next Thursday,
+
+**Sam**
+
+*The Slow Build*
+
+---
+
+*Forwarded this? [Subscribe here.] Not for you anymore? [Unsubscribe] — no hard feelings, genuinely.*

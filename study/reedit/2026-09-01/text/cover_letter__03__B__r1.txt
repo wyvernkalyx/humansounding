@@ -1,0 +1,45 @@
+# Cover Letter — Junior Software Developer
+*Version for a reader who already knows you*
+
+I've written this for the case where the reader has context on you already — a manager you interned under, someone you met at a meetup, a team you contracted with, or an internal transfer. The main shift: no self-introduction, no credential recap, no explaining what the company does. Straight to the ask, the new information, and the fit.
+
+---
+
+**[Your Name]** | [Phone] | [Email] | [GitHub]
+
+[Date]
+
+Hi [Name],
+
+I saw the Junior Software Developer opening on [team name] and wanted to throw my hat in before the posting closes on [date] — I've applied through [system], but wanted to reach out directly.
+
+Since we last worked together on [project], I've been [what changed: finishing the CS degree / shipping X at Y / going deep on Z]. The most relevant piece: [one specific thing that's new since they last saw you — "I rebuilt the reporting pipeline in Go, which cut the nightly job from 40 minutes to 6," or "I've been maintaining a Rails service in production, including on-call"]. That's the gap I knew I had when we talked in [month], and it's closed.
+
+What draws me to this role specifically is [concrete detail about the team's work — the migration they're doing, the product surface, the fact that it's the same codebase you touched]. I already know [the codebase / the deploy process / how the team works], so I'd expect to be useful in weeks rather than months.
+
+You know how I work, so I won't oversell it. If it's helpful, I'm happy to talk through [specific thing you'd want to discuss: scope, the team's current priorities, where they need coverage]. And if I'm not the right shape for this one, I'd genuinely appreciate a straight answer on that — it's useful information either way.
+
+Thanks, [Name].
+
+[Your Name]
+
+---
+
+## What changed and why
+
+| First version | This version |
+|---|---|
+| Formal salutation, full address block | First name, minimal header |
+| Explains who you are and what you've built | Assumes they know; reports only what's *new* |
+| Justifies interest in the company | Names a specific team detail instead |
+| Lists tech stack | Cut entirely — they've seen your work |
+| ~350 words | ~200 words |
+
+**A few notes on the tone:** the line "You know how I work, so I won't oversell it" is doing real work — it signals you understand the relationship and aren't wasting their time with a performance. Cut it if the relationship is more distant than warm.
+
+Two sub-cases that shift things further:
+
+- **Internal transfer.** Add one sentence on transition logistics ("I've spoken with [current manager] about timing") — internal readers care about that more than your skills.
+- **Referral, where the reader knows *of* you but hasn't worked with you.** Name the referrer in the first line, and restore one sentence of concrete evidence, since secondhand knowledge is thinner than they'd like.
+
+Send me the actual relationship and the posting and I'll sharpen this to something you can send today.

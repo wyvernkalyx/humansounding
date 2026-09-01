@@ -1,0 +1,23 @@
+Results claim removed:
+
+---
+
+**Six months on the four-day week: it works, and it's still fragile.**
+
+Here's what isn't settled.
+
+**The meeting cuts didn't hold on their own.** We removed [X] recurring meetings in week two. By month four, six had grown back under new names. Compression needs someone whose actual job is defending it.
+
+**Friday coverage is a compromise, not a solution.** Third model in. Rotating on-call is least-bad, and "least-bad" is doing real work in that sentence.
+
+**Role parity is the unresolved one.** [Engineering] absorbed the change easily. [Client-facing] absorbed it by working harder inside four days — not the same thing.
+
+The four-day week isn't a policy you install. It's an ongoing argument with entropy.
+
+---
+
+Two things to flag:
+
+**The opening line needed a small stitch.** "Here's what isn't" pointed back at the results sentence, so it had nothing to refer to once that went. I changed it to "Here's what isn't settled" — smallest edit that keeps it standing.
+
+**"It works" in the headline is arguably still a results claim.** It's a softer, unquantified one, so it may be fine depending on what's driving the restriction. If it isn't, swap the headline to **"Six months on the four-day week: what's still unresolved."** That drops the claim entirely and the rest of the post holds up, though it does lose the tension between "it works" and "it's fragile" that gave the original its hook.

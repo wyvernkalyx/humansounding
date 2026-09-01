@@ -1,0 +1,51 @@
+# Your new dashboard is here
+
+**Faster answers, less scrolling, and a layout you can actually make your own.**
+
+We rebuilt the dashboard from the ground up. It's the first screen you see every day, and for a while now it hasn't kept pace with how much your teams have grown or how much data you're throwing at it. Starting today, the new dashboard is live for all accounts.
+
+## What's new
+
+**A layout you control.** Widgets are now drag-and-drop and resizable. Pin the metrics you check every morning to the top, tuck the rest below, and stop hunting through tabs. Your layout saves automatically and travels with you across devices.
+
+**Real-time by default.** Metrics refresh live instead of on a five-minute cycle. No more hitting reload to see whether that spike is real.
+
+**Filters that stick.** Set a date range, segment, or team filter once and it applies across every widget on the page — and stays put when you come back tomorrow.
+
+**Built for big accounts.** We rewrote how the page loads data. Dashboards with 20+ widgets now render in about a second, down from eight. Large workspaces should notice the difference immediately.
+
+**Shareable views.** Save a configured dashboard as a view and share it with your team, or send a read-only link to someone outside your workspace. Great for weekly reports and exec updates.
+
+**Dark mode.** Finally.
+
+## Why we changed it
+
+We watched a lot of session recordings and heard the same thing in interviews: people were treating the dashboard as a launchpad, not a destination. They'd land, scan for one number, and click away — because finding that number took too long, and the surrounding context wasn't useful.
+
+So we optimized for the scan. Denser information, clearer hierarchy, fewer clicks between "I have a question" and "I have an answer."
+
+## What you need to do
+
+Nothing. The new dashboard is already live in your account.
+
+Your existing widgets carried over in the same order. If you'd rather start fresh, choose **Reset to default layout** from the settings menu in the top right.
+
+Prefer the old version? You can switch back from the same menu for the next 60 days while you get settled. After that, we'll retire the legacy dashboard so we can focus on making the new one better.
+
+## What's next
+
+This release lays the groundwork for a few things we're building now:
+
+- **Custom widgets** — build your own charts from any data in your workspace (beta next month)
+- **Scheduled digests** — get your dashboard delivered to email or Slack on a schedule
+- **Alerts on any metric** — get notified when a number crosses a threshold you set
+
+## Tell us what you think
+
+We'd genuinely like to hear how this lands, especially if something you relied on feels harder now. Use the feedback button in the dashboard header, or reply to this email — it comes straight to the product team.
+
+— The [Product] Team
+
+---
+
+Happy to adjust the tone (more playful, more enterprise), trim it down for an in-app changelog, or rewrite it around your actual feature list — just send over the details.

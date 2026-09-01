@@ -1,0 +1,44 @@
+# Cover Letter — Operations Manager (for a reader who already knows you)
+
+*Assumption: this version is for an internal promotion, a role you've been referred into, or a hiring manager you've already spoken with. Since they know your track record, the letter skips the résumé recap and spends its space on what you'd actually do in the seat.*
+
+---
+
+**[Your Name]**
+[Phone] | [Email]
+
+[Date]
+
+Dear [Name],
+
+Thanks for encouraging me to put this in writing — I'd like to be considered for the Operations Manager role at [site/region].
+
+You already know the numbers from [current site/role], so I'll skip the recap and go to what I think the job actually requires right now.
+
+From what I've seen, [site/region] has three live constraints: [constraint 1, e.g., inbound dock congestion that's pushing OTIF into the low 90s], [constraint 2, e.g., a supervisor bench that's one resignation away from being thin], and [constraint 3, e.g., cost per unit drifting up as volume mix shifts toward smaller, more frequent orders]. My read is that the first two are the same problem — the schedule can't flex because there aren't enough people who can run a shift independently.
+
+Here's how I'd approach the first 90 days:
+
+- **Days 1–30:** Work the floor across all shifts before changing anything. Validate the labor standards against what's actually happening, and get a real picture of which supervisors are ready for more.
+- **Days 30–60:** Fix dock scheduling and appointment discipline first — it's the cheapest lever and it makes every downstream metric easier to read. Start a structured development track for [#] high-potential leads.
+- **Days 60–90:** Bring a costed plan for [larger initiative — slotting rework, carrier rebid, automation pilot] with a defensible payback period, rather than asking for headcount.
+
+What I'd want from you: clarity on how much latitude I have on [carrier mix / capex / staffing model], and a straight answer on whether [known constraint — a customer commitment, a system migration, a pending lease decision] is fixed or negotiable. That changes the sequencing significantly.
+
+I've been ready for a P&L of this size for a while, and I'd rather grow into it here than somewhere I'd have to learn the network from scratch. Happy to talk through any of the above whenever it's useful.
+
+Best,
+[Your Name]
+
+---
+
+**What changed and why:**
+
+| First version | This version |
+|---|---|
+| Established credibility with metrics | Assumes credibility; spends space on diagnosis |
+| Described past achievements | Proposes a forward plan |
+| Formal, arms-length tone | Direct, collegial, asks something back |
+| ~400 words | ~300 words |
+
+**Two cautions:** First, only make claims about the site's problems that you can actually support — a confident misdiagnosis is worse than a generic letter. Second, if a formal HR process is involved, this letter may be read by people who *don't* know you, so ask whether it goes to the hiring manager directly or into a system. If it's the latter, use the first version and send this one as a follow-up note.

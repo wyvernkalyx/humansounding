@@ -1,0 +1,33 @@
+Here's the informed-reader version cut to roughly half, with the news carrying the first line.
+
+---
+
+**Subject:** Smart Timelines is live
+
+**Preview text:** Auto-shifting dependencies, time-off aware, milestone risk flags.
+
+---
+
+Hi [First Name],
+
+Smart Timelines is out of beta and enabled on your account. Your existing dependency links carried over — open Timeline view and it's already working.
+
+**New since beta:**
+
+- Auto-shift respects team time off, not just weekends
+- Milestone risk flags fire the moment a task pushes past a date
+- Notifications go only to people whose dates actually moved
+
+[**Open Timeline view →**]
+
+One gap: [recurring tasks don't auto-shift yet]. Full detail in the [changelog].
+
+Thanks for the beta feedback — a lot of it is in here.
+
+[Name]
+
+---
+
+What I cut and why: the beta stats (a reader who was in the beta already has a feel for the impact), the fourth bullet, the docs link as a separate item, and the sign-off title. The bullets lost their bold lead-ins since at this length the scan value doesn't justify the visual weight.
+
+If the placement isn't email — an in-app banner, a changelog entry, a Slack post, a push notification — the shape should change more than the length. A banner wants one sentence and a button. A changelog entry drops the greeting and the thank-you entirely. Tell me where it's going and I'll cut to fit that format instead.

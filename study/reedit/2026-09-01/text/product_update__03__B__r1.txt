@@ -1,0 +1,35 @@
+# Mobile performance — v[X.Y] release notes
+
+**[Date]**
+
+Startup, scroll, and battery work from the last two cycles has landed. Numbers below are P50 on a Pixel 6a over simulated 3G unless noted.
+
+## Changes
+
+**Cold start: 4.1s → 1.6s.** Moved analytics init, feature-flag hydration, and font preloading off the critical path. First screen is interactive before the deferred work runs; if you were relying on flags being resolved at mount, they now resolve on first paint instead — check any consumers that read the flag store synchronously.
+
+**Bundle: −38% on disk.** Dropped four unused dependencies (list in the changelog), moved to AVIF with WebP fallback, and route-split the JS bundle. Per-screen chunks are fetched on navigation, so the first hit to a rarely-used screen is ~120ms slower on cold cache. Prefetching lands next cycle and closes that gap.
+
+**List rendering: sustained 60fps.** Inbox, search, and activity feed now use view recycling. Previously 30–40fps on mid-tier hardware with lists over ~200 items. Custom row heights are supported but require an explicit estimate — omitting it falls back to measure-on-scroll and you'll lose most of the gain.
+
+**Network resilience.** Cache TTLs extended, retries moved to exponential backoff with jitter, and offline actions now queue to a local write log and replay on reconnect. Conflict resolution is last-write-wins for now; field-level merge is on the roadmap.
+
+**Energy use: −22% per typical session.** Background sync batches calls into a single wake window and honors Doze / Low Power Mode. Sync intervals stretch under battery saver — expect staleness up to 15 minutes in that state rather than the usual 2.
+
+## Benchmarking
+
+Perf gates now run against a mid-tier Android device on simulated 3G, not a flagship on Wi-Fi. Regressions above 10% on cold start or TTI block the release. Dashboard is at [link].
+
+## Next
+
+- Predictive prefetch on common navigation paths
+- Progressive image placeholders
+- TTI work on the three heaviest screens (settings, report builder, admin console)
+
+## Rollout
+
+Staged over the next several days via App Store and Play. No migration required.
+
+---
+
+*Same caveat as before on the metrics — these are placeholders. Drop in your real benchmarks and device targets before this goes out.*

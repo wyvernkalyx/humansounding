@@ -1,0 +1,36 @@
+# Webinar Invitation — Results Claim Removed
+
+**Subject:** The [Provision] election deadline is [date]
+
+**Preview text:** 45 minutes on the open questions and the calls you can't defer.
+
+---
+
+Hi [First Name],
+
+The [Provision] election is due [deadline date] and guidance is still thin. We're spending 45 minutes on how to approach the decision anyway.
+
+**[Webinar Title]**
+[Day, Date] · [Time, Time Zone] · 45 min + open Q&A
+
+- **The [deadline] election:** the factors that point toward opting in or out, and the modeling we'd run first
+- **[Provision A]:** where the statute and proposed regs diverge, and how practitioners are handling the gap
+- **[Provision B] and [existing structure]:** the interaction the initial coverage missed
+- **Q&A** — bring the messy fact patterns
+
+**[Name], [Credential]** — [X] weeks deep in this with [number] clients in [industry].
+
+[**Save My Seat →**]
+
+Recording to all registrants. Capped at [number] to keep the Q&A useful.
+
+[Your Name] · [Title] · [Company]
+[Phone] | [Email]
+
+*P.S. Send your scenario at registration and we'll try to work it in.*
+
+---
+
+**What I removed:** the assertion that the default treatment is the wrong answer for a share of your audience, and the "who gets burned" framing in the first bullet. Both implied a known outcome I had no basis for.
+
+**Still worth a look:** the "[X] weeks deep with [number] clients" line is an experience claim rather than a results claim, but it's yours to substantiate — drop it if the numbers aren't clean.

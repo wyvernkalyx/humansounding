@@ -1,0 +1,37 @@
+# Dashboard 2.0 — now live
+
+Shipped to all accounts today. Here's what changed.
+
+**Custom layouts.** Widgets are drag-and-drop and resizable. Layouts save automatically and sync across devices.
+
+**Live metrics.** Refreshes in real time, not on the old five-minute cycle.
+
+**Global filters.** Date range, segment, and team filters apply to every widget at once and persist between sessions.
+
+**Load performance.** Rewrote the data-fetching layer. 20+ widget dashboards render in ~1s, down from ~8s.
+
+**Saved views.** Save a configuration, share it with your team, or generate a read-only external link.
+
+**Dark mode.**
+
+## Migration
+
+Your widgets carried over in their existing order — no action needed. **Reset to default layout** is in the settings menu if you'd rather rebuild.
+
+Legacy dashboard stays available from the same menu for 60 days, then it's retired.
+
+## Known gaps
+
+Two things from the old dashboard didn't make this release: CSV export on individual widgets, and the annotation pins on time-series charts. Both are on deck for the next cycle. If either is load-bearing for you, hold off on switching or let us know.
+
+## Next up
+
+- **Custom widgets** — build charts from any workspace data (beta next month)
+- **Scheduled digests** — dashboard delivered to email or Slack
+- **Metric alerts** — threshold notifications on any number
+
+Feedback button is in the header, or reply here.
+
+---
+
+**What changed in this version:** cut the rationale section and the "here's why we did user research" framing, dropped the explanatory glue between features, tightened every line, and added a *Known gaps* section — the kind of detail a familiar reader will notice is missing and a new reader wouldn't have context for. Let me know if you want it shorter still, or pitched at a specific segment (admins, developers, execs).

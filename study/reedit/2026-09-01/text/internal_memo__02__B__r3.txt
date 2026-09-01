@@ -1,0 +1,30 @@
+I looked through the short version and couldn't find a results claim to remove — the productivity line ("This is not a change based on concerns about productivity. Your work has been excellent") was in the first draft, and it came out when I cut the rationale section for version two. The current text is schedule, logistics, norms, exceptions, and contact info.
+
+So here it is unchanged:
+
+---
+
+**Three-day office schedule starts [Month Day]**
+
+**Tuesday and Wednesday** are company-wide in-office days. Your **third day** is set by your team — managers confirm by **[Date]**. Core hours are [10:00 a.m. – 3:00 p.m.]; otherwise your start and end times are your own.
+
+**What's ready when**
+
+- Desk assignments — [Date], via [system]
+- Parking and badge access — active [Date]
+- Café full hours — [Date]
+
+**How to use the days:** collaborative work in the office, focused work at home. Meetings stay video-enabled for anyone remote, traveling, or out.
+
+**Exceptions:** fully remote employees are unaffected. For medical or caregiving needs, contact [HR contact] — confidentially. Everyday adjustments just need a heads-up to your manager.
+
+Open questions to **[channel]** through Friday or anonymously at **[link]**.
+
+---
+
+Two things you might have in mind, though:
+
+1. **"Collaborative work in the office, focused work at home"** — not a results claim, but it does imply the split produces better outcomes. If that's the sensitivity, I can flatten it to something purely descriptive like "Teams should plan collaborative sessions on in-office days."
+2. **The productivity line from draft one** — if that language got pulled into another document on your end and that's the one needing the edit, send me that version and I'll cut it there.
+
+Tell me which and I'll make the change.

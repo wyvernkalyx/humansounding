@@ -1,0 +1,25 @@
+# Mobile performance — v[X.Y]
+
+**Startup, bundle size, list rendering, network resilience, and battery use all improved this cycle.** Measured on a Pixel 6a over simulated 3G.
+
+**What changed**
+
+- **Startup.** Analytics init, flag hydration, and font preloading moved off the critical path. Flags now resolve on first paint — check any consumers reading the store synchronously at mount.
+- **Bundle.** Four dependencies dropped, AVIF with WebP fallback, route-split JS. First hit to a rarely-used screen is ~120ms slower on cold cache; prefetch closes that next cycle.
+- **Lists.** View recycling on inbox, search, and activity feed. Custom row heights need an explicit estimate or you lose most of the gain.
+- **Network.** Longer cache TTLs, backoff with jitter, offline actions queued to a write log and replayed on reconnect. Conflict resolution is last-write-wins.
+- **Battery.** Sync batches into a single wake window and honors Doze / Low Power Mode; expect up to 15 min staleness under battery saver.
+
+Perf gates now run on mid-tier Android over simulated 3G. Regressions above 10% on cold start or TTI block the release. Dashboard: [link].
+
+Next up: predictive prefetch, progressive image placeholders, TTI work on settings, report builder, and admin console.
+
+Staged rollout over the next several days. No migration required.
+
+---
+
+Two things worth a look before this ships:
+
+**The lead no longer leads with an outcome.** Without the numbers, the opening states scope rather than result. If you want the top line to still land, an alternative that isn't a results claim: *"This release focuses on how the app performs on mid-tier hardware and slow networks."*
+
+**Some numbers are still in there.** The ~120ms cold-cache cost and the 15-minute staleness window are quantitative, but they describe tradeoffs and expected behavior rather than improvements. If your constraint covers all measured figures and not just performance claims, those two need to come out as well — tell me and I'll cut them.

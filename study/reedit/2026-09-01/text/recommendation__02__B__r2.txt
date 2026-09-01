@@ -1,0 +1,20 @@
+**Re: [Employee Name] — Promotion to [Target Position Title], Req. #[XXXX]**
+
+Dear [Name / Promotion Committee],
+
+Promote [Employee First Name]. [He/She/They] [has/have] been doing this job for [timeframe] without the title.
+
+You have the record; here's what isn't in it. The [project/workstream] was scoped as a [Current Title] deliverable and [Employee First Name] expanded it into [outcome — e.g., a process redesign that cut cycle time 40%, now standard across three regions]. Nobody assigned that. During [difficult episode], [he/she/they] [specific decision] when the easier move was [alternative] — it cost [him/her/them] [short-term friction] and it was right. And [he/she/they] build[s] other people: [evidence — e.g., two of three analysts [he/she/they] mentored have since been promoted]. The current role doesn't reward that. This one requires it.
+
+The likely objection — [state it, e.g., no formal direct reports] — is fair. [He/She/They] [has/have] led [scope] informally since [month], including [specific hard thing handled independently]. The gap is experience, not aptitude, and it closes faster in the seat than outside it.
+
+This takes [Employee First Name] off my team and I'm recommending it anyway. I'd rather absorb the backfill than watch [him/her/them] plateau.
+
+Happy to discuss candidly — [phone] / [email].
+
+[Your Name]
+[Your Title]
+
+---
+
+**What I cut:** the numbered structure and headers (unnecessary at this length), the framing sentences that announced what I was about to say, and one of the three evidence points' elaboration. The opening line now carries the recommendation, so a reader who stops after ten words still gets it.

@@ -1,0 +1,17 @@
+# Dashboard redesign: shipped
+
+**Live for all accounts today.** Biggest change from beta: filters are now global, not per-widget — set a date range or segment once and it applies everywhere.
+
+**Other deltas from beta:**
+- Layouts persist and sync across devices (they reset on logout in beta)
+- Render time down to ~1s at 20+ widgets, from ~3s
+- Shareable views added, including read-only external links
+- Dark mode added
+
+**Didn't make it:** custom widgets (beta next month), scheduled digests, metric alerts.
+
+**Migration:** widgets carried over in order. Legacy dashboard available from the settings menu for 60 days, then retired.
+
+**Known issues:** filters don't apply to embedded reports yet; layout sync can lag ~30s across open sessions.
+
+Feedback to the header button or back to me.

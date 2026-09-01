@@ -1,0 +1,22 @@
+Heads up before the revision: this version doesn't contain a quantified results claim — the metrics dropped out back when we cut the bullets. The closest thing is the project reference in paragraph two, which implies a track record without stating an outcome. I've removed that, since it's the likeliest thing you meant. Everything else is untouched.
+
+---
+
+**Subject: Marketing Coordinator — [Your Name]**
+
+Hi [First Name],
+
+I'm applying for the Marketing Coordinator role, and I'd want to spend the first few months on three things: [opportunity #1], [opportunity #2], and documenting the content workflow so it doesn't live in one person's head.
+
+Those come from what I've seen [volunteering / contracting] here since [year]. I know the constraints, and I'd rather do a few things consistently than announce ten.
+
+Résumé attached. Happy to talk whenever it's useful.
+
+[Your Name]
+[Phone] • [Email]
+
+---
+
+**One tradeoff to be aware of:** that clause was the only evidence of what you've actually done here. What's left establishes that you've been around since [year], which still supports the plan — but if the reader is anyone other than the person who knows your work directly, the letter now leans entirely on the résumé for proof.
+
+**If I guessed wrong,** the other candidate is "I'd rather do a few things consistently than announce ten" — a claim about how you work rather than about outcomes, but it does gesture at reliability. Say the word and I'll cut that instead, or both.

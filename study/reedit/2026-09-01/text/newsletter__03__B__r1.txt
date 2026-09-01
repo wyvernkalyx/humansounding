@@ -1,0 +1,103 @@
+# Your Bottleneck Moved and Your System Didn't
+
+*A note for people who've already read the books*
+
+---
+
+You know the critique. Productivity porn, meta-work, the app-hopping cycle, the guy on YouTube with a Notion dashboard and no discernible output. Fine. Granted. Let's skip it.
+
+The more interesting question is why systems built by serious people, adopted by serious people, still degrade on a predictable schedule. Not the fake ones. The good ones.
+
+My working answer: **the canon was engineered against a constraint that stopped binding around 2012, and most of us are still optimizing the slack.**
+
+## The retrieval era is over
+
+GTD, the Zettelkasten revival, PARA, everything downstream — these are fundamentally *retrieval architectures*. The premise is that your mind is a bad storage device, that open loops consume working memory, and that a trusted external index converts anxiety into action. That premise was correct. It was also solving a 1990s problem: information was scarce relative to your ability to act on it, and the expensive step was finding the right thing at the right moment.
+
+That constraint is gone. Search is good. Capture is frictionless. Nobody's real problem is that the note is lost.
+
+The binding constraint now is **selection under structural overcommitment**, and no retrieval system addresses it. Worse, better retrieval makes it worse: you can now find, resurface, and reactivate every commitment you've ever made, which means your system is very efficiently feeding an already-saturated queue.
+
+Queueing theory is unkind here. If arrival rate exceeds service rate, no scheduling discipline stabilizes the system. You can reorder the queue. You can prioritize brilliantly. The queue still grows without bound. Every method in the canon is a scheduling discipline. **You cannot schedule your way out of λ > μ.** You can only reduce arrivals or increase capacity, and most of us have limited access to the second one.
+
+So the honest diagnosis for a lot of collapsed systems isn't "poor implementation." It's that the system was *working correctly* and correctly reported that you've taken on more than you can do. Then you shot the messenger and migrated to Things.
+
+## The review is not doing the work you think it is
+
+The weekly review is the load-bearing element in most methodologies, and the first thing everyone drops. Standard explanation: discipline failure.
+
+I don't buy it. People sustain harder rituals than a Sunday review — training plans, sourdough starters, spaced repetition streaks measured in years. What's different?
+
+The review isn't primarily an information task. It's an *emotional* task disguised as one. Its actual function is the recurring confrontation with the gap between stated and revealed priorities. That's why it's aversive, and why the aversion scales with how out of alignment you are. The review works great when you're roughly on track and becomes unbearable exactly when you most need it — a fantastic bit of negative-feedback design.
+
+This has a design implication. Any mechanism whose difficulty is proportional to your dysfunction will fail during dysfunction. If a component only runs when things are going well, it's decorative.
+
+## The legibility trap
+
+Systems represent what's easy to represent. Discrete, nameable, checkable units. Which means your system's model of your life systematically overweights:
+
+- work with clean boundaries
+- work you initiate rather than absorb
+- work that produces artifacts
+
+and systematically underweights: judgment, relationship maintenance, ambient coordination, the twenty-minute conversation that prevented three weeks of rework, thinking that hasn't resolved into a deliverable yet.
+
+Over time you don't just measure the legible stuff. You *drift toward* it, because it's the stuff that generates the satisfying feedback. This is a Goodhart problem inside your own head, and it's the mechanism by which highly organized people end up producing a lot of medium-value output with excellent hygiene.
+
+Note that this failure is invisible from inside the system. The system reports full compliance. It has no field for "the important thing was illegible so I did tickets instead."
+
+## No restart semantics
+
+Every methodology specifies steady-state operation. Almost none specify recovery.
+
+There's no defined procedure for reentry after an eleven-day gap, which is guaranteed — illness, travel, a launch, a crisis, ordinary entropy. So you return to a state that's stale, wrong, and mildly accusatory. Trust in the index breaks. And once trust breaks, the entire premise collapses, because the whole thing was an exercise in offloading vigilance to something you believe.
+
+The migration to a new app is often the only available *reset ritual*. It's not really tool-seeking. It's bankruptcy proceedings with extra steps. Cheaper to declare it directly.
+
+## The part nobody wants to say
+
+A mature system is also an identity artifact. It encodes a self: someone who reads those papers, ships that side project, maintains those relationships, becomes that person.
+
+Which means pruning it isn't a maintenance operation. It's an admission. Deleting the abandoned project isn't deleting a row; it's conceding you're not the person who does that. That's why backlogs grow monotonically even among people who know better, and why "just archive it" advice bounces off. The cost isn't cognitive. It's grief-adjacent, at low intensity, spread across four hundred items.
+
+Any subtraction mechanism that doesn't account for this will lose to the mechanism that does: neglect.
+
+## Where systems genuinely earn their keep
+
+To be fair to the canon, there are real regimes where it dominates:
+
+- **High arrival rate, low individual stakes, high dropped-ball cost.** Ops, support, clinical coordination, parenting logistics. Retrieval architecture is exactly right here and outperforms memory enormously.
+- **Long-horizon, low-urgency work with no external forcing function.** Dissertations, books, anything where nothing bad happens for eight months. The system supplies the pressure reality won't.
+- **Multi-stakeholder commitment tracking.** When the cost of failure is reputational and distributed, an index beats a brain, always.
+
+If you're in one of those regimes and your system fails, it's probably an implementation problem and worth fixing properly.
+
+If you're not — if your work is a small number of consequential bets under ambiguity — you're likely at the point of diminishing returns, and further investment is a tax.
+
+## Design constraints that have survived my last decade
+
+Not tips. Constraints. Any system I adopt now has to satisfy these or I don't bother.
+
+**It must reduce arrivals, not just order them.** A hard WIP cap with a forced eviction rule. If nothing gets killed when something new is admitted, it isn't a cap.
+
+**It must be operable at 60% capacity.** Anything requiring peak executive function is a fair-weather instrument. Test it on your worst Tuesday, not your best Sunday.
+
+**It must have defined failure and recovery states.** Bankruptcy is a legitimate, pre-authorized transition. Ten minutes, blank page, no forensic audit, no guilt.
+
+**It must be cheaper to maintain than the errors it prevents.** Actually do the arithmetic once. Most complexity fails this and survives on aesthetics.
+
+**It must have a slot for illegible work.** Even a crude one. Otherwise it quietly reorganizes your life around checkboxes.
+
+---
+
+The thing I'd push on, if you're deciding whether to rebuild this month: figure out whether your last three collapses were *capacity* failures or *selection* failures. They look identical from the inside and have opposite remedies. Capacity failures want better infrastructure. Selection failures want fewer commitments and usually one uncomfortable conversation.
+
+Infrastructure is more fun. That's the whole problem.
+
+---
+
+*Reply with which regime you're actually in — I'm curious whether the retrieval/selection split holds up across readers or whether I'm generalizing from a narrow sample.*
+
+---
+
+**Adjacent versions available:** I can push this further toward the queueing-theory angle as a standalone piece, split the legibility section into its own issue, or write a counter-argument version steelmanning the canon against exactly these critiques. Happy to also match a specific house style if you send a prior issue.

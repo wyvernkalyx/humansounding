@@ -1,0 +1,21 @@
+# Mobile performance — v[X.Y]
+
+**Cold start is down from 4.1s to 1.6s, the bundle is 38% smaller, and long lists now hold 60fps.** P50 on a Pixel 6a over simulated 3G.
+
+**What changed**
+
+- **Startup.** Analytics init, flag hydration, and font preloading moved off the critical path. Flags now resolve on first paint — check any consumers reading the store synchronously at mount.
+- **Bundle.** Four dependencies dropped, AVIF with WebP fallback, route-split JS. First hit to a rarely-used screen is ~120ms slower on cold cache; prefetch closes that next cycle.
+- **Lists.** View recycling on inbox, search, and activity feed. Custom row heights need an explicit estimate or you lose most of the gain.
+- **Network.** Longer cache TTLs, backoff with jitter, offline actions queued to a write log and replayed on reconnect. Conflict resolution is last-write-wins.
+- **Battery.** −22% per session. Sync batches into a single wake window and honors Doze / Low Power Mode; expect up to 15 min staleness under battery saver.
+
+Perf gates now run on mid-tier Android over simulated 3G. Regressions above 10% on cold start or TTI block the release. Dashboard: [link].
+
+Next up: predictive prefetch, progressive image placeholders, TTI work on settings, report builder, and admin console.
+
+Staged rollout over the next several days. No migration required.
+
+---
+
+*Metrics are still placeholders — swap in real numbers before publishing.*

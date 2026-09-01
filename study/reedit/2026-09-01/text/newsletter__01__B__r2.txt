@@ -1,0 +1,72 @@
+**THE SLOW BUILD**
+*Issue #48 — Small changes, stacked over time*
+
+---
+
+**Subject:** Your morning routine isn't broken. It's expired.
+
+**Preview:** For people on their fifth attempt: the failure modes that come *after* you know how to build one.
+
+---
+
+If you've read the books, you already have the anchors and the two-minute rule. Knowing more about habit formation isn't your constraint and hasn't been for years.
+
+Here's the actual problem: **routines don't break, they get outgrown** — and the skill that builds one is not the skill that maintains it. Everything below assumes you can already build. These are the failure modes on the other side.
+
+---
+
+**The floor became the ceiling.**
+You shrank it until it was stupid. It worked. Eighteen months later you're still doing one page. The minimum viable version was supposed to be a ramp, but nothing in the system ever tells you to leave it — perfect adherence to something that stopped mattering.
+
+*Fix:* hold two numbers. A **floor** (never below, protects the chain, never changes) and a **default** (a normal day when nothing has gone wrong). Review the default quarterly. If it's been static for a year, you're maintaining a streak, not a habit.
+
+**The reason expired.**
+The 6am writing block was built to finish a book. The book came out in 2023. This is the most common failure in people who are *good* at habits — the routine outlives the goal, gets absorbed into identity, and becomes hard to kill precisely because you're proud of keeping it.
+
+*Fix:* expiration dates. Every element gets one, six or twelve months out. On that date it has to be re-argued for, not automatically renewed.
+
+**You don't know what's load-bearing.**
+Six elements, and one or two are doing nearly all the work. You've never run it without any given piece, so you're guessing.
+
+*Fix:* remove one element for two weeks. Note what degrades. Restore, move to the next. A quarter to get through six items, and you'll cut at least one permanently.
+
+**You designed for your good weeks.**
+Normal Tuesdays aren't where routines die. The flu is. The newborn is. Anyone can hold a system at full capacity.
+
+*Fix:* three named tiers. **Full** (75 min). **Compressed** — load-bearing element only, for travel and deadlines (20 min). **Survival** — ten breaths outside, for crisis. The content matters less than the naming. Dropping to Survival should be a move within the system, not evidence it failed.
+
+---
+
+**Re-entry is a separate skill**
+
+Never-miss-twice handles a bad Tuesday. It does nothing for the six-week gap, where you stopped for legitimate reasons and now there's a wall around restarting. What I've learned doing this badly, repeatedly:
+
+- **Restart below your floor.** You'll want to resume at your old default. You'll fail in four days and add another layer to the wall.
+- **Don't diagnose first.** That's procrastination in a lab coat. Restart tiny, *then* diagnose with current data.
+- **Kill the debt narrative.** There's no catch-up. Nothing is owed. The chain was a useful fiction until it started charging interest.
+- **Expect two weeks that feel worse than starting from zero.** The comparison to your old competence is the entire cost, and it's temporary.
+
+---
+
+**The metric you've outgrown**
+
+You're tracking whether you did the thing. Right metric for month one.
+
+Better question now: **is the downstream thing moving?** Two years at 96% adherence with no manuscript, no change in bloodwork, no different internal weather isn't a habit success — it's a disciplined hobby. Once a quarter, ignore the calendar of Xs and ask what the hour is *for*. "Feeling like myself" is a legitimate answer. Just say it out loud, because if that's the goal, half your elements are optimized for something else.
+
+---
+
+**This week: an audit, not a habit**
+
+1. List every element with its honest duration.
+2. Mark each **load-bearing**, **scaffolding**, or **unexamined**.
+3. Note the goal it was built for, and whether that goal is still live.
+4. Write your Compressed and Survival tiers.
+5. Remove the one unexamined element you're least willing to lose, for two weeks.
+
+Step five is the whole exercise. The resistance you feel toward it is the information.
+
+Reply and tell me what you cut. I'll share a few next issue.
+
+**Sam**
+*The Slow Build*

@@ -1,0 +1,67 @@
+Fair — the original didn't specify, so I defaulted to a general audience. Here it is again for someone who already knows the standard playbook.
+
+---
+
+# When the Meeting Advice Isn't the Problem
+
+You know the checklist. Agenda as questions, name the decider, invite fewer people, silent read at the top, capture decisions and owners in the last five minutes, end early. You've probably run meetings that did all of it and still felt like nothing happened.
+
+That's the interesting case. The checklist assumes the meeting's stated purpose is its real purpose. Often it isn't, and no amount of facilitation discipline will fix a meeting that's doing a job nobody has named.
+
+## Diagnose the actual function first
+
+Before optimizing a recurring meeting, figure out what it's really for. The common hidden functions:
+
+**Reassurance.** The meeting exists because a senior person is anxious and being in the room lowers the anxiety. The stated purpose is coordination; the actual purpose is presence. You can't fix this with a tighter agenda. You fix it by finding a cheaper way to deliver the reassurance — a written update they trust, a standing 1:1, a dashboard they check themselves.
+
+**Cover.** The meeting exists so that decisions have witnesses. Nobody wants to own the call alone, so it gets made in a room where the ownership diffuses. This one masquerades as "alignment." The tell is that the discussion is thorough, the decision is unremarkable, and nobody can later say who made it.
+
+**Compensation for a broken information channel.** Two teams meet weekly because they don't trust each other's written updates, or because there's no shared source of truth about the thing they both touch. The meeting is a patch over a systems problem. It will run forever.
+
+**Social maintenance.** Genuinely valuable, frequently disguised as work. If the real value of your team's Monday meeting is that people like each other more afterward, say so and design for it. A bad status meeting is a worse social event than a good social event.
+
+Each diagnosis implies a different fix, and only one of them ("this is actually a decision forum, it's just run badly") responds to the standard advice.
+
+## The undiscussable is where your time goes
+
+Meetings that circle for an hour and land nowhere usually have a real disagreement in them that nobody will say out loud. Someone thinks the project shouldn't exist. Someone thinks a peer is underperforming. Someone thinks the exec's pet initiative is doomed. So the group argues about sequencing and resourcing instead, endlessly, because the surface argument can't resolve without the real one.
+
+Facilitation techniques don't surface this. What sometimes does:
+
+- **Name the shape without naming the accusation.** "I notice we've come back to timeline three times and it hasn't moved. My guess is the timeline isn't the actual disagreement. Is there something we're not saying?"
+- **Take it out of the room.** If the undiscussable is interpersonal, the group meeting is the worst possible venue. Two 1:1s beforehand will do more than any amount of skilled moderation.
+- **Ask for the strongest objection explicitly, and be the first to give one.** People match the level of candor demonstrated, not the level invited.
+
+Sometimes the answer is that the topic genuinely can't be discussed in this configuration of people. That's worth knowing. Change the configuration.
+
+## Where the standard advice fails
+
+**"Name the decider" fails when the decider doesn't want the job.** Naming them is easy; getting them to actually decide in the room is the hard part. Reduce the cost of deciding: offer a reversible version, set a review date, make the decision explicitly provisional. "Let's go with A and revisit in three weeks if the numbers don't move" is often available when "let's commit to A" isn't.
+
+**"Silent read" fails when the document is advocacy.** If the pre-read is a case for a conclusion rather than an honest presentation of the tradeoffs, the silent read just launders persuasion as shared context. The fix is upstream: the doc should include the strongest version of the alternative, and the author should be the one to write it.
+
+**"Invite fewer people" fails against political reality.** Exclusion has costs the efficiency framing ignores. If leaving someone out means they'll relitigate the decision later, or that their team learns about it secondhand, you haven't saved time — you've moved it. Sometimes the right move is a larger room and a faster meeting. Sometimes it's a small room plus a genuine pre-brief to the people you left out.
+
+**"End early" fails in high-context, low-trust rooms.** Some of the most valuable minutes in a meeting are the unstructured ones at the end, where people say the thing they weren't going to say. Efficiency is not the only variable. Know which meetings need slack.
+
+## Managing your own gravity
+
+If you're senior in the room, your opinion doesn't enter the discussion — it ends it. This is the single most common way a well-designed meeting produces a bad outcome, and it's mostly invisible from where you're sitting, because from your seat it looks like everyone agreed with you.
+
+Practical countermeasures: speak last, and mean it. Ask people to write positions down before discussion so you can see the pre-anchor distribution. When you do state a view, mark its strength explicitly — "weakly held, argue with me" vs. "this one I'm firm on" — because otherwise everything you say gets read as firm. And notice when the room converges suspiciously fast; that's usually not consensus, it's deference.
+
+The failure mode on the other side: performing openness while everyone knows the decision is made. That's worse than deciding openly. If you've already decided, say so and use the meeting to pressure-test implementation.
+
+## Killing a meeting you don't own
+
+The highest-value move and the one nobody writes about, because it's a political problem, not a process problem.
+
+Attacking the meeting attacks whoever created it. So don't. Attack the underlying need: propose a replacement that serves the original purpose more cheaply, offer to own it, and frame it as a trial. "I'll send a written update every Tuesday covering exactly what we cover here — want to try dropping the sync for a month and see if anything breaks?" The owner keeps the outcome and loses only the meeting.
+
+If that fails, reduce your surface area: attend biweekly, send a delegate, ask to be dropped from the half you don't need. Partial exits are far more achievable than full ones, and they accumulate.
+
+## The org-level version
+
+Individual meeting hygiene has a ceiling, and most people hit it. Past that point, calendar load is a symptom of structure: unclear decision rights, teams whose dependencies don't match the org chart, no trusted written channel, a culture where nothing counts unless it was said in a room.
+
+If your calendar is full and each individual meeting is defensible, the problem isn't the meetings. It's that the organization is routing its coordination through synchronous conversation because the alternatives don't work or aren't trusted. That's fixable, but not by anyone running a better hour.

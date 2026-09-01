@@ -1,0 +1,80 @@
+# Meeting Hygiene, Second Pass
+
+You know the playbook. Agenda as questions. Named decider. Silent read at the top. Fewer people, same-day notes, kill the recurring meetings nobody remembers creating. You may have written some of it yourself in a Notion doc that three people read.
+
+And your calendar is still bad.
+
+That's not an execution problem, and one more listicle won't fix it. The standard advice is correct and insufficient, because it treats meetings as a coordination technology when they're mostly a political and emotional one. Here's the version for people who already tried the first version.
+
+## Every persistent bad meeting is solving a problem you haven't named
+
+If a meeting is obviously useless and it still exists, it isn't useless. It's doing something other than its stated job, and whatever that something is, it's load-bearing.
+
+The usual suspects:
+
+**Anxiety management.** A weekly status meeting where nothing happens is often a VP's way of confirming the building hasn't burned down. The information is in the dashboard, but the dashboard doesn't produce the feeling. Delete the meeting and the anxiety reroutes into Slack DMs, which is worse.
+
+**Diffusion of responsibility.** Some meetings exist so that a decision has eleven witnesses. Nobody wants to own the call, so they manufacture a room where the call gets made ambiently and no single name is attached. These meetings are exquisitely resistant to your DACI framework, because clarity is the thing they're designed to prevent.
+
+**Access.** For a lot of people, the weekly sync is the only reliable channel to someone senior. Cancel it and you haven't saved their time — you've cut off their escalation path, and they will find a more expensive way to escalate.
+
+**Belonging.** The meeting is where people find out they're still on the team.
+
+You cannot delete a meeting by attacking its stated purpose. You have to substitute for its real one. Replace the status meeting with a written update *plus* a standing 15-minute slot the anxious VP can use whenever they want, and it'll actually stick. Skip the substitution and the meeting comes back in ninety days under a new name.
+
+So before you kill anything: what breaks, and for whom, and what do they do instead?
+
+## Async isn't the default; convergence pressure is the variable
+
+"Could this have been an email" is a slogan, not an analysis. Written communication has real costs that async-maximalists systematically underweight:
+
+- **Latency compounds.** A decision requiring four exchanges takes four days async and eleven minutes live. Sometimes the eleven minutes is cheap at the price.
+- **It advantages writers.** Async-first cultures quietly hand disproportionate influence to whoever writes fastest and most confidently, which correlates with fluency and seniority more than with being right.
+- **Threads fork.** Disagreement in a comment thread branches instead of converging. Nobody has to concede in writing, so nobody does.
+- **It's bad at conflict.** Text strips tone, and people read hostility into neutral sentences. Any exchange with real disagreement in it degrades in writing.
+
+The useful variable isn't sync-vs-async. It's whether the thing needs **convergence pressure** — a moment where the group must actually land somewhere, with social cost attached to not landing. Meetings manufacture convergence pressure. That's their comparative advantage, and it's nearly the only one.
+
+So: information distribution, async. Idea generation, async (groups are worse at it live anyway). Anything requiring a group to *converge under disagreement* — meet, and know that's what you're paying for.
+
+## Whoever frames the question has already won
+
+"Write the agenda as a question, not a topic" is good advice that quietly hands you a lot of power, and you should be honest with yourself about using it.
+
+"Do we cut reporting to ship onboarding by the 15th?" has smuggled in the premise that those are the two options. Someone in that room thinks the real question is whether onboarding should ship at all, and now they have to fight the agenda before they can fight the substance — which reads as obstruction and costs them credibility.
+
+The framing *is* the decision, most of the time. Two implications:
+
+If you're framing: circulate the question before the meeting to the people most likely to disagree with it, specifically asking whether it's the right question. This is not politeness. It's the cheapest possible way to find out that your entire agenda is built on a premise your staff engineer thinks is insane.
+
+If you're attending: contest the frame in the first two minutes or accept it. Litigating the question at minute forty makes you the person who derailed the meeting, regardless of whether you were right.
+
+## The decider is whoever can reopen it
+
+Naming a decider fails constantly, and it fails in a specific way: you name the nominal decider, and there's someone else who can quietly reverse the decision later without ever having been in the room.
+
+The diagnostic is simple. Ask: **who can reopen this, and what would it take?**
+
+If the answer is "the CTO, in a hallway, in about four seconds," then you didn't run a decision meeting. You ran a recommendation meeting. That's fine — recommendation meetings are legitimate and useful — but calling it a decision meeting is a lie the room can detect, and it produces the specific cynicism where people stop bringing real objections because they know the real conversation happens somewhere else.
+
+Say what it is. "We're producing a recommendation for Dana, who'll take it Thursday. Our job is to make it good enough that she says yes." People engage seriously with an honest recommendation meeting. They perform at a dishonest decision meeting.
+
+Related: if a decision keeps getting reopened, the problem is almost never the meeting. It's that the decision was made without someone whose consent it actually needed, and they're routing around it. Adding a decision-log entry won't help. Finding that person will.
+
+## Attendance is a status good, so meetings accrete
+
+Calendars grow because inclusion is a signal and exclusion is an insult. Nobody gets promoted for declining. The cost of one more attendee is diffuse and the cost of leaving someone out is specific and personal, so the gradient points one direction forever.
+
+You can't fix this with individual willpower. You need structure that makes shrinkage the default:
+
+- **Expiration dates on recurring meetings.** Not "we'll review it," which never happens — an actual end date, requiring an actual renewal. Most won't get renewed, and nobody has to be the person who killed anything.
+- **Periodic bankruptcy.** Once a year, delete every recurring meeting on the team and let people re-create only what they miss. You'll re-create maybe half. This is brutal and it works, and it works partly *because* it's indiscriminate — no one's meeting was singled out.
+- **Separate attendance from access.** The reason people fight to stay on invites is that the invite is how they find out what happened. Make notes genuinely good and genuinely public, and the invite stops being the only channel. Most of the resistance to being uninvited is actually resistance to being uninformed.
+
+## You can only set defaults
+
+Past a certain scope you cannot facilitate your way to better meetings, because you're not in most of them. What propagates isn't skill, it's defaults: calendar lengths, template agendas, whether declining is normal, whether people watch you leave meetings that turned out not to need you.
+
+Most of the leverage is in a handful of dumb, mechanical things that survive without a skilled human in the room. Default event length set to 25 minutes. A meeting template that won't let you save without a question and an owner. A norm that anyone can ask "what are we deciding?" without it being rude. A decision log that's actually maintained.
+
+The decision log is the underrated one. Meetings are ephemeral and decisions decay — six months out, nobody remembers what was decided or why, so it gets relitigated by people who weren't there. A searchable record of *decision, date, rationale, who decided* eliminates an entire category of meeting: the one where you rebuild context that was never written down.

@@ -1,0 +1,33 @@
+Here's a version that assumes the reader already knows your story — no origin recap, no scene-setting:
+
+---
+
+Made it official today: Director of Operations.
+
+Same team, same problems worth solving, slightly bigger lever to pull on them.
+
+Thanks to everyone who's been in the trenches on this — you know who you are, and you know exactly which projects I'm thinking of.
+
+More soon.
+
+---
+
+**Or a slightly warmer take:**
+
+---
+
+It's official — I'm now Director of Operations at [Company].
+
+You all watched most of this happen in real time, so I'll skip the recap. What I'll say instead: the work that got me here was never mine alone, and the work ahead won't be either.
+
+[Manager's name], thank you. Team, let's keep going.
+
+---
+
+**What changed and why:**
+- Cut the "when I joined X years ago" arc — that's exposition for strangers
+- Dropped the explanation of what the role means
+- Traded specific accomplishments for knowing references ("you know which projects") — an insider nod reads as confidence, not vagueness
+- Shortened overall; readers who know the context get impatient with setup
+
+One caveat worth naming: LinkedIn is a mixed audience by default. Even if your close network knows everything, recruiters, former colleagues, and second-degree connections will see this too. If reaching them matters to you, the first version does more work. If this post is really for your immediate circle, the short one lands better and sounds less like a press release.

@@ -1,0 +1,19 @@
+Fair — here's a version written as a follow-up, for people who've been watching this play out:
+
+---
+
+**Six months in. The four-day week is staying.**
+
+The Friday coverage problem we flagged in month one took three attempts to solve. The version we landed on: [rotating on-call, one person, capped at two hours]. It works because we finally stopped pretending every role could run on an identical schedule.
+
+The meeting cull turned out to be the whole thing. Not the extra day off — the fact that we had to justify every recurring invite on the calendar to make four days survivable. [X] of them are gone. Nobody's asked for them back.
+
+[Delivery held steady / revenue up X%]. That was the part I was least sure about and it's turned out to be the least interesting.
+
+The part I underestimated: it collapses the moment leadership doesn't log off. If the founders are answering Slack on Fridays, you haven't given anyone a day back — you've just made them feel bad about taking one. That's been harder to hold than any of the operational stuff.
+
+Anyone who asked me about this in March and got a hedge: the answer is yes, and I'd start with the calendar audit, not the schedule.
+
+---
+
+If you tell me what the actual sticking points were — the Friday coverage fix, the numbers, whether this was a trial that converted or a straight switch — I can drop the brackets and make it specific. The insider version lives or dies on the details only you have.
