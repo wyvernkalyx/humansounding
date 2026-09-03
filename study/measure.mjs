@@ -164,14 +164,47 @@ if (BASELINE) {
   // Dates come from MANIFEST.tsv where one exists and is readable. The
   // newsletter manifest is deliberately not read: it lists who Gregg subscribes
   // to, which is his information and not part of any finding.
+  //
+  // The date column is resolved by HEADER NAME, not by position. It used to be
+  // read from column 2 for every arm, which is the date column in the human and
+  // medium manifests and something else entirely in the other three: "served"
+  // in the generated arms, and the post URL in substack. Nothing had noticed,
+  // because the value was written into human-baseline.json without ever being
+  // parsed as a date. A manifest that records a URL under the heading "date" is
+  // worse than one that records nothing, and provenance is the entire argument
+  // in a human arm.
+  const DATE_COLUMNS = ["date", "year"];
+  // Memoised per directory. dateFor is called once per document, and without
+  // this the ragged-row warning printed 853 times for one bad manifest.
+  const dateCache = new Map();
   const dateFor = (dir) => {
+    if (dateCache.has(dir)) return dateCache.get(dir);
+    const v = readDates(dir);
+    dateCache.set(dir, v);
+    return v;
+  };
+  const readDates = (dir) => {
     if (basename(dir) === "newsletter") return {};
     try {
-      const rows = readFileSync(join(dir, "MANIFEST.tsv"), "utf8").trim().split("\n").slice(1);
-      return Object.fromEntries(rows.map((r) => {
+      const lines = readFileSync(join(dir, "MANIFEST.tsv"), "utf8").trim().split("\n");
+      const header = lines[0].split("\t").map((h) => h.trim().toLowerCase());
+      const di = DATE_COLUMNS.map((n) => header.indexOf(n)).find((i) => i !== -1);
+      if (di === undefined) {
+        console.log(`  ! ${basename(dir)}/MANIFEST.tsv has no date or year column. Dates omitted from the baseline.`);
+        return {};
+      }
+      // A row whose field count does not match the header is not parseable by
+      // position, and guessing which column slipped is how a wrong date gets
+      // published with a manifest behind it. Skipped and counted out loud.
+      let ragged = 0;
+      const out = {};
+      for (const r of lines.slice(1)) {
         const c = r.split("\t");
-        return [basename(c[0] || "", ".txt"), c[2] || null];
-      }));
+        if (c.length !== header.length) { ragged++; continue; }
+        out[basename(c[0] || "", ".txt")] = c[di] || null;
+      }
+      if (ragged) console.log(`  ! ${basename(dir)}/MANIFEST.tsv: ${ragged} row(s) do not match the ${header.length}-column header. Dates omitted for those documents.`);
+      return out;
     } catch { return {}; }
   };
   const payload = {
@@ -235,15 +268,93 @@ for (const id of ids) {
 const cad = (a) => a.docs.reduce((s, d) => s + d.cadenceCV, 0) / (a.docs.length || 1);
 console.log("\n" + "sentence-length CV".padEnd(24) + arms.map((a) => cad(a).toFixed(3).padStart(26)).join(""));
 
-// Non-overlapping intervals are the only claim this design supports.
+// Non-overlapping intervals are the only claim this design supports, and for
+// as long as this script has existed it has reported that claim as a bare
+// yes/no. On 2026-09-03 the placeholder check found ai-openai-55 against human
+// on contrastive negation flipping from "not separated" to "separated" when
+// two per cent of the words were removed. The intervals had been overlapping
+// by 0.021 and nothing in the output said so, so that verdict was
+// indistinguishable from one where the intervals miss by a mile.
+//
+// Two changes. The margin is printed for every rule, so a reader can see how
+// close the call was. And a verdict that a single document could overturn is
+// labelled fragile instead of being reported as a finding.
+//
+// Fragility is measured by leave-one-out over documents -- the same unit of
+// independence the bootstrap resamples. Drop one document from either arm,
+// recompute both intervals, and see whether the verdict changes. A separation
+// that survives every single-document deletion is a property of the corpus. One
+// that does not is a property of which documents happened to be collected, and
+// the difference matters more than the decimal place the rate is printed to.
+//
+// The margin is defined once, so "separated" and "how close" cannot disagree:
+//   gap = max(lo) - min(hi)
+// Positive means the intervals clear each other by that much. Negative means
+// they overlap by that much. Zero is a tie and is not a separation.
+const gapOf = (p, q) => Math.max(p.lo, q.lo) - Math.min(p.hi, q.hi);
+
 if (arms.length === 2 && arms.every((a) => a.docs.length >= MIN_FOR_CLAIMS)) {
-  console.log("\nSeparated (95% intervals do not overlap):");
-  let any = false;
-  for (const id of ids) {
-    const [x, y] = arms.map((a) => out.arms[a.arm].rates[id]);
-    if (x.lo > y.hi || y.lo > x.hi) { any = true; console.log(`  ${labels[id]}: ${x.rate.toFixed(2)} vs ${y.rate.toFixed(2)}`); }
+  const [A, B] = arms;
+  const dropOne = (docs, i) => docs.filter((_, k) => k !== i);
+
+  // How many single-document deletions change the verdict, and from which arm.
+  function fragility(id, separated) {
+    const flips = { [A.arm]: 0, [B.arm]: 0 };
+    for (let i = 0; i < A.docs.length; i++) {
+      const g = gapOf(rateWithCI(dropOne(A.docs, i), id, A.arm), out.arms[B.arm].rates[id]);
+      if (g > 0 !== separated) flips[A.arm]++;
+    }
+    for (let i = 0; i < B.docs.length; i++) {
+      const g = gapOf(out.arms[A.arm].rates[id], rateWithCI(dropOne(B.docs, i), id, B.arm));
+      if (g > 0 !== separated) flips[B.arm]++;
+    }
+    return flips;
   }
-  if (!any) console.log("  none. On this corpus, no tell separates the two arms.");
+
+  console.log("\nSeparation of 95% intervals, with margin");
+  console.log("gap > 0 means the intervals clear each other. Rules flat at zero in both arms are omitted.\n");
+  const head2 = "  " + "tell".padEnd(24) + A.arm.slice(0, 11).padStart(12) + B.arm.slice(0, 11).padStart(12) + "gap".padStart(9) + "   verdict";
+  console.log(head2);
+  console.log("  " + "-".repeat(head2.length - 2));
+
+  const fragile = [], solid = [];
+  for (const id of ids) {
+    const p = out.arms[A.arm].rates[id], q = out.arms[B.arm].rates[id];
+    if (p.rate === 0 && q.rate === 0) continue;
+    const gap = gapOf(p, q);
+    const separated = gap > 0;
+    let verdict;
+    if (separated) {
+      const flips = fragility(id, separated);
+      const n = flips[A.arm] + flips[B.arm];
+      if (n) {
+        verdict = `FRAGILE -- overturned by dropping ${n} single document${n === 1 ? "" : "s"}`;
+        fragile.push(id);
+      } else {
+        verdict = "separated";
+        solid.push(id);
+      }
+      out.arms[A.arm].rates[id].fragileFlips = flips[A.arm];
+      out.arms[B.arm].rates[id].fragileFlips = flips[B.arm];
+    } else {
+      verdict = gap === 0 ? "tie, not a separation" : "overlap";
+    }
+    out.arms[A.arm].rates[id].gapVs = { arm: B.arm, gap: +gap.toFixed(4), separated };
+    console.log("  " + (labels[id] || id).slice(0, 23).padEnd(24) +
+      p.rate.toFixed(2).padStart(12) + q.rate.toFixed(2).padStart(12) +
+      ((gap >= 0 ? "+" : "") + gap.toFixed(3)).padStart(9) + "   " + verdict);
+  }
+
+  console.log("");
+  if (!solid.length && !fragile.length) {
+    console.log("  No tell separates the two arms on this corpus.");
+  } else {
+    if (solid.length) console.log(`  Survives leave-one-out: ${solid.map((id) => labels[id] || id).join(", ")}`);
+    if (fragile.length) {
+      console.log(`  Does NOT survive leave-one-out: ${fragile.map((id) => labels[id] || id).join(", ")}`);
+      console.log("  A fragile separation is not a finding. Report it as too close to call, or collect more documents.");
+    }
+  }
 } else if (arms.length === 2) {
   console.log(`\nSeparation verdict suppressed: needs ${MIN_FOR_CLAIMS}+ documents in each arm.`);
 }
