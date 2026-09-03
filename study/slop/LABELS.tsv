@@ -1,0 +1,5 @@
+# Superseded 2026-09-02. The experiment is blind now: you label by passage
+# number, not by filename, because a filename names the arm and an arm names
+# the authorship.
+#
+# Use SLOP-LABELS.tsv instead. Read SLOP-READ-THIS.txt. Do not open SLOP-KEY.tsv.

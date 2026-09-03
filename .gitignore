@@ -42,3 +42,14 @@ _to_delete/
 # Reddit text is not, same rule as study/corpus/*/*.txt.
 study/peer/*/quote_bank.txt
 study/peer/*/synthesis.md
+
+# Slop experiment packet. SLOP-READ-THIS.txt and label.html embed 30 corpus
+# passages verbatim -- Medium articles, newsletters, 2004 blogs -- so they fall
+# under the same rule as study/corpus/*/*.txt even though they are not in a
+# corpus directory. The labels, the key and the template carry no text and stay
+# tracked, which is what makes the result reproducible.
+study/slop/SLOP-READ-THIS.txt
+study/slop/label.html
+
+# Raw scraped HTML kept for debugging an extractor. Third-party text, and large.
+study/substack-debug.html
