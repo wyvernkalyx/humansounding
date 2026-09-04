@@ -153,12 +153,21 @@ export async function listModels(V, VENDOR, KEY) {
 // of the same conversation must be able to fork it after round one and send
 // two different continuations, and a client that kept its own history could not
 // do that without the two branches contaminating each other.
-export async function chat(V, VENDOR, KEY, model, messages) {
+// `extra` is merged into the request body. Currently unused, and kept only
+// because the next caller will want it.
+//
+// Its first use was `{ temperature: 0 }` in the scorer, which Claude Opus 5
+// rejects with a 400: "`temperature` is deprecated for this model". That is the
+// third time a request field accepted by some models and not others has broken a
+// run here. Before adding anything to this object, send it to the model you
+// actually intend to call and read the response, because the failure arrives as
+// a 400 on every request rather than as a warning on the first.
+export async function chat(V, VENDOR, KEY, model, messages, extra) {
   if (V.local) return { text: V.reply(messages), served: V.served() };
   const d = await req(V, VENDOR, V.url(KEY, model), {
     method: "POST",
     headers: V.headers(KEY),
-    body: JSON.stringify(V.body(model, messages)),
+    body: JSON.stringify({ ...V.body(model, messages), ...(extra || {}) }),
   });
   const text = (V.text(d) || "").trim();
   if (!text) throw new Error(`empty response (${V.why(d)})`);
