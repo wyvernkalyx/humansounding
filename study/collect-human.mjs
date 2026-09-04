@@ -51,6 +51,11 @@ const DATE = arg("date");
 const WHY = arg("why");
 const N = Number(arg("n", 40));
 const BEFORE = arg("before") ? Date.parse(arg("before") + "T00:00:00Z") : null;
+// The bootstrap in measure.mjs has been seeded since 2026-08-31 so that published
+// intervals reproduce. The SAMPLING was not, which left the human arm -- the one
+// arm whose provenance is the entire argument -- impossible for anyone, us
+// included, to rebuild. Same reasoning, same default seed.
+const SEED = Number(arg("seed", 20260831));
 if (arg("before") && Number.isNaN(BEFORE)) { console.error("--before must be YYYY-MM-DD"); process.exit(1); }
 
 if (!IN || !LABEL || !DATE || !WHY) {
@@ -199,6 +204,23 @@ const words = (t) => (t.match(/\S+/g) || []).length;
 
 // --- sampling ---------------------------------------------------------------
 
+// mulberry32, the generator measure.mjs and substance.mjs already use. Copied
+// rather than imported because this script deliberately has no dependency on
+// the measurement side: it must be runnable against a raw corpus download
+// before any of the study exists.
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+// Seeded per label as well as per seed, so collecting a second source does not
+// reshuffle the first one's sample.
+const rand = mulberry32((SEED ^ [...LABEL].reduce((h, c) => Math.imul(h ^ c.charCodeAt(0), 16777619) >>> 0, 2166136261)) >>> 0);
+
+
 // Reservoir sampling. Keeps exactly N documents in memory no matter how large
 // the corpus is, and every candidate has an equal chance of being one of them.
 // The previous approach held every candidate and shuffled at the end, which is
@@ -223,7 +245,7 @@ function consider(raw, date, file) {
   considered++;
   const doc = { file, text: t, words: w, date };
   if (reservoir.length < N) { reservoir.push(doc); return; }
-  const j = (Math.random() * considered) | 0;
+  const j = (rand() * considered) | 0;
   if (j < N) reservoir[j] = doc;
 }
 
@@ -263,7 +285,27 @@ function streamCSV(path, onRow) {
 
 if (!existsSync(IN)) { console.error(IN + " does not exist"); process.exit(1); }
 mkdirSync(OUT, { recursive: true });
-if (!existsSync(MANIFEST)) writeFileSync(MANIFEST, "file\tsource\tdate\twhy_known_human\n");
+// One schema, and check it. The substack manifest spent a day carrying 853 rows
+// of ten fields under a five-field header because the writer and the header
+// drifted apart, and a manifest that lies about its own columns makes the
+// provenance argument unauditable. Adding the seed column is exactly the kind of
+// change that caused that, so the header is declared once and an existing file
+// that disagrees with it stops the run instead of being appended to.
+const MANIFEST_COLUMNS = ["file", "source", "date", "seed", "why_known_human"];
+const MANIFEST_HEADER = MANIFEST_COLUMNS.join("\t") + "\n";
+if (!existsSync(MANIFEST)) {
+  writeFileSync(MANIFEST, MANIFEST_HEADER);
+} else {
+  const found = readText(MANIFEST).split("\n")[0].trim();
+  if (found !== MANIFEST_COLUMNS.join("\t")) {
+    console.error(`\n${MANIFEST} has a different schema than this script writes.`);
+    console.error(`  file has: ${found}`);
+    console.error(`  expected: ${MANIFEST_COLUMNS.join("\t")}`);
+    console.error("\nAppending would produce rows that do not match the header. Regenerate the");
+    console.error("arm into a fresh --out directory, or migrate the existing manifest first.");
+    process.exit(1);
+  }
+}
 
 const files = walk(IN);
 console.log(`${files.length} files under ${IN}, format ${FORMAT}`);
@@ -319,7 +361,7 @@ for (let i = 0; i < take.length; i++) {
   if (existsSync(path)) continue;
   writeFileSync(path, take[i].text.replace(/\r\n/g, "\n") + "\n");
   const rowDate = take[i].date ? String(take[i].date).slice(0, 10) : DATE;
-  appendFileSync(MANIFEST, `${name}\t${LABEL}\t${rowDate}\t${WHY}\n`);
+  appendFileSync(MANIFEST, `${name}\t${LABEL}\t${rowDate}\t${SEED}\t${WHY}\n`);
   written++;
 }
 
