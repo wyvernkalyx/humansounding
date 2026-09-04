@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do AI Writing Tells Actually Work? I Tested 15</title>
+<meta name="description" content="I measured all fifteen rules in my own AI writing checker against 959 documents written before ChatGPT existed. One rule cleared. Here are the numbers, and the files to check them.">
+<link rel="canonical" href="https://humansounding.com/do-ai-writing-tells-work.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="Do AI Writing Tells Actually Work? I Tested 15">
+<meta property="og:description" content="I measured all fifteen rules in my own AI writing checker against 959 documents written before ChatGPT existed. One rule cleared.">
+<meta property="og:url" content="https://humansounding.com/do-ai-writing-tells-work.html">
+<meta property="og:image" content="https://humansounding.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Do AI Writing Tells Actually Work? I Tested 15","description":"I measured all fifteen rules in my own AI writing checker against 959 documents written before ChatGPT existed. One rule cleared.","datePublished":"2026-09-04","dateModified":"2026-09-04","author":{"@type":"Organization","name":"HumanSounding","url":"https://humansounding.com/"},"mainEntityOfPage":"https://humansounding.com/do-ai-writing-tells-work.html"}
+</script>
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--page); color:var(--ink-1); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.6; font-size:16.5px; }
+  main { max-width:760px; margin:0 auto; padding:0 24px 80px; }
+  h1 { font-size:32px; letter-spacing:-0.5px; line-height:1.2; margin:40px 0 8px; }
+  .byline { color:var(--ink-muted); font-size:13.5px; margin:0 0 28px; }
+  h2 { font-size:21px; letter-spacing:-0.3px; margin:36px 0 10px; }
+  p { color:var(--ink-2); margin:0 0 16px; }
+  p b, li b { color:var(--ink-1); }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  table { width:100%; border-collapse:collapse; font-size:14.5px; margin:8px 0 20px; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  th { text-align:left; font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--ink-muted); padding:10px 14px; border-bottom:1px solid var(--grid); }
+  td { padding:10px 14px; border-bottom:1px solid var(--grid); color:var(--ink-2); }
+  tr:last-child td { border-bottom:0; }
+  td.n { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  td.who { font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; color:var(--ink-muted); }
+  tr.hum td:first-child { color:var(--ink-1); }
+  .tblwrap { overflow-x:auto; }
+  .headline { background:var(--accent-soft); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:10px; padding:18px 20px; margin:24px 0; }
+  .headline p { margin:0; color:var(--ink-1); font-size:19px; line-height:1.45; }
+  .cta-box { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:20px; margin:32px 0; }
+  .cta-box p { margin:0 0 12px; }
+  .btn { display:inline-block; background:var(--btnbg); color:#fff; padding:10px 18px; border-radius:8px; font-weight:600; font-size:15px; }
+  .btn:hover { text-decoration:none; background:var(--accent-deep); }
+  .srcs, .foot { font-size:13.5px; color:var(--ink-muted); margin-top:28px; }
+  .srcs a, .foot a { color:var(--ink-muted); text-decoration:underline; }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/ai-writing-tells.html">Tells</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/ai-writing-tells.html">Tells glossary</a>
+        <a href="/why-does-ai-writing-sound-like-ai.html">Why AI writing sounds like AI</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/blog.html#week">This week</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+<main>
+<h1>Do AI writing tells actually work? I tested 15</h1>
+<p class="byline">September 4, 2026 · every figure below recomputes from two files in the repo</p>
+
+<p>Every list of AI writing tells looks about the same. Em dashes. The word delve. Sentences shaped like "not just X, but Y." The lists circulate, grow a few entries each month, and end up quoted in arguments about whether a student wrote her own essay. Very few of them carry a number.</p>
+
+<p>I wrote one of those lists. Fifteen rules, shipped as the free checker on this site, built the way most of them get built. I noticed things, and I wrote regular expressions for them.</p>
+
+<p>Then I went looking for a way to check whether the rules were right.</p>
+
+<h2>What the test needed</h2>
+
+<p>Writing a model could not have produced. Not writing that looks human, writing that is provably human, and the only proof that survives an argument is a date. ChatGPT opened to the public on November 30, 2022. Anything published and indexed before that day was typed by a person.</p>
+
+<p>So the human side of this study is 959 documents and 1,354,970 words, every one dated before that cutoff: Substack posts indexed in their own publications' 2021 sitemaps, blog posts from the 2004 Blog Authorship Corpus, Medium articles, and email newsletters. Against them sit 194 documents generated this year by Claude, GPT-5.5, ChatGPT, and Gemini, in matched genres.</p>
+
+<p>Every rule gets a rate per thousand words and a confidence interval built by resampling documents, because one long article is one observation and not four hundred sentences. A rule counts as working when its interval clears the human interval with no overlap.</p>
+
+<div class="headline">
+<p><b>One rule out of fifteen cleared.</b> The em dash. And it only cleared for Claude.</p>
+</div>
+
+<h2>Em dashes are a Claude fingerprint</h2>
+
+<p>Raw em dashes per thousand words, same measurement across every corpus:</p>
+
+<div class="tblwrap">
+<table>
+<tr><th>Corpus</th><th>Written by</th><th style="text-align:right">Em dashes / 1,000 words</th></tr>
+<tr><td>Claude Opus 5 (August run)</td><td class="who">Model</td><td class="n">11.05</td></tr>
+<tr><td>Claude Opus 5 (September run)</td><td class="who">Model</td><td class="n">10.21</td></tr>
+<tr class="hum"><td>Medium articles</td><td class="who">Human</td><td class="n">3.83</td></tr>
+<tr><td>ChatGPT</td><td class="who">Model</td><td class="n">3.30</td></tr>
+<tr><td>Gemini 3.7</td><td class="who">Model</td><td class="n">2.70</td></tr>
+<tr class="hum"><td>Substack, 2021</td><td class="who">Human</td><td class="n">1.86</td></tr>
+<tr><td>GPT-5.5</td><td class="who">Model</td><td class="n">1.63</td></tr>
+<tr class="hum"><td>Email newsletters</td><td class="who">Human</td><td class="n">1.05</td></tr>
+<tr class="hum"><td>Blog posts, 2004</td><td class="who">Human</td><td class="n">0.18</td></tr>
+</table>
+</div>
+
+<p>GPT-5.5 uses fewer em dashes than Medium writers did. So does Gemini. If a heavy em-dash habit makes you suspicious, you are detecting Claude, and you are also detecting about one Medium article in seven.</p>
+
+<h2>The other fourteen</h2>
+
+<p>None of them separated. Not on a corpus of 959 human documents, and not against any of the four model families. The closest miss was contrastive negation, where the intervals overlapped by 0.021 per thousand words, which is close enough that the measurement script now prints that margin instead of a bare yes or no.</p>
+
+<p>Then I ran the checker over the human documents themselves. <b>602 of the 959 came back with at least one flag. That is 62.8% of writing produced before ChatGPT existed.</b></p>
+
+<div class="tblwrap">
+<table>
+<tr><th>Flag</th><th style="text-align:right">Share of pre-ChatGPT human documents</th></tr>
+<tr><td>Slop words</td><td class="n">27.6%</td></tr>
+<tr><td>Contrastive negation</td><td class="n">20.1%</td></tr>
+<tr><td>Negative parallelism</td><td class="n">16.0%</td></tr>
+<tr><td>Em dashes over the density limit</td><td class="n">14.2%</td></tr>
+<tr><td>Rule of three</td><td class="n">8.6%</td></tr>
+<tr><td>Summary ending</td><td class="n">6.3%</td></tr>
+</table>
+</div>
+
+<p>One more, because it is the second most-cited tell after the em dash. People say a flat, even sentence rhythm gives a model away. Measured as the variation in sentence length within each document, Claude runs 0.700 and the 2004 bloggers run 0.697, with Medium at 0.659 and Substack at 0.684. The most variable corpus in the study is the machine.</p>
+
+<h2>What this does and does not show</h2>
+
+<p>AI writing may well have a signature. What these numbers establish is that fifteen attempts to define one mostly failed, which is a smaller and more boring claim, and the difference matters. Absence of evidence is not evidence of absence. A better rule may exist, and I am still looking for one.</p>
+
+<p>The useful part is narrower. A rule that fires on two thirds of human writing tells you nothing about the document in front of you. If somebody has been accused on the strength of one, the rate is the answer.</p>
+
+<h2>What changed here</h2>
+
+<p>The checker still runs, and it still highlights all fifteen. What it no longer does is imply that a highlight is a verdict. Every flag now carries the rate behind it, so "your draft has four em dashes" reads as a fact about your draft rather than an accusation about its author.</p>
+
+<div class="cta-box">
+<p><b>Recompute any figure on this page.</b> Per-rule rates and intervals are in <a href="/rules.json">rules.json</a>. Per-document counts for all 959 human documents are in <a href="/human-baseline.json">human-baseline.json</a>, counts only, so the corpus stays redistributable without republishing anyone's prose.</p>
+<a class="btn" href="/checker.html">Check your draft free</a>
+</div>
+
+<p>If someone has told you that an em dash or a rule of three proves a machine wrote your work, both files are public and the study code is in <a href="https://github.com/wyvernkalyx/humansounding">the repo</a>. Take the rates into the conversation.</p>
+
+<p class="foot">Part of <a href="/">HumanSounding</a>. The human baseline is 959 documents dated before November 30, 2022, and every rate on this page recomputes from the two linked files.</p>
+</main>
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+<script src="/assets/site.js"></script>
+</body>
+</html>
