@@ -1,0 +1,33 @@
+{
+ "criterion": "words>=100 and first-person share of sentences >=0.25 and >=5 sentences",
+ "chosen": "2026-09-01, before the experience arm existed",
+ "files": [
+  "blogauthorship__002.txt",
+  "blogauthorship__003.txt",
+  "blogauthorship__004.txt",
+  "blogauthorship__007.txt",
+  "blogauthorship__009.txt",
+  "blogauthorship__010.txt",
+  "blogauthorship__012.txt",
+  "blogauthorship__013.txt",
+  "blogauthorship__015.txt",
+  "blogauthorship__016.txt",
+  "blogauthorship__019.txt",
+  "blogauthorship__020.txt",
+  "blogauthorship__021.txt",
+  "blogauthorship__022.txt",
+  "blogauthorship__024.txt",
+  "blogauthorship__026.txt",
+  "blogauthorship__027.txt",
+  "blogauthorship__028.txt",
+  "blogauthorship__030.txt",
+  "blogauthorship__031.txt",
+  "blogauthorship__032.txt",
+  "blogauthorship__034.txt",
+  "blogauthorship__035.txt",
+  "blogauthorship__036.txt",
+  "blogauthorship__037.txt",
+  "blogauthorship__038.txt",
+  "blogauthorship__039.txt"
+ ]
+}
