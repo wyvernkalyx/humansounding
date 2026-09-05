@@ -53,3 +53,6 @@ study/slop/label.html
 
 # Raw scraped HTML kept for debugging an extractor. Third-party text, and large.
 study/substack-debug.html
+
+# Working analysis of a named third party. Public repo; see the commit.
+drafts/
