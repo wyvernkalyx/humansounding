@@ -1,0 +1,6 @@
+# Confirmed pre-2022 publications, verified by profile-all on 2026-09-02.
+# Deliberately unrelated fields, to keep the snowball from returning one clique.
+vajenda                    # Jen Gunter MD, gynaecology, lay audience, cites studies
+howardluksmd               # Howard Luks MD, orthopaedics, midlife fitness
+doomberg                   # energy and industry analysis
+bonner-private-research    # macro / financial letter

@@ -1,0 +1,501 @@
+slug	verdict	year	posts_that_year	yield_pct	ok	gated	short	median_words	claim_sentences	specificity
+doomberg	CANDIDATE	2021	79	100	4	0	0	1196	1	121
+petition	SKIP-too-gated	2021	181	0	0	4	0	0	0	0
+qtrs-fringe-finance	ERROR	404 on https://qtrs-fringe-finance.substack.com/sitemap								
+bonner-private-research	CANDIDATE	2021	61	75	3	0	1	1489	3	97
+capital-wars	SKIP-too-new	2023,2024,2025,2026								
+compounding-quality	SKIP-too-new	none								
+doug-casey-crisis-investing	ERROR	404 on https://doug-casey-crisis-investing.substack.com/site								
+farm-cpa-report	SKIP-too-new	2022,2023,2024,2025,2026								
+vajenda	CANDIDATE	2021	113	75	3	1	0	1252	6	74
+brainhealthkitchen	SKIP-too-new	2022,2023,2024,2025,2026								
+howardluksmd	CANDIDATE	2020	11	100	4	0	0	773	2	61
+drboz	SKIP-too-new	2025,2026								
+zawn	SKIP-too-new	2022,2023,2024,2025,2026								
+gidmk	SKIP-too-new	2022,2023,2024,2025,2026								
+davidlebovitz	SKIP-too-gated	2021	48	25	1	3	0	1101	0	62
+heathercoxrichardson	CANDIDATE	2021	403	100	4	0	0	1323	2	157
+kcklatt	SKIP-too-new	2023,2024,2025,2026								
+samanthabee	SKIP-too-new	2023,2024,2025,2026								
+gordobyrn	SKIP-too-new	2024,2025,2026								
+erictopol	CANDIDATE	2021	8	100	4	0	0	1294	16	94
+runlongrunhealthy	SKIP-too-gated	2021	5	0	0	4	0	0	0	0
+stephenportee	SKIP-too-new	2023,2025,2026								
+theskepticalcardiologist	SKIP-too-gated	2020	1	0	0	0	1	0	0	0
+alancouzens	SKIP-too-new	2022,2023,2024,2025,2026								
+feelthebyrn	WEAK-no-claims	2021	17	100	4	0	0	951	0	42
+paddybarrett	SKIP-too-new	2022,2023,2024,2025,2026								
+truewealth	SKIP-too-new	2022,2023,2024,2025,2026								
+marcoaltini	SKIP-too-new	2023,2024,2025,2026								
+hrv4training	SKIP-too-new	2023,2024,2025,2026								
+strongtothebone	SKIP-too-new	2025,2026								
+justinluksphysics	SKIP-too-new	2025								
+thecrudechronicles	SKIP-too-new	2022,2023,2024,2025,2026								
+vitaliy	SKIP-too-gated	2021	84	50	2	0	2	3477	2	66
+direports	SKIP-too-new	2024,2025,2026								
+peekbehindthenumbers	SKIP-too-gated	2021	8	50	2	2	0	2909	3	118
+adamtooze	SKIP-too-gated	2021	120	50	2	2	0	4378	3	108
+pitchforkpapers	CANDIDATE	2021	56	75	3	0	1	2570	1	65
+hardfork	CANDIDATE	2021	156	100	4	0	0	766	2	73
+catalystfoods	SKIP-too-new	2022,2023,2024,2025,2026								
+haymaker	SKIP-too-new	2022,2023,2024,2025,2026								
+tradecrafters	SKIP-too-new	2023,2024,2025,2026								
+monteinvestments	SKIP-too-new	2022,2023,2024,2025,2026								
+dtinewsletter	SKIP-too-gated	2021	15	0	0	4	0	0	0	0
+irinaslav	CANDIDATE	2021	30	100	4	0	0	1421	1	69
+dimartinobooth	SKIP-too-gated	2021	250	0	0	4	0	0	0	0
+jj745	SKIP-too-gated	2021	2	50	1	0	1	596	1	104
+paulomacro	SKIP-too-new	2024,2025,2026								
+sundaymorningmarkets	SKIP-too-new	2022,2023,2024,2025,2026								
+sethabramson	SKIP-too-gated	2021	182	0	0	4	0	0	0	0
+dynalogic	SKIP-too-new	2022,2023,2024,2025,2026								
+thebearcave	CANDIDATE	2021	78	75	3	1	0	1020	5	269
+montanaskeptic	SKIP-too-new	2023,2024,2025,2026								
+aegishedging	SKIP-too-new	2022,2023,2024,2025,2026								
+classicsreadaloud	SKIP-too-new	2025,2026								
+quoththeraven	SKIP-too-gated	2021	126	25	1	3	0	1247	1	109
+seymourhersh	SKIP-too-new	2023,2024,2025,2026								
+envmental	SKIP-too-new	2022,2023,2024,2025,2026								
+invariant	SKIP-too-new	2022,2023,2024,2025,2026								
+rudy	SKIP-too-gated	2020	1	0	0	0	1	0	0	0
+tashigd	SKIP-too-new	2023,2024,2026								
+davidstockman	SKIP-too-new	2022,2023,2024,2025,2026								
+themariahbonner	SKIP-too-new	2023,2024,2025,2026								
+watchmanprivacy	SKIP-too-new	2025,2026								
+elisabeth402	WEAK-no-claims	2021	6	100	4	0	0	1532	0	117
+fedetessore	SKIP-too-new	2022,2023,2024,2026								
+yourlocalepidemiologist	SKIP-too-gated	2021	251	0	0	4	0	0	0	0
+insidemedicine	CANDIDATE	2021	46	100	4	0	0	1240	4	85
+bristoliver	SKIP-too-new	2022,2023,2024,2025,2026								
+buildupdietitians	SKIP-too-new	2022,2023,2024,2025,2026								
+kucharski	SKIP-too-new	2023,2024,2025,2026								
+jamesclaims	SKIP-too-new	2022,2023,2024,2025,2026								
+sohla	SKIP-too-gated	2021	12	0	0	4	0	0	0	0
+feiring	SKIP-too-new	2022,2023,2024,2025,2026								
+katemcdermott	SKIP-too-gated	2021	53	0	0	3	1	0	0	0
+andreanguyen	SKIP-too-new	2022,2023,2024,2025,2026								
+leela	SKIP-too-gated	2021	45	0	0	4	0	0	0	0
+lettrerecommandee	SKIP-too-gated	2021	4	0	0	4	0	0	0	0
+doriegreenspan	SKIP-too-gated	2021	56	0	0	4	0	0	0	0
+everydaydrinking	SKIP-too-gated	2021	25	0	0	4	0	0	0	0
+elizabethminchilli	SKIP-too-gated	2021	54	0	0	4	0	0	0	0
+lesleychesterman	SKIP-too-gated	2021	1	0	0	1	0	0	0	0
+smittenkitchen	SKIP-too-new	2022,2023,2024,2025,2026								
+ottolenghi	SKIP-too-new	2024,2025,2026								
+heidiswanson	SKIP-too-new	none								
+everythingcookbooks	SKIP-too-new	2025,2026								
+anissahelou	SKIP-too-new	2023,2024,2025,2026								
+bradthomasparsons	SKIP-too-new	2022,2023,2024,2025,2026								
+ciaodown	SKIP-too-new	2023,2024,2025,2026								
+amateurgourmet	SKIP-too-gated	2021	85	0	0	4	0	0	0	0
+luisaweiss	WEAK-no-claims	2021	3	100	3	0	0	1713	0	34
+cookswithoutborders	SKIP-too-new	2023,2024,2025,2026								
+ruhlman	SKIP-too-gated	2021	26	0	0	4	0	0	0	0
+annebyrn	SKIP-too-gated	2021	72	25	1	3	0	1342	0	77
+divinacucina	SKIP-too-gated	2021	48	0	0	4	0	0	0	0
+lauracalder	SKIP-too-new	2022,2023,2024,2025,2026								
+diannejacob	SKIP-too-gated	2021	7	50	2	2	0	1578	1	210
+parisbymouth	SKIP-too-gated	2021	9	0	0	4	0	0	0	0
+joseandres	SKIP-too-new	2022,2023,2024,2025,2026								
+leafhopper	SKIP-too-new	2024,2025,2026								
+lespetitsfarcis	SKIP-too-new	2024,2025,2026								
+davidleite	SKIP-too-gated	2021	3	0	0	0	3	0	0	0
+samitamimi	SKIP-too-new	2024,2025,2026								
+cookbookerycollective	SKIP-too-new	2025,2026								
+zoefrancois	SKIP-too-gated	2021	20	50	2	2	0	673	0	203
+susanality	WEAK-no-claims	2021	60	75	3	1	0	1931	0	65
+saltandspine	SKIP-too-gated	2021	84	25	1	2	1	426	0	305
+therealemilyinparis	SKIP-too-gated	2021	1	0	0	1	0	0	0	0
+emilyrnunn	SKIP-too-gated	2021	90	0	0	4	0	0	0	0
+ajiriaki	SKIP-too-new	2023,2024,2025,2026								
+notdrinkingpoison	CANDIDATE	2021	76	75	3	1	0	932	1	140
+evankleiman	WEAK-no-claims	2021	4	75	3	0	1	645	0	86
+susanherrmann	SKIP-too-new	2023,2024,2025,2026								
+ruthreichl	WEAK-no-claims	2021	31	75	3	0	1	495	0	76
+thekasbahchronicles	SKIP-too-new	2023,2024,2025,2026								
+kcrwgoodfood	SKIP-too-new	2025,2026								
+katehillfrance	SKIP-too-gated	2021	49	0	0	4	0	0	0	0
+promptsfromparis	SKIP-too-new	2024,2025,2026								
+eddkimber	SKIP-too-new	2022,2023,2024,2025,2026								
+stevesando	SKIP-too-new	2026								
+jesspiper	SKIP-too-new	2023,2024,2025,2026								
+wessiler	WEAK-no-claims	2021	14	75	3	0	1	1053	0	92
+pauloffit	SKIP-too-new	2023,2024,2025,2026								
+lizadonnelly	CANDIDATE	2021	15	75	3	0	1	560	1	66
+danismart	SKIP-too-new	2022,2023,2024,2025,2026								
+robertreich	CANDIDATE	2021	99	75	3	1	0	887	1	122
+waynecoffey	SKIP-too-new	2024,2025,2026								
+paulkrugman	WEAK-no-claims	2021	6	100	4	0	0	1438	0	72
+susanrogan	CANDIDATE	2020	124	75	3	0	1	2579	2	244
+jasonherbert	SKIP-too-new	2022,2023,2024,2025,2026								
+joycevance	SKIP-too-new	2022,2023,2024,2025,2026								
+fromthescienceclass	SKIP-too-new	2023,2024,2025,2026								
+matthewfacciani	SKIP-too-new	2022,2023,2024,2025,2026								
+youcanknowthings	SKIP-too-new	2024,2025,2026								
+techingitapart	SKIP-too-new	2023,2024,2025,2026								
+theunbiasedscipod	CANDIDATE	2021	7	100	4	0	0	1031	1	130
+drjessicaknurick	SKIP-too-new	2025,2026								
+deplatformdisease	SKIP-too-new	2022,2023,2024,2025,2026								
+williamdepaolo	SKIP-too-new	2023,2024,2025,2026								
+thosenerdygirls	WEAK-no-claims	2021	53	75	3	0	1	1019	0	96
+welltodo	SKIP-too-gated	2020	10	0	0	4	0	0	0	0
+longevity101	SKIP-too-new	2025,2026								
+pauldthompsonmd	SKIP-too-new	2023,2024,2025,2026								
+bekolimjon	SKIP-too-new	2025,2026								
+johnmandrola	CANDIDATE	2021	12	100	4	0	0	1314	22	78
+johngetstrong	SKIP-too-new	2023,2024,2025,2026								
+steady	CANDIDATE	2021	198	100	4	0	0	1227	1	63
+adamgrant	SKIP-too-gated	2021	12	0	0	0	4	0	0	0
+api	ERROR	404 on https://api.substack.com/sitemap								
+themorningshakeout	SKIP-too-new	2024,2025,2026								
+lauranorrisrunning	SKIP-too-new	2025,2026								
+newdirectionsinmusic	CANDIDATE	2021	34	100	4	0	0	1466	1	123
+nestwellness	SKIP-too-new	2024,2025,2026								
+mccormickmd	SKIP-too-gated	2021	19	0	0	4	0	0	0	0
+cardiologytrials	SKIP-too-new	2023,2024,2025,2026								
+sciencefictionspod	SKIP-too-new	2023,2024,2025,2026								
+profbubak	SKIP-too-new	2025,2026								
+alasdairmunro	SKIP-too-new	2022,2023,2024,2025,2026								
+drglorioso	SKIP-too-new	2022,2023,2024,2025,2026								
+robynhitchcock	SKIP-too-new	2025,2026								
+marshallallen	SKIP-too-gated	2021	9	0	0	4	0	0	0	0
+colinmeloy	SKIP-too-new	2022,2023,2024,2025,2026								
+joelfilliol	SKIP-too-gated	2021	2	50	1	0	1	676	0	152
+inakidelaparra	SKIP-too-new	2024,2025,2026								
+neuroathletics	SKIP-too-gated	2021	68	0	0	4	0	0	0	0
+joefriel	SKIP-too-new	2025,2026								
+drguess	SKIP-too-new	2022,2023,2024,2025,2026								
+justindaerr	SKIP-too-new	2025,2026								
+richroll	WEAK-no-claims	2021	81	75	3	0	1	442	0	83
+freespeed	SKIP-too-new	2023,2026								
+billat	SKIP-too-new	2024,2025								
+drmaryclairehaver	SKIP-too-new	2025,2026								
+griffinjaworski	SKIP-too-new	2024,2025,2026								
+jakekellymd	SKIP-too-new	2025,2026								
+menopausedietplan	SKIP-too-new	2023,2024,2025,2026								
+drcyrusk	SKIP-too-new	2026								
+thesecretingredient	SKIP-too-new	2024,2025,2026								
+colinstuart	SKIP-too-new	2023,2024,2025,2026								
+motionmountain	SKIP-too-new	2023,2024,2025,2026								
+curtjaimungal	CANDIDATE	2021	43	100	4	0	0	448	2	537
+physicslatam	SKIP-too-new	2023,2024,2025,2026								
+constructionphysics	WEAK-no-claims	2021	43	100	4	0	0	3083	0	50
+fullertreacymoney	SKIP-too-new	2023,2024,2025,2026								
+arjunmurti	SKIP-too-gated	2021	12	50	2	0	2	2499	1	181
+rysci	SKIP-too-new	2023,2024,2025								
+contrariancapitalist	SKIP-too-new	2022,2023,2024,2025,2026								
+namzes	SKIP-too-new	none								
+edfin	SKIP-too-new	2022,2023,2024,2025,2026								
+specialsituationinvesting	SKIP-too-new	2022,2023,2024,2025,2026								
+offthecharts	SKIP-too-new	2022,2023,2024,2025,2026								
+themacrocompass	WEAK-no-claims	2021	21	100	4	0	0	1529	0	110
+ronaldpsmith	SKIP-too-new	2025,2026								
+pavchartbook	SKIP-too-new	2022,2023,2024								
+bfrandall	SKIP-too-new	2022,2023								
+bluecowreports	ERROR	404 on https://bluecowreports.substack.com/sitemap								
+rawenergy	SKIP-too-new	2022,2023,2024								
+alchemyatscale	SKIP-too-new	2023								
+enerwrap	SKIP-too-new	2022,2023,2024								
+wtirealist	SKIP-too-new	2022,2023								
+stuckinthemiddle	CANDIDATE	2021	14	100	4	0	0	1353	2	80
+doyoulikeapples	WEAK-no-claims	2021	48	100	4	0	0	1856	0	162
+ceramicsnow	CANDIDATE	2021	11	100	4	0	0	998	1	309
+summerlightning	WEAK-no-claims	2021	3	100	3	0	0	588	0	45
+nichelle	SKIP-too-gated	2021	54	25	1	0	3	348	0	164
+ruthtalksfood	CANDIDATE	2021	37	100	4	0	0	1504	1	84
+arabellesicardi	SKIP-too-gated	2021	11	25	1	3	0	1390	0	24
+jihii	CANDIDATE	2021	24	75	3	0	1	1844	2	55
+carriecourogen	CANDIDATE	2021	4	75	3	1	0	3033	1	38
+pomp	SKIP-too-gated	2021	227	50	2	2	0	2224	3	146
+supergranular	WEAK-no-claims	2021	10	100	4	0	0	1125	0	41
+lukeleighfield	WEAK-no-claims	2021	18	100	4	0	0	521	0	131
+polyesterzine	SKIP-too-new	2024,2025,2026								
+playitlikeitsmusic	WEAK-no-claims	2021	14	100	4	0	0	839	0	116
+jonasellison	WEAK-no-claims	2021	134	75	3	0	1	395	0	154
+chrispirillo	SKIP-too-gated	2021	28	25	1	0	3	566	0	19
+libbytarian	CANDIDATE	2021	1	100	1	0	0	430	1	33
+westvirginiaville	CANDIDATE	2021	17	100	4	0	0	991	1	185
+thedig	SKIP-too-gated	2021	54	25	1	3	0	3373	6	305
+christiandurso	WEAK-no-claims	2021	4	100	4	0	0	1592	0	69
+sriramk	SKIP-too-new	none								
+scream	CANDIDATE	2021	3	67	2	0	1	1662	1	70
+abenignconspiracy	WEAK-no-claims	2021	2	100	2	0	0	1427	0	12
+jamesgarside	SKIP-too-gated	2021	72	0	0	3	1	0	0	0
+alexandre	CANDIDATE	2021	46	100	4	0	0	3828	2	132
+austin	CANDIDATE	2021	4	100	4	0	0	2162	3	232
+robwalker	SKIP-too-gated	2021	76	0	0	4	0	0	0	0
+wondertools	SKIP-too-gated	2021	52	0	0	4	0	0	0	0
+danfriedmanme	WEAK-no-claims	2021	23	75	3	0	1	925	0	117
+jgw	WEAK-no-claims	2019	4	75	3	0	1	535	0	104
+theconvivialsociety	CANDIDATE	2021	36	100	4	0	0	2302	1	63
+blgtylr	CANDIDATE	2021	27	100	4	0	0	2626	1	42
+mattruby	SKIP-too-gated	2021	64	0	0	4	0	0	0	0
+cws	SKIP-too-gated	2021	80	50	2	1	1	1699	2	159
+offgridtwin	SKIP-too-gated	2021	13	25	1	0	3	460	0	72
+kp	WEAK-no-claims	2021	9	75	3	0	1	503	0	139
+notesfromasmallpress	SKIP-too-gated	2021	41	0	0	4	0	0	0	0
+mytechtribe	SKIP-too-gated	2021	57	50	2	0	2	486	1	267
+tolusefrancis	CANDIDATE	2021	34	75	3	0	1	604	3	42
+twobossydames	WEAK-no-claims	2021	16	100	4	0	0	1351	0	114
+linksiwouldgchatyou	SKIP-too-gated	2021	44	0	0	4	0	0	0	0
+mananh	WEAK-no-claims	2021	2	100	2	0	0	1030	0	94
+cmoon	WEAK-no-claims	2021	15	100	4	0	0	1054	0	81
+coletrickle	CANDIDATE	2021	11	75	3	0	1	699	1	90
+gretchenmcc	CANDIDATE	2021	13	100	4	0	0	515	1	225
+andjelicaaa	SKIP-too-gated	2021	33	0	0	4	0	0	0	0
+feministmidwife	SKIP-too-gated	2021	60	0	0	4	0	0	0	0
+tonyburkinshaw	CANDIDATE	2020	39	100	4	0	0	1286	2	62
+deepquarry	SKIP-too-new	2023,2024,2025,2026								
+thevalueroad	SKIP-too-new	2024,2025,2026								
+michellecelarier	SKIP-too-new	2026								
+margin0fsafety	SKIP-too-new	2022,2025,2026								
+boyarresearch	SKIP-too-gated	2021	5	0	0	0	4	0	0	0
+amritaroy	SKIP-too-new	2023,2024,2025,2026								
+investing501	WEAK-no-claims	2021	11	75	3	0	1	1376	0	132
+mrmarketmiscalculates	SKIP-too-gated	2021	3	33	1	1	1	589	1	100
+aswathdamodaran	CANDIDATE	2021	23	100	4	0	0	5227	1	63
+danielxperis	SKIP-too-new	2023,2024,2025,2026								
+consumereq	SKIP-too-new	2022,2023,2024,2025,2026								
+arkominaresearch	SKIP-too-new	2024,2025,2026								
+behindthebalancesheet	SKIP-too-gated	2021	1	0	0	1	0	0	0	0
+krokerequityresearch	SKIP-too-new	2023,2024,2025,2026								
+jahnke	SKIP-too-new	2022,2023,2024,2025,2026								
+thereitforum	WEAK-no-claims	2021	10	100	4	0	0	2696	0	134
+samlatter	SKIP-too-new	2023,2024								
+vosscapital	CANDIDATE	2021	8	100	4	0	0	2397	4	105
+beyondthebalancesheet	SKIP-too-new	2024								
+ironsideresearch	SKIP-too-new	2023,2024								
+observingjapan	SKIP-too-new	2022,2023,2024,2025,2026								
+markusacademy	CANDIDATE	2021	32	100	4	0	0	696	1	94
+braddelong	CANDIDATE	2021	424	100	4	0	0	4321	3	215
+unevenandcombinedthoughts	SKIP-too-new	2023,2024,2025,2026								
+imperfectnotes	SKIP-too-gated	2021	23	0	0	4	0	0	0	0
+branko2f7	CANDIDATE	2021	75	100	4	0	0	1163	2	53
+richardkatz	WEAK-no-claims	2021	14	75	3	0	1	630	0	91
+hannahritchie	SKIP-too-new	2022,2023,2024,2025,2026								
+americaninequality	SKIP-too-gated	2021	19	0	0	4	0	0	0	0
+ourtime	SKIP-too-new	2022,2023,2024,2025,2026								
+tacticalnotebook	SKIP-too-new	2022,2023,2024,2025,2026								
+nbutler	SKIP-too-new	2022,2025,2026								
+rohanvenkat	SKIP-too-gated	2021	2	50	1	0	1	5266	3	53
+htsf	SKIP-too-gated	2021	15	0	0	4	0	0	0	0
+geekway	SKIP-too-new	2023,2024,2025,2026								
+interconnect	SKIP-too-new	2022,2023,2024,2025,2026								
+geoeconomics	WEAK-no-claims	2021	16	100	4	0	0	936	0	127
+michaelbrenes	SKIP-too-new	2022,2023,2024,2025,2026								
+boharvey	SKIP-too-new	2022,2023								
+vincentpalumbosmith	CANDIDATE	2021	41	100	4	0	0	3218	6	123
+hollymathnerd	CANDIDATE	2021	27	100	4	0	0	2124	4	77
+keeleyrees	SKIP-too-new	2022,2023,2024,2025,2026								
+grahamrowan1	SKIP-too-new	2025,2026								
+newsfromuncibal	SKIP-too-new	2023,2024,2025,2026								
+stonemasonry	SKIP-too-new	none								
+boriquagato	SKIP-too-gated	2021	685	25	1	0	3	1262	7	37
+classicalwisdom	SKIP-too-gated	2021	10	0	0	0	4	0	0	0
+rumelt	SKIP-too-new	2022,2023,2025,2026								
+someunpleasant	CANDIDATE	2021	55	100	4	0	0	2839	2	90
+21hats	CANDIDATE	2021	273	100	4	0	0	2383	5	131
+drpippa	SKIP-too-gated	2021	14	0	0	4	0	0	0	0
+paulkingsnorth	CANDIDATE	2021	25	100	4	0	0	4204	1	47
+mindsetshifts	CANDIDATE	2021	33	100	4	0	0	2260	4	64
+elizabethnickson	SKIP-too-new	2022,2023,2024,2025,2026								
+lisastlou	SKIP-too-new	2024,2025,2026								
+davidwhyte	SKIP-too-new	2023,2024,2025,2026								
+scottcampbell	SKIP-too-new	2022,2023,2024,2025,2026								
+libertypapers	SKIP-too-new	2023,2024,2025								
+barsoom	SKIP-too-new	2022,2023,2024,2025,2026								
+westawake	SKIP-too-gated	2021	31	0	0	4	0	0	0	0
+margaretannaalice	CANDIDATE	2021	35	75	3	1	0	2722	5	102
+reubenrose	SKIP-too-new	2022,2023,2024,2025,2026								
+lettersfromthejourneyman	ERROR	404 on https://lettersfromthejourneyman.substack.com/sitemap								
+jmossie	ERROR	404 on https://jmossie.substack.com/sitemap								
+theupheaval	CANDIDATE	2021	27	100	4	0	0	1989	1	99
+inverttheinversion	SKIP-too-new	2024,2025								
+thedarksideofhungermountain	SKIP-too-new	2024,2025								
+brucelnelson	SKIP-too-new	2022,2023,2024,2025								
+jaymartin	CANDIDATE	2021	12	75	3	0	1	985	1	35
+mickryan	SKIP-too-new	2022,2023,2024,2025,2026								
+no01	SKIP-too-new	2025,2026								
+aurelien2022	SKIP-too-new	2022,2023,2024,2025,2026								
+innoblepursuit	SKIP-too-new	2026								
+lg	SKIP-too-gated	2021	10	25	1	0	3	329	1	255
+cdrsalamander	SKIP-too-gated	2021	274	50	2	0	2	1506	1	223
+commodityreport	SKIP-too-gated	2021	44	0	0	4	0	0	0	0
+eugenevyborov	SKIP-too-new	2022,2023,2024,2025,2026								
+nbt	CANDIDATE	2021	12	100	4	0	0	1529	1	118
+defensebrief	SKIP-too-new	2025,2026								
+danieljeffries	CANDIDATE	2021	11	100	4	0	0	5653	3	42
+wrongalot	CANDIDATE	2021	6	100	4	0	0	2515	1	82
+richardmedhurst	SKIP-too-gated	2021	35	25	1	0	3	844	3	236
+mtrajan	CANDIDATE	2019	2	100	2	0	0	2209	4	122
+pplsartofwar	SKIP-too-new	2023,2024,2025,2026								
+thewakeupcallnewsletter	SKIP-too-new	2025,2026								
+oldroperesearch	SKIP-too-new	2022,2023,2024,2025,2026								
+decodinggeopolitics	SKIP-too-new	2025,2026								
+vizi	SKIP-too-new	2022,2023,2024,2025,2026								
+cryptohayes	SKIP-too-new	2022,2023,2024,2025,2026								
+abovethenoisefloor	SKIP-too-new	2025,2026								
+forwardthinking	WEAK-no-claims	2021	62	100	4	0	0	463	0	26
+medievalscholar	SKIP-too-new	2025,2026								
+samf	SKIP-too-gated	2021	1	0	0	0	1	0	0	0
+peterturchin	SKIP-too-new	2025,2026								
+underfirenews	SKIP-too-gated	2021	11	0	0	4	0	0	0	0
+primecuts	CANDIDATE	2021	42	75	3	0	1	652	1	104
+warcap	SKIP-too-new	2023,2024,2025,2026								
+traderferg	SKIP-too-new	2023,2024,2025,2026								
+rootcausemd	CANDIDATE	2021	18	100	4	0	0	1745	3	137
+thejovi	SKIP-too-new	2022,2023,2024,2025,2026								
+backtoourroots	SKIP-too-new	2022,2023,2024								
+themeatmafiapodcast	SKIP-too-new	2022,2023,2024,2025								
+post	SKIP-too-new	2022,2023,2024,2025,2026								
+georgenoble	SKIP-too-new	2025,2026								
+jimcolquitt	SKIP-too-new	2023,2024,2025,2026								
+outperformingthemarket	SKIP-too-new	2023,2024,2025,2026								
+metalsandminers	SKIP-too-new	2023,2024,2025,2026								
+reboundcapital	SKIP-too-new	2025,2026								
+adamtaggart	SKIP-too-new	2023,2024,2025,2026								
+moderated4e567bf099944a3c904f1d9	ERROR	404 on https://moderated4e567bf099944a3c904f1d9.substack.com								
+manleymacro	WEAK-no-claims	2021	9	100	4	0	0	1597	0	143
+carbonrisk	ERROR	404 on https://carbonrisk.substack.com/sitemap								
+cdn	ERROR	403 on https://cdn.substack.com/sitemap								
+bespokeinvest	SKIP-too-new	2025,2026								
+princetonchen	SKIP-too-new	2026								
+philosopherinvestor	SKIP-too-new	2024,2025,2026								
+nobelltrading	SKIP-too-new	2025,2026								
+deepvaluecapitalbykyler	SKIP-too-new	2024,2025,2026								
+myweeklystock	SKIP-too-new	2022,2023,2024,2025,2026								
+jamesfoord	SKIP-too-new	2023,2024,2025,2026								
+filpasini	WEAK-no-claims	2021	50	100	4	0	0	649	0	90
+theeconomyrocket	SKIP-too-new	2022,2023,2024,2025,2026								
+michaeljburry	SKIP-too-new	2025,2026								
+etcaetera	SKIP-too-new	2024,2025,2026								
+investinglawyer	SKIP-too-new	2023,2024,2025,2026								
+sharpetwo	SKIP-too-new	2023,2024,2025,2026								
+brazilstocks	SKIP-too-new	2023,2024,2025,2026								
+stayvigilant	SKIP-too-gated	2021	1	0	0	0	1	0	0	0
+econolog	SKIP-too-new	2023,2024,2025,2026								
+huddleup	SKIP-too-gated	2021	231	0	0	4	0	0	0	0
+cyclesedge	SKIP-too-new	2023,2024,2025,2026								
+bdcbuzz	SKIP-too-gated	2021	275	0	0	4	0	0	0	0
+ashenden	SKIP-too-new	2022,2023,2024,2025,2026								
+celeritas	SKIP-too-new	2023,2024,2025,2026								
+mercilesstrader	SKIP-too-new	2022,2023,2024,2025,2026								
+algotradealert	SKIP-too-new	2023,2024,2025,2026								
+buffalotraderswritingdesk	CANDIDATE	2021	3	67	2	0	1	1631	2	112
+etfshelf	SKIP-too-new	2023,2024,2025,2026								
+grahamsbenjamins	SKIP-too-new	2022,2023,2024								
+fcompounders	SKIP-too-new	2023,2024								
+undertheradars	SKIP-too-new	2023,2024,2025								
+blackmon	SKIP-too-new	2022,2023,2024,2025,2026								
+theenergynewsbeat	SKIP-too-new	2022,2023,2024,2025,2026								
+thenemethreport	SKIP-too-gated	2021	10	0	0	0	4	0	0	0
+kattla	SKIP-too-new	2023,2024,2025,2026								
+naturalselections	CANDIDATE	2021	46	75	3	1	0	1836	3	58
+robertbryce	CANDIDATE	2021	52	75	3	0	1	2037	1	141
+tucoschild	SKIP-too-new	2022,2023,2024,2025,2026								
+juspermachogu	SKIP-too-new	2023,2024,2025,2026								
+energybadboys	SKIP-too-new	2023,2024,2025,2026								
+corbettreport	SKIP-too-gated	2021	17	0	0	0	4	0	0	0
+goghieas	SKIP-too-new	2025,2026								
+hottakeoftheday	CANDIDATE	2021	276	75	3	0	1	544	1	82
+wretchedhive	SKIP-too-new	2024,2025,2026								
+meredithangwin	SKIP-too-new	2024,2025,2026								
+wordswork	SKIP-too-new	2023,2024,2025,2026								
+cloudwisdom	SKIP-too-new	2022,2023,2024,2025,2026								
+azradale	SKIP-too-new	2022,2023,2024,2025,2026								
+tangowithrenewables	SKIP-too-new	2023,2024,2025,2026								
+mulling	SKIP-too-new	2022,2023,2024,2025								
+tmacro06	SKIP-too-new	2025								
+andrewonenergy	SKIP-too-new	2022,2023,2024,2025,2026								
+thebarricade	SKIP-too-gated	2021	40	50	2	0	2	1609	2	111
+spudster	SKIP-too-new	2023,2024								
+prinsights	SKIP-too-new	2024,2025,2026								
+m3melody	SKIP-too-new	2023,2024,2025,2026								
+peterboockvar	SKIP-too-new	2023,2024,2025,2026								
+bubble3	SKIP-too-new	2022								
+intellectualinvestorrussian	WEAK-no-claims	2021	4	100	4	0	0	1733	0	17
+cappnotes	SKIP-too-new	2024,2025,2026								
+themarkethouse	SKIP-too-new	2024,2025,2026								
+tgmacro	SKIP-too-new	2022,2023,2024,2025,2026								
+drjennifericonsidine	SKIP-too-gated	2016	3	0	0	0	3	0	0	0
+carlosramirez365	SKIP-too-new	2024,2025,2026								
+jjkennedy467192	SKIP-too-new	none								
+myfavoriteclassical	SKIP-too-new	2022,2023,2024,2025,2026								
+bamboolounge	SKIP-too-new	2023,2024,2025,2026								
+fxpoet	SKIP-too-gated	2021	1	0	0	0	1	0	0	0
+weeklymarkethighlights	SKIP-too-new	2024,2025								
+sweetsmind	ERROR	404 on https://sweetsmind.substack.com/sitemap								
+pineconemacroresearch	SKIP-too-gated	2021	100	50	2	2	0	343	3	140
+timdallinger	SKIP-too-new	2023,2024,2025,2026								
+phildauber	SKIP-too-new	2023,2024,2025,2026								
+lex	SKIP-too-gated	2021	161	50	2	2	0	1567	3	764
+genuineimpact	SKIP-too-new	2022,2023,2024,2025,2026								
+thetranscript	SKIP-too-gated	2021	79	50	2	2	0	4547	1	154
+retrostack	SKIP-too-gated	2021	83	50	2	2	0	3336	2	382
+virginiaheffernan	SKIP-too-gated	2021	66	0	0	4	0	0	0	0
+gritcapital	SKIP-too-new	none								
+pippapodcast	SKIP-too-new	2024								
+fritz	SKIP-too-new	2024,2025								
+bradmunchen	SKIP-too-new	2023,2024,2025,2026								
+johnd12343	SKIP-too-new	2022,2023,2024,2025,2026								
+spencerjakab	SKIP-too-new	2022,2024,2025,2026								
+dkotok	SKIP-too-new	2025,2026								
+thebearofrathgar	WEAK-no-claims	2021	13	100	4	0	0	891	0	106
+keubiko	CANDIDATE	2021	7	100	4	0	0	992	1	160
+thechancerydaily	SKIP-too-new	2022,2023,2024								
+the69thchamber	SKIP-too-new	2023								
+daniellealmond	SKIP-too-new	2024,2025,2026								
+christianlorentzen	SKIP-too-new	2022,2023,2024,2025,2026								
+rogerpielkejr	CANDIDATE	2021	41	100	4	0	0	1458	7	95
+totemtik	SKIP-too-new	2026								
+wirescrossed	SKIP-too-new	2024,2025,2026								
+trevorcasper	SKIP-too-new	2022,2023,2024,2025,2026								
+genehoots	CANDIDATE	2021	17	100	4	0	0	1093	1	120
+ianbezek	SKIP-too-new	2022,2023,2024,2025,2026								
+andvari	SKIP-too-new	2023,2024,2025,2026								
+edelweisscapital	SKIP-too-new	2022,2023,2024,2025,2026								
+recital	SKIP-too-new	2023,2024,2025,2026								
+buybackcapital	SKIP-too-new	2023,2024,2025,2026								
+mbideepdives	SKIP-too-gated	2021	15	0	0	4	0	0	0	0
+andrewbrown174150	SKIP-too-new	2026								
+poundtherockinvesting	SKIP-too-gated	2021	13	0	0	4	0	0	0	0
+debunkingthedebunkers	SKIP-too-new	2023,2024								
+edwardrooster	SKIP-too-new	2022,2023,2024,2025,2026								
+kaizeninvesting	SKIP-too-gated	2021	2	50	1	0	1	7520	6	162
+ragingbullinvestments	SKIP-too-new	2023,2024,2025								
+thecytadel	SKIP-too-new	2024,2025,2026								
+seriouslymarvin	SKIP-too-new	2025,2026								
+kayfabecapital	CANDIDATE	2021	8	100	4	0	0	1118	1	107
+celiafarber	SKIP-too-gated	2021	185	0	0	0	4	0	0	0
+danielmcadams	SKIP-too-new	2022,2023,2024,2025,2026								
+gilbertdoctorow	SKIP-too-gated	2021	1	0	0	0	1	0	0	0
+chrishedges	SKIP-too-new	2022,2023,2024,2025,2026								
+antonwahlman	CANDIDATE	2021	5	100	4	0	0	1670	2	102
+donaldjeffries	CANDIDATE	2021	28	100	4	0	0	2208	1	59
+greenwald	SKIP-too-gated	2021	129	0	0	4	0	0	0	0
+scottritter	SKIP-too-new	2022,2023,2024,2025,2026								
+nancyrommelmann	WEAK-no-claims	2021	64	75	3	0	1	921	0	105
+daniellarison	SKIP-too-gated	2021	260	25	1	3	0	814	1	77
+alexepstein	CANDIDATE	2021	26	100	4	0	0	1023	1	231
+korybko	SKIP-too-new	2022,2023,2024,2025,2026								
+mearsheimer	SKIP-too-new	2023,2024,2025,2026								
+leadlagreport	SKIP-too-new	2022,2023,2024,2025,2026								
+againstcronycapitalism	SKIP-too-new	2023,2024,2025,2026								
+jonrappoport	SKIP-too-new	2022,2023,2024,2025,2026								
+bigserge	SKIP-too-new	2022,2023,2024,2025,2026								
+alexberenson	SKIP-too-gated	2021	347	0	0	4	0	0	0	0
+peacelibertyprosperity	SKIP-too-new	2022,2023,2024,2025,2026								
+kucinichreport	SKIP-too-new	2023,2024,2025,2026								
+naomiwolf	SKIP-too-new	2022,2023,2024,2025,2026								
+elisabeth140	SKIP-too-gated	2021	2	50	1	0	1	1213	0	46
+elizabethp	SKIP-too-new	2022,2023								
+parallelsystems	SKIP-too-new	2024,2025,2026								
+monicaperezshow	SKIP-too-new	2024,2025,2026								
+geopoliticsandempire	SKIP-too-new	2022,2023,2024,2025,2026								
+michaelyon	SKIP-too-gated	2021	36	50	2	0	2	519	1	136
+sarasomers	SKIP-too-new	2022,2023,2024,2025,2026								
+versaillescentury	SKIP-too-new	2024,2025,2026								
+juicyhistory	SKIP-too-new	2022,2023,2024,2025,2026								
+nigellaeatseverything	SKIP-too-new	2022,2023,2024								
+joelbowman	CANDIDATE	2021	24	100	4	0	0	4546	5	107
+thedefiant	CANDIDATE	2021	400	100	4	0	0	1812	2	294

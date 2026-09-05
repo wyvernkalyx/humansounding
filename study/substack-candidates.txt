@@ -1,0 +1,26 @@
+# Candidate publications for the pre-ChatGPT newsletter arm.
+# One slug per line. Anything after # is ignored.
+# profile-all will report SKIP-too-new for anything founded after 2021,
+# and ERROR for a slug that does not exist -- so guesses cost one request.
+
+# --- finance: slugs read off substack.com/top/finance, so these are real ---
+doomberg
+petition
+qtrs-fringe-finance
+bonner-private-research
+capital-wars
+compounding-quality
+doug-casey-crisis-investing
+farm-cpa-report
+
+# --- health: names came off the leaderboard without slugs, so these are
+# --- my guesses at the slug. Wrong ones will come back ERROR, no harm done.
+vajenda                  # Dr Jen Gunter - explanatory, cites studies
+brainhealthkitchen       # Annie Fenn MD
+howardluksmd             # orthopaedic surgeon, midlife fitness
+drboz
+zawn                     # Liberating Motherhood
+
+# --- add your own below. Get slugs from substack.com/top/<category>:
+# --- health, food, finance, technology, science, sports, parenting,
+# --- climate, business, education
