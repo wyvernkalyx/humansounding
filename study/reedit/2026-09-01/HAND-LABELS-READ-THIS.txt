@@ -1,0 +1,710 @@
+Count self-narration instances in each passage. The rubric:
+
+You are labeling one passage of prose for a linguistics study. Count instances of SELF-NARRATION: writing about the writing, or about the writer's own reliability, instead of about the subject.
+
+The operational test: cut the sentence. If the reader loses no fact about the subject, it was self-narration.
+
+The six forms:
+1. Rating your own claim ("medium-high confidence that...", "I'm fairly sure").
+2. Announcing your integrity ("let me be transparent", "here's the honest answer", "to be fair", "I'll be straight with you").
+3. Apologizing for an earlier draft or acknowledging your own error ("that's on me", "you're right, I overstated that", "I said 25 before").
+4. The text describing its own body ("as noted above", "three paragraphs back", "that's the list", word or section counts).
+5. Telling the reader how much something matters ("which is the whole point", "and that changes everything").
+6. Reviewing your own source's prose ("to their credit", "stated plainly").
+
+Count every instance, including repeats. A single sentence containing two distinct forms counts twice.
+
+Reply with JSON only, no other text:
+{"instances":[{"form":<1-6>,"quote":"<the exact words, 12 words maximum>"}]}
+An empty list is a valid and expected answer.
+
+Put your count in the your_count column of HAND-LABELS.tsv, matched by passage number.
+The passages are in a seeded shuffle and carry no filenames, because a filename
+names the arm. Do not open HAND-LABELS-KEY.tsv or SCORES.tsv until you are done.
+
+======================================================================
+PASSAGE 1 of 20   (364 words)
+======================================================================
+
+Marisol Vega, M.Ed.
+1427 Harlow Street, Cedar Park, TX 78613
+(512) 555-0188 | mvega.edu@gmail.com
+
+March 4, 2025
+
+Dr. Anita Broussard
+Superintendent, Leander Valley ISD
+2100 District Way
+Cedar Park, TX 78613
+
+Dear Dr. Broussard,
+
+I want the principalship at Willow Creek Middle School, and I have spent four years eleven miles away working on the problem Willow Creek has not yet solved: middle-grades literacy.
+
+As assistant principal at Eastview Middle, I supervise 62 faculty, own the master schedule and MTSS process, and evaluate the ELA and social studies departments. We rebuilt teacher observation around short, frequent visits with same-day feedback — eight to ten touchpoints a year instead of two formal walkthroughs. We replaced suspension-first discipline with tiered interventions and restorative conferences. Reducing disproportionality in that system remains unfinished work.
+
+I also treat operations as instructional work. A schedule that protects a real 40-minute intervention block, a budget aligned to priorities rather than legacy line items, systems that keep teachers out of busywork. I built all three at Eastview — including one schedule redesign that cost teachers common planning time and that I had to undo midyear and rebuild with a faculty committee.
+
+What I would bring to Willow Creek is presence: classrooms daily, dismissal, games, hard conversations early rather than stored up for an evaluation. I also speak Spanish, which matters in a building where a third of families do.
+
+References include Principal Dana Okafor at Eastview, two department chairs, and our campus advisory council chair. I would welcome a conversation.
+
+Sincerely,
+
+Marisol Vega
+Texas Principal Certificate #4471902
+
+---
+
+You're right, and I should not have invented those figures. I removed the reading proficiency numbers, the suspension reduction percentage, and the claim that the disproportionality gap narrowed.
+
+Two things to check before you send. The other specifics I supplied are also mine, not yours — the 62 faculty, eight to ten touchpoints, the 40-minute block, a third of families, the reference names. Correct or cut any that are wrong. And the opening still implies you have made progress on literacy; if that isn't supported, "working on" could become something narrower.
+
+If you send me your actual outcome data, I'll put it back in.
+
+======================================================================
+PASSAGE 2 of 20   (376 words)
+======================================================================
+
+**Re: [Employee Name] — [Target Position Title], Req. #[XXXX]**
+
+Dear [Name],
+
+I'm writing in support of [Employee Name] for [Target Position Title]. You know [his/her/their] work, so I'll skip the résumé and speak to the question actually in front of the committee: whether [he/she/they] can operate at this level now.
+
+I think the answer is yes, and I'd point to three things.
+
+First, [he/she/they] [has/have] been doing a meaningful share of this job since [month]. [Specific example — e.g., the [Project] workstream has effectively been hers since Q1; I've been in the status meetings as a courtesy, not a necessity.] The scope change here is real but not a leap.
+
+Second, judgment under pressure. [Specific example — e.g., during the vendor transition, when the timeline collapsed, she came to me with two options and a recommendation rather than a problem, and she was right about which risk mattered.] That instinct — knowing what to escalate and what to simply handle — is the part of this role that's hardest to teach, and it's already there.
+
+Third, [he/she/they] [is/are] trusted laterally. [Specific example — e.g., Finance and Ops both route questions to her directly now, which was not true a year ago and didn't happen by accident.] For a role that runs on influence more than authority, that matters more than any single deliverable.
+
+On the open question I expect you'll raise: [growth area — e.g., delegation]. It's fair. [He/She/They] [has/have] historically absorbed work rather than distributing it, and we've talked about it directly. [Evidence of change — e.g., she's handed off two of her recurring deliverables since June and has been deliberate about coaching rather than correcting.] I'd want [his/her/their] first quarter in the role to include explicit support on [specific — e.g., headcount planning], which [he/she/they] [hasn't/haven't] touched yet. That's a ramp-up need, not a reservation.
+
+Backfilling [him/her/them] will hurt my team, and I'd still make this move. [He/She/They] [has/have] outgrown the current role, and keeping [him/her/them] in it is the more expensive option.
+
+Happy to talk further if it's useful.
+
+[Your Name]
+[Your Title]
+
+---
+
+The brackets are placeholders for the details I don't have. Give me the actual projects, the growth area, and the role's real requirements and I'll write it straight through.
+
+======================================================================
+PASSAGE 3 of 20   (221 words)
+======================================================================
+
+**Re: [Employee Name] — [Target Position Title], Req. #[XXXX]**
+
+Dear [Name],
+
+[Employee Name] should get this role. [He/She/They] [has/have] been doing much of it since [month] — [specific example, e.g., the [Project] workstream has been hers in practice; I attend status meetings as a courtesy, not a necessity] — and the promotion would mostly formalize what's already true.
+
+Two things convince me it holds at the next level. [He/She/They] escalate[s] the right things and handle[s] the rest: [brief example, e.g., when the vendor timeline collapsed, she brought me two options and a recommendation]. And [he/she/they] [is/are] trusted laterally — [brief example, e.g., Finance and Ops now route questions to her directly, which wasn't true a year ago].
+
+On [growth area, e.g., delegation]: fair concern, and we've discussed it. [Evidence, e.g., she's handed off two recurring deliverables since June.] [He/She/They] will need support on [specific gap, e.g., headcount planning] in the first quarter. Ramp-up need, not a reservation.
+
+Backfilling [him/her/them] will hurt my team. I'd still make the move — keeping [him/her/them] in the current role is the more expensive option.
+
+[Your Name]
+[Your Title]
+
+---
+
+Removed: "and was right about which risk mattered" — that was an outcome I had no basis for. Everything else is unchanged. If you meant a different line, tell me which and I'll cut that instead.
+
+======================================================================
+PASSAGE 4 of 20   (726 words)
+======================================================================
+
+Here's the same letter recast for a reader who already has the file — a colleague in the target program who has seen the CV, transcript, and writing sample, and may have met the student at a visit day. The rhetorical job changes completely: nothing needs introducing, so the letter's value lies in calibration, candor, and the things that don't appear on paper.
+
+---
+
+**[Your Name]**
+[Title], [Department], [Institution]
+[Email] | [Phone]
+
+[Date]
+
+Dear [Colleague's First Name],
+
+You've got [Student]'s file, so I'll skip the recitation and give you what the file can't.
+
+**Calibration.** [Student] is the strongest undergraduate researcher to come through my group since [former student], who you may remember is now [position, institution]. That's [number] years and roughly [number] students. I don't make that comparison casually, and I'd make it again if you asked me in five years.
+
+**What the transcript understates.** The [grade/course] in [Course] is real, and it's not what you might assume. [He/She/They] was [reason — e.g., "carrying twenty hours a week at a job through that semester" / "taking the graduate section as a sophomore and competing with fourth-year students"]. The trajectory afterward is the signal; the single data point isn't.
+
+**What the CV overstates.** The [Journal] manuscript lists [him/her/them] second, but the [specific contribution — e.g., "segmentation pipeline and the entire supplementary analysis"] is [his/hers/theirs]. I wrote the framing and did very little else. Conversely, I'd discount the [conference/poster line] — that was a low bar and everyone in the lab presented.
+
+**The thing that actually persuades me.** [Specific episode, told tightly — e.g., "Last spring our central result failed to replicate across three trials. I was prepared to shelve the project. [Student] came back inside two weeks with a literature review, a candidate confounder we'd both missed, and a control experiment already designed. [He/She/They] was right. That redirection is the paper."] I've watched a lot of talented students go quiet when a result collapses. [He/She/They] got louder and more organized. That's the disposition that finishes a dissertation.
+
+**Where [he/she/they] will need managing.** [Honest limitation — e.g., "[Student] under-communicates when stuck and will burn a week before asking. I've pushed on this and it's improved, but a hands-off advisor would be a bad match. [He/She/They] also writes a first draft that buries the argument on page four — fixable, and [he/she/they] takes edits without ego, which is more than half the battle."] I mention this because you'll find out in year one anyway, and I'd rather you hear it from me.
+
+**Fit.** [He/She/They] should be working with [Name] on [problem], not [Name] on [problem] — the interests look adjacent on paper but the methods aren't, and I think [he/she/they] knows it. Worth asking directly if you interview.
+
+Short version: I'd take [him/her/them] in my own group if [he/she/they] weren't leaving, and I think [he/she/they] will be a credit to your program. Happy to talk by phone if that's more useful than more paragraphs.
+
+Best,
+[Your Name]
+
+---
+
+**What changed and why:**
+
+- **No introductions, no summary of credentials.** A reader with the file experiences recapitulation as a waste of their time — and as evidence the writer has nothing firsthand to add.
+- **Comparative ranking moved to the top.** For an informed reader, calibration against named predecessors is the single most valuable thing a letter provides, because it's the one judgment only the writer can make.
+- **Added a section correcting the record in both directions.** Telling a colleague what the CV *inflates* buys enormous credibility for everything else in the letter. A committee that doesn't know you can't reward that; a colleague who does will.
+- **Added a candid limitation.** In the first version this would read as sabotage. Here it reads as professional honesty between peers who will both be accountable for the outcome.
+- **Specific advising recommendation.** Only possible when you can assume the reader knows the department's internal landscape.
+- **Compressed by roughly half, and the register dropped** — contractions, direct address, a closing offer to talk. Informed readers want signal density and a human on the other end, not formality.
+
+One caution: this version depends on an actual relationship with the recipient and on your willingness to stake your own reputation. If you're not confident the reader will read your candor as candor, use the first version and add only the calibration paragraph.
+
+======================================================================
+PASSAGE 5 of 20   (465 words)
+======================================================================
+
+# Performance Review — [Name], Account Executive
+**Period:** [Year] | **Overall:** Exceeds Expectations
+
+---
+
+## Results
+
+127% of quota ($2.54M / $2.0M). Four for four on quarterly targets. #2 on the team.
+
+- 14 new logos, including [Account A] at $310K ACV — largest regional new-business win of the year
+- 34% win rate on qualified opps vs. 26% team average
+- [Account B] expansion: $45K → $128K
+- Post-sale CSAT 4.7/5; named in three reference calls as a deciding factor
+- Mentored two ramping reps, both of whom hit quota in their first full quarter
+
+No concerns on the selling side. Discovery, competitive positioning, and executive presence are all strong enough that he's the right person to pull into a stalled negotiation.
+
+---
+
+## Administrative Execution
+
+The gap you're aware of, quantified:
+
+- **Forecasts:** late 9 of 12 months, 2–4 days typical. Three months required manual reconstruction before roll-up.
+- **CRM:** ~40% of open deals with stale close dates or next steps at any given time; team average 12%. Two closed deals with unupdated contract values distorted Q3 forecast accuracy by ~$180K.
+- **Handoffs:** incomplete notes on five closed-won accounts. One caused a three-week implementation timeline dispute.
+- **His own paperwork:** Q2 commission delayed a full pay cycle on unsubmitted approval forms. Expenses averaging 41 days against a 30-day policy.
+
+The cost is currently being absorbed by me, deal desk, and CS. It's the only thing standing between him and Senior AE.
+
+---
+
+## Goals
+
+| Goal | Measure |
+|---|---|
+| Quota | 100%+ attainment |
+| Forecasts | On time 11 of 12 months |
+| CRM hygiene | ≥90% of open opps current at Friday audit |
+| Handoffs | 100% of closed-won documented before kickoff |
+| Expenses | Within 30 days |
+
+---
+
+## Plan
+
+1. Friday 4:30 block for CRM and pipeline, treated as non-negotiable.
+2. First five minutes of every 1:1 on hygiene for 90 days, then biweekly if metrics hold.
+3. Mobile CRM training in January plus automated activity capture.
+4. Requesting [X hrs/month] of sales support for proposal assembly — worth it at his revenue leverage. Doesn't transfer ownership of forecast accuracy.
+5. Formal checkpoint [Date]. Two consecutive clean quarters is the stated bar for Senior AE.
+
+---
+
+## Manager Comment
+
+The selling isn't in question and I don't want the admin feedback to blur that — he's a reason we hit plan. The open question is whether he can pair it with the operational reliability the next role needs. I think he can; this reads as habit and prioritization, not capability, and he's taken the feedback well every time we've raised it informally. The plan is built to make the habit cheaper, not to add supervision.
+
+---
+
+**Employee comments:** _[space]_
+
+**Signatures:** ______________________ / ______________________
+
+======================================================================
+PASSAGE 6 of 20   (550 words)
+======================================================================
+
+# Cover Letter — School Administrator (Internal / Known Candidate)
+
+I've written this for the version of the reader who has already watched you work: a superintendent, principal, or HR director in your own district who knows your record and doesn't need it recited. The letter therefore spends almost no time on background and almost all of it on what you would actually do in the role.
+
+---
+
+**[Your Name]**
+[Phone] | [Email]
+
+[Date]
+
+Dear [Dr./Ms./Mr. Last Name],
+
+I'm writing to formally put my name forward for the [Assistant Principal / Principal] position at [School Name].
+
+You already know my work, so I won't restate it. I'd rather use this letter to tell you what I'd do in the first year.
+
+**Instruction.** My read is that our biggest gap isn't teacher effort—it's the inconsistency between classrooms in [subject/grade band]. I'd tighten the observation cycle to short, frequent visits with same-week feedback, and I'd protect PLC time for looking at student work rather than logistics. Concretely: [specific first move, e.g., a common formative assessment in K–2 literacy by October].
+
+**Culture.** [Name the real problem, e.g., "Referrals from the 7th-grade hallway are running well above the rest of the building."] I'd start by getting clear on whether that's a systems issue or a staffing one before changing any policy. My instinct is that we need a clearer tiered response and better follow-through on Tier 2, not a stricter code of conduct.
+
+**Staff.** We're losing too many teachers in years two and three. I'd formalize the mentoring that currently happens by accident, and I'd make retention conversations a spring priority rather than an August surprise.
+
+**Operations.** The master schedule is a values document. I'd build next year's around protected intervention time and common planning, and I'd be candid with you early about what that costs elsewhere.
+
+Two things you should weigh honestly. First, [name a genuine gap—e.g., "my budget experience is limited to department-level; I'd need real support in year one"]. Second, moving me out of [current role] leaves a hole in [area], and I'd want us to have a plan for that before anything is announced.
+
+I know this building and these families, and I think that's an argument for me rather than against—provided I'm willing to change things, which I am. I'd welcome the chance to talk it through.
+
+Sincerely,
+
+**[Your Name]**
+
+---
+
+### What changed and why
+
+- **No credential recap, no mission-statement flattery.** Both read as padding to someone who already knows you and wrote the mission statement.
+- **Past tense became future tense.** When the reader knows your track record, the open question isn't "what have you done?" but "what would you do with more authority?"
+- **Specific diagnoses of the school's actual problems.** This is the biggest advantage an internal candidate has—use it. It also signals you'd arrive with judgment, not just enthusiasm.
+- **Named a real weakness and a real cost.** With an external reader this can sink you. With someone who already knows your limitations, pretending they don't exist costs you credibility.
+- **Much shorter.** Roughly 350 words. Familiar readers skim.
+
+One caution: if the posting goes to a committee that includes outsiders—board members, parent reps, a neighboring principal—assume at least one reader doesn't know you, and add two sentences of grounding at the top.
+
+======================================================================
+PASSAGE 7 of 20   (307 words)
+======================================================================
+
+Assuming this is for an email body or an application-form text box — places where a formatted letter looks out of place and people skim. I kept the warm-reader framing and cut to about 125 words.
+
+---
+
+**Subject: Marketing Coordinator — [Your Name]**
+
+Hi [First Name],
+
+I'm applying for the Marketing Coordinator role, and I'd want to spend the first few months on three things: [opportunity #1], [opportunity #2], and documenting the content workflow so it doesn't live in one person's head.
+
+Those come from what I've seen [volunteering / contracting] here since [year] — including [one specific project in four or five words]. I know the constraints, and I'd rather do a few things consistently than announce ten.
+
+Résumé attached. Happy to talk whenever it's useful.
+
+[Your Name]
+[Phone] • [Email]
+
+---
+
+**What I cut and why:**
+
+- **The "since you already know the background" opener.** Clever framing costs a sentence you no longer have. Lead with the plan.
+- **The specific-moment anecdote.** It was the emotional core of the longer version, but at this length the concrete plan does more work.
+- **The bulleted list.** Three items in a sentence read faster on a phone than three bullets with sub-clauses.
+- **The 90-day line.** It was redundant once the plan moved to the top.
+
+What survived: the plan, the proof you've been inside, and the constraint acknowledgment. Those are the three things a warm reader can't get from your résumé.
+
+**If the placement is different than I guessed:**
+
+- **LinkedIn message** — drop the subject line and "Résumé attached," add "I've applied through the portal."
+- **Form field with a hard character limit** — cut the second paragraph to just "This comes from [volunteering] here since [year]."
+- **Still a formal letter, just shorter** — say so and I'll restore the salutation and sign-off block.
+
+======================================================================
+PASSAGE 8 of 20   (145 words)
+======================================================================
+
+The version I last sent doesn't actually contain a results claim — the only number I ever wrote was in the earlier round, as a bracketed example of something you *could* add ("helped cut fulfillment times by 30%"), and that's already gone.
+
+So there's nothing to cut unless a line is reading as an implied accomplishment to you. My guess is one of these:
+
+- "more room to actually fix them" — could imply things have been fixed
+- "you know what it took" — could imply a specific hard-won win
+
+Here it is with both softened, everything else intact:
+
+---
+
+I'm the new Director of Operations at [Company].
+
+Same team, same problems worth solving.
+
+To everyone who's been in the trenches on this: thank you.
+
+More soon.
+
+---
+
+If it was a different line, point me at it and I'll pull just that one.
+
+======================================================================
+PASSAGE 9 of 20   (225 words)
+======================================================================
+
+**MEMO — CS Reorg: Final Structure, Go-Live [Month Day]**
+**To:** Directors; Team Leads | **From:** [Name], VP Customer Experience | **Date:** [Date]
+
+**The structure is final. Leads must complete individual assignment conversations by [Date].** Present assignments as decisions, not proposals. Headcount, comp bands, titles, and tenure are unchanged.
+
+**Structure**
+
+| Team | Lead | HC |
+|---|---|---|
+| Tier 1 Support | [Name] | [#] |
+| Technical Support | [Name] | [#] |
+| Billing & Retention | [Name] | [#] |
+| Quality & Enablement | [Name] | [#] |
+
+Two changes from the [Date] draft: **Retention moved to Billing** (pilot save-rate data), and **Q&E now reports to me** to preserve QA independence.
+
+**Deadlines**
+
+- Assignment conversations — leads — [Date]
+- HRIS reporting lines — [Name] — [Date]
+- Routing/queue config — [Name] — [Date]
+- Training curricula — [Name] — [Date]
+- Go-live — [Name] — [Date]
+
+**Open items**
+
+- Technical Support coverage gap, [shift/region]: [Name] to propose by [Date]
+- QA scorecard rewrite: draft at [Date] sync
+- Tier 1 → Technical escalation SLA: needed before go-live
+
+**From you:** hit the [Date] conversation deadline and flag retention risk to me directly this week, not after go-live.
+
+Standing 20-minute sync [Day] at [Time] through day 30. All-hands Q&A [Date] at [Time] — leads present and aligned on the two changes above.
+
+======================================================================
+PASSAGE 10 of 20   (221 words)
+======================================================================
+
+# Cover Letter — Junior Software Developer
+*Short version, for a reader who knows you*
+
+Hi [Name],
+
+I'm applying for the Junior Software Developer role on [team] — I'd like the job, and I think I'm ready for it now in a way I wasn't when we last talked.
+
+The change since [project]: [one specific thing — "I rebuilt the reporting pipeline in Go"]. That was the gap, and it's closed.
+
+I already know [the codebase / the deploy process / how the team works], so ramp-up should be short. Happy to talk through [scope / timing / where you need coverage] whenever it's useful.
+
+Thanks, [Name].
+
+[Your Name]
+
+---
+
+**What changed:** only the outcome metric came out of the example placeholder. The sentence now names the work without quantifying its effect. Everything else is untouched.
+
+**One thing to watch:** that metric was carrying most of the weight in the middle paragraph. Without it, "that was the gap, and it's closed" is doing the persuading on its own. If you can't cite results, the next strongest substitute is scope or duration rather than impact — "I've been maintaining it in production since [month]," or "I owned that service end to end." Both describe the work without claiming a measured outcome. Say the word if you want a version built that way.
+
+======================================================================
+PASSAGE 11 of 20   (245 words)
+======================================================================
+
+The short version doesn't actually contain a results claim — there's no promise about fitness, weight, or outcomes anywhere in it. The closest thing is **"so you're not walking in cold,"** which implies an outcome from the re-entry plan. I've cut that on the assumption it's what you meant. Everything else is untouched.
+
+**Subject line:** No joining fee if you come back this month
+
+**Preview text:** Rejoin by Jan 31. Your old account's still there.
+
+---
+
+Hi [First Name],
+
+**Rejoin by January 31 and the joining fee's waived — first month $[XX].** Same no-contract terms as before.
+
+👉 [BUTTON: Reactivate My Membership]
+
+That link pulls up your old account. Nothing to re-enter.
+
+If it's been a while, [Coach Name] will build you a re-entry plan — twenty minutes, free, no upsell.
+
+And if you're done with us, no hard feelings: [unsubscribe here].
+
+[Name]
+[Gym Name] · [Phone]
+
+*Previous members reactivating by Jan 31, [Year]. [Terms.]*
+
+---
+
+**Two things worth confirming:**
+
+If you meant something else, the only other candidates are **"no upsell"** (a promise about your sales behavior) and the **re-entry plan** itself (a service claim). Tell me which and I'll cut it instead.
+
+If this restriction came from legal or compliance, the **earlier long versions have more exposure** than this one — the first draft includes "this is the year you finally transform," "a plan that works," and "makes showing up easy." If those are still in circulation, they may need the same pass.
+
+======================================================================
+PASSAGE 12 of 20   (241 words)
+======================================================================
+
+**Subject line:** Your spot's still here
+
+**Alternates:**
+- We saved your locker (not really, but you get it)
+- January: $0 to come back
+- It's been a minute
+
+**Preview text:** No joining fee, no re-signup hassle. Just walk back in.
+
+---
+
+Hi [First Name],
+
+We know you know how this works. So we'll skip the pitch.
+
+Through **January 31**, coming back costs you nothing extra:
+
+**✓ $0 rejoining fee**
+**✓ First month back for $[XX]**
+**✓ Your old settings restored** — same class bookings, same locker preferences, same login
+**✓ Optional check-in with [Coach Name]** if you want to reset your program
+
+**A few things that have changed since you were last in:**
+
+- [New equipment / renovated area]
+- [New class or schedule change]
+- [Extended hours or new coach]
+
+And a few that haven't: [Coach Name] still runs [class] on [day], the [signature thing] is still there, and it's still the same room full of people who aren't paying attention to what you're lifting.
+
+**Reactivate in one click**
+👉 [BUTTON: Turn My Membership Back On]
+
+That's it — no forms, no waiting on a callback. Your account's already in the system.
+
+If now isn't the time, that's genuinely fine. Reply and tell us what would make it work, or just come use a day pass and see how it feels: [Link]
+
+[Name]
+[Gym Name] · [Phone]
+
+*Rejoining offer valid through January 31, [Year]. [Terms.]*
+
+[Unsubscribe] · [Update preferences]
+
+======================================================================
+PASSAGE 13 of 20   (301 words)
+======================================================================
+
+**MEMORANDUM**
+
+**To:** All Staff
+**From:** [Name], [Title]
+**Date:** [Date]
+**Subject:** New Expense Policy Effective [Date]
+
+---
+
+Beginning **[effective date]**, we are implementing an updated expense reimbursement policy. The new policy simplifies submission requirements, shortens reimbursement turnaround, and brings our practices in line with current audit standards.
+
+**What's changing**
+
+1. **New submission platform.** All expenses must be submitted through [system name]. Paper forms and email submissions will no longer be accepted after [date].
+2. **Submission deadline.** Expenses must be submitted within **[30] days** of the transaction date. Submissions beyond this window require written approval from your department head.
+3. **Receipts.** Itemized receipts are required for all expenses of **$[25]** or more. Credit card statements alone are not sufficient documentation.
+4. **Pre-approval thresholds.** Any single expense over **$[500]**, as well as all travel and client entertainment, requires manager pre-approval.
+5. **Per diem rates.** Meal and incidental expenses during travel will follow the standard per diem schedule outlined in the policy rather than actual-cost reimbursement.
+6. **Reimbursement timing.** Approved expenses will be processed within **[10] business days** and paid via [direct deposit/payroll].
+
+**What you need to do**
+
+- Review the full policy, available at [link or location].
+- Complete the brief [system name] training module by **[date]**; it takes approximately [15] minutes.
+- Submit any outstanding expenses under the current process by **[date]**.
+
+**Questions**
+
+Optional live Q&A sessions will be held on [dates/times] — [registration details]. For individual questions, contact [name] at [email] or reach out to your manager.
+
+Thank you for your attention to these changes. Clear and timely expense reporting helps us manage resources responsibly and get your money back to you faster.
+
+---
+
+*Want me to adjust the tone (more formal, more casual), shorten it, or tailor it to your organization's actual policy details? Just share the specifics and I'll revise.*
+
+======================================================================
+PASSAGE 14 of 20   (233 words)
+======================================================================
+
+**Everyone believes in hiring for attitude. Almost nobody has built the machinery to do it.**
+
+The gap isn't conviction — it's assessment and capacity.
+
+**Assessment:** if your attitude signal lives in the unstructured chat at the end, you're measuring rapport, not attitude. Put it in the scorecard with defined anchors, or it collapses into "people like me." And probe failure, not success — anyone can narrate a win. Listen for where the agency sits when the story goes badly.
+
+**Capacity:** a high-potential hire with a skills gap is a real cost — to your seniors, your dates, and to the hire themselves if nobody has bandwidth to coach. These bets fail less often because we misjudged the person, and more often because we couldn't support the bet we made.
+
+One flag: if "attitude over experience" keeps producing candidates who are junior, cheap, and conveniently agreeable, that's not a philosophy. That's a budget.
+
+Where does it break for you — the assessment, or the support after the offer?
+
+---
+
+That's about 170 words, down from ~350. I cut the two weaker scaffolding points and folded the failure-probe into the assessment section to keep the two-part structure intact. If the placement is tight on space, the closing question is the easiest thing to drop; if it's a newsletter or something with more room to breathe, I'd put the ramp-cost point back as its own beat.
+
+======================================================================
+PASSAGE 15 of 20   (177 words)
+======================================================================
+
+**"Attitude over experience" fails because attitude isn't scored and experience is.**
+
+Everyone agrees with the principle. Then the shortlist gets built on years-in-seat anyway — because hiring managers default to whatever they can defend in a debrief.
+
+Three things worth scoring, because you can actually hear them in an interview:
+
+**How fast they say "I don't know."** Not humility as a trait — speed. Watch the lag between not knowing and admitting it.
+
+**What they do with a correction.** Give real feedback in the interview and watch. Do they adjust, or defend the original position?
+
+**Whether they've thought about the problem before asking about it.** Curiosity without homework is just enthusiasm.
+
+Write the criteria down before the interview. Otherwise "attitude" quietly becomes "someone I'd enjoy working with," and you've swapped a visible bias for an invisible one.
+
+---
+
+*Changed two spots: dropped "because they predict something" from the lead-in, and cut "the best proxy I've found for how someone behaves when a project goes sideways." Both were implying evidence you hadn't given me. Everything else is untouched.*
+
+======================================================================
+PASSAGE 16 of 20   (306 words)
+======================================================================
+
+Here's a stripped-down version for an audience already familiar with the program — no rationale, no explanation of why security training exists, just the delta from last cycle and what they need to do.
+
+---
+
+**MEMORANDUM**
+
+**TO:** All Employees
+**FROM:** [Name], [Title]
+**DATE:** [Date]
+**SUBJECT:** FY[XX] Security Awareness Training — Due [Deadline]
+
+---
+
+This year's Security Awareness Training opens [start date] and is due **[Deadline]**. Same platform, same process as last cycle.
+
+**Access:** [Platform] → [URL] → "[Course Name]" in your assigned learning path.
+
+**Time:** ~[30–45] minutes, resumable. [80]% to pass; unlimited retakes.
+
+**What's new this cycle:**
+- [New module — e.g., AI-generated voice and video impersonation]
+- [Updated content — e.g., revised incident reporting workflow following the move to [tool]]
+- [Change — e.g., the assessment is now scenario-based rather than multiple choice]
+
+**Enforcement:** Manager completion reports go out [date]. Access restrictions apply after [Deadline] per [Policy #].
+
+**Exceptions and accommodations:** [Name], [email], [extension].
+
+---
+
+A few notes on what changed and why:
+
+- **Cut the "who must complete it" section.** A returning audience knows there are no exemptions; restating it reads as distrust.
+- **Cut the closing appeal.** The "most incidents begin with a single click" line is persuasion aimed at someone who needs convincing. For this reader it's filler, and filler trains people to skim your memos.
+- **Replaced the topic list with a "what's new" list.** This is the highest-value change. A repeat audience's real question is "is this the same thing I did last year?" — answering it directly is both more useful and more likely to prevent click-through-without-reading.
+- **Compressed access instructions to one line.** Numbered steps are for first-time users.
+
+If your actual audience is a mix of veterans and new hires, I'd send this version broadly and give new hires a separate onboarding note with the fuller context.
+
+======================================================================
+PASSAGE 17 of 20   (127 words)
+======================================================================
+
+# Dashboard redesign: shipped
+
+**Live for all accounts today.** Biggest change from beta: filters are now global, not per-widget — set a date range or segment once and it applies everywhere.
+
+**Other deltas from beta:**
+- Layouts persist and sync across devices (they reset on logout in beta)
+- Render time down to ~1s at 20+ widgets, from ~3s
+- Shareable views added, including read-only external links
+- Dark mode added
+
+**Didn't make it:** custom widgets (beta next month), scheduled digests, metric alerts.
+
+**Migration:** widgets carried over in order. Legacy dashboard available from the settings menu for 60 days, then retired.
+
+**Known issues:** filters don't apply to embedded reports yet; layout sync can lag ~30s across open sessions.
+
+Feedback to the header button or back to me.
+
+======================================================================
+PASSAGE 18 of 20   (660 words)
+======================================================================
+
+You're right — I shouldn't have inserted a cited finding you never supplied. I've removed it, along with the clause that hung off it ("but output isn't what promotion committees read"), since it only made sense as a rebuttal to the citation. Nothing else is changed.
+
+---
+
+# What You're Calling Culture Drift Is Four Operational Failures
+
+The scaffolding argument is settled — co-location supplied information diffusion, norm calibration, and cheap trust as unpriced byproducts, and orgs that never built them deliberately found out. Everyone knows this. The unexamined case is the companies that *did* build deliberately and drifted anyway. In nearly every one I've looked at, the cause wasn't proximity. It was four specific failures, all fixable, none of which require a lease.
+
+**Writing cultures fail on the read side.** Every playbook mandates writing; almost none mandate reading. Volume goes up, calendars don't change, documents become artifacts of having-done-the-process, and a year later you have a wiki nobody trusts. The diagnostic isn't "do we write things down" — it's whether a competent person can reconstruct why a decision was made, by whom, and what was rejected, eighteen months later, without asking anyone. Most heavy-docs orgs fail this, because they write proposals and status rather than provenance. Proposals persuade, then get abandoned on approval. The useful residue is boring: decision, owner, rejected alternatives, revisit-by. Two fixes work — the Amazon-style silent read, which is the only mechanism I've seen that makes reading a scheduled obligation rather than a virtue, and assigning ownership of document decay. Untended docs don't stay neutral; one confidently wrong page costs more than ten missing ones.
+
+**Span of control is the unglamorous answer.** Problem detection used to be passive. The manager reading a room was doing real work that appeared on no calendar. Distributed, detection becomes active, scheduled, and effortful — a genuine increase in per-report cost. Almost nobody adjusted. Companies went remote, held spans at ten or twelve, then expressed surprise when managers stopped noticing disengagement four months before a resignation. The manager didn't get worse; the job got harder and headcount didn't move. The fix is denser management or genuinely autonomous flat units, and it's expensive. Worth naming: a fair number of RTO mandates are functionally an attempt to restore passive detection rather than pay for active detection. That's a defensible trade — it's just a real-estate bill paid to avoid a headcount bill.
+
+**Hybrid is a third mode, not a midpoint.** Two people in a room and three on video isn't a hybrid meeting; it's an in-person meeting with observers, and the decisions get made in the ten minutes after the call ends. The only workable versions are coordinated: whole teams on the same days, meetings all-in-room or all-on-video with no mixed states, anchor days chosen for collaborative work rather than scattered to satisfy a badge-swipe metric. Individually-chosen hybrid days produce the worst outcome available — commute cost plus coordination cost, and a two-tier org besides.
+
+**Promotion systems still run on effort proxies.** Distributed work makes output more legible and effort far less legible. That would be an improvement if promotion evaluated output. It mostly evaluates visible reliability, responsiveness, and presence in the right rooms — proxies calibrated when effort was observable. Remote, they degrade unevenly: still functional for people who are loud in Slack or in a favorable time zone, useless for the person quietly holding up a critical service. The process gets noisier while feeling identical from the inside. Then high performers who correctly perceive the system stopped tracking them leave, and it's logged as culture loss. If you went distributed without rewriting leveling criteria and calibration, you moved the meetings and called it a migration.
+
+The through-line: each of these was a cost the office absorbed invisibly. Distributed work doesn't eliminate them, it just moves them onto the budget where you have to look at them. Drift is what happens when you decline to pay and blame the model instead.
+
+======================================================================
+PASSAGE 19 of 20   (161 words)
+======================================================================
+
+I don't think there's a results claim left in the current version. Here it is line by line:
+
+- Start date, anchor days, third day, core hours — schedule facts you gave me
+- Desk assignments, parking, café — placeholders
+- Meeting norms — an instruction, not a claim
+- Remote-hired exception and the escalation path — policy
+- Q&A logistics — placeholders
+
+Nothing about outcomes, productivity, or performance survived the cut.
+
+If you're looking at one of the earlier drafts, the lines you likely mean are from the first version:
+
+- "we've heard consistently — in engagement surveys, skip-levels, and manager feedback" — I invented that evidence
+- "Your work has been excellent, and that's not in question" — also mine
+
+Both were already gone by the second draft. Tell me which sentence in the short version you're reading as a results claim and I'll strike it, or paste back the copy you're working from and I'll clean that one.
+
+======================================================================
+PASSAGE 20 of 20   (115 words)
+======================================================================
+
+**[Your Name]** | [Phone] | [Email] | [GitHub]
+
+[Date]
+
+Dear [Name],
+
+I've applied for the Junior Software Developer role, and I'd like the job.
+
+Since [the internship / we spoke], I've [concrete development: shipped X, learned Y]. That closes the gap you flagged around [thing]. I rewrote the [component] with real test coverage.
+
+I'm available [date]. Code at [link].
+
+Thanks again for [the intro / your time].
+
+Best,
+**[Your Name]**
+
+---
+
+I cut "it's been running against live data since [month]" — that was the outcome claim I'd invented. If you also want "That closes the gap you flagged around [thing]" gone, say the word; it asserts an effect I don't have grounds for either.
