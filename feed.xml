@@ -5,11 +5,46 @@
   <description>The weekly column on AI's accent: what's rising, what's fading, and what changed in the machine vernacular.</description>
   <language>en-us</language>
   <item>
+    <title>The Load-Bearing Tic, Now With a Growth Chart</title>
+    <link>https://humansounding.com/blog/2026-09-07.html</link>
+    <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-09-07</guid>
+    <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
+    <description>A new GitHub study quantifies Claude's favorite catchphrase, while OpenAI tunes two of its own tells out of ChatGPT.</description>
+  </item>
+  <item>
     <title>Claude Opus 5's New Tic: Everything Is &quot;Load-Bearing&quot;</title>
     <link>https://humansounding.com/blog/2026-08-31.html</link>
     <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-08-31</guid>
     <pubDate>Mon, 31 Aug 2026 12:00:00 GMT</pubDate>
     <description>A single overused metaphor turned into a developer meme this week, showing how AI writing tells are model-specific and short-lived.</description>
+  </item>
+  <item>
+    <title>Why do AI-writing checkers miss the most obvious AI writing?</title>
+    <link>https://humansounding.com/blog/why-ai-checkers-miss-ai-writing.html</link>
+    <guid isPermaLink="true">https://humansounding.com/blog/why-ai-checkers-miss-ai-writing.html</guid>
+    <pubDate>Sun, 30 Aug 2026 12:00:00 GMT</pubDate>
+    <description>Six regular expressions, validated on thirteen of thirteen positives, found none of the thirty-seven instances a reader found in the same fifteen documents.</description>
+  </item>
+  <item>
+    <title>Do AI-writing checkers agree with each other? I tested three</title>
+    <link>https://humansounding.com/blog/do-ai-writing-checkers-agree.html</link>
+    <guid isPermaLink="true">https://humansounding.com/blog/do-ai-writing-checkers-agree.html</guid>
+    <pubDate>Sat, 29 Aug 2026 12:00:00 GMT</pubDate>
+    <description>Two independent rule sets, run over the same 456 documents, reproduce three findings from the corpus study. Both also contain the same measurement mistake.</description>
+  </item>
+  <item>
+    <title>Why does AI keep apologizing and rating its own answers?</title>
+    <link>https://humansounding.com/blog/ai-self-narration.html</link>
+    <guid isPermaLink="true">https://humansounding.com/blog/ai-self-narration.html</guid>
+    <pubDate>Fri, 28 Aug 2026 12:00:00 GMT</pubDate>
+    <description>AI prose addresses an evaluator, human prose addresses a reader. Six shapes that habit takes, and a one-second test for catching it.</description>
+  </item>
+  <item>
+    <title>Do all AI models write the same way? I measured four</title>
+    <link>https://humansounding.com/blog/every-tell-belongs-to-one-model.html</link>
+    <guid isPermaLink="true">https://humansounding.com/blog/every-tell-belongs-to-one-model.html</guid>
+    <pubDate>Thu, 27 Aug 2026 12:00:00 GMT</pubDate>
+    <description>160 documents, four models, one pre-ChatGPT human baseline. Em dashes are a Claude habit, the delve vocabulary is a Gemini habit, and no rule describes AI writing in general.</description>
   </item>
   <item>
     <title>The Em Dash Retired. Nine New Tells Took Its Place.</title>
@@ -24,6 +59,20 @@
     <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-08-17</guid>
     <pubDate>Mon, 17 Aug 2026 12:00:00 GMT</pubDate>
     <description>New research ties AI's em-dash habit to markdown training, while Wikipedia officially names the 'not X, it's Y' tell.</description>
+  </item>
+  <item>
+    <title>I had an AI build a website that catches AI writing</title>
+    <link>https://humansounding.com/blog/how-this-site-was-built.html</link>
+    <guid isPermaLink="true">https://humansounding.com/blog/how-this-site-was-built.html</guid>
+    <pubDate>Tue, 11 Aug 2026 12:00:00 GMT</pubDate>
+    <description>The build log behind this site: the weekly robot, the honesty rules, and the embarrassing parts.</description>
+  </item>
+  <item>
+    <title>Claude now watermarks its text. Here's what that changes.</title>
+    <link>https://humansounding.com/blog/claude-watermarking.html</link>
+    <guid isPermaLink="true">https://humansounding.com/blog/claude-watermarking.html</guid>
+    <pubDate>Tue, 11 Aug 2026 12:00:00 GMT</pubDate>
+    <description>The invisible mark proves a model touched the text, and nothing more. What writers should and shouldn't worry about.</description>
   </item>
   <item>
     <title>This week in AI writing: August 10, 2026</title>

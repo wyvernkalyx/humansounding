@@ -52,19 +52,18 @@ Evidence: hypothesis about training dynamics, not a frequency finding. Measured 
 **16. Write how the audience talks.** Prefer the plain word: use, not utilize; help, not facilitate; big, not substantial. Contractions are allowed and usually right.
 
 <!-- TRENDING:START -->
-## Trending tells right now (auto-updated August 31, 2026)
+## Trending tells right now (auto-updated September 7, 2026)
 
 This section is data, refreshed weekly from sourced research at humansounding.com. Check drafts against these patterns with the same force as Tier 1.
 
 - "not just X, but Y": Wikipedia's guide names this move negative parallelism; EQ-Bench's Slop Score still weights it at 25% of its composite, with sampled models running 2 to 20 times the human rate (EQ-Bench, Aug 2026; Wikipedia, Aug 2026)
 - Hassid's post-em-dash tics (contrast openers, mirrored triads): A widely shared file of nine writing habits is circulating as the internet's next em-dash-style tell, posted after models were tuned to avoid the dash itself (Ruben Hassid via X, Aug 2026)
-- vague indirect abstraction ("widely associated with" instead of a defined relationship): Wikipedia's guide flags LLMs reaching for indirect constructions like "particularly/widely associated" rather than stating the relationship directly, often paired with buzzy vocabulary (Wikipedia, Aug 2026)
+- vague indirect abstraction ("widely associated with" instead of a defined relationship): Wikipedia's guide flags LLMs reaching for indirect constructions like "particularly/widely associated" rather than stating the relationship directly, citing an August 2026 revision to a draft article as an example (Wikipedia, Sep 2026)
 - light punctuation / long, comma-light sentences: The Economist's 1.2m-word comparison of ChatGPT, Claude, Gemini, and Grok found AI text uses fewer commas, semicolons and parentheses than humans, with longer sentences and overuse of "and" (The Economist, Aug 2026)
 - delve (in human speech): Significant post-2022 rise in podcasts and academic talks (Max Planck; FSU)
 - underscore: ~30% of 2025 PMC papers use it, vs ~3% in 2022; Wikipedia's guide notes Grok continues to overuse it as of 2026 (Wikipedia, Aug 2026)
 - Grok's pseudo-scientific words (causal, empirical, correlate): Wikipedia's editor guide flags Grok output as idiosyncratic, overusing these terms more than other chatbots (Wikipedia, Aug 2026)
-- meticulous: 34.7× in AI-era peer reviews; still growing in full-text corpora
-- "load-bearing": Claude Opus 5 says "load-bearing" constantly, spawning a Hacker News thread with over 1,700 points and prompt workarounds built specifically to suppress it (AlphaSignal, Aug 2026; AIToolCrunch, Aug 2026)
+- "load-bearing": A clustering study of 461,121 GitHub pull requests found the load-bearing writing style grew from 0.7% to 39% of the corpus in 18 months (Louis Abraham via ai-tldr.dev, Aug 2026); developers now ship CLAUDE.md bans to suppress it (AIToolCrunch, Jul 2026)
 - rule of three · false ranges · vague attribution: Codified by Wikipedia's guide; structural, so harder to tune out. Also flagged by The Economist's 2026 style study as an LLM favorite (The Economist, Aug 2026)
 <!-- TRENDING:END -->
 
