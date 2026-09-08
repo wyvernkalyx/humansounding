@@ -5,6 +5,59 @@ judgment has been recorded.** Locked. Anything added after the first number is
 looked at goes in a section headed "exploratory, added after unblinding", or it
 does not go in.
 
+## Amendments
+
+Amendments are dated, reasoned, and recorded above the text they change. The
+original wording stays in the file. An amendment is only legitimate here when it
+is made **before any judgment exists**, and when the reason is that the rule
+could not be executed — not that the result was unwelcome.
+
+### Amendment 1 — 2026-09-08: excerpt boundary changed from paragraph to sentence
+
+**Changed:** the excerpt window's deterministic offset is now *the first
+**sentence** boundary at or after word 50*, previously *the first **paragraph**
+boundary at or after word 50*.
+
+**Why.** The rule could not be executed on one of the two required human strata.
+**39 of the 40 documents in the 2004 Blog Authorship stratum are a single line**
+— no blank-line breaks and no internal newlines at all. Whether that is how the
+corpus was distributed or an artefact of how it was exported has not been
+established, and the answer does not change the arithmetic: with no paragraph
+boundary in the text, the paragraph rule returns no offset and the stratum
+yields **zero** passages.
+
+Zero passages in the 2004 stratum makes the floor of "at least 20 passages in
+each human stratum" unreachable and **H4 untestable**. H4 is the known-negative
+that detects a surviving dating leak, so losing it would leave H1 with no
+contamination check — the one failure mode this design was built to catch.
+
+**Measured yield of each rule** (documents producing a valid >=120-word window,
+2026-09-08, **before** the light screening in control 2, which will reduce all
+three counts):
+
+| stratum | documents | paragraph rule | sentence rule |
+| --- | --- | --- | --- |
+| Blog Authorship 2004 | 40 | 0 | 26 |
+| Substack 2017-2022 | 854 | 852 | 853 |
+| period-matched model arm | 80 | 80 | 80 |
+
+The 2004 margin over the floor of 20 is thin and screening eats into it. If the
+screened count lands under 20, the stratum fails its floor and H4 is reported as
+not testable — that consequence is unchanged by this amendment.
+
+**What this costs.** A sentence-boundary excerpt can begin mid-paragraph, so
+passages may open without their local context. This applies **identically to
+every arm and both strata**, so it does not favour a side; it is a uniform
+reduction in context that plausibly lowers accuracy across the board. Recorded
+here as a limitation, not a correction.
+
+**What was not changed:** no hypothesis, no floor, no stratum, no decision rule,
+no screening rule. The window stays 120-200 words, still deterministic, still
+never chosen by a person or a model.
+
+**Standing at the time of this amendment:** no collection page exists, no
+storage exists, and no judgment has been recorded.
+
 ## The question
 
 Ship 1 published that fourteen of fifteen rules fail their own evidence bar.
@@ -91,9 +144,13 @@ cue stops discriminating. This is control 1, the strongest of the three, and it
 is a prompt change on the existing harness rather than new machinery. **Model
 anachronisms are logged as findings, not silently dropped.**
 
-**Excerpt window:** a fixed 120-200 words taken at a deterministic offset — the
-first paragraph boundary at or after word 50. Never chosen by a person and never
-chosen by a model.
+**Excerpt window** (amended 2026-09-08, see Amendment 1)**:** a fixed 120-200
+words taken at a deterministic offset — the first **sentence** boundary at or
+after word 50. Never chosen by a person and never chosen by a model.
+
+> Superseded original, 2026-09-07: "**Excerpt window:** a fixed 120-200 words
+> taken at a deterministic offset — the first paragraph boundary at or after
+> word 50. Never chosen by a person and never chosen by a model."
 
 **Selection:** seeded reservoir sample within the stated strata.
 `collect-human.mjs` is already seeded; the job here is not to break it.
