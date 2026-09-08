@@ -35,6 +35,7 @@ import { loadEnv, ENV_PATH } from "../scripts/load-env.mjs";
 import { VENDORS, Fatal, chat, listModels } from "./vendors.mjs";
 import { GENRES, CHAT_GENRES } from "./prompts.mjs";
 import { EXPERIENCE_GENRES } from "./prompts-experience.mjs";
+import { PERIOD_GENRES } from "./prompts-period.mjs";
 
 loadEnv();
 
@@ -64,11 +65,14 @@ const MANIFEST = join(OUT, "MANIFEST.tsv");
 // failing to reach the register, not a finding about pushback. This mode is
 // the corpus that can answer the question.
 const MODE = arg("mode", "docs");
-if (!["docs", "chat", "experience"].includes(MODE)) { console.error(`--mode must be docs, chat or experience`); process.exit(1); }
+// "period" is control 1 of the perceived-axis study: the same harness, prompted
+// on period-anchored topics from the same years as the human strata, so era
+// cues stop being a one-sided giveaway. See study/prompts-period.mjs.
+if (!["docs", "chat", "experience", "period"].includes(MODE)) { console.error(`--mode must be docs, chat, experience or period`); process.exit(1); }
 
 const N_PER_GENRE = Number(arg("n", 5));
 
-const SETS = MODE === "chat" ? CHAT_GENRES : MODE === "experience" ? EXPERIENCE_GENRES : GENRES;
+const SETS = MODE === "chat" ? CHAT_GENRES : MODE === "experience" ? EXPERIENCE_GENRES : MODE === "period" ? PERIOD_GENRES : GENRES;
 
 // Length. This constant existed from the first run and was never appended to a
 // prompt, so every corpus in study/corpus/ was generated with NO length
