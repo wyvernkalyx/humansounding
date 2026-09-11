@@ -12,6 +12,65 @@ original wording stays in the file. An amendment is only legitimate here when it
 is made **before any judgment exists**, and when the reason is that the rule
 could not be executed — not that the result was unwelcome.
 
+### Amendment 2 — 2026-09-11: collection window extended, and every judgment is dated
+
+**Changed:** collection may continue past the six-week stop rule until the
+floors are met. The six-week checkpoint still happens and its counts are still
+published; what changes is that "not yet at the floor" no longer ends the run.
+
+**Added:** every judgment records the **UTC date it was collected**, alongside
+the fields already listed under "What is recorded". This field does not identify
+the visitor and does not extend what is known about them — the session id stays
+random and per-session, and nothing else is added.
+
+**Added — D1, a required diagnostic, not a hypothesis.** Judgments are split into
+three equal parts by collection order and accuracy is compared across the first
+and last part. Reported whatever it shows, in the same place as H3. D1 is **not**
+a primary result and no publication decision turns on it; it exists so that a
+reader can see whether the answer held still while it was being collected.
+
+**Why the window had to change.** The rule could not be executed within its own
+timeframe, and the arithmetic was already in this file — in two bullets whose
+product was never taken.
+
+> at least **120 distinct passages** entering analysis
+> at least **8 judgments on a passage** for that passage to enter analysis
+
+A passage under 8 judgments does not enter analysis, so it does not count toward
+the 120. **The binding floor is therefore 960 judgments, not the 400 stated.**
+The section "How long the floor takes at current traffic" computed 5-10 weeks
+from 400; against 960 the same assumptions give 11-24 weeks, and six weeks of
+measured traffic (21 sessions in the 7 days to 2026-09-07, 46 in the 7 before)
+yields roughly 240-540 judgments. The stop rule as written would retire the
+instrument before it could ever have reached power, under this file's own
+optimistic assumption. That is a rule that cannot be executed, which is the only
+ground on which this file permits an amendment.
+
+**What the extension costs, stated in advance.** 960 judgments gathered over a
+year are not 960 judgments from one population. Readers in late 2027 will have
+had another year of exposure to AI writing than readers in late 2026, so the
+thing being measured moves while it is measured, and the bootstrap's assumption
+that passages and judgments are exchangeable is weakened. This is the reason the
+date field and D1 are part of the same amendment: the cost is accepted, and it
+is made **auditable** rather than absorbed silently.
+
+**Whether a year is even enough is unknown and becomes knowable quickly.** The
+20% quiz-start rate in this file is a guess, and 960 judgments needs roughly 23
+weeks at 20%, 46 weeks at 10%, and 91 weeks at 5%. The start rate is measurable
+within about two weeks of launch and should be recorded here when it is.
+
+**What does not change.** No hypothesis, no floor, no stratum, no screening rule,
+no decision rule, and not the ban on reading results early. H1 through H4 are
+untouched. The design guard in `study/perceived.mjs` still refuses to print a
+verdict until every floor is met, and `--force` output is still labelled
+not-preregistered-valid. Publishing a result before the floor is met remains
+forbidden, and the six-week checkpoint remains a public report of the counts to
+date rather than a quiet look at the answer.
+
+**No judgment existed when this was written.** The collection page does not exist
+either; `study/perceived/packet.mjs` was written the same day and the passage
+packet had not been generated.
+
 ### Amendment 1 — 2026-09-08: excerpt boundary changed from paragraph to sentence
 
 **Changed:** the excerpt window's deterministic offset is now *the first
