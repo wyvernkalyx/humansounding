@@ -281,7 +281,13 @@ const packet = [];
 for (const x of results) packet.push(...shuffled(x.pool, r).slice(0, want.get(x.id)));
 console.log(`\njudgments needed at 8 per passage: ${packet.length * 8}`);
 
+// The packet carries 60 third-party human passages verbatim, so it falls under
+// the same rule as study/corpus/*/*.txt and study/slop/label.html: it is
+// gitignored and never reaches the public repo. What makes the result
+// reproducible instead is the KEY — ids, arms, strata, word counts, no text —
+// written beside it and tracked, exactly as the slop study's key is.
 const out = arg("out", "study/perceived/packet.json");
+const keyOut = out.replace(/\.json$/, "-key.tsv");
 writeFileSync(out, JSON.stringify({
   seed: SEED, built: new Date().toISOString().slice(0, 10),
   rule: { offset_words: OFFSET_WORDS, min_words: MIN_WORDS, max_words: MAX_WORDS, whole_sentences: true },
@@ -290,4 +296,7 @@ writeFileSync(out, JSON.stringify({
   counts: Object.fromEntries([...want]), total: packet.length, judgments_needed: packet.length * 8,
   passages: shuffled(packet, r),
 }, null, 2));
+writeFileSync(keyOut, "id\tarm\tstratum\tgenre\twords\n" +
+  shuffled(packet, rng(SEED)).map((x) => `${x.id}\t${x.arm}\t${x.stratum}\t${x.genre}\t${x.words}`).join("\n") + "\n");
+console.log(`wrote ${keyOut}: the tracked, text-free record of what is in the packet`);
 console.log(`wrote ${out}: ${packet.length} passages — ` + [...want].map(([k, v]) => `${k} ${v}`).join(", ") + "\n");

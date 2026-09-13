@@ -56,3 +56,11 @@ study/substack-debug.html
 
 # Working analysis of a named third party. Public repo; see the commit.
 drafts/
+
+# Perceived-axis passage packet. packet.json embeds 120 excerpts verbatim, 60 of
+# them third-party human text -- Blog Authorship 2004 and Substack -- so it falls
+# under the same rule as study/corpus/*/*.txt, for the same reason label.html
+# above does. packet-key.tsv carries ids, arms, strata and word counts with no
+# text and stays tracked, which is what makes the run reproducible. It is also
+# the answer key, and the site's audience is exactly the sort to read one.
+study/perceived/packet.json
