@@ -64,3 +64,7 @@ drafts/
 # text and stays tracked, which is what makes the run reproducible. It is also
 # the answer key, and the site's audience is exactly the sort to read one.
 study/perceived/packet.json
+
+# Local filesystem preview of human-or-ai.html (relative asset paths so it
+# opens from file://). Not the page that ships; never commit it.
+*.local.html

@@ -50,6 +50,35 @@
 // in for that reason: 2021 is before ChatGPT's public launch, so it is the
 // cleanest trap in the set.
 //
+// EXTENDED 2026-09-14: newsletter_2021 went from 40 prompts to 60.
+//
+// Why: the passage packet built on 2026-09-11 cleared every preregistered floor
+// and still let a reader score 64.2% from register alone — 43 of 60 model
+// passages were blog_2004 against 26 of 60 human, and only 17 model newsletters
+// against 34 human Substack posts. Balancing the packet by register needs 34
+// eligible model newsletters and only 26 existed.
+//
+// The shortfall is control 1 doing its job. A period-anchored 2021 newsletter
+// names its year far more often than a 2004 diary entry does, so control 2 drops
+// it far more often: model blog documents survive screening at 89%, model
+// newsletters at 33%.
+//
+// THE DISCIPLINE THAT APPLIES TO PROMPTS 41-60, AND TO ANY ADDED LATER.
+//
+// Whoever adds prompts here after 2026-09-08 knows the yield is low and knows
+// why. That makes it tempting to write prompts whose answers will avoid naming
+// the year, which would raise the yield by quietly removing control 1 — the
+// exact trade the screening note below forbids.
+//
+// So: prompts 41-60 open on the era in the same words as 1-40 and steer the
+// model away from nothing. A lower survival rate on the new batch than the old
+// one is the expected result and is not a reason to revise them. If the new
+// batch survives NOTICEABLY BETTER than the original 40, treat that as evidence
+// the spec drifted, not as a success.
+//
+// They were written before any of them had been generated or screened, and they
+// have not been iterated on since.
+//
 // Screening note: study/perceived's control 2 drops any passage containing a
 // four-digit year token, applied identically to both arms. Many documents
 // generated from these prompts will say "2004" or "2021" outright and be
@@ -149,6 +178,28 @@ export const PERIOD_GENRES = [
       "It is 2021. Write this week's issue of my newsletter on machine learning, about what large language models can and cannot do yet.",
       "It is 2021. Write this week's issue of my newsletter on retail, about store closures and where the sales actually went.",
       "It is 2021. Write this week's issue of my newsletter on refining, about why gasoline prices moved the way they did this year.",
+
+      // --- added 2026-09-14, prompts 41-60. See the note at the top of this file. ---
+      "It is 2021. Write this week's issue of my newsletter on trucking, about the driver shortage and how long trucks wait at warehouse docks.",
+      "It is 2021. Write this week's issue of my newsletter on insurance, about wildfire risk and insurers pulling back from parts of California.",
+      "It is 2021. Write this week's issue of my newsletter on college sports, about athletes being allowed to earn money from their own names.",
+      "It is 2021. Write this week's issue of my newsletter on antitrust, about the tech bills moving through Congress and what they would actually change.",
+      "It is 2021. Write this week's issue of my newsletter on China, about the crackdown on tutoring companies and what it did to foreign investors.",
+      "It is 2021. Write this week's issue of my newsletter on consumer finance, about buy now, pay later and who is really doing the lending.",
+      "It is 2021. Write this week's issue of my newsletter on higher education, about the enrollment drop and which colleges are feeling it first.",
+      "It is 2021. Write this week's issue of my newsletter on water policy, about the first shortage declaration on the Colorado River.",
+      "It is 2021. Write this week's issue of my newsletter on immigration, about visa backlogs and how long people are actually waiting.",
+      "It is 2021. Write this week's issue of my newsletter on electric vehicles, about the charging network and who is expected to pay for it.",
+      "It is 2021. Write this week's issue of my newsletter on mental health, about waiting lists for therapists and what is driving the demand.",
+      "It is 2021. Write this week's issue of my newsletter on apparel, about cotton prices and where brands are moving their sourcing.",
+      "It is 2021. Write this week's issue of my newsletter on podcasting, about exclusive deals and whether any of them earn back.",
+      "It is 2021. Write this week's issue of my newsletter on state tax, about remote workers and which state gets to tax them.",
+      "It is 2021. Write this week's issue of my newsletter on cruise lines, about restarting sailings and what the protocols cost per passenger.",
+      "It is 2021. Write this week's issue of my newsletter on childcare, about providers closing and what it does to parents going back to work.",
+      "It is 2021. Write this week's issue of my newsletter on seafood, about supply chains and what happened when restaurant demand fell away.",
+      "It is 2021. Write this week's issue of my newsletter on public libraries, about what publishers charge for ebook licences.",
+      "It is 2021. Write this week's issue of my newsletter on utilities, about grid spending after this year's storms.",
+      "It is 2021. Write this week's issue of my newsletter on warehousing, about rents and the scramble for space close to cities.",
     ],
   },
 ];

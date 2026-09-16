@@ -39,9 +39,17 @@ const ROOT = arg("root", "study/corpus");
 // stratum it will be judged beside.
 // ---------------------------------------------------------------------------
 const ARMS = [
+  // genre is declared for the human arms rather than parsed. The Substack file
+  // convention is author__YEAR__NN, so the filename regex below matched the YEAR
+  // and recorded genre "2021" for all 34 Substack passages in the 2026-09-11
+  // packet. It changed no published number — the register audit collapses on
+  // "not blog_2004" — but it would hide a register imbalance from any check that
+  // grouped on the exact string, which is the one thing that had to be caught.
   { id: "human-2004",      arm: "human", stratum: "blog_2004",       dir: "human",
+    genre: "blog_2004",
     filter: (m) => m.source === "blogauthorship" },
   { id: "human-substack",  arm: "human", stratum: "substack_2017_22", dir: "substack",
+    genre: "newsletter_2021",
     filter: (m) => Number(m.year) <= 2022 },
   { id: "model-claude",    arm: "model", stratum: "period_claude",   dir: "period-claude" },
   { id: "model-openai",    arm: "model", stratum: "period_openai",   dir: "period-openai" },
@@ -201,11 +209,11 @@ for (const A of ARMS) {
     tally.survive++;
     // Genre comes from the model filename convention (model__genre__NN.txt) and
     // from the stratum itself on the human side.
-    const g = /__([a-z0-9_]+)__/.exec(row.file);
+    const g = A.genre ? null : /__([a-z0-9_]+)__/.exec(row.file);
     pool.push({
       id: `${A.id}/${row.file.replace(/\.txt$/, "")}`,
       arm: A.arm, stratum: A.stratum,
-      genre: g ? g[1] : (A.stratum === "blog_2004" ? "blog_2004" : "newsletter_2021"),
+      genre: A.genre ?? (g ? g[1] : "unknown"),
       words: ex.words, text: ex.text,
     });
   }
@@ -221,6 +229,53 @@ for (const r of results) {
   const t = r.tally;
   console.log(`${pad(r.id, 18)}${num(t.docs, 6)}${num(t.no_excerpt, 8)}${num(t.year, 6)}${num(t.currency, 6)}${num(t.product, 6)}${num(t.survive, 9)}`);
 }
+// ---------------------------------------------------------------------------
+// REGISTER AUDIT — added 2026-09-14, reporting only. Nothing here selects,
+// screens or drops anything; --report and the packet it writes are unchanged
+// by it.
+//
+// It exists because the packet built on 2026-09-11 was checked against every
+// preregistered floor, cleared all of them, and still carried a register
+// imbalance nobody had looked at: 43 of 60 model passages were blog_2004
+// against 26 of 60 human, and 17 model newsletters against 34 human Substack
+// posts. The floors are stated per ARM and per STRATUM, so an imbalance that
+// runs across genre passes every one of them.
+//
+// The last number is the one to read. A reader who can name the register and
+// guesses the majority arm inside it scores that much without reading for
+// anything else, so anything above 50% is accuracy the instinct did not earn.
+// H4 is the control that would catch it — after the full collection run.
+// Cheaper to see it here.
+//
+// The `genre` field is not comparable across arms on its own: it is parsed from
+// the filename, and the human Substack convention is author__YEAR__NN, so those
+// rows carry a year where the model rows carry a genre. Registers are collapsed
+// below so the comparison is between the things a reader actually sees.
+// ---------------------------------------------------------------------------
+const registerOf = (p) => (p.genre === "blog_2004" ? "blog_2004" : "newsletter_ish");
+function registerAudit(passages, label) {
+  if (!passages.length) return;
+  const reg = {};
+  for (const p of passages) {
+    const k = registerOf(p);
+    reg[k] = reg[k] || { human: 0, model: 0 };
+    reg[k][p.arm === "model" ? "model" : "human"]++;
+  }
+  console.log(`\n-- register audit (${label}) --`);
+  console.log(pad("register", 18) + num("human", 7) + num("model", 7) + num("total", 7) + "   P(model | register)");
+  let best = 0, n = 0;
+  for (const [k, v] of Object.entries(reg)) {
+    const t = v.human + v.model;
+    console.log(pad(k, 18) + num(v.human, 7) + num(v.model, 7) + num(t, 7) + `        ${((v.model / t) * 100).toFixed(1)}%`);
+    best += Math.max(v.human, v.model); n += t;
+  }
+  console.log(`best score obtainable from register alone: ${((best / n) * 100).toFixed(1)}%   (50.0% if balanced)`);
+}
+registerAudit(results.flatMap((r) => r.pool), "eligible POOLS — not the packet");
+console.log("   ^ pool sizes, not the draw. The human substack pool dwarfs every other cell,");
+console.log("     so the figure above is an artefact of what is AVAILABLE. The packet's own");
+console.log("     balance is the table further down.");
+
 const human = results.filter((r) => r.arm === "human").reduce((s, r) => s + r.tally.survive, 0);
 const model = results.filter((r) => r.arm === "model").reduce((s, r) => s + r.tally.survive, 0);
 console.log(`\nhuman ${human} (floor 60, and >=20 in EACH stratum)   model ${model} (floor 60)`);
@@ -230,7 +285,6 @@ for (const r of results) {
 if (human < 60) console.log("  FLOOR FAIL: human side under 60");
 if (model < 60) console.log("  FLOOR FAIL: model side under 60");
 
-if (REPORT_ONLY) { console.log("\n--report: nothing written.\n"); process.exit(0); }
 
 // ---------------------------------------------------------------------------
 // SIZING — and the reason it is a floor, not a ceiling.
@@ -253,33 +307,95 @@ if (REPORT_ONLY) { console.log("\n--report: nothing written.\n"); process.exit(0
 // ---------------------------------------------------------------------------
 const N_TOTAL = Number(arg("n", 120));
 const r = rng(SEED);
-const humanArms = results.filter((x) => x.arm === "human");
-const modelArms = results.filter((x) => x.arm === "model");
 const halfN = Math.floor(N_TOTAL / 2);
 
-// Human half: take the scarce stratum whole (up to an even split), fill the
-// rest from the abundant one. With 2004 at 26 eligible that is 26 + 34.
-const scarce = humanArms.reduce((a, b) => (a.pool.length <= b.pool.length ? a : b));
-const abundant = humanArms.find((x) => x.id !== scarce.id);
-const nScarce = Math.min(scarce.pool.length, Math.floor(halfN / humanArms.length));
-const nAbundant = halfN - nScarce;
-const perModel = Math.floor(halfN / modelArms.length);
-
-const want = new Map([[scarce.id, nScarce], [abundant.id, nAbundant], ...modelArms.map((m) => [m.id, perModel])]);
-let bad = false;
-for (const x of results) {
-  const n = want.get(x.id);
-  if (x.pool.length < n) { console.log(`  CANNOT FILL: ${x.id} needs ${n}, pool is ${x.pool.length}`); bad = true; }
+// ---------------------------------------------------------------------------
+// The packet is balanced by REGISTER, not by arm — changed 2026-09-14.
+//
+// Balancing by arm is what produced the 64.2% packet: 60 human and 60 model is
+// a perfect base rate and says nothing about how the two are spread across the
+// kinds of writing a reader can see at a glance. Every preregistered floor is
+// stated per arm or per human stratum, and register runs across both, so the
+// imbalance passed every check in the file.
+//
+// Balancing by register makes "guess the majority arm for this kind of writing"
+// worth exactly 50%, which is what the stated base rate already promises the
+// reader. Arm balance is preserved as a consequence: equal halves in each
+// register sum to equal halves overall.
+//
+// What is NOT balanced, deliberately: the split between the two model vendors.
+// After the newsletter shortfall is filled the model newsletters will lean
+// openai, because claude newsletters survive screening at 25% against openai's
+// 40%. That is a limitation about which model the newsletter register samples,
+// to be recorded and published — not a confound, because it does not let a
+// reader win without reading. Register imbalance did.
+// ---------------------------------------------------------------------------
+const cells = {};
+for (const x of results) for (const p of x.pool) {
+  const k = `${registerOf(p)}|${p.arm}`;
+  (cells[k] = cells[k] ?? []).push(p);
 }
-if (nScarce < 20) { console.log(`  CANNOT FILL: ${scarce.id} would contribute ${nScarce}, floor is 20 per human stratum`); bad = true; }
+const sz = (k) => (cells[k] ?? []).length;
+const blogCap = Math.min(sz("blog_2004|human"), sz("blog_2004|model"));
+const newsCap = Math.min(sz("newsletter_ish|human"), sz("newsletter_ish|model"));
+
+// Take the scarcer register as far as it goes, then fill from the other.
+let nBlog = Math.min(blogCap, halfN);
+let nNews = halfN - nBlog;
+if (nNews > newsCap) { nNews = newsCap; nBlog = halfN - nNews; }
+
+let bad = false;
+if (nBlog > blogCap) {
+  console.log(`  CANNOT FILL: blog register needs ${nBlog} per side, cap is ${blogCap}`);
+  bad = true;
+}
+if (nNews > newsCap) {
+  const short = nNews - newsCap;
+  const side = sz("newsletter_ish|model") <= sz("newsletter_ish|human") ? "model" : "human";
+  console.log(`  CANNOT FILL: newsletter register needs ${nNews} per side, cap is ${newsCap}`);
+  console.log(`  short by ${short} on the ${side} side. Generate more and rerun; nothing here can be balanced around it.`);
+  bad = true;
+}
+// The preregistered per-stratum floor still applies, and the human side's two
+// registers are its two strata.
+if (nBlog < 20) { console.log(`  CANNOT FILL: blog_2004 stratum would contribute ${nBlog}, floor is 20`); bad = true; }
+if (nNews < 20) { console.log(`  CANNOT FILL: substack stratum would contribute ${nNews}, floor is 20`); bad = true; }
 if (bad) { console.log("\nnothing written.\n"); process.exit(2); }
-if (nScarce === scarce.pool.length) {
-  console.log(`\nNote: ${scarce.id} is taken whole (${nScarce} of ${nScarce}). No seeded sampling happens in that stratum and there is no replacement if a passage is later pulled.`);
+
+const want = new Map([
+  ["blog_2004|human", nBlog], ["blog_2004|model", nBlog],
+  ["newsletter_ish|human", nNews], ["newsletter_ish|model", nNews],
+]);
+for (const [k, n] of want) {
+  if (sz(k) === n) console.log(`\nNote: ${k} is taken whole (${n} of ${n}). No seeded sampling happens there and there is no replacement if a passage is later pulled.`);
+}
+
+
+// --report stops here, but only AFTER the draw has been planned. It used to stop
+// before it, which meant the only register figure a --report run ever printed was
+// the one for the raw POOLS — and that number is meaningless. The substack pool
+// is 533 against 34 model newsletters, so "best score from register alone" on the
+// pools reads about 91%, which looks like a catastrophe and is nothing at all:
+// the packet draws 34 from each side, not 533. Printing the alarming number and
+// withholding the real one is worse than printing neither.
+if (REPORT_ONLY) {
+  console.log("\n-- the packet this would draw --");
+  console.log(`${pad("register", 18)}${num("human", 7)}${num("model", 7)}${num("total", 7)}   P(model | register)`);
+  for (const reg of ["blog_2004", "newsletter_ish"]) {
+    const n = want.get(`${reg}|human`);
+    console.log(`${pad(reg, 18)}${num(n, 7)}${num(n, 7)}${num(n * 2, 7)}        50.0%`);
+  }
+  console.log(`${pad("TOTAL", 18)}${num(nBlog + nNews, 7)}${num(nBlog + nNews, 7)}${num((nBlog + nNews) * 2, 7)}        50.0%`);
+  console.log(`\nbest score obtainable from register alone: 50.0%  — balanced`);
+  console.log(`judgments needed at 8 per passage: ${(nBlog + nNews) * 2 * 8}`);
+  console.log("\n--report: nothing written.\n");
+  process.exit(0);
 }
 
 const packet = [];
-for (const x of results) packet.push(...shuffled(x.pool, r).slice(0, want.get(x.id)));
+for (const [k, n] of want) packet.push(...shuffled(cells[k] ?? [], r).slice(0, n));
 console.log(`\njudgments needed at 8 per passage: ${packet.length * 8}`);
+registerAudit(packet, "the packet as sampled");
 
 // The packet carries 60 third-party human passages verbatim, so it falls under
 // the same rule as study/corpus/*/*.txt and study/slop/label.html: it is
@@ -293,7 +409,7 @@ writeFileSync(out, JSON.stringify({
   rule: { offset_words: OFFSET_WORDS, min_words: MIN_WORDS, max_words: MAX_WORDS, whole_sentences: true },
   stoplist: { year: true, currency: true, named_products: NAMED_PRODUCTS },
   attrition: Object.fromEntries(results.map((x) => [x.id, x.tally])),
-  counts: Object.fromEntries([...want]), total: packet.length, judgments_needed: packet.length * 8,
+  counts: Object.fromEntries([...want]), balanced_on: "register", total: packet.length, judgments_needed: packet.length * 8,
   passages: shuffled(packet, r),
 }, null, 2));
 writeFileSync(keyOut, "id\tarm\tstratum\tgenre\twords\n" +

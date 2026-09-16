@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human or AI? Test Your Eye on Real Passages</title>
+<meta name="description" content="Ten passages, one at a time. Half were written by people before ChatGPT existed, half by a model. Guess which, say what tipped you off, and find out how you did.">
+<link rel="canonical" href="https://humansounding.com/human-or-ai.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HumanSounding">
+<meta property="og:title" content="Human or AI? Test Your Eye on Real Passages">
+<meta property="og:description" content="Half written by people before ChatGPT existed, half by a model. Ten passages. How good is your eye, really?">
+<meta property="og:url" content="https://humansounding.com/human-or-ai.html">
+<meta property="og:image" content="https://humansounding.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+(function () {
+  var t; try { t = localStorage.getItem("hs_theme"); } catch (e) { /* storage blocked */ }
+  document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+})();
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--page); color:var(--ink-1); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.6; font-size:16.5px; }
+  main { max-width:700px; margin:0 auto; padding:0 24px 80px; }
+  h1 { font-size:32px; letter-spacing:-0.5px; line-height:1.2; margin:40px 0 8px; }
+  .byline { color:var(--ink-muted); font-size:13.5px; margin:0 0 28px; }
+  h2 { font-size:21px; letter-spacing:-0.3px; margin:32px 0 10px; }
+  p { color:var(--ink-2); margin:0 0 16px; }
+  p b { color:var(--ink-1); }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .note { background:var(--accent-soft); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:10px; padding:16px 18px; margin:22px 0; }
+  .note p { margin:0; color:var(--ink-1); }
+  .note p + p { margin-top:10px; }
+  .btn { display:inline-block; background:var(--btnbg); color:#fff; padding:11px 20px; border-radius:8px; font-weight:600; font-size:15.5px; border:0; cursor:pointer; font-family:inherit; }
+  .btn:hover { background:var(--accent-deep); text-decoration:none; }
+  .btn.ghost { background:transparent; color:var(--ink-2); border:1px solid var(--border); }
+  .btn.ghost:hover { background:var(--surface-1); }
+
+  .progress { display:flex; justify-content:space-between; align-items:baseline; font-size:12.5px; text-transform:uppercase; letter-spacing:.5px; color:var(--ink-muted); margin:28px 0 10px; }
+  .bar { height:3px; background:var(--grid); border-radius:2px; overflow:hidden; margin-bottom:26px; }
+  .bar i { display:block; height:100%; background:var(--accent); width:0; transition:width .25s ease; }
+
+  .passage { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:24px 26px; margin:0 0 24px; font-size:17.5px; line-height:1.72; color:var(--ink-1); white-space:pre-wrap; }
+
+  .ask { font-weight:600; color:var(--ink-1); margin:0 0 12px; }
+  .choices { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:8px; }
+  .choices .btn { flex:1 1 160px; text-align:center; }
+
+  .reasons { display:flex; gap:8px; flex-wrap:wrap; margin:6px 0 20px; }
+  .chip { background:var(--surface-1); border:1px solid var(--border); color:var(--ink-2); border-radius:999px; padding:8px 14px; font-size:14px; cursor:pointer; font-family:inherit; }
+  .chip:hover { border-color:var(--accent); color:var(--ink-1); }
+
+  .scorebox { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:26px; margin:24px 0; text-align:center; }
+  .scorebox .big { font-size:44px; font-weight:700; color:var(--ink-1); letter-spacing:-1px; line-height:1.1; }
+  .scorebox .sub { color:var(--ink-muted); font-size:14px; margin-top:6px; }
+  .actions { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:20px; }
+
+  .foot { font-size:13.5px; color:var(--ink-muted); margin-top:30px; }
+  .foot a { color:var(--ink-muted); text-decoration:underline; }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<nav id="topnav" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="/">HumanSounding</a>
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/checker.html">Checker</a>
+    <a class="nl" href="/trends.html">Trends</a>
+    <a class="nl" href="/ai-writing-tells.html">Tells</a>
+    <a class="nl" href="/fix-your-ai.html"><span class="long">Fix your AI</span><span class="short">Fix it</span></a>
+    <a class="nl nl-overflow" href="/blog.html">Blog</a>
+    <a class="nl nl-overflow" href="/about.html">About</a>
+    <div class="more">
+      <button class="morebtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+      <div class="menu">
+        <a href="/ai-writing-tells.html">Tells glossary</a>
+        <a href="/do-ai-writing-tells-work.html">Do the tells work?</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <a class="cta" href="/checker.html">Check your draft</a>
+  </div>
+</nav>
+<main>
+
+<!-- ---------- intro ---------- -->
+<section id="intro">
+  <h1>Human or AI?</h1>
+  <p class="byline">Ten passages, one at a time · no signup, no cookies</p>
+
+  <p>Everyone has a theory about how to spot AI writing. This site has spent months measuring those theories against real text, and <a href="/do-ai-writing-tells-work.html">fourteen of the fifteen most popular rules failed</a>. That leaves an obvious question unanswered: the rules are bad, but is the <i>instinct</i> bad?</p>
+
+  <p>That is what this measures. You will see one passage at a time and guess who wrote it. After each guess you say what tipped you off — and that second answer is the interesting one, because it is how we find out whether people are reading style or reading content.</p>
+
+  <div class="note">
+    <p><b>Exactly half the passages are human and half are AI.</b> You are told this on purpose. It means guessing gets you 50%, and knowing the split cannot help you beat it.</p>
+    <p><b>The human half was written before ChatGPT existed</b> — blog posts from 2004 and newsletters from 2017 to 2022. Nobody in that half had a model to write with. The AI half was prompted to write about the same years, so "this mentions something recent" will not give it away.</p>
+  </div>
+
+  <p><b>One thing you should know about these results before you add to them.</b> You found this page on a site about AI writing tells, so you are primed to look for them in a way an ordinary reader is not, which should push a score up. Working against that: nothing rides on your answer here. Someone deciding whether to accuse a student or an employee reads with a consequence attached, and that is not what this measures. Two pulls, opposite directions, and we have not measured either. So take what this group scores as a number about people like you, clicking through with nothing at stake, and not as a ceiling or a floor on what anyone else could do.</p>
+
+  <p>No account, no email, nothing stored that identifies you. What gets recorded is your guess, your reason, and how long you took.</p>
+
+  <p><button class="btn" id="start">Start — 10 passages</button></p>
+
+  <p class="foot">The method was written down and locked before any answer was collected, including what would count as a result and what would count as a failure. It is <a href="https://github.com/wyvernkalyx/humansounding/blob/main/study/perceived/PREREGISTRATION.md">public, in the repo</a>, along with every change made to it and why.</p>
+</section>
+
+<!-- ---------- quiz ---------- -->
+<section id="quiz" hidden>
+  <div class="progress"><span id="pcount">Passage 1 of 10</span><span id="pnote">Half are human</span></div>
+  <div class="bar"><i id="pbar"></i></div>
+
+  <div class="passage" id="ptext"></div>
+
+  <div id="askWho">
+    <p class="ask">Who wrote this?</p>
+    <div class="choices">
+      <button class="btn" data-j="human">A person</button>
+      <button class="btn" data-j="ai">AI</button>
+    </div>
+  </div>
+
+  <div id="askWhy" hidden>
+    <p class="ask">What tipped you off?</p>
+    <div class="reasons">
+      <button class="chip" data-r="word_choice">Word choice</button>
+      <button class="chip" data-r="rhythm">Rhythm or sentence shape</button>
+      <button class="chip" data-r="structure">Structure or formatting</button>
+      <button class="chip" data-r="mentioned">Something it mentioned</button>
+      <button class="chip" data-r="gut">Gut</button>
+    </div>
+    <p class="foot">No wrong answer here, and "gut" is a real one. Plenty of people cannot say what decided it, and how often that happens is itself part of what this measures.</p>
+  </div>
+</section>
+
+<!-- ---------- result ---------- -->
+<section id="done" hidden>
+  <h1>How you did</h1>
+  <div class="scorebox">
+    <div class="big" id="scoreBig">—</div>
+    <div class="sub" id="scoreSub"></div>
+  </div>
+  <p id="scoreWords"></p>
+  <div class="actions">
+    <button class="btn" id="more">Another ten</button>
+    <a class="btn ghost" href="/do-ai-writing-tells-work.html">Read what the rules got wrong</a>
+  </div>
+  <p class="foot" id="progressNote"></p>
+</section>
+
+<section id="oops" hidden>
+  <h2>That didn't load</h2>
+  <p>The passages could not be fetched just now. A refresh usually sorts it. Nothing you answered has been lost.</p>
+</section>
+
+</main>
+<footer class="site">
+  <div class="in">
+    <span>No cookies, no signup. Data updated every Monday, every figure cited.</span>
+    <button id="themeBtn" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</footer>
+<script src="/assets/site.js"></script>
+<script>
+// Perceived axis collection. Preregistration:
+// study/perceived/PREREGISTRATION.md in the repo.
+//
+// The page never learns which arm a passage came from. The server sends text
+// and an opaque token and nothing else, and the score at the end is computed
+// server-side. There is deliberately no per-item right/wrong: telling a reader
+// how they did as they go lets them learn mid-run, which would change the
+// question from "can readers tell?" to "can readers learn to tell in ten?"
+const PQ_URL = "https://mrkvxxmzekasxtpscawj.supabase.co/functions/v1/perceived";
+const PQ_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ya3Z4eG16ZWthc3h0cHNjYXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzY3ODIsImV4cCI6MjEwMTk1Mjc4Mn0.NCDkRv2KxJge8mvXZ_fGrfwocJA8VOx93-P7FGsLI04";
+const H = { "content-type": "application/json", authorization: "Bearer " + PQ_KEY };
+
+// One random id per browser session. It links the judgments in a single run so
+// no one session can dominate the sample; it identifies nobody and it does not
+// survive the tab closing.
+let SESSION = "";
+try {
+  SESSION = sessionStorage.getItem("hs_pq") || "";
+  if (!SESSION) { SESSION = crypto.randomUUID(); sessionStorage.setItem("hs_pq", SESSION); }
+} catch { SESSION = crypto.randomUUID(); }   // private window: a fresh id is fine
+
+const $ = (id) => document.getElementById(id);
+const seen = [];
+let batch = [], at = 0, ordinal = 0, shownAt = 0, pending = null, answers = [];
+
+function show(which) {
+  for (const s of ["intro", "quiz", "done", "oops"]) $(s).hidden = s !== which;
+}
+
+async function load() {
+  try {
+    const r = await fetch(PQ_URL + "?seen=" + encodeURIComponent(seen.join(",")), { headers: H });
+    const j = await r.json();
+    if (!j.items || !j.items.length) return false;
+    batch = j.items; at = 0;
+    return true;
+  } catch { return false; }
+}
+
+function render() {
+  const item = batch[at];
+  $("ptext").textContent = item.body;
+  $("pcount").textContent = `Passage ${at + 1} of ${batch.length}`;
+  $("pbar").style.width = ((at / batch.length) * 100) + "%";
+  $("askWho").hidden = false;
+  $("askWhy").hidden = true;
+  window.scrollTo({ top: 0, behavior: "instant" });
+  shownAt = performance.now();
+}
+
+document.querySelectorAll("#askWho .btn").forEach((b) => {
+  b.addEventListener("click", () => {
+    // Response time is measured to the JUDGMENT, not to the reason that follows:
+    // the reason is a second, slower question and folding it in would make every
+    // reading time longer than the reading actually was.
+    pending = { t: batch[at].t, judgment: b.dataset.j, ms: Math.round(performance.now() - shownAt) };
+    $("askWho").hidden = true;
+    $("askWhy").hidden = false;
+  });
+});
+
+document.querySelectorAll("#askWhy .chip").forEach((c) => {
+  c.addEventListener("click", async () => {
+    if (!pending) return;
+    ordinal += 1;
+    answers.push({ ...pending, reason: c.dataset.r, ordinal });
+    seen.push(pending.t);
+    pending = null;
+    at += 1;
+    if (at < batch.length) { render(); return; }
+    await finish();
+  });
+});
+
+async function finish() {
+  $("pbar").style.width = "100%";
+  let score = null;
+  try {
+    const r = await fetch(PQ_URL, { method: "POST", headers: H, body: JSON.stringify({ session: SESSION, items: answers, final: true }) });
+    score = (await r.json()).score;
+  } catch { /* the run still ends properly; the score just cannot be shown */ }
+  answers = [];
+  show("done");
+
+  if (score && score.answered) {
+    const pct = Math.round((score.correct / score.answered) * 100);
+    $("scoreBig").textContent = `${score.correct} of ${score.answered}`;
+    $("scoreSub").textContent = `${pct}% — chance is 50%`;
+    $("scoreWords").textContent =
+      pct >= 80 ? "Well above chance. Worth knowing: short passages are harder than full articles, so a real accusation would give you more to go on than this did."
+      : pct >= 60 ? "Better than a coin, not by a mile. That gap is roughly the thing this study exists to measure."
+      : pct >= 40 ? "About what flipping a coin would get you — which is a more common result than people expect, and is exactly why an accusation based on a hunch is worth so little."
+      : "Below chance, which usually means a theory is firing backwards. If you were sure about a rule going in, that rule is worth doubting.";
+  } else {
+    $("scoreBig").textContent = "Answers recorded";
+    $("scoreSub").textContent = "The score could not be fetched just now";
+    $("scoreWords").textContent = "";
+  }
+
+  try {
+    const p = await (await fetch(PQ_URL + "?what=progress", { headers: H })).json();
+    if (p && typeof p.judgments === "number") {
+      $("progressNote").textContent =
+        `${p.judgments.toLocaleString()} judgments collected so far, from ${p.sessions.toLocaleString()} sessions. ` +
+        `Nothing gets published until 120 passages have been seen at least eight times each, which needs about 960 judgments. ` +
+        `No result has been looked at, and none will be until then.`;
+    }
+  } catch { /* progress line is optional */ }
+}
+
+async function begin() {
+  show("quiz");
+  $("ptext").textContent = "Loading…";
+  if (!(await load())) { show("oops"); return; }
+  render();
+}
+$("start").addEventListener("click", begin);
+$("more").addEventListener("click", begin);
+</script>
+</body>
+</html>

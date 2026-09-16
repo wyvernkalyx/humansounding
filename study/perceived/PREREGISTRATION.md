@@ -12,6 +12,67 @@ original wording stays in the file. An amendment is only legitimate here when it
 is made **before any judgment exists**, and when the reason is that the rule
 could not be executed — not that the result was unwelcome.
 
+### Amendment 3 — 2026-09-16: the upper-bound claim is withdrawn, and D2 is added
+
+**Changed:** the sentence under "The sample is biased, and that goes on the
+instrument itself" reading *"accuracy measured here is an **upper bound** on a
+general reader's accuracy, not an estimate of it"*, and limitation 1, which
+repeats it. Both assert a direction for the net bias. That direction is now
+recorded as **unknown**. The original wording stays below, as this file requires.
+
+**Why the original was wrong.** It named one bias and treated it as the only
+one. Visitors arrive from a site about AI tells, so they are primed in the
+direction under test, and that pushes measured accuracy up. That much is real
+and stands. But a visitor here has nothing riding on the call. The reader this
+study exists to speak to — a teacher, an editor, a manager deciding whether to
+accuse someone of not writing their own work — carries a consequence for being
+wrong and reads accordingly. That motivation is absent from every judgment this
+instrument will ever collect, and it pushes measured accuracy down.
+
+Two biases, opposite directions, neither quantified. A bound cannot be claimed
+in either direction, and claiming one was the same species of error this project
+was built to document.
+
+**Replacement wording, to be used in every published sentence.** Accuracy
+measured here estimates what a **primed but unmotivated** reader achieves. It is
+not an estimate of a general reader's accuracy, and it is not a bound on the
+accuracy of a reader making a real accusation. Where the old phrasing said
+"upper bound", say what the number is an estimate *of*.
+
+**Added — D2, a required diagnostic, not a hypothesis.** Accuracy is reported
+conditional on `response_ms`, by quartile of time spent on the judgment.
+Reported whatever it shows, in the same place as D1. Like D1 it is not a primary
+result and no publication decision turns on it. It exists because the
+unmotivated-reader limitation is otherwise an argument with nothing measured
+underneath it: if accuracy is flat across time spent, the limitation is weak; if
+it rises with time, then readers who work at it do better, and the gap between
+this instrument and a motivated reader is real and has a size.
+
+D2 does not identify anyone and adds no field. `response_ms` is already
+collected, already capped at 600,000 to keep a coffee break out of the
+distribution, and already recorded per judgment.
+
+**The ground for this amendment, stated plainly because it is not the ground
+this file names.** The rule above admits an amendment only when a rule could not
+be executed. Nothing here could not be executed. What is corrected is an
+unsupported claim about the direction of a bias, and what is added is a
+diagnostic — the same footing on which Amendment 2 added D1. The safeguard the
+rule exists to provide is met by a different route: this amendment only ever
+weakens what the file may assert. It removes a bound, it adds a check, and
+neither change can make any result easier to publish or any hypothesis easier to
+confirm. If a future amendment cannot say that sentence about itself, it needs
+the original ground.
+
+**On the state of the table.** Ten judgments existed briefly on 2026-09-15 and
+were deleted on 2026-09-16, before this amendment was written; `perceived_judgments`
+was verified empty immediately after. They were the author's own run against a
+local preview build, made while diagnosing why the collection page would not
+render from the filesystem. They are recorded here rather than quietly dropped,
+because "no judgment exists" is the condition this file's amendment rule turns
+on and the reader is entitled to see how that condition was restored. The author
+built the packet and knows the corpus, so the run was not a sample of anything
+and its score has not been used.
+
 ### Amendment 2 — 2026-09-11: collection window extended, and every judgment is dated
 
 **Changed:** collection may continue past the six-week stop rule until the
