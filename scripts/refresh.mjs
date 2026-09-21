@@ -424,7 +424,7 @@ if (!Array.isArray(updated.dashes) || updated.dashes.length < 3 || updated.dashe
 for (const d of updated.dashes) if (!isStr(d.label, 60) || !isNum(d.v, 100)) fail("dash row");
 if (!Array.isArray(updated.trends) || updated.trends.length < 6 || updated.trends.length > 20) fail("trends length");
 for (const t of updated.trends) {
-  if (!isStr(t.tell, 120) || !isStr(t.evidence, 300) || !isStr(t.dirLabel ?? "", 80)) fail("trend row strings");
+  if (!isStr(t.tell, 120) || !isStr(t.evidence, 300) || !isStr(t.dirLabel ?? "", 80)) fail("trend row strings | tell:" + (t.tell ?? "").length + " evidence:" + (t.evidence ?? "").length + " dirLabel:" + (t.dirLabel ?? "").length + " | " + String(t.tell).slice(0, 80));
   if (!isStr(t.model ?? "", 40)) fail("trend model");
   if (!["rising", "falling", "stable"].includes(t.dir)) fail("trend dir");
 }
