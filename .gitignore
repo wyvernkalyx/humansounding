@@ -75,3 +75,9 @@ study/perceived/packet.json
 # so it is not tracked; the generator and the stub that serves it are.
 study/perceived/fixture/passages.json
 study/perceived/fixture/judgments.json
+
+# Raw model output from scripts/refresh.mjs, written before validation so a
+# rejected run can be inspected without paying for a second research pass.
+# The weekly workflow commits with `git add -A`, so this MUST stay ignored or
+# every green run would check the model's unvalidated output into a public repo.
+refresh-raw-output.json

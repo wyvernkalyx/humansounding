@@ -410,8 +410,32 @@ let updated;
 try { updated = JSON.parse(jsonMatch[0]); }
 catch (e) { console.error("JSON parse failed:", e.message); process.exit(1); }
 
+// The research pass is the expensive part of this script and it is already
+// bought by the time we get here. Runs #11 (2026-09-21) and #13 (2026-09-28)
+// each spent about 224,000 input tokens, failed validation, and wrote nothing
+// to disk, so the only way to see what the model actually produced was to pay
+// for another run. Save it first. This is written before validation on
+// purpose: the run that most needs its output preserved is the one that is
+// about to be rejected.
+const RAW_PATH = process.env.REFRESH_RAW_PATH || "refresh-raw-output.json";
+try {
+  writeFileSync(RAW_PATH, JSON.stringify(updated, null, 2));
+  console.log("Raw model output saved to " + RAW_PATH + ".");
+} catch (e) {
+  console.error("Could not save raw model output:", e.message);
+}
+
 // ---------- 4. validate hard ----------
-const fail = (msg) => { console.error("VALIDATION FAILED:", msg); process.exit(1); };
+// EVERY failure is collected, not just the first. Exiting on the first bad row
+// teaches you about one row per paid research pass, and the pass costs the same
+// whether it passes or fails. study/perceived.mjs's guard already lists every
+// unmet floor at once, for exactly this reason; this file did not.
+//
+// Nothing here relaxes anything. An over-length row is still a failure and
+// still stops the commit. The caps keep the rendered page from breaking, so
+// when a row is over, the row is the problem and not the limit.
+const problems = [];
+const fail = (msg) => { problems.push(msg); };
 const isStr = (s, max) => typeof s === "string" && s.length <= max;
 const isNum = (n, max) => typeof n === "number" && isFinite(n) && n >= 0 && n <= max;
 
@@ -419,15 +443,24 @@ if (!isStr(updated.updated, 40) || updated.updated.length < 8) fail("bad 'update
 if (!isStr(updated.note ?? "", 200)) fail("bad 'note'");
 if (!isStr(updated.phraseSrc, 160) || !isStr(updated.dashSrc, 160)) fail("bad chart source strings");
 if (!Array.isArray(updated.phrases) || updated.phrases.length < 3 || updated.phrases.length > 12) fail("phrases length");
-for (const p of updated.phrases) if (!isStr(p.label, 120) || !isNum(p.v, 10000)) fail("phrase row");
+if (Array.isArray(updated.phrases)) for (const p of updated.phrases) if (!isStr(p.label, 120) || !isNum(p.v, 10000)) fail("phrase row");
 if (!Array.isArray(updated.dashes) || updated.dashes.length < 3 || updated.dashes.length > 12) fail("dashes length");
-for (const d of updated.dashes) if (!isStr(d.label, 60) || !isNum(d.v, 100)) fail("dash row");
+if (Array.isArray(updated.dashes)) for (const d of updated.dashes) if (!isStr(d.label, 60) || !isNum(d.v, 100)) fail("dash row");
 if (!Array.isArray(updated.trends) || updated.trends.length < 6 || updated.trends.length > 20) fail("trends length");
-for (const t of updated.trends) {
+if (Array.isArray(updated.trends)) for (const t of updated.trends) {
   if (!isStr(t.tell, 120) || !isStr(t.evidence, 300) || !isStr(t.dirLabel ?? "", 80)) fail("trend row strings | tell:" + (t.tell ?? "").length + " evidence:" + (t.evidence ?? "").length + " dirLabel:" + (t.dirLabel ?? "").length + " | " + String(t.tell).slice(0, 80));
   if (!isStr(t.model ?? "", 40)) fail("trend model");
   if (!["rising", "falling", "stable"].includes(t.dir)) fail("trend dir");
 }
+if (problems.length) {
+  console.error("VALIDATION FAILED: " + problems.length + " problem(s), all of them listed:");
+  for (const p of problems) console.error("  - " + p);
+  console.error("Nothing was written to site_data and nothing was committed. The model's output");
+  console.error("is in " + RAW_PATH + ", uploaded as the 'refresh-raw-output' artifact, so this");
+  console.error("run's research does not have to be bought a second time to see what it said.");
+  process.exit(1);
+}
+
 // validate the changelog entries
 let changes = Array.isArray(updated.changes) ? updated.changes.filter((c) => isStr(c, 220) && c.length > 10).slice(0, 5) : [];
 if (!changes.length) changes = ["No material changes this week; figures re-verified against their sources."];

@@ -25,6 +25,19 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
+      # if: always() is the whole point -- the run that most needs its output
+      # kept is the one that just failed validation. Without this the research
+      # pass is paid for and discarded, which is what happened on runs #11 and
+      # #13. The file is gitignored, so it never reaches a commit.
+      - name: Keep the model's raw output, pass or fail
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-raw-output
+          path: refresh-raw-output.json
+          if-no-files-found: ignore
+          retention-days: 30
+
       - name: Rebuild the tells glossary and rules.json
         run: node scripts/build-glossary.mjs
 
