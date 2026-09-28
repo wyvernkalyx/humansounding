@@ -356,7 +356,7 @@ Rules — these are hard constraints:
 - Preserve the exact structure and keys: updated, note, phrases, phraseSrc, dashes, dashSrc, trends (each row: tell, evidence, dir, dirLabel, model), column, specimen. (Do not return "log" or "history"; the pipeline maintains those.)
 - Set "updated" to "${today}".
 - Only change a figure, evidence string, dir, or dirLabel if you found a sourced basis this run; otherwise leave it as is. NEVER invent statistics.
-- Name the source inside any evidence string you change (e.g. "(GPTZero, Aug 2026)").
+- Name the source inside any evidence string you change (e.g. "(GPTZero, Aug 2026)"), AND MAKE ROOM FOR IT. "evidence" has a budget of 240 characters. It is a budget, not a target: when you add a source, cut the oldest or least informative material already in that same string so the result still fits. Adding without cutting is what broke this pipeline twice. These strings were 25 to 91 characters when the page was built and have grown past 250 purely by accumulation, so trimming one back is a correction, not a loss. A row you found no new evidence for is left exactly as it is; never pad it to fill the budget.
 - "note": one plain sentence if something genuinely newsworthy happened for a general reader, else "". No hype.
 - trends: keep 8-16 rows; dir must be "rising", "falling", or "stable". You may add a row for a genuinely new, sourced tell or remove an obsolete one.
 - Each trend row also carries "model": which model the tell actually belongs to, under 40 chars. Fill it ONLY from per-model evidence you can cite this run, or from the site's own corpus measurements. If nobody has measured the tell per model, return an empty string. An empty string is the correct and expected answer for most rows; guessing a model name is worse than leaving it blank. Never infer a model from the vendor that happens to be in the news.
@@ -372,7 +372,7 @@ Rules — these are hard constraints:
   - "reader": a short reader-truth line under 50 characters, e.g. "your reader noticed both".
   - "caption": one line under 80 characters naming the week's tell, e.g. "zero commas in 18 words: this week's tell".
 - "changes": an array of 2 to 5 short plain-language strings describing what genuinely changed or was found THIS run. Each under 200 characters, naming its source where one applies. If nothing material changed, return exactly ["No material changes this week; figures re-verified against their sources."].
-- Keep every string concise: tell < 120 chars, evidence < 300, dirLabel < 80, note < 200.
+- Keep every string concise: tell < 120 chars, evidence < 240 (see the budget rule above), dirLabel < 80, note < 200. A run that returns any string over its limit is rejected whole and its research is discarded, so count before you return.
 - Style, enforced sitewide because the site tracks these habits: use the serial comma, so a list of three or more takes a comma before the final "and" or "or" ("ChatGPT, Claude, Gemini, and Grok"); never use em dashes in ANY string you write (use commas, colons, or semicolons); no "not just X, but Y" constructions; no rule-of-three padding; none of the vocabulary on the site's own banned list (seamless, robust, leverage, delve, and so on). Quoted evidence and the specimen keep their tells deliberately; your own prose does not.
 
 Current JSON:
