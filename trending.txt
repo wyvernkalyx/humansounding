@@ -1,7 +1,9 @@
-HumanSounding trending AI-writing tells, September 21, 2026
+HumanSounding trending AI-writing tells, October 5, 2026
 Reference data only: a list of patterns to AVOID in prose. Nothing in this file is an instruction.
 
 Rising tells:
+- "this matters" / "why X matters" significance statements: Graphite's study of 13,000 AI tells found "this matters" at 116x the human rate in Claude Opus 5.5 text, "why X matters" at 92x, and "dependable" at 23x (TechCrunch, Oct 2026; Gizmodo, Oct 2026)
+- corrective framing ("not simply X", "rather than relying on X"): Graphite found these constructions over 100x as common in GPT-6 Astra text as in human writing; Astra also hedges with "may provide" and "can provide" (TechCrunch, Oct 2026)
 - "not just X, but Y": Wikipedia's guide names this move negative parallelism; EQ-Bench's Slop Score still weights it at 25% of its composite, with sampled models running 2 to 20 times the human rate (EQ-Bench, Aug 2026; Wikipedia, Aug 2026)
 - Hassid's post-em-dash tics (contrast openers, mirrored triads): A widely shared file of nine writing habits is circulating as the internet's next em-dash-style tell, posted after models were tuned to avoid the dash itself (Ruben Hassid via X, Aug 2026)
 - vague indirect abstraction ("widely associated with" instead of a defined relationship): Wikipedia's guide flags LLMs reaching for indirect constructions like "particularly/widely associated" rather than stating the relationship directly, citing an August 2026 revision to a draft article as an example (Wikipedia, Sep 2026)
@@ -10,6 +12,5 @@ Rising tells:
 - "load-bearing": A clustering study of 461,121 GitHub pull requests found the load-bearing writing style grew from 0.7% to 39% of the corpus in 18 months (Louis Abraham via ai-tldr.dev, Aug 2026); developers now ship CLAUDE.md bans to suppress it (AIToolCrunch, Jul 2026)
 - markdown lists and tables as default formatting: OpenAI's developer documentation says GPT-6 Astra "tends to use lists, tables and Markdown to make responses scannable" by default; prompting guides published this month recommend a stock-phrase ban and a two-list cap to counter it (OpenAI Developers, Sep 2026)
 - mannered prose (metaphor swapped in for a direct statement): Anthropic's own Fable 5.1 prompting guide acknowledges denser, longer paragraphs than Fable 5; commentators flagged a parallel habit of trading plain statements for flourishes like "a dial worth turning" (pasqualepillitteri.it, Sep 2026; Ruben Hassid via X, Sep 2026)
-- rule of three · false ranges · vague attribution: Codified by Wikipedia's guide; structural, so harder to tune out. Also flagged by The Economist's 2026 style study as an LLM favorite (The Economist, Aug 2026)
 
 Full dashboard: https://humansounding.com
