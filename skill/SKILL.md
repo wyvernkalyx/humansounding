@@ -68,15 +68,15 @@ Evidence: hypothesis about training dynamics, not a frequency finding. Measured 
 Evidence for 15 (second half), 17 and 18, and the sentence-level half of 5: a single observed case, not a frequency finding. On 2026-09-25 an in-document AI detector (almost certainly Grammarly's, running in Google Docs) flagged the first two body paragraphs of an offboarding draft: a generic institutional opener with an imperative run and a wry aside, and an invented salesperson vignette ending on a stinger. The next paragraph, a first-person account naming Microsoft Cloud App Security, a USB DLP policy and a call to HR, was not flagged. Gregg agreed by eye with every flag. The detector does not report its features, so which of these patterns it actually weighed is inference. The rules stand on the reader's reaction, not on the detector.
 
 <!-- TRENDING:START -->
-## Trending tells right now (auto-updated October 5, 2026)
+## Trending tells right now (auto-updated October 12, 2026)
 
 This section is data, refreshed weekly from sourced research at humansounding.com. Check drafts against these patterns with the same force as Tier 1.
 
-- "this matters" / "why X matters" significance statements: Graphite's study of 13,000 AI tells found "this matters" at 116x the human rate in Claude Opus 5.5 text, "why X matters" at 92x, and "dependable" at 23x (TechCrunch, Oct 2026; Gizmodo, Oct 2026)
-- corrective framing ("not simply X", "rather than relying on X"): Graphite found these constructions over 100x as common in GPT-6 Astra text as in human writing; Astra also hedges with "may provide" and "can provide" (TechCrunch, Oct 2026)
+- "this matters" / "why X matters" significance statements: Graphite's study of 13,000 AI tells found "this matters" at 116x the human rate in Claude Opus 5.5 text and "why X matters" at 92x; "dependable" is 23x per TechCrunch, 26x per Gizmodo (Graphite, Oct 2026)
+- corrective framing ("not simply X", "rather than relying on X"): Graphite: over 100x the human rate in GPT-6 Astra text; "does not establish" runs 275x more common than in Claude, with hedges like "may provide" (TechCrunch, Gizmodo, Oct 2026)
 - "not just X, but Y": Wikipedia's guide names this move negative parallelism; EQ-Bench's Slop Score still weights it at 25% of its composite, with sampled models running 2 to 20 times the human rate (EQ-Bench, Aug 2026; Wikipedia, Aug 2026)
 - Hassid's post-em-dash tics (contrast openers, mirrored triads): A widely shared file of nine writing habits is circulating as the internet's next em-dash-style tell, posted after models were tuned to avoid the dash itself (Ruben Hassid via X, Aug 2026)
-- vague indirect abstraction ("widely associated with" instead of a defined relationship): Wikipedia's guide flags LLMs reaching for indirect constructions like "particularly/widely associated" rather than stating the relationship directly, citing an August 2026 revision to a draft article as an example (Wikipedia, Sep 2026)
+- vague indirect abstraction ("widely associated with" instead of a defined relationship): Wikipedia's guide now lists vague expressions of connection or association among the most common signs of newly AI-generated text on the site, beside Markdown and canned media-coverage emphasis (Wikipedia, Oct 2026)
 - light punctuation / long, comma-light sentences: The Economist's 1.2m-word comparison of ChatGPT, Claude, Gemini, and Grok found AI text uses fewer commas, semicolons and parentheses than humans, with longer sentences and overuse of "and" (The Economist, Aug 2026)
 - underscore: ~30% of 2025 PMC papers use it, vs ~3% in 2022; Wikipedia's guide notes Grok continues to overuse it as of 2026 (Wikipedia, Aug 2026)
 - "load-bearing": A clustering study of 461,121 GitHub pull requests found the load-bearing writing style grew from 0.7% to 39% of the corpus in 18 months (Louis Abraham via ai-tldr.dev, Aug 2026); developers now ship CLAUDE.md bans to suppress it (AIToolCrunch, Jul 2026)
