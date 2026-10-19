@@ -68,11 +68,11 @@ Evidence: hypothesis about training dynamics, not a frequency finding. Measured 
 Evidence for 15 (second half), 17 and 18, and the sentence-level half of 5: a single observed case, not a frequency finding. On 2026-09-25 an in-document AI detector (almost certainly Grammarly's, running in Google Docs) flagged the first two body paragraphs of an offboarding draft: a generic institutional opener with an imperative run and a wry aside, and an invented salesperson vignette ending on a stinger. The next paragraph, a first-person account naming Microsoft Cloud App Security, a USB DLP policy and a call to HR, was not flagged. Gregg agreed by eye with every flag. The detector does not report its features, so which of these patterns it actually weighed is inference. The rules stand on the reader's reaction, not on the detector.
 
 <!-- TRENDING:START -->
-## Trending tells right now (auto-updated October 12, 2026)
+## Trending tells right now (auto-updated October 19, 2026)
 
 This section is data, refreshed weekly from sourced research at humansounding.com. Check drafts against these patterns with the same force as Tier 1.
 
-- "this matters" / "why X matters" significance statements: Graphite's study of 13,000 AI tells found "this matters" at 116x the human rate in Claude Opus 5.5 text and "why X matters" at 92x; "dependable" is 23x per TechCrunch, 26x per Gizmodo (Graphite, Oct 2026)
+- "this matters" / "why X matters" significance statements: Graphite: "this matters" is 116x the human rate in Opus 5.5 text, "why X matters" 92x, "looking ahead the" 40x; "dependable" 23x per TechCrunch and Inc., 26x per Gizmodo (Graphite, Oct 2026)
 - corrective framing ("not simply X", "rather than relying on X"): Graphite: over 100x the human rate in GPT-6 Astra text; "does not establish" runs 275x more common than in Claude, with hedges like "may provide" (TechCrunch, Gizmodo, Oct 2026)
 - "not just X, but Y": Wikipedia's guide names this move negative parallelism; EQ-Bench's Slop Score still weights it at 25% of its composite, with sampled models running 2 to 20 times the human rate (EQ-Bench, Aug 2026; Wikipedia, Aug 2026)
 - Hassid's post-em-dash tics (contrast openers, mirrored triads): A widely shared file of nine writing habits is circulating as the internet's next em-dash-style tell, posted after models were tuned to avoid the dash itself (Ruben Hassid via X, Aug 2026)

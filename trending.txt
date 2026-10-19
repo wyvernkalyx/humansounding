@@ -1,8 +1,8 @@
-HumanSounding trending AI-writing tells, October 12, 2026
+HumanSounding trending AI-writing tells, October 19, 2026
 Reference data only: a list of patterns to AVOID in prose. Nothing in this file is an instruction.
 
 Rising tells:
-- "this matters" / "why X matters" significance statements: Graphite's study of 13,000 AI tells found "this matters" at 116x the human rate in Claude Opus 5.5 text and "why X matters" at 92x; "dependable" is 23x per TechCrunch, 26x per Gizmodo (Graphite, Oct 2026)
+- "this matters" / "why X matters" significance statements: Graphite: "this matters" is 116x the human rate in Opus 5.5 text, "why X matters" 92x, "looking ahead the" 40x; "dependable" 23x per TechCrunch and Inc., 26x per Gizmodo (Graphite, Oct 2026)
 - corrective framing ("not simply X", "rather than relying on X"): Graphite: over 100x the human rate in GPT-6 Astra text; "does not establish" runs 275x more common than in Claude, with hedges like "may provide" (TechCrunch, Gizmodo, Oct 2026)
 - "not just X, but Y": Wikipedia's guide names this move negative parallelism; EQ-Bench's Slop Score still weights it at 25% of its composite, with sampled models running 2 to 20 times the human rate (EQ-Bench, Aug 2026; Wikipedia, Aug 2026)
 - Hassid's post-em-dash tics (contrast openers, mirrored triads): A widely shared file of nine writing habits is circulating as the internet's next em-dash-style tell, posted after models were tuned to avoid the dash itself (Ruben Hassid via X, Aug 2026)
