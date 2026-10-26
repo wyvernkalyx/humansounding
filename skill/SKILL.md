@@ -68,7 +68,7 @@ Evidence: hypothesis about training dynamics, not a frequency finding. Measured 
 Evidence for 15 (second half), 17 and 18, and the sentence-level half of 5: a single observed case, not a frequency finding. On 2026-09-25 an in-document AI detector (almost certainly Grammarly's, running in Google Docs) flagged the first two body paragraphs of an offboarding draft: a generic institutional opener with an imperative run and a wry aside, and an invented salesperson vignette ending on a stinger. The next paragraph, a first-person account naming Microsoft Cloud App Security, a USB DLP policy and a call to HR, was not flagged. Gregg agreed by eye with every flag. The detector does not report its features, so which of these patterns it actually weighed is inference. The rules stand on the reader's reaction, not on the detector.
 
 <!-- TRENDING:START -->
-## Trending tells right now (auto-updated October 19, 2026)
+## Trending tells right now (auto-updated October 26, 2026)
 
 This section is data, refreshed weekly from sourced research at humansounding.com. Check drafts against these patterns with the same force as Tier 1.
 
