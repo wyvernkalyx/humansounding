@@ -5,6 +5,13 @@
   <description>The weekly column on AI's accent: what's rising, what's fading, and what changed in the machine vernacular.</description>
   <language>en-us</language>
   <item>
+    <title>A New Study Finds AI Fiction Tells You How the Room Feels</title>
+    <link>https://humansounding.com/blog/2026-11-09.html</link>
+    <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-11-09</guid>
+    <pubDate>Mon, 09 Nov 2026 12:00:00 GMT</pubDate>
+    <description>An EMNLP study of 8,000 AI stories finds models favor mood over action, while the usual trackers held still this week.</description>
+  </item>
+  <item>
     <title>OpenAI Promises Natural Writing From GPT-6.1 Terra; Tests Are Thin</title>
     <link>https://humansounding.com/blog/2026-11-02.html</link>
     <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-11-02</guid>
@@ -122,12 +129,5 @@
     <guid isPermaLink="true">https://humansounding.com/blog/claude-watermarking.html</guid>
     <pubDate>Tue, 11 Aug 2026 12:00:00 GMT</pubDate>
     <description>The invisible mark proves a model touched the text, and nothing more. What writers should and shouldn't worry about.</description>
-  </item>
-  <item>
-    <title>This week in AI writing: August 10, 2026</title>
-    <link>https://humansounding.com/changelog.html#w2026-08-10</link>
-    <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-08-10</guid>
-    <pubDate>Mon, 10 Aug 2026 12:00:00 GMT</pubDate>
-    <description>HumanSounding launched: the live trend board, the in-browser draft checker, and downloadable instruction files for Claude, ChatGPT, and Gemini. • The first autonomous research run added a new rising tell: lighter punctuation with longer, comma-sparse sentences in newer models. • Wikipedia's editor guide now flags Grok-specific vocabulary (causal, empirical, correlate); added to the trend board. • A July 2026 analysis found that among major chatbots only Claude still uses em dashes above the professional human rate; GPT-5.4 now sits below it. • EQ-Bench weights the &quot;not just X, but Y&quot; pattern at 25% of its slop score, with models running far above the human rate (EQ-Bench, Jul 2026). • We audited our own pages with Impeccable, a detector for AI design tells: 70 findings, including 42 em dashes on the site that lectures about em dashes. All fixed, along with every contrast shortfall it caught.</description>
   </item>
 </channel></rss>
