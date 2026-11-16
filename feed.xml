@@ -5,6 +5,13 @@
   <description>The weekly column on AI's accent: what's rising, what's fading, and what changed in the machine vernacular.</description>
   <language>en-us</language>
   <item>
+    <title>Claude Fable 5.2 Obeys Style Rules Too Well, Anthropic Says</title>
+    <link>https://humansounding.com/blog/2026-11-16.html</link>
+    <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-11-16</guid>
+    <pubDate>Mon, 16 Nov 2026 12:00:00 GMT</pubDate>
+    <description>Anthropic's guide for Fable 5.2 warns that strict sentence limits make its prose choppy, while a first reviewer finds it readable but slow to get to the point.</description>
+  </item>
+  <item>
     <title>A New Study Finds AI Fiction Tells You How the Room Feels</title>
     <link>https://humansounding.com/blog/2026-11-09.html</link>
     <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-11-09</guid>
@@ -108,13 +115,6 @@
     <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-08-24</guid>
     <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
     <description>A viral checklist of post-em-dash writing tics shows AI-detection folklore evolving as fast as the models it tracks.</description>
-  </item>
-  <item>
-    <title>Why AI Loves the Em Dash: The Markdown Theory</title>
-    <link>https://humansounding.com/blog/2026-08-17.html</link>
-    <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-08-17</guid>
-    <pubDate>Mon, 17 Aug 2026 12:00:00 GMT</pubDate>
-    <description>New research ties AI's em-dash habit to markdown training, while Wikipedia officially names the 'not X, it's Y' tell.</description>
   </item>
   <item>
     <title>I had an AI build a website that catches AI writing</title>
