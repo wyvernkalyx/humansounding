@@ -5,6 +5,13 @@
   <description>The weekly column on AI's accent: what's rising, what's fading, and what changed in the machine vernacular.</description>
   <language>en-us</language>
   <item>
+    <title>GPT-6.2 Astra Writes Shorter, and an Early Reviewer Says Too Short</title>
+    <link>https://humansounding.com/blog/2026-11-23.html</link>
+    <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-11-23</guid>
+    <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
+    <description>OpenAI says GPT-6.2 Astra writes more directly with less filler, but an early reviewer found it too terse, while Google pitches Gemini 4 Neon as natural.</description>
+  </item>
+  <item>
     <title>The A.I. Detector That Also Sells the Tool for Beating It</title>
     <link>https://humansounding.com/blog/ai-detector-sells-the-rewriter.html</link>
     <guid isPermaLink="true">https://humansounding.com/blog/ai-detector-sells-the-rewriter.html</guid>
@@ -115,13 +122,6 @@
     <guid isPermaLink="true">https://humansounding.com/blog/every-tell-belongs-to-one-model.html</guid>
     <pubDate>Thu, 27 Aug 2026 12:00:00 GMT</pubDate>
     <description>160 documents, four models, one pre-ChatGPT human baseline. Em dashes are a Claude habit, the delve vocabulary is a Gemini habit, and no rule describes AI writing in general.</description>
-  </item>
-  <item>
-    <title>The Em Dash Retired. Nine New Tells Took Its Place.</title>
-    <link>https://humansounding.com/blog/2026-08-24.html</link>
-    <guid isPermaLink="true">https://humansounding.com/changelog.html#w2026-08-24</guid>
-    <pubDate>Mon, 24 Aug 2026 12:00:00 GMT</pubDate>
-    <description>A viral checklist of post-em-dash writing tics shows AI-detection folklore evolving as fast as the models it tracks.</description>
   </item>
   <item>
     <title>I had an AI build a website that catches AI writing</title>

@@ -68,7 +68,7 @@ Evidence: hypothesis about training dynamics, not a frequency finding. Measured 
 Evidence for 15 (second half), 17 and 18, and the sentence-level half of 5: a single observed case, not a frequency finding. On 2026-09-25 an in-document AI detector (almost certainly Grammarly's, running in Google Docs) flagged the first two body paragraphs of an offboarding draft: a generic institutional opener with an imperative run and a wry aside, and an invented salesperson vignette ending on a stinger. The next paragraph, a first-person account naming Microsoft Cloud App Security, a USB DLP policy and a call to HR, was not flagged. Gregg agreed by eye with every flag. The detector does not report its features, so which of these patterns it actually weighed is inference. The rules stand on the reader's reaction, not on the detector.
 
 <!-- TRENDING:START -->
-## Trending tells right now (auto-updated November 16, 2026)
+## Trending tells right now (auto-updated November 23, 2026)
 
 This section is data, refreshed weekly from sourced research at humansounding.com. Check drafts against these patterns with the same force as Tier 1.
 
@@ -80,7 +80,7 @@ This section is data, refreshed weekly from sourced research at humansounding.co
 - light punctuation / long, comma-light sentences: The Economist's 1.2m-word comparison of ChatGPT, Claude, Gemini, and Grok found AI text uses fewer commas, semicolons and parentheses than humans, with longer sentences and overuse of "and" (The Economist, Aug 2026)
 - underscore: ~30% of 2025 PMC papers use it, vs ~3% in 2022; Wikipedia's guide notes Grok continues to overuse it as of 2026 (Wikipedia, Aug 2026)
 - "load-bearing": A clustering study of 461,121 GitHub pull requests found the load-bearing writing style grew from 0.7% to 39% of the corpus in 18 months (Louis Abraham via ai-tldr.dev, Aug 2026); developers now ship CLAUDE.md bans to suppress it (AIToolCrunch, Jul 2026)
-- markdown lists and tables as default formatting: OpenAI's developer documentation says GPT-6 Astra "tends to use lists, tables and Markdown to make responses scannable" by default; prompting guides published this month recommend a stock-phrase ban and a two-list cap to counter it (OpenAI Developers, Sep 2026)
+- markdown lists and tables as default formatting: OpenAI's GPT-6 guide says Astra "tends to use lists, tables and Markdown" by default, but its GPT-6.2 guide says Astra is more concise and direct by default (OpenAI Developers via Search Engine Journal, Nov 2026)
 - mannered prose (metaphor swapped in for a direct statement): Anthropic's own Fable 5.1 prompting guide acknowledges denser, longer paragraphs than Fable 5; commentators flagged a parallel habit of trading plain statements for flourishes like "a dial worth turning" (pasqualepillitteri.it, Sep 2026; Ruben Hassid via X, Sep 2026)
 <!-- TRENDING:END -->
 
